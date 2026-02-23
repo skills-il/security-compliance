@@ -1,0 +1,3 @@
+israeli-privacy-shield:
+  - changed-files:
+    - any-glob-to-any-file: 'israeli-privacy-shield/**'
