@@ -7,9 +7,10 @@ using a structured workflow aligned with INCD guidelines and Israeli
 cybersecurity best practices.
 
 Usage:
-    python security_triage.py
+    python security_triage.py --example
+    python security_triage.py --severity-calc --cvss 8.5 --asset production --data pii --blast network_segment
+    python security_triage.py --json '{"alert_id":"ALERT-123","cvss":7.5,"asset":"production","data":"pii","blast":"network_segment","is_critical_infra":false,"has_data_breach":true}'
     python security_triage.py --output incident_report.json
-    python security_triage.py --severity-calc
 """
 
 import argparse
@@ -245,24 +246,112 @@ def run_interactive_triage() -> dict:
     return incident
 
 
-def severity_calculator():
-    """Quick severity calculation without full triage."""
+def severity_calculator(cvss=None, asset=None, data=None, blast=None):
+    """Quick severity calculation without full triage.
+
+    Args:
+        cvss: CVSS score (0-10). If None, prompts interactively.
+        asset: Asset environment key. If None, prompts interactively.
+        data: Data sensitivity key. If None, prompts interactively.
+        blast: Blast radius key. If None, prompts interactively.
+    """
     print("Quick Severity Calculator")
     print("-" * 30)
-    try:
-        cvss = float(input("CVSS (0-10): "))
-    except ValueError:
-        cvss = 5.0
-    print(f"Assets: {', '.join(ASSET_CRITICALITY.keys())}")
-    asset = input("Asset: ").strip()
-    print(f"Data: {', '.join(DATA_SENSITIVITY.keys())}")
-    data = input("Data: ").strip()
-    print(f"Blast: {', '.join(BLAST_RADIUS.keys())}")
-    blast = input("Blast: ").strip()
+
+    if cvss is None:
+        try:
+            cvss = float(input("CVSS (0-10): "))
+        except (ValueError, EOFError):
+            cvss = 5.0
+    if asset is None:
+        print(f"Assets: {', '.join(ASSET_CRITICALITY.keys())}")
+        asset = input("Asset: ").strip()
+    if data is None:
+        print(f"Data: {', '.join(DATA_SENSITIVITY.keys())}")
+        data = input("Data: ").strip()
+    if blast is None:
+        print(f"Blast: {', '.join(BLAST_RADIUS.keys())}")
+        blast = input("Blast: ").strip()
 
     result = calculate_severity(cvss, asset, data, blast)
-    print(f"\nScore: {result['composite_score']} — {result['classification']}")
+    print(f"\nCVSS: {cvss}, Asset: {asset}, Data: {data}, Blast: {blast}")
+    print(f"Score: {result['composite_score']} — {result['classification']}")
     print(f"Action: {result['recommended_action']}")
+    return result
+
+
+def run_from_json(json_input: str) -> dict:
+    """Run triage from JSON input (non-interactive).
+
+    Args:
+        json_input: JSON string with triage parameters.
+
+    Returns:
+        Incident report dictionary.
+    """
+    try:
+        params = json.loads(json_input)
+    except json.JSONDecodeError:
+        print("Error: Invalid JSON input.", file=sys.stderr)
+        sys.exit(1)
+
+    alert_id = params.get("alert_id", "UNKNOWN")
+    source_tool = params.get("source_tool", "other")
+    alert_type = params.get("alert_type", "other")
+    cvss = min(max(float(params.get("cvss", 5.0)), 0.0), 10.0)
+    asset = params.get("asset", "production")
+    data = params.get("data", "internal")
+    blast = params.get("blast", "single_host")
+    is_critical_infra = params.get("is_critical_infra", False)
+    has_data_breach = params.get("has_data_breach", False)
+
+    severity = calculate_severity(cvss, asset, data, blast)
+    reporting = incd_reporting_check(severity["classification"], is_critical_infra, has_data_breach)
+
+    incident = {
+        "triage_timestamp": datetime.now().isoformat(),
+        "alert_id": alert_id,
+        "source_tool": source_tool,
+        "alert_type": alert_type,
+        "inputs": {
+            "cvss": cvss,
+            "asset_environment": asset,
+            "data_sensitivity": data,
+            "blast_radius": blast,
+            "is_critical_infrastructure": is_critical_infra,
+            "has_data_breach": has_data_breach,
+        },
+        "severity_assessment": severity,
+        "reporting_requirements": reporting,
+    }
+
+    print(f"Alert: {alert_id} ({alert_type})")
+    print(f"Score: {severity['composite_score']}/10.0 — {severity['classification']}")
+    print(f"Action: {severity['recommended_action']}")
+    if reporting["incd_reporting_required"]:
+        print(f"INCD Reporting: REQUIRED ({reporting['reporting_deadline']})")
+    if reporting["privacy_authority_notification"]:
+        print(f"Privacy Authority: NOTIFICATION REQUIRED")
+
+    return incident
+
+
+def run_example() -> dict:
+    """Run a demo triage with example data."""
+    print("=== Example: Production Data Breach ===")
+    print()
+    example_json = json.dumps({
+        "alert_id": "ALERT-2026-001",
+        "source_tool": "wiz",
+        "alert_type": "unauthorized_access",
+        "cvss": 8.5,
+        "asset": "production",
+        "data": "pii",
+        "blast": "network_segment",
+        "is_critical_infra": False,
+        "has_data_breach": True,
+    })
+    return run_from_json(example_json)
 
 
 def main():
@@ -272,13 +361,23 @@ def main():
     parser.add_argument("--output", "-o", help="Output JSON report file path")
     parser.add_argument("--severity-calc", action="store_true",
                         help="Quick severity calculator mode")
+    parser.add_argument("--cvss", type=float, help="CVSS score (use with --severity-calc)")
+    parser.add_argument("--asset", help="Asset environment (use with --severity-calc)")
+    parser.add_argument("--data", help="Data sensitivity (use with --severity-calc)")
+    parser.add_argument("--blast", help="Blast radius (use with --severity-calc)")
+    parser.add_argument("--json", help="JSON string with triage parameters (non-interactive)")
+    parser.add_argument("--example", action="store_true", help="Run example triage")
     args = parser.parse_args()
 
-    if args.severity_calc:
-        severity_calculator()
+    if args.example:
+        incident = run_example()
+    elif args.severity_calc:
+        severity_calculator(args.cvss, args.asset, args.data, args.blast)
         return
-
-    incident = run_interactive_triage()
+    elif args.json:
+        incident = run_from_json(args.json)
+    else:
+        incident = run_interactive_triage()
 
     if args.output:
         with open(args.output, "w", encoding="utf-8") as f:

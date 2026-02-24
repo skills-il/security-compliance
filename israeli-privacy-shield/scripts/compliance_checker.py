@@ -6,7 +6,8 @@ Standalone script that walks through a compliance assessment for the
 Israeli Privacy Protection Law 1981 and 2017 Security Regulations.
 
 Usage:
-    python compliance_checker.py
+    python compliance_checker.py --example
+    python compliance_checker.py --json '{"record_count":50000,"has_sensitive":true,"is_government":false,"is_health_finance":true,"is_direct_marketing":false,"is_credit_service":false,"has_cross_border":true}'
     python compliance_checker.py --output report.json
 """
 
@@ -173,6 +174,89 @@ def run_interactive_assessment() -> dict:
     return report
 
 
+def run_from_json(json_input: str, org_name: str = "Unknown") -> dict:
+    """Run compliance assessment from JSON input (non-interactive).
+
+    Args:
+        json_input: JSON string with assessment parameters.
+        org_name: Organization name.
+
+    Returns:
+        Assessment report dictionary.
+    """
+    try:
+        params = json.loads(json_input)
+    except json.JSONDecodeError:
+        print("Error: Invalid JSON input.", file=sys.stderr)
+        sys.exit(1)
+
+    record_count = params.get("record_count", 0)
+    has_sensitive = params.get("has_sensitive", False)
+    is_government = params.get("is_government", False)
+    is_health_finance = params.get("is_health_finance", False)
+    is_direct_marketing = params.get("is_direct_marketing", False)
+    is_credit_service = params.get("is_credit_service", False)
+    has_cross_border = params.get("has_cross_border", False)
+
+    security_level = determine_security_level(record_count, has_sensitive,
+                                               is_government, is_health_finance)
+    registration_required = check_registration_required(record_count, has_sensitive,
+                                                         is_direct_marketing,
+                                                         is_government,
+                                                         is_credit_service)
+    checklist = build_checklist(security_level)
+
+    report = {
+        "assessment_date": datetime.now().isoformat(),
+        "organization": org_name,
+        "inputs": {
+            "record_count": record_count,
+            "has_sensitive_data": has_sensitive,
+            "is_government": is_government,
+            "is_health_finance": is_health_finance,
+            "is_direct_marketing": is_direct_marketing,
+            "is_credit_service": is_credit_service,
+            "has_cross_border_transfer": has_cross_border,
+        },
+        "results": {
+            "security_level": security_level,
+            "registration_required": registration_required,
+            "cross_border_review_needed": has_cross_border,
+        },
+        "checklist": checklist,
+    }
+
+    print(f"Organization: {org_name}")
+    print(f"Security Level Required: {security_level.upper()}")
+    print(f"Database Registration Required: {'YES' if registration_required else 'NO'}")
+    print(f"Cross-Border Transfer Review: {'NEEDED' if has_cross_border else 'N/A'}")
+    print(f"Checklist items: {len(checklist)}")
+
+    return report
+
+
+def run_example() -> dict:
+    """Run a demo assessment with example data."""
+    print("=== Example: Israeli Health-Tech Startup ===")
+    print()
+    example_json = json.dumps({
+        "record_count": 50000,
+        "has_sensitive": True,
+        "is_government": False,
+        "is_health_finance": True,
+        "is_direct_marketing": False,
+        "is_credit_service": False,
+        "has_cross_border": True,
+    })
+    report = run_from_json(example_json, org_name="Example Health-Tech Startup")
+    print()
+    print("COMPLIANCE CHECKLIST:")
+    print("-" * 40)
+    for i, item in enumerate(report["checklist"], 1):
+        print(f"  [ ] {i}. {item['item']} ({item['level']} level)")
+    return report
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Israeli Privacy Protection Law Compliance Checker"
@@ -182,9 +266,29 @@ def main():
         help="Output file path for JSON report",
         default=None
     )
+    parser.add_argument(
+        "--json",
+        help='JSON string with parameters (non-interactive mode)',
+        default=None
+    )
+    parser.add_argument(
+        "--org-name",
+        help="Organization name (used with --json)",
+        default="Unknown"
+    )
+    parser.add_argument(
+        "--example",
+        action="store_true",
+        help="Run example assessment"
+    )
     args = parser.parse_args()
 
-    report = run_interactive_assessment()
+    if args.example:
+        report = run_example()
+    elif args.json:
+        report = run_from_json(args.json, args.org_name)
+    else:
+        report = run_interactive_assessment()
 
     if args.output:
         with open(args.output, "w", encoding="utf-8") as f:
