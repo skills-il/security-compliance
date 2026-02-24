@@ -4,18 +4,40 @@ description: >-
   Assist with Israeli legal research including legislation lookup, case law
   concepts, Hebrew legal terminology, and legal document preparation guidance.
   Use when user asks about Israeli law, "chok", "mishpat", "bagatz", court
-  procedures, employment law, contract law, real estate law, or needs help
-  with Hebrew legal terms. Covers civil, commercial, employment, and
-  administrative law. Do NOT use for providing formal legal advice — always
-  recommend consulting a licensed Israeli attorney (orech din). Do NOT use for
-  non-Israeli legal systems.
+  procedures, employment law, contract law, real estate law, or needs help with
+  Hebrew legal terms. Covers civil, commercial, employment, and administrative
+  law. Do NOT use for providing formal legal advice — always recommend
+  consulting a licensed Israeli attorney (orech din). Do NOT use for non-Israeli
+  legal systems.
 license: MIT
-compatibility: "Works with Claude Code, Claude.ai, Cursor. Network access helpful for legal database lookups."
+compatibility: >-
+  Works with Claude Code, Claude.ai, Cursor. Network access helpful for legal
+  database lookups.
 metadata:
   author: skills-il
   version: 1.0.0
   category: security-compliance
-  tags: [legal, law, hebrew, court, legislation, israel]
+  tags:
+    - legal
+    - law
+    - hebrew
+    - court
+    - legislation
+    - israel
+  display_name:
+    he: מחקר משפטי בעברית
+    en: Hebrew Legal Research
+  display_description:
+    he: 'חיפוש בחקיקה ופסיקה ישראלית, ניתוח חוקים ותקנות'
+    en: >-
+      Assist with Israeli legal research including legislation lookup, case law
+      concepts, Hebrew legal terminology, and legal document preparation
+      guidance. Use when user asks about Israeli law, "chok", "mishpat",
+      "bagatz", court procedures, employment law, contract law, real estate law,
+      or needs help with Hebrew legal terms. Covers civil, commercial,
+      employment, and administrative law. Do NOT use for providing formal legal
+      advice — always recommend consulting a licensed Israeli attorney (orech
+      din). Do NOT use for non-Israeli legal systems.
 ---
 
 # Hebrew Legal Research
