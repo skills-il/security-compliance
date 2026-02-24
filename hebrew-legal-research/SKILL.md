@@ -100,6 +100,15 @@ Result: Explain Contracts Law (General Part) 1973: offer (hatzaa), acceptance (k
 User says: "What legal structure should I use for a startup in Israel?"
 Result: Compare options: Chevra Baam (Ltd company), Shutfut (partnership), Osek Morsheh/Patur (sole proprietor). Explain Companies Law 1999 requirements, registration with Companies Registrar (Rasham HaChevarot).
 
+## Bundled Resources
+
+### Scripts
+- `scripts/legal_term_lookup.py` — Interactive Hebrew legal terminology database with 40+ terms covering courts, legislation types, legal proceedings, professionals, contract law, employment law, and property law. Supports single-term lookup, area-filtered listing, and full dictionary display. Run: `python scripts/legal_term_lookup.py --help`
+
+### References
+- `references/legal-databases-guide.md` — Comprehensive guide to Israeli legal research databases including paid platforms (Nevo, Takdin, Psakdin) and free resources (Knesset portal, Court rulings portal, Kol Zchut, Bituach Leumi). Consult when the user needs to find legislation text, court rulings, or rights information and you need to recommend the right source.
+- `references/legislation-index.md` — Index of key Israeli legislation organized by area (constitutional, contract, employment, corporate, real estate, consumer, tort, privacy, tax, criminal, administrative) with Hebrew names, key section numbers, and practical notes. Consult when you need to identify which specific law applies to a user's question.
+
 ## Troubleshooting
 
 ### Error: "Cannot access Nevo/Takdin"

@@ -135,6 +135,14 @@ Actions: Follow Workflow B — get Snyk details, check reachability, prioritize 
 User says: "We need to check if we comply with Israeli privacy law"
 Actions: Follow Workflow C — map Israeli Privacy Protection Law requirements, check database registration status, review consent mechanisms, assess cross-border data flows.
 
+## Bundled Resources
+
+### Scripts
+- `scripts/security_triage.py` — Structured security alert triage tool that calculates composite severity scores from CVSS, asset criticality, data sensitivity, and blast radius. Determines INCD reporting obligations for critical infrastructure and Privacy Authority notification for data breaches. Outputs classification, recommended response steps, and reporting deadlines. Run: `python scripts/security_triage.py --help`
+
+### References
+- `references/incd-guidelines.md` — Israel National Cyber Directorate reference covering CERT-IL, sector-specific regulators, critical infrastructure designations, the five-pillar INCD cyber defense framework (Identify/Protect/Detect/Respond/Recover), incident reporting timelines and channels, security best practices, and compliance mapping between Israeli Privacy Law, SOC2, and ISO 27001. Consult when assessing Israeli regulatory requirements or mapping security controls to compliance frameworks.
+
 ## Troubleshooting
 
 ### Error: "MCP server not connected"

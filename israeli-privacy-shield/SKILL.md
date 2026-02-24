@@ -106,6 +106,14 @@ Result: Assessment of security level, database registration need, privacy policy
 User says: "We discovered a data breach affecting Israeli users"
 Result: Step-by-step breach response: contain, assess, notify authority, notify users if significant harm, document.
 
+## Bundled Resources
+
+### Scripts
+- `scripts/compliance_checker.py` — Runs a full Privacy Protection Law compliance assessment: determines security level (basic/medium/high), checks database registration requirements, and generates a compliance checklist with all applicable controls. Run: `python scripts/compliance_checker.py --help`
+
+### References
+- `references/privacy-law-requirements.md` — Detailed breakdown of the Privacy Protection Law 1981 and 2017 Security Regulations including database registration process, security level requirements, consent rules, cross-border transfer rules, breach notification procedures, and penalties. Consult when you need specific legal requirements, section numbers, or GDPR comparison details beyond what the instructions cover.
+
 ## Troubleshooting
 
 ### Error: "Unsure about security level"
