@@ -1,22 +1,24 @@
 # Security & Compliance Skills
 
-AI agent skills for Israeli privacy law, GDPR, and regulatory compliance.
+AI agent skills for Israeli privacy law, legal research, and cybersecurity operations.
 
-Part of [Skills IL](https://agentskills.co.il) — curated AI agent skills for Israeli developers.
+Part of [Skills IL](https://github.com/skills-il) — curated AI agent skills for Israeli developers.
 
 ## Skills
 
-| Skill | Description | Trust | Agents |
-|-------|-------------|-------|--------|
-| [israeli-privacy-shield](./israeli-privacy-shield/) | Israeli Privacy Protection Act compliance and GDPR alignment | Verified | Claude Code, Cursor, Copilot, Windsurf |
+| Skill | Description | Scripts | References |
+|-------|-------------|---------|------------|
+| [israeli-privacy-shield](./israeli-privacy-shield/) | Israeli Privacy Protection Law compliance: database registration, consent, data security, cross-border transfers, breach notification. GDPR comparison. | `compliance_checker.py` | 1 |
+| [hebrew-legal-research](./hebrew-legal-research/) | Israeli legal research: legislation lookup, case law, Hebrew legal terminology (40+ terms). Covers civil, commercial, employment, and administrative law. | `legal_term_lookup.py` | 2 |
+| [israeli-cybersecurity-ops](./israeli-cybersecurity-ops/) | Coordinate Israeli-built security tools: Wiz, Snyk, Check Point, CyberArk, SentinelOne. INCD guidelines, threat triage, compliance checking. | `security_triage.py` | 1 |
 
 ## Install
 
 ```bash
-# Claude Code
-npx skills-il add skills-il/security-compliance --skill israeli-privacy-shield
+# Claude Code - install a specific skill
+claude install github:skills-il/security-compliance/israeli-privacy-shield
 
-# Or clone and use directly
+# Or clone the full repo
 git clone https://github.com/skills-il/security-compliance.git
 ```
 
