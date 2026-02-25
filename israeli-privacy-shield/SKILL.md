@@ -125,6 +125,15 @@ Result: Assessment of security level, database registration need, privacy policy
 User says: "We discovered a data breach affecting Israeli users"
 Result: Step-by-step breach response: contain, assess, notify authority, notify users if significant harm, document.
 
+### Example 3: Cross-Border Data Transfer
+User says: "We need to transfer Israeli customer data to our US servers"
+Actions:
+1. Assess data types for sensitivity level
+2. Check if destination country has adequate protection
+3. Determine transfer mechanism (adequacy, consent, contractual clauses)
+4. Document compliance steps
+Result: Transfer compliance checklist with specific steps for US data transfer under Israeli Privacy Protection Law.
+
 ## Bundled Resources
 
 ### Scripts
