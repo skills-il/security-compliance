@@ -38,6 +38,14 @@ metadata:
       employment, and administrative law. Do NOT use for providing formal legal
       advice — always recommend consulting a licensed Israeli attorney (orech
       din). Do NOT use for non-Israeli legal systems.
+  supported_agents:
+    - claude-code
+    - cursor
+    - github-copilot
+    - windsurf
+    - opencode
+    - codex
+    - openclaw
 ---
 
 # Hebrew Legal Research
