@@ -1,3 +1,7 @@
 israeli-privacy-shield:
   - changed-files:
     - any-glob-to-any-file: 'israeli-privacy-shield/**'
+
+israeli-ecommerce-compliance:
+  - changed-files:
+    - any-glob-to-any-file: 'israeli-ecommerce-compliance/**'

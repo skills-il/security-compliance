@@ -9,6 +9,7 @@ body:
       label: Which skill?
       options:
         - israeli-privacy-shield
+        - israeli-ecommerce-compliance
         - Other
     validations:
       required: true
@@ -22,6 +23,7 @@ body:
         - GitHub Copilot
         - Windsurf
         - OpenCode
+        - OpenClaw
         - Codex
         - Other
     validations:
