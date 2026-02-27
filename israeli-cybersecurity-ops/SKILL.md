@@ -39,6 +39,14 @@ metadata:
       Pentera tools. Embeds Israeli security best practices including INCD
       guidelines and Israeli Privacy Protection Law compliance. Do NOT use for
       offensive security testing or creating exploits.
+  supported_agents:
+    - claude-code
+    - cursor
+    - github-copilot
+    - windsurf
+    - opencode
+    - codex
+    - openclaw
 ---
 
 # Israeli Cybersecurity Ops
