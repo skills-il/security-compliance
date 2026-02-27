@@ -18,12 +18,20 @@ metadata:
   version: 1.0.0
   category: security-compliance
   tags:
-    - cybersecurity
-    - security-ops
-    - wiz
-    - snyk
-    - compliance
-    - israel
+    he:
+      - סייבר
+      - תפעול-אבטחה
+      - Wiz
+      - Snyk
+      - ציות
+      - ישראל
+    en:
+      - cybersecurity
+      - security-ops
+      - wiz
+      - snyk
+      - compliance
+      - israel
   mcp-server: 'wiz, snyk'
   display_name:
     he: אבטחת סייבר ישראלית
