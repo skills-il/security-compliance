@@ -15,12 +15,20 @@ metadata:
   version: 1.0.0
   category: security-compliance
   tags:
-    - privacy
-    - data-protection
-    - compliance
-    - gdpr
-    - regulation
-    - israel
+    he:
+      - פרטיות
+      - הגנת-מידע
+      - ציות
+      - GDPR
+      - רגולציה
+      - ישראל
+    en:
+      - privacy
+      - data-protection
+      - compliance
+      - gdpr
+      - regulation
+      - israel
   display_name:
     he: מגן פרטיות ישראלי
     en: Israeli Privacy Shield
