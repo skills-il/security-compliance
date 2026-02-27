@@ -34,6 +34,14 @@ metadata:
       companies, privacy policy requirements, or database registration. Covers
       the Privacy Protection Law 1981 and 2017 Security Regulations. Do NOT use
       for EU GDPR-only questions without Israeli context.
+  supported_agents:
+    - claude-code
+    - cursor
+    - github-copilot
+    - windsurf
+    - opencode
+    - codex
+    - openclaw
 ---
 
 # Israeli Privacy Shield
