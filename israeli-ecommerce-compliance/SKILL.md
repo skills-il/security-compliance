@@ -20,12 +20,20 @@ metadata:
   version: 1.0.0
   category: security-compliance
   tags:
-    - compliance
-    - ecommerce
-    - consumer-protection
-    - accessibility
-    - legal
-    - israel
+    he:
+      - ציות
+      - מסחר-אלקטרוני
+      - הגנת-צרכן
+      - נגישות
+      - משפטי
+      - ישראל
+    en:
+      - compliance
+      - ecommerce
+      - consumer-protection
+      - accessibility
+      - legal
+      - israel
   display_name:
     he: תאימות חוקית למסחר אלקטרוני ישראלי
     en: Israeli E-Commerce Compliance
