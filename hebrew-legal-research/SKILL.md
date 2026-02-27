@@ -18,12 +18,20 @@ metadata:
   version: 1.0.0
   category: security-compliance
   tags:
-    - legal
-    - law
-    - hebrew
-    - court
-    - legislation
-    - israel
+    he:
+      - משפטי
+      - חוק
+      - עברית
+      - בית-משפט
+      - חקיקה
+      - ישראל
+    en:
+      - legal
+      - law
+      - hebrew
+      - court
+      - legislation
+      - israel
   display_name:
     he: מחקר משפטי בעברית
     en: Hebrew Legal Research
