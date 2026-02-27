@@ -45,7 +45,6 @@ metadata:
     - windsurf
     - opencode
     - codex
-    - openclaw
 ---
 
 # Hebrew Legal Research
