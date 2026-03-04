@@ -70,7 +70,7 @@ Check for required pre-purchase disclosures:
 - Seller's full details (see Step 5)
 
 ### Step 2: Validate Price Display Requirements
-- All prices MUST include VAT (17%) — Israeli law requires consumer-facing prices to be inclusive
+- All prices MUST include VAT (18%) — Israeli law requires consumer-facing prices to be inclusive
 - Delivery/shipping costs must be clearly stated before checkout
 - Total order cost (including all fees) must be shown before payment confirmation
 - Currency must be NIS (display as ₪ or ש"ח)
@@ -94,7 +94,7 @@ Generate Return Policy (מדיניות החזרות) per legal requirements:
 - Exceptions to cancellation right (perishables, custom items, digital content after download)
 
 ### Step 4: Check Accessibility Compliance (IS 5568 / Amendment 36)
-Israeli websites must comply with IS 5568 accessibility standard (based on WCAG 2.0 AA).
+Israeli websites must comply with IS 5568 accessibility standard (based on WCAG 2.1 AA).
 Use browser automation to scan for:
 - Alt text on images
 - Keyboard navigation support
@@ -182,7 +182,7 @@ Solution: Ensure scan waits for full page load including lazy-loaded content. Ru
 
 ### Error: "Price display violation"
 Cause: Prices shown without VAT or delivery costs hidden until checkout.
-Solution: All consumer-facing prices must include 17% VAT. Delivery costs must be shown before the payment confirmation step. Use clear format: "₪X.XX (כולל מע"מ)" for all prices. Ensure cart total includes delivery before asking for payment details.
+Solution: All consumer-facing prices must include 18% VAT. Delivery costs must be shown before the payment confirmation step. Use clear format: "₪X.XX (כולל מע"מ)" for all prices. Ensure cart total includes delivery before asking for payment details.
 
 ### Error: "Business disclosure missing"
 Cause: Required business details not visible or not on every required page.

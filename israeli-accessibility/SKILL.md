@@ -53,7 +53,7 @@ metadata:
 ## Instructions
 
 ### Israeli Accessibility Law
-The Equal Rights for Persons with Disabilities Law (Chok Shivyon Zchuyot, 1998) with 2005 and 2013 amendments mandates IS 5568 compliance. Government websites, public bodies, businesses serving the public, companies with 50+ employees, and e-commerce sites must all comply at AA level. Penalties up to 75,000 NIS per violation.
+The Equal Rights for Persons with Disabilities Law (Chok Shivyon Zchuyot, 1998) with 2005 and 2013 amendments mandates IS 5568 compliance. Government websites, public bodies, businesses serving the public, companies with 50+ employees (Note: accessibility regulations apply based on public-facing service type, not solely employee count), and e-commerce sites must all comply at AA level. Penalties up to 50,000 NIS per violation.
 
 ### IS 5568 Standard
 Based on WCAG 2.1 with Israeli-specific additions: accessibility statement (Hatzaharat Negishot) required on every page, accessibility menu/widget, lang="he" and dir="rtl" attributes, accessibility coordinator contact published.
