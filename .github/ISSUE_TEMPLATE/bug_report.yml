@@ -8,8 +8,12 @@ body:
     attributes:
       label: Which skill?
       options:
-        - israeli-privacy-shield
+        - hebrew-legal-research
+        - israeli-cyber-regulations
+        - israeli-cybersecurity-ops
         - israeli-ecommerce-compliance
+        - israeli-privacy-compliance
+        - israeli-privacy-shield
         - Other
     validations:
       required: true

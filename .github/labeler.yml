@@ -1,7 +1,23 @@
-israeli-privacy-shield:
+hebrew-legal-research:
   - changed-files:
-    - any-glob-to-any-file: 'israeli-privacy-shield/**'
+    - any-glob-to-any-file: 'hebrew-legal-research/**'
+
+israeli-cyber-regulations:
+  - changed-files:
+    - any-glob-to-any-file: 'israeli-cyber-regulations/**'
+
+israeli-cybersecurity-ops:
+  - changed-files:
+    - any-glob-to-any-file: 'israeli-cybersecurity-ops/**'
 
 israeli-ecommerce-compliance:
   - changed-files:
     - any-glob-to-any-file: 'israeli-ecommerce-compliance/**'
+
+israeli-privacy-compliance:
+  - changed-files:
+    - any-glob-to-any-file: 'israeli-privacy-compliance/**'
+
+israeli-privacy-shield:
+  - changed-files:
+    - any-glob-to-any-file: 'israeli-privacy-shield/**'
