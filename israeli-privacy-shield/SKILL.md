@@ -49,6 +49,7 @@ metadata:
     - windsurf
     - opencode
     - codex
+    - antigravity
 ---
 
 # Israeli Privacy Shield
