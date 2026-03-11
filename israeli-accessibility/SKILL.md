@@ -37,8 +37,12 @@ metadata:
       ביקורת ויישום נגישות אתרים בהתאם לתקן IS 5568 ולחוק שוויון זכויות
       לאנשים עם מוגבלות, כולל דפוסי RTL ותוויות ARIA בעברית
     en: >-
-      Audit and implement web accessibility compliance per Israeli Standard
-      IS 5568 and the Equal Rights for Persons with Disabilities Law
+      Audit and implement web accessibility compliance per Israeli Standard IS
+      5568 and the Equal Rights for Persons with Disabilities Law (Chok Shivyon
+      Zchuyot). Use when user asks about Israeli accessibility requirements, IS
+      5568 compliance, WCAG for Hebrew sites, RTL accessibility, or Israeli
+      government accessibility audit. Covers IS 5568 mapped to WCAG 2.1, RTL
+      screen reader patterns, and Hebrew ARIA labels.
   supported_agents:
     - claude-code
     - cursor
