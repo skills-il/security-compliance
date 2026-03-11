@@ -42,6 +42,14 @@ metadata:
     en: >-
       Audit and ensure Israeli e-commerce legal compliance — Consumer Protection
       Law, return policies, price display, accessibility, and cookie consent.
+      Use when user asks about "online store compliance Israel", "Chok Hagnat
+      HaTzarchan", "consumer protection Israel", "return policy Israel", "IS
+      5568 ecommerce", "cookie consent Israel", or "חוק הגנת הצרכן". Covers
+      cooling-off period validation, price display requirements, Hebrew terms of
+      service generation, accessibility compliance (IS 5568), and business
+      disclosure verification. Do NOT use for food-specific compliance (use
+      israeli-food- business-compliance) or privacy/GDPR (use
+      israeli-privacy-shield).
   openclaw:
     requires:
       bins: []
