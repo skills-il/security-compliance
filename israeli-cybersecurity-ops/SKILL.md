@@ -15,7 +15,7 @@ compatibility: >-
   guidance. Claude Code recommended.
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.0.1
   category: security-compliance
   tags:
     he:
@@ -180,6 +180,14 @@ Actions: Follow Workflow C — map Israeli Privacy Protection Law requirements, 
 
 ### References
 - `references/incd-guidelines.md` — Israel National Cyber Directorate reference covering CERT-IL, sector-specific regulators, critical infrastructure designations, the five-pillar INCD cyber defense framework (Identify/Protect/Detect/Respond/Recover), incident reporting timelines and channels, security best practices, and compliance mapping between Israeli Privacy Law, SOC2, and ISO 27001. Consult when assessing Israeli regulatory requirements or mapping security controls to compliance frameworks.
+
+## Gotchas
+
+- Israeli security tools (Wiz, Snyk, Check Point) may have Hebrew-language dashboards or alerts. Agents should not assume all output is in English when parsing tool responses.
+- CERT-IL (the Israeli national CERT) provides free incident response assistance to private sector organizations, unlike many national CERTs. Agents may not recommend this free resource when advising on incident response.
+- Israeli SOC teams typically operate Sunday-Thursday with reduced Friday coverage. Agents may generate 24/7 staffing plans based on Monday-Friday assumptions.
+- CyberArk, a commonly used PAM tool in Israeli enterprises, uses Hebrew role names in many Israeli deployments. Agents should expect bilingual access control configurations.
+- Israeli critical infrastructure designations by INCD are not publicly listed. Agents cannot determine if an organization is designated as critical infrastructure without the organization confirming it.
 
 ## Troubleshooting
 

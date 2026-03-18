@@ -12,7 +12,7 @@ license: MIT
 compatibility: 'No network required. Works with Claude Code, Claude.ai, Cursor.'
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.0.1
   category: security-compliance
   tags:
     he:
@@ -157,6 +157,14 @@ Result: Transfer compliance checklist with specific steps for US data transfer u
 
 ### References
 - `references/privacy-law-requirements.md` — Detailed breakdown of the Privacy Protection Law 1981 and 2017 Security Regulations including database registration process, security level requirements, consent rules, cross-border transfer rules, breach notification procedures, and penalties. Consult when you need specific legal requirements, section numbers, or GDPR comparison details beyond what the instructions cover.
+
+## Gotchas
+
+- Israeli Privacy Protection Law predates GDPR (1981 vs 2016) and has key differences: no specific 72-hour breach notification deadline, database registration is required (GDPR eliminated this), and right to erasure is more limited. Agents may incorrectly apply GDPR rules to Israeli contexts.
+- Israel has an EU adequacy decision, meaning data transfers FROM Israel TO the EU are generally straightforward. Agents may incorrectly flag Israel-to-EU transfers as requiring additional safeguards.
+- The 2017 Security Regulations define three security levels (basic/medium/high) based on record count and data sensitivity. Agents may apply a one-size-fits-all approach instead of the tiered model.
+- Israeli law requires database registration with the Privacy Protection Authority for databases with 10,000+ records used for direct marketing. Agents may confuse this with GDPR's ROPA (Record of Processing Activities), which replaced registration in the EU.
+- Penalties under Israeli privacy law include criminal liability (up to 5 years imprisonment), not just fines. Agents may understate the severity by comparing only to GDPR's monetary penalties.
 
 ## Troubleshooting
 

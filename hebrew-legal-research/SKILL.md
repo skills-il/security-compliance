@@ -15,7 +15,7 @@ compatibility: >-
   database lookups.
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.0.1
   category: security-compliance
   tags:
     he:
@@ -146,6 +146,14 @@ Result: Compare options: Chevra Baam (Ltd company), Shutfut (partnership), Osek 
 ### References
 - `references/legal-databases-guide.md` — Comprehensive guide to Israeli legal research databases including paid platforms (Nevo, Takdin, Psakdin) and free resources (Knesset portal, Court rulings portal, Kol Zchut, Bituach Leumi). Consult when the user needs to find legislation text, court rulings, or rights information and you need to recommend the right source.
 - `references/legislation-index.md` — Index of key Israeli legislation organized by area (constitutional, contract, employment, corporate, real estate, consumer, tort, privacy, tax, criminal, administrative) with Hebrew names, key section numbers, and practical notes. Consult when you need to identify which specific law applies to a user's question.
+
+## Gotchas
+
+- Israeli laws are referenced by their Hebrew year of enactment (e.g., tashma"b = 1981), not the Gregorian year. Agents may cite the wrong law when searching by year number alone.
+- The Israeli legal system is a mixed system (not pure common law or civil law). Agents trained on US/UK case law may incorrectly assume binding precedent rules or jury trials, neither of which apply in Israel.
+- Kol Zchut (All Rights) is the authoritative free legal information wiki in Israel, not Wikipedia. Agents may link to generic sources instead of kol-zchut.org.il for Israeli rights information.
+- Israeli court decisions are cited by case number and court (e.g., "bagatz 1234/05"), not by party names as in US law. Agents may generate incorrect citation formats.
+- Many Israeli laws from the British Mandate era (pkudot) are still in force. Agents may assume pre-1948 legislation is obsolete when it is not.
 
 ## Troubleshooting
 

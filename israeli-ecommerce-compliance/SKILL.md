@@ -17,7 +17,7 @@ compatibility: >-
   website scanning and periodic compliance checks.
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.0.1
   category: security-compliance
   tags:
     he:
@@ -177,6 +177,14 @@ Result: Accessibility report: 15 issues found (8 critical, 7 moderate). Critical
 
 ### References
 - `references/consumer-protection-law.md` — Summary of Israeli Consumer Protection Law requirements for e-commerce: distance selling rules, cooling-off periods (standard and extended), cancellation fees, price display requirements, required disclosures, and exceptions. Consult when auditing compliance in Steps 1-2 or generating legal documents in Step 3.
+
+## Gotchas
+
+- The Israeli 14-day cooling-off period for online purchases starts from the delivery date or the date the consumer received the contract terms, whichever is later. Agents may incorrectly calculate it from the order date.
+- Israeli law requires all prices to include 18% VAT (ma'am). Agents may generate price displays excluding tax, which is illegal for consumer-facing Israeli e-commerce.
+- The extended 4-month cancellation period applies to people with disabilities, seniors (65+), and new immigrants (under 5 years in Israel). Agents may only mention the standard 14-day period.
+- IS 5568 (Israeli accessibility standard) is based on WCAG 2.1 AA but has additional Hebrew RTL-specific requirements. Agents may apply generic WCAG checks without RTL-specific validations.
+- Cookie consent in Israel requires opt-in (not opt-out) for analytics and marketing cookies since the 2022 Communications Law amendment. Agents trained on older data may recommend opt-out banners.
 
 ## Troubleshooting
 

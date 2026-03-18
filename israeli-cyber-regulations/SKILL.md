@@ -15,7 +15,7 @@ license: MIT
 compatibility: 'No network required. Works with Claude Code, Claude.ai, Cursor.'
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.0.1
   category: security-compliance
   tags:
     he:
@@ -280,6 +280,14 @@ Result: Multi-framework compliance matrix with healthtech-specific controls and 
 ### References
 - `references/incd-guidelines.md` -- Comprehensive guide to INCD (Ma'arach HaSyber) framework including the five-pillar cyber defense model, CERT-IL reporting procedures, critical infrastructure designations, and national cybersecurity baseline requirements. Consult when assessing INCD compliance or preparing incident reports.
 - `references/sector-rules.md` -- Sector-specific cybersecurity regulation details for financial services (BOI 361/357), healthtech (MOH), defense (MALMAB), telecom, and energy. Includes control matrices, reporting deadlines, and regulator contact information. Consult when mapping sector-specific requirements.
+
+## Gotchas
+
+- Bank of Israel Directive 361 requires cloud providers to receive explicit BOI approval before use. Agents may assume any SOC 2-certified cloud provider is automatically compliant for Israeli banks.
+- INCD (Ma'arach HaSyber) incident reporting timelines differ by sector: critical infrastructure must report within hours, while private sector reporting is voluntary. Agents may apply a single timeline across all sectors.
+- The Israeli Securities Authority (ISA/Rashut) uses a different materiality test for cyber incident disclosure than the US SEC. Agents may apply US materiality standards to TASE-listed companies.
+- Israel's DPO (Data Protection Officer) requirement was expanded in Amendment 13 (August 2025) to include public bodies and large-scale sensitive data processors. Agents with pre-2025 training data may not know about this requirement.
+- BOI Directive 357 requires fintech companies to submit a cybersecurity assessment before launch. Agents may not flag this pre-launch requirement when advising Israeli payment startups.
 
 ## Troubleshooting
 

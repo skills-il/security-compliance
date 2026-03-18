@@ -15,7 +15,7 @@ allowed-tools: 'Bash(python:*)'
 compatibility: 'No special requirements. Works with Claude Code, Cursor, Windsurf.'
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.0.1
   category: security-compliance
   tags:
     he:
@@ -553,3 +553,11 @@ python scripts/security-audit-checklist.py --project-dir /path/to/project --form
 ```
 
 Refer to the `references/` directory for detailed guidance on Israeli privacy law and OWASP considerations for Hebrew/RTL applications.
+
+## Gotchas
+
+- Israeli Privacy Protection Law (1981) has different breach notification rules than GDPR. There is no 72-hour deadline; the law says "without delay". Agents may incorrectly apply GDPR timelines to Israeli incidents.
+- Hebrew UTF-8 characters are 2 bytes each. Input length validation that counts bytes instead of characters will reject valid Hebrew input at half the expected length.
+- Israeli ID numbers (Teudat Zehut) use a Luhn-variant check digit algorithm, not standard Luhn. Agents may implement the wrong validation and accept invalid IDs.
+- The Israeli Privacy Protection Authority (PPA) database registration threshold is 10,000 records, not 5,000. Agents may cite incorrect thresholds from outdated training data.
+- Bidirectional (BiDi) text attacks are especially dangerous in Hebrew/English mixed codebases. Standard security scanners do not detect RTL override characters (U+202E) that can disguise malicious code.
