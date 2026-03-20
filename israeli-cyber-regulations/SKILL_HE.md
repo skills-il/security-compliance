@@ -52,7 +52,7 @@
 - **תשתית קריטית:** דיווח ל-CERT-IL תוך שעות מהגילוי
 - **גופים ממשלתיים:** דיווח חובה לפי רשות התקשוב הממשלתית
 - **מגזר פרטי:** מרצון אך מומלץ מאוד; CERT-IL מספק סיוע חינמי
-- **ערוץ דיווח:** קו חם של CERT-IL או פורטל מאובטח ב-`https://www.gov.il/he/departments/israel_national_cyber_directorate`
+- **ערוץ דיווח:** קו חם של CERT-IL או פורטל מאובטח ב-https://www.gov.il/he/departments/israel_national_cyber_directorate
 
 **רשימת בדיקה שנתית למערך הסייבר:**
 - [ ] הערכת סיכונים הושלמה ותועדה

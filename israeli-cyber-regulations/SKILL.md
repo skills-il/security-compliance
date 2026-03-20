@@ -109,7 +109,7 @@ The Israel National Cyber Directorate (INCD) sets national cybersecurity policy.
 - **Critical infrastructure:** Report to CERT-IL within hours of detection
 - **Government bodies:** Mandatory reporting per Government ICT Authority (Rashut HaTkshov)
 - **Private sector:** Voluntary but strongly recommended; CERT-IL provides free assistance
-- **Reporting channel:** CERT-IL hotline or secure portal at `https://www.gov.il/he/departments/israel_national_cyber_directorate`
+- **Reporting channel:** CERT-IL hotline or secure portal at https://www.gov.il/he/departments/israel_national_cyber_directorate
 
 **Annual INCD compliance checklist:**
 - [ ] Risk assessment completed and documented
