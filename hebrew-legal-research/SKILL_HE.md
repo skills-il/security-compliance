@@ -1,3 +1,60 @@
+---
+name: hebrew-legal-research
+description: >-
+  Assist with Israeli legal research including legislation lookup, case law
+  concepts, Hebrew legal terminology, and legal document preparation guidance.
+  Use when user asks about Israeli law, "chok", "mishpat", "bagatz", court
+  procedures, employment law, contract law, real estate law, or needs help with
+  Hebrew legal terms. Covers civil, commercial, employment, and administrative
+  law. Do NOT use for providing formal legal advice — always recommend
+  consulting a licensed Israeli attorney (orech din). Do NOT use for non-Israeli
+  legal systems.
+license: MIT
+compatibility: >-
+  Works with Claude Code, Claude.ai, Cursor. Network access helpful for legal
+  database lookups.
+metadata:
+  author: skills-il
+  version: 1.1.0
+  category: security-compliance
+  tags:
+    he:
+      - משפטי
+      - חוק
+      - עברית
+      - בית-משפט
+      - חקיקה
+      - ישראל
+    en:
+      - legal
+      - law
+      - hebrew
+      - court
+      - legislation
+      - israel
+  display_name:
+    he: מחקר משפטי בעברית
+    en: Hebrew Legal Research
+  display_description:
+    he: 'חיפוש בחקיקה ופסיקה ישראלית, ניתוח חוקים ותקנות'
+    en: >-
+      Assist with Israeli legal research including legislation lookup, case law
+      concepts, Hebrew legal terminology, and legal document preparation
+      guidance. Use when user asks about Israeli law, "chok", "mishpat",
+      "bagatz", court procedures, employment law, contract law, real estate law,
+      or needs help with Hebrew legal terms. Covers civil, commercial,
+      employment, and administrative law. Do NOT use for providing formal legal
+      advice — always recommend consulting a licensed Israeli attorney (orech
+      din). Do NOT use for non-Israeli legal systems.
+  supported_agents:
+    - claude-code
+    - cursor
+    - github-copilot
+    - windsurf
+    - opencode
+    - codex
+    - antigravity
+---
 
 # מחקר משפטי בעברית
 
@@ -27,8 +84,8 @@
 | עבודה | חבילת חוקי עבודה | חוקי עבודה |
 | מקרקעין | חוק המקרקעין 1969, חוק התכנון והבנייה 1965 | חוק המקרקעין |
 | תאגידים | חוק החברות 1999 | חוק החברות |
-| צרכנות | חוק הגנת הצרכן 1981 | חוק הגנת הצרכן |
-| פרטיות | חוק הגנת הפרטיות 1981 | חוק הגנת הפרטיות |
+| צרכנות | חוק הגנת הצרכן 1981 (עם תיקונים רבים כולל עדכונים אחרונים לתחום המסחר הדיגיטלי) | חוק הגנת הצרכן |
+| פרטיות | חוק הגנת הפרטיות 1981 (תוקן משמעותית ב-2017 עם דרישות הגנת נתונים המותאמות ל-GDPR) | חוק הגנת הפרטיות |
 | נזיקין | פקודת הנזיקין (נוסח חדש) | פקודת הנזיקין |
 | משפחה | חוקי מעמד אישי שונים | דיני משפחה |
 | מיסים | פקודת מס הכנסה, חוק מע"מ | פקודת מס הכנסה, חוק מע"מ |

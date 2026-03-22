@@ -15,7 +15,7 @@ compatibility: >-
   database lookups.
 metadata:
   author: skills-il
-  version: 1.0.1
+  version: 1.1.0
   category: security-compliance
   tags:
     he:
@@ -84,8 +84,8 @@ Israeli law is organized by area:
 | Employment | Employment laws bundle | Chukei Avoda |
 | Real Estate | Land Law 1969, Planning Law 1965 | Chok HaMikrkain |
 | Corporate | Companies Law 1999 | Chok HaChevarot |
-| Consumer | Consumer Protection Law 1981 | Chok Haganat HaTzarchan |
-| Privacy | Privacy Protection Law 1981 | Chok Haganat HaPratiut |
+| Consumer | Consumer Protection Law 1981 (with multiple amendments including recent updates for digital commerce) | Chok Haganat HaTzarchan |
+| Privacy | Privacy Protection Law 1981 (significantly amended in 2017 with GDPR-aligned data protection requirements) | Chok Haganat HaPratiut |
 | Torts | Torts Ordinance (New Version) | Pkudat HaNezikin |
 | Family | Various personal status laws | Dinei Mishpacha |
 | Tax | Income Tax Ordinance, VAT Law | Pkudat Mas Hachnasa, Chok Maam |
