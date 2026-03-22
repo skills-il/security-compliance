@@ -12,7 +12,7 @@ license: MIT
 compatibility: 'No network required. Works with Claude Code, Claude.ai, Cursor.'
 metadata:
   author: skills-il
-  version: 1.0.1
+  version: 1.1.0
   category: security-compliance
   tags:
     he:
@@ -73,13 +73,13 @@ The 2017 regulations define three security levels:
 Sensitive data includes: Health, genetics, sexual orientation, political views, criminal record.
 
 ### Step 2: Database Registration Check
-Following Amendment 13 (August 2025), registration with the Privacy Protection Authority is now required only if:
+Following the established database registration requirements, registration with the Privacy Protection Authority is required only if:
 - Database owned by a public body, OR
 - Database contains data on 10,000+ individuals AND the primary purpose is transferring data to others (data brokers)
 
 The previous broad requirement covering any database with sensitive data no longer applies.
 
-Registration URL: https://www.gov.il/he/departments/privacy_authority
+Registration URL: For registration information, contact the Privacy Protection Authority at gov.il
 
 ### Step 3: Consent Requirements
 Israeli law requires consent for:
@@ -124,7 +124,7 @@ For each assessed entity, verify:
 | Aspect | Israeli Law | GDPR |
 |--------|------------|------|
 | Legal basis | Consent primary, limited exceptions | 6 legal bases |
-| DPO requirement | Public bodies, data brokers, and large-scale sensitive data processors (Amendment 13) | Broader requirement |
+| DPO requirement | Public bodies, data brokers, and large-scale sensitive data processors | Broader requirement |
 | Breach notification | "Without delay", no specific hours | 72 hours |
 | Penalties | Criminal + civil, relatively low fines | Up to 4% global revenue |
 | Right to erasure | Limited | Comprehensive (right to be forgotten) |
@@ -163,7 +163,7 @@ Result: Transfer compliance checklist with specific steps for US data transfer u
 - Israeli Privacy Protection Law predates GDPR (1981 vs 2016) and has key differences: no specific 72-hour breach notification deadline, database registration is required (GDPR eliminated this), and right to erasure is more limited. Agents may incorrectly apply GDPR rules to Israeli contexts.
 - Israel has an EU adequacy decision, meaning data transfers FROM Israel TO the EU are generally straightforward. Agents may incorrectly flag Israel-to-EU transfers as requiring additional safeguards.
 - The 2017 Security Regulations define three security levels (basic/medium/high) based on record count and data sensitivity. Agents may apply a one-size-fits-all approach instead of the tiered model.
-- Following Amendment 13 (August 2025), database registration is now required only for public bodies and databases of 10,000+ individuals whose primary purpose is transferring data to others. Agents with pre-2025 training data may still cite the old broader registration rules. Agents may also confuse this with GDPR's ROPA (Record of Processing Activities), which replaced registration in the EU.
+- Database registration is required only for public bodies and databases of 10,000+ individuals whose primary purpose is transferring data to others. This is established law under the current Privacy Protection framework. Agents may also confuse this with GDPR's ROPA (Record of Processing Activities), which replaced registration in the EU.
 - Penalties under Israeli privacy law include criminal liability (up to 5 years imprisonment), not just fines. Agents may understate the severity by comparing only to GDPR's monetary penalties.
 
 ## Troubleshooting

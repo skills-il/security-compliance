@@ -1,3 +1,56 @@
+---
+name: israeli-privacy-shield
+description: >-
+  Israeli Privacy Protection Law compliance guidance including database
+  registration, consent requirements, data security, cross-border transfers, and
+  breach notification. Use when user asks about Israeli privacy law, "haganat
+  pratiut", data protection in Israel, GDPR compliance for Israeli companies,
+  privacy policy requirements, or database registration. Covers the Privacy
+  Protection Law 1981 and 2017 Security Regulations. Do NOT use for EU GDPR-only
+  questions without Israeli context.
+license: MIT
+compatibility: 'No network required. Works with Claude Code, Claude.ai, Cursor.'
+metadata:
+  author: skills-il
+  version: 1.1.0
+  category: security-compliance
+  tags:
+    he:
+      - פרטיות
+      - הגנת-מידע
+      - ציות
+      - GDPR
+      - רגולציה
+      - ישראל
+    en:
+      - privacy
+      - data-protection
+      - compliance
+      - gdpr
+      - regulation
+      - israel
+  display_name:
+    he: מגן פרטיות ישראלי
+    en: Israeli Privacy Shield
+  display_description:
+    he: בדיקת תאימות לחוק הגנת הפרטיות ולתקנות GDPR
+    en: >-
+      Israeli Privacy Protection Law compliance guidance including database
+      registration, consent requirements, data security, cross-border transfers,
+      and breach notification. Use when user asks about Israeli privacy law,
+      "haganat pratiut", data protection in Israel, GDPR compliance for Israeli
+      companies, privacy policy requirements, or database registration. Covers
+      the Privacy Protection Law 1981 and 2017 Security Regulations. Do NOT use
+      for EU GDPR-only questions without Israeli context.
+  supported_agents:
+    - claude-code
+    - cursor
+    - github-copilot
+    - windsurf
+    - opencode
+    - codex
+    - antigravity
+---
 
 # מגן פרטיות ישראלי
 
@@ -20,13 +73,13 @@
 מידע רגיש כולל: בריאות, גנטיקה, נטייה מינית, דעות פוליטיות, עבר פלילי.
 
 ### שלב 2: בדיקת רישום מאגר מידע
-בעקבות תיקון 13 (אוגוסט 2025), רישום ברשות להגנת הפרטיות נדרש כעת רק אם:
+בהתאם לדרישות רישום מאגרי המידע המבוססות, רישום ברשות להגנת הפרטיות נדרש רק אם:
 - המאגר שייך לגוף ציבורי, או
 - המאגר מכיל נתונים על 10,000+ אנשים ומטרתו העיקרית היא העברת מידע לאחרים (ברוקרי מידע)
 
 הדרישה הרחבה הקודמת שחלה על כל מאגר עם מידע רגיש כבר לא תקפה.
 
-כתובת רישום: https://www.gov.il/he/departments/privacy_authority
+כתובת רישום: למידע על רישום, יש לפנות לרשות להגנת הפרטיות באתר gov.il
 
 ### שלב 3: דרישות הסכמה
 החוק הישראלי דורש הסכמה עבור:
@@ -71,7 +124,7 @@
 | היבט | החוק הישראלי | GDPR |
 |------|-------------|------|
 | בסיס חוקי | הסכמה כעיקרי, חריגים מוגבלים | 6 בסיסים חוקיים |
-| דרישת ממונה הגנת מידע | גופים ציבוריים, ברוקרי מידע ומעבדי מידע רגיש בהיקף גדול (תיקון 13) | דרישה רחבה יותר |
+| דרישת ממונה הגנת מידע | גופים ציבוריים, ברוקרי מידע ומעבדי מידע רגיש בהיקף גדול | דרישה רחבה יותר |
 | דיווח על פריצה | "ללא דיחוי", ללא מועד ספציפי בשעות | 72 שעות |
 | עונשים | פליליים + אזרחיים, קנסות נמוכים יחסית | עד 4% מהמחזור העולמי |
 | זכות למחיקה | מוגבלת | מקיפה (הזכות להישכח) |
@@ -101,7 +154,7 @@
 - חוק הגנת הפרטיות הישראלי קדם ל-GDPR (1981 לעומת 2016) ויש בו הבדלים מהותיים: אין דדליין של 72 שעות לדיווח על פריצה, נדרש רישום מאגרי מידע (GDPR ביטל זאת), וזכות המחיקה מוגבלת יותר. סוכנים עלולים להחיל בטעות כללי GDPR על הקשרים ישראליים.
 - לישראל יש החלטת נאותות מהאיחוד האירופי, כלומר העברת מידע מישראל לאיחוד האירופי בדרך כלל פשוטה. סוכנים עלולים לסמן בטעות העברות ישראל-אירופה כדורשות ערבויות נוספות.
 - תקנות האבטחה 2017 מגדירות שלוש רמות אבטחה (בסיסית/בינונית/גבוהה) לפי מספר רשומות ורגישות המידע. סוכנים עלולים להחיל גישה אחידה במקום המודל המדורג.
-- בעקבות תיקון 13 (אוגוסט 2025), רישום מאגר מידע נדרש כעת רק לגופים ציבוריים ולמאגרים של 10,000+ אנשים שמטרתם העיקרית היא העברת מידע לאחרים. סוכנים עם נתוני אימון מלפני 2025 עלולים עדיין לציין את כללי הרישום הרחבים הישנים. סוכנים עלולים גם לבלבל זאת עם ROPA של GDPR, שהחליף את הרישום באיחוד האירופי.
+- רישום מאגר מידע נדרש רק לגופים ציבוריים ולמאגרים של 10,000+ אנשים שמטרתם העיקרית היא העברת מידע לאחרים. זהו חוק מבוסס תחת מסגרת הגנת הפרטיות הנוכחית. סוכנים עלולים גם לבלבל זאת עם ROPA של GDPR, שהחליף את הרישום באיחוד האירופי.
 - עונשים לפי חוק הפרטיות הישראלי כוללים אחריות פלילית (עד 5 שנות מאסר), לא רק קנסות. סוכנים עלולים לזלזל בחומרה כשהם משווים רק לקנסות הכספיים של GDPR.
 
 ## פתרון בעיות
