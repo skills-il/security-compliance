@@ -15,7 +15,7 @@ license: MIT
 compatibility: 'No network required. Works with Claude Code, Claude.ai, Cursor.'
 metadata:
   author: skills-il
-  version: 1.0.1
+  version: 1.0.2
   category: security-compliance
   tags:
     he:
