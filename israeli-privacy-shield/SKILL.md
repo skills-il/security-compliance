@@ -1,55 +1,8 @@
 ---
 name: israeli-privacy-shield
-description: >-
-  Israeli Privacy Protection Law compliance guidance including database
-  registration, consent requirements, data security, cross-border transfers, and
-  breach notification. Use when user asks about Israeli privacy law, "haganat
-  pratiut", data protection in Israel, GDPR compliance for Israeli companies,
-  privacy policy requirements, or database registration. Covers the Privacy
-  Protection Law 1981 and 2017 Security Regulations. Do NOT use for EU GDPR-only
-  questions without Israeli context.
+description: Israeli Privacy Protection Law compliance guidance including database registration, consent requirements, data security, cross-border transfers, and breach notification. Use when user asks about Israeli privacy law, "haganat pratiut", data protection in Israel, GDPR compliance for Israeli companies, privacy policy requirements, or database registration. Covers the Privacy Protection Law 1981 and 2017 Security Regulations. Do NOT use for EU GDPR-only questions without Israeli context.
 license: MIT
-compatibility: 'No network required. Works with Claude Code, Claude.ai, Cursor.'
-metadata:
-  author: skills-il
-  version: 1.1.0
-  category: security-compliance
-  tags:
-    he:
-      - פרטיות
-      - הגנת-מידע
-      - ציות
-      - GDPR
-      - רגולציה
-      - ישראל
-    en:
-      - privacy
-      - data-protection
-      - compliance
-      - gdpr
-      - regulation
-      - israel
-  display_name:
-    he: מגן פרטיות ישראלי
-    en: Israeli Privacy Shield
-  display_description:
-    he: בדיקת תאימות לחוק הגנת הפרטיות ולתקנות GDPR
-    en: >-
-      Israeli Privacy Protection Law compliance guidance including database
-      registration, consent requirements, data security, cross-border transfers,
-      and breach notification. Use when user asks about Israeli privacy law,
-      "haganat pratiut", data protection in Israel, GDPR compliance for Israeli
-      companies, privacy policy requirements, or database registration. Covers
-      the Privacy Protection Law 1981 and 2017 Security Regulations. Do NOT use
-      for EU GDPR-only questions without Israeli context.
-  supported_agents:
-    - claude-code
-    - cursor
-    - github-copilot
-    - windsurf
-    - opencode
-    - codex
-    - antigravity
+compatibility: No network required. Works with Claude Code, Claude.ai, Cursor.
 ---
 
 # Israeli Privacy Shield

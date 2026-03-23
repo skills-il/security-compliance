@@ -1,53 +1,9 @@
 ---
 name: israeli-appsec-scanner
-description: >-
-  Security scanning guidance for Israeli web applications covering OWASP Top 10,
-  Israeli Privacy Protection Authority (PPA) compliance, dependency vulnerability
-  scanning, secrets detection, and secure coding patterns for Hebrew/RTL apps.
-  Use when user asks to "scan for vulnerabilities", "check security compliance",
-  "audit Israeli app security", "bodek aviskhut" (Hebrew transliteration), or
-  needs help with PPA compliance, secrets detection, or Hebrew input sanitization.
-  Provides actionable checklists, automated scanning scripts, and Israeli-specific
-  security guidance. Do NOT use for network penetration testing, physical security
-  audits, or non-application-layer security concerns.
+description: Security scanning guidance for Israeli web applications covering OWASP Top 10, Israeli Privacy Protection Authority (PPA) compliance, dependency vulnerability scanning, secrets detection, and secure coding patterns for Hebrew/RTL apps. Use when user asks to "scan for vulnerabilities", "check security compliance", "audit Israeli app security", "bodek aviskhut" (Hebrew transliteration), or needs help with PPA compliance, secrets detection, or Hebrew input sanitization. Provides actionable checklists, automated scanning scripts, and Israeli-specific security guidance. Do NOT use for network penetration testing, physical security audits, or non-application-layer security concerns.
 license: MIT
-allowed-tools: 'Bash(python:*)'
-compatibility: 'No special requirements. Works with Claude Code, Cursor, Windsurf.'
-metadata:
-  author: skills-il
-  version: 1.0.1
-  category: security-compliance
-  tags:
-    he:
-      - אבטחת מידע
-      - סריקת פגיעויות
-      - OWASP
-      - פרטיות
-      - הגנת סייבר
-      - ישראל
-    en:
-      - application-security
-      - vulnerability-scanning
-      - OWASP
-      - privacy
-      - cybersecurity
-      - israel
-  display_name:
-    he: "סורק אבטחת אפליקציות ישראלי"
-    en: Israeli AppSec Scanner
-  display_description:
-    he: "סריקת אבטחה לאפליקציות ישראליות. בדיקות OWASP Top 10, עמידה בדרישות רשות הגנת הפרטיות, סריקת תלויות, זיהוי סודות, ודפוסי קוד מאובטח לאפליקציות בעברית/RTL."
-    en: >-
-      Security scanning guidance for Israeli web applications covering OWASP Top 10,
-      Israeli Privacy Protection Authority (PPA) compliance, dependency vulnerability
-      scanning, secrets detection, and secure coding patterns for Hebrew/RTL apps.
-  supported_agents:
-    - claude-code
-    - cursor
-    - github-copilot
-    - windsurf
-    - opencode
-    - codex
+allowed-tools: Bash(python:*)
+compatibility: No special requirements. Works with Claude Code, Cursor, Windsurf.
 ---
 
 # Israeli AppSec Scanner

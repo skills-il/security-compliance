@@ -1,0 +1,40 @@
+{
+  "author": "skills-il",
+  "version": "1.0.0",
+  "display_name": {
+    "he": "מדריך מקלטים ומרחבים מוגנים בישראל",
+    "en": "Israeli Shelter Guide"
+  },
+  "display_description": {
+    "he": "מדריך למציאת מקלטים ומרחבים מוגנים בישראל והכנתם. כולל ממ\"ד, ממ\"ק, ממ\"מ ומקלט ציבורי, זמני מיגון לפי אזור, רשימות הכנה, נגישות לאנשים עם מוגבלויות, ופרוטוקולים למבנים ללא ממ\"ד.\n",
+    "en": "Guide to finding and preparing shelters in Israel. Covers mamad, mamak, maman, and public miklat, time-to-shelter by region, preparation checklists, accessibility requirements, and protocols for buildings without a safe room.\n"
+  },
+  "tags": {
+    "he": [
+      "מקלט",
+      "ממד",
+      "מרחב-מוגן",
+      "פיקוד-העורף",
+      "חירום",
+      "בטיחות",
+      "ישראל",
+      "הגנה-אזרחית"
+    ],
+    "en": [
+      "shelter",
+      "mamad",
+      "safe-room",
+      "home-front-command",
+      "emergency",
+      "safety",
+      "israel",
+      "civil-defense"
+    ]
+  },
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "windsurf",
+    "openclaw"
+  ]
+}

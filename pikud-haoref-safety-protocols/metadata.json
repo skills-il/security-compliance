@@ -1,0 +1,40 @@
+{
+  "author": "skills-il",
+  "version": "1.0.0",
+  "display_name": {
+    "he": "פרוטוקולי בטיחות פיקוד העורף",
+    "en": "Pikud HaOref Safety Protocols"
+  },
+  "display_description": {
+    "he": "הנחיות בטיחות לפי סוג התרעה של פיקוד העורף. כולל פרוטוקולים לטילים, כלי טיס עוין, רעידת אדמה, צונאמי, חומרים מסוכנים וחדירת מחבלים. מכסה זמני תגובה אזוריים, הנחיות לאוכלוסיות מיוחדות, ונהלי יציאה מהמיגון.\n",
+    "en": "Safety protocols per Home Front Command alert type. Covers missiles, hostile aircraft, earthquake, tsunami, hazardous materials, and terrorist infiltration. Includes regional response times, special population guidance, and post-alert exit procedures.\n"
+  },
+  "tags": {
+    "he": [
+      "בטיחות",
+      "פרוטוקול",
+      "פיקוד-העורף",
+      "טילים",
+      "רעידת-אדמה",
+      "חירום",
+      "ישראל",
+      "הנחיות"
+    ],
+    "en": [
+      "safety",
+      "protocol",
+      "home-front-command",
+      "missiles",
+      "earthquake",
+      "emergency",
+      "israel",
+      "guidelines"
+    ]
+  },
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "windsurf",
+    "openclaw"
+  ]
+}

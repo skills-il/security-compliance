@@ -1,59 +1,8 @@
 ---
 name: israeli-cyber-regulations
-description: >-
-  Israeli cybersecurity regulatory framework guidance covering INCD (Ma'arach
-  HaSyber) national directives, Bank of Israel Directive 361 (cyber for
-  financial institutions), Directive 357 (payment security), ISA requirements
-  for TASE-listed companies, and sector-specific rules for fintech and
-  healthtech. Use when user asks about "cyber regulation Israel", "horaot
-  Bank Israel 361", "INCD compliance", "Ma'arach HaSyber", "ISA cyber
-  requirements", "sector cyber rules Israel", or "רגולציית סייבר". Covers
-  regulatory mapping, gap analysis, compliance checklists, and audit
-  preparation for Israeli cyber frameworks. Do NOT use for privacy law
-  compliance (use israeli-privacy-compliance instead).
+description: Israeli cybersecurity regulatory framework guidance covering INCD (Ma'arach HaSyber) national directives, Bank of Israel Directive 361 (cyber for financial institutions), Directive 357 (payment security), ISA requirements for TASE-listed companies, and sector-specific rules for fintech and healthtech. Use when user asks about "cyber regulation Israel", "horaot Bank Israel 361", "INCD compliance", "Ma'arach HaSyber", "ISA cyber requirements", "sector cyber rules Israel", or "רגולציית סייבר". Covers regulatory mapping, gap analysis, compliance checklists, and audit preparation for Israeli cyber frameworks. Do NOT use for privacy law compliance (use israeli-privacy-compliance instead).
 license: MIT
-compatibility: 'No network required. Works with Claude Code, Claude.ai, Cursor.'
-metadata:
-  author: skills-il
-  version: 1.0.2
-  category: security-compliance
-  tags:
-    he:
-      - סייבר
-      - אבטחה
-      - INCD
-      - בנק-ישראל
-      - רגולציה
-    en:
-      - cyber
-      - security
-      - incd
-      - boi
-      - regulations
-  display_name:
-    he: רגולציית סייבר ישראלית
-    en: Israeli Cyber Regulations
-  display_description:
-    he: >-
-      מסגרת רגולציית סייבר ישראלית — הנחיות מערך הסייבר הלאומי, הוראות בנק
-      ישראל 361 ו-357, דרישות רשות ניירות ערך, וכללים מגזריים לפינטק ובריאות
-    en: >-
-      Israeli cybersecurity regulatory framework guidance covering INCD
-      (Ma'arach HaSyber) national directives, Bank of Israel Directive 361
-      (cyber for financial institutions), Directive 357 (payment security),
-      ISA requirements for TASE-listed companies, and sector-specific rules
-      for fintech and healthtech. Use when user asks about cyber regulation
-      Israel, INCD compliance, Bank of Israel directives, ISA cyber
-      requirements, or sector cyber rules. Do NOT use for privacy law
-      compliance (use israeli-privacy-compliance instead).
-  supported_agents:
-    - claude-code
-    - cursor
-    - github-copilot
-    - windsurf
-    - opencode
-    - codex
-    - antigravity
+compatibility: No network required. Works with Claude Code, Claude.ai, Cursor.
 ---
 
 # Israeli Cyber Regulations

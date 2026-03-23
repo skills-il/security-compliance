@@ -1,39 +1,10 @@
 ---
 name: pikud-haoref-safety-protocols
-description: >
-  Actionable safety protocols per Home Front Command alert type in Israel. Use when a user
-  asks what to do during a specific type of emergency alert (missiles, hostile aircraft,
-  earthquake, tsunami, hazardous materials, terrorist infiltration), needs regional response
-  time guidance, wants safety instructions for special populations (elderly, disabled, children),
-  or is a new immigrant learning Israeli emergency procedures. Provides step-by-step actions
-  for each alert category, post-alert procedures, and when it is safe to leave the shelter.
-  Helps users respond correctly during emergencies, which can be the difference between life
-  and injury. Do NOT use for building alert API integrations (use pikud-haoref-alerts), for
-  finding or preparing shelters (use israeli-shelter-guide), or for non-Israeli emergency
-  response procedures.
+description: Actionable safety protocols per Home Front Command alert type in Israel. Use when a user asks what to do during a specific type of emergency alert (missiles, hostile aircraft, earthquake, tsunami, hazardous materials, terrorist infiltration), needs regional response time guidance, wants safety instructions for special populations (elderly, disabled, children), or is a new immigrant learning Israeli emergency procedures. Provides step-by-step actions for each alert category, post-alert procedures, and when it is safe to leave the shelter. Helps users respond correctly during emergencies, which can be the difference between life and injury. Do NOT use for building alert API integrations (use pikud-haoref-alerts), for finding or preparing shelters (use israeli-shelter-guide), or for non-Israeli emergency response procedures.
+
 license: MIT
-compatibility: >
-  Knowledge-based skill. No tools, APIs, or network access required. Works on any agent
-  that supports SKILL.md format.
-metadata:
-  author: skills-il
-  version: 1.0.0
-  display_name:
-    he: פרוטוקולי בטיחות פיקוד העורף
-    en: Pikud HaOref Safety Protocols
-  display_description:
-    he: >
-      הנחיות בטיחות לפי סוג התרעה של פיקוד העורף. כולל פרוטוקולים לטילים, כלי טיס עוין,
-      רעידת אדמה, צונאמי, חומרים מסוכנים וחדירת מחבלים. מכסה זמני תגובה אזוריים, הנחיות
-      לאוכלוסיות מיוחדות, ונהלי יציאה מהמיגון.
-    en: >
-      Safety protocols per Home Front Command alert type. Covers missiles, hostile aircraft,
-      earthquake, tsunami, hazardous materials, and terrorist infiltration. Includes regional
-      response times, special population guidance, and post-alert exit procedures.
-  tags:
-    he: [בטיחות, פרוטוקול, פיקוד-העורף, טילים, רעידת-אדמה, חירום, ישראל, הנחיות]
-    en: [safety, protocol, home-front-command, missiles, earthquake, emergency, israel, guidelines]
-  supported_agents: [claude-code, cursor, windsurf, openclaw]
+compatibility: Knowledge-based skill. No tools, APIs, or network access required. Works on any agent that supports SKILL.md format.
+
 ---
 
 # Pikud HaOref Safety Protocols

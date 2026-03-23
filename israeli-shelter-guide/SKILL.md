@@ -1,39 +1,10 @@
 ---
 name: israeli-shelter-guide
-description: >
-  Guide to finding and preparing shelters in Israel, including mamad (apartment safe room),
-  mamak (floor safe room), maman (institutional safe room), and miklat (public shelter).
-  Use when a user needs to find the nearest shelter, prepare a safe room according to Home
-  Front Command guidelines, understand time-to-shelter by region, set up workplace emergency
-  procedures, or learn the Israeli shelter system as a new immigrant. Covers building regulations
-  since 1992, municipal shelter databases, shelter preparation checklists, accessibility for
-  people with disabilities, stairwell protocols for buildings without mamad, and what to do if
-  caught outdoors. Helps users protect themselves and their families during rocket alerts,
-  especially those unfamiliar with the system. Do NOT use for building alert integrations
-  (use pikud-haoref-alerts), for safety protocol instructions per alert type (use
-  pikud-haoref-safety-protocols), or for non-Israeli emergency shelter systems.
+description: Guide to finding and preparing shelters in Israel, including mamad (apartment safe room), mamak (floor safe room), maman (institutional safe room), and miklat (public shelter). Use when a user needs to find the nearest shelter, prepare a safe room according to Home Front Command guidelines, understand time-to-shelter by region, set up workplace emergency procedures, or learn the Israeli shelter system as a new immigrant. Covers building regulations since 1992, municipal shelter databases, shelter preparation checklists, accessibility for people with disabilities, stairwell protocols for buildings without mamad, and what to do if caught outdoors. Helps users protect themselves and their families during rocket alerts, especially those unfamiliar with the system. Do NOT use for building alert integrations (use pikud-haoref-alerts), for safety protocol instructions per alert type (use pikud-haoref-safety-protocols), or for non-Israeli emergency shelter systems.
+
 license: MIT
-compatibility: >
-  Knowledge-based skill. No tools, APIs, or network access required. Works on any agent
-  that supports SKILL.md format.
-metadata:
-  author: skills-il
-  version: 1.0.0
-  display_name:
-    he: מדריך מקלטים ומרחבים מוגנים בישראל
-    en: Israeli Shelter Guide
-  display_description:
-    he: >
-      מדריך למציאת מקלטים ומרחבים מוגנים בישראל והכנתם. כולל ממ"ד, ממ"ק, ממ"מ ומקלט ציבורי,
-      זמני מיגון לפי אזור, רשימות הכנה, נגישות לאנשים עם מוגבלויות, ופרוטוקולים למבנים ללא ממ"ד.
-    en: >
-      Guide to finding and preparing shelters in Israel. Covers mamad, mamak, maman, and public
-      miklat, time-to-shelter by region, preparation checklists, accessibility requirements,
-      and protocols for buildings without a safe room.
-  tags:
-    he: [מקלט, ממד, מרחב-מוגן, פיקוד-העורף, חירום, בטיחות, ישראל, הגנה-אזרחית]
-    en: [shelter, mamad, safe-room, home-front-command, emergency, safety, israel, civil-defense]
-  supported_agents: [claude-code, cursor, windsurf, openclaw]
+compatibility: Knowledge-based skill. No tools, APIs, or network access required. Works on any agent that supports SKILL.md format.
+
 ---
 
 # Israeli Shelter Guide

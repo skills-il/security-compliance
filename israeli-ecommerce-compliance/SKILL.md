@@ -1,60 +1,9 @@
 ---
 name: israeli-ecommerce-compliance
-description: >-
-  Audit and ensure Israeli e-commerce legal compliance — Consumer Protection
-  Law, return policies, price display, accessibility, and cookie consent. Use
-  when user asks about "online store compliance Israel", "Chok Hagnat
-  HaTzarchan", "consumer protection Israel", "return policy Israel", "IS 5568
-  ecommerce", "cookie consent Israel", or "חוק הגנת הצרכן". Covers cooling-off
-  period validation, price display requirements, Hebrew terms of service
-  generation, accessibility compliance (IS 5568), and business disclosure
-  verification. Do NOT use for food-specific compliance (use israeli-food-
-  business-compliance) or privacy/GDPR (use israeli-privacy-shield).
+description: Audit and ensure Israeli e-commerce legal compliance — Consumer Protection Law, return policies, price display, accessibility, and cookie consent. Use when user asks about "online store compliance Israel", "Chok Hagnat HaTzarchan", "consumer protection Israel", "return policy Israel", "IS 5568 ecommerce", "cookie consent Israel", or "חוק הגנת הצרכן". Covers cooling-off period validation, price display requirements, Hebrew terms of service generation, accessibility compliance (IS 5568), and business disclosure verification. Do NOT use for food-specific compliance (use israeli-food- business-compliance) or privacy/GDPR (use israeli-privacy-shield).
 license: MIT
-allowed-tools: "Bash(python:*) WebFetch"
-compatibility: >-
-  Works with Claude Code, OpenClaw, Cursor. OpenClaw recommended for automated
-  website scanning and periodic compliance checks.
-metadata:
-  author: skills-il
-  version: 1.0.1
-  category: security-compliance
-  tags:
-    he:
-      - ציות
-      - מסחר-אלקטרוני
-      - הגנת-צרכן
-      - נגישות
-      - משפטי
-      - ישראל
-    en:
-      - compliance
-      - ecommerce
-      - consumer-protection
-      - accessibility
-      - legal
-      - israel
-  display_name:
-    he: תאימות חוקית למסחר אלקטרוני ישראלי
-    en: Israeli E-Commerce Compliance
-  display_description:
-    he: ביקורת תאימות חוקית לחנויות מקוונות ישראליות — חוק הגנת הצרכן, מדיניות החזרות, נגישות ועוגיות
-    en: >-
-      Audit and ensure Israeli e-commerce legal compliance — Consumer Protection
-      Law, return policies, price display, accessibility, and cookie consent.
-      Use when user asks about "online store compliance Israel", "Chok Hagnat
-      HaTzarchan", "consumer protection Israel", "return policy Israel", "IS
-      5568 ecommerce", "cookie consent Israel", or "חוק הגנת הצרכן". Covers
-      cooling-off period validation, price display requirements, Hebrew terms of
-      service generation, accessibility compliance (IS 5568), and business
-      disclosure verification. Do NOT use for food-specific compliance (use
-      israeli-food- business-compliance) or privacy/GDPR (use
-      israeli-privacy-shield).
-  openclaw:
-    requires:
-      bins: []
-      env: []
-    emoji: "✅"
+allowed-tools: Bash(python:*) WebFetch
+compatibility: Works with Claude Code, OpenClaw, Cursor. OpenClaw recommended for automated website scanning and periodic compliance checks.
 ---
 
 # Israeli E-Commerce Compliance

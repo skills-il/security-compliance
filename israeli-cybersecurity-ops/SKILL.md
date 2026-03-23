@@ -1,60 +1,8 @@
 ---
 name: israeli-cybersecurity-ops
-description: >-
-  Coordinate Israeli-built cybersecurity tools for security operations including
-  threat triage, vulnerability management, compliance checking, and incident
-  response. Use when user mentions security operations, "SOC", vulnerability
-  scanning, threat triage, compliance assessment, or asks to coordinate Wiz,
-  Snyk, Check Point, CyberArk, SentinelOne, Armis, Torq, or Pentera tools.
-  Embeds Israeli security best practices including INCD guidelines and Israeli
-  Privacy Protection Law compliance. Do NOT use for offensive security testing
-  or creating exploits.
+description: Coordinate Israeli-built cybersecurity tools for security operations including threat triage, vulnerability management, compliance checking, and incident response. Use when user mentions security operations, "SOC", vulnerability scanning, threat triage, compliance assessment, or asks to coordinate Wiz, Snyk, Check Point, CyberArk, SentinelOne, Armis, Torq, or Pentera tools. Embeds Israeli security best practices including INCD guidelines and Israeli Privacy Protection Law compliance. Do NOT use for offensive security testing or creating exploits.
 license: MIT
-compatibility: >-
-  Best with MCP servers for Wiz and Snyk. Works standalone for security
-  guidance. Claude Code recommended.
-metadata:
-  author: skills-il
-  version: 1.0.1
-  category: security-compliance
-  tags:
-    he:
-      - סייבר
-      - תפעול-אבטחה
-      - Wiz
-      - Snyk
-      - ציות
-      - ישראל
-    en:
-      - cybersecurity
-      - security-ops
-      - wiz
-      - snyk
-      - compliance
-      - israel
-  mcp-server: 'wiz, snyk'
-  display_name:
-    he: אבטחת סייבר ישראלית
-    en: Israeli Cybersecurity Ops
-  display_description:
-    he: 'תיאום כלי אבטחה ישראליים — Wiz, Snyk, Check Point ועוד'
-    en: >-
-      Coordinate Israeli-built cybersecurity tools for security operations
-      including threat triage, vulnerability management, compliance checking,
-      and incident response. Use when user mentions security operations, "SOC",
-      vulnerability scanning, threat triage, compliance assessment, or asks to
-      coordinate Wiz, Snyk, Check Point, CyberArk, SentinelOne, Armis, Torq, or
-      Pentera tools. Embeds Israeli security best practices including INCD
-      guidelines and Israeli Privacy Protection Law compliance. Do NOT use for
-      offensive security testing or creating exploits.
-  supported_agents:
-    - claude-code
-    - cursor
-    - github-copilot
-    - windsurf
-    - opencode
-    - codex
-    - antigravity
+compatibility: Best with MCP servers for Wiz and Snyk. Works standalone for security guidance. Claude Code recommended.
 ---
 
 # Israeli Cybersecurity Ops
