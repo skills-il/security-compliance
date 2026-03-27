@@ -35,6 +35,7 @@
     "claude-code",
     "cursor",
     "windsurf",
-    "openclaw"
+    "openclaw",
+    "gemini-cli"
   ]
 }
