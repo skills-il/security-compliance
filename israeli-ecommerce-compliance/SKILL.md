@@ -1,6 +1,6 @@
 ---
 name: israeli-ecommerce-compliance
-description: Audit and ensure Israeli e-commerce legal compliance — Consumer Protection Law, return policies, price display, accessibility, and cookie consent. Use when user asks about "online store compliance Israel", "Chok Hagnat HaTzarchan", "consumer protection Israel", "return policy Israel", "IS 5568 ecommerce", "cookie consent Israel", or "חוק הגנת הצרכן". Covers cooling-off period validation, price display requirements, Hebrew terms of service generation, accessibility compliance (IS 5568), and business disclosure verification. Do NOT use for food-specific compliance (use israeli-food- business-compliance) or privacy/GDPR (use israeli-privacy-shield).
+description: Audit and ensure Israeli e-commerce legal compliance — Consumer Protection Law, return policies, price display, accessibility, and cookie consent. Use when user asks about "online store compliance Israel", "Chok Hagnat HaTzarchan", "consumer protection Israel", "return policy Israel", "IS 5568 ecommerce", "cookie consent Israel", or "חוק הגנת הצרכן". Covers cooling-off period validation, price display requirements, Hebrew terms of service generation, accessibility compliance (IS 5568), and business disclosure verification. Do NOT use for food-specific compliance (use israeli-food-business-compliance) or privacy/GDPR (use israeli-privacy-shield).
 license: MIT
 allowed-tools: Bash(python:*) WebFetch
 compatibility: Works with Claude Code, OpenClaw, Cursor. OpenClaw recommended for automated website scanning and periodic compliance checks.
@@ -61,10 +61,11 @@ Use browser automation to scan for:
 - Language declaration (Hebrew RTL)
 - Accessibility statement page
 
-Amendment 36 to the Equal Rights for People with Disabilities Law applies to:
-- All businesses with 25+ employees
-- All businesses providing public services online
-- Government services
+Amendment 36 to the Equal Rights for People with Disabilities Law applies to all businesses providing public services online and government services. Revenue thresholds:
+- Businesses with annual revenue below NIS 100,000 are exempt
+- Businesses with annual revenue above NIS 300,000 must comply immediately
+- Businesses in between have a graduated compliance timeline
+- The 25-employee threshold specifically applies to the requirement to appoint an accessibility director (ne'eman negishot), not to IS 5568 applicability itself
 
 ### Step 5: Verify Business Disclosure (Osek Number, Address, Contact)
 Israeli e-commerce sites must prominently display:
@@ -78,8 +79,11 @@ Israeli e-commerce sites must prominently display:
 These must appear on the website (typically in footer or "About Us").
 Must also appear on every invoice/receipt.
 
-### Step 6: Validate Cookie Consent per Communications Law
-Israeli Communications Law (Amendment 2022) requires:
+**E-Invoicing Reform (Allocation Numbers):**
+Starting January 2025, electronic invoices for B2B transactions above NIS 20,000 must include an allocation number (mispar haktza'a) from the Tax Authority. The threshold drops to NIS 10,000 in January 2026, and NIS 5,000 in June 2026. Ensure your invoicing system supports Israel Tax Authority API integration for allocation number requests.
+
+### Step 6: Validate Cookie Consent and Privacy Compliance
+The Privacy Protection Authority (PPA) strongly recommends opt-in consent for non-essential cookies. While Section 30A of the Communications Law covers unsolicited advertising, Israel does not yet have a cookie-specific statute like the EU ePrivacy Directive. Best practice is to implement opt-in consent:
 - Cookie consent banner for non-essential cookies
 - Clear description of cookie types and purposes
 - Opt-in for marketing/analytics cookies (not opt-out)
@@ -87,7 +91,16 @@ Israeli Communications Law (Amendment 2022) requires:
 - Privacy policy linking to cookie details
 
 Essential cookies (login, shopping cart) don't require consent.
-Analytics and marketing cookies require explicit opt-in.
+Analytics and marketing cookies should use explicit opt-in as recommended best practice.
+
+**Amendment 13 to the Privacy Protection Law (effective August 2025):**
+This amendment significantly expands privacy obligations for online businesses:
+- Expanded definition of "personal data" now includes IP addresses, geolocation, and online identifiers
+- Businesses processing data at scale must appoint a privacy officer
+- Mandatory data breach notification to the PPA and affected individuals
+- New provisions for AI governance and automated decision-making
+
+For comprehensive privacy compliance beyond cookies, use the `israeli-privacy-shield` skill.
 
 ## Examples
 
@@ -115,7 +128,7 @@ Result: Complete Hebrew return policy (מדיניות החזרות) ready to pub
 ### Example 3: Accessibility Audit for Existing Store
 User says: "We got a complaint about our website's accessibility, can you check it?"
 Actions:
-1. Determine if business falls under IS 5568 requirements (25+ employees or public service)
+1. Determine if business falls under IS 5568 requirements (revenue-based thresholds and public service obligation)
 2. Run automated accessibility scan using browser automation
 3. Check: alt text, keyboard nav, contrast ratios, form labels, RTL support
 4. Identify: 12 images missing alt text, 3 forms without labels, contrast below 4.5:1 on 2 pages
@@ -133,13 +146,15 @@ Result: Accessibility report: 15 issues found (8 critical, 7 moderate). Critical
 - Israeli law requires all prices to include 18% VAT (ma'am). Agents may generate price displays excluding tax, which is illegal for consumer-facing Israeli e-commerce.
 - The extended 4-month cancellation period applies to people with disabilities, seniors (65+), and new immigrants (under 5 years in Israel). Agents may only mention the standard 14-day period.
 - IS 5568 (Israeli accessibility standard) is based on WCAG 2.1 AA but has additional Hebrew RTL-specific requirements. Agents may apply generic WCAG checks without RTL-specific validations.
-- Cookie consent in Israel requires opt-in (not opt-out) for analytics and marketing cookies since the 2022 Communications Law amendment. Agents trained on older data may recommend opt-out banners.
+- Cookie consent in Israel: the PPA strongly recommends opt-in for analytics and marketing cookies, but Israel does not yet have a cookie-specific statute like the EU ePrivacy Directive. Section 30A of the Communications Law covers unsolicited advertising, not cookies directly. Agents may overstate the legal requirement or understate the best practice.
+- Amendment 13 to the Privacy Protection Law (effective August 2025) expands the definition of personal data to include IP addresses and geolocation. Agents trained on older data may not account for the new privacy officer requirements or data breach notification obligations.
+- E-invoicing reform (January 2025): B2B invoices above NIS 20,000 require allocation numbers from the Tax Authority. Agents may generate invoices without allocation numbers, which is non-compliant for qualifying transactions.
 
 ## Troubleshooting
 
 ### Error: "Cookie consent not compliant"
 Cause: Using opt-out instead of opt-in for non-essential cookies, or consent banner not appearing on all pages.
-Solution: Implement opt-in consent per Communications Law Amendment. Ensure banner appears on first visit before any non-essential cookies are set. Include clear categories (essential, analytics, marketing) with individual toggle controls.
+Solution: Implement opt-in consent per PPA recommendations. Although Israel lacks a cookie-specific statute, opt-in is considered best practice and aligns with the PPA's guidance. Ensure banner appears on first visit before any non-essential cookies are set. Include clear categories (essential, analytics, marketing) with individual toggle controls.
 
 ### Error: "Accessibility scan incomplete"
 Cause: Dynamic content loaded via JavaScript may not be captured by automated scanning.

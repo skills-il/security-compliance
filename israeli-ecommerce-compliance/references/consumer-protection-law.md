@@ -58,7 +58,7 @@ The following product categories are exempt from the cooling-off period:
 ## Price Display Requirements
 
 ### VAT Inclusion
-- All consumer-facing prices must include 17% VAT (Ma'am)
+- All consumer-facing prices must include 18% VAT (Ma'am) (rate increased from 17% to 18% on January 1, 2025)
 - It is illegal to display pre-VAT prices to consumers
 - Display format: "₪X.XX" or "X.XX ש"ח" — both are acceptable
 
@@ -84,8 +84,8 @@ E-commerce sellers must prominently display:
 These details must appear on the website and on every invoice/receipt issued.
 
 ## IS 5568 Accessibility Standard (Summary)
-- Based on WCAG 2.0 Level AA
-- Applies to businesses with 25+ employees, public service providers, and government sites
+- Based on WCAG 2.1 Level AA
+- Applies to all businesses providing public services online and government sites. Revenue thresholds: below NIS 100,000 exempt; above NIS 300,000 immediate compliance. The 25-employee threshold applies only to the requirement to appoint an accessibility director
 - Enforced under Amendment 36 to the Equal Rights for People with Disabilities Law
 - Key requirements: alt text, keyboard navigation, 4.5:1 color contrast, form labels, RTL support
 - Accessibility statement page required
