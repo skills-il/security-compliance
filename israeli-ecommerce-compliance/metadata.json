@@ -40,5 +40,8 @@
       "env": []
     },
     "emoji": "✅"
-  }
+  },
+  "supported_agents": [
+    "gemini-cli"
+  ]
 }
