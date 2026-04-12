@@ -34,6 +34,8 @@ Check for required pre-purchase disclosures:
 - Discounted items: both original and sale price must be shown
 - "From" pricing (e.g., "from 99 NIS") only allowed when the base price actually exists
 
+**Card payment compliance (PCI DSS 4.0).** PCI DSS 4.0 became the mandatory standard on April 1, 2025, fully replacing PCI DSS 3.2.1. Any store that processes, stores, or transmits card data must comply with the 4.0 requirements, which add stricter authentication, continuous monitoring, and customized approach options. Most Israeli stores rely on a tokenized payment gateway (Tranzila, Cardcom, iCredit, Stripe, etc.) to offload PCI scope, which is strongly recommended for merchants under SAQ A/SAQ A-EP eligibility.
+
 ### Step 3: Generate Hebrew Terms of Service and Return Policy
 Generate compliant Hebrew Terms of Service (תנאי שימוש) including:
 - Company details (name, registration number, address, contact)

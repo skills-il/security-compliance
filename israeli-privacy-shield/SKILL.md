@@ -1,6 +1,6 @@
 ---
 name: israeli-privacy-shield
-description: Israeli Privacy Protection Law compliance guidance including database registration, consent requirements, data security, cross-border transfers, and breach notification. Use when user asks about Israeli privacy law, "haganat pratiut", data protection in Israel, GDPR compliance for Israeli companies, privacy policy requirements, or database registration. Covers the Privacy Protection Law 1981 and 2017 Security Regulations. Do NOT use for EU GDPR-only questions without Israeli context.
+description: Israeli Privacy Protection Law compliance guidance including Amendment 13 (effective August 14, 2025), database registration, consent requirements, data security, cross-border transfers, breach notification, privacy protection officer appointment, and AI governance. Use when user asks about Israeli privacy law, "haganat pratiut", "tikun 13", data protection in Israel, GDPR compliance for Israeli companies, privacy policy requirements, or database registration. Covers the Privacy Protection Law 1981, Amendment 13, and 2017 Security Regulations. Do NOT use for EU GDPR-only questions without Israeli context.
 license: MIT
 compatibility: No network required. Works with Claude Code, Claude.ai, Cursor.
 ---
@@ -71,17 +71,55 @@ For each assessed entity, verify:
 - [ ] Breach response plan
 - [ ] Data subject request handling process
 - [ ] Employee training
-- [ ] Security officer/DPO appointed (if required)
+- [ ] Privacy Protection Officer appointed (if required under Amendment 13)
+- [ ] AI governance policy for automated decision-making (if applicable)
+- [ ] Personal data inventory includes IP addresses, geolocation, and online identifiers
+
+### Step 7: Amendment 13 (Effective August 14, 2025)
+
+Amendment 13 is the most significant reform of Israeli privacy law since 1981. It took effect on August 14, 2025 and expands the Privacy Protection Authority's enforcement powers, broadens the definition of personal data, and introduces new obligations for data brokers and AI systems.
+
+**Expanded definition of personal data.** Amendment 13 explicitly includes digital identifiers:
+- IP addresses
+- Geolocation data
+- Device identifiers and online identifiers
+- Biometric and genetic data (already sensitive)
+
+Standard web analytics, session logs, and mobile app telemetry now fall within the scope of the Privacy Protection Law.
+
+**Mandatory Privacy Protection Officer (PPO).** Under Amendment 13, the following entities must appoint a Privacy Protection Officer:
+- Public bodies
+- Data brokers (entities whose primary purpose is transferring personal data to others)
+- Entities processing sensitive data at significant scale
+
+The PPO is the contact point with the Privacy Protection Authority and is responsible for monitoring compliance.
+
+**AI governance for automated decision-making.** Amendment 13 requires transparency and oversight for AI systems that make decisions affecting individuals (credit scoring, hiring, insurance, fraud detection). Requirements include:
+- Documentation of the decision logic and data inputs
+- Ability to explain outcomes to affected individuals
+- Human oversight for high-impact decisions
+- Bias and accuracy monitoring
+
+**Enforcement powers and fines.** Amendment 13 significantly expands the Authority''s administrative powers:
+- Direct supervisory inspections without prior notice
+- Administrative fines up to approximately NIS 3.2 million for serious violations
+- Ability to issue binding compliance orders
+
+Entities that were previously under the radar of enforcement now face real financial exposure.
+
+**What changed for database registration.** Amendment 13 narrowed the registration requirement. Registration with the Authority is now required only for public bodies and databases of 10,000+ individuals whose primary purpose is transferring data to others (data brokers). The broader pre-Amendment requirement for any database with sensitive data no longer applies.
 
 ## GDPR vs Israeli Law Key Differences
-| Aspect | Israeli Law | GDPR |
+| Aspect | Israeli Law (post Amendment 13) | GDPR |
 |--------|------------|------|
 | Legal basis | Consent primary, limited exceptions | 6 legal bases |
-| DPO requirement | Public bodies, data brokers, and large-scale sensitive data processors | Broader requirement |
+| Privacy officer requirement | Public bodies, data brokers, and large-scale sensitive data processors | Broader requirement |
 | Breach notification | "Without delay", no specific hours | 72 hours |
-| Penalties | Criminal + civil, relatively low fines | Up to 4% global revenue |
+| Administrative fines | Up to ~NIS 3.2M for serious violations + criminal liability | Up to 4% global revenue |
 | Right to erasure | Limited | Comprehensive (right to be forgotten) |
-| Database registration | Required for qualifying databases | Not required (replaced by ROPA) |
+| Database registration | Public bodies and data brokers only (10,000+ records) | Not required (replaced by ROPA) |
+| Personal data scope | Includes IP, geolocation, online identifiers (Amendment 13) | Includes online identifiers |
+| AI governance | Required for automated decision-making (Amendment 13) | Article 22 automated decision-making rules |
 | Extra-territorial scope | Limited | Broad |
 
 ## Examples
@@ -113,11 +151,13 @@ Result: Transfer compliance checklist with specific steps for US data transfer u
 
 ## Gotchas
 
-- Israeli Privacy Protection Law predates GDPR (1981 vs 2016) and has key differences: no specific 72-hour breach notification deadline, database registration is required (GDPR eliminated this), and right to erasure is more limited. Agents may incorrectly apply GDPR rules to Israeli contexts.
+- Amendment 13 took effect on August 14, 2025 and is live law, not a pending proposal. Agents trained on pre-2025 data may treat Amendment 13 as a future change or miss it entirely. Always assume it applies when advising on Israeli privacy compliance today.
+- Amendment 13 expands "personal data" to include IP addresses, geolocation, and online identifiers. This pulls standard web analytics and mobile telemetry into scope. Agents may still apply the older narrower definition and underestimate what counts as personal data.
+- Administrative fines under Amendment 13 can reach approximately NIS 3.2 million for serious violations, on top of the existing criminal liability. Agents may cite only the pre-Amendment "relatively low fines" framing and underestimate real exposure.
+- Israeli Privacy Protection Law predates GDPR (1981 vs 2016) and still has key differences even after Amendment 13: no specific 72-hour breach notification deadline (still "without delay"), narrower right to erasure, and database registration still exists (though narrowed to public bodies and data brokers). Agents may incorrectly apply GDPR rules to Israeli contexts.
 - Israel has an EU adequacy decision, meaning data transfers FROM Israel TO the EU are generally straightforward. Agents may incorrectly flag Israel-to-EU transfers as requiring additional safeguards.
 - The 2017 Security Regulations define three security levels (basic/medium/high) based on record count and data sensitivity. Agents may apply a one-size-fits-all approach instead of the tiered model.
-- Database registration is required only for public bodies and databases of 10,000+ individuals whose primary purpose is transferring data to others. This is established law under the current Privacy Protection framework. Agents may also confuse this with GDPR's ROPA (Record of Processing Activities), which replaced registration in the EU.
-- Penalties under Israeli privacy law include criminal liability (up to 5 years imprisonment), not just fines. Agents may understate the severity by comparing only to GDPR's monetary penalties.
+- Penalties under Israeli privacy law include criminal liability (up to 5 years imprisonment) in addition to administrative fines. Agents may understate the severity by comparing only to GDPR''s monetary penalties.
 
 ## Troubleshooting
 
