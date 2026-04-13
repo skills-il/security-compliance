@@ -96,9 +96,6 @@ def classify(answers: dict) -> dict:
                 "Serious incident reporting",
                 "Track Article 51 thresholds and designation procedures",
             ]
-            cls = "GPAI with systemic risk"
-        else:
-            cls = "GPAI"
         reasons.append("System is a general-purpose AI model.")
         next_steps += gpai_obligations
 
@@ -160,8 +157,13 @@ def classify(answers: dict) -> dict:
         }
 
     if answers.get("is_gpai"):
+        label = (
+            "GPAI with systemic risk"
+            if answers.get("gpai_systemic_risk")
+            else "GPAI (no additional risk tier)"
+        )
         return {
-            "classification": "GPAI (no additional risk tier)",
+            "classification": label,
             "reasons": reasons,
             "next_steps": next_steps,
         }
