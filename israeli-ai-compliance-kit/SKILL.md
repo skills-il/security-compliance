@@ -62,7 +62,7 @@ The PPL predates LLMs but applies to any ML pipeline processing personal informa
 | Monitoring | Access logs, audit trails | Expanded breach notification obligations |
 | Retention | Retention limits proportional to purpose | Clearer deletion obligations |
 
-The PPA draft AI guidance (April 30, 2025) is the first sector-specific signal. Key positions:
+The PPA draft AI guidance (April 28, 2025) is the first sector-specific signal. Key positions:
 - Legal basis is required at every lifecycle stage, including training
 - Unauthorized scraping of personal data for AI training is expressly prohibited
 - Data subject rights (access, correction, erasure) must be honored even when data is baked into model weights
