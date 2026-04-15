@@ -137,6 +137,17 @@ Actions: Follow Workflow C — map Israeli Privacy Protection Law requirements, 
 - CyberArk, a commonly used PAM tool in Israeli enterprises, uses Hebrew role names in many Israeli deployments. Agents should expect bilingual access control configurations.
 - Israeli critical infrastructure designations by INCD are not publicly listed. Agents cannot determine if an organization is designated as critical infrastructure without the organization confirming it.
 
+## Reference Links
+
+| Source | URL | What to Check |
+|--------|-----|---------------|
+| INCD (Israel National Cyber Directorate) | https://www.gov.il/en/departments/israel_national_cyber_directorate | Critical infrastructure guidance, cyber event reporting |
+| CERT-IL | https://www.gov.il/en/departments/guides/cyber_incident | Incident reporting, free IR assistance |
+| Privacy Protection Authority | https://www.gov.il/en/departments/the_privacy_protection_authority | Database registration, breach notification rules |
+| Wiz Documentation | https://docs.wiz.io | Cloud security findings, compliance frameworks |
+| Snyk Documentation | https://docs.snyk.io | SAST, SCA, container scanning |
+| OWASP Top 10 | https://owasp.org/www-project-top-ten/ | Vulnerability classification baseline |
+
 ## Troubleshooting
 
 ### Error: "MCP server not connected"
