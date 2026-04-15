@@ -235,6 +235,17 @@ See the `references/` directory for:
 - `references/alert-categories-quick-reference.md` -- one-page summary of all alert types
 - `references/special-populations-guide.md` -- detailed guidance for vulnerable populations
 
+
+## Reference Links
+
+| Source | URL | What to Check |
+|--------|-----|---------------|
+| Home Front Command (Pikud HaOref) | https://www.oref.org.il/eng | Official safety protocols, siren response, protected space guidance |
+| Home Front Command mobile app | https://www.oref.org.il | Official Red Alert app, push notifications, regional alerts |
+| Israel Planning Administration | https://www.gov.il/he/departments/planning_authority | Safe room (mamad) and shelter construction requirements |
+| Ministry of Defense - Civil Defense Law 1951 | https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/default.aspx | Civil Defense Law, shelter obligations for residential buildings |
+| Magen David Adom | https://www.mdais.org/en | First aid guidance for wartime injuries, emergency response |
+
 ## Troubleshooting
 
 | Situation | Action |

@@ -177,6 +177,17 @@ See the `references/` directory for:
 - `references/shelter-preparation-checklist.md` -- printable preparation checklist
 - `references/shelter-types-comparison.md` -- detailed comparison of shelter types
 
+
+## Reference Links
+
+| Source | URL | What to Check |
+|--------|-----|---------------|
+| Home Front Command (Pikud HaOref) | https://www.oref.org.il/eng | Protected space specifications, shelter types, occupancy limits |
+| Israel Planning Administration | https://www.gov.il/he/departments/planning_authority | Building code TAMA 38, mamad requirements, public shelter construction |
+| Ministry of Interior - local authorities | https://www.gov.il/he/departments/ministry_of_interior | Public shelter registry, municipal shelter maintenance responsibilities |
+| Civil Defense Regulations (Knesset) | https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/default.aspx | Civil Defense Law, shelter-by-law (takanot ha-hitgonenut) |
+| Kol Zchut - shelters | https://www.kolzchut.org.il/he/שימוש_במקלט_בבית_משותף | Tenant rights, landlord obligations, shared shelter access rules |
+
 ## Troubleshooting
 
 | Problem | Solution |

@@ -238,6 +238,17 @@ Result: Multi-framework compliance matrix with healthtech-specific controls and 
 - Israel's DPO (Data Protection Officer) requirement was expanded in Amendment 13 (August 2025) to include public bodies and large-scale sensitive data processors. Agents with pre-2025 training data may not know about this requirement.
 - BOI Directive 357 requires fintech companies to submit a cybersecurity assessment before launch. Agents may not flag this pre-launch requirement when advising Israeli payment startups.
 
+
+## Reference Links
+
+| Source | URL | What to Check |
+|--------|-----|---------------|
+| Israel National Cyber Directorate (INCD) | https://www.gov.il/he/departments/israel_national_cyber_directorate | Official cyber regulations, incident reporting, critical infrastructure rules |
+| Protection of Privacy Law (Knesset) | https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/default.aspx | Privacy Protection Law 1981 and 2024 amendments, breach notification |
+| Privacy Protection Authority | https://www.gov.il/he/departments/the_privacy_protection_authority | Database registration, data subject rights, enforcement guidelines |
+| CERT-IL | https://www.gov.il/he/departments/units/cert_il | National CERT advisories, vulnerability disclosures, sector alerts |
+| Bank of Israel cyber directive | https://www.boi.org.il/en/economic-roles/supervision-and-regulation/ | Proper Conduct Directive 361 (cyber defense management for banks) |
+
 ## Troubleshooting
 
 ### Error: "Unsure which framework applies"
