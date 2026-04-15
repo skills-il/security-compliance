@@ -430,3 +430,14 @@ python scripts/security-audit-checklist.py --project-dir /path/to/project --form
 - מספרי תעודת זהות ישראליים משתמשים בווריאנט של אלגוריתם Luhn לספרת ביקורת, לא Luhn סטנדרטי. סוכנים עלולים לממש ולידציה שגויה ולקבל מספרים לא תקינים.
 - סף רישום מאגרי מידע ברשות להגנת הפרטיות הוא 10,000 רשומות, לא 5,000. סוכנים עלולים לצטט ספים שגויים מנתוני אימון מיושנים.
 - תקיפות טקסט דו-כיווני (BiDi) מסוכנות במיוחד בבסיסי קוד מעורבים עברית/אנגלית. סורקי אבטחה סטנדרטיים לא מזהים תווי RTL override (U+202E) שיכולים להסוות קוד זדוני.
+
+## קישורי עזר
+
+| מקור | כתובת | מה לבדוק |
+|------|-------|----------|
+| OWASP Top 10 | https://owasp.org/Top10/ | קטגוריות חולשות עדכניות במשפחת OWASP |
+| הרשות להגנת הפרטיות | https://www.gov.il/he/departments/the_privacy_protection_authority | רישום מאגרי מידע, דיווח על אירועים, ביקורות |
+| מערך הסייבר הלאומי | https://www.gov.il/he/departments/israel_national_cyber_directorate | הנחיות סייבר לאומיות, דיווח על אירועים |
+| Trivy | https://trivy.dev | סריקת קונטיינרים, IaC ותלויות |
+| Snyk | https://snyk.io/product/open-source-security-management/ | סריקת חולשות בתלויות קוד פתוח |
+| TruffleHog | https://github.com/trufflesecurity/trufflehog | סריקת סודות בקוד ובהיסטוריית git |

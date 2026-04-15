@@ -517,3 +517,14 @@ Refer to the `references/` directory for detailed guidance on Israeli privacy la
 - Israeli ID numbers (Teudat Zehut) use a Luhn-variant check digit algorithm, not standard Luhn. Agents may implement the wrong validation and accept invalid IDs.
 - The Israeli Privacy Protection Authority (PPA) database registration threshold is 10,000 records, not 5,000. Agents may cite incorrect thresholds from outdated training data.
 - Bidirectional (BiDi) text attacks are especially dangerous in Hebrew/English mixed codebases. Standard security scanners do not detect RTL override characters (U+202E) that can disguise malicious code.
+
+## Reference Links
+
+| Source | URL | What to Check |
+|--------|-----|---------------|
+| OWASP Top 10 | https://owasp.org/Top10/ | Current web app vulnerability categories and mitigations |
+| Privacy Protection Authority (PPA) | https://www.gov.il/he/departments/the_privacy_protection_authority | Database registration, breach reporting, audits |
+| Israel National Cyber Directorate | https://www.gov.il/en/departments/israel_national_cyber_directorate | National cybersecurity guidance, incident reporting |
+| Trivy scanner | https://trivy.dev | Container, IaC, and dependency scanning |
+| Snyk | https://snyk.io/product/open-source-security-management/ | Open source dependency vulnerability scanning |
+| TruffleHog | https://github.com/trufflesecurity/trufflehog | Secret scanning in code and git history |

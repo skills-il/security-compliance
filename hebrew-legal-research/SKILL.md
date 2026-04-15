@@ -104,6 +104,16 @@ Result: Compare options: Chevra Baam (Ltd company), Shutfut (partnership), Osek 
 - Israeli court decisions are cited by case number and court (e.g., "bagatz 1234/05"), not by party names as in US law. Agents may generate incorrect citation formats.
 - Many Israeli laws from the British Mandate era (pkudot) are still in force. Agents may assume pre-1948 legislation is obsolete when it is not.
 
+## Reference Links
+
+| Source | URL | What to Check |
+|--------|-----|---------------|
+| Knesset legislation portal | https://main.knesset.gov.il/Activity/Legislation/ | Primary Israeli legislation, amendments (tikunim) |
+| Kol Zchut | https://www.kolzchut.org.il | Rights and benefits wiki in Hebrew, Arabic, English |
+| Nevo | https://www.nevo.co.il | Comprehensive (paid) Israeli legal database |
+| Takdin | https://www.takdin.co.il | Alternative (paid) legal database |
+| Bituach Leumi (NII) | https://www.btl.gov.il | Social security benefits, entitlements and appeals |
+
 ## Troubleshooting
 
 ### Error: "Cannot access Nevo/Takdin"
