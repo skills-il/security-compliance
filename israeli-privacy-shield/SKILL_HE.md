@@ -179,13 +179,283 @@ metadata:
 המשתמש אומר: "גילינו פריצת מידע שמשפיעה על משתמשים ישראליים"
 תוצאה: תגובה צעד אחר צעד: בלימה, הערכה, דיווח לרשות, הודעה למשתמשים אם יש נזק משמעותי, תיעוד.
 
+### דוגמה 3: העברת מידע חוצת גבולות
+המשתמש אומר: "אנחנו צריכים להעביר מידע של לקוחות ישראלים לשרתים שלנו בארה"ב"
+פעולות:
+1. הערכת סוגי המידע לפי רמת הרגישות
+2. בדיקה אם למדינת היעד יש הגנה נאותה
+3. קביעת מנגנון ההעברה (נאותות, הסכמה, סעיפי חוזה)
+4. תיעוד שלבי הציות
+תוצאה: רשימת בדיקות ציות להעברת מידע עם שלבים ספציפיים להעברה לארה"ב תחת חוק הגנת הפרטיות הישראלי.
+
 ## משאבים מצורפים
 
 ### סקריפטים
-- `scripts/compliance_checker.py` — מריץ הערכת ציות מלאה לחוק הגנת הפרטיות: קובע רמת אבטחה (בסיסית/בינונית/גבוהה), בודק דרישות רישום מאגר מידע, ומפיק רשימת בדיקות ציות עם כל הבקרות הרלוונטיות. להרצה: `python scripts/compliance_checker.py --help`
+- `scripts/compliance_checker.py`, מריץ הערכת ציות מלאה לחוק הגנת הפרטיות: קובע רמת אבטחה (בסיסית/בינונית/גבוהה), בודק דרישות רישום מאגר מידע, ומפיק רשימת בדיקות ציות עם כל הבקרות הרלוונטיות. להרצה: `python scripts/compliance_checker.py --help`
 
 ### חומרי עיון
-- `references/privacy-law-requirements.md` — פירוט מעמיק של חוק הגנת הפרטיות 1981 ותקנות האבטחה 2017, כולל תהליך רישום מאגרי מידע, דרישות רמות אבטחה, כללי הסכמה, כללי העברה חוצת גבולות, נהלי דיווח על פריצה ועונשים. תסתכלו על זה כשצריך דרישות חוקיות ספציפיות, מספרי סעיפים או פרטי השוואה ל-GDPR מעבר למה שההוראות מכסות.
+- `references/privacy-law-requirements.md`, פירוט מעמיק של חוק הגנת הפרטיות 1981 ותקנות האבטחה 2017, כולל תהליך רישום מאגרי מידע, דרישות רמות אבטחה, כללי הסכמה, כללי העברה חוצת גבולות, נהלי דיווח על פריצה ועונשים. תסתכלו על זה כשצריך דרישות חוקיות ספציפיות, מספרי סעיפים או פרטי השוואה ל-GDPR מעבר למה שההוראות מכסות.
+- `references/consent-banner-implementation.md`, קוד TypeScript/React מוכן להעתקה לבאנר הסכמה תואם תיקון 13 ו-GDPR: חנות pub-sub עם SSR sentinel, localStorage עם עוגייה נלווית (TTL של 12 חודשים, הנחיית משתמש מחדש בעת שדרוג `CONSENT_VERSION`), סנכרון חוצה-טאבים דרך אירוע `storage`, בדיקת עוגייה בצד השרת ל-SSR, חיווט Sentry לפני init וחיבור Replay באמצע הסשן, allowlist לאירועים חיוניים, וטיפול ב"דחייה = סגירה". תסתכלו על זה כשרוצים להטמיע את ממשק ההסכמה עצמו, לא רק להבין את החוק.
+
+## הטמעת ממשק הסכמה תואם לחוק
+
+חוק הגנת הפרטיות אחרי תיקון 13, GDPR לגבי מבקרים מהאיחוד האירופי, ותקנות האבטחה 2017 דורשים כולם **הסכמה אקטיבית, opt-in וגרנולרית** לפני איסוף מידע אישי מעבר למה שהכרחי כדי לספק את השירות. ממשק ההסכמה הוא המקום שבו הדרישה הזו הופכת לקוד. באנר שהועתק מתבנית כללית כמעט תמיד נופל על אחד המבחנים המשפטיים שלמטה. הסעיף הזה מכסה את דפוסי ה-UI שעומדים בשלושת המסגרות המשפטיות בבת אחת.
+
+### מודל המצב
+
+תמדלו את ההסכמה בשלוש שכבות:
+
+1. **חיוני** (תמיד פעיל, לא ניתן לכיבוי): session auth, CSRF, עוגיית ההסכמה עצמה, הגנה מבוטים (Turnstile), העדפות נגישות, כל מה שדרוש כדי לספק את השירות שהתבקש. למשתמש אין כאן בחירה, מתוכנן כך.
+2. **קטגוריות אופציונליות** (opt-in אקטיבי): ניתוח אתרים, session replay (Clarity / Hotjar / FullStory), ניטור שגיאות עם נתוני משתמש (Sentry Session Replay), שיווק, פרסונליזציה.
+3. **עוד לא הוחלט** (ביקור ראשון): שונה מ"דחה הכל" ומ"אישר הכל". תטפלו בזה כ-null.
+
+המצב הנשמר הוא גרסה מתוייגת + מפה של קטגוריות + timestamp:
+
+```ts
+interface ConsentState {
+  version: number;          // תעלו כשמוסיפים קטגוריה כדי לאלץ שאילתה חוזרת
+  categories: {
+    analytics: boolean;
+    session_replay: boolean;
+    error_monitoring: boolean;
+    // תוסיפו קטגוריות לפי הצורך; לכל אחת opt-in משלה
+  };
+  timestamp: string;        // ISO; משמש ל-12 חודשים לשאילתה מחדש
+}
+```
+
+### שמירה
+
+תשמרו את המצב **גם** ב-`localStorage` **וגם** בעוגייה נלווית. `localStorage` הוא מקור האמת ללקוח; העוגייה קיימת כדי ש-Server Components יוכלו לחסום עבודת SSR (למשל `incrementBundleViews` בתוך `after()`) בלי round-trip ללקוח. העוגייה צריכה רק ביט יחיד (`0` או `1`) כי Server Components בדרך כלל לא מבדילים בין קטגוריות בודדות.
+
+```ts
+// lib/consent/store.ts
+export const CONSENT_VERSION = 1;
+export const CONSENT_STORAGE_KEY = 'site_consent_v1';
+export const CONSENT_COOKIE_NAME = 'site_consent';
+export const CONSENT_REPROMPT_MS = 365 * 24 * 60 * 60 * 1000;
+
+function writeCookie(state: ConsentState | null) {
+  const maxAge = Math.floor(CONSENT_REPROMPT_MS / 1000);
+  const secure = location.protocol === 'https:' ? '; Secure' : '';
+  if (!state) {
+    document.cookie = `${CONSENT_COOKIE_NAME}=; Path=/; Max-Age=0; SameSite=Lax${secure}`;
+    return;
+  }
+  const value = state.categories.analytics ? '1' : '0';
+  document.cookie = `${CONSENT_COOKIE_NAME}=${value}; Path=/; Max-Age=${maxAge}; SameSite=Lax${secure}`;
+}
+```
+
+**כללי שאילתה חוזרת.** `readStorage()` מחזיר `null` אם ה-`version` השמור לא תואם ל-`CONSENT_VERSION` או אם ה-timestamp ישן מ-12 חודשים. העלאת `CONSENT_VERSION` כשמוסיפים קטגוריית מעקב חדשה מאלצת שאילתה טריה, ככה נשארים תואמים כשמוסיפים ספק ניתוח חדש.
+
+### בטיחות SSR: דפוס ה-SSR_SENTINEL
+
+שימוש נאיבי ב-`useSyncExternalStore` עם server snapshot של `null` מרנדר את הבאנר ב-HTML של SSR, כלומר (א) הבאנר גלוי לרגע לפני שההידרציה מחליפה אותו, ו(ב) מנועי חיפוש מאנדקסים דפים עם דיאלוג ההסכמה מכסה את התוכן. הפתרון הוא אובייקט sentinel שנבדק בזהות כדי להפריד בין רינדור השרת / ההידרציה לבין "המשתמש עדיין לא החליט":
+
+```ts
+export const SSR_SENTINEL: ConsentState = Object.freeze({
+  version: -1,
+  categories: ALL_CATEGORIES_OFF,
+  timestamp: '1970-01-01T00:00:00.000Z',
+});
+
+// בתוך ה-provider:
+const rawState = useSyncExternalStore(
+  consentStore.subscribe,
+  consentStore.getSnapshot,
+  consentStore.getServerSnapshot,  // מחזיר SSR_SENTINEL
+);
+const isHydrated = rawState !== SSR_SENTINEL;
+const state = isHydrated ? rawState : null;
+
+const needsPrompt = isHydrated && state === null;
+```
+
+רק כש-`isHydrated` הוא true וגם `state` הוא `null`, הבאנר מורנדר. ה-sentinel נבדק בזהות עם `!==`, ולכן הוא מוקפא ומיוצא כקבוע של מודול.
+
+### סנכרון חוצה-טאבים
+
+משתמשים פותחים טאבים מרובים. אם הם דוחים הסכמה באחד, האחרים חייבים לכבד את זה מיד. תאזינו לאירוע `storage`, שנפלט בין טאבים שחולקים את אותו origin:
+
+```ts
+function onStorageEvent(e: StorageEvent) {
+  if (e.key === null || e.key === CONSENT_STORAGE_KEY) notify();
+}
+// להתחבר ב-subscribe() כשהמאזין הראשון מצטרף, להתנתק כשהאחרון עוזב.
+```
+
+### דחייה = סגירה
+
+סעיף 4(11) של GDPR וההנחיות של EDPB דורשים שסגירת באנר הסכמה תיחשב כדחייה. תיקון 13 מיושר עם העמדה הזו. כלומר:
+
+- **מקש Escape** = לדחות הכל
+- **כפתור X** = לדחות הכל
+- **לחיצה מחוץ לבאנר** = להשאיר את הבאנר גלוי (אל תטפלו בזה כאישור)
+
+```tsx
+// מטפל ESC בתוך קומפוננטת הבאנר
+useEffect(() => {
+  if (!promptOpen) return;
+  function onKey(e: KeyboardEvent) {
+    if (e.key === 'Escape') rejectAll();
+  }
+  window.addEventListener('keydown', onKey);
+  return () => window.removeEventListener('keydown', onKey);
+}, [promptOpen, rejectAll]);
+```
+
+### משקל ויזואלי שווה ל"דחה" ול"אשר"
+
+מספר 42 של GDPR + החלטות אכיפה של DPAs דורשים שלכפתורי "דחה" ו"אשר" יהיה משקל ויזואלי שווה. בפועל:
+
+- אותו סגנון כפתור (שניהם primary, או שניהם outline)
+- אותו רוחב
+- אותו מיקום (אחד ליד השני, לא אחד מוסתר מאחורי "התאמה אישית")
+- "התאמה אישית" היא פעולה שלישית, לא תחליף ל"דחה"
+
+```tsx
+<div className="grid grid-cols-3 gap-2">
+  <Button size="sm" variant="outline" onClick={rejectAll}>{dict.rejectAll}</Button>
+  <Button size="sm" variant="outline" onClick={openPreferences}>{dict.customize}</Button>
+  <Button size="sm" onClick={acceptAll}>{dict.acceptAll}</Button>
+</div>
+```
+
+### חסימת הטרקרים
+
+מצב ההסכמה חייב באמת למנוע מטרקרים לא-מאושרים מלרוץ. באנר שלא עוצר סקריפטים גרוע מאי-באנר בכלל (הוא יוצר תיעוד מזויף של תאימות).
+
+```tsx
+// components/consent/consent-gated-trackers.tsx
+export function ConsentGatedTrackers() {
+  const { isAllowed } = useConsent();
+  return (
+    <>
+      {isAllowed('analytics') && <Analytics />}
+      {isAllowed('analytics') && <SpeedInsights />}
+      {isAllowed('session_replay') && <ClarityScript />}
+    </>
+  );
+}
+```
+
+תחסמו גם את `trackEvent` הלקוחי, אירועים שנפלטים לפני שהמשתמש אישר צריכים להיזרק, לא להישמר בתור:
+
+```ts
+const ESSENTIAL_EVENTS = new Set([
+  'consent_banner_shown', 'consent_accepted', 'consent_rejected',
+  'consent_customized', 'consent_reopened', 'auth_sign_in',
+]);
+
+export function trackEvent(event: string, data?: Record<string, unknown>) {
+  if (!ESSENTIAL_EVENTS.has(event) && !window.__consent?.analytics) return;
+  // ...לשלוח לבקנד של ניתוח
+}
+```
+
+ה-allowlist לאירועים חיוניים נועד לאירועים שמשפטית-טרנזקציוניים (בחירת ההסכמה עצמה, auth), לא תחליף כללי לדלת צד.
+
+### אינטגרציה עם Sentry: שני חלקים
+
+Sentry חריג כי `Sentry.init()` רץ ב-`instrumentation-client.ts` **לפני** ש-React נהידרר, שזה לפני ש-`useConsent()` יכול להגיד לכם מה המשתמש רוצה. שני חלקים:
+
+**1. הידרוט של `window.__consent` מהאחסון לפני `Sentry.init()`.** בלי זה, כל שגיאה שנזרקת במהלך ההידרציה המוקדמת נתפסת גם אם המשתמש דחה הסכמה קודם.
+
+```ts
+// instrumentation-client.ts
+import { hydrateWindowFromStorage } from '@/lib/consent/store';
+
+hydrateWindowFromStorage();  // קובע את window.__consent מ-localStorage
+
+Sentry.init({
+  dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
+  integrations: window.__consent?.session_replay ? [Sentry.replayIntegration()] : [],
+  beforeSend(event) {
+    return window.__consent?.error_monitoring ? event : null;
+  },
+});
+```
+
+**2. לחבר את Replay באמצע הסשן כשהמשתמש מאשר אחר כך.** אל תריצו `Sentry.init()` שוב, זה שובר את הלקוח הקיים. תשתמשו ב-`Sentry.addIntegration()`:
+
+```ts
+// lib/consent/sentry-gate.ts
+import * as Sentry from '@sentry/nextjs';
+
+export function enableSentryReplay() {
+  const client = Sentry.getClient();
+  if (!client) return;
+  if (client.getIntegrationByName?.('Replay')) return;  // idempotent
+  Sentry.addIntegration(Sentry.replayIntegration());
+}
+```
+
+ה-provider של React קורא ל-`enableSentryReplay()` בפעם הראשונה ש-`state.categories.session_replay` הופך ל-true. תטענו אותו בצורה דינמית כדי ש-bundle של Replay לא ישלח למשתמשים שדחו:
+
+```ts
+useEffect(() => {
+  if (state?.categories.session_replay) {
+    import('./sentry-gate').then((m) => m.enableSentryReplay());
+  }
+}, [state?.categories.session_replay]);
+```
+
+### חסימה ב-Server Component
+
+Server Components יכולים לקרוא את העוגייה הנלווית ישירות:
+
+```ts
+// lib/consent/server.ts
+import { cookies } from 'next/headers';
+import { CONSENT_COOKIE_NAME } from './store';
+
+export async function isAnalyticsAllowedServerSide(): Promise<boolean> {
+  const store = await cookies();
+  return store.get(CONSENT_COOKIE_NAME)?.value === '1';
+}
+```
+
+תשתמשו בזה כדי לחסום קריאות `after()` שמעלות מוני ניתוח:
+
+```tsx
+if (await isAnalyticsAllowedServerSide()) {
+  after(() => incrementBundleViews(slug));
+}
+```
+
+### תיעוד ההסכמה
+
+תיקון 13 ו-GDPR דורשים שתוכלו להוכיח הסכמה לפי דרישה. תפלטו חמישה אירועי ניתוח דרך הצינור הקיים שלכם:
+
+- `consent_banner_shown` (רק בהצגה הראשונה)
+- `consent_accepted`
+- `consent_rejected`
+- `consent_customized`
+- `consent_reopened` (המשתמש פותח מחדש מקישור בפוטר)
+
+תשמרו אותם דרך אותו צינור `analytics_events` שכבר יש לכם, לא צריך טבלה חדשה. אלה האירועים שה-allowlist ב-`trackEvent` נותן לעבור גם כשהסכמה נדחתה, בדיוק כדי שתהיה לכם סירוב מתועד.
+
+ראו את `references/consent-banner-implementation.md` לקוד מלא להעתקה המכסה את חנות ה-pub-sub, את ה-`ConsentProvider`, את הבאנר, את דיאלוג ההעדפות, את חסימת הטרקרים, ואת hook ההידרציה של Sentry.
+
+## דפוסים בעייתיים בממשק הסכמה
+
+אכיפת הרשות להגנת הפרטיות, DPAs של GDPR, ו-CNIL הצרפתי פרסמו שוב ושוב הנחיות על דפוסי UI שנראים תואמים אבל לא. כל אחד מהאלה יעלה לכם באכיפה גם אם טקסט החוק עצמו התקיים.
+
+| דפוס בעייתי | למה הוא נופל | התיקון |
+|-------------|---------------|---------|
+| תיבות מסומנות מראש לניתוח / שיווק | ההסכמה חייבת להיות opt-in אקטיבי. CJEU *Planet49* (C-673/17) הוא התקדים המחייב. | ברירת מחדל לא מסומן; המשתמש חייב אקטיבית להחליף את המתג. |
+| כפתור "אשר" מסוגנן גדול/צבעוני, "דחה" מסוגנן כקישור טקסט | נופל על מבחן המשקל השווה. | אותה קומפוננטה, אותו גודל, אותה בולטות ויזואלית. |
+| "דחה" מוסתר מאחורי "התאמה אישית" או "קרא עוד" | דורש לחיצות נוספות כדי לסרב, לא לאשר. | "דחה" ו"אשר" במסך הראשון, אחד ליד השני. |
+| באנר "המשך שימוש באתר = אישור עוגיות" | הסכמה משתמעת לא תקפה תחת GDPR ותיקון 13. | הבאנר לא חוסם ויזואלית כלום, אבל הטרקרים לא רצים עד שיש בחירה מפורשת. |
+| "קיר עוגיות" ("חייבים לאשר עוגיות כדי לקרוא את המאמר") | הנחיות EDPB מתייחסות להתניית שירות בהסכמה לעוגיות לא-חיוניות כלא תקפה. | תספקו את כל השירות בלי קשר לבחירה; תורידו רק תכונות שבאמת תלויות בניתוח (למשל תסתירו כפתור debug שמבוסס session replay). |
+| "אשר הכל" יחיד בלי אופציה גרנולרית במסך הראשון | סעיף 7(2) של GDPR דורש גרנולריות למטרות נפרדות. | או לחשוף את המתגים הקטגוריאליים במסך הראשון, או לוודא ש"התאמה אישית" מגיע אליהם בלחיצה אחת. |
+| שאילתה מחדש בכל סשן | עייפות הסכמה, DPAs מתייחסים לזה כדפוס בעייתי. | לשאול מחדש רק בהעלאת `CONSENT_VERSION` או אחרי 12 חודשים. |
+| קבירת המסלול ל"ביטול הסכמה" | סעיף 8C של תיקון 13 וסעיף 7(3) של GDPR דורשים שביטול יהיה קל כמו האישור. | קישור "העדפות פרטיות" בפוטר שפותח את אותו דיאלוג. |
+| שמירת עוגיית הסכמה בלי תפוגה / עם TTL רב-שנתי | המשתמש לא אישר מחדש; הסכמה ישנה היא לא הסכמה. | מקסימום 12 חודשים. תעלו `CONSENT_VERSION` כשמוסיפים טרקר. |
+| טעינת סקריפט ה-SDK של הניתוח וקריאה לו עם `consent=denied` במקום לא לטעון אותו | הטעינה עצמה היא העברת מידע (IP, UA, referer). | לחסום את תג ה-`<script>`, לא רק את הדגל הפנימי של ה-SDK. |
+
+הבאנר שאתם משגרים הוא שכבה אחת. השכבות האחרות, מדיניות פרטיות בעברית מפורסמת, מינוי ממונה הגנת פרטיות איפה שתיקון 13 דורש, תהליך טיפול בפניות נושאי מידע, תוכנית תגובה לפריצה, ורישום מאגר מידע לגופים ציבוריים ומתווכי נתונים, חייבות להתקיים באופן עצמאי. אין ממשק הסכמה שמחליף את אלה.
 
 ## מלכודות נפוצות
 

@@ -51,7 +51,7 @@ Personal data transfer outside Israel requires:
 - Data subject consent (informed and specific), OR
 - Listed exemptions (necessary for contract, legal proceedings, etc.)
 
-Note: Israel has EU adequacy decision — transfer TO EU is generally straightforward.
+Note: Israel has EU adequacy decision, transfer TO EU is generally straightforward.
 
 ### Step 5: Breach Notification
 Under 2017 regulations:
@@ -144,10 +144,271 @@ Result: Transfer compliance checklist with specific steps for US data transfer u
 ## Bundled Resources
 
 ### Scripts
-- `scripts/compliance_checker.py` — Runs a full Privacy Protection Law compliance assessment: determines security level (basic/medium/high), checks database registration requirements, and generates a compliance checklist with all applicable controls. Run: `python scripts/compliance_checker.py --help`
+- `scripts/compliance_checker.py`, Runs a full Privacy Protection Law compliance assessment: determines security level (basic/medium/high), checks database registration requirements, and generates a compliance checklist with all applicable controls. Run: `python scripts/compliance_checker.py --help`
 
 ### References
-- `references/privacy-law-requirements.md` — Detailed breakdown of the Privacy Protection Law 1981 and 2017 Security Regulations including database registration process, security level requirements, consent rules, cross-border transfer rules, breach notification procedures, and penalties. Consult when you need specific legal requirements, section numbers, or GDPR comparison details beyond what the instructions cover.
+- `references/privacy-law-requirements.md`, Detailed breakdown of the Privacy Protection Law 1981 and 2017 Security Regulations including database registration process, security level requirements, consent rules, cross-border transfer rules, breach notification procedures, and penalties. Consult when you need specific legal requirements, section numbers, or GDPR comparison details beyond what the instructions cover.
+- `references/consent-banner-implementation.md`, Copy-pasteable TypeScript/React code for an Amendment 13 + GDPR compliant consent banner: pub-sub store with SSR sentinel, localStorage + companion cookie (12-month TTL, `CONSENT_VERSION`-bumped re-prompt), cross-tab sync via `storage` event, server-side cookie check for SSR gating, Sentry pre-init hydration pattern and mid-session Replay attach, essential-event allowlist, dismissal-as-refusal handling. Consult when the user wants to ship the consent UI itself, not just understand the law.
+
+## Implementing a Compliant Consent Surface
+
+The Privacy Protection Law after Amendment 13, GDPR for EU visitors, and the 2017 Security Regulations all require **explicit, opt-in, granular consent** before collecting personal data beyond what is strictly necessary to deliver the service. The consent surface is where that requirement becomes code. A banner copy-pasted from a generic template almost always fails one of the legal tests below. This section covers the UI patterns that satisfy all three legal frames at once.
+
+### State Model
+
+Model consent as three layers:
+
+1. **Essential** (always on, never toggled): session auth, CSRF, consent cookie itself, bot protection (Turnstile), accessibility preferences, anything required to deliver the requested service. The user has no choice here, by design.
+2. **Optional categories** (explicit opt-in): analytics, session replay (Clarity / Hotjar / FullStory), error monitoring with user data (Sentry Session Replay), marketing, personalization.
+3. **No consent yet** (first visit): distinct from "rejected all" and from "accepted all". Treat as null.
+
+The persisted state is a tagged version + category map + timestamp:
+
+```ts
+interface ConsentState {
+  version: number;          // bump to force re-prompt when adding a category
+  categories: {
+    analytics: boolean;
+    session_replay: boolean;
+    error_monitoring: boolean;
+    // add categories as needed; each gets its own opt-in
+  };
+  timestamp: string;        // ISO; used for 12-month re-prompt
+}
+```
+
+### Persistence
+
+Store the state in **both** `localStorage` and a companion cookie. `localStorage` is the source of truth for the client; the cookie exists so Server Components can gate SSR work (e.g. `incrementBundleViews` inside `after()`) without a client round-trip. The cookie only needs a single bit (`0` or `1`) because Server Components rarely distinguish individual categories.
+
+```ts
+// lib/consent/store.ts
+export const CONSENT_VERSION = 1;
+export const CONSENT_STORAGE_KEY = 'site_consent_v1';
+export const CONSENT_COOKIE_NAME = 'site_consent';
+export const CONSENT_REPROMPT_MS = 365 * 24 * 60 * 60 * 1000;
+
+function writeCookie(state: ConsentState | null) {
+  const maxAge = Math.floor(CONSENT_REPROMPT_MS / 1000);
+  const secure = location.protocol === 'https:' ? '; Secure' : '';
+  if (!state) {
+    document.cookie = `${CONSENT_COOKIE_NAME}=; Path=/; Max-Age=0; SameSite=Lax${secure}`;
+    return;
+  }
+  const value = state.categories.analytics ? '1' : '0';
+  document.cookie = `${CONSENT_COOKIE_NAME}=${value}; Path=/; Max-Age=${maxAge}; SameSite=Lax${secure}`;
+}
+```
+
+**Re-prompt rules.** `readStorage()` returns `null` if the stored `version` mismatches `CONSENT_VERSION` or the timestamp is older than 12 months. Bumping `CONSENT_VERSION` when adding a new tracker category forces a fresh prompt, this is how you stay compliant when you add a new analytics vendor.
+
+### SSR Safety: The SSR_SENTINEL Pattern
+
+Naive `useSyncExternalStore` with a `null` server snapshot renders the banner in the initial SSR HTML, which means a) the banner is visible for a moment before hydration replaces it, and b) search engines index pages with the consent dialog overlaying the content. The fix is a sentinel object that is identity-compared to distinguish the server/hydration render from "user hasn't decided yet":
+
+```ts
+export const SSR_SENTINEL: ConsentState = Object.freeze({
+  version: -1,
+  categories: ALL_CATEGORIES_OFF,
+  timestamp: '1970-01-01T00:00:00.000Z',
+});
+
+// In the provider:
+const rawState = useSyncExternalStore(
+  consentStore.subscribe,
+  consentStore.getSnapshot,
+  consentStore.getServerSnapshot,  // returns SSR_SENTINEL
+);
+const isHydrated = rawState !== SSR_SENTINEL;
+const state = isHydrated ? rawState : null;
+
+const needsPrompt = isHydrated && state === null;
+```
+
+Only when `isHydrated` is true AND `state` is `null` does the banner render. The sentinel is identity-compared with `!==`, which is why it is frozen and exported as a module constant.
+
+### Cross-Tab Sync
+
+Users open multiple tabs. If they reject consent in one, the others must respect that immediately. Listen for the `storage` event, which fires across tabs sharing the same origin:
+
+```ts
+function onStorageEvent(e: StorageEvent) {
+  if (e.key === null || e.key === CONSENT_STORAGE_KEY) notify();
+}
+// Attach in subscribe() when first listener is added, detach when last leaves.
+```
+
+### Dismissal-As-Refusal
+
+GDPR Article 4(11) and the EDPB guidance require that dismissing a consent banner counts as refusal. Amendment 13 is aligned. That means:
+
+- **Escape key** = reject all
+- **Close button (X)** = reject all
+- **Clicking outside the banner** = leave banner visible (do NOT treat as accept)
+
+```tsx
+// ESC handler inside the banner component
+useEffect(() => {
+  if (!promptOpen) return;
+  function onKey(e: KeyboardEvent) {
+    if (e.key === 'Escape') rejectAll();
+  }
+  window.addEventListener('keydown', onKey);
+  return () => window.removeEventListener('keydown', onKey);
+}, [promptOpen, rejectAll]);
+```
+
+### Visual Equal Weight for Reject and Accept
+
+GDPR Recital 42 + multiple DPA enforcement decisions require that Reject and Accept carry equal visual weight. In practice:
+
+- Same button style (both primary, or both outline)
+- Same width
+- Same position (side by side, not one hidden behind "Customize")
+- "Customize" is a third action, not a replacement for "Reject"
+
+```tsx
+<div className="grid grid-cols-3 gap-2">
+  <Button size="sm" variant="outline" onClick={rejectAll}>{dict.rejectAll}</Button>
+  <Button size="sm" variant="outline" onClick={openPreferences}>{dict.customize}</Button>
+  <Button size="sm" onClick={acceptAll}>{dict.acceptAll}</Button>
+</div>
+```
+
+### Gating the Trackers
+
+The consent state must actually prevent non-consented trackers from running. A banner that does not stop scripts is worse than no banner (it creates a paper trail of false compliance).
+
+```tsx
+// components/consent/consent-gated-trackers.tsx
+export function ConsentGatedTrackers() {
+  const { isAllowed } = useConsent();
+  return (
+    <>
+      {isAllowed('analytics') && <Analytics />}
+      {isAllowed('analytics') && <SpeedInsights />}
+      {isAllowed('session_replay') && <ClarityScript />}
+    </>
+  );
+}
+```
+
+Also gate the client-side `trackEvent` helper, events emitted before consent is granted should be dropped, not queued:
+
+```ts
+const ESSENTIAL_EVENTS = new Set([
+  'consent_banner_shown', 'consent_accepted', 'consent_rejected',
+  'consent_customized', 'consent_reopened', 'auth_sign_in',
+]);
+
+export function trackEvent(event: string, data?: Record<string, unknown>) {
+  if (!ESSENTIAL_EVENTS.has(event) && !window.__consent?.analytics) return;
+  // ...send to analytics backend
+}
+```
+
+The essential-event allowlist is for legally transactional events (the consent choice itself, auth), not a general escape hatch.
+
+### Sentry Integration: Two Pieces
+
+Sentry is unusual because `Sentry.init()` runs in `instrumentation-client.ts` **before** React hydrates, which is before `useConsent()` can tell you what the user wants. Two pieces:
+
+**1. Hydrate `window.__consent` from storage BEFORE `Sentry.init()`.** Without this, any errors thrown during early hydration are captured even if the user previously rejected consent.
+
+```ts
+// instrumentation-client.ts
+import { hydrateWindowFromStorage } from '@/lib/consent/store';
+
+hydrateWindowFromStorage();  // sets window.__consent from localStorage
+
+Sentry.init({
+  dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
+  integrations: window.__consent?.session_replay ? [Sentry.replayIntegration()] : [],
+  beforeSend(event) {
+    return window.__consent?.error_monitoring ? event : null;
+  },
+});
+```
+
+**2. Attach Replay mid-session when the user later grants consent.** Don't re-run `Sentry.init()`, that breaks the existing client. Use `Sentry.addIntegration()`:
+
+```ts
+// lib/consent/sentry-gate.ts
+import * as Sentry from '@sentry/nextjs';
+
+export function enableSentryReplay() {
+  const client = Sentry.getClient();
+  if (!client) return;
+  if (client.getIntegrationByName?.('Replay')) return;  // idempotent
+  Sentry.addIntegration(Sentry.replayIntegration());
+}
+```
+
+The React provider calls `enableSentryReplay()` the first time `state.categories.session_replay` flips to true. Dynamic-import it so the Replay bundle is not shipped to users who rejected it:
+
+```ts
+useEffect(() => {
+  if (state?.categories.session_replay) {
+    import('./sentry-gate').then((m) => m.enableSentryReplay());
+  }
+}, [state?.categories.session_replay]);
+```
+
+### Server Component Gating
+
+Server Components can read the companion cookie directly:
+
+```ts
+// lib/consent/server.ts
+import { cookies } from 'next/headers';
+import { CONSENT_COOKIE_NAME } from './store';
+
+export async function isAnalyticsAllowedServerSide(): Promise<boolean> {
+  const store = await cookies();
+  return store.get(CONSENT_COOKIE_NAME)?.value === '1';
+}
+```
+
+Use it to gate `after()` calls that increment analytics counters:
+
+```tsx
+if (await isAnalyticsAllowedServerSide()) {
+  after(() => incrementBundleViews(slug));
+}
+```
+
+### Audit Trail
+
+Amendment 13 and GDPR require you to demonstrate consent on demand. Emit five analytics events through your existing pipeline:
+
+- `consent_banner_shown` (first show only)
+- `consent_accepted`
+- `consent_rejected`
+- `consent_customized`
+- `consent_reopened` (user re-opens from the footer link)
+
+Store them through the same `analytics_events` pipeline you already have, no new table needed. These are the events the allowlist in `trackEvent` lets through even when consent is denied, precisely so you have the refusal on record.
+
+See `references/consent-banner-implementation.md` for complete copy-pasteable code covering the pub-sub store, the `ConsentProvider`, the banner, the preferences dialog, the tracker gate, and the Sentry hydration hook.
+
+## Consent UI Anti-Patterns
+
+Israeli DPA enforcement, GDPR DPAs, and the French CNIL have published repeated guidance on UI patterns that look compliant but are not. Any of these will cost you on enforcement even if the underlying law text is satisfied.
+
+| Anti-pattern | Why it fails | Fix |
+|-------------|--------------|-----|
+| Pre-checked boxes for analytics / marketing | Consent must be explicit opt-in. CJEU *Planet49* (C-673/17) is the binding precedent. | Default unchecked; user must actively flip the switch. |
+| "Accept" button styled larger/colored, "Reject" styled as a text link | Fails the equal-weight test. | Same component, same size, same visual prominence. |
+| "Reject" hidden behind a "Customize" or "Learn more" submenu | Forces extra clicks to refuse, not to accept. | Reject + Accept on the first screen, side by side. |
+| "By continuing to use the site, you accept cookies" banners | Implicit consent is invalid under GDPR and Amendment 13. | Banner blocks nothing visually, but trackers do not run until explicit choice. |
+| Cookie wall ("You must accept cookies to read this article") | EDPB guidance treats conditioning service on consent to non-essential cookies as invalid. | Provide full service regardless of the choice; degrade only genuinely analytics-dependent features (e.g. hide a session-replay-powered debug button). |
+| Single "Accept all" with no granular option on the first screen | GDPR Article 7(2) requires granularity for distinct purposes. | Either expose the per-category toggles on the first screen, or ensure "Customize" reaches them in one click. |
+| Re-prompting every session | Consent fatigue, treated by DPAs as a dark pattern. | Re-prompt only on `CONSENT_VERSION` bump or after 12 months. |
+| Burying the "withdraw consent" path | Amendment 13 Article 8C + GDPR Article 7(3) require withdrawal to be as easy as granting. | "Privacy preferences" link in the footer that opens the same dialog. |
+| Storing a consent cookie without an expiry / with multi-year TTL | User has not re-consented; stale consent is no consent. | 12-month max. Bump `CONSENT_VERSION` whenever you add a tracker. |
+| Loading the analytics SDK script and calling it with `consent=denied` instead of not loading it | Loading itself is a data transfer (IP, UA, referer). | Gate the `<script>` tag, not just the SDK's internal flag. |
+
+The banner you ship is one layer. The other layers, a published privacy policy in Hebrew, a named Privacy Protection Officer where required under Amendment 13, a data subject request handling process, a breach response plan, and the database registration for public bodies and data brokers, all have to exist independently. No consent UI substitutes for those.
 
 ## Gotchas
 
