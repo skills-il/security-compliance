@@ -1,0 +1,43 @@
+{
+  "author": "skills-il",
+  "version": "1.0.0",
+  "category": "security-compliance",
+  "tags": {
+    "he": [
+      "תקנים",
+      "מכון-התקנים",
+      "יבוא",
+      "תקן-רשמי",
+      "רגולציה",
+      "תאימות",
+      "ישראל"
+    ],
+    "en": [
+      "standards",
+      "sii",
+      "import",
+      "compliance",
+      "regulation",
+      "mechon-hatikanim",
+      "israel"
+    ]
+  },
+  "display_name": {
+    "he": "בודק תקנים לייבוא",
+    "en": "Israeli Standards Import Checker"
+  },
+  "display_description": {
+    "he": "בדיקה האם מוצר לייבוא לישראל מחייב אישור מכון התקנים (תקן רשמי) של הממונה על התקינה. מחזיר מספרי תקן ישראלי, מסלול אישור (אישור טיפוס, אישור משלוח, הצהרת יבוא, מסלול CoC אירופי), בדיקות מעבדה נדרשות, לוחות זמנים ואפשרויות מסלול מקוצר על פי רפורמות יבוא מקביל 2016 (מזון) ו-2022/2025 (אלקטרוניקה ורגולציות האיחוד האירופי). שימוש כאשר המשתמש שואל על ייבוא אישי או מסחרי, אישור טיפוס, CE, בדיקות מעבדה, או נשאל אם מוצר נתפס במכס בגלל חוסר תקן. אל תשתמש עבור חישוב מכס ומס קנייה (יש להשתמש במיומנות israeli-customs-duty-calculator) או לביקורת בטיחות מוצר מחוץ להקשר הרגולטורי הישראלי.",
+    "en": "Check whether a product requires Standards Institution of Israel (SII / Mechon HaTikanim) approval under an official standard (takan rishmi) before it can be imported into Israel. Returns applicable SI numbers, approval route (type approval, shipment approval, Maslol Plus declaration, EU-CoC recognition), required lab tests, timelines, and fast-track options based on the 2016 food parallel-import reform and the 2022/2025 electronics + EU-regulation reforms. Use when a user asks about importing electronics, toys, cosmetics, food-contact materials, vehicles, or building materials into Israel, asks about CE/type approval, or has a shipment stuck at Israeli customs. Do NOT use for customs duty calculation (use israeli-customs-duty-calculator) or for general product safety review outside the Israeli regulatory context."
+  },
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "opencode",
+    "codex",
+    "antigravity",
+    "gemini-cli"
+  ]
+}
