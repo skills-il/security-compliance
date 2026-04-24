@@ -5,10 +5,10 @@ Practical mapping of Israel's Privacy Protection Law (PPL) and Amendment 13 to r
 ## Key Framework
 
 - Primary statute: Privacy Protection Law, 1981 (Chok Hagnat HaPratiyut)
-- Amendment 13: Significant modernization, effective August 14, 2025
+- Amendment 13: Significant modernization, in force since August 14, 2025. DPO-appointment grace period expired October 31, 2025
 - Implementing regulations: Data Security Regulations, 2017
 - Regulator: Privacy Protection Authority (PPA, Rashut LeHaganat HaPratiyut)
-- First AI-specific signal: PPA draft guidance on AI, April 30, 2025
+- First AI-specific signal: PPA draft guidance on AI, April 30, 2025 (public consultation closed June 5, 2025; still in draft form as of April 2026)
 
 ## PPL Vocabulary You Will Encounter
 
@@ -115,12 +115,14 @@ Concrete controls:
 - Backup purge schedule
 - Model decommissioning procedure
 
-## Amendment 13 Changes to Watch
+## Amendment 13 Changes (Now In Force)
+
+Amendment 13 entered into force on August 14, 2025. Key changes that are now enforceable:
 
 - Expanded definition of personal information brings more data into scope
-- New DPO role for orgs processing sensitive data at scale, systematic monitoring, public authorities, data brokers
+- New DPO role for orgs processing sensitive data at scale, systematic monitoring, public authorities, data brokers. PPA granted a grace period on DPO appointment until October 31, 2025; this grace period has expired and the obligation is now fully enforceable
 - Broader breach notification obligations with tighter timelines
-- Increased enforcement powers for the PPA
+- Increased enforcement powers for the PPA, including administrative financial penalties (fines can reach millions of NIS) and authority to petition for cease-processing or deletion orders
 - Sharper data subject rights, including around automated decisions
 
 Budget headcount for DPO if you fall into the triggers. The role must be reasonably independent, reporting high enough in the org to raise issues without retaliation risk.

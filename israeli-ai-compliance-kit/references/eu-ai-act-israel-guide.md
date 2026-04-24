@@ -69,13 +69,17 @@ GPAI models with systemic risk (above a compute threshold, currently 10^25 FLOPs
 
 ## Staggered Timeline
 
-| Date | What applies |
-|------|-------------|
-| August 1, 2024 | Act enters into force |
-| February 2, 2025 | Prohibitions (Article 5) and AI literacy obligations (Article 4) apply |
-| August 2, 2025 | GPAI obligations, governance structures, penalties apply |
-| August 2, 2026 | Most obligations apply to new AI systems, including high-risk requirements |
-| August 2, 2027 | Remaining obligations for AI products already covered by sector-specific EU legislation |
+| Date | Status | What applies |
+|------|--------|-------------|
+| August 1, 2024 | In force | Act enters into force |
+| February 2, 2025 | In force | Prohibitions (Article 5) and AI literacy obligations (Article 4) apply |
+| August 2, 2025 | In force | GPAI obligations, governance structures, penalties apply. New GPAI models placed on the EU market after this date must comply immediately; providers of pre-existing GPAI models have until August 2, 2027 to comply |
+| August 2, 2026 | Upcoming | Most obligations apply to new AI systems, including Annex III high-risk requirements (Articles 6 to 15) |
+| August 2, 2027 | Upcoming | Remaining obligations for AI products already covered by sector-specific EU legislation, plus compliance deadline for pre-existing GPAI models |
+
+## General-Purpose AI Code of Practice
+
+On July 10, 2025 the European AI Office published the final version of the voluntary Code of Practice for GPAI providers. The Code was endorsed by the European Commission and the AI Board on August 1, 2025 via adequacy decisions. It has three chapters: Transparency, Copyright, and Safety and Security. Signing is voluntary but is the Commission's preferred route for demonstrating compliance with GPAI obligations. For Israeli GPAI providers selling into the EU, signing the Code is usually less work than building a bespoke compliance dossier.
 
 ## Decision Framework for Israeli Companies
 

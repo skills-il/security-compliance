@@ -1,6 +1,6 @@
 # DPIA Template (Israeli PPL-aligned)
 
-Data Protection Impact Assessment template aligned to the Israeli Privacy Protection Law and Amendment 13 (effective August 14, 2025). Use this as a starting point for an ML system that processes personal data. Not legal advice.
+Data Protection Impact Assessment template aligned to the Israeli Privacy Protection Law and Amendment 13 (in force since August 14, 2025). Use this as a starting point for an ML system that processes personal data. Not legal advice.
 
 ## Section 1: System Identification
 
@@ -136,12 +136,12 @@ This DPIA must be reviewed when:
 
 ## Notes on Amendment 13
 
-Amendment 13 (effective August 14, 2025) introduces or expands several obligations that may affect this DPIA:
+Amendment 13 came into force on August 14, 2025 and introduces or expands several obligations that affect this DPIA:
 
-- Broader DPO requirement: sensitive data at scale, systematic monitoring, public authorities, data brokers
+- Broader DPO requirement: sensitive data at scale, systematic monitoring, public authorities, data brokers. The PPA grace period on DPO appointment expired October 31, 2025, so the obligation is fully enforceable
 - Expanded personal information definition
 - Sharper breach notification timelines
-- Increased enforcement powers for the PPA
+- Increased enforcement powers for the PPA, including administrative financial penalties (potentially millions of NIS) and authority to petition for cease-processing or deletion orders
 - Stronger data subject rights over automated decisions
 
-Review your DPIA against the amendment when it takes effect and update as needed.
+Existing DPIAs drafted before August 2025 should be reviewed and updated to reflect the amendment's obligations.

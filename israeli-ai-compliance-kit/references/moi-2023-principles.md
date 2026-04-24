@@ -75,3 +75,9 @@ Concrete controls:
 ## How to Use This in Documentation
 
 For each AI system, create a short alignment statement mapping the 6 ethical principles to specific controls. Attach it to your internal governance file and include it in customer-facing AI risk review responses. Reference the policy by its full title and December 14, 2023 publication date.
+
+## What's Next (2026 and beyond)
+
+The Ministry of Innovation is formalising an AI Policy Coordination Center expected to release a Risk Management Toolbox for sector regulators, containing standardised impact-assessment templates and transparency-report patterns. Track its publications alongside those of the PPA, Bank of Israel, and Ministry of Health.
+
+A new multi-year national AI strategy is anticipated after 2026 and is likely to emphasise generative AI, LLM security, and environmental impact (Green AI). A National AI Ethics Committee has also been floated in public consultations. None of this changes the voluntary, sector-based baseline established in 2023, but it does mean more operational guidance is coming.
