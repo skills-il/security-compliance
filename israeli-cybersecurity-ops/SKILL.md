@@ -25,7 +25,7 @@ For any security workflow, collect:
 - **Environment:** Cloud (AWS/Azure/GCP), On-prem, Hybrid
 - **Available tools:** Which MCP servers or APIs are connected
 - **Scope:** Specific asset, application, or organization-wide
-- **Framework:** If compliance — SOC2, ISO27001, Israeli Privacy Law, INCD
+- **Framework:** If compliance, SOC2, ISO27001, Israeli Privacy Law, INCD
 
 ### Step 3: Execute Workflow
 
@@ -73,17 +73,17 @@ Phase 3: Remediation Plan
 #### Workflow C: Israeli Compliance Check
 
 Phase 1: Framework Selection
-1. Israeli Privacy Protection Law (IPPI) 1981 + Regulations 2017
-2. INCD (Israel National Cyber Directorate) guidelines
-3. Banking Supervision (if financial sector)
-4. SOC2 / ISO27001 (international)
+1. Israeli Privacy Protection Law (PPL) 1981 as amended through **Amendment 13** (in force August 14, 2025) + Information Security Regulations 2017. Amendment 13 introduced 72-hour breach notification to the PPA (with notification to affected individuals where high risk), mandatory DPO triggers, expanded definitions of "personal information" and "sensitive data", expanded PPA enforcement powers (administrative fines, cease-processing orders, deletion orders), and exemplary damages. The pre-2025 "without delay" framing is obsolete.
+2. INCD (Israel National Cyber Directorate / מערך הסייבר הלאומי) guidelines, current canonical methodology is the **Israeli Cyber Defense Methodology (ICDM) 2.0** (published 2021, mapped to NIST CSF 1.1 + SP 800-53 r5, with explicit Zero Trust + Threat-Informed Defense direction). The National Cyber Security Strategy was updated February 2025.
+3. Banking Supervision (if financial sector): primary current directive is **BOI Directive 364** (2024-11) which consolidates and supersedes Directives 357, 361, and 363
+4. SOC2 / ISO27001 (international); MITRE ATT&CK v18 (October 28, 2025) is current with Detection Strategies and Analytics
 
 Phase 2: Control Assessment
 5. Map Israeli-specific requirements:
-   - Data protection officer (memune piyuach) required?
-   - Database registration with Privacy Protection Authority
+   - Data protection officer (ממונה הגנת פרטיות / DPO) required? (Mandatory under Amendment 13 for public bodies, data brokers, systematic-monitoring orgs, databases >10,000 individuals)
+   - Risk-based regime under Amendment 13 (database registration is no longer the primary control)
    - Cross-border data transfer restrictions
-   - Data breach notification requirements
+   - Data breach notification: 72 hours to PPA + affected individuals where high risk
    - Health data special protections (if applicable)
 6. Check each control against current tool findings
 
@@ -95,12 +95,13 @@ Phase 3: Gap Report
 
 ### INCD (Israel National Cyber Directorate) Guidelines
 - Critical infrastructure sectors: Energy, Water, Finance, Health, Communications, Transportation
-- Cyber event reporting: Required within hours for critical infrastructure
+- Cyber event reporting: 24h to INCD reporting portal (reports.cyber.gov.il) for critical infrastructure; sector-specific timelines may be tighter
 - Annual risk assessment recommended
-- Supply chain security emphasis
+- Supply chain security emphasis (especially given documented Iranian / Hezbollah / Houthi-attributed targeting of Israeli software supply chains since 2023)
 
-### Israeli Privacy Protection Law Key Requirements
-- Registration of databases with Privacy Protection Authority
+### Israeli Privacy Protection Law Key Requirements (post Amendment 13)
+- Risk-based regime; database registration is no longer the primary compliance control
+- Mandatory DPO triggers (public bodies, data brokers, systematic-monitoring, large/sensitive databases)
 - Consent for data collection and processing
 - Right of access and correction (similar to GDPR but predates it)
 - Cross-border transfer: Adequate protection required
@@ -111,26 +112,27 @@ Phase 3: Gap Report
 
 ### Example 1: Cloud Alert Triage
 User says: "Wiz flagged a critical finding in our production AWS account"
-Actions: Follow Workflow A — retrieve Wiz finding details, assess blast radius, check for lateral movement indicators, provide containment recommendation.
+Actions: Follow Workflow A, retrieve Wiz finding details, assess blast radius, check for lateral movement indicators, provide containment recommendation.
 
 ### Example 2: Dependency Vulnerability
 User says: "Snyk found 15 high vulnerabilities in our Node.js app"
-Actions: Follow Workflow B — get Snyk details, check reachability, prioritize by exploitability, create remediation plan with specific version upgrades.
+Actions: Follow Workflow B, get Snyk details, check reachability, prioritize by exploitability, create remediation plan with specific version upgrades.
 
 ### Example 3: Privacy Compliance
 User says: "We need to check if we comply with Israeli privacy law"
-Actions: Follow Workflow C — map Israeli Privacy Protection Law requirements, check database registration status, review consent mechanisms, assess cross-border data flows.
+Actions: Follow Workflow C, map Israeli Privacy Protection Law requirements, check database registration status, review consent mechanisms, assess cross-border data flows.
 
 ## Bundled Resources
 
 ### Scripts
-- `scripts/security_triage.py` — Structured security alert triage tool that calculates composite severity scores from CVSS, asset criticality, data sensitivity, and blast radius. Determines INCD reporting obligations for critical infrastructure and Privacy Authority notification for data breaches. Outputs classification, recommended response steps, and reporting deadlines. Run: `python scripts/security_triage.py --help`
+- `scripts/security_triage.py`, Structured security alert triage tool that calculates composite severity scores from CVSS, asset criticality, data sensitivity, and blast radius. Determines INCD reporting obligations for critical infrastructure and Privacy Authority notification for data breaches. Outputs classification, recommended response steps, and reporting deadlines. Run: `python scripts/security_triage.py --help`
 
 ### References
-- `references/incd-guidelines.md` — Israel National Cyber Directorate reference covering CERT-IL, sector-specific regulators, critical infrastructure designations, the five-pillar INCD cyber defense framework (Identify/Protect/Detect/Respond/Recover), incident reporting timelines and channels, security best practices, and compliance mapping between Israeli Privacy Law, SOC2, and ISO 27001. Consult when assessing Israeli regulatory requirements or mapping security controls to compliance frameworks.
+- `references/incd-guidelines.md`, Israel National Cyber Directorate reference covering CERT-IL, sector-specific regulators, critical infrastructure designations, the five-pillar INCD cyber defense framework (Identify/Protect/Detect/Respond/Recover), incident reporting timelines and channels, security best practices, and compliance mapping between Israeli Privacy Law, SOC2, and ISO 27001. Consult when assessing Israeli regulatory requirements or mapping security controls to compliance frameworks.
 
 ## Gotchas
 
+- **Vendor ownership changes (2025-2026).** Wiz was acquired by Google for ~$32B (closed March 11, 2026) and now ships under Google Cloud Security alongside Mandiant; multi-cloud commitment preserved. CyberArk was acquired by Palo Alto Networks for ~$25B (closed February 11, 2026); CyberArk is now part of Palo Alto's identity platform (Cortex / Strata). Check Point product naming has shifted (Quantum SASE → Harmony SASE; Horizon Playblocks → Infinity Playblocks). Agents that quote pre-2026 vendor framing miss integration patterns and TOS implications. Wiz acquired by Google means the Wiz MCP can be expected to evolve toward Google Cloud Security MCP family.
 - Israeli security tools (Wiz, Snyk, Check Point) may have Hebrew-language dashboards or alerts. Agents should not assume all output is in English when parsing tool responses.
 - CERT-IL (the Israeli national CERT) provides free incident response assistance to private sector organizations, unlike many national CERTs. Agents may not recommend this free resource when advising on incident response.
 - Israeli SOC teams typically operate Sunday-Thursday with reduced Friday coverage. Agents may generate 24/7 staffing plans based on Monday-Friday assumptions.

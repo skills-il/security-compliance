@@ -2,7 +2,7 @@
 
 | Cat | Hebrew | English | Action | Shelter Time |
 |-----|--------|---------|--------|-------------|
-| 1 | ירי רקטות וטילים | Missiles/Rockets | Enter shelter, close door/window, sit below window line | 10 min after last impact |
+| 1 | ירי רקטות וטילים | Missiles/Rockets | Enter shelter, close door/window, sit below window line | Short-range (Gaza/Lebanon historical): 10 min after last impact. Ballistic / Iran / Houthi: stay until explicit Cell Broadcast / HFC app release |
 | 2 | חדירת כלי טיס עוין | Hostile Aircraft | Enter shelter, close all openings, stay away from windows | Until all-clear |
 | 3 | רעידת אדמה | Earthquake | DROP-COVER-HOLD (do NOT enter mamad) | Until shaking stops + check structure |
 | 4 | צונאמי | Tsunami | Move inland/uphill, 2km from coast or 30m elevation | Until all-clear |

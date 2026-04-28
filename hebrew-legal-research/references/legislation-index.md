@@ -162,6 +162,7 @@ multiple separate statutes:
 
 ### Privacy Protection Law 1981
 - Hebrew: Chok Haganat HaPratiut
+- Last major reform: **Amendment 13, in force August 14, 2025**, granting the Privacy Protection Authority independent enforcement authority including administrative fines, cease-processing orders, mandatory deletion, and an expanded DPO regime; introduced 72-hour PPA breach notification and statutory damages up to NIS 100,000 without proof of harm.
 - See detailed coverage in israeli-privacy-shield skill
 
 ## Tax Law
@@ -172,7 +173,7 @@ multiple separate statutes:
 
 ### Value Added Tax Law 1975
 - Hebrew: Chok Mas Erech Musaf (Chok Maam)
-- Current rate: 17% (subject to change)
+- Current rate: 18% (raised from 17% effective January 1, 2025; verify current rate at gov.il / Israel Tax Authority)
 
 ### Land Appreciation Tax Law 1963
 - Hebrew: Chok Mas Shevach Mikrkain

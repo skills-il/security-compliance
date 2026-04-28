@@ -1,4 +1,4 @@
-# Israeli Consumer Protection Law — E-Commerce Requirements
+# Israeli Consumer Protection Law, E-Commerce Requirements
 
 ## Overview
 The Consumer Protection Law, 5741-1981 (Chok Hagnat HaTzarchan) is Israel's primary consumer
@@ -9,7 +9,7 @@ which covers all e-commerce transactions.
 
 ### Definition
 A distance transaction is any sale conducted without the buyer and seller being physically
-present together — including online stores, phone sales, and TV shopping.
+present together, including online stores, phone sales, and TV shopping.
 
 ### Required Pre-Purchase Disclosures
 Before completing a distance sale, the seller must provide:
@@ -60,7 +60,7 @@ The following product categories are exempt from the cooling-off period:
 ### VAT Inclusion
 - All consumer-facing prices must include 18% VAT (Ma'am) (rate increased from 17% to 18% on January 1, 2025)
 - It is illegal to display pre-VAT prices to consumers
-- Display format: "₪X.XX" or "X.XX ש"ח" — both are acceptable
+- Display format: "₪X.XX" or "X.XX ש"ח", both are acceptable
 
 ### Delivery Costs
 - Shipping/delivery costs must be clearly stated before the checkout process
@@ -74,12 +74,12 @@ The following product categories are exempt from the cooling-off period:
 
 ## Required Business Disclosures
 E-commerce sellers must prominently display:
-1. **Business name** — as registered with the Registrar of Companies (Rasham HaChevarot)
-2. **Registration number** — Osek Murshe number or Company Number (C.N.)
-3. **Physical address** — actual business address, not just a PO Box
-4. **Phone number** — reachable during business hours
-5. **Email address** — monitored and responsive
-6. **Contact person** — full name of business owner or authorized representative
+1. **Business name**, as registered with the Registrar of Companies (Rasham HaChevarot)
+2. **Registration number**, Osek Murshe number or Company Number (C.N.)
+3. **Physical address**, actual business address, not just a PO Box
+4. **Phone number**, reachable during business hours
+5. **Email address**, monitored and responsive
+6. **Contact person**, full name of business owner or authorized representative
 
 These details must appear on the website and on every invoice/receipt issued.
 

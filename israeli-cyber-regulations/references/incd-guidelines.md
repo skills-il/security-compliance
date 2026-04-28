@@ -21,10 +21,10 @@ The Israel National Cyber Directorate (INCD / Ma'arach HaSyber HaLeumi) is the n
 
 ### Sector-Specific Coordination
 INCD coordinates with sector regulators:
-- **Banking:** Bank of Israel — Banking Supervision Division
+- **Banking:** Bank of Israel, Banking Supervision Division
 - **Capital Markets:** Israel Securities Authority (ISA)
-- **Health:** Ministry of Health — Digital Health Division
-- **Energy:** Ministry of Energy — Infrastructure Protection
+- **Health:** Ministry of Health, Digital Health Division
+- **Energy:** Ministry of Energy, Infrastructure Protection
 - **Telecom:** Ministry of Communications
 - **Defense:** MALMAB (Directorate of Security of the Defense Establishment)
 

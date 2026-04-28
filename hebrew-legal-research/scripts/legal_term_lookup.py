@@ -393,7 +393,7 @@ def main():
         elif "multiple_matches" in result:
             print(f"Multiple matches for '{args.term}':")
             for k, v in result["multiple_matches"].items():
-                print(f"  {k}: {v['english']} — {v['context']}")
+                print(f"  {k}: {v['english']}, {v['context']}")
         else:
             print(f"Term: {args.term}")
             print(f"Hebrew: {result['hebrew']}")

@@ -33,22 +33,22 @@ and incident response coordination.
 
 ### Designated Sectors
 Israel designates the following as critical infrastructure:
-1. **Energy** — Electricity (IEC), natural gas, fuel
-2. **Water** — Mekorot, desalination plants, water utilities
-3. **Finance** — Banks, stock exchange, payment systems
-4. **Health** — Hospitals, HMOs (kupot cholim), medical devices
-5. **Communications** — Telecom operators, internet infrastructure
-6. **Transportation** — Airports, ports, railways, road systems
-7. **Government** — Central and local government IT systems
+1. **Energy**, Electricity (IEC), natural gas, fuel
+2. **Water**, Mekorot, desalination plants, water utilities
+3. **Finance**, Banks, stock exchange, payment systems
+4. **Health**, Hospitals, HMOs (kupot cholim), medical devices
+5. **Communications**, Telecom operators, internet infrastructure
+6. **Transportation**, Airports, ports, railways, road systems
+7. **Government**, Central and local government IT systems
 
 ### Requirements for Critical Infrastructure
 - **Mandatory cyber incident reporting** to INCD
-- **Risk assessment** — annual comprehensive assessment required
-- **Security controls** — aligned with INCD framework
-- **Incident response plan** — tested annually
-- **Security officer** — dedicated CISO required
-- **Supply chain security** — vendor risk management
-- **Business continuity** — DR/BC plans for cyber scenarios
+- **Risk assessment**, annual comprehensive assessment required
+- **Security controls**, aligned with INCD framework
+- **Incident response plan**, tested annually
+- **Security officer**, dedicated CISO required
+- **Supply chain security**, vendor risk management
+- **Business continuity**, DR/BC plans for cyber scenarios
 
 ## INCD Cyber Defense Framework
 
@@ -98,11 +98,11 @@ The INCD framework is structured around five pillars:
 - All other organizations (voluntary but strongly encouraged)
 
 ### What to Report
-- **Cyber attacks** — successful or attempted
-- **Malware infections** — especially ransomware
-- **Data breaches** — unauthorized access to sensitive data
-- **Service disruptions** — caused by cyber events
-- **Vulnerabilities** — critical vulnerabilities in widely-used systems
+- **Cyber attacks**, successful or attempted
+- **Malware infections**, especially ransomware
+- **Data breaches**, unauthorized access to sensitive data
+- **Service disruptions**, caused by cyber events
+- **Vulnerabilities**, critical vulnerabilities in widely-used systems
 
 ### Reporting Timeline
 | Severity | Reporting Deadline | To Whom |
@@ -122,32 +122,32 @@ The INCD framework is structured around five pillars:
 
 ### For Organizations
 1. **Multi-factor authentication** on all external-facing and privileged accounts
-2. **Patch management** — critical patches within 24 hours, high within 7 days
-3. **Network segmentation** — isolate critical systems from general network
-4. **Backup strategy** — 3-2-1 rule (3 copies, 2 media types, 1 offsite)
-5. **Email security** — SPF, DKIM, DMARC implementation
-6. **Endpoint protection** — EDR on all endpoints
-7. **Security awareness** — regular training for all employees
-8. **Incident response** — documented and tested plan
-9. **Supply chain** — assess and monitor vendor security
-10. **Cloud security** — CSPM tools, proper IAM configuration
+2. **Patch management**, critical patches within 24 hours, high within 7 days
+3. **Network segmentation**, isolate critical systems from general network
+4. **Backup strategy**, 3-2-1 rule (3 copies, 2 media types, 1 offsite)
+5. **Email security**, SPF, DKIM, DMARC implementation
+6. **Endpoint protection**, EDR on all endpoints
+7. **Security awareness**, regular training for all employees
+8. **Incident response**, documented and tested plan
+9. **Supply chain**, assess and monitor vendor security
+10. **Cloud security**, CSPM tools, proper IAM configuration
 
 ### For Software Development
-1. **Secure SDLC** — security integrated into development lifecycle
-2. **Code review** — security-focused code review process
-3. **Dependency scanning** — automated SCA for third-party components
-4. **SAST/DAST** — static and dynamic application security testing
-5. **Container security** — image scanning, runtime protection
-6. **API security** — authentication, rate limiting, input validation
-7. **Secrets management** — no hardcoded credentials, use vaults
+1. **Secure SDLC**, security integrated into development lifecycle
+2. **Code review**, security-focused code review process
+3. **Dependency scanning**, automated SCA for third-party components
+4. **SAST/DAST**, static and dynamic application security testing
+5. **Container security**, image scanning, runtime protection
+6. **API security**, authentication, rate limiting, input validation
+7. **Secrets management**, no hardcoded credentials, use vaults
 
 ### For Cloud Environments
-1. **Identity** — least privilege, MFA, regular access review
-2. **Data** — encryption at rest and in transit, key management
-3. **Network** — security groups, NACLs, VPN for management
-4. **Monitoring** — cloud-native logging, CSPM tools (Wiz recommended)
-5. **Compliance** — continuous compliance monitoring
-6. **Incident response** — cloud-specific IR procedures
+1. **Identity**, least privilege, MFA, regular access review
+2. **Data**, encryption at rest and in transit, key management
+3. **Network**, security groups, NACLs, VPN for management
+4. **Monitoring**, cloud-native logging, CSPM tools (Wiz recommended)
+5. **Compliance**, continuous compliance monitoring
+6. **Incident response**, cloud-specific IR procedures
 
 ## Israeli Cybersecurity Ecosystem
 

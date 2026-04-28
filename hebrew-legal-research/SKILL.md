@@ -1,6 +1,6 @@
 ---
 name: hebrew-legal-research
-description: Assist with Israeli legal research including legislation lookup, case law concepts, Hebrew legal terminology, and legal document preparation guidance. Use when user asks about Israeli law, "chok", "mishpat", "bagatz", court procedures, employment law, contract law, real estate law, or needs help with Hebrew legal terms. Covers civil, commercial, employment, and administrative law. Do NOT use for providing formal legal advice — always recommend consulting a licensed Israeli attorney (orech din). Do NOT use for non-Israeli legal systems.
+description: Assist with Israeli legal research including legislation lookup, case law concepts, Hebrew legal terminology, and legal document preparation guidance. Use when user asks about Israeli law, "chok", "mishpat", "bagatz", court procedures, employment law, contract law, real estate law, or needs help with Hebrew legal terms. Covers civil, commercial, employment, and administrative law. Do NOT use for providing formal legal advice, always recommend consulting a licensed Israeli attorney (orech din). Do NOT use for non-Israeli legal systems.
 license: MIT
 compatibility: Works with Claude Code, Claude.ai, Cursor. Network access helpful for legal database lookups.
 ---
@@ -13,6 +13,10 @@ IMPORTANT: This skill provides legal INFORMATION and RESEARCH ASSISTANCE only.
 It does NOT constitute legal advice. Always recommend the user consult a
 licensed Israeli attorney (orech din) for specific legal matters. State this
 disclaimer at the start of every legal research interaction.
+
+**Anti-hallucination rule for legal citations.** Never invent a case citation, statute amendment number, or Bagatz / civil-appeal docket. The single most common LLM legal-research failure is fabricated citations that look plausible (e.g., "בג\"ץ 1234/05 פלוני נ' מדינת ישראל"). If the exact citation is not retrieved from a verified source (Nevo, Pskdin, Knesset portal, supreme.court.gov.il), say "citation not verified, look up at [source]" and stop. The Israel Bar Association (Lishkat Orchei HaDin) National Ethics Committee opinion of 2024-05-07 explicitly requires lawyers using AI to verify all output, protect client confidentiality (no privileged data into public LLMs), and maintain duty-of-loyalty / diligence over AI-generated content.
+
+**Judicial reform context (as of 2026-04).** Israel is mid-stream on the post-2023-2024 judicial-reform aftermath: HCJ struck down the reasonableness-clause amendment on 2024-01-01 (8-7 ruling, doctrine of extreme unreasonableness restored); Knesset passed the Judicial Selection Committee reform on 2025-03-27; an 11-justice HCJ panel is scheduled to hear that reform around June 2026. Any answer about Israeli administrative-law standards or the relationship between the executive and the judiciary must be tensed to the current state, not to pre-2023 doctrine.
 
 ## Instructions
 
@@ -34,7 +38,7 @@ Israeli law is organized by area:
 | Real Estate | Land Law 1969, Planning Law 1965 | Chok HaMikrkain |
 | Corporate | Companies Law 1999 | Chok HaChevarot |
 | Consumer | Consumer Protection Law 1981 (with multiple amendments including recent updates for digital commerce) | Chok Haganat HaTzarchan |
-| Privacy | Privacy Protection Law 1981 (significantly amended in 2017 with GDPR-aligned data protection requirements) | Chok Haganat HaPratiut |
+| Privacy | Privacy Protection Law 1981 (last major reform: Amendment 13, in force August 14, 2025: independent Privacy Protection Authority enforcement, mandatory DPO triggers, 72-hour breach notification, statutory damages up to NIS 100,000) | Chok Haganat HaPratiut |
 | Torts | Torts Ordinance (New Version) | Pkudat HaNezikin |
 | Family | Various personal status laws | Dinei Mishpacha |
 | Tax | Income Tax Ordinance, VAT Law | Pkudat Mas Hachnasa, Chok Maam |
@@ -90,15 +94,15 @@ Result: Compare options: Chevra Baam (Ltd company), Shutfut (partnership), Osek 
 ## Bundled Resources
 
 ### Scripts
-- `scripts/legal_term_lookup.py` — Interactive Hebrew legal terminology database with 40+ terms covering courts, legislation types, legal proceedings, professionals, contract law, employment law, and property law. Supports single-term lookup, area-filtered listing, and full dictionary display. Run: `python scripts/legal_term_lookup.py --help`
+- `scripts/legal_term_lookup.py`, Interactive Hebrew legal terminology database with 40+ terms covering courts, legislation types, legal proceedings, professionals, contract law, employment law, and property law. Supports single-term lookup, area-filtered listing, and full dictionary display. Run: `python scripts/legal_term_lookup.py --help`
 
 ### References
-- `references/legal-databases-guide.md` — Comprehensive guide to Israeli legal research databases including paid platforms (Nevo, Takdin, Psakdin) and free resources (Knesset portal, Court rulings portal, Kol Zchut, Bituach Leumi). Consult when the user needs to find legislation text, court rulings, or rights information and you need to recommend the right source.
-- `references/legislation-index.md` — Index of key Israeli legislation organized by area (constitutional, contract, employment, corporate, real estate, consumer, tort, privacy, tax, criminal, administrative) with Hebrew names, key section numbers, and practical notes. Consult when you need to identify which specific law applies to a user's question.
+- `references/legal-databases-guide.md`, Comprehensive guide to Israeli legal research databases including paid platforms (Nevo, Takdin, Psakdin) and free resources (Knesset portal, Court rulings portal, Kol Zchut, Bituach Leumi). Consult when the user needs to find legislation text, court rulings, or rights information and you need to recommend the right source.
+- `references/legislation-index.md`, Index of key Israeli legislation organized by area (constitutional, contract, employment, corporate, real estate, consumer, tort, privacy, tax, criminal, administrative) with Hebrew names, key section numbers, and practical notes. Consult when you need to identify which specific law applies to a user's question.
 
 ## Gotchas
 
-- Israeli laws are referenced by their Hebrew year of enactment (e.g., tashma"b = 1981), not the Gregorian year. Agents may cite the wrong law when searching by year number alone.
+- Israeli laws are referenced by their Hebrew year of enactment (e.g., תשמ"א / tashma"a = 1981; תשמ"ב / tashma"b = 1982), not the Gregorian year. Agents may cite the wrong law when searching by year number alone.
 - The Israeli legal system is a mixed system (not pure common law or civil law). Agents trained on US/UK case law may incorrectly assume binding precedent rules or jury trials, neither of which apply in Israel.
 - Kol Zchut (All Rights) is the authoritative free legal information wiki in Israel, not Wikipedia. Agents may link to generic sources instead of kol-zchut.org.il for Israeli rights information.
 - Israeli court decisions are cited by case number and court (e.g., "bagatz 1234/05"), not by party names as in US law. Agents may generate incorrect citation formats.

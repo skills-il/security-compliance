@@ -6,7 +6,7 @@ description: >-
   Use when user asks about Israeli law, "chok", "mishpat", "bagatz", court
   procedures, employment law, contract law, real estate law, or needs help with
   Hebrew legal terms. Covers civil, commercial, employment, and administrative
-  law. Do NOT use for providing formal legal advice — always recommend
+  law. Do NOT use for providing formal legal advice, always recommend
   consulting a licensed Israeli attorney (orech din). Do NOT use for non-Israeli
   legal systems.
 license: MIT
@@ -44,7 +44,7 @@ metadata:
       "bagatz", court procedures, employment law, contract law, real estate law,
       or needs help with Hebrew legal terms. Covers civil, commercial,
       employment, and administrative law. Do NOT use for providing formal legal
-      advice — always recommend consulting a licensed Israeli attorney (orech
+      advice, always recommend consulting a licensed Israeli attorney (orech
       din). Do NOT use for non-Israeli legal systems.
   supported_agents:
     - claude-code
@@ -140,11 +140,11 @@ metadata:
 ## משאבים מצורפים
 
 ### סקריפטים
-- `scripts/legal_term_lookup.py` — מאגר מונחים משפטיים אינטראקטיבי בעברית עם יותר מ-40 מונחים מתחומי בתי משפט, סוגי חקיקה, הליכים משפטיים, אנשי מקצוע, דיני חוזים, דיני עבודה ודיני קניין. תומך בחיפוש מונח בודד, סינון לפי תחום והצגת המילון המלא. להרצה: `python scripts/legal_term_lookup.py --help`
+- `scripts/legal_term_lookup.py`, מאגר מונחים משפטיים אינטראקטיבי בעברית עם יותר מ-40 מונחים מתחומי בתי משפט, סוגי חקיקה, הליכים משפטיים, אנשי מקצוע, דיני חוזים, דיני עבודה ודיני קניין. תומך בחיפוש מונח בודד, סינון לפי תחום והצגת המילון המלא. להרצה: `python scripts/legal_term_lookup.py --help`
 
 ### חומרי עיון
-- `references/legal-databases-guide.md` — מדריך מקיף למאגרי מחקר משפטי ישראליים, כולל פלטפורמות בתשלום (נבו, תקדין, פסקדין) ומשאבים חינמיים (פורטל הכנסת, פורטל פסקי דין, כל זכות, ביטוח לאומי). תסתכלו על זה כשהמשתמש צריך למצוא נוסח חקיקה, פסקי דין או מידע על זכויות, ואתם צריכים להפנות למקור הנכון.
-- `references/legislation-index.md` — אינדקס חקיקה ישראלית מרכזית מאורגן לפי תחומים (חוקתי, חוזים, עבודה, תאגידים, מקרקעין, צרכנות, נזיקין, פרטיות, מיסים, פלילי, מנהלי) עם שמות בעברית, מספרי סעיפים מרכזיים והערות מעשיות. תסתכלו על זה כשצריך לזהות איזה חוק ספציפי חל על השאלה.
+- `references/legal-databases-guide.md`, מדריך מקיף למאגרי מחקר משפטי ישראליים, כולל פלטפורמות בתשלום (נבו, תקדין, פסקדין) ומשאבים חינמיים (פורטל הכנסת, פורטל פסקי דין, כל זכות, ביטוח לאומי). תסתכלו על זה כשהמשתמש צריך למצוא נוסח חקיקה, פסקי דין או מידע על זכויות, ואתם צריכים להפנות למקור הנכון.
+- `references/legislation-index.md`, אינדקס חקיקה ישראלית מרכזית מאורגן לפי תחומים (חוקתי, חוזים, עבודה, תאגידים, מקרקעין, צרכנות, נזיקין, פרטיות, מיסים, פלילי, מנהלי) עם שמות בעברית, מספרי סעיפים מרכזיים והערות מעשיות. תסתכלו על זה כשצריך לזהות איזה חוק ספציפי חל על השאלה.
 
 ## מלכודות נפוצות
 

@@ -57,12 +57,20 @@ SHELTER_TIMES = {
     "akko": 60, "עכו": 60,
     "acre": 60,
     "nahariya": 60, "נהריה": 60,
-    # Upper Galilee / Golan - up to 180 seconds
-    "kiryat shmona": 60, "קריית שמונה": 60,
-    "metula": 60, "מטולה": 60,
-    "safed": 60, "צפת": 60,
-    "tiberias": 90, "טבריה": 90,
+    # Lebanon border ("kav ha-imut") - 0 seconds (immediate, post-Iron-Swords doctrine)
+    # Source: oref.org.il updated 2025-2026
+    "kiryat shmona": 0, "קריית שמונה": 0,
+    "metula": 0, "מטולה": 0,
+    "manara": 0, "מנרה": 0,
+    "yiftach": 0, "יפתח": 0,
+    # Upper Galilee / Golan - 30 seconds
+    "safed": 30, "צפת": 30,
+    "carmiel": 30, "כרמיאל": 30,
+    "katzrin": 30, "קצרין": 30,
+    "tiberias": 60, "טבריה": 60,
 }
+
+# Data refresh date: 2026-04. Authoritative source: https://www.oref.org.il
 
 
 def get_shelter_time(city: str) -> dict:

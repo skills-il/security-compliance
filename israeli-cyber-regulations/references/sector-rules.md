@@ -2,10 +2,10 @@
 
 ## Financial Services
 
-### Bank of Israel Directive 361 — Cyber Risk Management
+### Bank of Israel Directive 361, Cyber Risk Management
 **Applies to:** Banks, insurance companies, credit card companies, and other BOI-regulated entities.
 
-**Full title:** Proper Conduct of Banking Business Directive 361 — Cyber Defense Management
+**Full title:** Proper Conduct of Banking Business Directive 361, Cyber Defense Management
 
 **Core requirements:**
 
@@ -51,7 +51,7 @@
 - Recovery Time Objective (RTO) aligned with business criticality
 - Backup integrity verification procedures
 
-### Bank of Israel Directive 357 — Payment Services Security
+### Bank of Israel Directive 357, Payment Services Security
 **Applies to:** Payment service providers, payment initiation services, fintech companies with BOI licenses.
 
 **Key control areas:**

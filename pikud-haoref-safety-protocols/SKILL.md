@@ -37,9 +37,10 @@ Step-by-step safety instructions for every type of Home Front Command alert in I
 - If you cannot safely exit (highway, tunnel), bend below the window line
 
 **Stay in shelter:**
-- Remain for **10 minutes** after the last sound of explosion or impact
-- Wait for the official "all clear" announcement (category 13 alert or radio broadcast)
-- Do not exit based on silence alone. Debris and secondary explosions can occur
+- For **short-range fire (Gaza envelope, Lebanon border historical posture)**: remain at minimum 10 minutes after the last sound of explosion or impact
+- For **ballistic / Iran / Houthi / long-range threats**: do NOT exit on a 10-minute timer. Wait for an explicit Cell Broadcast or HFC app release message; the 10-minute folklore was kept on the in-app screen by mistake during the Iran missile war and is dangerous as a default in that scenario
+- Wait for the official release message (category 13 alert, Cell Broadcast lock-screen polygon, HFC app, radio broadcast)
+- Do not exit based on silence alone. Debris from interceptors can fall minutes after the boom you hear, and secondary impacts can occur
 
 ### Category 2: Hostile Aircraft Intrusion (חדירת כלי טיס עוין)
 
@@ -172,7 +173,7 @@ This is the official all-clear signal from the Home Front Command. When you rece
 - Check your surroundings for damage before moving freely
 
 **If you do NOT receive a category 13:**
-- Stay in the shelter for at least 10 minutes after the last impact/explosion
+- For short-range fire: stay in the shelter for at least 10 minutes after the last impact/explosion. For ballistic / Iran / Houthi / long-range threats: stay until you receive an explicit Cell Broadcast / HFC app release message; do NOT exit on a 10-minute timer alone
 - Monitor the Home Front Command app or radio for updates
 - Call 104 (English) or 1207 (Hebrew) if unsure
 
@@ -221,7 +222,7 @@ A heads-up that alerts are expected in your area in the coming minutes. This giv
 
 1. **Earthquake vs missile protocol confusion**: The earthquake protocol (Drop-Cover-Hold) is the OPPOSITE of the missile protocol (run to mamad). An AI agent must correctly identify the alert type before giving instructions. Telling someone to enter a mamad during an earthquake is dangerous because structural shifts can trap them behind the blast door.
 
-2. **"10 minutes" is a minimum, not a guarantee**: The 10-minute shelter time after the last impact is a minimum guideline. During prolonged barrages, the actual shelter time can be hours. Agents should never say "you can leave after 10 minutes" without checking for a category 13 all-clear.
+2. **"10 minutes" applies only to short-range fire and is NOT a release signal in the Iran/Houthi scenario.** The 10-minute shelter time after the last impact is the historical minimum for Gaza/Lebanon short-range posture. For ballistic / Iran / Houthi / long-range threats it does NOT apply: residents must remain in the protected space until an explicit Cell Broadcast or HFC app release arrives. The Mako N12 / Ynet "Digital" coverage in 2026 Q1 confirmed the 10-minute screen text in the HFC app was carried over by mistake from the short-range posture and that the actual rule for ballistic scenarios is "stay until explicit release". Agents must NEVER tell a user "you can leave after 10 minutes" without verifying threat type and release channel.
 
 3. **Chemical alerts go UP, not down**: For hazardous materials (category 6), the safe direction is UP (higher floors). Many chemicals are heavier than air. This is opposite to the instinct to seek underground shelters. An agent recommending a miklat (underground shelter) during a chemical event could put users in greater danger.
 
@@ -254,6 +255,6 @@ See the `references/` directory for:
 | App alert but no siren | Still take shelter. Sirens may not be audible indoors or in noisy areas |
 | Don't know which alert type | Enter shelter and check the Home Front Command app for details. Default to missile protocol |
 | Power is out | Use battery radio (Galei Zahal 102.3 FM) for updates. The siren system is independent of power |
-| No internet connection | The siren system works without internet. If you have a radio, use it. Otherwise stay in shelter 10 min after last impact |
+| No internet connection | The siren system and Cell Broadcast lock-screen alerts work without internet. If you have a radio (Galei Zahal 102.3 FM), use it. For short-range fire the 10-minute-after-last-impact minimum applies; for ballistic / long-range threats stay put until an explicit Cell Broadcast or HFC app release arrives |
 | Multiple alert types simultaneously | Follow the most restrictive protocol. Missile + chemical = shelter + seal room |
 | Alert during Shabbat (no phone) | Sirens are audible. Follow the protocol for your location. Pikuach nefesh (saving life) overrides Shabbat observance |

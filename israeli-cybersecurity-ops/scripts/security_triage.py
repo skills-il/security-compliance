@@ -117,7 +117,7 @@ def incd_reporting_check(classification: str, is_critical_infra: bool,
     if has_data_breach:
         report["privacy_authority_notification"] = True
         report["notes"].append(
-            "Data breach: notify Privacy Protection Authority 'without delay'"
+            "Data breach: notify Privacy Protection Authority within 72 hours of discovery (Amendment 13, in force 2025-08-14)"
         )
         report["notes"].append(
             "If significant harm possible: notify affected individuals"
@@ -134,7 +134,7 @@ def incd_reporting_check(classification: str, is_critical_infra: bool,
 def run_interactive_triage() -> dict:
     """Run an interactive triage session."""
     print("=" * 60)
-    print("Security Alert Triage — Israeli Cybersecurity Ops")
+    print("Security Alert Triage, Israeli Cybersecurity Ops")
     print("=" * 60)
     print()
 
@@ -275,7 +275,7 @@ def severity_calculator(cvss=None, asset=None, data=None, blast=None):
 
     result = calculate_severity(cvss, asset, data, blast)
     print(f"\nCVSS: {cvss}, Asset: {asset}, Data: {data}, Blast: {blast}")
-    print(f"Score: {result['composite_score']} — {result['classification']}")
+    print(f"Score: {result['composite_score']}, {result['classification']}")
     print(f"Action: {result['recommended_action']}")
     return result
 
@@ -326,7 +326,7 @@ def run_from_json(json_input: str) -> dict:
     }
 
     print(f"Alert: {alert_id} ({alert_type})")
-    print(f"Score: {severity['composite_score']}/10.0 — {severity['classification']}")
+    print(f"Score: {severity['composite_score']}/10.0, {severity['classification']}")
     print(f"Action: {severity['recommended_action']}")
     if reporting["incd_reporting_required"]:
         print(f"INCD Reporting: REQUIRED ({reporting['reporting_deadline']})")
@@ -356,7 +356,7 @@ def run_example() -> dict:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Security Alert Triage Tool — Israeli Cybersecurity Ops"
+        description="Security Alert Triage Tool, Israeli Cybersecurity Ops"
     )
     parser.add_argument("--output", "-o", help="Output JSON report file path")
     parser.add_argument("--severity-calc", action="store_true",

@@ -1,6 +1,6 @@
 {
   "author": "skills-il",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "category": "security-compliance",
   "tags": {
     "he": [
@@ -26,7 +26,7 @@
   },
   "display_description": {
     "he": "חיפוש בחקיקה ופסיקה ישראלית, ניתוח חוקים ותקנות",
-    "en": "Assist with Israeli legal research including legislation lookup, case law concepts, Hebrew legal terminology, and legal document preparation guidance. Use when user asks about Israeli law, \"chok\", \"mishpat\", \"bagatz\", court procedures, employment law, contract law, real estate law, or needs help with Hebrew legal terms. Covers civil, commercial, employment, and administrative law. Do NOT use for providing formal legal advice — always recommend consulting a licensed Israeli attorney (orech din). Do NOT use for non-Israeli legal systems."
+    "en": "Assist with Israeli legal research including legislation lookup, case law concepts, Hebrew legal terminology, and legal document preparation guidance. Use when user asks about Israeli law, \"chok\", \"mishpat\", \"bagatz\", court procedures, employment law, contract law, real estate law, or needs help with Hebrew legal terms. Covers civil, commercial, employment, and administrative law. Do NOT use for providing formal legal advice, always recommend consulting a licensed Israeli attorney (orech din). Do NOT use for non-Israeli legal systems."
   },
   "supported_agents": [
     "claude-code",

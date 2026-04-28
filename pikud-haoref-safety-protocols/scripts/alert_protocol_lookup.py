@@ -18,10 +18,10 @@ PROTOCOLS = {
         "name_en": "Missiles / Rockets",
         "name_he": "ירי רקטות וטילים",
         "action": "Enter shelter immediately. Close blast door and window shutter. Sit below window line against inner wall. Cover head.",
-        "shelter_time": "10 minutes after last impact, or until category 13 all-clear",
+        "shelter_time": "Short-range fire (Gaza/Lebanon historical): 10 min after last impact OR until cat 13 all-clear. Ballistic/Iran/Houthi: stay until explicit Cell Broadcast / HFC app release; do NOT exit on a 10-min timer in ballistic scenarios.",
         "outdoor": "Lie face down, cover head, away from buildings and vehicles",
         "vehicle": "Pull over, exit, move 10m away, lie face down. If can't exit: bend below windows",
-        "critical": "Do NOT assume silence means all-clear. Wait for cat 13 or 10 min minimum."
+        "critical": "Do NOT assume silence means all-clear. For ballistic/Iran/Houthi threats stay put until explicit release; the 10-min rule applies only to short-range fire."
     },
     2: {
         "name_en": "Hostile Aircraft Intrusion",

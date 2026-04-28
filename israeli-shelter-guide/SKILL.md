@@ -28,7 +28,8 @@ Israel has four types of protected spaces, each designated by a Hebrew acronym:
 
 - **Minimum size**: 9 square meters (96 sq ft)
 - **Expanded option** (2025 law): Up to 12 sq m + 3 sq m bathroom = 15 sq m total
-- **Walls**: Reinforced concrete, minimum 20 cm thick (thicker in frontline communities)
+- **Walls**: Reinforced concrete, 25-30 cm thick per current IS 4422 (thicker in frontline communities)
+- **Ceiling**: 2.5 m clearance, no structural columns through the protected space
 - **Door**: Steel blast door rated for the region's threat level
 - **Window**: Steel-frame window with blast shutter, must be closable from inside
 - **Ventilation**: NBC (Nuclear, Biological, Chemical) filtration system connection point
@@ -40,16 +41,22 @@ When a siren sounds, you have a limited number of seconds to reach a protected s
 
 | Region | Time to Shelter | Example Cities |
 |--------|----------------|----------------|
-| Gaza envelope | 0-15 seconds | Nir Am, Be'eri, Kissufim |
+| Lebanon border ("kav ha-imut") | 0 seconds (immediate) | Kiryat Shmona, Metula, Manara, Yiftach |
+| Upper Galilee / Golan | 30 seconds | Safed, Carmiel, Akko, Katzrin |
+| Gaza envelope | 0-15 seconds | Nir Am, Be'eri, Kissufim, Sderot |
 | Western Negev | 15-30 seconds | Sderot, Netivot |
 | Southern coast | 30 seconds | Ashkelon |
 | Central Negev | 45 seconds | Ofakim, Kiryat Gat |
 | Southern cities | 60 seconds | Ashdod, Be'er Sheva |
 | Central Israel | 90 seconds | Tel Aviv, Jerusalem, Netanya |
 | Haifa area | 60-90 seconds | Haifa, Krayot |
-| Upper Galilee / Golan | Up to 180 seconds | Kiryat Shmona, Metula |
+| Houthi / long-range threats | country-wide siren, 3-12 minutes warning | All districts (varies by intercept point) |
+
+**Doctrine update note (post-Iron Swords):** the "Up to 180 seconds" figure for Kiryat Shmona / Metula in pre-2024 references is no longer accurate. Northern border communities adjacent to the Lebanon line now have effectively zero warning time and Pikud HaOref guidance is to remain inside the protected space whenever feasible during active rounds.
 
 **How to check your zone**: Visit the Home Front Command website (oref.org.il) and enter your location name in Hebrew or English, or use the Home Front Command app.
+
+**After-siren rule:** for short-range fire (Gaza/Lebanon historical posture), HFC guidance is to stay in the protected space for 10 minutes after the last impact. For ballistic / Iran / Houthi scenarios this 10-minute rule does NOT apply, exit only after an explicit Cell Broadcast or app release message arrives. When in doubt, stay put.
 
 ## How to Find a Shelter
 

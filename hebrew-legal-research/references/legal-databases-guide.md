@@ -70,7 +70,7 @@ Israeli legal research, including both paid and free options.
   - Check Reshumot (official gazette) for publication dates
   - Committee protocols provide legislative intent context
 
-### Court Rulings Portal (elyon1.court.gov.il)
+### Court Rulings Portal (supreme.court.gov.il)
 - **Publisher:** Israeli Courts Administration
 - **Coverage:** Selected court rulings
 - **Strengths:**
@@ -81,7 +81,11 @@ Israeli legal research, including both paid and free options.
   - Not all rulings are published
   - Search is limited compared to commercial databases
   - Historical coverage is incomplete
-- **URL:** https://www.court.gov.il
+  - The site enforces an aggressive WAF that blocks foreign IPs and many user agents; access from an Israeli network or via a real browser session is most reliable
+- **URLs:**
+  - Supreme Court portal: https://supreme.court.gov.il/sites/he/Pages/home.aspx
+  - Judicial Authority landing: https://www.gov.il/he/departments/the_judicial_authority/govil-landing-page
+  - Court fees reference: https://www.gov.il/he/pages/fees_16
 - **Tips:**
   - Supreme Court (Bagatz and civil/criminal appeals) best covered
   - Use case number format: XX/XXXXX (year/number)

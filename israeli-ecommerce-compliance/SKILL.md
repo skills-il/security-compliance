@@ -1,6 +1,6 @@
 ---
 name: israeli-ecommerce-compliance
-description: Audit and ensure Israeli e-commerce legal compliance — Consumer Protection Law, return policies, price display, accessibility, and cookie consent. Use when user asks about "online store compliance Israel", "Chok Hagnat HaTzarchan", "consumer protection Israel", "return policy Israel", "IS 5568 ecommerce", "cookie consent Israel", or "חוק הגנת הצרכן". Covers cooling-off period validation, price display requirements, Hebrew terms of service generation, accessibility compliance (IS 5568), and business disclosure verification. Do NOT use for food-specific compliance (use israeli-food-business-compliance) or privacy/GDPR (use israeli-privacy-shield).
+description: Audit and ensure Israeli e-commerce legal compliance, covering Consumer Protection Law, return policies, price display, accessibility, and cookie consent. Use when user asks about "online store compliance Israel", "Chok Hagnat HaTzarchan", "consumer protection Israel", "return policy Israel", "IS 5568 ecommerce", "cookie consent Israel", or "חוק הגנת הצרכן". Covers cooling-off period validation, price display requirements, Hebrew terms of service generation, accessibility compliance (IS 5568), and business disclosure verification. Do NOT use for food-specific compliance (use israeli-food-business-compliance) or privacy/GDPR (use israeli-privacy-shield).
 license: MIT
 allowed-tools: Bash(python:*) WebFetch
 compatibility: Works with Claude Code, OpenClaw, Cursor. OpenClaw recommended for automated website scanning and periodic compliance checks.
@@ -14,8 +14,8 @@ compatibility: Works with Claude Code, OpenClaw, Cursor. OpenClaw recommended fo
 
 ### Step 1: Scan for Consumer Protection Law Compliance (Chok Hagnat HaTzarchan)
 Verify 14-day cooling-off period for distance selling (mecher merachok):
-- Right to cancel within 14 days of receiving product
-- Extended to 4 months for people with disabilities, seniors (65+), and new immigrants (<5 years)
+- Right to cancel within 14 days of receiving the product, OR 14 days from receipt of the disclosure document, whichever is later
+- Extended to 4 months for people with disabilities, seniors (65+), and new immigrants (under 5 years in Israel), but ONLY when there was a prior conversation between the business and the consumer (phone call, chat, or other electronic communication) before the transaction (per Tikun 47, 2016, codified in Sec. 14ג1). Pure web-store purchases with no conversation get only the standard 14-day window for these groups.
 - Cancellation fee: up to 5% of transaction or 100 NIS, whichever is lower
 - Return shipping: at buyer's expense unless item is defective
 
@@ -27,12 +27,13 @@ Check for required pre-purchase disclosures:
 - Seller's full details (see Step 5)
 
 ### Step 2: Validate Price Display Requirements
-- All prices MUST include VAT (18%) — Israeli law requires consumer-facing prices to be inclusive
+- All prices MUST include VAT (18%), Israeli law requires consumer-facing prices to be inclusive
 - Delivery/shipping costs must be clearly stated before checkout
 - Total order cost (including all fees) must be shown before payment confirmation
 - Currency must be NIS (display as ₪ or ש"ח)
-- Discounted items: both original and sale price must be shown
+- Discounted items ("מבצע"): the regular price must have been actually in effect for at least 21 days before the sale, the sale period itself is capped at 35 days, and BOTH the regular price and the sale price must be shown together (not "מחיר מומלץ" / list price as the comparison). Per Consumer Protection (Various Rules for Advertising Asset and Service Prices) Regulations, 1991.
 - "From" pricing (e.g., "from 99 NIS") only allowed when the base price actually exists
+- VAT-exempt threshold for personal imports volatile in 2025-2026: was raised to USD 150 in Dec 2025 then reverted to USD 75 by the Knesset on Feb 24, 2026. Verify current figure at gov.il / Israel Tax Authority before claiming a threshold.
 
 **Card payment compliance (PCI DSS 4.0).** PCI DSS 4.0 became the mandatory standard on April 1, 2025, fully replacing PCI DSS 3.2.1. Any store that processes, stores, or transmits card data must comply with the 4.0 requirements, which add stricter authentication, continuous monitoring, and customized approach options. Most Israeli stores rely on a tokenized payment gateway (Tranzila, Cardcom, iCredit, Stripe, etc.) to offload PCI scope, which is strongly recommended for merchants under SAQ A/SAQ A-EP eligibility.
 
@@ -85,15 +86,17 @@ Must also appear on every invoice/receipt.
 Starting January 2025, electronic invoices for B2B transactions above NIS 20,000 must include an allocation number (mispar haktza'a) from the Tax Authority. The threshold drops to NIS 10,000 in January 2026, and NIS 5,000 in June 2026. Ensure your invoicing system supports Israel Tax Authority API integration for allocation number requests.
 
 ### Step 6: Validate Cookie Consent and Privacy Compliance
-The Privacy Protection Authority (PPA) strongly recommends opt-in consent for non-essential cookies. While Section 30A of the Communications Law covers unsolicited advertising, Israel does not yet have a cookie-specific statute like the EU ePrivacy Directive. Best practice is to implement opt-in consent:
-- Cookie consent banner for non-essential cookies
+Following Privacy Protection Law Amendment 13 (in force August 14, 2025) and the 2025 PPA Guidelines on Informed Consent, opt-in consent for non-essential cookies is treated as a binding obligation, not a recommendation. The Hanover Administrative Court (2025) further ruled that a clearly visible "Reject All" button is mandatory whenever "Accept All" is offered.
+- Cookie consent banner for non-essential cookies, with equally prominent "Accept All" and "Reject All" buttons
 - Clear description of cookie types and purposes
-- Opt-in for marketing/analytics cookies (not opt-out)
-- Easy way to withdraw consent
+- Opt-in for marketing/analytics cookies (not opt-out, not pre-checked)
+- Easy way to withdraw consent (linked from every page)
 - Privacy policy linking to cookie details
 
 Essential cookies (login, shopping cart) don't require consent.
-Analytics and marketing cookies should use explicit opt-in as recommended best practice.
+Analytics and marketing cookies require explicit opt-in.
+
+**Section 30A (Anti-Spam Law).** Section 30A of the Communications Law requires explicit prior opt-in for any SMS, email, fax, or robocall advertisement sent to consumers. Statutory damages up to NIS 1,000 per message, no proof of harm required. Email-capture forms, SMS marketing, and post-checkout marketing emails must be wired to opt-in checkboxes that are NOT pre-checked.
 
 **Amendment 13 to the Privacy Protection Law (effective August 2025):**
 This amendment significantly expands privacy obligations for online businesses:
@@ -120,7 +123,7 @@ Result: Compliance report: 4/6 sections pass. Issues found: return policy doesn'
 ### Example 2: Generating Compliant Return Policy
 User says: "I need a return policy for my electronics store that's legal in Israel"
 Actions:
-1. Determine product categories (electronics — standard 14-day applies)
+1. Determine product categories (electronics, standard 14-day applies)
 2. Draft Hebrew return policy per Consumer Protection Law
 3. Include all mandatory clauses: 14-day cooling-off, extended periods, exceptions
 4. Include cancellation fee disclosure (up to 5% or 100 NIS)
@@ -140,7 +143,7 @@ Result: Accessibility report: 15 issues found (8 critical, 7 moderate). Critical
 ## Bundled Resources
 
 ### References
-- `references/consumer-protection-law.md` — Summary of Israeli Consumer Protection Law requirements for e-commerce: distance selling rules, cooling-off periods (standard and extended), cancellation fees, price display requirements, required disclosures, and exceptions. Consult when auditing compliance in Steps 1-2 or generating legal documents in Step 3.
+- `references/consumer-protection-law.md`, Summary of Israeli Consumer Protection Law requirements for e-commerce: distance selling rules, cooling-off periods (standard and extended), cancellation fees, price display requirements, required disclosures, and exceptions. Consult when auditing compliance in Steps 1-2 or generating legal documents in Step 3.
 
 ## Gotchas
 
@@ -160,7 +163,7 @@ Solution: Implement opt-in consent per PPA recommendations. Although Israel lack
 
 ### Error: "Accessibility scan incomplete"
 Cause: Dynamic content loaded via JavaScript may not be captured by automated scanning.
-Solution: Ensure scan waits for full page load including lazy-loaded content. Run additional manual checks for JavaScript-heavy pages. Focus on checkout flow and forms — these are highest-priority accessibility targets.
+Solution: Ensure scan waits for full page load including lazy-loaded content. Run additional manual checks for JavaScript-heavy pages. Focus on checkout flow and forms, these are highest-priority accessibility targets.
 
 ### Error: "Price display violation"
 Cause: Prices shown without VAT or delivery costs hidden until checkout.

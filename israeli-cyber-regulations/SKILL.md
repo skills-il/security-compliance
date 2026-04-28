@@ -21,8 +21,11 @@ Determine which Israeli cybersecurity regulations apply to the user's organizati
 | Framework | Applies To | Regulator | Key Focus |
 |-----------|-----------|-----------|-----------|
 | INCD National Directives | All organizations, mandatory for critical infrastructure | Ma'arach HaSyber (INCD) | Risk management, incident reporting, baseline controls |
-| BOI Directive 361 | Banks, insurance, credit card companies | Bank of Israel (BOI) | Cyber risk governance, SOC, penetration testing |
-| BOI Directive 357 | Payment service providers, fintech | Bank of Israel (BOI) | Payment security, transaction monitoring, fraud prevention |
+| BOI Directive 364 (2024-11) | Banks, insurance, credit card companies | Bank of Israel (BOI) | **Consolidates Directives 357, 361, 363**; primary current cyber framework. Stronger board accountability, supply-chain expectations |
+| BOI Directive 361 | Banks, insurance, credit card companies | Bank of Israel (BOI) | Cyber risk governance, SOC, penetration testing. Carried forward into 364 |
+| BOI Directive 357 | Payment service providers, fintech | Bank of Israel (BOI) | Payment security, transaction monitoring, fraud prevention. Carried forward into 364 |
+| BOI Directive 366 | Banks | Bank of Israel (BOI) | Reporting of Technological Failures and Cyber Incidents (the operational reporting hook) |
+| BOI Directive 362 | Banks (cloud) | Bank of Israel (BOI) | Cloud Computing approval process (the directive that defines the cloud-approval workflow referenced under 361 Third-Party Risk) |
 | ISA Cyber Requirements | TASE-listed companies | Israel Securities Authority (ISA/Rashut) | Disclosure, board oversight, cyber risk reporting |
 | MOH Health Cyber | Hospitals, HMOs, health-tech | Ministry of Health | Patient data protection, medical device security |
 | CDPA Telecom Rules | Telecom providers | Ministry of Communications | Network security, lawful intercept, data retention |
@@ -69,8 +72,11 @@ The Israel National Cyber Directorate (INCD) sets national cybersecurity policy.
 - [ ] Backup and recovery procedures validated
 - [ ] Third-party penetration test (for critical infrastructure)
 
-### Step 3: Bank of Israel Directive 361 — Cyber for Financial Institutions
-Directive 361 (Hora'a 361) governs cybersecurity for banking and financial institutions.
+### Step 3: Bank of Israel Cyber Directives (357 / 361 / 363, now consolidated under 364)
+
+> **Directive 364 (November 2024) consolidates and supersedes Directives 357, 361, and 363.** Directive 364, "Management of IT, Information Security, and Cyber Protection Risks," is the primary current cyber framework for banks. The legacy directives are still listed in the BOI Proper Conduct index for transitional purposes, but new control programs should map to 364, not to 361 alone. Reporting mechanics for technological failures and cyber incidents sit under **Directive 366**, and cloud-computing approval is governed by **Directive 362**. For consumer audiences (banks, insurance, credit card companies) the substantive control content from 361 carries forward into 364, with stronger board accountability and supply-chain expectations.
+
+Directive 361 (Hora'a 361) governs cybersecurity for banking and financial institutions and is the operative directive most agents reference; treat its controls as a baseline to map against 364.
 
 **Core requirements:**
 1. **Board-level cyber governance:** Board must approve cyber strategy and receive quarterly reports
@@ -91,7 +97,7 @@ Directive 361 (Hora'a 361) governs cybersecurity for banking and financial insti
 | Incident response | Reporting within 24h | IR plan, drill records |
 | Business continuity | DR site and testing | BCP document, DR drill results |
 
-### Step 4: BOI Directive 357 — Payment Security
+### Step 4: BOI Directive 357, Payment Security
 Directive 357 (Hora'a 357) covers security for payment services and fintech operations.
 
 **Key requirements:**
@@ -235,7 +241,9 @@ Result: Multi-framework compliance matrix with healthtech-specific controls and 
 - Bank of Israel Directive 361 requires cloud providers to receive explicit BOI approval before use. Agents may assume any SOC 2-certified cloud provider is automatically compliant for Israeli banks.
 - INCD (Ma'arach HaSyber) incident reporting timelines differ by sector: critical infrastructure must report within hours, while private sector reporting is voluntary. Agents may apply a single timeline across all sectors.
 - The Israeli Securities Authority (ISA/Rashut) uses a different materiality test for cyber incident disclosure than the US SEC. Agents may apply US materiality standards to TASE-listed companies.
-- Israel's DPO (Data Protection Officer) requirement was expanded in Amendment 13 (August 2025) to include public bodies and large-scale sensitive data processors. Agents with pre-2025 training data may not know about this requirement.
+- Israel's DPO (Data Protection Officer) requirement is in force since Amendment 13 (effective August 14, 2025) and covers public bodies and large-scale sensitive data processors. Agents with pre-2025 training data may not know about this requirement.
+- **Amendment 13 cross-reference for cyber teams.** While privacy compliance lives in `israeli-privacy-compliance`, cyber incident-response playbooks must align with Amendment 13's **72-hour PPA breach notification window** (plus notification to affected individuals where high risk) and stack against the BOI 24h sector timeline and ISA materiality test. The pre-2025 "without delay" framing is obsolete.
+- **National Cybersecurity Bill (draft, January 2026).** INCD published a draft "Cyber Defense Law" in January 2026 imposing approximately 63 binding controls on "essential organizations" and codifying CERT-IL / INCD authority. Not yet enacted (unlikely before 2027 post-elections), but track for applicability scoping. Agents should flag clients with critical-infrastructure exposure to expect future statutory expansion of current INCD methodology.
 - BOI Directive 357 requires fintech companies to submit a cybersecurity assessment before launch. Agents may not flag this pre-launch requirement when advising Israeli payment startups.
 
 

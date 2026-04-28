@@ -10,6 +10,8 @@ compatibility: No special requirements. Works with Claude Code, Cursor, Windsurf
 
 Security scanning and compliance guidance tailored for Israeli web applications. This skill covers the full spectrum of application security, from OWASP Top 10 verification to Israeli Privacy Protection Authority (PPA) compliance, with special attention to Hebrew/RTL-specific attack vectors.
 
+> **OWASP Top 10 version note (2025-2026).** The checklist below is keyed to OWASP Top 10 **2021**. OWASP Top 10 **2025** was published and re-shaped the categories: A01 now subsumes SSRF (no separate A10:SSRF entry), A03 is the new **Software Supply Chain Failures**, A05 is now Injection (down from A03), A09 was renamed **Security Logging and Alerting Failures**, and a new A10 covers **Mishandling of Exceptional Conditions**. When auditing in 2026, treat the 2021 numbering below as a working scaffold and cross-walk findings to the 2025 list at https://owasp.org/Top10/2025/ before reporting.
+
 ## OWASP Top 10 Checklist (Israeli Context)
 
 Work through each category systematically. For each finding, note the severity (Critical/High/Medium/Low) and provide a remediation recommendation.
@@ -95,7 +97,7 @@ Work through each category systematically. For each finding, note the severity (
 
 ## Israeli Privacy Protection Authority (PPA) Compliance
 
-Israel's Privacy Protection Law (1981) and its regulations impose specific requirements on applications handling personal data of Israeli residents.
+Israel's Privacy Protection Law (1981, last major reform Amendment 13 in force August 14, 2025) and its regulations impose specific requirements on applications handling personal data of Israeli residents. Amendment 13 introduced 72-hour breach notification to the PPA, mandatory DPO triggers, expanded definitions of "personal information" and "sensitive data", an additional notification tier for databases with sensitive data on >100,000 individuals, and statutory damages up to NIS 100,000 without proof of harm.
 
 ### Database Registration
 
@@ -173,6 +175,9 @@ pnpm audit --audit-level=high
 ```
 
 ### Container Scanning with Trivy
+
+> **Trivy v0.69.4 supply-chain compromise (early 2026).** The official Trivy GitHub Actions binary at v0.69.4 was compromised. Pin to v0.69.3 or upgrade to v0.70.x or later, and verify checksums. Avoid `aquasecurity/trivy-action@v0.69.4` in CI workflows.
+
 
 ```bash
 # Scan Docker image
@@ -512,7 +517,7 @@ Refer to the `references/` directory for detailed guidance on Israeli privacy la
 
 ## Gotchas
 
-- Israeli Privacy Protection Law (1981) has different breach notification rules than GDPR. There is no 72-hour deadline; the law says "without delay". Agents may incorrectly apply GDPR timelines to Israeli incidents.
+- Israeli Privacy Protection Law breach notification timing was overhauled by Amendment 13 (in force August 14, 2025). The current rule for serious incidents is **72 hours to notify the Privacy Protection Authority** plus notification to affected individuals where high risk; the pre-2025 "without delay" framing is obsolete. Statutory damages are now up to NIS 100,000 without proof of harm; databases with sensitive data on more than 100,000 individuals must submit advance notification (separate from the 10,000-individual database tier). Agents that quote pre-2025 language miss the new exposure.
 - Hebrew UTF-8 characters are 2 bytes each. Input length validation that counts bytes instead of characters will reject valid Hebrew input at half the expected length.
 - Israeli ID numbers (Teudat Zehut) use a Luhn-variant check digit algorithm, not standard Luhn. Agents may implement the wrong validation and accept invalid IDs.
 - The Israeli Privacy Protection Authority (PPA) database registration threshold is 10,000 records, not 5,000. Agents may cite incorrect thresholds from outdated training data.
