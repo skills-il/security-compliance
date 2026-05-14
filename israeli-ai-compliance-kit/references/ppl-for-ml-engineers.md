@@ -8,7 +8,7 @@ Practical mapping of Israel's Privacy Protection Law (PPL) and Amendment 13 to r
 - Amendment 13: Significant modernization, in force since August 14, 2025. DPO-appointment grace period expired October 31, 2025
 - Implementing regulations: Data Security Regulations, 2017
 - Regulator: Privacy Protection Authority (PPA, Rashut LeHaganat HaPratiyut)
-- First AI-specific signal: PPA draft guidance on AI, April 30, 2025 (public consultation closed June 5, 2025; still in draft form as of April 2026)
+- First AI-specific signal: PPA AI guidance, April 30, 2025 (public consultation closed June 5, 2025; still formally in draft as of May 2026, but the PPA enforces it as its operative compliance standard, so align with it as if binding)
 
 ## PPL Vocabulary You Will Encounter
 

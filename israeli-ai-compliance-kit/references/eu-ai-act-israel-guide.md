@@ -74,8 +74,11 @@ GPAI models with systemic risk (above a compute threshold, currently 10^25 FLOPs
 | August 1, 2024 | In force | Act enters into force |
 | February 2, 2025 | In force | Prohibitions (Article 5) and AI literacy obligations (Article 4) apply |
 | August 2, 2025 | In force | GPAI obligations, governance structures, penalties apply. New GPAI models placed on the EU market after this date must comply immediately; providers of pre-existing GPAI models have until August 2, 2027 to comply |
-| August 2, 2026 | Upcoming | Most obligations apply to new AI systems, including Annex III high-risk requirements (Articles 6 to 15) |
-| August 2, 2027 | Upcoming | Remaining obligations for AI products already covered by sector-specific EU legislation, plus compliance deadline for pre-existing GPAI models |
+| December 2, 2026 | Upcoming | Article 50(2) synthetic-content transparency obligations apply. Providers of AI systems generating synthetic audio, image, video, or text must mark outputs as artificially generated in a machine-readable format |
+| December 2, 2027 | Upcoming (revised, previously August 2, 2026) | Annex III high-risk requirements (Articles 6 to 15) apply to stand-alone high-risk AI systems |
+| August 2, 2028 | Upcoming (revised) | High-risk requirements apply to AI systems embedded in products already covered by sector-specific EU legislation (Annex I) |
+
+**Timeline change (Digital Omnibus on AI, May 7, 2026):** the Council and Parliament reached a provisional political agreement to postpone the Annex III high-risk deadline from August 2, 2026 to December 2, 2027, and the Annex I product-embedded deadline to August 2, 2028. The Article 50(2) synthetic-content transparency grace period was compressed so it now takes effect December 2, 2026. GPAI obligations (in force since August 2, 2025) were NOT postponed. The agreement is provisional and pending formal adoption of the amending regulation, so treat these dates as not yet final.
 
 ## General-Purpose AI Code of Practice
 
