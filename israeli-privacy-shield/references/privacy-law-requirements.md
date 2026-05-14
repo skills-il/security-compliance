@@ -1,31 +1,49 @@
-# Israeli Privacy Protection Law — Detailed Requirements
+# Israeli Privacy Protection Law (Post Amendment 13): Detailed Requirements
 
 ## Overview
 The Protection of Privacy Law, 5741-1981 (Chok Haganat HaPratiut) is Israel's primary
-data protection legislation. It was significantly strengthened by the Information Security
-Regulations of 2017.
+data protection legislation. It is supplemented by the Privacy Protection (Data Security)
+Regulations of 2017 and was comprehensively overhauled by Amendment 13, which the Knesset
+approved on August 5, 2024 and which came into force on August 14, 2025. Amendment 13
+narrowed database registration, introduced a 72-hour breach notification deadline, added
+a mandatory Privacy Protection Officer (DPO) obligation, expanded the definition of
+personal data to cover online identifiers, and significantly increased enforcement powers
+and administrative fines.
 
 ## Enforcement Authority
-- **Privacy Protection Authority** (Rashut LeHaganat HaPratiut)
+- **Privacy Protection Authority (PPA)** (Rashut LeHaganat HaPratiut)
 - Under the Ministry of Justice
-- Website: https://www.gov.il/he/departments/privacy_authority
-- Has enforcement powers including inspections and penalties
+- Website: https://www.gov.il/en/departments/the_privacy_protection_authority
+- Amendment 13 powers: unannounced supervisory inspections, binding compliance orders,
+  and administrative fines reaching millions of shekels (with multipliers for large-scale
+  or sensitive-data databases), on top of existing criminal liability
 
-## Database Registration Requirements
+## Database Registration Requirements (Amendment 13 regime)
 
 ### When Registration is Required
-A database must be registered with the Privacy Protection Authority if:
-1. It contains data on more than 10,000 individuals AND is used for direct marketing
-2. It contains data on more than 10,000 individuals AND includes sensitive data
-3. It is owned or managed by a public body
-4. It is used for providing credit information services
-5. It contains information about a person's health, genetics, or financial status
+Amendment 13 narrowed registration. A database must be registered with the PPA only if:
+1. It is owned or managed by a public body, OR
+2. It contains data on more than 10,000 individuals AND its main purpose is collecting
+   personal data in order to disclose it to third parties as a business or for value,
+   including direct-mailing services (a data broker)
 
-### Registration Process
-1. Submit Form 1 to Privacy Protection Authority
-2. Include: database name, purpose, types of data, data sources, recipients
-3. Renewal required periodically
-4. Changes to database purpose or scope require updated registration
+The broad pre-Amendment triggers (any database with sensitive data, credit-information
+services, health/genetics/financial data, direct marketing) and the old "Form 1"
+five-trigger model no longer apply.
+
+### Notification Tier for Large Sensitive Databases
+Separately from registration, a controller of a database that is NOT subject to
+registration but holds especially-sensitive data on more than 100,000 individuals must
+submit a notification to the PPA within 30 days. The notification includes:
+- The controller's identity, address, and contact details
+- The Privacy Protection Officer's identity and contact details (if one is required)
+- A copy of the database definition document prepared under the Data Security Regulations
+
+### Registration / Notification Process
+1. File through the PPA at https://www.gov.il/en/departments/the_privacy_protection_authority
+2. Include: database name, purpose, types of data, data sources, recipients, and the
+   database definition document
+3. Changes to database purpose or scope require an updated filing
 
 ## Security Levels and Requirements
 
@@ -53,17 +71,33 @@ Additional requirements beyond Basic:
 - Data processing agreements with service providers
 
 ### High Level
-Applies to: Government databases, health data, financial data, or databases with 100,000+ records
+Applies to: Government databases, health data, financial data, databases with 100,000+
+records, or intermediate-level databases that grant authorized access to more than 100 people
 
 Additional requirements beyond Medium:
-- Annual security audit by external auditor
+- A security risk assessment at least once every 18 months
+- A penetration test of the database systems at least once every 18 months, with the
+  results discussed and the faults found remediated and documented
 - Comprehensive incident response plan
 - Data Protection Officer (DPO) appointment
-- Penetration testing
 - Advanced encryption standards
 - Detailed data flow mapping
 - Regular employee training program
 - Business continuity plan
+
+## Privacy Protection Officer (DPO): Amendment 13
+
+Amendment 13 added a mandatory DPO obligation. A DPO must be appointed by:
+- Public bodies (government ministries, municipalities, universities, HMOs, etc.),
+  except national-security entities, and processors acting for those public bodies
+- Data brokers: a controller whose database holds personal data on more than 10,000
+  individuals and whose main purpose is collecting personal data to disclose it to third
+  parties as a business or for value
+- Entities that systematically monitor individuals on a large scale, or whose core
+  business includes processing especially-sensitive data on a large scale
+
+The DPO is the contact point with the PPA and monitors compliance. The PPA announced it
+would not enforce the appointment obligation until October 31, 2025.
 
 ## Consent Requirements
 
@@ -107,28 +141,31 @@ Transfers to countries without adequate protection are permitted if:
 - Transfer is necessary to protect vital interests
 - Contractual safeguards are in place (similar to EU Standard Contractual Clauses)
 
-## Breach Notification
+## Breach Notification (Amendment 13 regime)
 
-### What Constitutes a Breach
-A "severe security incident" requiring notification includes:
+### What Constitutes a Reportable Breach
+Amendment 13 reframed the trigger. A reportable breach is an incident that poses a risk
+to the rights and freedoms of affected individuals, including:
 - Unauthorized access to personal data
 - Unauthorized disclosure of personal data
-- Loss or destruction of personal data
-- Any incident that may cause significant harm to data subjects
+- Loss, alteration, or destruction of personal data
 
-### Notification to Authority
-- Must be reported "without delay" to the Privacy Protection Authority
-- No specific hour deadline (unlike GDPR's 72 hours)
-- "Without delay" is interpreted as the shortest reasonable time
-- Must include: nature of breach, data affected, measures taken, contact information
+### Notification to the Authority
+- Must be reported to the Privacy Protection Authority within **72 hours** of discovering
+  the breach (Amendment 13 replaced the old "without delay, no specific hours" rule)
+- Must include: the nature of the breach, the categories and approximate number of
+  affected individuals, the likely consequences, and the measures taken or proposed
 
 ### Notification to Data Subjects
-- Required if the breach may cause "significant harm" to individuals
-- Must include: nature of breach, potential consequences, measures taken, recommendations
-- Should be in clear, plain language (Hebrew)
+- Required where the breach is likely to result in a **high risk to the rights and
+  freedoms** of the individuals
+- Must be in clear, concise, plain language (Hebrew) and explain: the nature of the
+  breach, the types of data affected, the potential consequences, contact details for
+  more information, and the protective steps individuals can take
 
 ### Documentation
-- All security incidents must be documented regardless of severity
+- All security incidents must be documented regardless of whether they cross the
+  reporting threshold
 - Documentation must include: timeline, scope, response actions, decisions, lessons learned
 - Retain documentation for at least 5 years
 
@@ -149,20 +186,31 @@ A "severe security incident" requiring notification includes:
 - Authority can require corrective measures
 - Authority can publicize violations (naming and shaming)
 
-## GDPR Comparison Notes
+## GDPR Comparison Notes (Post Amendment 13)
 
-### Areas Where Israeli Law is Stricter
-- Database registration requirement (no GDPR equivalent since ROPA replaced it)
-- Criminal penalties for privacy violations
+### Areas Where Israeli Law is Stricter or Distinct
+- Database registration requirement still exists (no GDPR equivalent since ROPA replaced
+  it), though Amendment 13 narrowed it to public bodies and data brokers, plus a separate
+  100,000-record especially-sensitive notification tier
+- Criminal penalties for privacy violations (up to 5 years imprisonment)
 
-### Areas Where GDPR is Stricter
+### Areas Where the Two Frameworks Now Converge
+- Breach notification: Amendment 13 introduced a 72-hour deadline to the PPA, matching
+  GDPR's 72-hour rule. Notification to affected individuals is required where the breach
+  poses a high risk to their rights and freedoms, mirroring GDPR Article 34
+- Personal data scope: Amendment 13 expressly includes online identifiers (IP addresses,
+  geolocation, device identifiers), aligning with GDPR Recital 30
+- DPO obligation: Amendment 13 added a mandatory DPO requirement, though the Israeli
+  triggers (public bodies, data brokers, large-scale monitoring/sensitive processing) are
+  framed more narrowly than GDPR Article 37
+
+### Areas Where GDPR is Still Stricter
 - Higher financial penalties (up to 4% of global annual revenue)
 - Broader extra-territorial application
 - More comprehensive right to erasure (right to be forgotten)
 - More detailed lawful basis framework (6 legal bases vs. consent-primary)
-- More comprehensive DPO requirements
 - Data Protection Impact Assessment requirement
-- Privacy by Design and by Default as legal requirements
+- Privacy by Design and by Default as explicit legal requirements
 
 ### Key Practical Differences for Multinational Companies
 - Companies operating in both Israel and EU must comply with both frameworks

@@ -23,27 +23,28 @@ This reference summarises when a shortcut applies and when it does not. It cover
 - As of 1 July 2024, a declaration-based entry was introduced (importer declares compliance using ILAC-accredited reports); from 7 July 2024, the Ministry of Economy stopped processing exemptions and switched to random surveillance.
 - Use: imports of electronic devices with accredited EU or international test reports.
 
-## 3. EU-regulation recognition reform, 1 January 2025 ("What's Good for Europe is Good for Israel")
+## 3. EU-regulation recognition reform ("What's Good for Europe is Good for Israel", Amendment 19)
 
-- Optional import route: importers may file based on compliance with a listed EU regulation/directive instead of an Israeli lab file.
-- Initial catalogue: about 42 regulations (initially 43, one Low-Voltage Directive variant recalled).
-- First wave: REACH (chemical safety), Low-Voltage Directive (LVD), Electromagnetic Compatibility Directive (EMC), Personal Protective Equipment Regulation (PPE).
-- Phased expansions from Feb/Mar 2025: toy safety and food-contact materials.
-- Planned expansions: electric bicycles, medical equipment and more.
+- Optional import route: importers may file based on compliance with an EU regulation/directive that has been adopted into the Israeli Standards Law, instead of an Israeli lab file.
+- Legal basis: Amendment 19 to the Standards Law. Adoption is phased from 1 January 2025 through 2028.
+- Scope to date: about 69 EU regulations have been adopted, with more in the pipeline (the route launched with about 42-43 in January 2025 and has expanded since).
+- First wave (January 2025): REACH (chemical safety), Low-Voltage Directive (LVD), Electromagnetic Compatibility Directive (EMC), Personal Protective Equipment Regulation (PPE).
+- Phased expansions: toy safety and food-contact materials from Feb/Mar 2025; a July 2025 wave covering hazardous materials, medical devices, elevators and wheelchair lifts, construction materials, batteries, and cosmetics.
+- Confirm coverage per product via the Commissioner's search engine (https://www.gov.il/en/service/search_official_standards), keyed by SI number.
 - Exclusions to remember:
   - Food (use the Ministry of Health framework).
   - Motor vehicles (use the IMR regime under the Ministry of Transport and Road Safety).
   - Items under official fire-safety standards (limited exception for portable firefighting equipment).
   - AC mains electrical equipment 50-1000 V AC / 75-1500 V DC (excluded at the moment).
 
-## 4. US standards recognition (announced March 2025)
+## 4. US standards recognition (active expansion)
 
-A plan to add selected US standards to the recognition catalogue was announced in March 2025. Consult the Ministry of Economy standardization-policy page at https://www.gov.il/en/departments/general/standartization_policy_in_israel_legislation for the current list of categories eligible for US-standards recognition before relying on it.
+The Ministry of Economy is actively expanding the import reform to recognize US standards alongside EU standards. Announced in March 2025, professional discussions on adopting the relevant US standards are underway. The first phase is expected in the second half of 2026 and is set to cover children's products (toys, baby furniture, mattresses, pacifiers, feeding accessories, swings, trampolines, children's jewelry), bicycles, ladders, lighters, crockery and food packaging, and cleaning materials. Consult the Ministry of Economy standardization-policy page at https://www.gov.il/en/departments/general/standartization_policy_in_israel_legislation for the current list of eligible categories before relying on it.
 
 ## How to choose a fast track
 
 - Always start by listing the mandatory SI standards that could apply to the product.
-- Check whether those standards map to a regulation in the January 2025 catalogue.
+- Check whether those standards map to an EU regulation adopted into the Standards Law (use the Commissioner's SI-number search engine).
 - Confirm the product is not in an excluded category (food, motor vehicles, fire safety, AC mains 50-1000 V AC / 75-1500 V DC electrical).
 - If both checks pass, use the EU-regulation route. Otherwise fall back to type approval, declaration-based entry, or an easement plan as appropriate.
 

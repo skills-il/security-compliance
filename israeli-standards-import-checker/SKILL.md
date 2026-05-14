@@ -28,6 +28,8 @@ Ask for, or infer from the user's input:
 
 A takan rishmi is mandatory; a plain takan yisra'eli is voluntary. Only the Minister of Economy can declare a standard mandatory, and the Commissioner of Standardization enforces it. The master list lives on the SII website and is updated through the official gazette Reshumot.
 
+The Commissioner of Standardization runs a dedicated EU-regulation search engine on the Ministry of Economy site (https://www.gov.il/en/service/search_official_standards). Enter the Israeli Standard (SI) number and it returns the corresponding EU regulation(s), their effective dates, and the product's import group. Use it before picking a route.
+
 Common categories with mandatory standards (verify current status before relying on these in a filing):
 
 | Category | Typical SI | Notes |
@@ -39,16 +41,26 @@ Common categories with mandatory standards (verify current status before relying
 | Passenger vehicles | Israeli Mandatory Requirements (IMR) | Adopts EU 2018/858 WVTA; US/Canadian homologation accepted. |
 | Food | Various public-health regulations | Covered by the 2016 food-import reform (parallel import + Model A/B). |
 
-### Step 3: Determine the approval route
+### Step 3: Identify the import group, then determine the approval route
 
-Pick the route that fits the category and reform status:
+First find the product's import group. Israel splits products subject to official standards into four risk-based import groups, and the group determines how heavy the conformity assessment is:
 
-1. Type approval (ishur tipus) by SII: covers a specific model; once granted, subsequent shipments of the same model can use shipment approvals or an easement plan. Required for categories still excluded from EU recognition (for example AC mains electrical equipment 50-1000 V AC / 75-1500 V DC).
-2. Per-shipment approval: each shipment is sampled and tested before release. Default for new importers and Group 2/3 (higher-risk) products.
-3. Importer easement plans via Maslol Plus: Green (50% sample), Gold (33% sample after 12 months on Green), Diamond (sell before testing completes). Available only for Group 1 products with a clean history and ISO 9001 factory.
-4. Declaration-based entry: from July 1, 2024, importers can declare compliance using ILAC-accredited foreign lab reports; spot-checked under the Ministry of Economy's random-surveillance programme (from July 7, 2024).
-5. EU-CoC / EU-regulation recognition: from January 1, 2025 a catalogue of ~42 EU regulations is an optional import route (REACH, LVD, EMC, PPE first; toys and food-contact materials phased in from February/March 2025). Food, motor vehicles, and official fire-safety-covered items are excluded.
+- **Group 1, highest risk** (for example products for infants, LPG equipment, lifting devices, rebar): requires both a testing-lab model approval and a testing-lab shipment inspection.
+- **Group 2, medium risk** (for example external power supplies above a certain output): requires a model certificate plus an importer's declaration that the shipment conforms to the official standard.
+- **Group 3, low risk** (most products, for example computers, TVs, most household electrical appliances): requires an importer's declaration of conformity only.
+- **Group 4, industrial use only**: products intended for use only in industry; no import conformity assessment, released by the Commissioner of Standardization route.
+
+Find a product's group via the Commissioner's EU-regulation search engine (https://www.gov.il/en/service/search_official_standards) keyed by SI number.
+
+Then pick the route that fits the group and reform status:
+
+1. Type approval (ishur tipus) by SII: covers a specific model; once granted, subsequent shipments of the same model can use shipment approvals or an easement plan. Required for categories still excluded from EU recognition (for example AC mains electrical equipment 50-1000 V AC / 75-1500 V DC). Aligns with the Group 1 "model approval" step.
+2. Per-shipment approval: each shipment is sampled and tested before release. This is the Group 1 "shipment inspection" step, and is also the default for new importers without a clean history.
+3. Importer easement plans via Maslol Plus: Green (50% sample), Gold (33% sample after 12 months on Green), Diamond (sell before testing completes). These plans lighten the per-shipment burden for importers of higher-risk (Group 1) goods who have a clean import history and an ISO 9001 factory.
+4. Declaration-based entry: from July 1, 2024, importers can declare compliance using ILAC-accredited foreign lab reports; spot-checked under the Ministry of Economy's random-surveillance programme (from July 7, 2024). Lower-risk groups (2 and 3) already rely primarily on an importer declaration.
+5. EU-CoC / EU-regulation recognition: from January 1, 2025 Israel began phasing EU regulations into the Standards Law under Amendment 19 (about 69 EU regulations adopted to date, phased in stages from 2025 through 2028). REACH, LVD, EMC, and PPE came first; toys and food-contact materials phased in from February/March 2025; a July 2025 wave added hazardous materials, medical devices, elevators and wheelchair lifts, construction materials, batteries, and cosmetics. Food, motor vehicles, official fire-safety-covered items, and AC mains electrical equipment 50-1000 V AC / 75-1500 V DC are excluded.
 6. Radio / wireless: under the July 4, 2022 Ministry of Communications amendment, DoC/CoC compliant with EU regulations is accepted for radio equipment.
+7. US-standards recognition: the Ministry of Economy is actively expanding the import reform to recognize US standards alongside EU ones. The first phase is expected in the second half of 2026 and covers children's products (toys, baby furniture, mattresses, pacifiers, feeding accessories, swings, trampolines, children's jewelry), bicycles, ladders, lighters, crockery and food packaging, and cleaning materials. Confirm the current category list with the Ministry of Economy before relying on it.
 
 ### Step 4: List required lab tests and documents
 
@@ -71,7 +83,20 @@ Give a rough band and flag that exact turnaround depends on SII queue, category,
 
 If the product qualifies for the EU-recognition route, the declaration-based route, or an easement plan, recommend that as the primary filing. Note the residual risk: random surveillance can still sample the shipment, and a failed sample can trigger market withdrawal and fines.
 
-### Step 7: Warn about non-compliance consequences
+### Step 7: Check labeling, marking, and exemption thresholds
+
+Labeling and marking:
+- Consumer products need Hebrew labeling and a Hebrew user manual.
+- The label must carry the importer's details (name and address).
+- Products certified by the SII carry the SII mark; do not claim it unless the product file supports it.
+
+Exemptions and thresholds (confirm the current rule before relying on it):
+- Personal imports (ye'vu ishi) follow a lighter regime and often fall under quantity thresholds that exempt them from full conformity assessment, but the exemption never covers resale.
+- Samples and prototypes can qualify for a limited exemption when they are not placed on the market.
+- Group 4 products (industrial use only) are released through the Commissioner of Standardization route without an import conformity assessment.
+- The old blanket exemption route was discontinued on July 7, 2024 and replaced by the declaration-based path plus random surveillance.
+
+### Step 8: Warn about non-compliance consequences
 
 Imports arriving without the correct approval can be held, seized, or destroyed at customs. Businesses are legally obliged to notify the Commissioner of Standardization if a product later fails to meet mandatory requirements.
 
@@ -111,7 +136,8 @@ No MCP server currently wraps the SII or the Commissioner of Standardization. Un
 ## Gotchas
 
 - Voluntary (takan yisra'eli) vs official (takan rishmi) is a frequent trap. A product can meet a standard that is not mandatory and still be blocked at customs because a different mandatory standard applies.
-- The January 2025 EU-recognition catalogue covers only the listed regulations (REACH, LVD, EMC, PPE first, toys and food-contact materials phased in). AC mains electrical equipment 50-1000 V AC / 75-1500 V DC is explicitly excluded; food, motor vehicles, and items under official fire-safety standards are also excluded. Agents often assume CE is now universally accepted; it is not.
+- The EU-recognition route covers only the regulations adopted into the Standards Law under Amendment 19 (about 69 EU regulations to date, phased in from 2025 through 2028; REACH, LVD, EMC, PPE first, toys and food-contact materials added Feb/Mar 2025, a July 2025 wave covering hazardous materials, medical devices, elevators, construction materials, batteries, and cosmetics). AC mains electrical equipment 50-1000 V AC / 75-1500 V DC is explicitly excluded; food, motor vehicles, and items under official fire-safety standards are also excluded. Agents often assume CE is now universally accepted; it is not.
+- Import-group risk direction is a frequent trap. Group 1 is the HIGHEST risk and carries the heaviest assessment (model approval plus shipment inspection); Group 3 is low risk and needs only an importer declaration; Group 4 is industrial-use-only with no import conformity assessment. Do not assume higher group numbers mean higher risk.
 - A type approval (ishur tipus) covers a specific model only. Sister models, different voltages, or firmware variants need fresh filings.
 - Samples must usually be sent and tested before the shipment arrives, not after. Planning the test slot late is a common delay cause.
 - Israeli standards are revised by publication in Reshumot, sometimes with very short transition windows (SI 562 part 3 gave only five months in 2022-2023). Always check the current version, not a cached PDF.
@@ -126,8 +152,8 @@ No MCP server currently wraps the SII or the Commissioner of Standardization. Un
 | SII services and tracks | https://www.sii.org.il/en/services-and-tracks/ | Overview of importer services |
 | SII easement plans | https://www.sii.org.il/en/tracks/ | Green / Gold / Diamond plan rules |
 | Commissioner of Standardization (Ministry of Economy) | https://www.gov.il/en/departments/general/standartization_policy_in_israel_legislation | Enforcement policy, mandatory standards, Reshumot |
-| Standards Law 5713-1953 (Knesset) | https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawPrimary.aspx?t=lawlaws&st=lawlaws&lawitemid=2000626 | Primary statute |
-| US ITA standards guide | https://www.trade.gov/country-commercial-guides/israel-trade-standards | Plain-English overview, declaration reform |
+| Official mandatory-standards / EU-regulation search engine | https://www.gov.il/en/service/search_official_standards | Look up an SI number to get the matching EU regulation, effective dates, and import group |
+| US ITA Israel standards reform | https://www.trade.gov/market-intelligence/israel-standards-reform | Plain-English overview of the EU-recognition reform and declaration route |
 | Kol Zchut | https://www.kolzchut.org.il | Consumer rights on imports (Hebrew) |
 
 ## Troubleshooting

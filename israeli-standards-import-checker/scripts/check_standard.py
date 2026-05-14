@@ -10,8 +10,13 @@ Takes a product category keyword and returns:
   - typical timeline band
   - fast-track eligibility
 
-Every rule below maps to an entry in evidence.json. If you add a new
-category or change a rule, add matching evidence first.
+Facts baseline: the EU-recognition route runs under Amendment 19 to the
+Standards Law, phased from 2025 through 2028, with about 69 EU regulations
+adopted to date. Import groups are risk-tiered: Group 1 = highest risk
+(model approval + shipment inspection), Group 2 = medium (model certificate
++ importer declaration), Group 3 = low (importer declaration only),
+Group 4 = industrial use only (no import conformity assessment). The rules
+below are hardcoded; verify the live mandatory-standards list before filing.
 
 Usage:
     python scripts/check_standard.py --list

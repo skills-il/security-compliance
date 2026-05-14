@@ -21,18 +21,20 @@ The 2017 regulations define three security levels:
 |-------|----------|-----------------|
 | Basic | < 10,000 records, non-sensitive | Access controls, logging, backup |
 | Medium | 10,000+ records OR sensitive data | + Encryption, security officer appointment |
-| High | Government, health, financial, 100K+ records | + Annual audit, incident response plan, DPO |
+| High | Government, health, financial, 100K+ records, or authorized access for 100+ people | + Incident response plan, DPO, plus a security risk assessment and a penetration test at least once every 18 months with documented findings and remediation |
 
 Sensitive data includes: Health, genetics, sexual orientation, political views, criminal record.
 
 ### Step 2: Database Registration Check
-Following the established database registration requirements, registration with the Privacy Protection Authority is required only if:
-- Database owned by a public body, OR
-- Database contains data on 10,000+ individuals AND the primary purpose is transferring data to others (data brokers)
+Under the Amendment 13 regime, registration with the Privacy Protection Authority (PPA) is required only if:
+- Database owned or managed by a public body, OR
+- Database contains data on 10,000+ individuals AND the primary purpose is collecting and disclosing personal data to third parties as a business or for value (data brokers)
 
-The previous broad requirement covering any database with sensitive data no longer applies.
+The broad pre-Amendment requirement covering any database with sensitive data (and the old "Form 1" five-trigger list) no longer applies.
 
-Registration URL: For registration information, contact the Privacy Protection Authority at gov.il
+**Notification tier (separate from registration).** Even where registration is not required, a controller of a database that holds especially-sensitive data on more than 100,000 individuals must submit a notification to the PPA within 30 days. The notification includes the controller's identity and contact details, the privacy officer's details (if one is required), and the database definition document prepared under the Data Security Regulations.
+
+Registration and notification are handled through the PPA: https://www.gov.il/en/departments/the_privacy_protection_authority
 
 ### Step 3: Consent Requirements
 Israeli law requires consent for:
@@ -54,11 +56,11 @@ Personal data transfer outside Israel requires:
 Note: Israel has EU adequacy decision, transfer TO EU is generally straightforward.
 
 ### Step 5: Breach Notification
-Under 2017 regulations:
-1. **Severe security incident:** Report to Privacy Protection Authority "without delay"
-2. **No specific hour deadline** (unlike GDPR's 72 hours), but "without delay" interpreted as quickly
-3. **Notify affected individuals** if breach may cause them significant harm
-4. **Document:** All incidents, response actions, and decisions
+Amendment 13 introduced a hard deadline (replacing the old "without delay, no specific hours" rule):
+1. **Notify the Privacy Protection Authority within 72 hours** of discovering a reportable breach. The notification must cover the nature of the breach, the categories and approximate number of affected individuals, the likely consequences, and the measures taken or proposed.
+2. **Notify affected individuals "without undue delay"** where the breach is likely to result in a high risk to their rights and freedoms. The notice must be in clear, plain Hebrew and explain the nature of the breach, the data affected, the potential consequences, and the protective steps individuals can take.
+3. **Reportable breach standard:** an incident (unauthorized access, disclosure, loss, alteration, or destruction of personal data) that poses a risk to the rights and freedoms of the affected individuals.
+4. **Document:** all incidents, response actions, and decisions, regardless of whether they cross the reporting threshold.
 
 ### Step 6: Compliance Checklist
 For each assessed entity, verify:
@@ -87,12 +89,13 @@ Amendment 13 is the most significant reform of Israeli privacy law since 1981. I
 
 Standard web analytics, session logs, and mobile app telemetry now fall within the scope of the Privacy Protection Law.
 
-**Mandatory Privacy Protection Officer (PPO).** Under Amendment 13, the following entities must appoint a Privacy Protection Officer:
-- Public bodies
-- Data brokers (entities whose primary purpose is transferring personal data to others)
-- Entities processing sensitive data at significant scale
+**Mandatory Privacy Protection Officer (PPO / DPO).** Under Amendment 13, the following entities must appoint a Privacy Protection Officer:
+- Public bodies (government ministries, municipalities, universities, HMOs and similar), except national-security entities
+- External suppliers and processors acting for those public bodies
+- Data brokers, with a concrete threshold: a controller whose database holds personal data on more than 10,000 individuals AND whose main purpose is collecting personal data to disclose it to third parties as a business or for value (including direct-mailing services)
+- Entities that systematically monitor individuals on a large scale, or whose core business includes processing especially-sensitive data on a large scale
 
-The PPO is the contact point with the Privacy Protection Authority and is responsible for monitoring compliance.
+The PPO is the contact point with the Privacy Protection Authority and is responsible for monitoring compliance. Note: the PPA announced it would not enforce the appointment obligation until October 31, 2025.
 
 **AI governance for automated decision-making.** Amendment 13 requires transparency and oversight for AI systems that make decisions affecting individuals (credit scoring, hiring, insurance, fraud detection). Requirements include:
 - Documentation of the decision logic and data inputs
@@ -100,21 +103,21 @@ The PPO is the contact point with the Privacy Protection Authority and is respon
 - Human oversight for high-impact decisions
 - Bias and accuracy monitoring
 
-**Enforcement powers and fines.** Amendment 13 significantly expands the Authority''s administrative powers:
+**Enforcement powers and fines.** Amendment 13 significantly expands the Authority's administrative powers:
 - Direct supervisory inspections without prior notice
 - Administrative fines up to approximately NIS 3.2 million for serious violations
 - Ability to issue binding compliance orders
 
 Entities that were previously under the radar of enforcement now face real financial exposure.
 
-**What changed for database registration.** Amendment 13 narrowed the registration requirement. Registration with the Authority is now required only for public bodies and databases of 10,000+ individuals whose primary purpose is transferring data to others (data brokers). The broader pre-Amendment requirement for any database with sensitive data no longer applies.
+**What changed for database registration.** Amendment 13 narrowed the registration requirement. Registration with the Authority is now required only for public bodies and databases of 10,000+ individuals whose primary purpose is collecting and disclosing personal data to third parties as a business or for value (data brokers). The broader pre-Amendment requirement for any database with sensitive data no longer applies. Separately, a controller of a database that is not subject to registration but holds especially-sensitive data on more than 100,000 individuals must file a notification with the Authority within 30 days, including the database definition document.
 
 ## GDPR vs Israeli Law Key Differences
 | Aspect | Israeli Law (post Amendment 13) | GDPR |
 |--------|------------|------|
 | Legal basis | Consent primary, limited exceptions | 6 legal bases |
-| Privacy officer requirement | Public bodies, data brokers, and large-scale sensitive data processors | Broader requirement |
-| Breach notification | "Without delay", no specific hours | 72 hours |
+| Privacy officer requirement | Public bodies (and their processors), data brokers (10,000+ records), large-scale sensitive-data processors, and large-scale systematic monitors | Broader requirement |
+| Breach notification | 72 hours to the PPA; affected individuals "without undue delay" where high risk | 72 hours |
 | Administrative fines | Up to ~NIS 3.2M for serious violations + criminal liability | Up to 4% global revenue |
 | Right to erasure | Limited | Comprehensive (right to be forgotten) |
 | Database registration | Public bodies and data brokers only (10,000+ records) | Not required (replaced by ROPA) |
@@ -415,13 +418,30 @@ The banner you ship is one layer. The other layers, a published privacy policy i
 - Amendment 13 took effect on August 14, 2025 and is live law, not a pending proposal. Agents trained on pre-2025 data may treat Amendment 13 as a future change or miss it entirely. Always assume it applies when advising on Israeli privacy compliance today.
 - Amendment 13 expands "personal data" to include IP addresses, geolocation, and online identifiers. This pulls standard web analytics and mobile telemetry into scope. Agents may still apply the older narrower definition and underestimate what counts as personal data.
 - Administrative fines under Amendment 13 can reach approximately NIS 3.2 million for serious violations, on top of the existing criminal liability. Agents may cite only the pre-Amendment "relatively low fines" framing and underestimate real exposure.
-- Israeli Privacy Protection Law predates GDPR (1981 vs 2016) and still has key differences even after Amendment 13: no specific 72-hour breach notification deadline (still "without delay"), narrower right to erasure, and database registration still exists (though narrowed to public bodies and data brokers). Agents may incorrectly apply GDPR rules to Israeli contexts.
+- Amendment 13 introduced a 72-hour deadline for notifying the Privacy Protection Authority of a reportable breach (measured from discovery), with notification to affected individuals "without undue delay" where the breach poses a high risk to their rights and freedoms. The old "without delay, no specific hours" rule no longer applies. Agents trained on pre-2025 data often still cite the outdated framing.
+- Israeli Privacy Protection Law predates GDPR (1981 vs 2016) and still has key differences even after Amendment 13: a narrower right to erasure, and database registration still exists (though narrowed to public bodies and data brokers, plus a separate 100,000-record especially-sensitive notification tier). Agents may incorrectly apply GDPR rules to Israeli contexts.
 - Israel has an EU adequacy decision, meaning data transfers FROM Israel TO the EU are generally straightforward. Agents may incorrectly flag Israel-to-EU transfers as requiring additional safeguards.
 - The 2017 Security Regulations define three security levels (basic/medium/high) based on record count and data sensitivity. Agents may apply a one-size-fits-all approach instead of the tiered model.
-- Penalties under Israeli privacy law include criminal liability (up to 5 years imprisonment) in addition to administrative fines. Agents may understate the severity by comparing only to GDPR''s monetary penalties.
+- Penalties under Israeli privacy law include criminal liability (up to 5 years imprisonment) in addition to administrative fines. Agents may understate the severity by comparing only to GDPR's monetary penalties.
 
 ## Troubleshooting
 
 ### Error: "Unsure about security level"
 Cause: Borderline case between basic/medium/high
 Solution: When in doubt, apply the higher level. The cost difference is small compared to non-compliance risk.
+
+## Reference Links
+
+| Source | URL | What to check |
+|---|---|---|
+| Privacy Protection Authority (gov.il) | https://www.gov.il/en/departments/the_privacy_protection_authority | Enforcement, database registration and notification, guidance |
+| Amendment 13 page (gov.il) | https://www.gov.il/he/pages/13_amendment | Overview of the reform and its obligations |
+| Amendment 13 professional guide (gov.il) | https://www.gov.il/he/pages/guide_tikon13_professional | Detailed implementation guidance for controllers and processors |
+| Amendment 13 FAQ (gov.il) | https://www.gov.il/he/pages/tikun13_qa | Common questions on registration, DPO, breach reporting |
+| Protection of Privacy Law, 5741-1981 | https://www.gov.il/he/pages/the_privacy_protection_law | Primary statute text |
+
+gov.il pages may return HTTP 403 to automated clients; open them in a browser.
+
+## Recommended MCP Servers
+
+- `israel-law` MCP, surfaces Israeli primary legislation and regulations (including the Protection of Privacy Law and related regulations). Use it to pull the current statutory text when a compliance question turns on exact wording. Verify the live gov.il pages above for PPA guidance and forms, which an MCP statute index does not cover.

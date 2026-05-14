@@ -2,22 +2,36 @@
 
 Pick the route that matches the product's category and risk group. All routes are filed through the SII Maslol Plus system (https://www.sii.org.il/en/importers/) unless otherwise noted.
 
+## Import groups (risk tiers)
+
+Israel splits products subject to official standards into four risk-based import groups. Group 1 is the highest risk and carries the heaviest assessment; the burden decreases through Groups 2, 3, and 4.
+
+| Group | Risk level | What it triggers |
+|---|---|---|
+| Group 1 | Highest (e.g. infant products, LPG equipment, lifting devices, rebar) | Testing-lab model approval AND testing-lab shipment inspection |
+| Group 2 | Medium (e.g. external power supplies above a certain output) | Model certificate plus an importer's declaration of conformity |
+| Group 3 | Low (most products: computers, TVs, most household electrical appliances) | Importer's declaration of conformity only |
+| Group 4 | Industrial use only | No import conformity assessment; released via the Commissioner of Standardization route |
+
+Find a product's group via the Commissioner's EU-regulation search engine (https://www.gov.il/en/service/search_official_standards), keyed by SI number.
+
 ## 1. Type approval (ishur tipus) by SII
 
-- Scope: a specific model configuration.
-- When to use: products inside a mandatory-standard category that are not (yet) in the 2025 EU-recognition catalogue, or products excluded from the fast track (for example AC mains electrical equipment 50-1000 V AC / 75-1500 V DC).
+- Scope: a specific model configuration. This is the "model approval" step for Group 1 goods.
+- When to use: products inside a mandatory-standard category that are not (yet) covered by the EU-recognition route, or products excluded from the fast track (for example AC mains electrical equipment 50-1000 V AC / 75-1500 V DC).
 - Outcome: a product file (tik mutzar) is opened. Subsequent shipments of the same model can move to a lighter regime (shipment approval or an easement plan).
 - Gotcha: sister models, different voltages, or material changes may require a fresh or variant approval.
 
 ## 2. Per-shipment approval
 
-- Scope: each shipment is sampled and tested before release.
-- When to use: new importers, higher-risk products (Group 2/3), or categories where SII has not yet accredited the factory.
+- Scope: each shipment is sampled and tested before release. This is the "shipment inspection" step for Group 1 goods.
+- When to use: highest-risk products (Group 1), new importers without a clean history, or categories where SII has not yet accredited the factory.
 - Trade-off: slowest route; timeline depends on SII queue and lab load.
+- Note: lower-risk groups (2 and 3) rely primarily on an importer's declaration of conformity rather than per-shipment SII testing.
 
 ## 3. Importer easement plans (Maslol Plus tracks)
 
-Available only for Group 1 goods with clean import history and an ISO 9001-certified manufacturer.
+These plans lighten the per-shipment burden for importers of higher-risk (Group 1) goods that have a clean import history and an ISO 9001-certified manufacturer.
 
 | Plan | Sampling rate | Additional condition |
 |---|---|---|
@@ -34,14 +48,14 @@ Contact: gali_aviv@sii.org.il for eligibility questions.
 - Enforcement: as of 7 July 2024 the Ministry of Economy stopped processing exemptions and moved to a random-surveillance programme. A failed sample can still lead to market withdrawal and fines.
 - When to use: mid-risk products with a strong accredited test report; skip Israeli re-testing.
 
-## 5. EU-regulation recognition (January 2025, "What's Good for Europe is Good for Israel")
+## 5. EU-regulation recognition ("What's Good for Europe is Good for Israel", Amendment 19)
 
-- Effective date: 1 January 2025.
-- Mechanism: optional import route using compliance with a listed EU regulation/directive (initially 43, with one Low-Voltage Directive variant recalled; subsequent expansions planned).
-- First wave: REACH (chemical safety), the Low-Voltage Directive (LVD), the Electromagnetic Compatibility Directive (EMC) and the Personal Protective Equipment Regulation (PPE).
-- Phased additions (Feb/Mar 2025 onwards): toy safety and food-contact materials.
+- Effective date: phased from 1 January 2025 through 2028, under Amendment 19 to the Standards Law.
+- Mechanism: optional import route using compliance with an EU regulation/directive that has been adopted into the Israeli Standards Law. About 69 EU regulations have been adopted to date, with more in the pipeline.
+- First wave (January 2025): REACH (chemical safety), the Low-Voltage Directive (LVD), the Electromagnetic Compatibility Directive (EMC) and the Personal Protective Equipment Regulation (PPE).
+- Phased additions: toy safety and food-contact materials from Feb/Mar 2025; a July 2025 wave covering hazardous materials, medical devices, elevators and wheelchair lifts, construction materials, batteries, and cosmetics.
 - Exclusions: food, motor vehicles, items under official fire-safety standards (limited exception for portable firefighting equipment), and AC mains electrical equipment 50-1000 V AC / 75-1500 V DC.
-- When to use: CE-marked EU products in the catalogue. Faster and cheaper than a full SII file.
+- When to use: CE-marked EU products whose standard has been adopted. Faster and cheaper than a full SII file. Check the Commissioner's search engine (https://www.gov.il/en/service/search_official_standards) by SI number to confirm coverage.
 
 ## 6. Radio / wireless (July 2022)
 
@@ -52,10 +66,10 @@ Contact: gali_aviv@sii.org.il for eligibility questions.
 ## Decision order
 
 1. Is the category on the excluded list (food, motor vehicles, fire-safety)? If yes, skip route 5.
-2. Is the category in the January 2025 EU-recognition catalogue and within its voltage/scope rules? If yes, use route 5.
-3. If not, is the product mid-risk with an accredited ILAC test? If yes, use route 4.
-4. Is the product Group 1 with clean import history and ISO 9001 factory? If yes, route 3 (Green to Gold to Diamond).
-5. Otherwise, file route 1 (type approval) and then run shipments under route 2 until enough history exists to move up.
+2. Is the category's EU regulation adopted into the Standards Law and within its voltage/scope rules? If yes, use route 5.
+3. If not, can the product use an accredited ILAC test report? If yes, use route 4 (declaration-based entry).
+4. Is the product a Group 1 good with clean import history and an ISO 9001 factory? If yes, route 3 (Green to Gold to Diamond) to lighten the per-shipment burden.
+5. Otherwise, file route 1 (type approval / model approval) and then run shipments under route 2 (shipment inspection) until enough history exists to move up.
 
 ## Mandatory exit points
 
