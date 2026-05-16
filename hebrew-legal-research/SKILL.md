@@ -14,9 +14,15 @@ It does NOT constitute legal advice. Always recommend the user consult a
 licensed Israeli attorney (orech din) for specific legal matters. State this
 disclaimer at the start of every legal research interaction.
 
-**Anti-hallucination rule for legal citations.** Never invent a case citation, statute amendment number, or Bagatz / civil-appeal docket. The single most common LLM legal-research failure is fabricated citations that look plausible (e.g., "בג\"ץ 1234/05 פלוני נ' מדינת ישראל"). If the exact citation is not retrieved from a verified source (Nevo, Pskdin, Knesset portal, supreme.court.gov.il), say "citation not verified, look up at [source]" and stop. The Israel Bar Association (Lishkat Orchei HaDin) National Ethics Committee opinion of 2024-05-07 explicitly requires lawyers using AI to verify all output, protect client confidentiality (no privileged data into public LLMs), and maintain duty-of-loyalty / diligence over AI-generated content.
+**Anti-hallucination rule for legal citations.** Never invent a case citation, statute amendment number, or Bagatz / civil-appeal docket. The single most common LLM legal-research failure is fabricated citations that look plausible (e.g., "בג\"ץ 1234/05 פלוני נ' מדינת ישראל"). If the exact citation is not retrieved from a verified source (Nevo, Pskdin, Knesset portal, supreme.court.gov.il), say "citation not verified, look up at [source]" and stop. The Israel Bar Association (Lishkat Orchei HaDin) National Ethics Committee opinion of 2024-05-07 (Decision et/60/24) explicitly requires lawyers using AI to verify all output, protect client confidentiality (no privileged data into public LLMs), and maintain duty-of-loyalty / diligence over AI-generated content. As of 2026-05 this remains the only Bar opinion on AI; no follow-up has superseded it.
 
-**Judicial reform context (as of 2026-04).** Israel is mid-stream on the post-2023-2024 judicial-reform aftermath: HCJ struck down the reasonableness-clause amendment on 2024-01-01 (8-7 ruling, doctrine of extreme unreasonableness restored); Knesset passed the Judicial Selection Committee reform on 2025-03-27; an 11-justice HCJ panel is scheduled to hear that reform around June 2026. Any answer about Israeli administrative-law standards or the relationship between the executive and the judiciary must be tensed to the current state, not to pre-2023 doctrine.
+**Judicial reform context (as of 2026-05).** Israel is mid-stream on the post-2023-2024 judicial-reform aftermath. Three distinct strands must not be conflated:
+
+1. *Reasonableness amendment strike-down (2024-01-01).* HCJ voted 8-7 to invalidate the July 2023 amendment that barred courts from applying the extreme-unreasonableness doctrine to elected officials. In the same judgment, a separate (and much larger) majority held that HCJ has the authority to strike down Basic Laws in narrow circumstances (12-3 / 13-2 depending on the precise sub-question). Do NOT cite the 8-7 vote for the Basic-Laws authority point.
+2. *Judicial Selection Committee reform (Knesset law of 2025-03-27).* Already on the books, but by its own transitional clause it does not take effect until the next Knesset is sworn in after the October 2026 elections; current committee composition is unchanged. An 11-justice HCJ panel is scheduled to hear the consolidated petitions on **June 21, 2026**.
+3. *Judicial Overhaul Redux (active 2026 legislative push).* Multiple new bills are mid-process: an AG split bill (separate Prosecutor General and Government Representative to Courts, both political appointments); subordination of ministerial legal advisers to political directors-general; politicization of the Police Internal Investigations Department (Mahash) and the Civil Service Commissioner appointment. None of these are law yet, but any answer about who has legal-advisory authority must flag the in-flight status.
+
+Tense every administrative-law and separation-of-powers answer to the current state, not to pre-2023 doctrine.
 
 ## Instructions
 
@@ -38,7 +44,7 @@ Israeli law is organized by area:
 | Real Estate | Land Law 1969, Planning Law 1965 | Chok HaMikrkain |
 | Corporate | Companies Law 1999 | Chok HaChevarot |
 | Consumer | Consumer Protection Law 1981 (with multiple amendments including recent updates for digital commerce) | Chok Haganat HaTzarchan |
-| Privacy | Privacy Protection Law 1981 (last major reform: Amendment 13, in force August 14, 2025: independent Privacy Protection Authority enforcement, mandatory DPO triggers, 72-hour breach notification, statutory damages up to NIS 100,000) | Chok Haganat HaPratiut |
+| Privacy | Privacy Protection Law 1981 (last major reform: Amendment 13, in force August 14, 2025: independent Privacy Protection Authority enforcement; mandatory DPO triggers with a compliance grace period that ended 2025-10-31; "prompt" PPA notification of severe security incidents (the statute does NOT use the GDPR 72-hour wording); administrative fines on controllers in the NIS 1,000-320,000 per-offense range, doubled in severe cases, with a separate per-data-subject statutory-damages component up to NIS 100,000 without proof of harm. First published enforcement: HOT, NIS 70,000) | Chok Haganat HaPratiut |
 | Torts | Torts Ordinance (New Version) | Pkudat HaNezikin |
 | Family | Various personal status laws | Dinei Mishpacha |
 | Tax | Income Tax Ordinance, VAT Law | Pkudat Mas Hachnasa, Chok Maam |
@@ -107,6 +113,10 @@ Result: Compare options: Chevra Baam (Ltd company), Shutfut (partnership), Osek 
 - Kol Zchut (All Rights) is the authoritative free legal information wiki in Israel, not Wikipedia. Agents may link to generic sources instead of kol-zchut.org.il for Israeli rights information.
 - Israeli court decisions are cited by case number and court (e.g., "bagatz 1234/05"), not by party names as in US law. Agents may generate incorrect citation formats.
 - Many Israeli laws from the British Mandate era (pkudot) are still in force. Agents may assume pre-1948 legislation is obsolete when it is not.
+- The 2024-01-01 HCJ judgment had TWO separate votes. The 8-7 vote struck down the reasonableness amendment. A separate (larger) majority (12-3 / 13-2 depending on the sub-question) held that HCJ has authority to strike down Basic Laws in narrow circumstances. Agents routinely conflate the two and cite "8-7" for the Basic-Laws-review authority point. Cite each holding to its own count.
+- Contract-interpretation doctrine in Israel shifted with the Apropim reversal (2025-2026); pre-Apropim case law that treated subjective intent as co-equal with text is no longer the safe default. Verify before relying on older contract-interpretation precedent.
+- Status of the 2025 Judicial Selection Committee reform: the law passed Knesset on 2025-03-27 but does NOT take effect until the next Knesset is sworn in after the October 2026 elections. Treat current committee composition as unchanged when answering questions about who appoints judges today.
+- Several 2026 "judicial-overhaul-redux" bills (AG split into Prosecutor General + Government Representative; ministerial legal advisers reporting to political DGs; Mahash politicization; Civil Service Commissioner appointment without competition) are MID-PROCESS. Do not present them as enacted law.
 
 ## Reference Links
 

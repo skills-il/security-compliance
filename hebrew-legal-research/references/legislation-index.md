@@ -162,8 +162,11 @@ multiple separate statutes:
 
 ### Privacy Protection Law 1981
 - Hebrew: Chok Haganat HaPratiut
-- Last major reform: **Amendment 13, in force August 14, 2025**, granting the Privacy Protection Authority independent enforcement authority including administrative fines, cease-processing orders, mandatory deletion, and an expanded DPO regime; introduced 72-hour PPA breach notification and statutory damages up to NIS 100,000 without proof of harm.
-- See detailed coverage in israeli-privacy-shield skill
+- Last major reform: **Amendment 13, in force August 14, 2025**, granting the Privacy Protection Authority independent enforcement authority including administrative fines, cease-processing orders, mandatory deletion, and an expanded DPO regime. The DPO compliance grace period ended **2025-10-31**.
+- Breach notification: the statute requires **"prompt" notification to the PPA of a "severe security incident"** — it does NOT adopt the GDPR 72-hour wording. Verify the exact statutory phrasing before quoting a specific deadline.
+- Sanctions: per-offense administrative fines on controllers in the **NIS 1,000-320,000** range, doubled in severe cases (up to ~NIS 640,000 per offense), with a separate per-data-subject statutory-damages component of **up to NIS 100,000 without proof of harm**. The most serious cases carry a **5% of annual turnover** cap. First published enforcement action under Amendment 13: **HOT, NIS 70,000**.
+- 2026 PPA enforcement priorities (from PPA work plan): municipalities, e-commerce platforms, popular consumer apps, genetic-testing labs, after-school programs (tzaharonim).
+- See detailed coverage in israeli-privacy-shield skill.
 
 ## Tax Law
 
@@ -196,3 +199,30 @@ multiple separate statutes:
 
 ### Freedom of Information Law 1998
 - Hebrew: Chok Chofesh HaMeida
+
+## Judicial Reform Track (2024-2026)
+
+This is not a single statute but a connected legislative and doctrinal track that any 2026 Israeli legal research touches. Treat the items below as a status snapshot, not as background; details change month to month.
+
+### Reasonableness clause (struck down)
+- HCJ judgment of **2024-01-01**, two distinct holdings in the same case:
+  - **8-7 majority** struck down the July 2023 amendment to Basic Law: The Judiciary that barred courts from applying extreme-unreasonableness review to elected officials. Doctrine of extreme unreasonableness restored.
+  - **Larger majority (12-3 / 13-2 depending on the sub-question)** held that HCJ has authority to strike down Basic Laws in narrow circumstances. This is a separate, more foundational ruling.
+- Citation hygiene: do not cite "8-7" for the Basic-Laws-review authority point.
+
+### Judicial Selection Committee reform (passed, not yet in force)
+- Knesset law of **2025-03-27**.
+- Activation: takes effect **only when the next Knesset is sworn in after the October 2026 elections**. Current committee composition is unchanged.
+- An **11-justice HCJ panel** is scheduled to hear consolidated petitions on **June 21, 2026** (Bar Association, Yesh Atid MKs, Movement for Quality Government, Israeli Democracy Guard).
+- As of 2026-04-27, the Attorney General officially declared the Justice Minister in continuing violation of the law for not convening the current selection committee.
+
+### Pending 2026 bills ("Judicial Overhaul Redux")
+None of the items below are enacted law yet; track their status before citing.
+- **AG split bill**: separates the Attorney General role into a Prosecutor General and a Government Representative to Courts. Both would be political appointments.
+- **Ministerial legal advisers**: bill subordinating ministry legal advisers to political directors-general rather than the AG.
+- **Mahash (Police Internal Investigations Department)**: bill giving the Justice Minister control over the unit that investigates police officers.
+- **Civil Service Commissioner**: bill allowing political appointment without the existing competitive selection process.
+- **Public Complaints Commissioner on Judges, Amendment 6 (תשפ"ה-2025)**: in pipeline.
+
+### Doctrinal shifts to flag
+- **Apropim doctrine reversal (2025-2026)**: contract-interpretation doctrine shifted; pre-Apropim case law that treated subjective intent as co-equal with text is no longer the safe default.
