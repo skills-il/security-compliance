@@ -1,0 +1,399 @@
+{
+  "schemaVersion": "1.0",
+  "skill": "israeli-privacy-shield",
+  "generated_at": "2026-05-18T00:00:00Z",
+  "claims": [
+    {
+      "claim_id": "ppl-1981",
+      "claim": "The Protection of Privacy Law, 5741-1981 is Israel's primary data protection legislation",
+      "source_url": "https://www.gov.il/he/pages/the_privacy_protection_law",
+      "raw_snippet": "חוק הגנת הפרטיות, התשמ\"א-1981 — Protection of Privacy Law, 5741-1981",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/privacy-law-requirements.md"]
+    },
+    {
+      "claim_id": "amendment-13-effective-date",
+      "claim": "Amendment 13 to the Israeli Privacy Protection Law took effect on August 14, 2025",
+      "source_url": "https://iapp.org/news/a/israel-marks-a-new-era-in-privacy-law-amendment-13-ushers-in-sweeping-reform",
+      "raw_snippet": "Amendment 13 came into force on August 14, 2025, marking the most significant reform of Israeli privacy law since 1981",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/privacy-law-requirements.md"]
+    },
+    {
+      "claim_id": "amendment-13-approval",
+      "claim": "Amendment 13 was approved by the Knesset on August 5, 2024",
+      "source_url": "https://iapp.org/news/a/israel-marks-a-new-era-in-privacy-law-amendment-13-ushers-in-sweeping-reform",
+      "raw_snippet": "The Knesset passed Amendment 13 on August 5, 2024, with a one-year transition period before entry into force on August 14, 2025",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["references/privacy-law-requirements.md"]
+    },
+    {
+      "claim_id": "security-regulations-2017",
+      "claim": "The Privacy Protection (Data Security) Regulations 2017 define three security levels (basic, medium, high)",
+      "source_url": "https://www.gov.il/en/departments/the_privacy_protection_authority",
+      "raw_snippet": "Privacy Protection (Data Security) Regulations 2017 — tiered security framework: basic, medium, high based on database size and data sensitivity",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/privacy-law-requirements.md"]
+    },
+    {
+      "claim_id": "high-level-pen-test-18-months",
+      "claim": "High-level databases require a security risk assessment and penetration test at least once every 18 months",
+      "source_url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/israel",
+      "raw_snippet": "high-level databases must undergo a security risk assessment and a penetration test at least once every 18 months, with documented findings and remediation",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/privacy-law-requirements.md"]
+    },
+    {
+      "claim_id": "registration-10000-data-brokers",
+      "claim": "Under Amendment 13, registration is required only for public bodies and data brokers with 10,000+ individuals",
+      "source_url": "https://iapp.org/news/a/israel-marks-a-new-era-in-privacy-law-amendment-13-ushers-in-sweeping-reform",
+      "raw_snippet": "Registration is narrowed to public bodies and to databases that contain personal data on more than 10,000 individuals where the primary purpose is collecting and disclosing personal data to third parties as a business or for value",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/privacy-law-requirements.md"]
+    },
+    {
+      "claim_id": "notification-100000-sensitive-30-days",
+      "claim": "Controllers of databases holding especially-sensitive data on more than 100,000 individuals must notify the PPA within 30 days",
+      "source_url": "https://iapp.org/news/a/israel-marks-a-new-era-in-privacy-law-amendment-13-ushers-in-sweeping-reform",
+      "raw_snippet": "A controller of a database not subject to registration but holding especially-sensitive data on more than 100,000 individuals must submit a notification to the PPA within 30 days",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/privacy-law-requirements.md"]
+    },
+    {
+      "claim_id": "high-level-authorized-100-users",
+      "claim": "High security level applies when authorized access is granted to more than 100 people",
+      "source_url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/israel",
+      "raw_snippet": "intermediate-level databases that grant authorized access to more than 100 people fall under the high security level",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/privacy-law-requirements.md"]
+    },
+    {
+      "claim_id": "high-level-100k-records",
+      "claim": "High security level applies to databases with 100,000+ records",
+      "source_url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/israel",
+      "raw_snippet": "databases with 100,000+ records fall under the high security level",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/privacy-law-requirements.md"]
+    },
+    {
+      "claim_id": "medium-level-10000-records",
+      "claim": "Medium security level applies to databases with 10,000+ records or containing sensitive data",
+      "source_url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/israel",
+      "raw_snippet": "Medium security level applies to databases with 10,000+ records or those containing sensitive data",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/privacy-law-requirements.md"]
+    },
+    {
+      "claim_id": "breach-72-hours",
+      "claim": "Amendment 13 requires notification to the PPA within 72 hours of discovering a reportable breach",
+      "source_url": "https://iapp.org/news/a/israel-marks-a-new-era-in-privacy-law-amendment-13-ushers-in-sweeping-reform",
+      "raw_snippet": "Amendment 13 introduced a 72-hour deadline for notifying the Privacy Protection Authority of a reportable breach (measured from discovery)",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/privacy-law-requirements.md"]
+    },
+    {
+      "claim_id": "dpo-grace-october-2025",
+      "claim": "The PPA announced it would not enforce the DPO appointment obligation until October 31, 2025",
+      "source_url": "https://iapp.org/news/a/israel-marks-a-new-era-in-privacy-law-amendment-13-ushers-in-sweeping-reform",
+      "raw_snippet": "The PPA announced it would not enforce the appointment obligation until October 31, 2025",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/privacy-law-requirements.md"]
+    },
+    {
+      "claim_id": "amendment-13-fine-3-2m",
+      "claim": "Administrative fines under Amendment 13 can reach approximately NIS 3.2 million for serious violations",
+      "source_url": "https://www.ai-law.co.il/en/post/israel-s-privacy-protection-authority-steps-up-enforcement-first-fines-under-amendment-13",
+      "raw_snippet": "Administrative fines under Amendment 13 reach approximately NIS 3.2 million for serious violations",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/privacy-law-requirements.md"]
+    },
+    {
+      "claim_id": "amendment-13-per-violation-fines",
+      "claim": "Per-violation fines under Amendment 13 range from NIS 1,000 to NIS 320,000, doubled to NIS 640,000 in severe cases",
+      "source_url": "https://www.recordinglaw.com/world-laws/world-data-privacy-laws/israel-data-privacy-laws/",
+      "raw_snippet": "Fines range from NIS 1,000 (1,000 ש\"ח) to NIS 320,000 (320,000 ש\"ח) per offense, but can be doubled to NIS 640,000 (640,000 ש\"ח) in severe cases",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md"]
+    },
+    {
+      "claim_id": "per-data-subject-component-100",
+      "claim": "For large-scale violations, fines can include a per-data-subject component of up to NIS 100 per individual",
+      "source_url": "https://www.recordinglaw.com/world-laws/world-data-privacy-laws/israel-data-privacy-laws/",
+      "raw_snippet": "For large-scale violations, fines can include a per-data-subject component of up to NIS 100 (100 ש\"ח) per individual whose data is in the affected database",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md"]
+    },
+    {
+      "claim_id": "hot-70000-fine",
+      "claim": "HOT Telecommunications was fined NIS 70,000 in one of the first enforcement actions under Amendment 13",
+      "source_url": "https://www.ai-law.co.il/en/post/israel-s-privacy-protection-authority-steps-up-enforcement-first-fines-under-amendment-13",
+      "raw_snippet": "The PPA fined HOT Telecommunication NIS 70,000 (70,000 ש\"ח) in one of its first enforcement actions under Amendment 13",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "criminal-5-years",
+      "claim": "Penalties under Israeli privacy law include criminal liability of up to 5 years imprisonment for severe violations",
+      "source_url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/israel",
+      "raw_snippet": "Penalties under the Privacy Protection Law include criminal liability of up to 5 years imprisonment for severe violations, in addition to administrative fines",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/privacy-law-requirements.md"]
+    },
+    {
+      "claim_id": "dsr-section-13-access",
+      "claim": "Section 13 of the Privacy Protection Law grants individuals the right to inspect personal data held about them",
+      "source_url": "https://resourcehub.bakermckenzie.com/en/resources/global-data-and-cyber-handbook/emea/israel/topics/information-requirements-data-subject-rights-accountability-and-governance",
+      "raw_snippet": "Every individual is entitled under Section 13 / סעיף 13 of the Privacy Protection Law to inspect personal data held about them in a database, in Hebrew, English, or Arabic",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "dsr-section-14-correction",
+      "claim": "Section 14 of the Privacy Protection Law grants the right to correct inaccurate personal data",
+      "source_url": "https://resourcehub.bakermckenzie.com/en/resources/global-data-and-cyber-handbook/emea/israel/topics/information-requirements-data-subject-rights-accountability-and-governance",
+      "raw_snippet": "Section 14 / סעיף 14 grants data subjects the right to request correction or deletion of inaccurate, incomplete, unclear, or out-of-date personal data",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "dsr-30-day-response",
+      "claim": "Controllers must respond to a data subject access or correction request within 30 days under the Privacy Protection Regulations",
+      "source_url": "https://resourcehub.bakermckenzie.com/en/resources/global-data-and-cyber-handbook/emea/israel/topics/information-requirements-data-subject-rights-accountability-and-governance",
+      "raw_snippet": "Controllers must respond to inspection and correction requests within 30 days; failure to comply allows the data subject to appeal to court",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "section-17f-direct-mail-removal",
+      "claim": "Section 17F gives data subjects the right to be removed from direct-mail databases",
+      "source_url": "https://resourcehub.bakermckenzie.com/en/resources/global-data-and-cyber-handbook/emea/israel/topics/information-requirements-data-subject-rights-accountability-and-governance",
+      "raw_snippet": "Section 17F / סעיף 17F entitles data subjects to demand removal from a direct-mail database; the controller must comply and notify within 30 days",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "section-8c-amendment-13-withdrawal",
+      "claim": "Section 8C provides for withdrawal of consent that is as easy as granting it",
+      "source_url": "https://herzoglaw.co.il/en/news-and-insights/amendment-no-13-to-the-israeli-privacy-protection-law/",
+      "raw_snippet": "Amendment 13 Section 8C: withdrawal of consent must be as easy as granting it",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "ppa-dpia-ai-guidance",
+      "claim": "The PPA recommends conducting a DPIA before deploying AI systems that process data on a wide scale, include sensitive data, or pose high risk",
+      "source_url": "https://www.gornitzky.com/privacy-in-artificial-intelligence-systems-guidelines-of-the-israeli-privacy-protection-authority/",
+      "raw_snippet": "The PPA recommends that organizations should perform a DPIA before deploying AI systems, especially systems that process data on a wide scale, include sensitive data, or that pose high risk",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "ppo-conducts-dpia",
+      "claim": "When a Privacy Protection Officer is appointed under Amendment 13, the PPO is the natural owner of the DPIA process as part of overall compliance monitoring",
+      "source_url": "https://www.gornitzky.com/privacy-in-artificial-intelligence-systems-guidelines-of-the-israeli-privacy-protection-authority/",
+      "raw_snippet": "The PPA describes the DPO/Privacy Protection Officer as the most suitable and skilled figure to address issues related to AI use; DPIA is a recommended best practice under the PPA AI Guidelines, naturally falling within the PPO's compliance-monitoring role",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "legal-capacity-guardianship-1962",
+      "claim": "The Legal Capacity and Guardianship Law, 1962 provides that the legal acts of a minor under 18 may be cancelled without parental consent",
+      "source_url": "https://www.linklaters.com/en/insights/data-protected/data-protected---israel",
+      "raw_snippet": "The Privacy Law does not include specific reference to minors, so consent requirements apply subject to the Legal Capacity and Guardianship Law, 1962, which provides that the legal acts of a minor (a person under 18) may be cancelled if performed without the consent of a parent/guardian",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "biometric-id-law-2009-minors",
+      "claim": "Under the Inclusion of Biometric Means of Identification in Identity Documents and in an Information Database Law, 5770-2009, fingerprints are not collected from applicants under age 12 (only facial photographing is performed)",
+      "source_url": "https://www.nbn.org.il/life-in-israel/government-services/biometric-smart-ids-2/",
+      "raw_snippet": "For applicants under the age of 12, only the process of photographing the facial features will be carried out, and fingerprints will not be scanned (per the biometric ID-card regulations implementing the 5770-2009 Law)",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "ppa-2020-edtech-audit",
+      "claim": "A January 2020 PPA audit on educational websites and applications for minors found defects in 23 of 24 supervised entities",
+      "source_url": "https://www.linklaters.com/en/insights/data-protected/data-protected---israel",
+      "raw_snippet": "In January 2020, the PPA published findings from an audit on educational websites and applications designed for minors; the audit findings indicated defects in 23 of the 24 supervised entities",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "planet49-cjeu-c-673-17",
+      "claim": "CJEU Planet49 (C-673/17) is the binding precedent that consent must be explicit opt-in, not pre-checked",
+      "source_url": "https://curia.europa.eu/juris/document/document.jsf?docid=218462",
+      "raw_snippet": "Case C-673/17 Planet49 — consent must be specific, informed, unambiguous and freely given; pre-ticked checkboxes are insufficient",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "gdpr-article-7-2",
+      "claim": "GDPR Article 7(2) requires granularity for distinct purposes of processing",
+      "source_url": "https://gdpr-info.eu/art-7-gdpr/",
+      "raw_snippet": "Article 7(2) GDPR — if the data subject's consent is given in the context of a written declaration which also concerns other matters, the request for consent shall be presented in a manner which is clearly distinguishable from the other matters",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "gdpr-article-7-3",
+      "claim": "GDPR Article 7(3) requires that withdrawal of consent be as easy as granting it",
+      "source_url": "https://gdpr-info.eu/art-7-gdpr/",
+      "raw_snippet": "Article 7(3) GDPR — It shall be as easy to withdraw as to give consent",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "gdpr-article-22-automated",
+      "claim": "GDPR Article 22 governs automated decision-making, including profiling",
+      "source_url": "https://gdpr-info.eu/art-22-gdpr/",
+      "raw_snippet": "Article 22 GDPR — Automated individual decision-making, including profiling",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "gdpr-article-34",
+      "claim": "GDPR Article 34 requires notification to data subjects of high-risk breaches",
+      "source_url": "https://gdpr-info.eu/art-34-gdpr/",
+      "raw_snippet": "Article 34 GDPR — Communication of a personal data breach to the data subject, where the breach is likely to result in a high risk to the rights and freedoms of natural persons",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["references/privacy-law-requirements.md"]
+    },
+    {
+      "claim_id": "gdpr-article-37",
+      "claim": "GDPR Article 37 governs the designation of a Data Protection Officer",
+      "source_url": "https://gdpr-info.eu/art-37-gdpr/",
+      "raw_snippet": "Article 37 GDPR — Designation of the data protection officer",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["references/privacy-law-requirements.md"]
+    },
+    {
+      "claim_id": "gdpr-article-4-11-consent",
+      "claim": "GDPR Article 4(11) defines consent and is the basis for treating dismissal as refusal",
+      "source_url": "https://gdpr-info.eu/art-4-gdpr/",
+      "raw_snippet": "Article 4(11) GDPR — 'consent' of the data subject means any freely given, specific, informed and unambiguous indication of the data subject's wishes by which he or she, by a statement or by a clear affirmative action, signifies agreement",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "gdpr-recital-42",
+      "claim": "GDPR Recital 42 requires that consent be given by a clear affirmative act, with Reject and Accept carrying equal weight",
+      "source_url": "https://gdpr-info.eu/recitals/no-42/",
+      "raw_snippet": "Recital 42 — Consent should be given by a clear affirmative act establishing a freely given, specific, informed and unambiguous indication of the data subject's agreement",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "ppa-website",
+      "claim": "The Privacy Protection Authority website is at gov.il",
+      "source_url": "https://www.gov.il/en/departments/the_privacy_protection_authority",
+      "raw_snippet": "Privacy Protection Authority (PPA) — official page at https://www.gov.il/en/departments/the_privacy_protection_authority",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/privacy-law-requirements.md"]
+    },
+    {
+      "claim_id": "amendment-13-overview-page",
+      "claim": "Amendment 13 has a dedicated overview page on gov.il",
+      "source_url": "https://www.gov.il/he/pages/13_amendment",
+      "raw_snippet": "תיקון 13 לחוק הגנת הפרטיות — gov.il overview page covering the reform",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "amendment-13-professional-guide",
+      "claim": "The PPA published a professional guide for Amendment 13 implementation",
+      "source_url": "https://www.gov.il/he/pages/guide_tikon13_professional",
+      "raw_snippet": "מדריך מקצועי לתיקון 13 — detailed implementation guidance for controllers and processors",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "amendment-13-faq",
+      "claim": "The PPA published a Q&A page for Amendment 13",
+      "source_url": "https://www.gov.il/he/pages/tikun13_qa",
+      "raw_snippet": "שאלות ותשובות תיקון 13 — common questions on registration, DPO, breach reporting",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "form-1-historical",
+      "claim": "Form 1 (טופס 1) was the historical pre-Amendment-13 PPA database registration form using a five-trigger model that no longer applies",
+      "source_url": "https://herzoglaw.co.il/en/news-and-insights/amendment-no-13-to-the-israeli-privacy-protection-law/",
+      "raw_snippet": "The old Form 1 five-trigger registration model (טופס 1) is no longer applicable under Amendment 13; registration is narrowed to public bodies and data brokers",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/privacy-law-requirements.md"]
+    },
+    {
+      "claim_id": "gdpr-4-percent-fine",
+      "claim": "GDPR administrative fines can reach up to 4% of global annual revenue",
+      "source_url": "https://gdpr-info.eu/art-83-gdpr/",
+      "raw_snippet": "Article 83(5) GDPR — administrative fines up to 20 000 000 EUR, or in the case of an undertaking, up to 4% of the total worldwide annual turnover of the preceding financial year, whichever is higher",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/privacy-law-requirements.md"]
+    },
+    {
+      "claim_id": "gdpr-section-22-he",
+      "claim": "סעיף 22 GDPR (Article 22) covers automated decision-making and profiling",
+      "source_url": "https://gdpr-info.eu/art-22-gdpr/",
+      "raw_snippet": "סעיף 22 GDPR לקבלת החלטות אוטומטית — Automated individual decision-making, including profiling",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL_HE.md"]
+    },
+    {
+      "claim_id": "gdpr-section-4-he",
+      "claim": "סעיף 4 GDPR (Article 4) contains the consent definitions, including Article 4(11)",
+      "source_url": "https://gdpr-info.eu/art-4-gdpr/",
+      "raw_snippet": "סעיף 4(11) של GDPR — definition of consent: any freely given, specific, informed and unambiguous indication",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL_HE.md"]
+    },
+    {
+      "claim_id": "gdpr-section-7-he",
+      "claim": "סעיף 7 GDPR (Article 7) covers conditions for consent, including granularity (7(2)) and withdrawal (7(3))",
+      "source_url": "https://gdpr-info.eu/art-7-gdpr/",
+      "raw_snippet": "סעיף 7(2) של GDPR דורש גרנולריות; סעיף 7(3) דורש שביטול יהיה קל כמו האישור",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL_HE.md"]
+    },
+    {
+      "claim_id": "gdpr-section-8-he",
+      "claim": "סעיף 8C of Amendment 13 mirrors the GDPR rule that consent withdrawal must be as easy as granting",
+      "source_url": "https://herzoglaw.co.il/en/news-and-insights/amendment-no-13-to-the-israeli-privacy-protection-law/",
+      "raw_snippet": "סעיף 8C של תיקון 13 דורש שביטול הסכמה יהיה קל כמו מתן ההסכמה",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL_HE.md"]
+    },
+    {
+      "claim_id": "clarity-script-url",
+      "claim": "Microsoft Clarity script is loaded from https://www.clarity.ms/tag/{projectId}",
+      "source_url": "https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-setup",
+      "raw_snippet": "Microsoft Clarity tracking script URL: https://www.clarity.ms/tag/{projectId} — referenced in the consent-banner sample showing how to gate it",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["references/consent-banner-implementation.md"]
+    },
+    {
+      "claim_id": "ppa-website-he",
+      "claim": "The Hebrew-localized PPA page on gov.il is the same authority as the English page",
+      "source_url": "https://www.gov.il/he/departments/privacy_authority",
+      "raw_snippet": "הרשות להגנת הפרטיות — gov.il Hebrew landing page for the Privacy Protection Authority",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["scripts/compliance_checker.py"]
+    },
+    {
+      "claim_id": "gdpr-article-35-dpia",
+      "claim": "GDPR Article 35 / סעיף 35 mandates Data Protection Impact Assessment for high-risk processing",
+      "source_url": "https://gdpr-info.eu/art-35-gdpr/",
+      "raw_snippet": "סעיף 35 GDPR / Article 35 — Data protection impact assessment: where a type of processing is likely to result in a high risk to the rights and freedoms of natural persons, the controller shall carry out an assessment",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "yoursite-placeholder",
+      "claim": "yoursite/en is a documentation placeholder in the consent-banner verification checklist",
+      "source_url": "https://www.rfc-editor.org/rfc/rfc2606.html",
+      "raw_snippet": "RFC 2606 reserves example/placeholder hostnames; 'https://yoursite/en' here is a documentation placeholder for the reader's own host, not a live URL",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": ["references/consent-banner-implementation.md"]
+    }
+  ]
+}

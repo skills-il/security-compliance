@@ -70,8 +70,10 @@ For each assessed entity, verify:
 - [ ] Security measures per level (basic/medium/high)
 - [ ] Data processing agreements with processors
 - [ ] Cross-border transfer safeguards
-- [ ] Breach response plan
-- [ ] Data subject request handling process
+- [ ] Breach response plan with notification template
+- [ ] Data subject request workflow (Section 13 access, Section 14 correction, 30-day response)
+- [ ] DPIA process for high-risk processing (large-scale sensitive data, systematic monitoring, AI decisions)
+- [ ] Minors' data policy (parental consent under Capacity and Guardianship Law, ed-tech safeguards)
 - [ ] Employee training
 - [ ] Privacy Protection Officer appointed (if required under Amendment 13)
 - [ ] AI governance policy for automated decision-making (if applicable)
@@ -105,12 +107,84 @@ The PPO is the contact point with the Privacy Protection Authority and is respon
 
 **Enforcement powers and fines.** Amendment 13 significantly expands the Authority's administrative powers:
 - Direct supervisory inspections without prior notice
-- Administrative fines up to approximately NIS 3.2 million for serious violations
+- Per-violation fines from NIS 1,000 up to NIS 320,000, doubled to NIS 640,000 in severe cases
+- Aggregate fines up to approximately NIS 3.2 million for serious violations
+- For large-scale databases, a per-data-subject component of up to NIS 100 per affected individual
 - Ability to issue binding compliance orders
 
 Entities that were previously under the radar of enforcement now face real financial exposure.
 
+**Recent enforcement.** Among the first publicly reported Amendment-13 administrative fines, the PPA imposed a NIS 70,000 fine on HOT Telecommunication. The signal is clear: enforcement is live, not theoretical. Treat the framework as in force, not aspirational.
+
 **What changed for database registration.** Amendment 13 narrowed the registration requirement. Registration with the Authority is now required only for public bodies and databases of 10,000+ individuals whose primary purpose is collecting and disclosing personal data to third parties as a business or for value (data brokers). The broader pre-Amendment requirement for any database with sensitive data no longer applies. Separately, a controller of a database that is not subject to registration but holds especially-sensitive data on more than 100,000 individuals must file a notification with the Authority within 30 days, including the database definition document.
+
+### Step 8: Data Subject Rights (DSR) Workflow
+
+The Privacy Protection Law grants individuals enforceable rights. A controller must have a documented workflow so requests do not slip past the statutory deadline (which is short and judicially enforceable).
+
+**Rights granted by the PPL:**
+
+| Right | Statute | Practical form |
+|-------|---------|----------------|
+| Inspection (access) | Section 13 | Receive a copy of personal data held in the database, in Hebrew, English, or Arabic |
+| Correction | Section 14 | Request correction or deletion of inaccurate, incomplete, unclear, or out-of-date data |
+| Removal from direct-mail database | Section 17F | Demand removal; controller must comply and confirm |
+| Withdrawal of consent | Section 8C (Amendment 13) | Must be as easy as granting consent |
+
+**Response timeline.** Under the Privacy Protection Regulations, controllers must respond to inspection and correction requests **within 30 days**. If the controller fails to respond within 30 days, the data subject may appeal to a Magistrate's Court (this is the fastest enforcement path open to individuals, faster than waiting for PPA enforcement).
+
+**Workflow template:**
+1. **Intake channel** that is published in the privacy policy (email to the DPO, in-app form, or postal address). The PPO is the named contact when one is required under Amendment 13.
+2. **Identity verification** proportionate to the sensitivity (do not over-collect to verify; a national-ID copy is excessive for a basic profile-data request).
+3. **Log the request** with timestamp on receipt. The 30-day clock starts from receipt, not from when the team gets around to it.
+4. **Triage by right type:** access vs correction vs direct-mail removal vs withdrawal. Each has a different operational path.
+5. **Response template in Hebrew, English, or Arabic** as the user chose. Refusals must be reasoned and cite the legal basis.
+6. **Document the response** in the request log. This is your evidence of compliance.
+
+**Refusal grounds (narrow):** refuse inspection only on specific statutory grounds (unjustified trade-secret disclosure, prejudice to an active investigation). Default to disclosure when in doubt.
+
+### Step 9: Data Protection Impact Assessment (DPIA)
+
+A DPIA is a structured pre-processing assessment that documents privacy risks, alternatives considered, and mitigations. The PPL does not contain a GDPR-Article-35-style explicit DPIA mandate, but the PPA's published guidance on AI systems treats DPIA as the recommended best practice for demonstrating compliance. Where a Privacy Protection Officer is appointed under Amendment 13, the PPO is the natural owner of the DPIA process as part of monitoring overall compliance.
+
+**When to conduct a DPIA (PPA AI Guidelines + Amendment 13 framing):**
+- Before deploying AI systems that process data on a wide scale
+- Before deploying AI systems that include sensitive data
+- Before deploying processing that poses high risk to data subjects' rights
+- Before large-scale systematic monitoring of individuals (CCTV at scale, location tracking, behavioral profiling)
+- Before automated decisions affecting individuals (credit, hiring, insurance, fraud detection)
+
+**DPIA contents:**
+1. Description of the processing: purpose, data categories, data sources, retention, recipients
+2. Necessity and proportionality: is each category necessary for the stated purpose?
+3. Risks to data subjects: probability + severity, including bias and discrimination for AI systems
+4. Mitigations: technical (encryption, access controls, minimization) and organizational (training, audit)
+5. Residual risk: what remains after mitigations and whether it is acceptable
+6. Consultation: with the PPO and, for high residual risk, optional prior consultation with the PPA
+7. Sign-off and review cycle (annual or on material change)
+
+Keep DPIAs in the documentation evidence pack. The PPA's unannounced inspection powers under Amendment 13 mean an undocumented DPIA is functionally a missing DPIA.
+
+### Step 10: Minors' and Children's Data
+
+The Privacy Protection Law does not have a dedicated minors' provision, but other statutes and PPA guidance create heightened obligations whenever a controller processes data on individuals under 18.
+
+**Consent rules:**
+- The Legal Capacity and Guardianship Law, 1962 provides that legal acts of a minor (under 18) may be cancelled if performed without parental or guardian consent. Privacy consent obtained from a minor is therefore exposed to retroactive invalidation. Default rule: **obtain parental consent for processing personal data of users under 18**, especially for marketing, analytics, and behavioral profiling.
+- Age verification mechanism matters: a simple "I am 18" checkbox is not a defensible consent record for a children-targeted service.
+
+**Biometric data:**
+- Under the Inclusion of Biometric Means of Identification in Identity Documents and in an Information Database Law, 5770-2009 (the biometric ID-card framework), fingerprints are not collected from applicants under age 12; only facial photographing is performed. Other biometric processing involving minors is subject to heightened restrictions and typically requires both parental and minor consent (for ages where the minor can understand).
+
+**Ed-tech and school services:**
+- The PPA treats schools and ed-tech vendors as high-scrutiny processors. The PPA's January 2020 audit of educational websites and applications for minors found defects in 23 of 24 audited entities. The takeaway: ed-tech is on the enforcement priority list, and "everybody does it this way" is not a defense.
+
+**Practical controls for products with minor users:**
+- Tag minor accounts/profiles in the data inventory.
+- Disable behavioral advertising and cross-site tracking for minor profiles by default.
+- Log parental-consent evidence (timestamp, IP, method).
+- When schools are the controller, the school obtains parental consent; the vendor supports that flow.
+- Offer a parental access/deletion channel and respond within the same 30-day DSR window.
 
 ## GDPR vs Israeli Law Key Differences
 | Aspect | Israeli Law (post Amendment 13) | GDPR |
@@ -429,6 +503,14 @@ The banner you ship is one layer. The other layers, a published privacy policy i
 ### Error: "Unsure about security level"
 Cause: Borderline case between basic/medium/high
 Solution: When in doubt, apply the higher level. The cost difference is small compared to non-compliance risk.
+
+### Error: "Borderline DPO appointment threshold"
+Cause: The 10,000-individual threshold for the data-broker DPO trigger is a count of distinct individuals in the database, but the legal text is silent on counting methodology (active vs historical accounts, deduplicated identities vs raw rows, multi-database aggregation).
+Solution: Count distinct individuals across all linked databases under the same controller, including historical records you have not purged. When the count is near the threshold, appoint a DPO defensively; the cost of appointing is low compared to the cost of an enforcement finding that you were over-threshold and unrepresented. Document the counting methodology so a PPA inspector can audit it.
+
+### Error: "Cross-border transfer to a country without an adequacy decision"
+Cause: The destination country (US, India, Singapore, most non-EU jurisdictions) does not have PPA-recognized adequate protection, so the default ban on transfer applies.
+Solution: Pick the strongest available alternative basis in this order: (1) controller-to-controller or controller-to-processor data transfer agreement with privacy obligations equivalent to Israeli law (Israeli equivalent of GDPR SCCs), (2) explicit informed consent of the data subject naming the destination country and the risks, (3) statutory exception (contract performance, legal proceedings, vital interests). Do NOT rely on "legitimate interest" alone for cross-border transfer; the PPA reads that exception narrowly. Document the basis in the data inventory.
 
 ## Reference Links
 

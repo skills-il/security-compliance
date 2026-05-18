@@ -167,7 +167,8 @@ to the rights and freedoms of affected individuals, including:
 - All security incidents must be documented regardless of whether they cross the
   reporting threshold
 - Documentation must include: timeline, scope, response actions, decisions, lessons learned
-- Retain documentation for at least 5 years
+- Retain documentation per the controller's broader retention policy and consistent with
+  enforcement-defensibility (PPA inspections under Amendment 13 may request historical records)
 
 ## Penalties
 
