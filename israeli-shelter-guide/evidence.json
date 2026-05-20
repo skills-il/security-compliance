@@ -1,0 +1,114 @@
+{
+  "skill": "israeli-shelter-guide",
+  "version": "1.2.0",
+  "verified_at": "2026-05-20",
+  "claims": [
+    {
+      "claim": "Pikud Ha'Oref defines time-to-shelter bands of immediate, 15, 30, 45, 60 seconds, with 90 seconds (1.5 min) as the default for most of Israel.",
+      "source": "Pikud Ha'Oref public guidance via col.org.il / mako and oref.org.il (Pakar Q&A).",
+      "url": "https://www.oref.org.il/12487-17292-he/Pakar.aspx",
+      "evidence_type": "primary"
+    },
+    {
+      "claim": "Tel Aviv and Jerusalem are in the 90-second band; Sderot is in the 15-second band.",
+      "source": "Pikud Ha'Oref zone mapping, summarized by RedAlert / ETA-IL / Masa Israel docs.",
+      "url": "https://www.masaisrael.org/bomb-shelters-near-me-israel/",
+      "evidence_type": "secondary"
+    },
+    {
+      "claim": "Northern border communities adjacent to Lebanon (Kiryat Shmona, Metula, Manara, Yiftach) have effectively zero warning time post-Iron-Swords; the pre-2024 '180 seconds' figure is no longer accurate.",
+      "source": "Pikud Ha'Oref post-Iron-Swords doctrine updates; mako coverage of guideline changes.",
+      "url": "https://www.mako.co.il/news-military/2026_q1/Article-0d1ec2adba2ac91027.htm",
+      "evidence_type": "secondary"
+    },
+    {
+      "claim": "Pikud Ha'Oref publishes a multi-stage warning system for ballistic threats from Iran: ~15-min advance advisory, ~10-min improvement warning, ~90-sec siren+app alert, then explicit release message.",
+      "source": "Davar1 reporting on the new advance-warning + release-message protocol; mako and ynet coverage of the same.",
+      "url": "https://www.davar1.co.il/608137/",
+      "evidence_type": "primary"
+    },
+    {
+      "claim": "For ballistic / Iran / Houthi scenarios, the classic 10-minute post-siren rule does NOT apply; users must wait for an explicit release message.",
+      "source": "ynet coverage of Pikud Ha'Oref app guidance and the dangerous confusion between the 10-minute rule and the ballistic-threat protocol.",
+      "url": "https://www.ynet.co.il/digital/technews/article/h1nnwszfbl",
+      "evidence_type": "primary"
+    },
+    {
+      "claim": "Israeli Standard 4422 requires a minimum mamad floor area of 9 sq m, reinforced concrete walls/ceiling at least 25 cm thick with double rebar, ceiling height 2.5 to 2.8 m, and a 7-cm-thick steel blast door.",
+      "source": "Standards Institution of Israel (IS 4422 parts 1 and 2); architecture.org.il summary.",
+      "url": "https://www.sii.org.il/Docs/4422-2gt1.pdf",
+      "evidence_type": "primary"
+    },
+    {
+      "claim": "Per IS 4422 Amendment 4, the blast wall (קיר הדף) may be omitted if a special blast door is installed AND the mamad is at least 4 m from the building's external wall.",
+      "source": "Kolodny Law summary of IS 4422 amendments; top-migun.co.il standard summary.",
+      "url": "https://www.kolodnylaw.co.il/%D7%91%D7%A0%D7%99%D7%99%D7%AA-%D7%9E%D7%9E%D7%93/",
+      "evidence_type": "secondary"
+    },
+    {
+      "claim": "Private mamad construction requests are submitted via Pikud Ha'Oref's licensing system at oref-rishuy.org.il; an architect, engineer, or building technician serves as orech bakasha; Pikud Ha'Oref responds within 14 days; post-construction certification is due within 45 days per Regulation 30(ד).",
+      "source": "Kol Zchut fast-track guide; Pikud Ha'Oref licensing portal.",
+      "url": "https://www.kolzchut.org.il/he/%D7%9E%D7%A1%D7%9C%D7%95%D7%9C_%D7%9E%D7%94%D7%99%D7%A8_%D7%9C%D7%91%D7%A0%D7%99%D7%99%D7%AA_%D7%9E%D7%9E%22%D7%93_%D7%91%D7%9E%D7%91%D7%A0%D7%99%D7%9D_%D7%A0%D7%9E%D7%95%D7%9B%D7%99%D7%9D_(%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%94%D7%99%D7%AA%D7%A8_%D7%91%D7%A0%D7%99%D7%99%D7%94)",
+      "evidence_type": "primary"
+    },
+    {
+      "claim": "Pikud Ha'Oref's emergency kit (ערכת חירום) recommendation includes water, non-perishable food, lighting/communication/spare batteries, first aid and personal medications, hygiene supplies, ID copies, cash; for families with children add formula, diapers, comfort items; for pet owners add a carrier and food.",
+      "source": "Pikud Ha'Oref preparing-protected-space article (oref.org.il); Hosen East Galilee emergency-kit checklist.",
+      "url": "https://www.oref.org.il/heb/articles/info/preparing-protected-space/1201",
+      "evidence_type": "primary"
+    },
+    {
+      "claim": "Pikud Ha'Oref recommends storing the emergency kit, water, and food permanently inside the mamad in a corner that does not block movement.",
+      "source": "Pikud Ha'Oref Facebook safety video on storing emergency supplies inside the mamad.",
+      "url": "https://www.facebook.com/PikudHaoref/videos/2535587103401430/",
+      "evidence_type": "primary"
+    },
+    {
+      "claim": "Galei Zahal broadcasts at 102.3 FM and Reshet Bet at 95.5 FM; both are recommended emergency frequencies.",
+      "source": "Skill's prior reference text, cross-checked against Israeli broadcasting frequencies in public listings. Treat as widely-published value, not authoritative.",
+      "url": "https://www.oref.org.il",
+      "evidence_type": "secondary"
+    },
+    {
+      "claim": "Pikud Ha'Oref hotline: 1207 in Hebrew, 104 in English and other languages, available 24/7.",
+      "source": "Pikud Ha'Oref public-facing contact info; Modiin municipality and shivat-zion guidelines.",
+      "url": "https://shivat-zion.com/wp-content/uploads/2023/10/GUIDELINES_EN.pdf",
+      "evidence_type": "primary"
+    },
+    {
+      "claim": "Pikud Ha'Oref guidance for being caught in a vehicle during a siren is to pull over, exit the vehicle, and enter a nearby building or stairwell. If no shelter is reachable, move away from the vehicle and lie face down. Tunnels are not formally endorsed as shelter.",
+      "source": "shivat-zion.com olim guidelines (Pikud Ha'Oref derivative); swiss-connection-israel siren guide.",
+      "url": "https://www.swiss-connection-israel.com/important-infos/sirens-sirenen/",
+      "evidence_type": "secondary"
+    },
+    {
+      "claim": "RedAlert (redalert.me / Eladnava) has 3,000,000+ downloads, 4.7-star rating, and dedicated push notification servers; Tzofar / Tzeva Adom (tzevaadom.co.il) provides alerts via app, website, Chrome extension, Telegram, WhatsApp, X. Both are supplements to the official Pikud Ha'Oref app, not replacements.",
+      "source": "RedAlert official site; Tzofar/Tzeva Adom official site; IFCJ Stand For Israel comparison.",
+      "url": "https://redalert.me/index_en.html",
+      "evidence_type": "primary"
+    },
+    {
+      "claim": "Mamad expansion option introduced in 2025 allows up to 12 sq m mamad + 3 sq m bathroom for new construction.",
+      "source": "Skill prior fact, consistent with Israeli planning and migun-il industry coverage of 2025 building-code amendment.",
+      "url": "https://migun-il.org/%D7%91%D7%A0%D7%99%D7%99%D7%AA-%D7%9E%D7%9E%D7%B4%D7%93-2025-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%9F/",
+      "evidence_type": "secondary"
+    },
+    {
+      "claim": "State Comptroller report (January 2026) audits municipal shelter readiness and finds significant gaps; public shelters should not be assumed open or maintained without verification.",
+      "source": "Mevaker HaMedina (State Comptroller of Israel) emergency report, January 2026.",
+      "url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2026/Emergency/2026-Emergency-104-Local.pdf",
+      "evidence_type": "primary"
+    },
+    {
+      "claim": "Accessibility of public shelters is required under the Equal Rights for Persons with Disabilities Law (Hok HaShivyon, 1998) and the 2005 accessibility regulations.",
+      "source": "Israeli civil-rights framework; commonly summarized in Pikud Ha'Oref and municipal guidance.",
+      "url": "https://www.kolzchut.org.il/he/%D7%A0%D7%92%D7%99%D7%A9%D7%95%D7%AA",
+      "evidence_type": "secondary"
+    }
+  ],
+  "open_questions": [
+    "Pikud Ha'Oref has not, in publicly available 2026 guidance, formally defined tunnel safety on highways. We instructed users to exit tunnels as soon as the road allows and find a protected building; if Pikud Ha'Oref publishes formal tunnel guidance in the future, update the Vehicle section.",
+    "Exact filter expiration dates for civilian NBC kits distributed during prior emergencies vary. We instruct users to check manufacturer schedules; an authoritative Pikud Ha'Oref civilian filter-lifecycle document would strengthen this section.",
+    "The fast-track private-mamad permit window relaxed under Iron Swords was originally set to expire in late October 2026. Re-verify on next update cycle whether the relaxation has been extended."
+  ]
+}
