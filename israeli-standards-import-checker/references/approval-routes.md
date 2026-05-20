@@ -51,7 +51,7 @@ Contact: gali_aviv@sii.org.il for eligibility questions.
 ## 5. EU-regulation recognition ("What's Good for Europe is Good for Israel", Amendment 19)
 
 - Effective date: phased from 1 January 2025 through 2028, under Amendment 19 to the Standards Law.
-- Mechanism: optional import route using compliance with an EU regulation/directive that has been adopted into the Israeli Standards Law. About 69 EU regulations have been adopted to date, with more in the pipeline.
+- Mechanism: optional import route using compliance with an EU regulation/directive that has been adopted into the Israeli Standards Law. About 69 EU regulations have been adopted as of early 2026, touching roughly 444 of Israel's 573 mandatory standards. The route is declaratory: customs broker files on Sha'ar Olami, importer keeps the dossier on file. For 2025-2030, enforcement focuses on adopted-directive sections that correspond to parallel SI sections.
 - First wave (January 2025): REACH (chemical safety), the Low-Voltage Directive (LVD), the Electromagnetic Compatibility Directive (EMC) and the Personal Protective Equipment Regulation (PPE).
 - Phased additions: toy safety and food-contact materials from Feb/Mar 2025; a July 2025 wave covering hazardous materials, medical devices, elevators and wheelchair lifts, construction materials, batteries, and cosmetics.
 - Exclusions: food, motor vehicles, items under official fire-safety standards (limited exception for portable firefighting equipment), and AC mains electrical equipment 50-1000 V AC / 75-1500 V DC.
@@ -62,6 +62,13 @@ Contact: gali_aviv@sii.org.il for eligibility questions.
 - Effective date: 4 July 2022.
 - Mechanism: Ministry of Communications accepts an EU DoC or CoC for radio equipment.
 - Scope: covers radio portion; electrical safety and EMC may still need separate handling.
+
+## 7. US-standards recognition (Amendment 21, proposed)
+
+- Status: draft introduced in November 2025; not yet primary legislation as of May 2026.
+- Mechanism (proposed): mirror Amendment 19 but for compliance with US Federal Regulations.
+- Administrative first wave (announced March 2025, expected H2 2026): children's products, bicycles, ladders, lighters, crockery / food packaging, and cleaning materials.
+- Treat US-only documentation as supporting evidence inside an Israeli filing until Amendment 21 is published in Reshumot.
 
 ## Decision order
 

@@ -10,13 +10,17 @@ Takes a product category keyword and returns:
   - typical timeline band
   - fast-track eligibility
 
-Facts baseline: the EU-recognition route runs under Amendment 19 to the
-Standards Law, phased from 2025 through 2028, with about 69 EU regulations
-adopted to date. Import groups are risk-tiered: Group 1 = highest risk
-(model approval + shipment inspection), Group 2 = medium (model certificate
-+ importer declaration), Group 3 = low (importer declaration only),
-Group 4 = industrial use only (no import conformity assessment). The rules
-below are hardcoded; verify the live mandatory-standards list before filing.
+Facts baseline (as of May 2026): the EU-recognition route runs under
+Amendment 19 to the Standards Law, phased from 2025 through 2028, with
+about 69 EU regulations adopted to date covering roughly 444 of Israel's
+573 mandatory standards. A parallel US-standards track (Amendment 21,
+introduced November 2025) is still a draft. Customs filing goes through
+the Sha'ar Olami electronic clearance system. Import groups are
+risk-tiered: Group 1 = highest risk (model approval + shipment
+inspection), Group 2 = medium (model certificate + importer declaration),
+Group 3 = low (importer declaration only), Group 4 = industrial use only
+(no import conformity assessment). The rules below are hardcoded; verify
+the live mandatory-standards list before filing.
 
 Usage:
     python scripts/check_standard.py --list

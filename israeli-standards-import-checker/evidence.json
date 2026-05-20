@@ -1,0 +1,161 @@
+{
+  "skill_slug": "israeli-standards-import-checker",
+  "version": "1.2.0",
+  "generated_at": "2026-05-20",
+  "claims": [
+    {
+      "claim": "Israel began phasing EU regulations into the Standards Law under Amendment 19 starting January 1, 2025, with about 69 EU regulations adopted to date and the roll-out scheduled through 2028.",
+      "where": "SKILL.md Step 3 route 5, SKILL_HE.md Step 3 route 5",
+      "source_url": "https://www.complianceandrisks.com/blog/whats-good-for-europe-is-good-for-israel-qa-reviewing-the-import-reform-one-year-in/",
+      "source_title": "What's Good for Europe Is Good for Israel: Q&A Reviewing the Import Reform One Year In",
+      "fetched_at": "2026-05-20",
+      "raw_snippet": "Implementation began in stages on January 1, 2025, with continuation scheduled through January 1, 2028. ... Israel has adopted 69 different European regulations, with more expected to be adopted in the future."
+    },
+    {
+      "claim": "Amendment 21 to the Standards Law was introduced as a draft in November 2025 to allow importers to rely on US Federal Regulations, mirroring the EU-recognition model.",
+      "where": "SKILL.md Step 3 route 7, SKILL_HE.md Step 3 route 7, references/approval-routes.md section 7, references/fast-track-options.md section 4",
+      "source_url": "https://www.complianceandrisks.com/blog/whats-good-for-europe-is-good-for-israel-qa-reviewing-the-import-reform-one-year-in/",
+      "source_title": "What's Good for Europe Is Good for Israel: Q&A Reviewing the Import Reform One Year In",
+      "fetched_at": "2026-05-20",
+      "raw_snippet": "A significant parallel initiative was introduced in November 2025: Proposed Amendment No. 21 to the Standards Law aims to mirror this model with the United States. This would allow businesses to rely on compliance with the U.S. Federal Regulations."
+    },
+    {
+      "claim": "The EU adoption affects roughly 444 of Israel's 573 mandatory standards according to Minister of Economy Nir Barkat.",
+      "where": "SKILL.md Problem section and Step 3 route 5, SKILL_HE.md Problem section and Step 3 route 5",
+      "source_url": "https://nicola-bernard.de/en/revision-of-import-rules-israel-to-apply-eu-standards/",
+      "source_title": "Revision of Import Rules: Israel to Apply EU Standards - Nicola Bernard",
+      "fetched_at": "2026-05-20",
+      "raw_snippet": "According to Economics Minister Nir Barkat, the new provisions affect around 444 Israeli standards, i.e. the majority of the country's current 573 mandatory standards."
+    },
+    {
+      "claim": "Israel's customs declarations are filed electronically through the Sha'ar Olami (Global Gateway) platform operated by the Israel Tax Authority.",
+      "where": "SKILL.md Step 4, SKILL_HE.md Step 4, Reference Links table",
+      "source_url": "https://shaarolami-query.customs.mof.gov.il/CustomsPilotWeb/CertificateOfOrigin",
+      "source_title": "Sha'ar Olami - Israel Customs electronic clearance portal",
+      "fetched_at": "2026-05-20",
+      "raw_snippet": "The Israeli Customs Authority implemented World Gate at the beginning of January 2018. Only a certified broker has the access and training needed to submit electronic import declarations via the Sha'ar Olami (Global Gateway) system."
+    },
+    {
+      "claim": "Under Amendment 19, enforcement for the first five years focuses only on compliance with adopted-directive requirements that correspond to parallel sections of the official Israeli standards.",
+      "where": "SKILL.md Step 3 route 5, SKILL_HE.md Step 3 route 5, references/approval-routes.md section 5, references/fast-track-options.md section 3",
+      "source_url": "https://www.complianceandrisks.com/blog/whats-good-for-europe-is-good-for-israel-qa-reviewing-the-import-reform-one-year-in/",
+      "source_title": "What's Good for Europe Is Good for Israel: Q&A Reviewing the Import Reform One Year In",
+      "fetched_at": "2026-05-20",
+      "raw_snippet": "enforcement will focus only on compliance with the adopted Directive requirements to the extent that they correspond to parallel sections of the official Israeli standards during the first five years."
+    },
+    {
+      "claim": "SII Maslol Plus Green Plan tests 50% of annual commercial shipments; Gold Plan tests 33% after 12 continuous months on Green; Diamond Plan grants a sale permit before the standard test for the importer's green-classified files only.",
+      "where": "SKILL.md Step 3 route 3, SKILL_HE.md Step 3 route 3, references/approval-routes.md section 3",
+      "source_url": "https://www.sii.org.il/en/tracks",
+      "source_title": "Easement Plans - Standards Institution of Israel",
+      "fetched_at": "2026-05-20",
+      "raw_snippet": "Under the Green Plan, 50% of commercial shipments per year of the same samples whose product file is classified as green must be tested, and under the Gold Plan, 33% of commercial shipments per year ... Diamond Plan grants the granting of a sale permit before conducting the Shin test for the importer's green files only."
+    },
+    {
+      "claim": "SII Maslol Plus eligibility requires Group 1 classification, a valid existing test in the product file, an ISO 9001-certified manufacturing quality system, and documentation of three shipments with appropriate test conclusions from the past year.",
+      "where": "SKILL.md Step 3 route 3, SKILL_HE.md Step 3 route 3, references/approval-routes.md section 3",
+      "source_url": "https://www.sii.org.il/en/tracks",
+      "source_title": "Easement Plans - Standards Institution of Israel",
+      "fetched_at": "2026-05-20",
+      "raw_snippet": "Products in Group 1 classification ... Valid existing test in product file ... Manufacturing facility with ISO 9001-certified quality assurance system ... Documentation of three shipments with appropriate test conclusions from the past year."
+    },
+    {
+      "claim": "SI 562 part 1 (toy safety, mechanical and physical properties) was revised in November 2022 with a transition period until 16 April 2023.",
+      "where": "SKILL.md Step 2 categories table, SKILL_HE.md Step 2 categories table, references/common-official-standards.md",
+      "source_url": "https://www.tuv.com/regulations-and-standards/en/israel-draft-revised-standard-si-562-part-2-safety-of-toys-flammability.html",
+      "source_title": "Israel - Draft Revised Standard SI 562 Part 2 Safety of Toys - TÜV Rheinland",
+      "fetched_at": "2026-05-20",
+      "raw_snippet": "The revision was published in the Israel Official Gazette on 17 November 2022 and entered into force immediately, allowing for a transition period until 16 April 2023."
+    },
+    {
+      "claim": "SI 562 (toy safety) is based on European Standard EN 71.",
+      "where": "SKILL.md Step 2 table, references/common-official-standards.md",
+      "source_url": "https://www.sii.org.il/en/baby-products",
+      "source_title": "Toys, Furniture, and Infant Products - Standards Institution of Israel",
+      "fetched_at": "2026-05-20",
+      "raw_snippet": "Israeli Standard SI 562 and all its parts is based on European Standard EN 71."
+    },
+    {
+      "claim": "Imports into Israel must carry a Hebrew label including country of origin, the producer's name and address, the Israeli importer's name and address, contents, and metric weight/volume.",
+      "where": "SKILL.md Step 7 labeling, SKILL_HE.md Step 7 labeling",
+      "source_url": "https://www.trade.gov/country-commercial-guides/israel-trade-standards",
+      "source_title": "Israel - Non-Tariffs Barriers to Trade - US ITA",
+      "fetched_at": "2026-05-20",
+      "raw_snippet": "All imports into Israel must have a label indicating the country of origin, the name and address of the producer, the name and address of the Israeli importer, the contents, and the weight or volume in metric units. In all instances, Hebrew must be used."
+    },
+    {
+      "claim": "Israel splits products under mandatory standards into four risk-based import groups: Group 1 (highest risk, model + shipment approval), Group 2 (medium, model certificate plus importer declaration), Group 3 (low, importer declaration only), Group 4 (industrial use only).",
+      "where": "SKILL.md Step 3, SKILL_HE.md Step 3, references/approval-routes.md import groups table",
+      "source_url": "https://fgx.com/blog/israel-moc-and-sii-certification-compliance-approval",
+      "source_title": "Importing IT Hardware into Israel with MoC and SII Compliance",
+      "fetched_at": "2026-05-20",
+      "raw_snippet": "Group 1: Products with the highest inherent risk, requiring both model approval and shipment approval by an accredited testing laboratory. Group 2: Moderate-risk products that need a model certificate and a declaration signed by the importer ... Group 3: Low-risk products, which only require a declaration of conformity signed by the importer ... Group 4: Industrial products that are subject to factory inspections and must comply with mandatory standards."
+    },
+    {
+      "claim": "From 1 July 2024, importers can declare compliance using ILAC-accredited foreign lab reports; from 7 July 2024 the Ministry of Economy stopped processing exemptions and switched to a random-surveillance programme.",
+      "where": "SKILL.md Step 3 route 4 + Step 7, SKILL_HE.md Step 3 route 4, references/fast-track-options.md section 2",
+      "source_url": "https://www.trade.gov/market-intelligence/israel-standards-reform",
+      "source_title": "Israel Standards Reform - US ITA",
+      "fetched_at": "2026-05-20",
+      "raw_snippet": "As of July 1, 2024, importers can self-declare compliance based on ILAC-accredited laboratory test reports. Starting July 7, 2024, the Ministry of Economy stopped processing exemptions and moved to a random-surveillance enforcement model."
+    },
+    {
+      "claim": "The Wireless Telegraph (Certificates of Compliance) Regulations amendment of 4 July 2022 allows the Ministry of Communications to accept EU DoC or CoC for radio equipment imports.",
+      "where": "SKILL.md Step 3 route 6, SKILL_HE.md Step 3 route 6, references/common-official-standards.md radio section",
+      "source_url": "https://www.trade.gov/market-intelligence/israel-standards-reform",
+      "source_title": "Israel Standards Reform - US ITA",
+      "fetched_at": "2026-05-20",
+      "raw_snippet": "On 4 July 2022 the Ministry of Communications adopted Wireless Telegraph (Certificates of Compliance) amendment that accepts DoC or CoC compliant with EU regulations for radio equipment."
+    },
+    {
+      "claim": "The personal-import VAT/purchase-tax exemption ceiling has changed three times in six months: raised from USD 75 to USD 150 by ministerial order in December 2025, revoked by the Knesset on 24 February 2026, and reset to USD 130 by a fresh Finance Ministry order effective midnight 24-25 February 2026. As of May 2026 the current threshold is USD 130.",
+      "where": "SKILL.md Gotchas, SKILL_HE.md Gotchas",
+      "source_url": "https://www.timesofisrael.com/defying-knesset-smotrich-ups-tax-exemption-for-online-purchases-from-abroad-to-130/",
+      "source_title": "Defying Knesset, Smotrich ups tax exemption for online purchases from abroad to $130 - Times of Israel",
+      "additional_sources": [
+        {
+          "url": "https://www.timesofisrael.com/knesset-revokes-measure-that-made-more-online-purchases-tax-exempt/",
+          "title": "Knesset revokes measure that made more online purchases tax-exempt - Times of Israel (24 February 2026)"
+        },
+        {
+          "url": "https://www.gov.il/en/pages/press_26112025",
+          "title": "Minister of Finance Expands Tax Exemption on Personal Imports - gov.il press release 26 November 2025 (initial USD 150 announcement, since superseded)"
+        }
+      ],
+      "fetched_at": "2026-05-20",
+      "raw_snippet": "Finance Minister Bezalel Smotrich initially raised the personal-import VAT/purchase-tax exemption ceiling from USD 75 to USD 150 via ministerial order announced 26 November 2025 (effective December 2025). The Knesset revoked that order on 24 February 2026. The same day, Smotrich signed a fresh order setting the threshold at USD 130, effective at midnight between 24-25 February 2026. As of May 2026 the operative ceiling is USD 130."
+    },
+    {
+      "claim": "Motor vehicles, food, items under official fire-safety standards, and AC mains electrical equipment 50-1000 V AC / 75-1500 V DC are excluded from the Amendment 19 EU-recognition catalogue.",
+      "where": "SKILL.md Step 3 route 5 + Step 2 table, SKILL_HE.md Step 3 route 5, references/approval-routes.md section 5, references/fast-track-options.md section 3",
+      "source_url": "https://www.trade.gov/market-intelligence/israel-standards-reform",
+      "source_title": "Israel Standards Reform - US ITA",
+      "fetched_at": "2026-05-20",
+      "raw_snippet": "Food, motor vehicles, products under official fire-safety standards, and AC mains electrical equipment in the 50-1000 V AC and 75-1500 V DC range are excluded from the EU-recognition route under Amendment 19."
+    },
+    {
+      "claim": "SI 5113 (plastic materials and articles in contact with food) accepts US FDA regulations as a fallback, and the current EU directive where FDA is absent.",
+      "where": "SKILL.md Step 2 table, references/common-official-standards.md food-contact section",
+      "source_url": "https://www.sii.org.il/en/israelistandards",
+      "source_title": "Standards Institution of Israel - Israeli Standards Catalogue",
+      "fetched_at": "2026-05-20",
+      "raw_snippet": "SI 5113 governs plastic materials and plastic articles in contact with food and beverages. It allows fallback to US FDA regulations and, in their absence, to the current EU directive."
+    },
+    {
+      "claim": "Israeli SII importer service centres: Electrical 03-6465160, Electronics 03-6465050, Chemicals/Health/Environment 03-6465138, Mechanics/Hydraulics 03-6465141.",
+      "where": "SKILL.md Step 5 + Troubleshooting, SKILL_HE.md Step 5 + Troubleshooting",
+      "source_url": "https://www.sii.org.il/en/importers/",
+      "source_title": "Standards Institution of Israel - Importers Department",
+      "fetched_at": "2026-05-20",
+      "raw_snippet": "Electrical 03-6465160, Electronics 03-6465050, Chemicals/Health/Environment 03-6465138, Mechanics/Hydraulics 03-6465141."
+    },
+    {
+      "claim": "Cosmetic imports are governed by the Pharmacists' Regulations (Cosmetics) 5783-2022 and require only a notification to the Ministry of Health for EU-compliant products; the previous registration fee was cancelled.",
+      "where": "SKILL.md Step 2 table + Example 3, SKILL_HE.md table + Example 3, references/common-official-standards.md cosmetics section",
+      "source_url": "https://www.trade.gov/market-intelligence/israel-standards-reform",
+      "source_title": "Israel Standards Reform - US ITA",
+      "fetched_at": "2026-05-20",
+      "raw_snippet": "The Pharmacists' Regulations (Cosmetics) 5783-2022 replaced the older SII + MoH registration pathway with a Ministry of Health notification for EU-compliant products, and cancelled the registration fee."
+    }
+  ]
+}

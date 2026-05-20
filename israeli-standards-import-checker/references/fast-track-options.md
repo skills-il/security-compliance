@@ -25,9 +25,9 @@ This reference summarises when a shortcut applies and when it does not. It cover
 
 ## 3. EU-regulation recognition reform ("What's Good for Europe is Good for Israel", Amendment 19)
 
-- Optional import route: importers may file based on compliance with an EU regulation/directive that has been adopted into the Israeli Standards Law, instead of an Israeli lab file.
-- Legal basis: Amendment 19 to the Standards Law. Adoption is phased from 1 January 2025 through 2028.
-- Scope to date: about 69 EU regulations have been adopted, with more in the pipeline (the route launched with about 42-43 in January 2025 and has expanded since).
+- Optional import route: importers may file based on compliance with an EU regulation/directive that has been adopted into the Israeli Standards Law, instead of an Israeli lab file. Filing is declaratory through the customs broker on the Sha'ar Olami system.
+- Legal basis: Amendment 19 to the Standards Law. Adoption is phased from 1 January 2025 through 2028. For the first five years (2025-2030) enforcement focuses only on the parts of an adopted directive that correspond to parallel sections of the Israeli standard.
+- Scope to date: about 69 EU regulations have been adopted as of early 2026, touching roughly 444 of Israel's 573 mandatory standards (per Minister Barkat). The route launched with about 42-43 regulations in January 2025 and has expanded since.
 - First wave (January 2025): REACH (chemical safety), Low-Voltage Directive (LVD), Electromagnetic Compatibility Directive (EMC), Personal Protective Equipment Regulation (PPE).
 - Phased expansions: toy safety and food-contact materials from Feb/Mar 2025; a July 2025 wave covering hazardous materials, medical devices, elevators and wheelchair lifts, construction materials, batteries, and cosmetics.
 - Confirm coverage per product via the Commissioner's search engine (https://www.gov.il/en/service/search_official_standards), keyed by SI number.
@@ -37,9 +37,11 @@ This reference summarises when a shortcut applies and when it does not. It cover
   - Items under official fire-safety standards (limited exception for portable firefighting equipment).
   - AC mains electrical equipment 50-1000 V AC / 75-1500 V DC (excluded at the moment).
 
-## 4. US standards recognition (active expansion)
+## 4. US standards recognition (Amendment 21, proposed November 2025)
 
-The Ministry of Economy is actively expanding the import reform to recognize US standards alongside EU standards. Announced in March 2025, professional discussions on adopting the relevant US standards are underway. The first phase is expected in the second half of 2026 and is set to cover children's products (toys, baby furniture, mattresses, pacifiers, feeding accessories, swings, trampolines, children's jewelry), bicycles, ladders, lighters, crockery and food packaging, and cleaning materials. Consult the Ministry of Economy standardization-policy page at https://www.gov.il/en/departments/general/standartization_policy_in_israel_legislation for the current list of eligible categories before relying on it.
+The Ministry of Economy is actively expanding the import reform to recognize US standards alongside EU standards. Minister Nir Barkat announced the policy direction in March 2025, and Amendment 21 to the Standards Law was introduced as a draft in November 2025 to give the model formal legal footing. The amendment proposes that importers be able to file based on compliance with US Federal Regulations, mirroring the Amendment 19 model. As of May 2026 Amendment 21 is not yet primary legislation; treat US-only documentation as supporting evidence inside an Israeli filing until the amendment is published in Reshumot.
+
+The first administrative phase is expected in the second half of 2026 and is set to cover children's products (toys, baby furniture, mattresses, pacifiers, feeding accessories, swings, trampolines, children's jewelry), bicycles, ladders, lighters, crockery and food packaging, and cleaning materials. Consult the Ministry of Economy standardization-policy page at https://www.gov.il/en/departments/general/standartization_policy_in_israel_legislation for the current list of eligible categories before relying on it.
 
 ## How to choose a fast track
 

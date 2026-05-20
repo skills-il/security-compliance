@@ -13,7 +13,7 @@ A takan rishmi (official / mandatory standard) is binding in manufacturing, impo
 | SI 562 part 3 | Migration of chemical elements | EN 71-3 (revised Nov 2022 transition to Apr 2023) |
 | SI 562 part 7 | Finger paints | EN 71-7 |
 
-Toy safety joins the January 2025 EU-recognition catalogue during the phased roll-out that begins February/March 2025.
+Toy safety joined the January 2025 EU-recognition catalogue during the phased roll-out that begins February/March 2025. The upstream EN 71-1 was republished in 2025 (EN 71-1:2025) but Israel had not adopted the new version as of May 2026; importers using the EU route should verify which EN 71-1 vintage the SII catalogue currently accepts.
 
 ## Household and similar electrical appliances
 
