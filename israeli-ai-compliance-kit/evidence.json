@@ -1,0 +1,127 @@
+{
+  "schemaVersion": "1.0",
+  "skill": "israeli-ai-compliance-kit",
+  "generated_at": "2026-05-20T00:00:00Z",
+  "claims": [
+    {
+      "claim_id": "ppl-amendment-13-in-force",
+      "claim": "Amendment 13 to the Privacy Protection Law came into force August 14, 2025; the DPO appointment grace period expired October 31, 2025.",
+      "source_url": "https://iapp.org/news/a/israel-marks-a-new-era-in-privacy-law-amendment-13-ushers-in-sweeping-reform",
+      "raw_snippet": "Amendment 13 was adopted in August 2024 and came into effect in mid-August 2025. A grace period for DPO appointments expired on October 31, 2025.",
+      "fetched_at": "2026-05-20T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "ppa-feb-2026-consent-opinion",
+      "claim": "In February 2026 the PPA published a final binding opinion on consent which states scraping personal data from the internet to train AI models without informed consent is unlawful privacy infringement, and that social media publication is not informed consent for AI training.",
+      "source_url": "https://www.lexology.com/library/detail.aspx?g=e303b2da-16c8-4842-b742-36c5f8a99d23",
+      "raw_snippet": "the PPA published a final opinion in February 2026 clarifying how consent should be obtained and assessed... scraping personal data from the internet to train AI models, without informed consent from the data subject, constitutes unlawful privacy infringement. Even when individuals publish data about themselves or others on social media, this generally cannot be considered informed consent for AI training purposes.",
+      "fetched_at": "2026-05-20T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "ppa-ai-guidance-still-draft",
+      "claim": "PPA's April 2025 AI guidance is still formally in draft as of May 2026; public consultation closed June 5, 2025; PPA enforces it as if statutory.",
+      "source_url": "https://babl.ai/israels-privacy-authority-releases-draft-ai-guidance-for-data-protection-compliance/",
+      "raw_snippet": "the PPA published a new draft directive clarifying how current Israeli law, particularly the Privacy Protection Law, applies to the development, training, and use of AI systems... PPA officials have stated that guidance will be enforced as if it were statutory.",
+      "fetched_at": "2026-05-20T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "eu-ai-act-omnibus-may-2026",
+      "claim": "The Digital Omnibus on AI provisional agreement of May 7, 2026 postponed Annex III high-risk obligations from August 2, 2026 to December 2, 2027 (16-month deferral), and Annex I product-embedded obligations to August 2, 2028. GPAI obligations were not postponed. Formal adoption expected June or July 2026, before August 2, 2026.",
+      "source_url": "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/",
+      "raw_snippet": "On May 7, 2026, the Council of the EU and the European Parliament announced their provisional agreement... Obligations for Annex III systems are postponed from August 2, 2026 to December 2, 2027, a deferral of 16 months. Formal adoption by Parliament and Council is still required.",
+      "fetched_at": "2026-05-20T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "eu-ai-act-omnibus-formal-adoption-timing",
+      "claim": "Both Parliament and Council expected to formally vote between June and July 2026; if formal adoption is not complete before August 2, 2026 the original text applies.",
+      "source_url": "https://www.traverssmith.com/knowledge/knowledge-container/eu-agrees-to-delay-key-ai-act-compliance-deadlines/",
+      "raw_snippet": "Formal adoption by Parliament and Council is still required. If that process is not complete before August 2, 2026, the original unamended text applies... Both the European Parliament and the Council must formally vote to adopt the text, which is expected to take place somewhere between June and July.",
+      "fetched_at": "2026-05-20T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "nist-ir-8596-cyber-ai-profile-status",
+      "claim": "NIST IR 8596 Cyber AI Profile preliminary draft published December 16, 2025; comment period closed January 30, 2026; final expected later in 2026.",
+      "source_url": "https://csrc.nist.gov/pubs/ir/8596/iprd",
+      "raw_snippet": "The NIST NCCoE released the preliminary draft NIST IR 8596, Cybersecurity Framework Profile for Artificial Intelligence (Cyber AI Profile) on December 16, 2025... open for comments until January 30, 2026. Following the 45-day comment period, NIST plans to develop the initial public draft for release in 2026.",
+      "fetched_at": "2026-05-20T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "nist-ai-rmf-critical-infrastructure-profile",
+      "claim": "NIST released a concept note for an AI RMF Profile on Trustworthy AI in Critical Infrastructure on April 7, 2026.",
+      "source_url": "https://www.ispartnersllc.com/blog/nist-ai-rmf-2025-2026-updates-what-you-need-to-know-about-the-latest-framework-changes/",
+      "raw_snippet": "On April 7, 2026, NIST released a concept note for an AI RMF Profile on Trustworthy AI in Critical Infrastructure.",
+      "fetched_at": "2026-05-20T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "nist-genai-profile-600-1",
+      "claim": "NIST Generative AI Profile (NIST-AI-600-1) released July 2024.",
+      "source_url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+      "raw_snippet": "The Generative AI Profile (NIST AI 600-1), released July 2024",
+      "fetched_at": "2026-05-20T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "israel-national-ai-program-may-2025",
+      "claim": "Israel Innovation Authority published the National Program for Artificial Intelligence overview in May 2025, integrating activities across multiple ministries.",
+      "source_url": "https://innovationisrael.org.il/wp-content/uploads/2025/05/AI-National-Program-en-14.5.25.pdf",
+      "raw_snippet": "The National Program for Artificial Intelligence integrates the activities of the various government ministries and agencies responsible for promoting AI in Israel... Ministry of Innovation, Science and Technology, Ministry of Finance, Ministry of Defense's Directorate of Defense Research & Development, Council for Higher Education's Planning and Budgeting Committee, Innovation Authority, as well as the National Digital Agency and the Ministries of Foreign Affairs and Justice.",
+      "fetched_at": "2026-05-20T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "us-israel-ai-partnership-jan-2026",
+      "claim": "In January 2026 the US State Department and Israel announced a Strategic Partnership on Artificial Intelligence, Research, and Critical Technologies.",
+      "source_url": "https://www.state.gov/releases/office-of-the-spokesperson/2026/01/joint-statement-of-the-united-states-and-israel-on-the-launch-of-a-strategic-partnership-on-artificial-intelligence-research-and-critical-technologies",
+      "raw_snippet": "Joint Statement of the United States and Israel on the Launch of a Strategic Partnership on Artificial Intelligence, Research, and Critical Technologies",
+      "fetched_at": "2026-05-20T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "moi-2023-policy-12-principles",
+      "claim": "Ministry of Innovation December 2023 AI policy contains 12 principles (6 regulatory + 6 ethical), published December 14, 2023 jointly with Ministry of Justice.",
+      "source_url": "https://www.gov.il/BlobFolder/policy/ai_2023/en/Israels%20AI%20Policy%202023.pdf",
+      "raw_snippet": "Policy, Regulation and Ethics Principles in the Field of Artificial Intelligence",
+      "fetched_at": "2026-05-20T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "boi-directive-364-nov-2024",
+      "claim": "Bank of Israel Proper Conduct Directive 364 published 18/11/2024 consolidated former Directives 357, 361, 363 into 'Management of IT, Information Security, and Cyber Protection Risks'.",
+      "source_url": "https://www.boi.org.il/en/economic-roles/supervision-and-regulation/proper_conduct/",
+      "raw_snippet": "Directive 364 (2024) IT and cyber",
+      "fetched_at": "2026-05-20T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "eu-ai-act-base-timeline",
+      "claim": "Regulation (EU) 2024/1689 entered into force August 1, 2024; Article 5 prohibitions and Article 4 AI literacy in force February 2, 2025; GPAI obligations in force August 2, 2025 with existing-model grace until August 2, 2027.",
+      "source_url": "https://artificialintelligenceact.eu/implementation-timeline/",
+      "raw_snippet": "Implementation Timeline | EU Artificial Intelligence Act",
+      "fetched_at": "2026-05-20T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "iso-42001-published-dec-2023",
+      "claim": "ISO/IEC 42001:2023 is the first certifiable AI management system standard, published December 2023, with plan-do-check-act structure and 38 controls.",
+      "source_url": "https://www.iso.org/standard/42001",
+      "raw_snippet": "ISO/IEC 42001:2023 AI management system",
+      "fetched_at": "2026-05-20T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "eu-gpai-code-of-practice-july-2025",
+      "claim": "The European AI Office published the final General-Purpose AI Code of Practice on July 10, 2025, endorsed by the Commission and the AI Board on August 1, 2025.",
+      "source_url": "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai",
+      "raw_snippet": "voluntary compliance route for GPAI obligations (July 2025 final, Commission-endorsed August 2025)",
+      "fetched_at": "2026-05-20T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    }
+  ]
+}

@@ -49,7 +49,13 @@ The policy contains 12 principles total, organized into two groups.
 
 For internal governance documentation, map each of your AI system's controls to the 6 ethical principles. This is the closest thing Israel has to a national AI framework, and enterprise customers in Israel are increasingly asking for alignment statements.
 
-The Ministry of Innovation is formalising an AI Policy Coordination Center that is expected to release a Risk Management Toolbox for sector regulators (standardised impact-assessment templates and transparency-report patterns). Track its publications alongside PPA, Bank of Israel, and MoH circulars. A new multi-year national AI strategy is anticipated after 2026, likely emphasising generative AI, LLM security, and environmental impact.
+The Ministry of Innovation is formalising an AI Policy Coordination Center that is expected to release a Risk Management Toolbox for sector regulators (standardised impact-assessment templates and transparency-report patterns). Track its publications alongside PPA, Bank of Israel, and MoH circulars.
+
+Two newer reference points to fold into governance docs:
+- The Innovation Authority published the National Program for Artificial Intelligence overview in May 2025, integrating activities across the Ministry of Innovation, Finance, Defense (DDR&D), Council for Higher Education, the National Digital Agency, and the Ministries of Foreign Affairs and Justice.
+- In January 2026 the US State Department and Israel announced a Strategic Partnership on AI, Research, and Critical Technologies, which gives Israeli AI exporters a more concrete signal to align with NIST AI RMF in dual-track US/EU compliance stories.
+
+A new multi-year national AI strategy is anticipated after 2026, likely emphasising generative AI, LLM security, and environmental impact.
 
 ### Step 3: Privacy Protection Law (PPL) Applied to ML
 
@@ -71,7 +77,9 @@ The PPA draft AI guidance, published April 30, 2025 with public consultation clo
 - Orgs heavily reliant on AI should appoint a DPO under Amendment 13, whom the PPA treats as the most suitable figure to handle AI-related privacy questions
 - Generative-AI usage policy: organisations should adopt an internal policy covering which tools are permitted, who may use them, what data may be uploaded, and retention limits on prompts
 
-Do NOT use web-scraped Hebrew social content or forum data for training without a documented legal basis. This is the fastest way to draw PPA enforcement attention under Amendment 13 and the draft AI guidance.
+In February 2026 the PPA went further and published a final opinion on consent under Israeli privacy law, which the PPA treats as binding. The opinion explicitly addresses AI: scraping personal data from the internet to train AI models without informed consent is described as unlawful privacy infringement, and the PPA states that publishing data on social media does not constitute informed consent for AI training. Even with the AI guidance still formally in draft, the consent opinion now closes the "but the AI rules are just draft" defence on the scraping question.
+
+Do NOT use web-scraped Hebrew social content or forum data for training without a documented legal basis. This is the fastest way to draw PPA enforcement attention under Amendment 13, the draft AI guidance, and the February 2026 consent opinion.
 
 ### Step 4: Sector-Specific Rules
 
@@ -110,7 +118,7 @@ Staggered timeline:
 - December 2, 2027 (revised, previously August 2, 2026): Annex III high-risk requirements under Articles 6-15 apply to stand-alone high-risk AI systems
 - August 2, 2028 (revised): High-risk requirements apply to AI systems embedded in products already regulated under sector-specific EU law (Annex I)
 
-Note: the "Digital Omnibus on AI" agreement of May 7, 2026 (Council + Parliament provisional political agreement, pending formal adoption) postponed the Annex III high-risk deadline from August 2, 2026 to December 2, 2027, and the Annex I product-embedded deadline to August 2, 2028. It also compressed the Article 50(2) transparency grace period so it now takes effect December 2, 2026. GPAI obligations (in force since August 2, 2025) were NOT postponed. Treat these dates as provisional until the amending regulation is formally adopted.
+Note: the "Digital Omnibus on AI" agreement of May 7, 2026 (Council + Parliament provisional political agreement, pending formal adoption) postponed the Annex III high-risk deadline from August 2, 2026 to December 2, 2027, and the Annex I product-embedded deadline to August 2, 2028. It also compressed the Article 50(2) transparency grace period so it now takes effect December 2, 2026. GPAI obligations (in force since August 2, 2025) were NOT postponed. Formal adoption by Parliament and Council is expected in June or July 2026, ahead of the original August 2, 2026 deadline; if formal adoption slips past August 2, 2026 the unamended timeline reactivates. Treat these dates as provisional and confirm against the EU Official Journal before relying on them in customer commitments.
 
 The European AI Office published the final General-Purpose AI Code of Practice on July 10, 2025, endorsed by the Commission and the AI Board on August 1, 2025. The Code is voluntary but is the Commission's preferred route for demonstrating compliance with GPAI obligations. It has three chapters: Transparency, Copyright, and Safety and Security. Israeli GPAI providers selling into the EU should consider signing onto the Code rather than building a bespoke compliance story.
 
@@ -123,7 +131,7 @@ Because Israel's MoI 2023 policy favours soft-law and OECD alignment, voluntary 
 | Framework | What it is | Why Israeli teams should care |
 |-----------|-----------|-------------------------------|
 | ISO/IEC 42001:2023 | First certifiable AI management system standard (AIMS). Published December 2023. Plan-do-check-act structure with 38 controls covering risk management, impact assessment, lifecycle management, third-party oversight. | Certification is increasingly asked for in enterprise procurement. Controls map cleanly to EU AI Act high-risk obligations and PPA guidance. Treat as the AI-specific counterpart to ISO/IEC 27001. |
-| NIST AI RMF 1.0 | US National Institute of Standards and Technology framework (January 2023) organised around Govern, Map, Measure, Manage. Augmented by the Generative AI Profile (NIST-AI-600-1, July 2024) and upcoming Cyber AI Profile (draft NIST IR 8596 published December 2025). | OECD-aligned and widely accepted by US enterprise customers. Its risk taxonomy fits alongside MoI 2023 ethical principles in compliance docs. |
+| NIST AI RMF 1.0 | US National Institute of Standards and Technology framework (January 2023) organised around Govern, Map, Measure, Manage. Augmented by the Generative AI Profile (NIST-AI-600-1, July 2024) and the Cyber AI Profile (preliminary draft NIST IR 8596 published December 16, 2025; comment period closed January 30, 2026; final expected later in 2026). RMF 1.1 addenda and an AI in Critical Infrastructure profile (concept note April 7, 2026) are also in flight. | OECD-aligned and widely accepted by US enterprise customers, and now reinforced by the January 2026 US-Israel Strategic Partnership on AI. The risk taxonomy fits alongside MoI 2023 ethical principles in compliance docs. |
 | OECD AI Principles | OECD Recommendation of the Council on AI, adopted 2019, updated 2024. | Explicitly referenced by Israel's MoI 2023 policy as a baseline. Alignment is essentially free in your governance docs. |
 | EU GPAI Code of Practice | Voluntary compliance route for EU AI Act GPAI obligations (July 2025, Commission-endorsed August 2025). | If you ship a foundation model into the EU, this is the lowest-friction compliance pathway. |
 
@@ -149,7 +157,7 @@ Self-assessment before any production deployment:
 
 - [ ] Scoping memo completed (Step 1)
 - [ ] Lawful basis documented for all training data sources
-- [ ] No unauthorized scraping of personal data (per the April 2025 PPA AI guidance, which the PPA enforces as its operative standard)
+- [ ] No unauthorized scraping of personal data (per the April 2025 PPA AI guidance, which the PPA enforces as its operative standard, plus the February 2026 PPA final consent opinion which is binding)
 - [ ] PPL database registration filed if thresholds met
 - [ ] DPO designated if Amendment 13 triggers apply (sensitive data at scale, systematic monitoring, public authority, data broker)
 - [ ] Model card published and linked from product documentation
@@ -228,6 +236,10 @@ Result: Scoped compliance plan for the banking customer's internal review.
 | EU Council statement on the Digital Omnibus on AI | https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/ | May 7, 2026 provisional agreement postponing Annex III high-risk obligations to December 2, 2027 |
 | ISO/IEC 42001:2023 AI management system | https://www.iso.org/standard/42001 | Certifiable AIMS standard, 38 controls, plan-do-check-act |
 | NIST AI Risk Management Framework | https://www.nist.gov/itl/ai-risk-management-framework | AI RMF 1.0 plus Generative AI Profile (NIST-AI-600-1, July 2024) |
+| NIST IR 8596 Cyber AI Profile (preliminary draft) | https://csrc.nist.gov/pubs/ir/8596/iprd | Draft published December 16, 2025; comments closed January 30, 2026; final expected later in 2026 |
+| PPA February 2026 consent opinion (analysis) | https://www.lexology.com/library/detail.aspx?g=e303b2da-16c8-4842-b742-36c5f8a99d23 | Final binding opinion; scraping personal data for AI training without informed consent is unlawful |
+| Israel National Program for AI (2025) | https://innovationisrael.org.il/wp-content/uploads/2025/05/AI-National-Program-en-14.5.25.pdf | Multi-ministry program overview, May 2025 |
+| US-Israel Strategic Partnership on AI (January 2026) | https://www.state.gov/releases/office-of-the-spokesperson/2026/01/joint-statement-of-the-united-states-and-israel-on-the-launch-of-a-strategic-partnership-on-artificial-intelligence-research-and-critical-technologies | Bilateral signal reinforcing NIST AI RMF alignment for Israeli exporters |
 
 ## Gotchas
 
@@ -238,6 +250,7 @@ Result: Scoped compliance plan for the banking customer's internal review.
 - The EU AI Act's extraterritorial reach catches Israeli companies only when they actually place systems on the EU market or their output is used in the EU. A purely Israeli deployment with Israeli users is outside scope, even if the model was trained on EU data. Do not over-scope Israeli-only products.
 - The authoritative Ministry of Innovation document is in Hebrew. English translations paraphrase. For compliance claims, cross-reference the Hebrew text.
 - The PPA's April 2025 AI guidance is still formally in DRAFT as of May 2026. Public consultation closed June 5, 2025 and no final binding directive has been published, but PPA officials have said they will enforce it as if it were statutory. Treat it as the PPA's operative compliance standard and align with it as if binding. When phrasing it for a customer, you can note the formal draft status, but do not treat that as a reason to ignore it. Watch gov.il/privacy for finalisation.
+- The PPA's February 2026 final opinion on consent IS binding (no draft caveat). It directly states that scraping personal data to train AI without informed consent is unlawful, and that social-media publication is not consent for AI training. Older docs that hedge the scraping rule as "draft only" are stale; the consent opinion now backs the scraping rule on a final, separately-published footing.
 - The EU General-Purpose AI Code of Practice (July 2025) is voluntary but endorsed by the Commission. Signing it is the lowest-friction GPAI compliance route. Do not conflate it with mandatory obligations: the Code supports compliance with the Act, it does not replace it.
 - Amendment 13 is now in force (since August 14, 2025). The PPA's earlier grace period on DPO appointment expired October 31, 2025. Older internal memos saying "Amendment 13 is coming" are stale. Update them.
 - The EU AI Act high-risk timeline moved. The "Digital Omnibus on AI" agreement of May 7, 2026 postponed Annex III high-risk obligations from August 2, 2026 to December 2, 2027 (and Annex I product-embedded systems to August 2, 2028), while compressing Article 50(2) synthetic-content transparency to December 2, 2026. GPAI obligations were NOT postponed. The agreement is a provisional political agreement pending formal adoption, so phrase these dates as provisional. Older docs citing "August 2, 2026 for high-risk" are stale.
