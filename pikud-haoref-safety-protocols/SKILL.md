@@ -60,7 +60,12 @@ Step-by-step safety instructions for every type of Home Front Command alert in I
 
 **Israel sits on the Dead Sea Transform fault. Earthquakes are a real risk.**
 
-**During the earthquake (Drop, Cover, Hold On):**
+**Priority order (Home Front Command):**
+1. If you can reach open ground within a few seconds, exit the building to an open area
+2. If you cannot exit in seconds, enter the mamad or protected space but keep the door and windows OPEN so they cannot jam shut, or go to an internal stairwell and continue down and out
+3. If you can do none of the above, use Drop-Cover-Hold where you are
+
+**Drop, Cover, Hold On:**
 1. **DROP** to your hands and knees
 2. **COVER** under a sturdy desk or table, protect your head and neck
 3. **HOLD ON** to the table/desk until the shaking stops
@@ -77,7 +82,7 @@ Step-by-step safety instructions for every type of Home Front Command alert in I
 - Pull over away from buildings, bridges, and overpasses
 - Stay inside the vehicle with seatbelt fastened until shaking stops
 
-**IMPORTANT: Do NOT enter a mamad/shelter during an earthquake.** The protocol is opposite to missile alerts. During an earthquake, heavy blast doors and reinforced rooms can trap you if the structure shifts. Use the Drop-Cover-Hold method instead.
+**IMPORTANT: earthquake response differs from a missile alert.** Do not run deep into a building to reach a sealed mamad and shut yourself in. If you do use the mamad as a fallback, keep its door and windows OPEN so a structural shift cannot trap you behind the blast door. The priority is open ground first, then mamad-with-door-open or the stairwell, then Drop-Cover-Hold. (This is the opposite of a missile alert, where you close the blast door.)
 
 **After the earthquake:**
 - Expect aftershocks. They can occur minutes to days later
@@ -95,13 +100,14 @@ Step-by-step safety instructions for every type of Home Front Command alert in I
 - Unusual sea withdrawal (water receding rapidly)
 - Loud roaring sound from the ocean
 
-**Immediate actions:**
-1. Move inland and to higher ground immediately
-2. Go at least 2 km from the coast OR to an elevation of 30+ meters
-3. If you cannot move inland, go to the 3rd floor or higher of a reinforced building
+**Immediate actions (Home Front Command):**
+1. Move inland and to higher ground immediately, at least 1 km from the shore (further is better)
+2. If you are in a building of 3 floors or fewer, leave it and move inland
+3. If you cannot move inland in time, go to the 4th floor or higher of a sturdy nearby building
 4. Stay away from beaches, harbors, and river mouths
+5. Do not return to the shore for about 12 hours
 
-**Stay safe:** Remain at elevation until official all-clear. Tsunamis come in waves, the first wave is often not the largest.
+**Stay safe:** Remain inland or at height until official all-clear. Tsunamis come in waves, the first wave is often not the largest.
 
 ### Category 5: Radiological Event (אירוע רדיולוגי)
 
@@ -167,7 +173,9 @@ Step-by-step safety instructions for every type of Home Front Command alert in I
 
 ## Category 13: Event Concluded (האירוע הסתיים)
 
-This is the official all-clear signal from the Home Front Command. When you receive a category 13 alert for your area:
+Note on numbering: Home Front Command publishes alerts by named type, not numbered categories. The category numbers used here (1-7, 13, 14) are the codes from the Tzofar / Tzevaadom alert feed that community apps (oref_alert, RedAlert) consume. The meanings are accurate to that feed; treat the numbers as app-level codes, not official HFC labels.
+
+This is the official all-clear signal from the Home Front Command. When you receive a category 13 alert (event concluded) for your area:
 - You may leave the protected space
 - Resume normal activity
 - Check your surroundings for damage before moving freely
@@ -220,7 +228,7 @@ A heads-up that alerts are expected in your area in the coming minutes. This giv
 
 ## Gotchas
 
-1. **Earthquake vs missile protocol confusion**: The earthquake protocol (Drop-Cover-Hold) is the OPPOSITE of the missile protocol (run to mamad). An AI agent must correctly identify the alert type before giving instructions. Telling someone to enter a mamad during an earthquake is dangerous because structural shifts can trap them behind the blast door.
+1. **Earthquake vs missile protocol confusion**: Earthquake response differs from a missile alert. The priority is open ground first, then (if you cannot exit in seconds) the mamad or stairwell, then Drop-Cover-Hold. The critical difference from a missile alert: during an earthquake keep the safe-room door and windows OPEN so a structural shift cannot trap you, whereas during a missile alert you close the blast door. Do NOT tell someone to seal themselves into a closed mamad during an earthquake, and do NOT tell them to avoid the mamad entirely (it is a valid fallback with the door open).
 
 2. **"10 minutes" applies only to short-range fire and is NOT a release signal in the Iran/Houthi scenario.** The 10-minute shelter time after the last impact is the historical minimum for Gaza/Lebanon short-range posture. For ballistic / Iran / Houthi / long-range threats it does NOT apply: residents must remain in the protected space until an explicit Cell Broadcast or HFC app release arrives. The Mako N12 / Ynet "Digital" coverage in 2026 Q1 confirmed the 10-minute screen text in the HFC app was carried over by mistake from the short-range posture and that the actual rule for ballistic scenarios is "stay until explicit release". Agents must NEVER tell a user "you can leave after 10 minutes" without verifying threat type and release channel.
 
@@ -254,7 +262,7 @@ See the `references/` directory for:
 | Siren sounds but no app alert | Treat as real. Enter shelter immediately. The app may have a slight delay |
 | App alert but no siren | Still take shelter. Sirens may not be audible indoors or in noisy areas |
 | Don't know which alert type | Enter shelter and check the Home Front Command app for details. Default to missile protocol |
-| Power is out | Use battery radio (Galei Zahal 102.3 FM) for updates. The siren system is independent of power |
-| No internet connection | The siren system and Cell Broadcast lock-screen alerts work without internet. If you have a radio (Galei Zahal 102.3 FM), use it. For short-range fire the 10-minute-after-last-impact minimum applies; for ballistic / long-range threats stay put until an explicit Cell Broadcast or HFC app release arrives |
+| Power is out | Use a battery radio (Galei Zahal / Army Radio: 102.3 FM in the north, 104 FM in the center and south, 96.6 FM in the Jerusalem area; or Reshet Bet 95.5 FM). The siren system is independent of power |
+| No internet connection | The siren system and Cell Broadcast lock-screen alerts work without internet. If you have a radio (Galei Zahal: 102.3 FM north, 104 FM center/south, 96.6 FM Jerusalem), use it. For short-range fire the 10-minute-after-last-impact minimum applies; for ballistic / long-range threats stay put until an explicit Cell Broadcast or HFC app release arrives |
 | Multiple alert types simultaneously | Follow the most restrictive protocol. Missile + chemical = shelter + seal room |
 | Alert during Shabbat (no phone) | Sirens are audible. Follow the protocol for your location. Pikuach nefesh (saving life) overrides Shabbat observance |

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "skill": "pikud-haoref-safety-protocols",
+  "generated_at": "2026-05-29T00:00:00Z",
+  "claims": [
+    {
+      "claim_id": "earthquake-protocol",
+      "claim": "Home Front Command earthquake guidance: reach open ground within seconds if possible; otherwise enter the mamad or stairwell keeping the door and windows open so they cannot jam; otherwise Drop-Cover-Hold. Do not seal yourself into a closed mamad during an earthquake.",
+      "source_url": "https://www.oref.org.il/heb/emergencies/earthquake",
+      "raw_snippet": "אם לא ניתן לצאת מהמבנה בתוך שניות, היכנסו לממ\"ד והשאירו את הדלת והחלונות פתוחים, או צאו לחדר המדרגות והמשיכו לרדת עד ליציאה מהמבנה",
+      "fetched_at": "2026-05-29T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/alert-categories-quick-reference.md"]
+    },
+    {
+      "claim_id": "tsunami-protocol",
+      "claim": "Home Front Command tsunami guidance: move at least 1 km inland; go to the 4th floor or higher of a sturdy building; evacuate buildings of 3 floors or fewer; do not return to the shore for about 12 hours.",
+      "source_url": "https://www.oref.org.il/heb/articles/earthquake/tsunami/2701",
+      "raw_snippet": "להתרחק קילומטר אחד לפחות מהחוף ... לעלות לקומה רביעית של מבנה קרוב ... שוהים במבנה בן שלוש קומות ומטה, צאו ממנו",
+      "fetched_at": "2026-05-29T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/alert-categories-quick-reference.md"]
+    },
+    {
+      "claim_id": "ballistic-shelter-release",
+      "claim": "For short-range fire (Gaza/Lebanon) the practice is to stay about 10 minutes after the last impact; for ballistic / Iran / Houthi / long-range threats do not use a 10-minute timer, instead wait for an explicit release (Cell Broadcast / HFC app / radio). The HFC app's '10 minutes' screen text was a carryover from the short-range posture, reported by Ynet and N12 in 2026.",
+      "source_url": "https://www.ynet.co.il/digital/technews/article/h1nnwszfbl",
+      "raw_snippet": "אין לצאת לאחר עשר דקות כמו שהיה נהוג בירי מלבנון ומרצועת עזה",
+      "fetched_at": "2026-05-29T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/alert-categories-quick-reference.md"]
+    },
+    {
+      "claim_id": "alert-category-codes",
+      "claim": "Home Front Command issues alerts by named type; the numbered categories (1-7, 13, 14) are the Tzofar / Tzevaadom feed codes used by community alert apps, not official HFC labels. Cat 13 = event concluded, Cat 14 = early warning.",
+      "source_url": "https://www.tzevaadom.co.il/systems/",
+      "raw_snippet": "Category 13 alert endings (ניתן לצאת מהמרחב המוגן); Category 14 pre-alerts",
+      "fetched_at": "2026-05-29T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/alert-categories-quick-reference.md"]
+    },
+    {
+      "claim_id": "radio-and-reference-urls",
+      "claim": "Galei Tzahal (Army Radio) broadcasts on 102.3 FM in the north, 104 FM in the center and south, and 96.6 FM in the Jerusalem area. Reference URLs for Home Front Command, MDA, planning authority, and the Civil Defense Law.",
+      "source_url": "https://www.oref.org.il/eng",
+      "raw_snippet": "URLs: https://www.oref.org.il/eng https://www.oref.org.il https://www.gov.il/he/departments/planning_authority https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/default.aspx https://www.mdais.org/en https://www.mdais.org",
+      "fetched_at": "2026-05-29T00:00:00Z",
+      "appears_in": ["SKILL.md", "references/alert-categories-quick-reference.md"]
+    }
+  ]
+}
