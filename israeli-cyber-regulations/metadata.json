@@ -1,6 +1,6 @@
 {
   "author": "skills-il",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "category": "security-compliance",
   "tags": {
     "he": [
@@ -23,8 +23,8 @@
     "en": "Israeli Cyber Regulations"
   },
   "display_description": {
-    "he": "מסגרת רגולציית סייבר ישראלית, הנחיות מערך הסייבר הלאומי, הוראות בנק ישראל 361 ו-357, דרישות רשות ניירות ערך, וכללים מגזריים לפינטק ובריאות",
-    "en": "Israeli cybersecurity regulatory framework guidance covering INCD (Ma'arach HaSyber) national directives, Bank of Israel Directive 361 (cyber for financial institutions), Directive 357 (payment security), ISA requirements for TASE-listed companies, and sector-specific rules for fintech and healthtech. Use when user asks about cyber regulation Israel, INCD compliance, Bank of Israel directives, ISA cyber requirements, or sector cyber rules. Do NOT use for privacy law compliance (use israeli-privacy-compliance instead)."
+    "he": "מסגרת רגולציית סייבר ישראלית, הנחיות מערך הסייבר הלאומי, הוראות בנק ישראל 361 ו-364 (המסגרת המאוחדת ל-IT וסייבר), דרישות רשות ניירות ערך, וכללים מגזריים לפינטק ובריאות",
+    "en": "Israeli cybersecurity regulatory framework guidance covering INCD (Ma'arach HaSyber) national directives, Bank of Israel Directive 361 (cyber for financial institutions), Directive 364 (the consolidated IT, information security, and cyber framework), ISA requirements for TASE-listed companies, and sector-specific rules for fintech and healthtech. Use when user asks about cyber regulation Israel, INCD compliance, Bank of Israel directives, ISA cyber requirements, or sector cyber rules. Do NOT use for privacy law compliance (use israeli-privacy-compliance instead)."
   },
   "supported_agents": [
     "claude-code",

@@ -1,6 +1,6 @@
 ---
 name: israeli-cyber-regulations
-description: Israeli cybersecurity regulatory framework guidance covering INCD (Ma'arach HaSyber) national directives, Bank of Israel Directive 361 (cyber for financial institutions), Directive 357 (payment security), ISA requirements for TASE-listed companies, and sector-specific rules for fintech and healthtech. Use when user asks about "cyber regulation Israel", "horaot Bank Israel 361", "INCD compliance", "Ma'arach HaSyber", "ISA cyber requirements", "sector cyber rules Israel", or "רגולציית סייבר". Covers regulatory mapping, gap analysis, compliance checklists, and audit preparation for Israeli cyber frameworks. Do NOT use for privacy law compliance (use israeli-privacy-compliance instead).
+description: Israeli cybersecurity regulatory framework guidance covering INCD (Ma'arach HaSyber) national directives, Bank of Israel Directive 361 (cyber for financial institutions), Directive 364 (the consolidated IT, information security, and cyber framework), ISA requirements for TASE-listed companies, and sector-specific rules for fintech and healthtech. Use when user asks about "cyber regulation Israel", "horaot Bank Israel 361", "INCD compliance", "Ma'arach HaSyber", "ISA cyber requirements", "sector cyber rules Israel", or "רגולציית סייבר". Covers regulatory mapping, gap analysis, compliance checklists, and audit preparation for Israeli cyber frameworks. Do NOT use for privacy law compliance (use israeli-privacy-compliance instead).
 license: MIT
 compatibility: No network required. Works with Claude Code, Claude.ai, Cursor.
 ---
@@ -21,10 +21,10 @@ Determine which Israeli cybersecurity regulations apply to the user's organizati
 | Framework | Applies To | Regulator | Key Focus |
 |-----------|-----------|-----------|-----------|
 | INCD National Directives | All organizations, mandatory for critical infrastructure | Ma'arach HaSyber (INCD) | Risk management, incident reporting, baseline controls |
-| BOI Directive 364 (2024-11) | Banks, insurance, credit card companies | Bank of Israel (BOI) | **Consolidates Directives 357, 361, 363**; primary current cyber framework. Stronger board accountability, supply-chain expectations |
-| BOI Directive 361 | Banks, insurance, credit card companies | Bank of Israel (BOI) | Cyber risk governance, SOC, penetration testing. Carried forward into 364 |
-| BOI Directive 357 | Payment service providers, fintech | Bank of Israel (BOI) | Payment security, transaction monitoring, fraud prevention. Carried forward into 364 |
-| BOI Directive 366 | Banks | Bank of Israel (BOI) | Reporting of Technological Failures and Cyber Incidents (the operational reporting hook) |
+| BOI Directive 364 (Nov 2024, effective 18 May 2026) | Banks, insurance, credit card companies | Bank of Israel (BOI) | **Consolidates and supersedes Directives 357, 361, 363**; primary current cyber framework. On its effective date the three legacy directives are repealed. Stronger board accountability, supply-chain expectations |
+| BOI Directive 361 | Banks, insurance, credit card companies | Bank of Israel (BOI) | Cyber Defense Management: cyber risk governance, CISO, SOC, penetration testing. Folded into 364 |
+| BOI Directive 357 | Banks | Bank of Israel (BOI) | Management of Information Technology (general IT governance, NOT payment-specific). Folded into 364 |
+| BOI Directive 366 | Banks | Bank of Israel (BOI) | Reporting of technological-failure and cyber events (the operational incident-reporting hook) |
 | BOI Directive 362 | Banks (cloud) | Bank of Israel (BOI) | Cloud Computing approval process (the directive that defines the cloud-approval workflow referenced under 361 Third-Party Risk) |
 | ISA Cyber Requirements | TASE-listed companies | Israel Securities Authority (ISA/Rashut) | Disclosure, board oversight, cyber risk reporting |
 | MOH Health Cyber | Hospitals, HMOs, health-tech | Ministry of Health | Patient data protection, medical device security |
@@ -35,9 +35,9 @@ Determine which Israeli cybersecurity regulations apply to the user's organizati
 Is the organization designated as critical infrastructure by INCD?
   YES -> INCD mandatory directives apply + sector-specific regulator
 Is the organization a bank, insurer, or credit company?
-  YES -> BOI Directive 361 applies (+ INCD if critical)
+  YES -> BOI Directive 364 applies (consolidating the legacy 357 IT-management, 361 cyber, 363 directives) (+ INCD if critical)
 Does the organization provide payment services?
-  YES -> BOI Directive 357 applies
+  YES -> BOI payment-service-provider supervision applies, plus the BOI IT/cyber directives (357 IT management, 361 cyber, now under 364)
 Is the organization listed on TASE?
   YES -> ISA cyber disclosure requirements apply
 Is the organization in healthcare?
@@ -84,7 +84,7 @@ Directive 361 (Hora'a 361) governs cybersecurity for banking and financial insti
 3. **Security Operations Center (SOC):** 24/7 monitoring for banks with significant digital operations
 4. **Penetration testing:** Annual external pen test by certified Israeli firm
 5. **Third-party risk:** Due diligence on all technology vendors, cloud providers require BOI approval
-6. **Incident reporting:** Report significant cyber events to Banking Supervision within 24 hours
+6. **Incident reporting:** Report significant technological-failure and cyber events to Banking Supervision per the timelines set in Directive 366 (the reporting directive), not under 361 itself
 
 **Directive 361 compliance matrix:**
 | Control Area | Requirement | Evidence Needed |
@@ -94,11 +94,11 @@ Directive 361 (Hora'a 361) governs cybersecurity for banking and financial insti
 | SOC | Continuous monitoring | SOC procedures, alert logs |
 | Testing | Annual penetration test | Pen test report, remediation plan |
 | Vendor management | Cloud/vendor approval | Approval documentation, SLAs |
-| Incident response | Reporting within 24h | IR plan, drill records |
+| Incident response | Reporting per Directive 366 | IR plan, drill records |
 | Business continuity | DR site and testing | BCP document, DR drill results |
 
-### Step 4: BOI Directive 357, Payment Security
-Directive 357 (Hora'a 357) covers security for payment services and fintech operations.
+### Step 4: Payment and Fintech Security
+Payment-service security for banks and fintech is governed by the BOI IT and cyber directives (now consolidated under 364) together with BOI supervision of payment service providers. Note: Directive 357 itself is "Management of Information Technology", a general IT-governance directive, not a payment-specific rule, so do not cite "357" as the payment-security authority. The substantive payment-security expectations are:
 
 **Key requirements:**
 - **Transaction monitoring:** Real-time fraud detection for all payment channels
@@ -144,7 +144,7 @@ File immediate report if: operational disruption > 24h, customer data exposed,
 Apply additional requirements based on industry vertical.
 
 **Fintech / Banking:**
-- BOI Directive 361 + 357 (see Steps 3-4)
+- BOI Directive 364 (consolidating 361 cyber defense + 357 IT management + 363) (see Steps 3-4)
 - Open Banking security standards (per BOI roadmap)
 - AML/CFT cyber controls per IMPA (Israel Money Laundering Prohibition Authority)
 
@@ -197,7 +197,7 @@ Create a prioritized action plan based on identified gaps.
 ### Example 1: Fintech Startup Pre-Launch
 User says: "We're launching a payment app in Israel, what cyber regulations apply?"
 Actions:
-1. Identify: BOI Directive 357 (payment security) + INCD baseline
+1. Identify: BOI payment-service-provider supervision + the IT/cyber directives (364, consolidating 357/361/363) + INCD baseline
 2. Map requirements: transaction monitoring, MFA, encryption, PCI DSS
 3. Check if TASE listing planned (ISA requirements)
 4. Build pre-launch compliance checklist with BOI submission requirements
@@ -242,9 +242,9 @@ Result: Multi-framework compliance matrix with healthtech-specific controls and 
 - INCD (Ma'arach HaSyber) incident reporting timelines differ by sector: critical infrastructure must report within hours, while private sector reporting is voluntary. Agents may apply a single timeline across all sectors.
 - The Israeli Securities Authority (ISA/Rashut) uses a different materiality test for cyber incident disclosure than the US SEC. Agents may apply US materiality standards to TASE-listed companies.
 - Israel's DPO (Data Protection Officer) requirement is in force since Amendment 13 (effective August 14, 2025) and covers public bodies and large-scale sensitive data processors. Agents with pre-2025 training data may not know about this requirement.
-- **Amendment 13 cross-reference for cyber teams.** While privacy compliance lives in `israeli-privacy-compliance`, cyber incident-response playbooks must align with Amendment 13's **72-hour PPA breach notification window** (plus notification to affected individuals where high risk) and stack against the BOI 24h sector timeline and ISA materiality test. The pre-2025 "without delay" framing is obsolete.
-- **National Cybersecurity Bill (draft, January 2026).** INCD published a draft "Cyber Defense Law" in January 2026 imposing approximately 63 binding controls on "essential organizations" and codifying CERT-IL / INCD authority. Not yet enacted (unlikely before 2027 post-elections), but track for applicability scoping. Agents should flag clients with critical-infrastructure exposure to expect future statutory expansion of current INCD methodology.
-- BOI Directive 357 requires fintech companies to submit a cybersecurity assessment before launch. Agents may not flag this pre-launch requirement when advising Israeli payment startups.
+- **Amendment 13 cross-reference for cyber teams.** While privacy compliance lives in `israeli-privacy-compliance`, cyber incident-response playbooks must align with Amendment 13's requirement to notify the PPA of a serious security incident **immediately** (the law says "immediately", NOT a GDPR-style fixed 72-hour clock), plus notification to affected individuals where there is high risk. Stack this against the BOI sector reporting timelines (Directive 366) and the ISA materiality test.
+- **National Cybersecurity Bill (draft, January 2026).** INCD published a draft "Cyber Defense Law" (tazkir) on 22 January 2026 imposing binding controls on "essential organizations" (irgun chiyoni) and codifying CERT-IL / INCD authority, with ISO 27001/27002 offered as a compliance route. Not yet enacted, but track for applicability scoping. Flag clients with critical-infrastructure exposure to expect future statutory expansion of the current INCD methodology.
+- Directive 357 is "Management of Information Technology" (general IT governance), NOT a payment-security directive. Agents that cite "Directive 357" as the Israeli payment-security rule are mislabeling it. Payment-service security comes from BOI payment-service-provider supervision plus the IT/cyber directives (consolidated under 364). A pre-launch cybersecurity assessment is part of BOI fintech/payment licensing, not a "357" requirement.
 
 
 ## Reference Links
@@ -261,7 +261,7 @@ Result: Multi-framework compliance matrix with healthtech-specific controls and 
 
 ### Error: "Unsure which framework applies"
 Cause: Organization operates across multiple regulated sectors
-Solution: Apply all applicable frameworks. Start with INCD baseline (applies to everyone), then layer sector-specific requirements. For dual-regulated entities (e.g., fintech listed on TASE), combine BOI 357 + ISA requirements.
+Solution: Apply all applicable frameworks. Start with INCD baseline (applies to everyone), then layer sector-specific requirements. For dual-regulated entities (e.g., fintech listed on TASE), combine BOI 364 (the consolidated IT/cyber framework) + ISA requirements.
 
 ### Error: "Conflicting requirements between regulators"
 Cause: Different regulators set different standards for overlapping areas

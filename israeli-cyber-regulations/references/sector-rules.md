@@ -51,8 +51,10 @@
 - Recovery Time Objective (RTO) aligned with business criticality
 - Backup integrity verification procedures
 
-### Bank of Israel Directive 357, Payment Services Security
+### Payment Services Security (BOI payment-service supervision + IT/cyber directives)
 **Applies to:** Payment service providers, payment initiation services, fintech companies with BOI licenses.
+
+**Note on numbering:** Directive 357 is "Management of Information Technology" (general IT governance), NOT a payment-security directive. Payment-service security comes from BOI supervision of payment service providers together with the IT/cyber directives (357 IT management, 361 cyber defense), now consolidated under Directive 364. The control areas below are the substantive payment-security expectations.
 
 **Key control areas:**
 
