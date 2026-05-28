@@ -73,17 +73,17 @@ Phase 3: Remediation Plan
 #### Workflow C: Israeli Compliance Check
 
 Phase 1: Framework Selection
-1. Israeli Privacy Protection Law (PPL) 1981 as amended through **Amendment 13** (in force August 14, 2025) + Information Security Regulations 2017. Amendment 13 introduced 72-hour breach notification to the PPA (with notification to affected individuals where high risk), mandatory DPO triggers, expanded definitions of "personal information" and "sensitive data", expanded PPA enforcement powers (administrative fines, cease-processing orders, deletion orders), and exemplary damages. The pre-2025 "without delay" framing is obsolete.
+1. Israeli Privacy Protection Law (PPL) 1981 as amended through **Amendment 13** (in force August 14, 2025) + Information Security Regulations 2017. Amendment 13 requires immediate notification of a serious security incident to the PPA (the law says "immediately", not a GDPR-style fixed 72-hour clock), with notification to affected individuals where high risk; mandatory DPO triggers; expanded definitions of "personal information" and "sensitive data"; expanded PPA enforcement powers (administrative fines, cease-processing orders, deletion orders); and statutory damages up to NIS 100,000 without proof of harm.
 2. INCD (Israel National Cyber Directorate / מערך הסייבר הלאומי) guidelines, current canonical methodology is the **Israeli Cyber Defense Methodology (ICDM) 2.0** (published 2021, mapped to NIST CSF 1.1 + SP 800-53 r5, with explicit Zero Trust + Threat-Informed Defense direction). The National Cyber Security Strategy was updated February 2025.
 3. Banking Supervision (if financial sector): primary current directive is **BOI Directive 364** (2024-11) which consolidates and supersedes Directives 357, 361, and 363
 4. SOC2 / ISO27001 (international); MITRE ATT&CK v18 (October 28, 2025) is current with Detection Strategies and Analytics
 
 Phase 2: Control Assessment
 5. Map Israeli-specific requirements:
-   - Data protection officer (ממונה הגנת פרטיות / DPO) required? (Mandatory under Amendment 13 for public bodies, data brokers, systematic-monitoring orgs, databases >10,000 individuals)
+   - Data protection officer (ממונה הגנת מידע / DPO) required? (Mandatory under Amendment 13 for public bodies; data brokers over 10,000 individuals; organizations whose main activity is large-scale processing of especially-sensitive data; and those carrying out systematic large-scale monitoring. A generic database merely exceeding 10,000 individuals does NOT by itself trigger a DPO.)
    - Risk-based regime under Amendment 13 (database registration is no longer the primary control)
    - Cross-border data transfer restrictions
-   - Data breach notification: 72 hours to PPA + affected individuals where high risk
+   - Data breach notification: notify the PPA immediately for a serious security incident, plus affected individuals where high risk
    - Health data special protections (if applicable)
 6. Check each control against current tool findings
 
@@ -95,7 +95,7 @@ Phase 3: Gap Report
 
 ### INCD (Israel National Cyber Directorate) Guidelines
 - Critical infrastructure sectors: Energy, Water, Finance, Health, Communications, Transportation
-- Cyber event reporting: 24h to INCD reporting portal (reports.cyber.gov.il) for critical infrastructure; sector-specific timelines may be tighter
+- Cyber event reporting: critical infrastructure must report as soon as possible (real-time) via the INCD cyber-event-report service (gov.il/he/service/cyber-event-report) and the 119 hotline; sector-specific directives may set their own timelines
 - Annual risk assessment recommended
 - Supply chain security emphasis (especially given documented Iranian / Hezbollah / Houthi-attributed targeting of Israeli software supply chains since 2023)
 

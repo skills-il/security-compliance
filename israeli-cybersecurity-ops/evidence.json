@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "skill": "israeli-cybersecurity-ops",
+  "generated_at": "2026-05-29T00:00:00Z",
+  "claims": [
+    {
+      "claim_id": "amendment-13-immediate-and-damages",
+      "claim": "Amendment 13 (in force 14 August 2025) requires immediate notification of a serious security incident to the PPA (the law says 'immediately', not a fixed 72-hour clock), mandates a DPO for public bodies, data brokers (over 10,000 individuals), large-scale especially-sensitive-data processors, and systematic large-scale monitoring, and introduced statutory damages up to NIS 100,000 / 100,000 ש\"ח without proof of harm. Database registration is no longer the primary control.",
+      "source_url": "https://iclg.com/practice-areas/data-protection-laws-and-regulations/israel/",
+      "raw_snippet": "the controller must immediately notify the PPA and report the measures taken following the incident ... statutory damages of up to NIS 100,000 / 100,000 ש\"ח without proof of harm",
+      "fetched_at": "2026-05-29T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "scripts/security_triage.py"]
+    },
+    {
+      "claim_id": "vendor-acquisitions-2026",
+      "claim": "Wiz was acquired by Google for ~$32B (closed 11 March 2026, now under Google Cloud Security). CyberArk was acquired by Palo Alto Networks for ~$25B (closed 11 February 2026). MITRE ATT&CK v18 released 28 October 2025. Check Point renamed Quantum SASE to Harmony SASE and Horizon Playblocks to Infinity Playblocks. INCD ICDM 2.0 (2021) maps to NIST CSF 1.1 + SP 800-53 r5; National Cyber Security Strategy updated February 2025.",
+      "source_url": "https://techcrunch.com/2026/03/11/google-completes-32b-acquisition-of-wiz/",
+      "raw_snippet": "Google completed its $32 billion acquisition of Wiz",
+      "fetched_at": "2026-05-29T00:00:00Z",
+      "appears_in": ["SKILL.md"]
+    },
+    {
+      "claim_id": "reference-urls",
+      "claim": "Tool and regulatory reference URLs used by the skill.",
+      "source_url": "https://www.gov.il/en/departments/israel_national_cyber_directorate",
+      "raw_snippet": "URLs: https://www.gov.il/en/departments/israel_national_cyber_directorate https://www.gov.il/he/departments/israel_national_cyber_directorate https://www.gov.il/en/departments/the_privacy_protection_authority https://www.gov.il/he/departments/the_privacy_protection_authority https://www.gov.il/en/departments/guides/cyber_incident https://www.gov.il/he/departments/guides/cyber_incident https://docs.wiz.io https://docs.snyk.io https://owasp.org/www-project-top-ten/",
+      "fetched_at": "2026-05-29T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    }
+  ]
+}

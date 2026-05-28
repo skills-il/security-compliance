@@ -107,17 +107,17 @@ def incd_reporting_check(classification: str, is_critical_infra: bool,
     if is_critical_infra:
         report["incd_reporting_required"] = True
         if classification in ("CRITICAL", "HIGH"):
-            report["reporting_deadline"] = "Immediately (INCD hotline)"
-            report["channel"] = "INCD 24/7 hotline"
+            report["reporting_deadline"] = "Immediately (INCD 119 hotline)"
+            report["channel"] = "INCD 119 hotline"
         else:
-            report["reporting_deadline"] = "Within 24 hours"
-            report["channel"] = "CERT-IL portal"
+            report["reporting_deadline"] = "As soon as possible"
+            report["channel"] = "INCD cyber-event-report service (gov.il)"
         report["notes"].append("Critical infrastructure: mandatory INCD reporting")
 
     if has_data_breach:
         report["privacy_authority_notification"] = True
         report["notes"].append(
-            "Data breach: notify Privacy Protection Authority within 72 hours of discovery (Amendment 13, in force 2025-08-14)"
+            "Data breach: notify Privacy Protection Authority immediately for a serious security incident (Amendment 13, in force 2025-08-14; the law says 'immediately', not a 72-hour clock)"
         )
         report["notes"].append(
             "If significant harm possible: notify affected individuals"
