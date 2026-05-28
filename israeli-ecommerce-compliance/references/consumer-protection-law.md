@@ -92,10 +92,10 @@ These details must appear on the website and on every invoice/receipt issued.
 - Violations may result in lawsuits and fines
 
 ## Cookie Consent Requirements
-Under the Communications Law (Amendment 2022):
-- Non-essential cookies require explicit opt-in consent
+Israel has no cookie-specific statute (unlike the EU ePrivacy Directive). The opt-in expectation flows from the general consent requirement in the Privacy Protection Law plus the Privacy Protection Authority's 2025 Guidelines on Informed Consent (following Amendment 13). Section 30A of the Communications Law covers unsolicited advertising, not cookies directly. Treat the following as PPA-guided best practice:
+- Non-essential cookies should use explicit opt-in consent
 - Essential cookies (session, authentication, cart) are exempt
-- Consent banner must appear before non-essential cookies are set
+- Consent banner should appear before non-essential cookies are set
 - Users must be able to withdraw consent easily
 - Cookie types and purposes must be clearly described
 - Privacy policy must include cookie information

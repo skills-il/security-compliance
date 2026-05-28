@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "skill": "israeli-ecommerce-compliance",
+  "generated_at": "2026-05-29T00:00:00Z",
+  "claims": [
+    {
+      "claim_id": "cooling-off-and-fees",
+      "claim": "Distance-selling cancellation is 14 days; extended to 4 months for people with disabilities, seniors 65+, and new immigrants (under 5 years) when there was a prior conversation (Amendment 47, 2016, Sec 14ג1). Cancellation fee capped at 5% of the transaction or 100 NIS / 100 ש\"ח, whichever is lower. Example 'from 99 NIS' / ₪99 / 99 ש\"ח pricing is allowed only when the base price genuinely exists.",
+      "source_url": "https://www.loc.gov/item/global-legal-monitor/2016-08-17/israel-mandatory-period-for-cancellation-of-transactions-by-certain-persons/",
+      "raw_snippet": "establishes a period of four months ... fee 5% ... or NIS 100, whichever is lower",
+      "fetched_at": "2026-05-29T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/consumer-protection-law.md"]
+    },
+    {
+      "claim_id": "vat-and-sale-rules",
+      "claim": "Consumer-facing prices must include 18% VAT (raised from 17% on 1 January 2025). Sale rules: the regular price must have been in effect at least 21 days before the sale, the sale is capped at 35 days, and both regular and sale price must be shown.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71677.htm",
+      "raw_snippet": "המחיר הקודם חייב להיות בתוקף לפחות 21 ימים קודם למבצע ... מבצע לא יכול להעלות על 35 יום",
+      "fetched_at": "2026-05-29T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/consumer-protection-law.md"]
+    },
+    {
+      "claim_id": "accessibility-thresholds",
+      "claim": "IS 5568 / accessibility: businesses with annual revenue below NIS 100,000 / 100,000 ש\"ח are exempt; revenue of NIS 300,000 / 300,000 ש\"ח or more requires immediate compliance; service providers with 25+ employees must appoint an accessibility coordinator.",
+      "source_url": "https://accessibe.com/compliance/is-5568",
+      "raw_snippet": "revenue is less than NIS 100,000 are exempt ... NIS 300,000 or more ... comply straight away ... 25 employees ... Accessibility Supervisor",
+      "fetched_at": "2026-05-29T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/consumer-protection-law.md"]
+    },
+    {
+      "claim_id": "e-invoicing-allocation",
+      "claim": "Allocation numbers (mispar haktza'a) are required on B2B invoices above NIS 20,000 / 20,000 ש\"ח (from the program start), dropping to NIS 10,000 / 10,000 ש\"ח from 1 January 2026 and NIS 5,000 / 5,000 ש\"ח from 1 June 2026.",
+      "source_url": "https://www.vatupdate.com/2026/01/12/thresholds-for-mandatory-allocation-numbers-on-tax-invoices-to-be-lowered-in-2026/",
+      "raw_snippet": "From January 1, 2026, allocation numbers are required for invoices of NIS 10,000 or more ... From June 1, 2026 ... NIS 5,000 or more",
+      "fetched_at": "2026-05-29T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "section-30a-spam",
+      "claim": "Section 30A (סעיף 30א) of the Communications Law requires explicit prior opt-in for SMS, email, fax, and robocall advertising, with statutory damages up to NIS 1,000 / 1,000 ש\"ח per message without proof of harm.",
+      "source_url": "https://www.gov.il/en/pages/17052018_7",
+      "raw_snippet": "prohibited to send advertisements ... without the prior consent ... up to NIS 1,000 for each message",
+      "fetched_at": "2026-05-29T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "import-vat-threshold",
+      "claim": "The personal-import VAT-exemption threshold was raised to USD 150 effective Jan 2026 but the Knesset revoked it on 24 February 2026, reinstating USD 75 (current as of May 2026). PCI DSS current version is 4.0.1.",
+      "source_url": "https://www.ynetnews.com/business/article/r1iu3almwe",
+      "raw_snippet": "the Knesset voted to revoke a ministerial order that had expanded the VAT exemption threshold ... reinstating the previous threshold",
+      "fetched_at": "2026-05-29T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    }
+  ]
+}

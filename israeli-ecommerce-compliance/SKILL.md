@@ -35,7 +35,7 @@ Check for required pre-purchase disclosures:
 - "From" pricing (e.g., "from 99 NIS") only allowed when the base price actually exists
 - VAT-exempt threshold for personal imports volatile in 2025-2026: was raised to USD 150 in Dec 2025 then reverted to USD 75 by the Knesset on Feb 24, 2026. Verify current figure at gov.il / Israel Tax Authority before claiming a threshold.
 
-**Card payment compliance (PCI DSS 4.0).** PCI DSS 4.0 became the mandatory standard on April 1, 2025, fully replacing PCI DSS 3.2.1. Any store that processes, stores, or transmits card data must comply with the 4.0 requirements, which add stricter authentication, continuous monitoring, and customized approach options. Most Israeli stores rely on a tokenized payment gateway (Tranzila, Cardcom, iCredit, Stripe, etc.) to offload PCI scope, which is strongly recommended for merchants under SAQ A/SAQ A-EP eligibility.
+**Card payment compliance (PCI DSS 4.0.1).** The current standard is PCI DSS v4.0.1 (released June 2024). PCI DSS v3.2.1 was retired on 31 March 2024, and the 51 future-dated v4.x requirements (stricter authentication, continuous monitoring, customized approach) became mandatory on 31 March 2025. Any store that processes, stores, or transmits card data must comply with v4.0.1. Most Israeli stores rely on a tokenized payment gateway (Tranzila, Cardcom, iCredit, Stripe, etc.) to offload PCI scope, which is strongly recommended for merchants under SAQ A/SAQ A-EP eligibility.
 
 ### Step 3: Generate Hebrew Terms of Service and Return Policy
 Generate compliant Hebrew Terms of Service (תנאי שימוש) including:
@@ -86,7 +86,7 @@ Must also appear on every invoice/receipt.
 Starting January 2025, electronic invoices for B2B transactions above NIS 20,000 must include an allocation number (mispar haktza'a) from the Tax Authority. The threshold drops to NIS 10,000 in January 2026, and NIS 5,000 in June 2026. Ensure your invoicing system supports Israel Tax Authority API integration for allocation number requests.
 
 ### Step 6: Validate Cookie Consent and Privacy Compliance
-Following Privacy Protection Law Amendment 13 (in force August 14, 2025) and the 2025 PPA Guidelines on Informed Consent, opt-in consent for non-essential cookies is treated as a binding obligation, not a recommendation. The Hanover Administrative Court (2025) further ruled that a clearly visible "Reject All" button is mandatory whenever "Accept All" is offered.
+Following Privacy Protection Law Amendment 13 (in force August 14, 2025) and the 2025 PPA Guidelines on Informed Consent, the PPA treats opt-in consent for non-essential cookies as the expected standard. Israel has no cookie-specific statute like the EU ePrivacy Directive; the obligation flows from the general consent requirement in the Privacy Protection Law plus PPA guidance. A 2025 German ruling (Verwaltungsgericht Hannover) requiring an equally visible "Reject All" button alongside "Accept All" is persuasive best practice internationally but is NOT binding Israeli precedent. Implement an equally prominent "Reject All" button as best practice.
 - Cookie consent banner for non-essential cookies, with equally prominent "Accept All" and "Reject All" buttons
 - Clear description of cookie types and purposes
 - Opt-in for marketing/analytics cookies (not opt-out, not pre-checked)
