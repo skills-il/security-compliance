@@ -10,7 +10,7 @@ compatibility: No special requirements. Works with Claude Code, Cursor, Windsurf
 
 Security scanning and compliance guidance tailored for Israeli web applications. This skill covers the full spectrum of application security, from OWASP Top 10 verification to Israeli Privacy Protection Authority (PPA) compliance, with special attention to Hebrew/RTL-specific attack vectors.
 
-> **OWASP Top 10 version note (2025-2026).** The checklist below is keyed to OWASP Top 10 **2021**. OWASP Top 10 **2025** was published and re-shaped the categories: A01 now subsumes SSRF (no separate A10:SSRF entry), A03 is the new **Software Supply Chain Failures**, A05 is now Injection (down from A03), A09 was renamed **Security Logging and Alerting Failures**, and a new A10 covers **Mishandling of Exceptional Conditions**. When auditing in 2026, treat the 2021 numbering below as a working scaffold and cross-walk findings to the 2025 list at https://owasp.org/Top10/2025/ before reporting.
+> **OWASP Top 10 version note (2025-2026).** The checklist below is keyed to OWASP Top 10 2021. OWASP Top 10 2025 was published and re-shaped the categories: A01 now subsumes SSRF (no separate A10:SSRF entry), A03 is the new **Software Supply Chain Failures**, A05 is now Injection (down from A03), A09 was renamed **Security Logging and Alerting Failures**, and a new A10 covers **Mishandling of Exceptional Conditions**. When auditing in 2026, treat the 2021 numbering below as a working scaffold and cross-walk findings to the 2025 list at https://owasp.org/Top10/2025/ before reporting.
 
 ## OWASP Top 10 Checklist (Israeli Context)
 
@@ -97,16 +97,16 @@ Work through each category systematically. For each finding, note the severity (
 
 ## Israeli Privacy Protection Authority (PPA) Compliance
 
-Israel's Privacy Protection Law (1981, last major reform Amendment 13 in force August 14, 2025) and its regulations impose specific requirements on applications handling personal data of Israeli residents. Amendment 13 introduced 72-hour breach notification to the PPA, mandatory DPO triggers, expanded definitions of "personal information" and "sensitive data", an additional notification tier for databases with sensitive data on >100,000 individuals, and statutory damages up to NIS 100,000 without proof of harm.
+Israel's Privacy Protection Law (1981, last major reform Amendment 13 in force August 14, 2025) and its regulations impose specific requirements on applications handling personal data of Israeli residents. Amendment 13 requires immediate notification of a serious security incident to the PPA, mandatory DPO triggers, expanded definitions of "personal information" and "sensitive data", a notification tier for databases with especially sensitive data on >100,000 individuals, and statutory damages up to NIS 100,000 without proof of harm (a lower NIS 10,000 no-proof tier applies to notification / data-subject-rights breaches).
 
-### Database Registration
+### Database Registration (reformed by Amendment 13)
 
-Under Israeli law, certain databases containing personal data must be registered with the PPA:
+Amendment 13 (August 2025) repealed the old broad registration duty. The pre-2025 rule, which required registering any database with 10,000+ records, or sensitive data, or used for direct marketing, no longer applies. The current regime:
 
-1. **Determine registration requirement**: Databases with 10,000+ records, or containing sensitive data (health, financial, biometric), or used for direct marketing must be registered
-2. **Registration fields**: Database name, purpose, data categories, security measures, data processors, cross-border transfers
-3. **Annual renewal**: Registration must be renewed annually
-4. **Exemptions**: Databases used solely for managing employee-employer relations (under certain conditions)
+1. **Registration** is now required only for: (a) **data brokers**, meaning databases whose main purpose is collecting personal data to transfer to others as a business, where the database holds data on more than **10,000 individuals**; and (b) **public bodies**. The 10,000 threshold survives only in the data-broker context, not as a general trigger.
+2. **Notification (not registration)**: a controller of a database holding "especially sensitive information" on more than **100,000 individuals** must notify the PPA of identity, contact, and DPO details, even when registration is not required.
+3. **No annual renewal**: the annual-renewal requirement is gone. A previously-registered database that no longer qualifies is not auto-removed; the controller must apply to be struck from the register.
+4. Most ordinary consumer apps no longer need to register at all under the new regime, but still owe the full security, consent, and data-subject-rights duties below.
 
 ### Data Protection Requirements
 
@@ -176,7 +176,7 @@ pnpm audit --audit-level=high
 
 ### Container Scanning with Trivy
 
-> **Trivy v0.69.4 supply-chain compromise (early 2026).** The official Trivy GitHub Actions binary at v0.69.4 was compromised. Pin to v0.69.3 or upgrade to v0.70.x or later, and verify checksums. Avoid `aquasecurity/trivy-action@v0.69.4` in CI workflows.
+> **Trivy supply-chain compromise (March 2026).** The `aquasecurity/trivy-action` and `setup-trivy` tags were compromised: a malicious v0.69.4 release (19 Mar 2026) was followed by malicious v0.69.5 and v0.69.6 Docker images (GHSA-69fq-xp46-6x23 / CVE-2026-33634). Pin to a clean **v0.70.x or later** (avoid the entire v0.69.4 to v0.69.6 range), pin actions to a full commit SHA, and verify checksums.
 
 
 ```bash
@@ -517,10 +517,10 @@ Refer to the `references/` directory for detailed guidance on Israeli privacy la
 
 ## Gotchas
 
-- Israeli Privacy Protection Law breach notification timing was overhauled by Amendment 13 (in force August 14, 2025). The current rule for serious incidents is **72 hours to notify the Privacy Protection Authority** plus notification to affected individuals where high risk; the pre-2025 "without delay" framing is obsolete. Statutory damages are now up to NIS 100,000 without proof of harm; databases with sensitive data on more than 100,000 individuals must submit advance notification (separate from the 10,000-individual database tier). Agents that quote pre-2025 language miss the new exposure.
+- Israeli Privacy Protection Law was overhauled by Amendment 13 (in force August 14, 2025). A serious security incident must be reported to the Privacy Protection Authority **immediately** (the law says "immediately", not the GDPR-style fixed 72-hour clock), plus notification to affected individuals where there is high risk. Statutory damages are now up to NIS 100,000 without proof of harm. Agents that quote pre-2025 language miss the new exposure.
 - Hebrew UTF-8 characters are 2 bytes each. Input length validation that counts bytes instead of characters will reject valid Hebrew input at half the expected length.
 - Israeli ID numbers (Teudat Zehut) use a Luhn-variant check digit algorithm, not standard Luhn. Agents may implement the wrong validation and accept invalid IDs.
-- The Israeli Privacy Protection Authority (PPA) database registration threshold is 10,000 records, not 5,000. Agents may cite incorrect thresholds from outdated training data.
+- Database registration was narrowed dramatically by Amendment 13 (August 2025): the old "register any database with 10,000+ records" rule was repealed. Registration now applies only to data brokers (databases over 10,000 individuals whose business is selling data) and public bodies, with a separate notification duty for especially-sensitive databases over 100,000 individuals. Agents citing the old general 10,000-record registration threshold are out of date.
 - Bidirectional (BiDi) text attacks are especially dangerous in Hebrew/English mixed codebases. Standard security scanners do not detect RTL override characters (U+202E) that can disguise malicious code.
 
 ## Reference Links

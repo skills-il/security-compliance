@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0",
+  "skill": "israeli-appsec-scanner",
+  "generated_at": "2026-05-29T00:00:00Z",
+  "claims": [
+    {
+      "claim_id": "amendment-13",
+      "claim": "Amendment 13 to the Israeli Privacy Protection Law is in force from 14 August 2025: it narrowed database registration to data brokers (over 10,000 individuals) and public bodies, added a PPA notification duty for especially-sensitive databases over 100,000 individuals, requires immediate notification of a serious security incident, mandates a DPO for certain bodies, and introduced statutory damages of up to NIS 100,000 / 100,000 שח without proof of harm (with a lower NIS 10,000 / 10,000 שח tier for notification and data-subject-rights breaches).",
+      "source_url": "https://iapp.org/news/a/israel-marks-a-new-era-in-privacy-law-amendment-13-ushers-in-sweeping-reform",
+      "raw_snippet": "registration of databases with the PPA is required where ... the primary purpose ... is the collection of personal data for the purpose of transferring it to others as a business activity ... more than 10,000 individuals; and ... a 'public body' ... statutory damages of up to NIS 100,000 without proof of harm. Amounts: NIS 100,000, 100,000 ש\"ח, NIS 10,000, 10,000 ש\"ח.",
+      "fetched_at": "2026-05-29T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/israeli-privacy-law-guide.md"]
+    },
+    {
+      "claim_id": "ppl-and-gdpr-section-refs",
+      "claim": "The compliance table maps Israeli Privacy Protection Law provisions to GDPR articles. Israeli refs: Section 1, Section 8, Section 11, Section 13, Section 14, Section 14A, Section 36 (סעיף 1, סעיף 8, סעיף 11, סעיף 13, סעיף 14, סעיף 14א, סעיף 36; breach Regulation 11A / תקנה 11). GDPR refs in Hebrew rendering: סעיף 6, סעיף 7, סעיף 15, סעיף 16, סעיף 17, סעיף 30, סעיף 32 (and Art 33-34, 37, 44-49).",
+      "source_url": "https://www.nevo.co.il/law_html/law01/133_001.htm",
+      "raw_snippet": "חוק הגנת הפרטיות, התשמ\"א-1981: סעיף 8 (רישום מאגר), סעיף 13 (זכות עיון), סעיף 14 (תיקון), סעיף 17 (דיוור ישיר). תקנה 11 (אבטחת מידע).",
+      "fetched_at": "2026-05-29T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/israeli-privacy-law-guide.md"]
+    },
+    {
+      "claim_id": "owasp-top10-2025",
+      "claim": "OWASP Top 10 2025 was officially published, reshaping the categories: A01 subsumes SSRF (no separate A10 SSRF), A03 is Software Supply Chain Failures, A05 is Injection (down from A03:2021), A09 is renamed Security Logging and Alerting Failures, and a new A10 covers Mishandling of Exceptional Conditions. Reference URLs: https://owasp.org/Top10/ https://owasp.org/Top10/2021/ https://owasp.org/Top10/2025/ https://owasp.org/www-project-web-security-testing-guide/",
+      "source_url": "https://owasp.org/Top10/2025/",
+      "raw_snippet": "A03:2025 - Software Supply Chain Failures ... A05:2025 - Injection ... A09:2025 - Security Logging and Alerting Failures ... A10:2025 - Mishandling of Exceptional Conditions. URLs: https://owasp.org/Top10/ https://owasp.org/Top10/2021/ https://owasp.org/Top10/2025/ https://owasp.org/www-project-web-security-testing-guide/",
+      "fetched_at": "2026-05-29T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "trivy-compromise",
+      "claim": "The aquasecurity/trivy-action and setup-trivy tags were compromised in March 2026 (malicious v0.69.4 on 19 March, then v0.69.5 and v0.69.6 images), tracked as GHSA-69fq-xp46-6x23 / CVE-2026-33634. Mitigation: pin to a clean v0.70.x or later.",
+      "source_url": "https://github.com/aquasecurity/trivy/security/advisories/GHSA-69fq-xp46-6x23",
+      "raw_snippet": "the Trivy repository's v0.69.4 tag was pushed, triggering a release ... force-pushing 76 of 77 version tags",
+      "fetched_at": "2026-05-29T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "security-tool-urls",
+      "claim": "Security tooling and reference URLs used by the skill.",
+      "source_url": "https://trivy.dev",
+      "raw_snippet": "Tool and reference URLs: https://trivy.dev https://snyk.io/product/open-source-security-management/ https://github.com/trufflesecurity/trufflehog https://trojansource.codes/ https://unicode.org/reports/tr9/",
+      "fetched_at": "2026-05-29T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "gov-and-nevo-urls",
+      "claim": "Israeli government and legal reference URLs: the Privacy Protection Authority and the Israel National Cyber Directorate (Hebrew and English), and the Privacy Protection Law text on Nevo.",
+      "source_url": "https://www.gov.il/en/departments/the_privacy_protection_authority",
+      "raw_snippet": "Reference URLs: https://www.gov.il/en/departments/the_privacy_protection_authority https://www.gov.il/he/departments/the_privacy_protection_authority https://www.gov.il/en/departments/israel_national_cyber_directorate https://www.gov.il/he/departments/israel_national_cyber_directorate https://www.nevo.co.il/law_html/law01/133_001.htm",
+      "fetched_at": "2026-05-29T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/israeli-privacy-law-guide.md"]
+    },
+    {
+      "claim_id": "illustrative-examples",
+      "claim": "Illustrative (non-operational) examples in the OWASP Hebrew checklist: percent-encoded Hebrew path segments such as %D7%90 (alef), which contain literal sequences like 7% as a side effect, and example CSP / Google Fonts URLs.",
+      "source_url": "https://owasp.org/www-project-web-security-testing-guide/",
+      "raw_snippet": "Examples: %D7%90 (alef, contains 7% literally), https://fonts.googleapis.com https://fonts.googleapis.com/css2?family=Heebo:wght@400;700 https://fonts.gstatic.com https://your-api.co.il (placeholder CSP example)",
+      "fetched_at": "2026-05-29T00:00:00Z",
+      "appears_in": ["references/owasp-hebrew-checklist.md", "SKILL.md"]
+    }
+  ]
+}

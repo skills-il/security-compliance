@@ -6,7 +6,7 @@ A practical summary of Israel's Privacy Protection Law (1981) and its regulation
 
 Israel's privacy framework consists of:
 
-1. **Privacy Protection Law, 5741-1981** (the primary law)
+1. **Privacy Protection Law, 5741-1981** (the primary law), as substantially reformed by **Amendment 13** (in force 14 August 2025): narrowed database registration, immediate serious-incident notification, mandatory DPO triggers, expanded "sensitive data" definitions, and statutory damages up to NIS 100,000 without proof of harm
 2. **Privacy Protection Regulations (Information Security), 5777-2017** (the security regulations)
 3. **Privacy Protection Regulations (Transfer of Data to Databases Abroad), 5761-2001**
 4. **Guidance documents from the Privacy Protection Authority (PPA)**
@@ -36,34 +36,35 @@ The entity that decides the purposes and means of processing personal data.
 
 The person responsible for the day-to-day management and security of the database.
 
-## Database Registration Requirements
+## Database Registration Requirements (reformed by Amendment 13, August 2025)
 
-### When Registration Is Required
+Amendment 13 repealed the old broad registration duty. The pre-2025 rule, which required registering any database with 10,000+ records, or sensitive data, or used for direct marketing, no longer applies.
 
-You must register your database with the PPA if it meets ANY of these criteria:
+### When Registration Is Required (current regime)
 
-- Contains data on more than 10,000 individuals
-- Contains "sensitive information" (health, genetic, financial, criminal, political opinions, religious beliefs)
-- Contains information about individuals who have not consented to its inclusion
-- Is used for direct marketing purposes
-- Belongs to a public body
+Registration with the PPA Registrar is now required only for:
 
-### Registration Process
+- **Data brokers**: databases whose main purpose is collecting personal data in order to transfer it to others as a business, where the database holds data on more than 10,000 individuals. (The 10,000 threshold survives only here, not as a general trigger.)
+- **Public bodies** (as defined in the law).
 
-1. Submit application to the PPA Registrar
-2. Provide: database name, purpose, categories of data, types of data subjects, data recipients, security measures, database manager details
-3. Receive registration number
-4. Renew annually
-5. Notify the registrar of any material changes
+### Notification (not registration)
+
+A controller of a database holding "especially sensitive information" on more than 100,000 individuals must notify the PPA of identity, contact, and Data Protection Officer details, even when full registration is not required.
+
+### Process Notes
+
+1. There is no longer an annual-renewal requirement.
+2. A database previously registered that no longer qualifies is not removed automatically; the controller must apply to be struck from the register.
+3. Most ordinary consumer apps no longer need to register, but still owe the full security, consent, and data-subject-rights duties below.
 
 ### Practical Implications for Developers
 
 ```
 If your app stores user profiles with personal data:
-  - Count unique individuals in your database
-  - If approaching 10,000, plan for registration
-  - If storing health/financial data, register regardless of count
-  - Display registration number in your privacy policy
+  - You likely do NOT need to register unless you are a data broker or a public body
+  - If your business is selling/brokering personal data on 10,000+ people, register
+  - If you hold especially sensitive data on 100,000+ people, file the PPA notification
+  - Either way, implement the 2017 security regulations and support data-subject rights
 ```
 
 ## Data Protection Principles
@@ -291,7 +292,7 @@ The privacy policy must be available in Hebrew.
 ## Common Compliance Mistakes
 
 1. **Collecting Israeli ID numbers unnecessarily**: Only collect when legally required
-2. **Missing database registration**: Monitor your user count and register before reaching 10,000
+2. **Misjudging database registration**: Since Amendment 13 (Aug 2025), registration applies only to data brokers (10,000+ individuals) and public bodies, not every database over 10,000 records. Do not register unnecessarily, but file the PPA notification if you hold especially sensitive data on 100,000+ individuals
 3. **No Hebrew privacy policy**: Israeli law requires accessibility in Hebrew
 4. **Ignoring the security regulations**: The 2017 regulations have specific technical requirements
 5. **Not logging data access**: Access logs must be retained for 24 months

@@ -1,6 +1,6 @@
 # OWASP Top 10 with Hebrew/RTL-Specific Considerations
 
-This reference extends the OWASP Top 10 (2021 numbering scheme) with attack vectors and mitigation strategies specific to Hebrew-language and RTL (Right-to-Left) web applications. Note: OWASP Top 10 **2025** was published and changed the numbering, cross-walk findings before reporting. Notable shifts: SSRF folded into A01; new A03 Software Supply Chain Failures; new A10 Mishandling of Exceptional Conditions; A09 renamed to Security Logging and Alerting Failures.
+This reference extends the OWASP Top 10 (2021 numbering scheme) with attack vectors and mitigation strategies specific to Hebrew-language and RTL (Right-to-Left) web applications. Note: OWASP Top 10 2025 was published and changed the numbering, cross-walk findings before reporting. Notable shifts: SSRF folded into A01; new A03 Software Supply Chain Failures; new A10 Mishandling of Exceptional Conditions; A09 renamed to Security Logging and Alerting Failures.
 
 ## A01: Broken Access Control
 
