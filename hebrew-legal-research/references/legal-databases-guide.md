@@ -8,7 +8,7 @@ Israeli legal research, including both paid and free options.
 
 ### Nevo (nevo.co.il)
 - **Publisher:** Nevo Publishing Ltd.
-- **Coverage:** Comprehensive — legislation, case law, legal articles, secondary sources
+- **Coverage:** Comprehensive: legislation, case law, legal articles, secondary sources
 - **Strengths:**
   - Most comprehensive Israeli legal database
   - Full text of all Knesset legislation (current and historical versions)
@@ -83,7 +83,7 @@ Israeli legal research, including both paid and free options.
   - Historical coverage is incomplete
   - The site enforces an aggressive WAF that blocks foreign IPs and many user agents; access from an Israeli network or via a real browser session is most reliable
 - **URLs:**
-  - Supreme Court portal: https://supreme.court.gov.il/sites/he/Pages/home.aspx
+  - Supreme Court portal: https://supreme.court.gov.il/ (the deep `/sites/he/Pages/home.aspx` path was retired; use the domain root, then navigate to verdicts search. WAF-blocked to bots, opens in a real browser)
   - Judicial Authority landing: https://www.gov.il/he/departments/the_judicial_authority/govil-landing-page
   - Court fees reference: https://www.gov.il/he/pages/fees_16
 - **Tips:**
@@ -144,4 +144,4 @@ Confirm no recent amendments or pending legislation changes
 Israeli legal citations typically follow this format:
 - **Legislation:** Chok [Name], Tashla"a-[Year], Sefer HaChukim [number], amud [page]
 - **Court ruling:** [Court type] [case number] [Party 1] neged [Party 2]
-- **Example:** Baga"tz 5100/94 Hamara"p neged Medinat Yisrael
+- **Example:** Baga"tz 5100/94 HaVaad HaTziburi Neged Inuyim BeYisrael neged Medinat Yisrael (Public Committee Against Torture v. State of Israel). Always copy the exact docket number and party names from a verified source; never reconstruct them from memory.

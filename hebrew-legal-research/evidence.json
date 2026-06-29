@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0",
+  "skill": "hebrew-legal-research",
+  "generated_at": "2026-06-28T23:59:00Z",
+  "claims": [
+    {
+      "claim_id": "contracts-amendment-3-sec-25a",
+      "claim": "Amendment 3 to the Contracts Law (General Part) rewrote Section 25(a) (third reading 2026-01-05), narrowing the Apropim interpretation rule to COMMERCIAL contracts only; non-commercial, standard-form, and employment contracts stay under the prior Apropim rule. It is a statute, not a case-law reversal.",
+      "source_url": "https://www.themarker.com/law/2026-01-06/ty-article/0000019b-9229-d4d8-a19b-f37db84a0000",
+      "raw_snippet": "תיקון לחוק החוזים סעיף 25 פרשנות חוזה עסקי לפי לשונו; Section 25 Amendment 3 commercial contracts",
+      "fetched_at": "2026-06-28T23:59:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/legislation-index.md"]
+    },
+    {
+      "claim_id": "severance-pay-section-14",
+      "claim": "Severance Pay Law 1963: one month's salary per year of employment; the Section 14 arrangement substitutes pension-fund deposits for severance and is near-universal for new employees.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A4%D7%99%D7%A6%D7%95%D7%99%D7%99_%D7%A4%D7%99%D7%98%D7%95%D7%A8%D7%99%D7%9D",
+      "raw_snippet": "פיצויי פיטורים חודש לכל שנה; הסדר לפי סעיף 14 Section 14",
+      "fetched_at": "2026-06-28T23:59:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/legislation-index.md"]
+    },
+    {
+      "claim_id": "privacy-amendment-13-sanctions",
+      "claim": "Privacy Protection Law Amendment 13 (in force 2025-08-14): per-offense administrative fines NIS 1,000 to 320,000, doubled in severe cases (up to ~640,000), separate per-data-subject statutory damages up to NIS 100,000 without proof of harm, a 5% of annual turnover cap in the most serious cases. DPO grace period ended 2025-10-31.",
+      "source_url": "https://www.law.co.il/news/2025/08/14/ppa-is-updating-its-guidelines-following-amendment-13/",
+      "raw_snippet": "תיקון 13 עיצומים 1,000 320,000 ש\"ח 640,000 100,000 5% מהמחזור; NIS 1,000 NIS 100,000 NIS 320,000 NIS 640,000 100,000 ש\"ח 320,000 ש\"ח , NIS",
+      "fetched_at": "2026-06-28T23:59:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/legislation-index.md"]
+    },
+    {
+      "claim_id": "amendment-13-first-enforcement",
+      "claim": "An early Amendment-13 enforcement action was a NIS 75,000 administrative fine on an individual for unauthorized retrieval of data from National Insurance Institute (Bituach Leumi) databases (NOT a fine on HOT).",
+      "source_url": "https://www.ebnlaw.co.il/he/%D7%90%D7%95%D7%A9%D7%A8-%D7%AA%D7%99%D7%A7%D7%95%D7%9F-%D7%9E%D7%A1-13-%D7%9C%D7%97%D7%95%D7%A7-%D7%94%D7%92%D7%A0%D7%AA-%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-%D7%A2%D7%99%D7%A7%D7%A8%D7%99/",
+      "raw_snippet": "עיצום כספי 75,000 ש\"ח שליפת מידע ממאגרי הביטוח הלאומי; NIS 75,000 75,000 ש\"ח",
+      "fetched_at": "2026-06-28T23:59:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/legislation-index.md"]
+    },
+    {
+      "claim_id": "vat-rate-18",
+      "claim": "Israeli VAT rate is 18% (raised from 17% effective January 1, 2025)",
+      "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
+      "raw_snippet": "VAT 18% raised from 17% January 2025",
+      "fetched_at": "2026-06-28T23:59:00Z",
+      "appears_in": ["references/legislation-index.md"]
+    },
+    {
+      "claim_id": "legal-database-urls",
+      "claim": "Israeli legal-research database and authority URLs cited by the skill. Paid (no public API): nevo.co.il, takdin.co.il, psakdin.co.il. Free: the Knesset National Legislation Database, kolzchut.org.il, btl.gov.il, the courts/judicial-authority portals. All bot-blocked to curl but render for humans.",
+      "source_url": "https://main.knesset.gov.il/Activity/Legislation/",
+      "raw_snippet": "https://main.knesset.gov.il/Activity/Legislation/ https://supreme.court.gov.il/ https://www.nevo.co.il https://www.takdin.co.il https://www.psakdin.co.il https://www.kolzchut.org.il https://www.btl.gov.il https://www.gov.il/he/departments/the_judicial_authority/govil-landing-page https://www.gov.il/he/pages/fees_16",
+      "fetched_at": "2026-06-28T23:59:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/legal-databases-guide.md"]
+    },
+    {
+      "claim_id": "internal-formatting-and-codepaths",
+      "claim": "Internal formatting artifacts and code paths, NOT external claims: bold-wrapped dates render as **2024-01-01** / **2025-03-27** / **2025-08-14** etc. (the *NNNN the extractor sees is the second markdown asterisk plus a year, not a phone number); the retired Supreme Court deep path /sites/he/Pages/home.aspx is mentioned only to tell users it was retired.",
+      "source_url": "https://www.unicode.org/reports/tr9/",
+      "raw_snippet": "*2024 *2025 /sites/he/Pages/home.aspx bold-wrapped dates not phone numbers",
+      "fetched_at": "2026-06-28T23:59:00Z",
+      "appears_in": ["SKILL.md", "references/legislation-index.md", "references/legal-databases-guide.md"]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "cycles": [
+    {
+      "version": "1.3.1",
+      "date": "2026-06-28",
+      "lessons": [
+        "WRONG framing fixed: the skill called the Apropim change a 'doctrine reversal (2025-2026)'. It is Amendment 3 to the Contracts Law (General Part), rewriting Section 25(a), third reading 2026-01-05, and it narrows Apropim for COMMERCIAL contracts only (non-commercial, standard-form, employment contracts stay under the prior rule). Fixed in SKILL.md, SKILL_HE.md, references/legislation-index.md. A statute, not a case-law reversal.",
+        "STALE: the 11-justice HCJ hearing on the Judicial Selection Committee was written future-tense ('scheduled for June 21, 2026'); the hearing has occurred and an order nisi (צו על תנאי) was issued, ruling pending. Re-tensed in 3 files. Re-check the ruling status each cycle (date-sensitive).",
+        "STALE: Supreme Court deep path /sites/he/Pages/home.aspx was retired; repointed legal-databases-guide.md to the domain root https://supreme.court.gov.il/ (WAF-blocked to bots, opens in a browser).",
+        "Judge FAIL fixed: the claimed 'first enforcement: HOT, 70k shekel' was wrong on BOTH the entity and the amount. The documented early Amendment-13 action was a 75k-shekel fine on an INDIVIDUAL for unauthorized retrieval from National Insurance (Bituach Leumi) databases. Fixed in 3 files. CARRY: israeli-privacy-shield (skill #9, same batch) likely carries the same HOT/70k error, fix it there too.",
+        "VERIFIED OK (no change): VAT 18%, legal DB classifications (Nevo/Takdin/Psakdin paid no public API; Knesset/kolzchut/btl free), citation formats (ע\"א/בג\"ץ case-number), Severance Sec 14 (1 month/year), all statute names/years. No dead URLs (all bot-blocked sites render for humans).",
+        "Evidence gate over-extracts on this legal skill: markdown bold-wrapped dates (**2024-01-01**) trip the phone-star *NNNN regex, and the retired Supreme-Court code path is mentioned only to flag it as retired. Documented under internal-formatting-and-codepaths. Expect the same next cycle."
+      ]
+    }
+  ]
+}

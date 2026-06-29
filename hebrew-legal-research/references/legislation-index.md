@@ -10,7 +10,7 @@ For each law, the Hebrew name, year of enactment, and key sections are provided.
 - Hebrew: Chok Yesod: Kvod HaAdam VeCheruto
 - Key sections: Saif 2 (protection of life, body, dignity), Saif 7 (privacy rights)
 - Significance: Quasi-constitutional status, basis for judicial review
-- Amended: 1994 (limitation clause added)
+- Amended: 1994 (added the "Basic principles" clause; the original purpose clause was re-designated). The limitation clause, the purpose clause, and the preservation-of-laws clause were all already in the original 1992 enactment.
 
 ### Basic Law: Freedom of Occupation (1992)
 - Hebrew: Chok Yesod: Chofesh HaIsuk
@@ -163,8 +163,8 @@ multiple separate statutes:
 ### Privacy Protection Law 1981
 - Hebrew: Chok Haganat HaPratiut
 - Last major reform: **Amendment 13, in force August 14, 2025**, granting the Privacy Protection Authority independent enforcement authority including administrative fines, cease-processing orders, mandatory deletion, and an expanded DPO regime. The DPO compliance grace period ended **2025-10-31**.
-- Breach notification: the statute requires **"prompt" notification to the PPA of a "severe security incident"** — it does NOT adopt the GDPR 72-hour wording. Verify the exact statutory phrasing before quoting a specific deadline.
-- Sanctions: per-offense administrative fines on controllers in the **NIS 1,000-320,000** range, doubled in severe cases (up to ~NIS 640,000 per offense), with a separate per-data-subject statutory-damages component of **up to NIS 100,000 without proof of harm**. The most serious cases carry a **5% of annual turnover** cap. First published enforcement action under Amendment 13: **HOT, NIS 70,000**.
+- Breach notification: the statute requires **"prompt" notification to the PPA of a "severe security incident"**, and it does NOT adopt the GDPR 72-hour wording. Verify the exact statutory phrasing before quoting a specific deadline.
+- Sanctions: per-offense administrative fines on controllers in the **NIS 1,000-320,000** range, doubled in severe cases (up to ~NIS 640,000 per offense), with a separate per-data-subject statutory-damages component of **up to NIS 100,000 without proof of harm**. The most serious cases carry a **5% of annual turnover** cap. An early Amendment-13 enforcement action was a **NIS 75,000** administrative fine on an individual for unauthorized retrieval of data from National Insurance Institute (Bituach Leumi) databases.
 - 2026 PPA enforcement priorities (from PPA work plan): municipalities, e-commerce platforms, popular consumer apps, genetic-testing labs, after-school programs (tzaharonim).
 - See detailed coverage in israeli-privacy-shield skill.
 
@@ -213,7 +213,7 @@ This is not a single statute but a connected legislative and doctrinal track tha
 ### Judicial Selection Committee reform (passed, not yet in force)
 - Knesset law of **2025-03-27**.
 - Activation: takes effect **only when the next Knesset is sworn in after the October 2026 elections**. Current committee composition is unchanged.
-- An **11-justice HCJ panel** is scheduled to hear consolidated petitions on **June 21, 2026** (Bar Association, Yesh Atid MKs, Movement for Quality Government, Israeli Democracy Guard).
+- An **11-justice HCJ panel** heard consolidated petitions on **June 21, 2026** (Bar Association, Yesh Atid MKs, Movement for Quality Government, Israeli Democracy Guard) and issued an **order nisi** (צו על תנאי) against the committee-composition change; a final ruling is pending (re-check status).
 - As of 2026-04-27, the Attorney General officially declared the Justice Minister in continuing violation of the law for not convening the current selection committee.
 
 ### Pending 2026 bills ("Judicial Overhaul Redux")
@@ -225,4 +225,4 @@ None of the items below are enacted law yet; track their status before citing.
 - **Public Complaints Commissioner on Judges, Amendment 6 (תשפ"ה-2025)**: in pipeline.
 
 ### Doctrinal shifts to flag
-- **Apropim doctrine reversal (2025-2026)**: contract-interpretation doctrine shifted; pre-Apropim case law that treated subjective intent as co-equal with text is no longer the safe default.
+- **Amendment 3 to the Contracts Law (General Part), Section 25(a), third reading 2026-01-05**: narrows the Apropim interpretation rule for COMMERCIAL contracts only (interpreted by text unless absurd or self-contradictory). Non-commercial, standard-form (חוזה אחיד), and employment contracts stay under the prior Apropim rule. It is a statutory amendment, not a case-law reversal. Pre-amendment case law treating subjective intent as co-equal with text is no longer the safe default for commercial contracts.
