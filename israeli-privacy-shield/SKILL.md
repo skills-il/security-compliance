@@ -32,7 +32,7 @@ Under the Amendment 13 regime, registration with the Privacy Protection Authorit
 
 The broad pre-Amendment requirement covering any database with sensitive data (and the old "Form 1" five-trigger list) no longer applies.
 
-**Notification tier (separate from registration).** Even where registration is not required, a controller of a database that holds especially-sensitive data on more than 100,000 individuals must submit a notification to the PPA within 30 days. The notification includes the controller's identity and contact details, the privacy officer's details (if one is required), and the database definition document prepared under the Data Security Regulations.
+**Notification tier (separate from registration).** Even where registration is not required, a controller holding especially-sensitive data on more than 100,000 individuals must notify the PPA within 30 days, including the controller's and privacy officer's details and the database definition document.
 
 Registration and notification are handled through the PPA: https://www.gov.il/en/departments/the_privacy_protection_authority
 
@@ -56,10 +56,10 @@ Personal data transfer outside Israel requires:
 Note: Israel has EU adequacy decision, transfer TO EU is generally straightforward.
 
 ### Step 5: Breach Notification
-Amendment 13 introduced a hard deadline (replacing the old "without delay, no specific hours" rule):
-1. **Notify the Privacy Protection Authority within 72 hours** of discovering a reportable breach. The notification must cover the nature of the breach, the categories and approximate number of affected individuals, the likely consequences, and the measures taken or proposed.
-2. **Notify affected individuals "without undue delay"** where the breach is likely to result in a high risk to their rights and freedoms. The notice must be in clear, plain Hebrew and explain the nature of the breach, the data affected, the potential consequences, and the protective steps individuals can take.
-3. **Reportable breach standard:** an incident (unauthorized access, disclosure, loss, alteration, or destruction of personal data) that poses a risk to the rights and freedoms of the affected individuals.
+Israel requires IMMEDIATE notification of a Severe Security Incident under the 2017 Data Security Regulations (no fixed-hours deadline):
+1. **Notify the Privacy Protection Authority immediately upon discovering a Severe Security Incident.** The Data Security Regulations (2017) require notification "immediately" (miyad), there is NO fixed 72-hour deadline in Israeli law. Cover what happened, the categories and rough number of affected individuals, the likely impact, and the steps taken. The PPA may then direct the controller to notify affected data subjects.
+2. **Notify affected data subjects only if the PPA directs you to.** Under the Data Security Regulations that duty arises from a PPA direction after you report, NOT from the controller's own GDPR-style "high-risk" self-assessment. If directed, the notice must be in clear, plain Hebrew covering the breach, the data affected, the consequences, and protective steps.
+3. **Severe Security Incident standard:** an incident (unauthorized access, disclosure, loss, alteration, or destruction of personal data) that poses a risk to the rights of the affected individuals.
 4. **Document:** all incidents, response actions, and decisions, regardless of whether they cross the reporting threshold.
 
 ### Step 6: Compliance Checklist
@@ -108,15 +108,15 @@ The PPO is the contact point with the Privacy Protection Authority and is respon
 **Enforcement powers and fines.** Amendment 13 significantly expands the Authority's administrative powers:
 - Direct supervisory inspections without prior notice
 - Per-violation fines from NIS 1,000 up to NIS 320,000, doubled to NIS 640,000 in severe cases
-- Aggregate fines up to approximately NIS 3.2 million for serious violations
+- Aggregate fines up to approximately NIS 3.2 million for serious violations, capped at 5% of the controller's annual turnover for the most serious cases (a separate, lower annual ceiling applies to small/micro businesses)
 - For large-scale databases, a per-data-subject component of up to NIS 100 per affected individual
+- A private civil right of action (Section 29A): statutory damages up to NIS 50,000 per person without proof of harm, or up to NIS 100,000 only if the violation was intended to harm, separate from the administrative fine.
 - Ability to issue binding compliance orders
 
-Entities that were previously under the radar of enforcement now face real financial exposure.
 
-**Recent enforcement.** Among the first publicly reported Amendment-13 administrative fines, the PPA imposed a NIS 70,000 fine on HOT Telecommunication. The signal is clear: enforcement is live, not theoretical. Treat the framework as in force, not aspirational.
+**Recent enforcement.** Among the early Amendment-13 actions, the PPA fined an individual (a former National Insurance Institute employee) NIS 75,000 for unauthorized retrieval of sensitive data from Bituach Leumi databases. Enforcement is live.
 
-**What changed for database registration.** Amendment 13 narrowed the registration requirement. Registration with the Authority is now required only for public bodies and databases of 10,000+ individuals whose primary purpose is collecting and disclosing personal data to third parties as a business or for value (data brokers). The broader pre-Amendment requirement for any database with sensitive data no longer applies. Separately, a controller of a database that is not subject to registration but holds especially-sensitive data on more than 100,000 individuals must file a notification with the Authority within 30 days, including the database definition document.
+**What changed for database registration.** Amendment 13 narrowed registration to public bodies and to data brokers (databases of 10,000+ individuals whose primary purpose is selling/disclosing personal data to third parties). The broad pre-Amendment "any sensitive database" rule no longer applies. The separate 100,000-record especially-sensitive notification tier (file with the Authority within 30 days) is described above.
 
 ### Step 8: Data Subject Rights (DSR) Workflow
 
@@ -191,7 +191,7 @@ The Privacy Protection Law does not have a dedicated minors' provision, but othe
 |--------|------------|------|
 | Legal basis | Consent primary, limited exceptions | 6 legal bases |
 | Privacy officer requirement | Public bodies (and their processors), data brokers (10,000+ records), large-scale sensitive-data processors, and large-scale systematic monitors | Broader requirement |
-| Breach notification | 72 hours to the PPA; affected individuals "without undue delay" where high risk | 72 hours |
+| Breach notification | Immediately to the PPA on a Severe Security Incident (no fixed hours); data subjects as the PPA directs | 72 hours |
 | Administrative fines | Up to ~NIS 3.2M for serious violations + criminal liability | Up to 4% global revenue |
 | Right to erasure | Limited | Comprehensive (right to be forgotten) |
 | Database registration | Public bodies and data brokers only (10,000+ records) | Not required (replaced by ROPA) |
@@ -491,8 +491,8 @@ The banner you ship is one layer. The other layers, a published privacy policy i
 
 - Amendment 13 took effect on August 14, 2025 and is live law, not a pending proposal. Agents trained on pre-2025 data may treat Amendment 13 as a future change or miss it entirely. Always assume it applies when advising on Israeli privacy compliance today.
 - Amendment 13 expands "personal data" to include IP addresses, geolocation, and online identifiers. This pulls standard web analytics and mobile telemetry into scope. Agents may still apply the older narrower definition and underestimate what counts as personal data.
-- Administrative fines under Amendment 13 can reach approximately NIS 3.2 million for serious violations, on top of the existing criminal liability. Agents may cite only the pre-Amendment "relatively low fines" framing and underestimate real exposure.
-- Amendment 13 introduced a 72-hour deadline for notifying the Privacy Protection Authority of a reportable breach (measured from discovery), with notification to affected individuals "without undue delay" where the breach poses a high risk to their rights and freedoms. The old "without delay, no specific hours" rule no longer applies. Agents trained on pre-2025 data often still cite the outdated framing.
+- Administrative fines under Amendment 13 can reach ~NIS 3.2 million (capped at 5% of annual turnover in the worst cases), plus Section 29A statutory damages up to NIS 50,000 without proof of harm (NIS 100,000 only with intent to harm) and criminal liability.
+- Israel does NOT have a GDPR-style 72-hour breach deadline. Under the Data Security Regulations (2017, predating Amendment 13), a "Severe Security Incident" is reported to the PPA "immediately" (miyad) on discovery, and the PPA may direct notifying affected data subjects. Agents often wrongly import GDPR's 72-hour rule, do not.
 - Israeli Privacy Protection Law predates GDPR (1981 vs 2016) and still has key differences even after Amendment 13: a narrower right to erasure, and database registration still exists (though narrowed to public bodies and data brokers, plus a separate 100,000-record especially-sensitive notification tier). Agents may incorrectly apply GDPR rules to Israeli contexts.
 - Israel has an EU adequacy decision, meaning data transfers FROM Israel TO the EU are generally straightforward. Agents may incorrectly flag Israel-to-EU transfers as requiring additional safeguards.
 - The 2017 Security Regulations define three security levels (basic/medium/high) based on record count and data sensitivity. Agents may apply a one-size-fits-all approach instead of the tiered model.

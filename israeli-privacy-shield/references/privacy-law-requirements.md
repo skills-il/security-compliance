@@ -5,7 +5,7 @@ The Protection of Privacy Law, 5741-1981 (Chok Haganat HaPratiut) is Israel's pr
 data protection legislation. It is supplemented by the Privacy Protection (Data Security)
 Regulations of 2017 and was comprehensively overhauled by Amendment 13, which the Knesset
 approved on August 5, 2024 and which came into force on August 14, 2025. Amendment 13
-narrowed database registration, introduced a 72-hour breach notification deadline, added
+narrowed database registration, added
 a mandatory Privacy Protection Officer (DPO) obligation, expanded the definition of
 personal data to cover online identifiers, and significantly increased enforcement powers
 and administrative fines.
@@ -151,14 +151,17 @@ to the rights and freedoms of affected individuals, including:
 - Loss, alteration, or destruction of personal data
 
 ### Notification to the Authority
-- Must be reported to the Privacy Protection Authority within **72 hours** of discovering
-  the breach (Amendment 13 replaced the old "without delay, no specific hours" rule)
+- A "Severe Security Incident" must be reported to the Privacy Protection Authority
+  **immediately** (miyad) upon discovery, per the Data Security Regulations (2017). There is
+  NO fixed 72-hour deadline in Israeli law (do not import GDPR's 72 hours); the PPA may then
+  direct the controller to notify affected data subjects.
 - Must include: the nature of the breach, the categories and approximate number of
   affected individuals, the likely consequences, and the measures taken or proposed
 
 ### Notification to Data Subjects
-- Required where the breach is likely to result in a **high risk to the rights and
-  freedoms** of the individuals
+- Required **when the PPA directs the controller to notify** after the incident is
+  reported (Israeli Data Security Regulations), NOT on the controller's own GDPR-style
+  "high risk" self-assessment
 - Must be in clear, concise, plain language (Hebrew) and explain: the nature of the
   breach, the types of data affected, the potential consequences, contact details for
   more information, and the protective steps individuals can take
@@ -196,9 +199,10 @@ to the rights and freedoms of affected individuals, including:
 - Criminal penalties for privacy violations (up to 5 years imprisonment)
 
 ### Areas Where the Two Frameworks Now Converge
-- Breach notification: Amendment 13 introduced a 72-hour deadline to the PPA, matching
-  GDPR's 72-hour rule. Notification to affected individuals is required where the breach
-  poses a high risk to their rights and freedoms, mirroring GDPR Article 34
+- Breach notification: Israel requires "immediate" notification of a Severe Security
+  Incident to the PPA (Data Security Regulations 2017), which DIFFERS from GDPR's fixed
+  72-hour rule. The PPA may direct notification to affected data subjects; this is a point
+  of divergence from GDPR, not convergence
 - Personal data scope: Amendment 13 expressly includes online identifiers (IP addresses,
   geolocation, device identifiers), aligning with GDPR Recital 30
 - DPO obligation: Amendment 13 added a mandatory DPO requirement, though the Israeli

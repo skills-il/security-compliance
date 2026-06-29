@@ -30,16 +30,30 @@ def determine_security_level(record_count: int, has_sensitive: bool,
 def check_registration_required(record_count: int, has_sensitive: bool,
                                  is_direct_marketing: bool, is_public_body: bool,
                                  is_credit_service: bool) -> bool:
-    """Check if database registration with Privacy Protection Authority is required."""
+    """Check if database registration with the Privacy Protection Authority is required.
+
+    Amendment 13 (in force 2025-08-14) NARROWED registration. It is now required ONLY for:
+      (a) a public body, or
+      (b) a data broker: a database of 10,000+ individuals whose PRIMARY purpose is
+          disclosing personal data to third parties as a business or for value.
+    The pre-Amendment triggers were ABOLISHED: a credit-information service no longer
+    forces registration on its own, and "any sensitive database over a threshold" no
+    longer applies. has_sensitive and is_credit_service therefore do NOT force registration.
+    (is_direct_marketing is used here as the closest available proxy for the data-broker
+    test; refine the input if you can distinguish direct marketing from data brokerage.)
+    """
     if is_public_body:
-        return True
-    if is_credit_service:
         return True
     if record_count >= 10_000 and is_direct_marketing:
         return True
-    if record_count >= 10_000 and has_sensitive:
-        return True
     return False
+
+
+def check_notification_required(record_count: int, has_sensitive: bool) -> bool:
+    """Separate from registration: a controller of a NON-registered database holding
+    especially-sensitive data on MORE THAN 100,000 individuals must file a notification
+    with the PPA within 30 days (Amendment 13)."""
+    return record_count > 100_000 and has_sensitive
 
 
 def build_checklist(security_level: str) -> list:
@@ -119,6 +133,7 @@ def run_interactive_assessment() -> dict:
                                                          is_direct_marketing,
                                                          is_government or False,
                                                          is_credit_service)
+    notification_required = check_notification_required(record_count, has_sensitive)
     checklist = build_checklist(security_level)
 
     # Build report
@@ -137,6 +152,7 @@ def run_interactive_assessment() -> dict:
         "results": {
             "security_level": security_level,
             "registration_required": registration_required,
+            "ppa_notification_required_100k_sensitive": notification_required,
             "cross_border_review_needed": has_cross_border,
         },
         "checklist": checklist,
@@ -204,6 +220,7 @@ def run_from_json(json_input: str, org_name: str = "Unknown") -> dict:
                                                          is_direct_marketing,
                                                          is_government,
                                                          is_credit_service)
+    notification_required = check_notification_required(record_count, has_sensitive)
     checklist = build_checklist(security_level)
 
     report = {
@@ -221,6 +238,7 @@ def run_from_json(json_input: str, org_name: str = "Unknown") -> dict:
         "results": {
             "security_level": security_level,
             "registration_required": registration_required,
+            "ppa_notification_required_100k_sensitive": notification_required,
             "cross_border_review_needed": has_cross_border,
         },
         "checklist": checklist,

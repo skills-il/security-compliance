@@ -84,10 +84,10 @@
       "appears_in": ["SKILL.md", "SKILL_HE.md", "references/privacy-law-requirements.md"]
     },
     {
-      "claim_id": "breach-72-hours",
-      "claim": "Amendment 13 requires notification to the PPA within 72 hours of discovering a reportable breach",
-      "source_url": "https://iapp.org/news/a/israel-marks-a-new-era-in-privacy-law-amendment-13-ushers-in-sweeping-reform",
-      "raw_snippet": "Amendment 13 introduced a 72-hour deadline for notifying the Privacy Protection Authority of a reportable breach (measured from discovery)",
+      "claim_id": "breach-immediately-not-72h",
+      "claim": "A Severe Security Incident must be reported to the Privacy Protection Authority IMMEDIATELY upon discovery, per the Data Security Regulations (2017). Israel has NO fixed 72-hour breach deadline (that is GDPR), and the obligation predates Amendment 13.",
+      "source_url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/israel",
+      "raw_snippet": "Israel does not impose a fixed statutory deadline; a severe security incident must be reported to the PPA immediately / without delay (Data Security Regulations 2017), unlike GDPR's 72 hours",
       "fetched_at": "2026-05-18T00:00:00Z",
       "appears_in": ["SKILL.md", "SKILL_HE.md", "references/privacy-law-requirements.md"]
     },
@@ -102,7 +102,7 @@
     {
       "claim_id": "amendment-13-fine-3-2m",
       "claim": "Administrative fines under Amendment 13 can reach approximately NIS 3.2 million for serious violations",
-      "source_url": "https://www.ai-law.co.il/en/post/israel-s-privacy-protection-authority-steps-up-enforcement-first-fines-under-amendment-13",
+      "source_url": "https://iapp.org/news/a/israel-marks-a-new-era-in-privacy-law-amendment-13-ushers-in-sweeping-reform",
       "raw_snippet": "Administrative fines under Amendment 13 reach approximately NIS 3.2 million for serious violations",
       "fetched_at": "2026-05-18T00:00:00Z",
       "appears_in": ["SKILL.md", "SKILL_HE.md", "references/privacy-law-requirements.md"]
@@ -116,6 +116,14 @@
       "appears_in": ["SKILL.md"]
     },
     {
+      "claim_id": "amendment-13-turnover-cap-and-statutory-damages",
+      "claim": "Amendment 13 caps administrative fines at 5% of the controller's annual turnover in the most serious cases (with a separate lower annual ceiling for small/micro businesses). Separately, Section 29A of the Privacy Protection Law allows statutory damages of up to NIS 50,000 per affected person WITHOUT proof of harm, rising to up to NIS 100,000 only where the violation was committed with intent to harm (bekavana lifgoa).",
+      "source_url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/israel",
+      "raw_snippet": "administrative fines capped at 5% of annual turnover; Section 29A / סעיף 29א statutory damages up to NIS 50,000 (50,000 ש\"ח) without proof of harm, up to NIS 100,000 (100,000 ש\"ח) with intent to harm (בכוונה לפגוע)",
+      "fetched_at": "2026-06-29T01:40:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
       "claim_id": "per-data-subject-component-100",
       "claim": "For large-scale violations, fines can include a per-data-subject component of up to NIS 100 per individual",
       "source_url": "https://www.recordinglaw.com/world-laws/world-data-privacy-laws/israel-data-privacy-laws/",
@@ -124,10 +132,10 @@
       "appears_in": ["SKILL.md"]
     },
     {
-      "claim_id": "hot-70000-fine",
-      "claim": "HOT Telecommunications was fined NIS 70,000 in one of the first enforcement actions under Amendment 13",
-      "source_url": "https://www.ai-law.co.il/en/post/israel-s-privacy-protection-authority-steps-up-enforcement-first-fines-under-amendment-13",
-      "raw_snippet": "The PPA fined HOT Telecommunication NIS 70,000 (70,000 ש\"ח) in one of its first enforcement actions under Amendment 13",
+      "claim_id": "nii-75000-individual-fine",
+      "claim": "An early Amendment-13 administrative enforcement action was a NIS 75,000 fine on an individual (a former National Insurance Institute employee) for unauthorized retrieval of sensitive data from Bituach Leumi databases. It was NOT a NIS 70,000 fine on HOT.",
+      "source_url": "https://www.israelhayom.co.il/news/law/article/18882903",
+      "raw_snippet": "עיצום כספי בסך 75,000 ש\"ח על עובדת ביטוח לאומי לשעבר ששלפה מידע רגיש ללא הרשאה ממאגרי המוסד; 75,000 NIS",
       "fetched_at": "2026-05-18T00:00:00Z",
       "appears_in": ["SKILL.md", "SKILL_HE.md"]
     },
