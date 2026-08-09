@@ -6,6 +6,13 @@ license: MIT
 
 # Israeli AI Compliance Kit
 
+## Legal notice
+
+This is a free information tool operated by an AI model. It explains the law and the procedure and helps you organise your own documents. All of its outputs are produced automatically by an AI model, with no involvement, review, or approval by an advocate. The output is not legal advice and not a legal opinion, but a general explanation and a template only: it does not read the full file of your matter, does not check current case law, and does not examine your specific circumstances. An AI model may err, omit data, or present a wrong conclusion.
+
+Any text this tool drafts is an automatic draft for your personal preparation only. It is not a document prepared by an advocate and must not be relied on as evidence. This tool is not a substitute for advice that takes account of the particular circumstances and needs of each person. Before starting proceedings, signing a document, or filing with an authority or a court, consult an advocate. All use of its output is the user's sole responsibility.
+
+
 ## Problem
 
 Israeli ML teams shipping AI products face a fragmented compliance landscape: voluntary principles from the Ministry of Innovation, the Privacy Protection Law with Amendment 13 in force since August 14, 2025, sector regulators each drafting their own AI guidance, and the EU AI Act rolling out in staggered phases through 2027 that reach anyone selling into Europe. Most teams discover these requirements mid-procurement when an enterprise customer demands a model card, data statement, and DPIA. There is no unified checklist or template set tailored to the Israeli regulatory context.
