@@ -1,15 +1,20 @@
 {
+  "schemaVersion": "1.0",
   "skill_slug": "israeli-standards-import-checker",
   "version": "1.2.0",
   "generated_at": "2026-05-20",
   "claims": [
     {
-      "claim": "Israel began phasing EU regulations into the Standards Law under Amendment 19 starting January 1, 2025, with about 69 EU regulations adopted to date and the roll-out scheduled through 2028.",
-      "where": "SKILL.md Step 3 route 5, SKILL_HE.md Step 3 route 5",
+      "claim_id": "eu-directives-phasing",
+      "claim": "The European Directives track allows import, manufacture or marketing of products subject to official Israeli standards where they meet the corresponding European regulations; implementation began in stages on 1 January 2025 and is scheduled to continue through 1 January 2028.",
       "source_url": "https://www.complianceandrisks.com/blog/whats-good-for-europe-is-good-for-israel-qa-reviewing-the-import-reform-one-year-in/",
-      "source_title": "What's Good for Europe Is Good for Israel: Q&A Reviewing the Import Reform One Year In",
-      "fetched_at": "2026-05-20",
-      "raw_snippet": "Implementation began in stages on January 1, 2025, with continuation scheduled through January 1, 2028. ... Israel has adopted 69 different European regulations, with more expected to be adopted in the future."
+      "raw_snippet": "Implementation of these directives began in stages on 1 January 2025 and is scheduled to continue through 1 January 2028.",
+      "fetched_at": "2026-08-09",
+      "verified_via": "raw HTML fetch (curl) of source page",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim": "Amendment 21 to the Standards Law was introduced as a draft in November 2025 to allow importers to rely on US Federal Regulations, mirroring the EU-recognition model.",
@@ -44,20 +49,88 @@
       "raw_snippet": "enforcement will focus only on compliance with the adopted Directive requirements to the extent that they correspond to parallel sections of the official Israeli standards during the first five years."
     },
     {
-      "claim": "SII Maslol Plus Green Plan tests 50% of annual commercial shipments; Gold Plan tests 33% after 12 continuous months on Green; Diamond Plan grants a sale permit before the standard test for the importer's green-classified files only.",
-      "where": "SKILL.md Step 3 route 3, SKILL_HE.md Step 3 route 3, references/approval-routes.md section 3",
+      "claim_id": "maslol-green",
+      "claim": "Green Plan: test 50% of the commercial shipments per year of the same samples whose product file is classified as green.",
       "source_url": "https://www.sii.org.il/en/tracks",
-      "source_title": "Easement Plans - Standards Institution of Israel",
-      "fetched_at": "2026-05-20",
-      "raw_snippet": "Under the Green Plan, 50% of commercial shipments per year of the same samples whose product file is classified as green must be tested, and under the Gold Plan, 33% of commercial shipments per year ... Diamond Plan grants the granting of a sale permit before conducting the Shin test for the importer's green files only."
+      "raw_snippet": "Easements under the Green Plan: test 50% of the commercial shipments per year of the same samples whose product file is classified as green, as set forth in the applicable Shin annex.",
+      "fetched_at": "2026-08-09",
+      "verified_via": "raw HTML fetch (curl) of source page",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "claim": "SII Maslol Plus eligibility requires Group 1 classification, a valid existing test in the product file, an ISO 9001-certified manufacturing quality system, and documentation of three shipments with appropriate test conclusions from the past year.",
-      "where": "SKILL.md Step 3 route 3, SKILL_HE.md Step 3 route 3, references/approval-routes.md section 3",
+      "claim_id": "maslol-gold",
+      "claim": "Gold Plan: test 33% per year; switching to Gold is possible after twelve continuous months on Green.",
       "source_url": "https://www.sii.org.il/en/tracks",
-      "source_title": "Easement Plans - Standards Institution of Israel",
-      "fetched_at": "2026-05-20",
-      "raw_snippet": "Products in Group 1 classification ... Valid existing test in product file ... Manufacturing facility with ISO 9001-certified quality assurance system ... Documentation of three shipments with appropriate test conclusions from the past year."
+      "raw_snippet": "Easements under the Gold Plan: test 33% of the commercial shipments per year of the same samples whose product file is classified as green, as set forth in the applicable Shin annex.",
+      "fetched_at": "2026-08-09",
+      "verified_via": "raw HTML fetch (curl) of source page",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "maslol-gold-switch",
+      "claim": "Switching to the Gold Plan is possible after twelve continuous months on the Green Plan.",
+      "source_url": "https://www.sii.org.il/en/tracks",
+      "raw_snippet": "It is possible to switch to the Gold Plan after twelve continuous months on the Green Plan.",
+      "fetched_at": "2026-08-09",
+      "verified_via": "raw HTML fetch (curl) of source page",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "maslol-diamond",
+      "claim": "Diamond Plan: a sale permit is granted before the Shin test, for the importer's green files only.",
+      "source_url": "https://www.sii.org.il/en/tracks",
+      "raw_snippet": "Easements under the Diamond Plan: granting of a sale permit before conducting the Shin test for the importer's green files only. The conditions for joining this plan are set forth in the Commissioner of Standardization guidelines for the import of goods, p. 35.",
+      "fetched_at": "2026-08-09",
+      "verified_via": "raw HTML fetch (curl) of source page",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "maslol-plus-group1",
+      "claim": "Maslol Plus easement plans apply to goods in Group 1 for importers with a history of proper imports.",
+      "source_url": "https://www.sii.org.il/en/tracks",
+      "raw_snippet": "At the instructions of the Commissioner of Standardization, Chapter 8, easement plans for goods in Group 1 have been set for importers with a history of proper imports.",
+      "fetched_at": "2026-08-09",
+      "verified_via": "raw HTML fetch (curl) of source page",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "maslol-plus-iso9001",
+      "claim": "Eligibility requires the manufacturing plant to hold an approved quality assurance system per the valid version of ISO 9001.",
+      "source_url": "https://www.sii.org.il/en/tracks",
+      "raw_snippet": "The manufacturing plant has an approved quality assurance system pursuant to the specifications of the valid version of ISO 9001.",
+      "fetched_at": "2026-08-09",
+      "verified_via": "raw HTML fetch (curl) of source page",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "maslol-plus-three-shipments",
+      "claim": "A form must be filed per sample or family of samples stating three shipments for partial tests in the past year with the appropriate conclusion.",
+      "source_url": "https://www.sii.org.il/en/tracks",
+      "raw_snippet": "It is necessary to file a form for each sample or family of samples, stating three shipments for partial tests for the family in the past year and the appropriate conclusion.",
+      "fetched_at": "2026-08-09",
+      "verified_via": "raw HTML fetch (curl) of source page",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim": "SI 562 part 1 (toy safety, mechanical and physical properties) was revised in November 2022 with a transition period until 16 April 2023.",
@@ -84,12 +157,40 @@
       "raw_snippet": "All imports into Israel must have a label indicating the country of origin, the name and address of the producer, the name and address of the Israeli importer, the contents, and the weight or volume in metric units. In all instances, Hebrew must be used."
     },
     {
-      "claim": "Israel splits products under mandatory standards into four risk-based import groups: Group 1 (highest risk, model + shipment approval), Group 2 (medium, model certificate plus importer declaration), Group 3 (low, importer declaration only), Group 4 (industrial use only).",
-      "where": "SKILL.md Step 3, SKILL_HE.md Step 3, references/approval-routes.md import groups table",
+      "claim_id": "import-group-1",
+      "claim": "Group 1: highest inherent risk, requiring both model approval and shipment approval by an accredited testing laboratory.",
       "source_url": "https://fgx.com/blog/israel-moc-and-sii-certification-compliance-approval",
-      "source_title": "Importing IT Hardware into Israel with MoC and SII Compliance",
-      "fetched_at": "2026-05-20",
-      "raw_snippet": "Group 1: Products with the highest inherent risk, requiring both model approval and shipment approval by an accredited testing laboratory. Group 2: Moderate-risk products that need a model certificate and a declaration signed by the importer ... Group 3: Low-risk products, which only require a declaration of conformity signed by the importer ... Group 4: Industrial products that are subject to factory inspections and must comply with mandatory standards."
+      "raw_snippet": "Products with the highest inherent risk, requiring both model approval and shipment approval by an accredited testing laboratory",
+      "fetched_at": "2026-08-09",
+      "verified_via": "raw HTML fetch (curl) of source page",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "import-group-2",
+      "claim": "Group 2: moderate-risk products needing a model certificate plus an importer declaration.",
+      "source_url": "https://fgx.com/blog/israel-moc-and-sii-certification-compliance-approval",
+      "raw_snippet": "Moderate-risk products that need a model certificate and a declaration signed by the importer, confirming compliance with official standards",
+      "fetched_at": "2026-08-09",
+      "verified_via": "raw HTML fetch (curl) of source page",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "import-group-3",
+      "claim": "Group 3: low-risk products requiring only an importer declaration of conformity.",
+      "source_url": "https://fgx.com/blog/israel-moc-and-sii-certification-compliance-approval",
+      "raw_snippet": "Low-risk products, which only require a declaration of conformity signed by the importer to confirm that the product meets the necessary standards",
+      "fetched_at": "2026-08-09",
+      "verified_via": "raw HTML fetch (curl) of source page",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim": "From 1 July 2024, importers can declare compliance using ILAC-accredited foreign lab reports; from 7 July 2024 the Ministry of Economy stopped processing exemptions and switched to a random-surveillance programme.",
