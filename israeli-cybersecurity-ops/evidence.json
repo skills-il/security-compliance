@@ -4,12 +4,43 @@
   "generated_at": "2026-05-29T00:00:00Z",
   "claims": [
     {
-      "claim_id": "amendment-13-immediate-and-damages",
-      "claim": "Amendment 13 (in force 14 August 2025) requires immediate notification of a serious security incident to the PPA (the law says 'immediately', not a fixed 72-hour clock), mandates a DPO for public bodies, data brokers (over 10,000 individuals), large-scale especially-sensitive-data processors, and systematic large-scale monitoring, and introduced statutory damages up to NIS 100,000 / 100,000 ש\"ח without proof of harm. Database registration is no longer the primary control.",
+      "claim_id": "amendment-13-immediate-notification",
+      "claim": "On a severe security incident the controller must immediately notify the PPA and report the measures taken; the statute says \"immediately\", not a GDPR-style fixed 72-hour clock.",
       "source_url": "https://iclg.com/practice-areas/data-protection-laws-and-regulations/israel/",
-      "raw_snippet": "the controller must immediately notify the PPA and report the measures taken following the incident ... statutory damages of up to NIS 100,000 / 100,000 ש\"ח without proof of harm",
-      "fetched_at": "2026-05-29T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "scripts/security_triage.py"]
+      "raw_snippet": "Under the Data Security Regulations, in the event of a “severe security incident” (see definition above), the controller must immediately notify the PPA and report the measures taken following the incident.",
+      "fetched_at": "2026-08-09",
+      "verified_via": "raw HTML fetch (curl) of source page",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/security_triage.py"
+      ]
+    },
+    {
+      "claim_id": "amendment-13-damages-10k",
+      "claim": "Amendment 13 adds a court power to award damages independent of proven harm, up to NIS 10,000 / 10,000 ש\"ח.",
+      "source_url": "https://www.ebnlaw.co.il/he/%D7%90%D7%95%D7%A9%D7%A8-%D7%AA%D7%99%D7%A7%D7%95%D7%9F-%D7%9E%D7%A1-13-%D7%9C%D7%97%D7%95%D7%A7-%D7%94%D7%92%D7%A0%D7%AA-%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-%D7%A2%D7%99%D7%A7%D7%A8%D7%99/",
+      "raw_snippet": "• התיקון מקנה סמכות לבית המשפט לפסוק פיצויים עונשיים שאינם תלויים בנזק עד 10,000 ש\"ח, למשל במקרים בהם הופר עיקרון צמידות המטרה, לא מומשה זכות העיון במידע, או שלא נמחק מידע בעקבות בקשת אדם וכיו\"ב.",
+      "fetched_at": "2026-08-09",
+      "verified_via": "raw HTML fetch (curl) of source page",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/security_triage.py"
+      ]
+    },
+    {
+      "claim_id": "amendment-13-registration-thresholds",
+      "claim": "Registration applies to data brokers with more than 10,000 individuals and to public bodies; a separate duty to notify the Registrar applies where the database holds especially sensitive data on more than 100,000 data subjects.",
+      "source_url": "https://iclg.com/practice-areas/data-protection-laws-and-regulations/israel/",
+      "raw_snippet": "Under the PPL, a database must be registered if one of the following conditions is met: (a) its primary purpose is to collect personal data for the purpose of providing it to others as a business practice or for compensation, including direct mailing services, and the database contains personal data about more than 10,000 individuals; or (b) the controller of the database is a public body (excluding databases of personal data about employees only). In addition, the PPL stipulates a duty to notify the Registrar if the database contains data of special sensitivity about more than 100,000 data subjects.",
+      "fetched_at": "2026-08-09",
+      "verified_via": "raw HTML fetch (curl) of source page",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/security_triage.py"
+      ]
     },
     {
       "claim_id": "vendor-acquisitions-2026",
@@ -17,7 +48,9 @@
       "source_url": "https://techcrunch.com/2026/03/11/google-completes-32b-acquisition-of-wiz/",
       "raw_snippet": "Google completed its $32 billion acquisition of Wiz",
       "fetched_at": "2026-05-29T00:00:00Z",
-      "appears_in": ["SKILL.md"]
+      "appears_in": [
+        "SKILL.md"
+      ]
     },
     {
       "claim_id": "reference-urls",
@@ -25,7 +58,10 @@
       "source_url": "https://www.gov.il/en/departments/israel_national_cyber_directorate",
       "raw_snippet": "URLs: https://www.gov.il/en/departments/israel_national_cyber_directorate https://www.gov.il/he/departments/israel_national_cyber_directorate https://www.gov.il/en/departments/the_privacy_protection_authority https://www.gov.il/he/departments/the_privacy_protection_authority https://www.gov.il/en/departments/guides/cyber_incident https://www.gov.il/he/departments/guides/cyber_incident https://docs.wiz.io https://docs.snyk.io https://owasp.org/www-project-top-ten/",
       "fetched_at": "2026-05-29T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     }
   ]
 }
