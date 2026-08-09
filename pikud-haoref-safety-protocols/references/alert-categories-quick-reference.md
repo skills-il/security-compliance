@@ -7,7 +7,7 @@ Note: Home Front Command issues alerts by named type. The "Cat" numbers below ar
 | 1 | ירי רקטות וטילים | Missiles/Rockets | Enter shelter, close door/window, sit below window line | Short-range (Gaza/Lebanon historical): 10 min after last impact. Ballistic / Iran / Houthi: stay until explicit Cell Broadcast / HFC app release |
 | 2 | חדירת כלי טיס עוין | Hostile Aircraft | Enter shelter, close all openings, stay away from windows | Until all-clear |
 | 3 | רעידת אדמה | Earthquake | Open ground first; else mamad/stairwell with door OPEN; else Drop-Cover-Hold | Until shaking stops + check structure |
-| 4 | צונאמי | Tsunami | Move 1 km+ inland; 4th floor or higher; evacuate buildings of 3 floors or fewer | Until all-clear (do not return to shore ~12h) |
+| 4 | צונאמי | Tsunami | Move inland and to height; leave low buildings; see oref.org.il for the official distance and floor figures | Until official all-clear |
 | 5 | אירוע רדיולוגי | Radiological | Enter building, seal room, activate NBC if available | Follow official instructions |
 | 6 | חומרים מסוכנים | Hazardous Materials | Enter building, go to HIGHEST floor, seal room | Until hazmat clearance |
 | 7 | חדירת מחבלים | Terrorist Infiltration | Lock-Hide-Silence (do NOT open door) | Until security forces clear area |

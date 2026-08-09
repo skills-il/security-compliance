@@ -257,6 +257,94 @@
       "source_title": "Israel Standards Reform - US ITA",
       "fetched_at": "2026-05-20",
       "raw_snippet": "The Pharmacists' Regulations (Cosmetics) 5783-2022 replaced the older SII + MoH registration pathway with a Ministry of Health notification for EU-compliant products, and cancelled the registration fee."
+    },
+    {
+      "claim_id": "url-gov-search-official-standards",
+      "claim": "The Ministry of Economy publishes an Official Mandatory Standards Search Engine at this URL.",
+      "source_url": "https://www.gov.il/en/service/search_official_standards",
+      "raw_snippet": "Official Mandatory Standards Search Engine",
+      "verified_via": "browser",
+      "verified_at": "2026-08-09",
+      "source_note": "gov.il returns 403 to plain fetches; loaded in Playwright and asserted location.href before reading the title.",
+      "fetched_at": "2026-08-09",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/approval-routes.md",
+        "references/fast-track-options.md"
+      ]
+    },
+    {
+      "claim_id": "url-gov-cosmetic-import-permits",
+      "claim": "The Ministry of Health publishes the cosmetics import-permit application service at this URL.",
+      "source_url": "https://www.gov.il/en/service/application-for-cosmetic-import-permits",
+      "raw_snippet": "Application for Import Permits (Cosmetics)",
+      "verified_via": "browser",
+      "verified_at": "2026-08-09",
+      "source_note": "gov.il 403s to curl; loaded in Playwright and asserted location.href.",
+      "fetched_at": "2026-08-09",
+      "appears_in": [
+        "scripts/check_standard.py"
+      ]
+    },
+    {
+      "claim_id": "url-gov-vehicle-division",
+      "claim": "The Ministry of Transport and Road Safety publishes the Division of motor vehicles page at this URL.",
+      "source_url": "https://www.gov.il/en/departments/units/vehicle_division_maintenance_services",
+      "raw_snippet": "Division of motor vehicles",
+      "verified_via": "browser",
+      "verified_at": "2026-08-09",
+      "source_note": "gov.il 403s to curl; loaded in Playwright and asserted location.href.",
+      "fetched_at": "2026-08-09",
+      "appears_in": [
+        "scripts/check_standard.py"
+      ]
+    },
+    {
+      "claim_id": "url-sii-root",
+      "claim": "The Standards Institution of Israel operates sii.org.il.",
+      "source_url": "https://www.sii.org.il",
+      "raw_snippet": "מכון התקנים הישראלי",
+      "fetched_at": "2026-08-09",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/check_standard.py"
+      ]
+    },
+    {
+      "claim_id": "url-sii-en",
+      "claim": "The SII English site is at sii.org.il/en.",
+      "source_url": "https://www.sii.org.il/en",
+      "raw_snippet": "Standards Institution of Israel",
+      "fetched_at": "2026-08-09",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "url-sii-tracks",
+      "claim": "The SII publishes its easement plans (tracks) page at sii.org.il/en/tracks/.",
+      "source_url": "https://www.sii.org.il/en/tracks/",
+      "raw_snippet": "Easement Plans - Standards Institution of Israel",
+      "fetched_at": "2026-08-09",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "url-kolzchut-root",
+      "claim": "Kol-Zchut operates kolzchut.org.il.",
+      "source_url": "https://www.kolzchut.org.il",
+      "raw_snippet": "כל-זכות",
+      "fetched_at": "2026-08-09",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/fast-track-options.md"
+      ]
     }
   ]
 }

@@ -28,7 +28,7 @@ Input JSON schema (all fields optional unless marked required):
         "lawful_basis": "Consent / legitimate interest / ..."
       },
       "evaluation": {
-        "metrics": [{"name": "Accuracy", "value": "92%"}],
+        "metrics": [{"name": "Accuracy", "value": "<your measured accuracy>"}],
         "datasets": ["Eval set A"],
         "fairness": "Summary of fairness tests"
       },
@@ -68,7 +68,7 @@ EXAMPLE = {
     "evaluation": {
         "metrics": [
             {"name": "ROUGE-L", "value": "38.5"},
-            {"name": "Human preference", "value": "72%"}
+            {"name": "Human preference", "value": "<your measured preference rate>"}
         ],
         "datasets": ["Held-out 5K articles"],
         "fairness": "No demographic disparity in summary quality across article categories"

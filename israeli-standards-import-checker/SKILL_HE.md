@@ -71,7 +71,7 @@ compatibility: עובד עם Claude Code, Claude.ai, Cursor וסוכני קוד 
 - טופס הצהרת יבואן והגשה במסלול פלוס
 - דגימות יחידה לבדיקת מכון התקנים כשהמסלול דורש
 
-לשחרור במכס, עמיל המכס המורשה מגיש את הרשימון דרך מערכת שער עולמי של רשות המסים (https://shaarolami-query.customs.mof.gov.il/), פלטפורמת השחרור האלקטרונית בייצור. אישור מכון התקנים, הצהרת היבואן ודו"חות הבדיקה חייבים להתלוות לרשימון.
+לשחרור במכס, עמיל המכס המורשה מגיש את הרשימון דרך מערכת שער עולמי של רשות המסים, פלטפורמת השחרור האלקטרונית בייצור. אישור מכון התקנים, הצהרת היבואן ודו"חות הבדיקה חייבים להתלוות לרשימון.
 
 ### שלב 5: אמוד לוח זמנים
 
@@ -154,9 +154,9 @@ compatibility: עובד עם Claude Code, Claude.ai, Cursor וסוכני קוד 
 | מכון התקנים (אנגלית) | https://www.sii.org.il/en | מוקדי שירות, תקנים, הסמכות |
 | יבואנים במכון התקנים | https://www.sii.org.il/en/importers/ | הגשה במסלול פלוס, כתובות מייל |
 | מסלולי הקלה | https://www.sii.org.il/en/tracks/ | כללי ירוק, זהב, יהלום, זכאות ISO 9001 |
-| הממונה על התקינה (משרד הכלכלה) | https://www.gov.il/en/departments/general/standartization_policy_in_israel_legislation | מדיניות אכיפה, תקנים רשמיים, רשומות |
+| הממונה על התקינה (משרד הכלכלה) | (Ministry of Economy site, Commissioner of Standardization pages) | מדיניות אכיפה, תקנים רשמיים, רשומות |
 | מנוע חיפוש תקנים רשמיים ורגולציות אירופיות | https://www.gov.il/en/service/search_official_standards | חיפוש לפי מספר ת"י כדי לקבל את הרגולציה האירופית התואמת, מועדי תוקף וקבוצת יבוא |
-| שער עולמי (מכס) | https://shaarolami-query.customs.mof.gov.il/ | מערכת שחרור אלקטרונית, עמיל המכס מגיש את התיק דרכה |
+| שער עולמי (מכס) | (Israel Tax Authority customs portal) | מערכת שחרור אלקטרונית, עמיל המכס מגיש את התיק דרכה |
 | סקירת רפורמת התקינה של ITA ארה"ב | https://www.trade.gov/market-intelligence/israel-standards-reform | סקירה באנגלית פשוטה של רפורמת ההכרה האירופית ומסלול ההצהרה |
 | כל-זכות | https://www.kolzchut.org.il | זכויות צרכן ביבוא |
 

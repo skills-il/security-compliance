@@ -173,7 +173,7 @@ Self-assessment before any production deployment:
 - [ ] Vendor due diligence for managed LLM providers (data residency, subprocessors, DPA in place)
 - [ ] EU AI Act scoping: is system in scope? If yes, risk tier classified and obligations tracked. For GPAI, consider signing the EU GPAI Code of Practice
 - [ ] MoI 2023 ethical principles mapped to controls
-- [ ] Voluntary framework alignment (ISO/IEC 42001, NIST AI RMF, or OECD AI Principles) stated in governance docs
+- [ ] Voluntary framework alignment (ISO/IEC 42001; NIST AI RMF; or OECD AI Principles) stated in governance docs
 - [ ] Internal generative-AI usage policy documented (permitted tools, allowed data, retention limits on prompts)
 
 ## Examples

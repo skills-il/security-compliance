@@ -9,15 +9,11 @@
       "source_url": "https://www.oref.org.il/heb/emergencies/earthquake",
       "raw_snippet": "אם לא ניתן לצאת מהמבנה בתוך שניות, היכנסו לממ\"ד והשאירו את הדלת והחלונות פתוחים, או צאו לחדר המדרגות והמשיכו לרדת עד ליציאה מהמבנה",
       "fetched_at": "2026-05-29T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/alert-categories-quick-reference.md"]
-    },
-    {
-      "claim_id": "tsunami-protocol",
-      "claim": "Home Front Command tsunami guidance: move at least 1 km inland; go to the 4th floor or higher of a sturdy building; evacuate buildings of 3 floors or fewer; do not return to the shore for about 12 hours.",
-      "source_url": "https://www.oref.org.il/heb/articles/earthquake/tsunami/2701",
-      "raw_snippet": "להתרחק קילומטר אחד לפחות מהחוף ... לעלות לקומה רביעית של מבנה קרוב ... שוהים במבנה בן שלוש קומות ומטה, צאו ממנו",
-      "fetched_at": "2026-05-29T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/alert-categories-quick-reference.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-categories-quick-reference.md"
+      ]
     },
     {
       "claim_id": "ballistic-shelter-release",
@@ -25,7 +21,11 @@
       "source_url": "https://www.ynet.co.il/digital/technews/article/h1nnwszfbl",
       "raw_snippet": "אין לצאת לאחר עשר דקות כמו שהיה נהוג בירי מלבנון ומרצועת עזה",
       "fetched_at": "2026-05-29T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/alert-categories-quick-reference.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-categories-quick-reference.md"
+      ]
     },
     {
       "claim_id": "alert-category-codes",
@@ -33,7 +33,11 @@
       "source_url": "https://www.tzevaadom.co.il/systems/",
       "raw_snippet": "Category 13 alert endings (ניתן לצאת מהמרחב המוגן); Category 14 pre-alerts",
       "fetched_at": "2026-05-29T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/alert-categories-quick-reference.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-categories-quick-reference.md"
+      ]
     },
     {
       "claim_id": "radio-and-reference-urls",
@@ -41,7 +45,10 @@
       "source_url": "https://www.oref.org.il/eng",
       "raw_snippet": "URLs: https://www.oref.org.il/eng https://www.oref.org.il https://www.gov.il/he/departments/planning_authority https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/default.aspx https://www.mdais.org/en https://www.mdais.org",
       "fetched_at": "2026-05-29T00:00:00Z",
-      "appears_in": ["SKILL.md", "references/alert-categories-quick-reference.md"]
+      "appears_in": [
+        "SKILL.md",
+        "references/alert-categories-quick-reference.md"
+      ]
     }
   ]
 }

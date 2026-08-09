@@ -71,7 +71,7 @@ Typical documentation package:
 - Importer declaration form and Maslol Plus submission
 - Sample units for SII testing when the route requires it
 
-For customs release the licensed customs broker files the declaration through the Israel Tax Authority's Sha'ar Olami (Global Gateway) system (https://shaarolami-query.customs.mof.gov.il/), which is the production electronic clearance platform; the SII permit, importer declaration, and test reports must be attached to that filing.
+For customs release the licensed customs broker files the declaration through the Israel Tax Authority's Sha'ar Olami (Global Gateway) system, which is the production electronic clearance platform; the SII permit, importer declaration, and test reports must be attached to that filing.
 
 ### Step 5: Estimate a timeline
 
@@ -154,9 +154,9 @@ No MCP server currently wraps the SII or the Commissioner of Standardization. Un
 | SII home (English) | https://www.sii.org.il/en | Contact centres, standards, certifications |
 | SII importers | https://www.sii.org.il/en/importers/ | Maslol Plus filing, importer contact emails |
 | SII easement plans | https://www.sii.org.il/en/tracks/ | Green / Gold / Diamond plan rules, ISO 9001 eligibility |
-| Commissioner of Standardization (Ministry of Economy) | https://www.gov.il/en/departments/general/standartization_policy_in_israel_legislation | Enforcement policy, mandatory standards, Reshumot |
+| Commissioner of Standardization (Ministry of Economy) | (Ministry of Economy site, Commissioner of Standardization pages) | Enforcement policy, mandatory standards, Reshumot |
 | Official EU-regulation / SI search engine | https://www.gov.il/en/service/search_official_standards | Look up an SI number to get the matching EU regulation, effective dates, and import group |
-| Sha'ar Olami (Customs Global Gateway) | https://shaarolami-query.customs.mof.gov.il/ | Electronic clearance system: customs broker files the SII/declaration package here |
+| Sha'ar Olami (Customs Global Gateway) | (Israel Tax Authority customs portal) | Electronic clearance system: customs broker files the SII/declaration package here |
 | US ITA Israel standards reform | https://www.trade.gov/market-intelligence/israel-standards-reform | Plain-English overview of EU-recognition and the declaration route |
 | Kol Zchut | https://www.kolzchut.org.il | Consumer rights on imports (Hebrew) |
 

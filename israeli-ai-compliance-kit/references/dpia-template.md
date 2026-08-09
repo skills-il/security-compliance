@@ -2,7 +2,7 @@
 
 Data Protection Impact Assessment template aligned to the Israeli Privacy Protection Law and Amendment 13 (in force since August 14, 2025). Use this as a starting point for an ML system that processes personal data. Not legal advice.
 
-## Section 1: System Identification
+## 1. System Identification
 
 - System name:
 - Owner (legal entity):
@@ -13,7 +13,7 @@ Data Protection Impact Assessment template aligned to the Israeli Privacy Protec
 - Assessment date:
 - Next review date:
 
-## Section 2: Purpose and Necessity
+## 2. Purpose and Necessity
 
 ### 2.1 Purpose
 Describe the purpose of the processing in plain language. Why does this system exist? What decisions or actions does it support?
@@ -24,7 +24,7 @@ Why is processing personal data necessary for this purpose? Could the purpose be
 ### 2.3 Lawful basis
 Identify the lawful basis under PPL. Examples: consent, contract necessity, legal obligation, vital interests, public task, legitimate interest. Document the analysis, not just the label.
 
-## Section 3: Data Flow
+## 3. Data Flow
 
 ### 3.1 Data sources
 List each source of training, validation, and inference data. For each source: origin, lawful basis, consent status (if applicable), license terms, collection date range.
@@ -38,7 +38,7 @@ Who are the individuals whose data is processed? How many, approximately? Are an
 ### 3.4 Data flow diagram
 Attach or describe the flow: collection → storage → preprocessing → training → inference → monitoring → deletion. Note crossings of organizational or national boundaries.
 
-## Section 4: Processing Operations
+## 4. Processing Operations
 
 ### 4.1 Training
 What processing happens during training? What intermediate data is created? How are training runs logged?
@@ -52,11 +52,11 @@ What data is re-processed for monitoring? Where is it stored? Who accesses it?
 ### 4.4 Automated decision-making
 Does the system make automated decisions that significantly affect individuals? If yes, describe the human-in-the-loop mechanism and the appeal process.
 
-## Section 5: International Transfers
+## 5. International Transfers
 
 List every jurisdiction where personal data is processed or stored, including managed LLM vendor locations and cloud provider regions. For each transfer outside Israel: legal mechanism, adequacy assessment, and safeguards.
 
-## Section 6: Security Measures
+## 6. Security Measures
 
 Map to Data Security Regulations 2017:
 
@@ -70,7 +70,7 @@ Map to Data Security Regulations 2017:
 - Incident response
 - Personnel security (training, NDAs, access revocation)
 
-## Section 7: Data Subject Rights
+## 7. Data Subject Rights
 
 How the system honors each right:
 
@@ -82,7 +82,7 @@ How the system honors each right:
 
 Describe the workflow and SLA for each.
 
-## Section 8: Risk Analysis
+## 8. Risk Analysis
 
 For each identified risk, document:
 
@@ -105,13 +105,13 @@ Common risks for ML systems:
 - Security incidents affecting model weights
 - Improper deletion when data subjects exercise rights
 
-## Section 9: Consultation
+## 9. Consultation
 
 - Did you consult the DPO? Date and summary.
 - Did you consult affected stakeholders or representative groups? Summary.
 - Did you consult the Privacy Protection Authority where required? Summary.
 
-## Section 10: Decision
+## 10. Decision
 
 - Approved to proceed
 - Approved with conditions (list conditions and owners)
@@ -123,7 +123,7 @@ Signed by:
 - System owner
 - Executive sponsor
 
-## Section 11: Review Schedule
+## 11. Review Schedule
 
 This DPIA must be reviewed when:
 - The processing purpose changes

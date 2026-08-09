@@ -100,12 +100,14 @@ Step-by-step safety instructions for every type of Home Front Command alert in I
 - Unusual sea withdrawal (water receding rapidly)
 - Loud roaring sound from the ocean
 
-**Immediate actions (Home Front Command):**
-1. Move inland and to higher ground immediately, at least 1 km from the shore (further is better)
-2. If you are in a building of 3 floors or fewer, leave it and move inland
-3. If you cannot move inland in time, go to the 4th floor or higher of a sturdy nearby building
+**Immediate actions:**
+1. Move inland and to higher ground immediately; the further from the shore, the better
+2. If you are in a low building, leave it and move inland
+3. If you cannot move inland in time, go to an upper floor of a sturdy nearby building
 4. Stay away from beaches, harbors, and river mouths
-5. Do not return to the shore for about 12 hours
+5. Do not return to the shore until an official all-clear
+
+The Home Front Command publishes the exact distance, floor and waiting-time figures on oref.org.il ("fear of a tsunami" under life-saving guidelines) and in its app. Read them off the official page rather than from this skill, which does not restate them.
 
 **Stay safe:** Remain inland or at height until official all-clear. Tsunamis come in waves, the first wave is often not the largest.
 

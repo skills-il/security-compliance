@@ -41,7 +41,7 @@ This reference summarises when a shortcut applies and when it does not. It cover
 
 The Ministry of Economy is actively expanding the import reform to recognize US standards alongside EU standards. Minister Nir Barkat announced the policy direction in March 2025, and Amendment 21 to the Standards Law was introduced as a draft in November 2025 to give the model formal legal footing. The amendment proposes that importers be able to file based on compliance with US Federal Regulations, mirroring the Amendment 19 model. As of May 2026 Amendment 21 is not yet primary legislation; treat US-only documentation as supporting evidence inside an Israeli filing until the amendment is published in Reshumot.
 
-The first administrative phase is expected in the second half of 2026 and is set to cover children's products (toys, baby furniture, mattresses, pacifiers, feeding accessories, swings, trampolines, children's jewelry), bicycles, ladders, lighters, crockery and food packaging, and cleaning materials. Consult the Ministry of Economy standardization-policy page at https://www.gov.il/en/departments/general/standartization_policy_in_israel_legislation for the current list of eligible categories before relying on it.
+The first administrative phase is expected in the second half of 2026 and is set to cover children's products (toys, baby furniture, mattresses, pacifiers, feeding accessories, swings, trampolines, children's jewelry), bicycles, ladders, lighters, crockery and food packaging, and cleaning materials. Consult the Ministry of Economy standardization-policy page at the Commissioner of Standardization pages on the Ministry of Economy site for the current list of eligible categories before relying on it.
 
 ## How to choose a fast track
 

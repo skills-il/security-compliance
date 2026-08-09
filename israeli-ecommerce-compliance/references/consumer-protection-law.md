@@ -58,7 +58,7 @@ The following product categories are exempt from the cooling-off period:
 ## Price Display Requirements
 
 ### VAT Inclusion
-- All consumer-facing prices must include 18% VAT (Ma'am) (rate increased from 17% to 18% on January 1, 2025)
+- All consumer-facing prices must include 18% VAT (Ma'am) (rate increased to 18% on January 1, 2025)
 - It is illegal to display pre-VAT prices to consumers
 - Display format: "₪X.XX" or "X.XX ש"ח", both are acceptable
 
@@ -69,7 +69,7 @@ The following product categories are exempt from the cooling-off period:
 
 ### Discounts and Sales
 - Discounted items must show both the original price and the sale price
-- "From" pricing (e.g., "from ₪99") is only permitted when the base price genuinely exists
+- "From" pricing is only permitted when the base price genuinely exists
 - Sale period and conditions must be clearly stated
 
 ## Required Business Disclosures

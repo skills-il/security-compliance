@@ -5,10 +5,10 @@
   "claims": [
     {
       "claim_id": "cooling-off-and-fees",
-      "claim": "Distance-selling cancellation is 14 days; extended to 4 months for people with disabilities, seniors 65+, and new immigrants (under 5 years) when there was a prior conversation (Amendment 47, 2016, Sec 14ג1). Cancellation fee capped at 5% of the transaction or 100 NIS / 100 ש\"ח, whichever is lower. Example 'from 99 NIS' / ₪99 / 99 ש\"ח pricing is allowed only when the base price genuinely exists.",
-      "source_url": "https://www.loc.gov/item/global-legal-monitor/2016-08-17/israel-mandatory-period-for-cancellation-of-transactions-by-certain-persons/",
-      "raw_snippet": "establishes a period of four months ... fee 5% ... or NIS 100, whichever is lower",
-      "fetched_at": "2026-05-29T00:00:00Z",
+      "claim": "Distance-selling cancellation is 14 days from receipt of the goods or of the required document, whichever is later (Consumer Protection Law sec 14G(c)(1)).",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "raw_snippet": "בנכס – מיום עשיית העסקה ועד ארבעה עשר ימים מיום קבלת הנכס או מיום קבלת המסמך המכיל את הפרטים האמורים בסעיף קטן (ב), לפי המאוחר מביניהם",
+      "fetched_at": "2026-08-09",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -106,10 +106,10 @@
     },
     {
       "claim_id": "section-30a-spam",
-      "claim": "Section 30A (סעיף 30א) of the Communications Law requires explicit prior opt-in for SMS, email, fax, and robocall advertising, with statutory damages up to NIS 1,000 / 1,000 ש\"ח per message without proof of harm.",
-      "source_url": "https://www.gov.il/en/pages/17052018_7",
-      "raw_snippet": "prohibited to send advertisements ... without the prior consent ... up to NIS 1,000 for each message",
-      "fetched_at": "2026-05-29T00:00:00Z",
+      "claim": "Section 30A (סעיף 30א) of the Communications Law requires explicit prior written consent before sending advertising by fax, automated dialing system, email or SMS.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/032_002.htm",
+      "raw_snippet": "לא ישגר מפרסם דבר פרסומת באמצעות פקסימיליה, מערכת חיוג אוטומטי, הודעה אלקטרונית או הודעת מסר קצר, בלא קבלת הסכמה מפורשת מראש של הנמען, בכתב",
+      "fetched_at": "2026-08-09",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
@@ -134,6 +134,63 @@
       "raw_snippet": "PCI DSS Summary of Changes v4.0 to v4.0.1",
       "fetched_at": "2026-08-09",
       "verified_via": "raw HTML fetch (curl) of source page",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "cooling-off-4-months-protected",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "fetched_at": "2026-08-09",
+      "claim": "Sec 14G1(c): a consumer who is a person with a disability, a senior citizen or a new immigrant may cancel a distance-selling transaction within four months.",
+      "raw_snippet": "בעסקת מכר מרחוק שנערכה עם צרכן שהוא אדם עם מוגבלות, אזרח ותיק או עולה חדש, רשאי הצרכן לבטל את העסקה בתוך ארבעה חודשים מיום עשיית העסקה",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/consumer-protection-law.md"
+      ]
+    },
+    {
+      "claim_id": "protected-group-definitions",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "fetched_at": "2026-08-09",
+      "claim": "Sec 14G1(a) defines senior citizen as age 65 and over and new immigrant as within five years of receiving an immigrant certificate.",
+      "raw_snippet": "\" עולה חדש \" – מי שטרם חלפו חמש שנים מיום שניתנה לו תעודת עולה או תעודת זכאות כעולה ממשרד העלייה והקליטה;",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "cancellation-fee-cap",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "fetched_at": "2026-08-09",
+      "claim": "Sec 14E(b)(1): cancellation fee capped at 5% of the price or NIS 100 / 100 ש\"ח, whichever is lower, and refund within 14 days. (also written 100 NIS).",
+      "raw_snippet": "זולת דמי ביטול בשיעור שלא יעלה על 5% ממחיר הנכס נושא החוזה או העסקה, או 100 שקלים חדשים, לפי הנמוך מביניהם",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/consumer-protection-law.md"
+      ]
+    },
+    {
+      "claim_id": "section-30a-damages",
+      "source_url": "https://www.nevo.co.il/law_html/law01/032_002.htm",
+      "fetched_at": "2026-08-09",
+      "claim": "Section 30A(i)(1) statutory damages up to NIS 1,000 / 1,000 ש\"ח per advertising message without proof of harm.",
+      "raw_snippet": "בסכום שלא יעלה על 1,000 שקלים חדשים בשל כל דבר פרסומת שקיבל הנמען בניגוד להוראות סעיף זה",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "allocation-threshold-2025",
+      "claim": "In 2025 allocation numbers are required for invoices over NIS 20,000 / 20,000 ש\"ח (before VAT).",
+      "source_url": "https://www.vatupdate.com/2026/01/12/thresholds-for-mandatory-allocation-numbers-on-tax-invoices-to-be-lowered-in-2026/",
+      "raw_snippet": "In 2025, allocation numbers are required for invoices over NIS 20,000 (before VAT).",
+      "fetched_at": "2026-08-09",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"

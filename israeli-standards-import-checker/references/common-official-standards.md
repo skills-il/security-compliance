@@ -53,5 +53,5 @@ Since the 4 July 2022 amendment to the Wireless Telegraph Regulations (Certifica
 
 1. Go to https://www.sii.org.il/en/israelistandards to search the catalogue.
 2. Check whether the result is marked "mandatory / official" (takan rishmi).
-3. Cross-check with the Commissioner of Standardization's pages at https://www.gov.il/en/departments/general/standartization_policy_in_israel_legislation for any recent reforms.
+3. Cross-check with the Commissioner of Standardization's pages at the Commissioner of Standardization pages on the Ministry of Economy site for any recent reforms.
 4. For urgent cases, call the relevant SII importer centre: Electrical 03-6465160, Electronics 03-6465050, Chemicals/Health/Environment 03-6465138, Mechanics/Hydraulics 03-6465141.

@@ -39,7 +39,7 @@ Check for required pre-purchase disclosures:
 - Total order cost (including all fees) must be shown before payment confirmation
 - Currency must be NIS (display as ₪ or ש"ח)
 - Discounted items ("מבצע"): BOTH the pre-sale price and the sale price must be shown together (not "מחיר מומלץ" / list price as the comparison). If the pre-sale price was not actually in effect for at least 21 consecutive days before the sale started, the announcement must state the period during which that price was in effect. Per the Consumer Protection (Credit Sales, Special Sale and Door-to-Door Transaction) Regulations, 1983, reg. 6.
-- "From" pricing (e.g., "from 99 NIS") only allowed when the base price actually exists
+- "From" pricing (e.g., "from X shekels") only allowed when the base price actually exists
 - VAT-exempt threshold for personal imports has been volatile in 2025-2026: the standing exemption is USD 75 and a ministerial move to double it to USD 150 was announced, with later reversals reported. Do not state a figure without checking the current one at gov.il / Israel Tax Authority.
 
 **Card payment compliance (PCI DSS 4.0.1).** The current standard is PCI DSS v4.0.1 (released June 2024). PCI DSS v3.2.1 was retired on 31 March 2024, and the 51 future-dated v4.x requirements (stricter authentication, continuous monitoring, customized approach) became mandatory on 31 March 2025. Any store that processes, stores, or transmits card data must comply with v4.0.1. Most Israeli stores rely on a tokenized payment gateway (Tranzila, Cardcom, iCredit, Stripe, etc.) to offload PCI scope, which is strongly recommended for merchants under SAQ A/SAQ A-EP eligibility.

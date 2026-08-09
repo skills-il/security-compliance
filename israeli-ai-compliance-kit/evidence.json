@@ -9,7 +9,10 @@
       "source_url": "https://iapp.org/news/a/israel-marks-a-new-era-in-privacy-law-amendment-13-ushers-in-sweeping-reform",
       "raw_snippet": "Amendment 13 was adopted in August 2024 and came into effect in mid-August 2025. A grace period for DPO appointments expired on October 31, 2025.",
       "fetched_at": "2026-05-20T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "ppa-feb-2026-consent-opinion",
@@ -17,7 +20,10 @@
       "source_url": "https://www.lexology.com/library/detail.aspx?g=e303b2da-16c8-4842-b742-36c5f8a99d23",
       "raw_snippet": "the PPA published a final opinion in February 2026 clarifying how consent should be obtained and assessed... scraping personal data from the internet to train AI models, without informed consent from the data subject, constitutes unlawful privacy infringement. Even when individuals publish data about themselves or others on social media, this generally cannot be considered informed consent for AI training purposes.",
       "fetched_at": "2026-05-20T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "ppa-ai-guidance-still-draft",
@@ -25,7 +31,10 @@
       "source_url": "https://babl.ai/israels-privacy-authority-releases-draft-ai-guidance-for-data-protection-compliance/",
       "raw_snippet": "the PPA published a new draft directive clarifying how current Israeli law, particularly the Privacy Protection Law, applies to the development, training, and use of AI systems... PPA officials have stated that guidance will be enforced as if it were statutory.",
       "fetched_at": "2026-05-20T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "eu-ai-act-omnibus-may-2026",
@@ -33,7 +42,10 @@
       "source_url": "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/",
       "raw_snippet": "On May 7, 2026, the Council of the EU and the European Parliament announced their provisional agreement... Obligations for Annex III systems are postponed from August 2, 2026 to December 2, 2027, a deferral of 16 months. Formal adoption by Parliament and Council is still required.",
       "fetched_at": "2026-05-20T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "eu-ai-act-omnibus-formal-adoption-timing",
@@ -41,7 +53,10 @@
       "source_url": "https://www.traverssmith.com/knowledge/knowledge-container/eu-agrees-to-delay-key-ai-act-compliance-deadlines/",
       "raw_snippet": "Formal adoption by Parliament and Council is still required. If that process is not complete before August 2, 2026, the original unamended text applies... Both the European Parliament and the Council must formally vote to adopt the text, which is expected to take place somewhere between June and July.",
       "fetched_at": "2026-05-20T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "nist-ir-8596-cyber-ai-profile-status",
@@ -49,7 +64,10 @@
       "source_url": "https://csrc.nist.gov/pubs/ir/8596/iprd",
       "raw_snippet": "The NIST NCCoE released the preliminary draft NIST IR 8596, Cybersecurity Framework Profile for Artificial Intelligence (Cyber AI Profile) on December 16, 2025... open for comments until January 30, 2026. Following the 45-day comment period, NIST plans to develop the initial public draft for release in 2026.",
       "fetched_at": "2026-05-20T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "nist-ai-rmf-critical-infrastructure-profile",
@@ -57,7 +75,10 @@
       "source_url": "https://www.ispartnersllc.com/blog/nist-ai-rmf-2025-2026-updates-what-you-need-to-know-about-the-latest-framework-changes/",
       "raw_snippet": "On April 7, 2026, NIST released a concept note for an AI RMF Profile on Trustworthy AI in Critical Infrastructure.",
       "fetched_at": "2026-05-20T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "nist-genai-profile-600-1",
@@ -65,7 +86,10 @@
       "source_url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
       "raw_snippet": "The Generative AI Profile (NIST AI 600-1), released July 2024",
       "fetched_at": "2026-05-20T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "israel-national-ai-program-may-2025",
@@ -73,7 +97,10 @@
       "source_url": "https://innovationisrael.org.il/wp-content/uploads/2025/05/AI-National-Program-en-14.5.25.pdf",
       "raw_snippet": "The National Program for Artificial Intelligence integrates the activities of the various government ministries and agencies responsible for promoting AI in Israel... Ministry of Innovation, Science and Technology, Ministry of Finance, Ministry of Defense's Directorate of Defense Research & Development, Council for Higher Education's Planning and Budgeting Committee, Innovation Authority, as well as the National Digital Agency and the Ministries of Foreign Affairs and Justice.",
       "fetched_at": "2026-05-20T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "us-israel-ai-partnership-jan-2026",
@@ -81,7 +108,10 @@
       "source_url": "https://www.state.gov/releases/office-of-the-spokesperson/2026/01/joint-statement-of-the-united-states-and-israel-on-the-launch-of-a-strategic-partnership-on-artificial-intelligence-research-and-critical-technologies",
       "raw_snippet": "Joint Statement of the United States and Israel on the Launch of a Strategic Partnership on Artificial Intelligence, Research, and Critical Technologies",
       "fetched_at": "2026-05-20T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "moi-2023-policy-12-principles",
@@ -89,7 +119,10 @@
       "source_url": "https://www.gov.il/BlobFolder/policy/ai_2023/en/Israels%20AI%20Policy%202023.pdf",
       "raw_snippet": "Policy, Regulation and Ethics Principles in the Field of Artificial Intelligence",
       "fetched_at": "2026-05-20T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "boi-directive-364-nov-2024",
@@ -97,7 +130,10 @@
       "source_url": "https://www.boi.org.il/en/economic-roles/supervision-and-regulation/proper_conduct/",
       "raw_snippet": "Directive 364 (2024) IT and cyber",
       "fetched_at": "2026-05-20T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "eu-ai-act-base-timeline",
@@ -105,7 +141,10 @@
       "source_url": "https://artificialintelligenceact.eu/implementation-timeline/",
       "raw_snippet": "Implementation Timeline | EU Artificial Intelligence Act",
       "fetched_at": "2026-05-20T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "iso-42001-published-dec-2023",
@@ -113,7 +152,10 @@
       "source_url": "https://www.iso.org/standard/42001",
       "raw_snippet": "ISO/IEC 42001:2023 AI management system",
       "fetched_at": "2026-05-20T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "eu-gpai-code-of-practice-july-2025",
@@ -121,7 +163,125 @@
       "source_url": "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai",
       "raw_snippet": "voluntary compliance route for GPAI obligations (July 2025 final, Commission-endorsed August 2025)",
       "fetched_at": "2026-05-20T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "aia-article-2-scope",
+      "claim": "EU AI Act Article 2 (סעיף 2) defines the scope, catching providers placing AI systems on the Union market irrespective of where they are established.",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+      "raw_snippet": "Article 2 Scope 1. This Regulation applies to: (a) providers placing on the market or putting into service AI systems or placing on the market general-purpose AI models in the Union, irrespective of whether those providers are established or located within the Union or in a third country",
+      "fetched_at": "2026-08-09",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/eu-ai-act-israel-guide.md"
+      ]
+    },
+    {
+      "claim_id": "aia-article-5-prohibited",
+      "claim": "EU AI Act Article 5 (סעיף 5) lists prohibited AI practices.",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+      "raw_snippet": "Article 5 Prohibited AI practices 1. The following AI practices shall be prohibited:",
+      "fetched_at": "2026-08-09",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/eu-ai-act-israel-guide.md",
+        "scripts/classify_eu_ai_act_risk.py"
+      ]
+    },
+    {
+      "claim_id": "aia-article-4-literacy",
+      "claim": "EU AI Act Article 4 (סעיף 4) imposes AI literacy obligations on providers and deployers.",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+      "raw_snippet": "Article 4 AI literacy Providers and deployers of AI systems shall take measures to ensure, to their best extent, a sufficient level of AI literacy of their staff",
+      "fetched_at": "2026-08-09",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "aia-article-22-representative",
+      "claim": "EU AI Act Article 22 (סעיף 22) requires third-country providers of high-risk AI systems to appoint an authorised representative established in the Union.",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+      "raw_snippet": "Article 22 Authorised representatives of providers of high-risk AI systems 1. Prior to making their high-risk AI systems available on the Union market, providers established in third countries shall, by written mandate, appoint an authorised representative which is established in the Union.",
+      "fetched_at": "2026-08-09",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/eu-ai-act-israel-guide.md",
+        "scripts/classify_eu_ai_act_risk.py"
+      ]
+    },
+    {
+      "claim_id": "aia-article-50-2-synthetic",
+      "claim": "EU AI Act Article 50(2) (סעיף 50) requires providers of AI systems generating synthetic audio, image, video or text to mark outputs in a machine-readable format as artificially generated or manipulated.",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+      "raw_snippet": "2. Providers of AI systems, including general-purpose AI systems, generating synthetic audio, image, video or text content, shall ensure that the outputs of the AI system are marked in a machine-readable format and detectable as artificially generated or manipulated.",
+      "fetched_at": "2026-08-09",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/eu-ai-act-israel-guide.md"
+      ]
+    },
+    {
+      "claim_id": "aia-article-51-gpai-systemic",
+      "claim": "EU AI Act Article 51 sets the classification thresholds for general-purpose AI models with systemic risk.",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+      "raw_snippet": "Article 51 Classification of general-purpose AI models as general-purpose AI models with systemic risk",
+      "fetched_at": "2026-08-09",
+      "appears_in": [
+        "scripts/classify_eu_ai_act_risk.py"
+      ]
+    },
+    {
+      "claim_id": "gdpr-article-30-records",
+      "claim": "GDPR Article 30 requires controllers to maintain records of processing activities, a different obligation from Israeli PPL database registration.",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+      "raw_snippet": "Article 30 Records of processing activities 1. Each controller and, where applicable, the controller's representative, shall maintain a record of processing activities under its responsibility.",
+      "fetched_at": "2026-08-09",
+      "appears_in": [
+        "SKILL.md",
+        "references/ppl-for-ml-engineers.md"
+      ]
+    },
+    {
+      "claim_id": "url-nist-ai-rmf",
+      "claim": "NIST publishes the AI Risk Management Framework page at this URL.",
+      "source_url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "raw_snippet": "AI Risk Management Framework | NIST",
+      "fetched_at": "2026-08-09",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "url-pearlcohen-ppa-ai-guidelines",
+      "claim": "Pearl Cohen published an analysis of Israel's draft guidelines on applying privacy law to AI at this URL.",
+      "source_url": "https://www.pearlcohen.com/israel-new-draft-guidelines-on-the-application-of-privacy-law-to-ai/",
+      "raw_snippet": "Israel: New Draft Guidelines on the Application of Privacy Law to AI - Pearl Cohen",
+      "fetched_at": "2026-08-09",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "url-trade-gov-israel-ai",
+      "claim": "The US International Trade Administration publishes a market-intelligence page on Israel's ICT policy on AI regulation and ethics at this URL.",
+      "source_url": "https://www.trade.gov/market-intelligence/israel-ict-policy-artificial-intelligence-regulation-and-ethics",
+      "raw_snippet": "Israel ICT Policy on Artificial Intelligence Regulation and Ethics",
+      "fetched_at": "2026-08-09",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     }
   ]
 }

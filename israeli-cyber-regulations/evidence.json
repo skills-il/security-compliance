@@ -5,15 +5,18 @@
   "claims": [
     {
       "claim_id": "boi-directive-364",
-      "claim": "Bank of Israel Directive 364 (Management of IT, Information Security, and Cyber Protection Risks), published November 2024 and effective 18 May 2026, consolidates and supersedes the legacy Directives 357 (Management of Information Technology), 361 (Cyber Defense Management), and 363. Directive 366 governs reporting of technological-failure and cyber events; Directive 362 governs cloud-computing approval.",
+      "claim": "Bank of Israel Proper Conduct of Banking Business Directive 364 (Management of IT, Information Security and Cyber Protection Risks), circular 2799, published 18/11/2024, takes effect 18/05/2026 or on earlier adoption by the banking corporation, at which point Directives 357, 361 and 363 are cancelled.",
       "source_url": "https://www.boi.org.il/roles/supervisionregulation/nbt/nbt364/",
-      "raw_snippet": "הוראת ניהול בנקאי תקין מס' 364 ... מאחדת שלוש הוראות קודמות: 357, 361, 363",
-      "fetched_at": "2026-05-29T00:00:00Z",
+      "raw_snippet": "כניסתה לתוקף של הוראה זו היא ביום 18/05/2026 או במועד אימוצה על ידי התאגיד הבנקאי, לפי המוקדם מביניהם. ממועד זה תבוטלנה שלוש הוראות נב\"ת 357, 361 ו- 363",
+      "fetched_at": "2026-08-09",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/sector-rules.md"
-      ]
+      ],
+      "verified_via": "archive",
+      "verified_at": "2026-08-09",
+      "source_note": "boi.org.il serves a Radware JS challenge to plain fetches; verified against Wayback snapshot 20260609082827 of the same live URL."
     },
     {
       "claim_id": "amendment-13-immediate-notification",
@@ -58,6 +61,21 @@
         "SKILL.md",
         "SKILL_HE.md",
         "references/incd-guidelines.md"
+      ]
+    },
+    {
+      "claim_id": "boi-directive-364-metadata",
+      "claim": "Directive number 364, circular number 2799, publication date 18/11/2024.",
+      "source_url": "https://www.boi.org.il/roles/supervisionregulation/nbt/nbt364/",
+      "raw_snippet": "תאריך פרסום: 18/11/2024 מספר הוראה: 364 מספר חוזר: 2799",
+      "verified_via": "archive",
+      "verified_at": "2026-08-09",
+      "source_note": "Wayback snapshot 20260609082827 of the live boi.org.il URL (Radware-blocked to plain fetches).",
+      "fetched_at": "2026-08-09",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/sector-rules.md"
       ]
     }
   ]
