@@ -9,7 +9,11 @@
       "source_url": "https://www.themarker.com/law/2026-01-06/ty-article/0000019b-9229-d4d8-a19b-f37db84a0000",
       "raw_snippet": "תיקון לחוק החוזים סעיף 25 פרשנות חוזה עסקי לפי לשונו; Section 25 Amendment 3 commercial contracts",
       "fetched_at": "2026-06-28T23:59:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/legislation-index.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legislation-index.md"
+      ]
     },
     {
       "claim_id": "severance-pay-section-14",
@@ -17,15 +21,37 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%A4%D7%99%D7%A6%D7%95%D7%99%D7%99_%D7%A4%D7%99%D7%98%D7%95%D7%A8%D7%99%D7%9D",
       "raw_snippet": "פיצויי פיטורים חודש לכל שנה; הסדר לפי סעיף 14 Section 14",
       "fetched_at": "2026-06-28T23:59:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/legislation-index.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legislation-index.md"
+      ]
     },
     {
-      "claim_id": "privacy-amendment-13-enforcement-regime",
-      "claim": "Privacy Protection Law Amendment 13 (in force August 2025) gives the Privacy Protection Authority independent enforcement: administrative financial penalties (עיצום כספי) that scale with the size of the database, the type of violation, and the violating body's turnover, plus a new statutory-damages-without-proof-of-harm head capped at NIS 10,000. The skill deliberately does NOT quote the exact administrative-fine tariff and points users to the PPA guide instead.",
+      "claim_id": "privacy-amendment-13-enforcement-regime-a",
+      "claim": "Amendment 13 empowers the head of the Privacy Protection Authority, for the first time, to impose significant administrative financial penalties (עיצומים כספיים); the model scales with the type and number of violations, the number of data subjects in the database, whether the data is especially sensitive, and reductions for small or micro businesses by annual turnover. The skill deliberately does NOT quote an exact fine tariff.",
       "source_url": "https://www.ebnlaw.co.il/he/%D7%90%D7%95%D7%A9%D7%A8-%D7%AA%D7%99%D7%A7%D7%95%D7%9F-%D7%9E%D7%A1-13-%D7%9C%D7%97%D7%95%D7%A7-%D7%94%D7%92%D7%A0%D7%AA-%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-%D7%A2%D7%99%D7%A7%D7%A8%D7%99/",
-      "raw_snippet": "עיצומים כספיים ... המחזור הכספי של הגוף המפר; פיצויים ... עד 10,000 ש\"ח ללא הוכחת נזק; NIS 10,000 10,000 ש\"ח",
-      "fetched_at": "2026-06-29T22:35:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/legislation-index.md"]
+      "raw_snippet": "החוק מסמיך את ראש הרשות לראשונה להטיל עיצומים כספיים מנהליים בסכומים משמעותיים בנוגע להפרות הוראות החוק. מודל העיצומים מתבסס על קריטריונים שונים, הכוללים את (א) סוגי ההפרות, ובכלל זה הפרות פרטניות שאינן נוגעות לכלל המידע במאגר (כגון סירוב למתן זכות עיון); הפרות הנוגעות לכלל המידע שבמאגר (כגון אי מינוי ממונה אבטחת מידע או ממונה הגנת פרטיות לפי העניין); הפרות כלפי הרשות; או הפרות של זכויות מהותיות של נושאי מידע; (ב) כמות ההפרות; (ג) כמות נושאי המידע שבמאגר; (ד) האם המידע הוא בעל רגישות מיוחדת או שאינו; והאם קיימות הפחתות לעסקים קטנים או זעירים לפי מחזור שנתי.",
+      "fetched_at": "2026-08-09",
+      "verified_via": "raw HTML fetch (curl) of source page",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legislation-index.md"
+      ]
+    },
+    {
+      "claim_id": "privacy-amendment-13-enforcement-regime-b",
+      "claim": "Amendment 13 adds a court power to award damages that do not depend on proven harm, up to NIS 10,000 / 10,000 ש\"ח, for example where the purpose-limitation principle was breached, a right of access was not honoured, or data was not deleted on request.",
+      "source_url": "https://www.ebnlaw.co.il/he/%D7%90%D7%95%D7%A9%D7%A8-%D7%AA%D7%99%D7%A7%D7%95%D7%9F-%D7%9E%D7%A1-13-%D7%9C%D7%97%D7%95%D7%A7-%D7%94%D7%92%D7%A0%D7%AA-%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-%D7%A2%D7%99%D7%A7%D7%A8%D7%99/",
+      "raw_snippet": "• התיקון מקנה סמכות לבית המשפט לפסוק פיצויים עונשיים שאינם תלויים בנזק עד 10,000 ש\"ח, למשל במקרים בהם הופר עיקרון צמידות המטרה, לא מומשה זכות העיון במידע, או שלא נמחק מידע בעקבות בקשת אדם וכיו\"ב.",
+      "fetched_at": "2026-08-09",
+      "verified_via": "raw HTML fetch (curl) of source page",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legislation-index.md"
+      ]
     },
     {
       "claim_id": "privacy-29a-statutory-damages",
@@ -33,7 +59,11 @@
       "source_url": "https://www.aluk-firm.com/%D7%97%D7%95%D7%A7-%D7%94%D7%92%D7%A0%D7%AA-%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-%D7%A4%D7%99%D7%A6%D7%95%D7%99-%D7%9C%D7%9C%D7%90-%D7%94%D7%95%D7%9B%D7%97%D7%AA-%D7%A0%D7%96%D7%A7/",
       "raw_snippet": "סעיף 29א פיצוי ללא הוכחת נזק עד 50,000 ש\"ח; בכוונה לפגוע כפל הסכום עד 100,000 ש\"ח; Section 29A NIS 50,000 NIS 100,000 50,000 ש\"ח 100,000 ש\"ח",
       "fetched_at": "2026-06-29T22:35:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/legislation-index.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legislation-index.md"
+      ]
     },
     {
       "claim_id": "mahash-subordination-enacted-2026",
@@ -41,7 +71,11 @@
       "source_url": "https://www.haaretz.co.il/news/elections/2026-06-11/ty-article/.premium/0000019e-81cf-d1b5-afff-91ffd2320000",
       "raw_snippet": "מח\"ש קריאה שנייה ושלישית 11 ביוני 2026 43-39; Mahash final reading 2026-06-11 43-39 enacted",
       "fetched_at": "2026-06-29T22:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/legislation-index.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legislation-index.md"
+      ]
     },
     {
       "claim_id": "amendment-13-first-enforcement",
@@ -49,7 +83,11 @@
       "source_url": "https://www.law.co.il/news/2025/08/24/privacy-breach-fine-imposed-on-national-security-employee/",
       "raw_snippet": "הרשות להגנת הפרטיות הטילה קנס חריג בסך של 75,000 ש\"ח על עובדת הביטוח הלאומי שהשתמשה 15 פעמים במאגר הביטוח הלאומי; NIS 75,000 75,000 ש\"ח",
       "fetched_at": "2026-06-28T23:59:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/legislation-index.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legislation-index.md"
+      ]
     },
     {
       "claim_id": "basic-law-judiciary-15-20",
@@ -57,7 +95,9 @@
       "source_url": "https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7-%D7%99%D7%A1%D7%95%D7%93:_%D7%94%D7%A9%D7%A4%D7%99%D7%98%D7%94",
       "raw_snippet": "בית המשפט העליון ישב גם כבית משפט גבוה לצדק; הלכה שנפסקה בבית המשפט העליון מחייבת כל בית משפט, זולת בית המשפט העליון; Section 15 Section 20 Supreme Court High Court of Justice binding precedent",
       "fetched_at": "2026-06-29T22:45:00Z",
-      "appears_in": ["references/legislation-index.md"]
+      "appears_in": [
+        "references/legislation-index.md"
+      ]
     },
     {
       "claim_id": "small-claims-courts-law-1984",
@@ -65,7 +105,11 @@
       "source_url": "https://www.nevo.co.il/law_html/law00/74849.htm",
       "raw_snippet": "בית משפט לתביעות קטנות ידון... שאינו עולה על 39,900 שקלים חדשים; ייצוג בעל דין... על ידי עורך דין יהיה רק ברשות בית המשפט ומטעמים מיוחדים; תביעות קטנות סעיפים 59-62 סעיף 63; Small Claims Sections 59 62 Section 63 39,900 NIS",
       "fetched_at": "2026-06-29T22:40:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/legislation-index.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legislation-index.md"
+      ]
     },
     {
       "claim_id": "limitation-law-1958",
@@ -73,7 +117,11 @@
       "source_url": "https://www.nevo.co.il/law_html/law00/71809.htm",
       "raw_snippet": "התקופה שבה מתיישנת תביעה... בשאינו מקרקעין - שבע שנים; במקרקעין - חמש עשרה שנה; ...לאחר סידור זכות קנין... - עשרים וחמש שנה; Limitation Law Section 5 7 years 25 years registered land",
       "fetched_at": "2026-06-29T22:40:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/legislation-index.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legislation-index.md"
+      ]
     },
     {
       "claim_id": "civil-procedure-regs-2018",
@@ -81,7 +129,11 @@
       "source_url": "https://www.nevo.co.il/law_html/law00/157751.htm",
       "raw_snippet": "תקנות סדר הדין האזרחי, התשע\"ט-2018; תחילה 1 בינואר 2021; לנהוג בתום לב ובהגינות דיונית; לא יעשה בעל דין... שימוש לרעה בהליכי משפט... פעולה בלתי מידתית; Civil Procedure Regulations in force 2021 good faith proportionality",
       "fetched_at": "2026-06-29T22:40:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/legislation-index.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legislation-index.md"
+      ]
     },
     {
       "claim_id": "vat-rate-18",
@@ -89,7 +141,9 @@
       "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
       "raw_snippet": "VAT 18% raised from 17% January 2025",
       "fetched_at": "2026-06-28T23:59:00Z",
-      "appears_in": ["references/legislation-index.md"]
+      "appears_in": [
+        "references/legislation-index.md"
+      ]
     },
     {
       "claim_id": "legal-database-urls",
@@ -97,7 +151,12 @@
       "source_url": "https://main.knesset.gov.il/Activity/Legislation/",
       "raw_snippet": "https://main.knesset.gov.il/Activity/Legislation/ https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/default.aspx https://supreme.court.gov.il/ https://www.court.gov.il https://www.nevo.co.il https://www.nevo.co.il/law_html/law00/157751.htm https://www.takdin.co.il https://www.psakdin.co.il https://www.kolzchut.org.il https://www.btl.gov.il https://www.gov.il/he/departments/the_judicial_authority/govil-landing-page https://www.gov.il/he/departments/ministry_of_justice https://www.gov.il/he/pages/fees_16 https://www.israelbar.org.il https://www.loc.gov/collections/global-legal-monitor/?q=Israel",
       "fetched_at": "2026-06-29T22:40:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/legal-databases-guide.md", "references/domain-checklist.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-databases-guide.md",
+        "references/domain-checklist.md"
+      ]
     },
     {
       "claim_id": "internal-formatting-and-codepaths",
@@ -105,7 +164,11 @@
       "source_url": "https://www.unicode.org/reports/tr9/",
       "raw_snippet": "*2024 *2025 *2026 /sites/he/Pages/home.aspx bold-wrapped dates not phone numbers",
       "fetched_at": "2026-06-28T23:59:00Z",
-      "appears_in": ["SKILL.md", "references/legislation-index.md", "references/legal-databases-guide.md"]
+      "appears_in": [
+        "SKILL.md",
+        "references/legislation-index.md",
+        "references/legal-databases-guide.md"
+      ]
     }
   ]
 }
