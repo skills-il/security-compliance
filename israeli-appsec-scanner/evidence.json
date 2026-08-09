@@ -4,12 +4,56 @@
   "generated_at": "2026-05-29T00:00:00Z",
   "claims": [
     {
-      "claim_id": "amendment-13",
-      "claim": "Amendment 13 to the Israeli Privacy Protection Law is in force from 14 August 2025: it narrowed database registration to data brokers (over 10,000 individuals) and public bodies, added a PPA notification duty for especially-sensitive databases over 100,000 individuals, requires immediate notification of a serious security incident, mandates a DPO for certain bodies, and introduced statutory damages of up to NIS 100,000 / 100,000 שח without proof of harm (with a lower NIS 10,000 / 10,000 שח tier for notification and data-subject-rights breaches).",
+      "claim_id": "amendment-13-in-force",
+      "claim": "Amendment 13 to the Protection of Privacy Law, 5741-1981 entered into force on 14 August 2025.",
       "source_url": "https://iapp.org/news/a/israel-marks-a-new-era-in-privacy-law-amendment-13-ushers-in-sweeping-reform",
-      "raw_snippet": "registration of databases with the PPA is required where ... the primary purpose ... is the collection of personal data for the purpose of transferring it to others as a business activity ... more than 10,000 individuals; and ... a 'public body' ... statutory damages of up to NIS 100,000 without proof of harm. Amounts: NIS 100,000, 100,000 ש\"ח, NIS 10,000, 10,000 ש\"ח.",
-      "fetched_at": "2026-05-29T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/israeli-privacy-law-guide.md"]
+      "raw_snippet": "On 14 Aug., Israel enters a new chapter in its data protection regime. With the enactment of Amendment 13 to the Protection of Privacy Law, 5741-1981, the country has introduced a comprehensive overhaul of its privacy framework.",
+      "fetched_at": "2026-08-09",
+      "verified_via": "raw HTML fetch (curl) of source page",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-privacy-law-guide.md"
+      ]
+    },
+    {
+      "claim_id": "amendment-13-registration",
+      "claim": "Database registration is required only where the database's primary purpose is collecting personal data to provide to others as a business (data brokers) and it holds data on more than 10,000 / 10,000 individuals, or where the controller is a public body.",
+      "source_url": "https://iclg.com/practice-areas/data-protection-laws-and-regulations/israel/",
+      "raw_snippet": "Under the PPL, a database must be registered if one of the following conditions is met: (a) its primary purpose is to collect personal data for the purpose of providing it to others as a business practice or for compensation, including direct mailing services, and the database contains personal data about more than 10,000 individuals; or (b) the controller of the database is a public body (excluding databases of personal data about employees only). In addition, the PPL stipulates a duty to notify the Registrar if the database contains data of special sensitivity about more than 100,000 data subjects.",
+      "fetched_at": "2026-08-09",
+      "verified_via": "raw HTML fetch (curl) of source page",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-privacy-law-guide.md"
+      ]
+    },
+    {
+      "claim_id": "amendment-13-breach-notification",
+      "claim": "On a severe security incident the controller must immediately notify the PPA and report the measures taken; the statute says \"immediately\", not a fixed 72-hour clock.",
+      "source_url": "https://iclg.com/practice-areas/data-protection-laws-and-regulations/israel/",
+      "raw_snippet": "Under the Data Security Regulations, in the event of a “severe security incident” (see definition above), the controller must immediately notify the PPA and report the measures taken following the incident.",
+      "fetched_at": "2026-08-09",
+      "verified_via": "raw HTML fetch (curl) of source page",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-privacy-law-guide.md"
+      ]
+    },
+    {
+      "claim_id": "amendment-13-statutory-damages",
+      "claim": "Amendment 13 adds a court power to award damages independent of proven harm, up to NIS 10,000 / 10,000 ש\"ח, for breaches such as purpose limitation, right of access, and failure to delete on request.",
+      "source_url": "https://www.ebnlaw.co.il/he/%D7%90%D7%95%D7%A9%D7%A8-%D7%AA%D7%99%D7%A7%D7%95%D7%9F-%D7%9E%D7%A1-13-%D7%9C%D7%97%D7%95%D7%A7-%D7%94%D7%92%D7%A0%D7%AA-%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-%D7%A2%D7%99%D7%A7%D7%A8%D7%99/",
+      "raw_snippet": "• התיקון מקנה סמכות לבית המשפט לפסוק פיצויים עונשיים שאינם תלויים בנזק עד 10,000 ש\"ח, למשל במקרים בהם הופר עיקרון צמידות המטרה, לא מומשה זכות העיון במידע, או שלא נמחק מידע בעקבות בקשת אדם וכיו\"ב.",
+      "fetched_at": "2026-08-09",
+      "verified_via": "raw HTML fetch (curl) of source page",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-privacy-law-guide.md"
+      ]
     },
     {
       "claim_id": "ppl-and-gdpr-section-refs",
@@ -17,23 +61,83 @@
       "source_url": "https://www.nevo.co.il/law_html/law01/133_001.htm",
       "raw_snippet": "חוק הגנת הפרטיות, התשמ\"א-1981: סעיף 8 (רישום מאגר), סעיף 13 (זכות עיון), סעיף 14 (תיקון), סעיף 17 (דיוור ישיר). תקנה 11 (אבטחת מידע).",
       "fetched_at": "2026-05-29T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/israeli-privacy-law-guide.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-privacy-law-guide.md"
+      ]
     },
     {
-      "claim_id": "owasp-top10-2025",
-      "claim": "OWASP Top 10 2025 was officially published, reshaping the categories: A01 subsumes SSRF (no separate A10 SSRF), A03 is Software Supply Chain Failures, A05 is Injection (down from A03:2021), A09 is renamed Security Logging and Alerting Failures, and a new A10 covers Mishandling of Exceptional Conditions. Reference URLs: https://owasp.org/Top10/ https://owasp.org/Top10/2021/ https://owasp.org/Top10/2025/ https://owasp.org/www-project-web-security-testing-guide/",
+      "claim_id": "owasp-top10-2025-a03",
+      "claim": "OWASP Top 10:2025 category A03 is Software Supply Chain Failures.",
       "source_url": "https://owasp.org/Top10/2025/",
-      "raw_snippet": "A03:2025 - Software Supply Chain Failures ... A05:2025 - Injection ... A09:2025 - Security Logging and Alerting Failures ... A10:2025 - Mishandling of Exceptional Conditions. URLs: https://owasp.org/Top10/ https://owasp.org/Top10/2021/ https://owasp.org/Top10/2025/ https://owasp.org/www-project-web-security-testing-guide/",
-      "fetched_at": "2026-05-29T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "raw_snippet": "A03:2025 - Software Supply Chain Failures",
+      "fetched_at": "2026-08-09",
+      "verified_via": "raw HTML fetch (curl) of source page",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "owasp-top10-2025-a05",
+      "claim": "OWASP Top 10:2025 category A05 is Injection (down from A03 in 2021).",
+      "source_url": "https://owasp.org/Top10/2025/",
+      "raw_snippet": "A05:2025 - Injection",
+      "fetched_at": "2026-08-09",
+      "verified_via": "raw HTML fetch (curl) of source page",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "owasp-top10-2025-a09",
+      "claim": "OWASP Top 10:2025 category A09 is renamed Security Logging and Alerting Failures.",
+      "source_url": "https://owasp.org/Top10/2025/",
+      "raw_snippet": "A09:2025 - Security Logging and Alerting Failures",
+      "fetched_at": "2026-08-09",
+      "verified_via": "raw HTML fetch (curl) of source page",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "owasp-top10-2025-a10",
+      "claim": "OWASP Top 10:2025 adds a new A10, Mishandling of Exceptional Conditions.",
+      "source_url": "https://owasp.org/Top10/2025/",
+      "raw_snippet": "A10:2025 - Mishandling of Exceptional Conditions",
+      "fetched_at": "2026-08-09",
+      "verified_via": "raw HTML fetch (curl) of source page",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "owasp-top10-2025-ssrf",
+      "claim": "SSRF is no longer a standalone Top 10 entry in 2025; CWE-918 (SSRF) is now mapped under A01 Broken Access Control.",
+      "source_url": "https://owasp.org/Top10/2025/A01_2025-Broken_Access_Control/",
+      "raw_snippet": "CWE-918 Server-Side Request Forgery (SSRF)",
+      "fetched_at": "2026-08-09",
+      "verified_via": "raw HTML fetch (curl) of source page",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "trivy-compromise",
       "claim": "The aquasecurity/trivy-action and setup-trivy tags were compromised in March 2026 (malicious v0.69.4 on 19 March, then v0.69.5 and v0.69.6 images), tracked as GHSA-69fq-xp46-6x23 / CVE-2026-33634. Mitigation: pin to a clean v0.70.x or later.",
       "source_url": "https://github.com/aquasecurity/trivy/security/advisories/GHSA-69fq-xp46-6x23",
-      "raw_snippet": "the Trivy repository's v0.69.4 tag was pushed, triggering a release ... force-pushing 76 of 77 version tags",
-      "fetched_at": "2026-05-29T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "raw_snippet": "On March 19, 2026, a threat actor used compromised credentials to publish a malicious Trivy v0.69.4 release, force-push 76 of 77 version tags in aquasecurity/trivy-action to credential-stealing malware, and replace all 7 tags in aquasecurity/setup-trivy with malicious commits. On March 22, 2026, a threat actor used compromised credentials to publish a malicious Trivy v0.69.5 and v0.69.6 DockerHub images.",
+      "fetched_at": "2026-08-09",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "raw HTML fetch (curl) of source page"
     },
     {
       "claim_id": "security-tool-urls",
@@ -41,7 +145,10 @@
       "source_url": "https://trivy.dev",
       "raw_snippet": "Tool and reference URLs: https://trivy.dev https://snyk.io/product/open-source-security-management/ https://github.com/trufflesecurity/trufflehog https://trojansource.codes/ https://unicode.org/reports/tr9/",
       "fetched_at": "2026-05-29T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "gov-and-nevo-urls",
@@ -49,7 +156,11 @@
       "source_url": "https://www.gov.il/en/departments/the_privacy_protection_authority",
       "raw_snippet": "Reference URLs: https://www.gov.il/en/departments/the_privacy_protection_authority https://www.gov.il/he/departments/the_privacy_protection_authority https://www.gov.il/en/departments/israel_national_cyber_directorate https://www.gov.il/he/departments/israel_national_cyber_directorate https://www.nevo.co.il/law_html/law01/133_001.htm",
       "fetched_at": "2026-05-29T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/israeli-privacy-law-guide.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-privacy-law-guide.md"
+      ]
     },
     {
       "claim_id": "illustrative-examples",
@@ -57,7 +168,34 @@
       "source_url": "https://owasp.org/www-project-web-security-testing-guide/",
       "raw_snippet": "Examples: %D7%90 (alef, contains 7% literally), https://fonts.googleapis.com https://fonts.googleapis.com/css2?family=Heebo:wght@400;700 https://fonts.gstatic.com https://your-api.co.il (placeholder CSP example)",
       "fetched_at": "2026-05-29T00:00:00Z",
-      "appears_in": ["references/owasp-hebrew-checklist.md", "SKILL.md"]
+      "appears_in": [
+        "references/owasp-hebrew-checklist.md",
+        "SKILL.md"
+      ]
+    },
+    {
+      "claim_id": "owasp-top10-index",
+      "claim": "https://owasp.org/Top10/ is the OWASP Top 10 project index, which now redirects to the 2025 edition.",
+      "source_url": "https://owasp.org/Top10/",
+      "raw_snippet": "Redirecting to OWASP Top 10:2025. If not redirected,",
+      "fetched_at": "2026-08-09",
+      "verified_via": "raw HTML fetch (curl) of source page",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "owasp-top10-2021",
+      "claim": "https://owasp.org/Top10/2021/ is the OWASP Top 10:2021 edition, the predecessor referenced for comparison.",
+      "source_url": "https://owasp.org/Top10/2021/",
+      "raw_snippet": "Welcome to the OWASP Top 10:2021 documentation.",
+      "fetched_at": "2026-08-09",
+      "verified_via": "raw HTML fetch (curl) of source page",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     }
   ]
 }

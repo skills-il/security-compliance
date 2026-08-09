@@ -6,7 +6,7 @@ A practical summary of Israel's Privacy Protection Law (1981) and its regulation
 
 Israel's privacy framework consists of:
 
-1. **Privacy Protection Law, 5741-1981** (the primary law), as substantially reformed by **Amendment 13** (in force 14 August 2025): narrowed database registration, immediate serious-incident notification, mandatory DPO triggers, expanded "sensitive data" definitions, and statutory damages up to NIS 100,000 without proof of harm
+1. **Privacy Protection Law, 5741-1981** (the primary law), as substantially reformed by **Amendment 13** (in force 14 August 2025): narrowed database registration, immediate serious-incident notification, mandatory DPO triggers, expanded "sensitive data" definitions, and a statutory damages head of up to NIS 10,000 without proof of harm for notification and data-subject-rights breaches (higher no-proof-of-harm ceilings under the older statutory-damages provision are conditional)
 2. **Privacy Protection Regulations (Information Security), 5777-2017** (the security regulations)
 3. **Privacy Protection Regulations (Transfer of Data to Databases Abroad), 5761-2001**
 4. **Guidance documents from the Privacy Protection Authority (PPA)**
