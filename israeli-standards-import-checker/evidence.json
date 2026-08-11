@@ -33,12 +33,14 @@
       "raw_snippet": "According to Economics Minister Nir Barkat, the new provisions affect around 444 Israeli standards, i.e. the majority of the country's current 573 mandatory standards."
     },
     {
-      "claim": "Israel's customs declarations are filed electronically through the Sha'ar Olami (Global Gateway) platform operated by the Israel Tax Authority.",
+      "claim": "The Israel Tax Authority operates a Certificate of Origin query service at shaarolami-query.customs.mof.gov.il, which lets a user view a certificate by certificate number and date of issue, showing the certified details as reported on the preferential document submitted to Israeli Customs.",
       "where": "SKILL.md Step 4, SKILL_HE.md Step 4, Reference Links table",
       "source_url": "https://shaarolami-query.customs.mof.gov.il/CustomsPilotWeb/CertificateOfOrigin",
       "source_title": "Sha'ar Olami - Israel Customs electronic clearance portal",
-      "fetched_at": "2026-05-20",
-      "raw_snippet": "The Israeli Customs Authority implemented World Gate at the beginning of January 2018. Only a certified broker has the access and training needed to submit electronic import declarations via the Sha'ar Olami (Global Gateway) system."
+      "fetched_at": "2026-08-11T00:00:00Z",
+      "raw_snippet": "Certificate of Origin query The query gives the possibility to view the certificate by certificate number and date of issue.",
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "claim": "Under Amendment 19, enforcement for the first five years focuses only on compliance with adopted-directive requirements that correspond to parallel sections of the official Israeli standards.",

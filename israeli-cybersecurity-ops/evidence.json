@@ -54,14 +54,16 @@
     },
     {
       "claim_id": "reference-urls",
-      "claim": "Tool and regulatory reference URLs used by the skill.",
+      "claim": "URL inventory: the tool and regulatory reference URLs this skill cites, being the Israel National Cyber Directorate and Privacy Protection Authority department pages and the cyber-incident guide on gov.il, plus the Wiz, Snyk and OWASP Top Ten documentation. Registered here as an inventory of the links themselves; no single one of these pages evidences the others.",
       "source_url": "https://www.gov.il/en/departments/israel_national_cyber_directorate",
       "raw_snippet": "URLs: https://www.gov.il/en/departments/israel_national_cyber_directorate https://www.gov.il/he/departments/israel_national_cyber_directorate https://www.gov.il/en/departments/the_privacy_protection_authority https://www.gov.il/he/departments/the_privacy_protection_authority https://www.gov.il/en/departments/guides/cyber_incident https://www.gov.il/he/departments/guides/cyber_incident https://docs.wiz.io https://docs.snyk.io https://owasp.org/www-project-top-ten/",
-      "fetched_at": "2026-05-29T00:00:00Z",
+      "fetched_at": "2026-08-11T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "url-inventory (the snippet is the list of links themselves, not text quoted from a page)",
+      "verified_at": "2026-08-11T00:00:00Z"
     }
   ]
 }

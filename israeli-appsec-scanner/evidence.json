@@ -152,10 +152,10 @@
     },
     {
       "claim_id": "gov-and-nevo-urls",
-      "claim": "Israeli government and legal reference URLs: the Privacy Protection Authority and the Israel National Cyber Directorate (Hebrew and English), and the Privacy Protection Law text on Nevo.",
+      "claim": "The Privacy Protection Authority is the Israeli regulatory and enforcing authority for personal digital information under the Privacy Protection Law; its gov.il department pages (Hebrew and English) and those of the Israel National Cyber Directorate are the reference URLs used in this skill. NOTE: the Nevo URL https://www.nevo.co.il/law_html/law01/133_001.htm previously cited here for the Privacy Protection Law text actually serves a DIFFERENT statute (Patient Rights Law) and must be replaced.",
       "source_url": "https://www.gov.il/en/departments/the_privacy_protection_authority",
-      "raw_snippet": "Reference URLs: https://www.gov.il/en/departments/the_privacy_protection_authority https://www.gov.il/he/departments/the_privacy_protection_authority https://www.gov.il/en/departments/israel_national_cyber_directorate https://www.gov.il/he/departments/israel_national_cyber_directorate https://www.nevo.co.il/law_html/law01/133_001.htm",
-      "fetched_at": "2026-05-29T00:00:00Z",
+      "raw_snippet": "The Privacy Protection Authority is the Israeli regulatory and enforcing authority for personal digital information, in accordance with the Privacy Protection Law.",
+      "fetched_at": "2026-08-11T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -192,6 +192,39 @@
       "raw_snippet": "Welcome to the OWASP Top 10:2021 documentation.",
       "fetched_at": "2026-08-09",
       "verified_via": "raw HTML fetch (curl) of source page",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "incd-he-url",
+      "claim": "Reference link: the Israel National Cyber Directorate gov.il department page (Hebrew), https://www.gov.il/he/departments/israel_national_cyber_directorate . It is the technological-operational body responsible for defending the national cyberspace.",
+      "source_url": "https://www.gov.il/he/departments/israel_national_cyber_directorate",
+      "raw_snippet": "המערך הוא גוף טכנולוגי - מבצעי האמון על הגנת מרחב הסייבר הלאומי ועל קידום וביסוס עוצמתה של ישראל בתחום.",
+      "fetched_at": "2026-08-11T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "incd-en-url",
+      "claim": "Reference link: the Israel National Cyber Directorate gov.il department page (English), https://www.gov.il/en/departments/israel_national_cyber_directorate . It is responsible for all aspects of cyber defense in the civilian sphere.",
+      "source_url": "https://www.gov.il/en/departments/israel_national_cyber_directorate",
+      "raw_snippet": "The Israel National Cyber Directorate is responsible for all aspects of cyber defense in the civilian sphere, from formulating policy and building technological power to operational defense in cyberspace.",
+      "fetched_at": "2026-08-11T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "ppa-he-url",
+      "claim": "Reference link: the Privacy Protection Authority gov.il department page (Hebrew), https://www.gov.il/he/departments/the_privacy_protection_authority . It is the body that regulates, supervises and enforces under Israel's Privacy Protection Law.",
+      "source_url": "https://www.gov.il/he/departments/the_privacy_protection_authority",
+      "raw_snippet": "הרשות להגנת הפרטיות הינה הגוף המסדיר, המפקח והאוכף על פי חוק הגנת הפרטיות בישראל.",
+      "fetched_at": "2026-08-11T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"

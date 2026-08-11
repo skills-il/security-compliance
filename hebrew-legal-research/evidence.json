@@ -137,13 +137,15 @@
     },
     {
       "claim_id": "vat-rate-18",
-      "claim": "Israeli VAT rate is 18% (raised from 17% effective January 1, 2025)",
-      "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
-      "raw_snippet": "VAT 18% raised from 17% January 2025",
-      "fetched_at": "2026-06-28T23:59:00Z",
+      "claim": "Israeli VAT is 18% of the purchase or service price from 01.01.2025; until 31.12.2024 it was 17%.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3_(%D7%9E%D7%A2%22%D7%9E)",
+      "raw_snippet": "סכום המע״מ מחושב בשיעור קבוע ממחיר העסקה או הסחורה, והחל מיום 01.01.2025 הוא עומד על 18% ממחיר הרכישה או השירות. עד 31.12.2024 היה שיעור המע\"מ 17%",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "references/legislation-index.md"
-      ]
+      ],
+      "verified_via": "browser-playwright",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "legal-database-urls",

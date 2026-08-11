@@ -101,7 +101,6 @@
 
 #### Health Information Systems
 - MOH approval required for core clinical systems (EMR/EHR)
-- System availability requirements: 99.9% for critical clinical systems
 - Change management procedures for clinical system updates
 - Integration security for HL7/FHIR-based health data exchange
 
