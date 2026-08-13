@@ -123,6 +123,32 @@
       "source_url": "https://www.gov.il/he/departments/ministry_of_interior",
       "raw_snippet": "משרד הפנים",
       "evidence_type": "primary"
+    },
+    {
+      "claim_id": "shelter-time-bands",
+      "claim": "Pikud HaOref defines the time to reach a protected space as ranging from immediate, through 15 seconds, 30 seconds, 45 seconds and one minute, up to a minute and a half.",
+      "source_url": "https://www.oref.org.il/heb/articles/protection-guidelines/preparing-protected-space/1103/",
+      "raw_snippet": "זמן ההגעה למרחב המוגן נע בין פרק זמן מיידי לבין 15 שניות, 30 שניות, 45 שניות, דקה ועד ודקה וחצי.",
+      "fetched_at": "2026-08-13",
+      "verified_via": "oref content API (api.oref.org.il/api/v1/articles//heb/<path>/)",
+      "verified_at": "2026-08-13",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "shelter-default-90sec",
+      "claim": "Most areas of the country have a defined protection time of a minute and a half; areas near the borders have a varying time between immediate and 15, 30, 45 seconds, a minute and a minute and a half.",
+      "source_url": "https://www.oref.org.il/heb/articles/protection-guidelines/preparing-protected-space/1103/",
+      "raw_snippet": "לרוב האזורים בארץ הוגדר זמן התגוננות של דקה וחצי. באזורים הקרובים לגבולות הוגדר זמן התגוננות משתנה שנע בין מיידי לבין 15 שניות, 30 שניות, 45 שניות, דקה ודקה וחצי.",
+      "fetched_at": "2026-08-13",
+      "verified_via": "oref content API",
+      "verified_at": "2026-08-13",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     }
   ]
 }

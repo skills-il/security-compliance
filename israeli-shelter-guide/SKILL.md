@@ -49,7 +49,7 @@ The full standard is published by the Standards Institution of Israel (sii.org.i
 
 ## Time-to-Shelter by Region
 
-When a siren sounds, you have a limited number of seconds to reach a protected space. Pikud Ha'Oref defines five short bands (immediate, 15, 30, 45, 60 seconds) for border-proximity zones plus a default of 90 seconds (1.5 minutes) for most of the country. Always verify your own address at oref.org.il, since cities can be split across bands.
+When a siren sounds, you have a limited number of seconds to reach a protected space. Pikud Ha'Oref defines the time to reach a protected space as immediate, 15, 30, 45 seconds, one minute or a minute and a half. Most of the country is a minute and a half; the shorter bands apply near the borders. The time is fixed for a locality and does not change with the direction the fire comes from. Always verify your own address at oref.org.il, since cities can be split across bands.
 
 | Region | Time to Shelter | Example Cities |
 |--------|----------------|----------------|

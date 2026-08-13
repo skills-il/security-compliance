@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.2 - 2026-08-13
+
+Re-sourced the time-to-shelter bands to the Pikud HaOref protected-space article, which states them verbatim, after they had been left asserted in the body with no evidence. Added that the time is fixed per locality and does not vary with the direction of fire.
+
 All notable changes to this skill are documented here.
 
 ## [1.2.1] - 2026-08-13
