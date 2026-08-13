@@ -143,10 +143,10 @@ If your mamad has an NBC filtration system:
 If your building has no mamad, you may be eligible to add one. The current fast-track process (relaxed under the Iron Swords emergency framework, with an end-of-permit window in late 2026, verify before relying on the relaxation):
 
 1. Appoint a licensed architect, engineer, or building technician as the request author (orech bakasha).
-2. Submit the application through Pikud Ha'Oref's licensing system at **oref-rishuy.org.il**, with supporting documents per Regulation 30(ג).
+2. Submit the application through Pikud Ha'Oref's licensing system at **oref-rishuy.org.il**, with the supporting documents the system lists.
 3. Pikud Ha'Oref responds within 14 days (approval or rejection).
 4. A structural engineer must certify, after construction, that the mamad meets IS 4422 and that construction did not damage the building's structural frame.
-5. Within 45 days of completion, the request author updates the licensing authority and Pikud Ha'Oref per Regulation 30(ד).
+5. Within 45 days of completion, the request author updates the licensing authority and Pikud Ha'Oref.
 
 Costs and exact procedures vary by municipality. Confirm directly with your local Vaadat HaTichnun (planning committee).
 
@@ -271,10 +271,8 @@ See the `scripts/` directory for:
 | Pikud Ha'Oref (Home Front Command) | https://www.oref.org.il | Time-to-shelter zone lookup, multi-stage warnings, release messages, protected-space requirements |
 | Pikud Ha'Oref licensing system | https://www.oref-rishuy.org.il | Submit a private mamad construction request, track approval |
 | Standards Institution of Israel | https://www.sii.org.il | Israeli Standard 4422 (mamad), full PDF of the technical specification |
-| Israel Planning Administration | https://www.gov.il/he/departments/planning_authority | Building code, mamad permit relaxations, public shelter construction |
+| Israel Planning Administration | https://www.gov.il/he/departments/iplan | Building code, mamad permit relaxations, public shelter construction |
 | Ministry of the Interior | https://www.gov.il/he/departments/ministry_of_interior | Public shelter registry, municipal shelter maintenance responsibilities |
-| Civil Defense Regulations (Knesset) | https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/default.aspx | Civil Defense Law, takanot ha-hitgonenut |
-| Kol Zchut: shelters | https://www.kolzchut.org.il/he/שימוש_במקלט_בבית_משותף | Tenant rights, landlord obligations, shared shelter access |
 | State Comptroller report (2026) | https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2026/Emergency/2026-Emergency-104-Local.pdf | Municipal shelter readiness audit, gaps by locality |
 
 ## Troubleshooting
