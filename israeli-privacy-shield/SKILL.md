@@ -114,10 +114,10 @@ The PPO is the contact point with the Privacy Protection Authority and is respon
 
 **Enforcement powers and fines.** Amendment 13 significantly expands the Authority's administrative powers:
 - Direct supervisory inspections without prior notice
-- Per-violation fines from NIS 1,000 up to NIS 320,000, doubled to NIS 640,000 in severe cases
-- Aggregate fines up to approximately NIS 3.2 million for serious violations, capped at 5% of the controller's annual turnover for the most serious cases (a separate, lower annual ceiling applies to small/micro businesses)
-- For large-scale databases, a per-data-subject component of up to NIS 100 per affected individual
-- A private civil right of action (Section 29A): statutory damages up to NIS 50,000 per person without proof of harm, or up to NIS 100,000 only if the violation was intended to harm, separate from the administrative fine.
+- Administrative fines are set per violation by the statute, not as a single ceiling. Section 23כו(a) sets NIS 150,000 for the listed violations (processing in an unregistered database that required registration, failing to notify a notifiable database, running a direct-mail database unregistered, and similar), and the head of the Authority may impose DOUBLE that amount where the database holds personal information on 1,000,000 people or more. Other schedule items carry their own amounts, including NIS 320,000 for specified breaches of the Data Security Regulations and NIS 30,000 for lighter ones.
+- Two different per-person schedules apply, and they are easy to conflate. For unlawful APPROACHES and direct-mail violations (Section 23כו(c)(1)) the fine is NIS 50 multiplied by the number of people approached, rising to NIS 100 per person where the approach concerned specially-sensitive information, with a floor of NIS 30,000 if that multiplication comes to less. For the Section 23כו(d)(1) violations the fine is NIS 2 for each person whose personal information is in the database, or NIS 4 per person where the information is specially sensitive.
+- The 5% ceiling is a REDUCTION mechanism, not a headline fine: on the violator's request, where the penalty exceeds 5% of their turnover the head of the Authority reduces it to 5% of turnover. A violator with no turnover does not get that reduction.
+- A private civil right of action under **Section 15א** ("פיצויים לדוגמה"): a court may award damages not dependent on proof of harm, up to **NIS 10,000** per violation, for the violations listed there. Some of them require the data subject to have first approached the controller and waited a set period (90 days for the registration case).
 - Ability to issue binding compliance orders
 
 
@@ -477,28 +477,13 @@ See `references/consent-banner-implementation.md` for complete copy-pasteable co
 
 ## Consent UI Anti-Patterns
 
-Israeli DPA enforcement, GDPR DPAs, and the French CNIL have published repeated guidance on UI patterns that look compliant but are not. Any of these will cost you on enforcement even if the underlying law text is satisfied.
-
-| Anti-pattern | Why it fails | Fix |
-|-------------|--------------|-----|
-| Pre-checked boxes for analytics / marketing | Consent must be explicit opt-in. CJEU *Planet49* (C-673/17) is the binding precedent. | Default unchecked; user must actively flip the switch. |
-| "Accept" button styled larger/colored, "Reject" styled as a text link | Fails the equal-weight test. | Same component, same size, same visual prominence. |
-| "Reject" hidden behind a "Customize" or "Learn more" submenu | Forces extra clicks to refuse, not to accept. | Reject + Accept on the first screen, side by side. |
-| "By continuing to use the site, you accept cookies" banners | Implicit consent is invalid under GDPR and Amendment 13. | Banner blocks nothing visually, but trackers do not run until explicit choice. |
-| Cookie wall ("You must accept cookies to read this article") | EDPB guidance treats conditioning service on consent to non-essential cookies as invalid. | Provide full service regardless of the choice; degrade only genuinely analytics-dependent features (e.g. hide a session-replay-powered debug button). |
-| Single "Accept all" with no granular option on the first screen | GDPR Article 7(2) requires granularity for distinct purposes. | Either expose the per-category toggles on the first screen, or ensure "Customize" reaches them in one click. |
-| Re-prompting every session | Consent fatigue, treated by DPAs as a dark pattern. | Re-prompt only on `CONSENT_VERSION` bump or after 12 months. |
-| Burying the "withdraw consent" path | Amendment 13 Article 8C + GDPR Article 7(3) require withdrawal to be as easy as granting. | "Privacy preferences" link in the footer that opens the same dialog. |
-| Storing a consent cookie without an expiry / with multi-year TTL | User has not re-consented; stale consent is no consent. | 12-month max. Bump `CONSENT_VERSION` whenever you add a tracker. |
-| Loading the analytics SDK script and calling it with `consent=denied` instead of not loading it | Loading itself is a data transfer (IP, UA, referer). | Gate the `<script>` tag, not just the SDK's internal flag. |
-
-The banner you ship is one layer. The other layers, a published privacy policy in Hebrew, a named Privacy Protection Officer where required under Amendment 13, a data subject request handling process, a breach response plan, and the database registration for public bodies and data brokers, all have to exist independently. No consent UI substitutes for those.
+See `references/consent-ui-anti-patterns.md`.
 
 ## Gotchas
 
 - Amendment 13 took effect on August 14, 2025 and is live law, not a pending proposal. Agents trained on pre-2025 data may treat Amendment 13 as a future change or miss it entirely. Always assume it applies when advising on Israeli privacy compliance today.
 - Amendment 13 expands "personal data" to include IP addresses, geolocation, and online identifiers. This pulls standard web analytics and mobile telemetry into scope. Agents may still apply the older narrower definition and underestimate what counts as personal data.
-- Administrative fines under Amendment 13 can reach ~NIS 3.2 million (capped at 5% of annual turnover in the worst cases), plus Section 29A statutory damages up to NIS 50,000 without proof of harm (NIS 100,000 only with intent to harm) and criminal liability.
+- Administrative fines are per-violation statutory amounts (NIS 150,000 for the Section 23כו(a) list, doubled for databases of 1,000,000+ people; NIS 320,000 for specified data-security breaches), with per-person components of NIS 50 or 100 for unlawful approaches (floor NIS 30,000) and NIS 2 or 4 per person in the database for other violations, and a request-based reduction to 5% of turnover where the penalty exceeds that. Section 15א allows court-awarded damages without proof of harm up to NIS 10,000 per violation, alongside criminal liability.
 - Israel does NOT have a GDPR-style 72-hour breach deadline. Under the Data Security Regulations (2017, predating Amendment 13), a "Severe Security Incident" is reported to the PPA "immediately" (miyad) on discovery, and the PPA may direct notifying affected data subjects. Agents often wrongly import GDPR's 72-hour rule, do not.
 - Israeli Privacy Protection Law predates GDPR (1981 vs 2016) and still has key differences even after Amendment 13: a narrower right to erasure, and database registration still exists (though narrowed to public bodies and data brokers, plus a separate 100,000-record especially-sensitive notification tier). Agents may incorrectly apply GDPR rules to Israeli contexts.
 - Israel has an EU adequacy decision, meaning data transfers FROM Israel TO the EU are generally straightforward. Agents may incorrectly flag Israel-to-EU transfers as requiring additional safeguards.
