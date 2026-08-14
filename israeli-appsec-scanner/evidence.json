@@ -57,15 +57,17 @@
     },
     {
       "claim_id": "ppl-and-gdpr-section-refs",
-      "claim": "The compliance table maps Israeli Privacy Protection Law provisions to GDPR articles. Israeli refs: Section 1, Section 8, Section 11, Section 13, Section 14, Section 14A, Section 36 (סעיף 1, סעיף 8, סעיף 11, סעיף 13, סעיף 14, סעיף 14א, סעיף 36; breach Regulation 11A / תקנה 11). GDPR refs in Hebrew rendering: סעיף 6, סעיף 7, סעיף 15, סעיף 16, סעיף 17, סעיף 30, סעיף 32 (and Art 33-34, 37, 44-49).",
-      "source_url": "https://www.nevo.co.il/law_html/law01/133_001.htm",
-      "raw_snippet": "חוק הגנת הפרטיות, התשמ\"א-1981: סעיף 8 (רישום מאגר), סעיף 13 (זכות עיון), סעיף 14 (תיקון), סעיף 17 (דיוור ישיר). תקנה 11 (אבטחת מידע).",
-      "fetched_at": "2026-05-29T00:00:00Z",
+      "claim": "Privacy Protection Law 5741-1981, section 1: a person shall not infringe the privacy of another without their consent. The compliance table maps Israeli Privacy Protection Law provisions to GDPR articles. Israeli refs: Section 1, Section 8, Section 11, Section 13, Section 14, Section 14A, Section 3",
+      "source_url": "https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%94%D7%92%D7%A0%D7%AA_%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA",
+      "raw_snippet": "1. איסור הפגיעה בפרטיות לא יפגע אדם בפרטיות של זולתו ללא הסכמתו.",
+      "fetched_at": "2026-08-13",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/israeli-privacy-law-guide.md"
-      ]
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-13"
     },
     {
       "claim_id": "owasp-top10-2025-a03",

@@ -303,7 +303,7 @@ The privacy policy must be available in Hebrew.
 ## Resources
 
 - Privacy Protection Authority (PPA): https://www.gov.il/en/departments/the_privacy_protection_authority
-- Privacy Protection Law text (Hebrew): https://www.nevo.co.il/law_html/law01/133_001.htm
+- Privacy Protection Law text (Hebrew): https://he.wikisource.org/wiki/חוק_הגנת_הפרטיות
 - Information Security Regulations (2017): Available on the PPA website
 - PPA guidance documents: Published periodically on the PPA website
 
