@@ -19,13 +19,15 @@
       "claim_id": "severance-pay-section-14",
       "claim": "Severance Pay Law 1963: one month's salary per year of employment; the Section 14 arrangement substitutes pension-fund deposits for severance and is near-universal for new employees.",
       "source_url": "https://www.kolzchut.org.il/he/%D7%A4%D7%99%D7%A6%D7%95%D7%99%D7%99_%D7%A4%D7%99%D7%98%D7%95%D7%A8%D7%99%D7%9D",
-      "raw_snippet": "פיצויי פיטורים חודש לכל שנה; הסדר לפי סעיף 14 Section 14",
+      "raw_snippet": "הסדר זה מבוסס על סעיף 14 לחוק פיצויי פיטורים",
       "fetched_at": "2026-06-28T23:59:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/legislation-index.md"
-      ]
+      ],
+      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "privacy-amendment-13-enforcement-regime-a",
