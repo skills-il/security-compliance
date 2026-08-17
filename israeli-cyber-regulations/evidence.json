@@ -80,6 +80,58 @@
       "raw_snippet": "המסמך המקיף מפרט את עמדת הרשות ביחס להיקף החובה, מהות תפקידיו של הממונה, הידע והכישורים הנדרשים ממנו, וביחס להוראות נוספות בחוק המסדירות את מעמדו של הממונה בארגון ומתכונת העסקתו",
       "verified_via": "gov.il content API",
       "verified_at": "2026-08-11T00:00:00Z"
+    },
+    {
+      "claim_id": "ref-cyber-directorate",
+      "claim": "מערך הסייבר הלאומי בגוב.יל. הכתובת הקודמת, units/cert_il, מחזירה כעת 404.",
+      "source_url": "https://www.gov.il/he/Departments/israel_national_cyber_directorate",
+      "raw_snippet": "מערך הסייבר הלאומי פרסומים חדשות דיווח על אירוע סייבר",
+      "fetched_at": "2026-08-17",
+      "verified_via": "playwright navigation (page load and h1 read); the superseded slug redirects to /he/error",
+      "verified_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "ref-boi-supervision-en",
+      "claim": "Bank of Israel Banking Supervision section, cited as the regulator's own reference point.",
+      "source_url": "https://www.boi.org.il/en/economic-roles/supervision-and-regulation/",
+      "raw_snippet": "Supervision and Regulation | בנק ישראל - הבנק המרכזי של ישראל",
+      "fetched_at": "2026-08-17",
+      "verified_via": "playwright navigation (page title read); a plain fetch returns a Radware WAF challenge",
+      "verified_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "ref-boi-supervision-he",
+      "claim": "אתר הפיקוח על הבנקים בבנק ישראל.",
+      "source_url": "https://www.boi.org.il/roles/supervisionregulation/",
+      "raw_snippet": "roles/supervisionregulation",
+      "fetched_at": "2026-08-17",
+      "verified_via": "same-origin fetch from a loaded boi.org.il page (HTTP 200, 80KB)",
+      "verified_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "ref-knesset-legislation",
+      "claim": "Knesset legislation portal, cited as a navigational pointer. Not machine-verifiable from here: it answers 401 to both a plain fetch and a real browser, which is a block rather than evidence that the page is gone.",
+      "source_url": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/default.aspx",
+      "raw_snippet": "401 UNAUTHORIZED",
+      "fetched_at": "2026-08-17",
+      "verified_via": "playwright navigation; recorded as blocked, deliberately NOT recorded as dead",
+      "verified_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     }
   ]
 }

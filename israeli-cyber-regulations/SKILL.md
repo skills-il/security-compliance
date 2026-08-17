@@ -254,7 +254,7 @@ Result: Multi-framework compliance matrix with healthtech-specific controls and 
 | Israel National Cyber Directorate (INCD) | https://www.gov.il/he/departments/israel_national_cyber_directorate | Official cyber regulations, incident reporting, critical infrastructure rules |
 | Protection of Privacy Law (Knesset) | https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/default.aspx | Privacy Protection Law 1981 and 2024 amendments, breach notification |
 | Privacy Protection Authority | https://www.gov.il/he/departments/the_privacy_protection_authority | Database registration, data subject rights, enforcement guidelines |
-| CERT-IL | https://www.gov.il/he/departments/units/cert_il | National CERT advisories, vulnerability disclosures, sector alerts |
+| CERT-IL | https://www.gov.il/he/Departments/israel_national_cyber_directorate | National CERT advisories, vulnerability disclosures, sector alerts |
 | Bank of Israel cyber directive | https://www.boi.org.il/en/economic-roles/supervision-and-regulation/ | Proper Conduct Directive 361 (cyber defense management for banks) |
 
 ## Troubleshooting

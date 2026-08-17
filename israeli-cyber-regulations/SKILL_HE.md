@@ -238,7 +238,7 @@
 | מערך הסייבר הלאומי | https://www.gov.il/he/departments/israel_national_cyber_directorate | רגולציית סייבר רשמית, דיווח על אירועים, הנחיות לתשתיות קריטיות |
 | חוק הגנת הפרטיות (כנסת) | https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/default.aspx | חוק הגנת הפרטיות התשמ״א-1981 ותיקוניו, חובת דיווח על דליפת מידע |
 | הרשות להגנת הפרטיות | https://www.gov.il/he/departments/the_privacy_protection_authority | רישום מאגרי מידע, זכויות נושאי מידע, הנחיות אכיפה |
-| CERT-IL | https://www.gov.il/he/departments/units/cert_il | התרעות CERT לאומי, גילוי פגיעויות, התראות ענפיות |
+| CERT-IL | https://www.gov.il/he/Departments/israel_national_cyber_directorate | התרעות CERT לאומי, גילוי פגיעויות, התראות ענפיות |
 | הוראת בנק ישראל לסייבר | https://www.boi.org.il/roles/supervisionregulation/ | הוראת ניהול בנקאי תקין 361 (ניהול הגנת סייבר בבנקים) |
 
 ## פתרון בעיות
