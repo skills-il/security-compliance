@@ -132,13 +132,17 @@ Israeli data subjects have the following rights:
 - If you refuse, provide written reasons
 - The individual can appeal to a magistrate court
 
-### Right to Deletion (Section 14A)
+### Right to Deletion (Section 14(a))
+
+The enacted Privacy Protection Law has no Section 14A; the right to ask for correction or deletion is Section 14(a).
 
 - Individuals can request deletion of data collected without consent or not in compliance with the law
 - Evaluate each request based on its merits
 - Document your decision and reasoning
 
-### Right to Object to Direct Marketing (Section 17G)
+### Right to Object to Direct Marketing (Section 17ו)
+
+Section 17ג was repealed. The live provision is Section 17ו, which requires every direct-marketing approach to state the recipient's right to be removed from the database and grants that right.
 
 - Individuals can opt out of direct marketing at any time
 - You must honor opt-out requests promptly

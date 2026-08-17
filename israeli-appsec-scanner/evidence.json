@@ -231,6 +231,214 @@
         "SKILL.md",
         "SKILL_HE.md"
       ]
+    },
+    {
+      "claim_id": "ppl-s1-no-infringement",
+      "claim": "סעיף 1 לחוק הגנת הפרטיות: לא יפגע אדם בפרטיות של זולתו ללא הסכמתו.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71631.htm",
+      "raw_snippet": "1. לא יפגע אדם בפרטיות של זולתו ללא הסכמתו. פגיעה בפרטיות מהי 2. פגיעה בפרטיות היא אחת מאלה: (1) בילוש או התחקות אחרי אדם, העלולים להטרידו, או הטרדה אחרת; (2) האזנה האסורה על פי חו",
+      "fetched_at": "2026-08-17",
+      "verified_via": "Privacy Protection Law read directly on nevo (title confirmed)",
+      "verified_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-privacy-law-guide.md"
+      ]
+    },
+    {
+      "claim_id": "ppl-s6-de-minimis",
+      "claim": "סעיף 6 לחוק שולל תביעה בשל פגיעה שאין בה ממש.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71631.htm",
+      "raw_snippet": "6. לא תהיה זכות לתביעה אזרחית או פלילית לפי חוק זה בשל פגיעה שאין בה ממש. פרק ב': הגנה על הפרטיות במאגרי מידע הגדרות 7. (בוטל) סימן א': מאגרי מידע ניהול מאגר מידע ועיבוד חוקי של מי",
+      "fetched_at": "2026-08-17",
+      "verified_via": "Privacy Protection Law read directly on nevo (title confirmed)",
+      "verified_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-privacy-law-guide.md"
+      ]
+    },
+    {
+      "claim_id": "ppl-s8-lawful-processing",
+      "claim": "סעיף 8 לחוק מתנה עיבוד מידע אישי במאגר במטרה שלשמה הוקם.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71631.htm",
+      "raw_snippet": "8. (א) בסעיף זה, \" עיבוד \" – למעט אחסון באקראי ובתום לב. (ב) לא יעבד אדם מידע אישי במאגר מידע אלא למטרת המאגר שנקבעה לו כדין. (ג) לא יעבד אדם מידע אישי ממאגר מידע ללא הרשאה מאת בעל",
+      "fetched_at": "2026-08-17",
+      "verified_via": "Privacy Protection Law read directly on nevo (title confirmed)",
+      "verified_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-privacy-law-guide.md"
+      ]
+    },
+    {
+      "claim_id": "ppl-s11-notice-on-collection",
+      "claim": "סעיף 11 לחוק מחייב שפנייה לאדם לקבלת מידע אישי תלווה בהודעה.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71631.htm",
+      "raw_snippet": "11. פניה לאדם לקבלת מידע אישי לשם עיבודו במאגר מידע תלווה בהודעה שיצויינו בה – (1) אם חלה על אותו אדם חובה חוקית למסור את המידע, או שמסירת המידע תלויה ברצונו ובהסכמתו ומהי תוצאת אי",
+      "fetched_at": "2026-08-17",
+      "verified_via": "Privacy Protection Law read directly on nevo (title confirmed)",
+      "verified_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-privacy-law-guide.md"
+      ]
+    },
+    {
+      "claim_id": "ppl-s13-right-of-access",
+      "claim": "סעיף 13 לחוק מקנה לכל אדם זכות עיון במידע האישי שעליו.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71631.htm",
+      "raw_snippet": "13. (א) כל אדם זכאי לעיין בעצמו, או על ידי בא-כוחו שהרשהו בכתב או על ידי אפוטרופסו, במידע האישי שעליו המוחזק במאגר מידע. (ב) בעל שליטה במאגר מידע יאפשר עיון במידע האישי, לפי בקשת א",
+      "fetched_at": "2026-08-17",
+      "verified_via": "Privacy Protection Law read directly on nevo (title confirmed)",
+      "verified_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-privacy-law-guide.md"
+      ]
+    },
+    {
+      "claim_id": "ppl-s14-correct-or-delete",
+      "claim": "סעיף 14(א) לחוק מקנה זכות לבקש לתקן את המידע האישי או למוחקו. אין בחוק סעיף 14א; זו הייתה הצעת תיקון בלבד.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71631.htm",
+      "raw_snippet": "14. (א) אדם שעיין במידע האישי שעליו ומצא כי אינו נכון, שלם, ברור או מעודכן, רשאי לפנות לבעל השליטה במאגר המידע, ואם הוא תושב חוץ – למחזיק מאגר המידע, בבקשה לתקן את המידע האישי או ל",
+      "fetched_at": "2026-08-17",
+      "verified_via": "Privacy Protection Law read directly on nevo (title confirmed)",
+      "verified_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-privacy-law-guide.md"
+      ]
+    },
+    {
+      "claim_id": "ppl-s15-refusal",
+      "claim": "סעיף 15 לחוק עוסק בסירוב לאפשר עיון ובדרכי הערעור עליו.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71631.htm",
+      "raw_snippet": "15. על סירובו של בעל שליטה במאגר מידע לאפשר עיון כאמור בסעיף 13 או בסעיף 13א ועל הודעת סירוב כאמור בסעיף 14(ג), רשאי מבקש המידע להגיש תובענה לבית המשפט באופן ובדרך שנקבעו בתקנות. פ",
+      "fetched_at": "2026-08-17",
+      "verified_via": "Privacy Protection Law read directly on nevo (title confirmed)",
+      "verified_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-privacy-law-guide.md"
+      ]
+    },
+    {
+      "claim_id": "ppl-s16-confidentiality",
+      "claim": "סעיף 16 לחוק אוסר גילוי מידע אישי שהגיע לאדם בתוקף תפקידו.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71631.htm",
+      "raw_snippet": "16. לא יגלה אדם מידע אישי שהגיע אליו בתוקף תפקידו כעובד, כמנהל או כמחזיק של מאגר מידע, אלא לצורך ביצוע עבודתו או לביצוע חוק זה או על פי צו בית משפט בקשר להליך משפטי; אם הוגשה הבקשה",
+      "fetched_at": "2026-08-17",
+      "verified_via": "Privacy Protection Law read directly on nevo (title confirmed)",
+      "verified_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-privacy-law-guide.md"
+      ]
+    },
+    {
+      "claim_id": "ppl-s17-security-duty",
+      "claim": "סעיף 17 לחוק מטיל על בעל השליטה ועל המחזיק במאגר את האחריות לאבטחת המידע.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71631.htm",
+      "raw_snippet": "17. (א) בעל שליטה במאגר מידע ומחזיק במאגר מידע, כל אחד מהם אחראי לאבטחת המידע שבמאגר המידע. (ב) (1) שר המשפטים, בהסכמת ראש הממשלה ובאישור ועדת החוקה, רשאי לקבוע תקנות לעניין האחריו",
+      "fetched_at": "2026-08-17",
+      "verified_via": "Privacy Protection Law read directly on nevo (title confirmed)",
+      "verified_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-privacy-law-guide.md"
+      ]
+    },
+    {
+      "claim_id": "ppl-s17vav-direct-marketing",
+      "claim": "סעיף 17ו לחוק מחייב שכל פנייה בדיוור ישיר תציין את זכות הנמען להימחק מהמאגר, ומקנה את הזכות לדרוש זאת. סעיף 17ג בוטל.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71631.htm",
+      "raw_snippet": "17ו. (א) כל פניה בדיוור ישיר תכיל באופן ברור ובולט – (1) ציון כי הפניה היא בדיוור ישיר, בצירוף ציון מספר הרישום של המאגר המשמש לשירותי דיוור ישיר במרשם מאגרי מידע; (2) הודעה על זכו",
+      "fetched_at": "2026-08-17",
+      "verified_via": "Privacy Protection Law read directly on nevo (title confirmed)",
+      "verified_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-privacy-law-guide.md"
+      ]
+    },
+    {
+      "claim_id": "ppl-s30-press",
+      "claim": "סעיף 30 לחוק עוסק באחריות בשל פגיעה בפרטיות שפורסמה בעיתון.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71631.htm",
+      "raw_snippet": "30. (א) פורסמה פגיעה בפרטיות בעתון, ישאו באחריות פלילית ואזרחית בשל הפגיעה האדם שהביא את הדבר לעתון וגרם בכך לפרסומו, עורך העתון ומי שהחליט בפועל על פרסום אותה פגיעה בעתון, ובאחריו",
+      "fetched_at": "2026-08-17",
+      "verified_via": "Privacy Protection Law read directly on nevo (title confirmed)",
+      "verified_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-privacy-law-guide.md"
+      ]
+    },
+    {
+      "claim_id": "ppl-s32-evidence",
+      "claim": "סעיף 32 לחוק פוסל חומר שהושג תוך פגיעה בפרטיות כראיה, אלא באישור בית המשפט.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71631.htm",
+      "raw_snippet": "32. חומר שהושג תוך פגיעה בפרטיות יהיה פסול לשמש ראיה בבית משפט, ללא הסכמת הנפגע, זולת אם בית המשפט התיר מטעמים שיירשמו להשתמש בחומר, או אם היו לפוגע, שהיה צד להליך, הגנה או פטור לפ",
+      "fetched_at": "2026-08-17",
+      "verified_via": "Privacy Protection Law read directly on nevo (title confirmed)",
+      "verified_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-privacy-law-guide.md"
+      ]
+    },
+    {
+      "claim_id": "ppl-s36-regulation-power",
+      "claim": "Section 36 of the Privacy Protection Law is the Minister of Justice's power to make regulations, not a cross-border transfer rule. סעיף 36 לחוק אינו עוסק בהעברה חוצת גבולות אלא בסמכות ההתקנה.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71631.htm",
+      "raw_snippet": "36. שר המשפטים ממונה על ביצוע חוק זה והוא רשאי להתקין תקנות, באישור ועדת החוקה, בכל ענין הנוגע לביצועו, ובין השאר – (1) תנאי החזקת מידע ושמירתו במאגרי מידע; (2) תנאים להעברה של מיד",
+      "fetched_at": "2026-08-17",
+      "verified_via": "Privacy Protection Law read directly on nevo (title confirmed)",
+      "verified_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-privacy-law-guide.md"
+      ]
+    },
+    {
+      "claim_id": "ppl-cross-border-regs",
+      "claim": "העברת מידע אל מחוץ לישראל נשלטת בתקנות הגנת הפרטיות (העברת מידע אל מאגרי מידע שמחוץ לגבולות המדינה), תשס\"א-2001, ולא בסעיף 36 לחוק.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71639.htm",
+      "raw_snippet": "לא יעביר אדם מידע ולא יאפשר העברה של מידע ממאגר מידע בישראל אל מחוץ לגבולותיה, אלא אם כן דין המדינה שאליה מועבר המידע, מבטיח רמת הגנה על מידע שאינה פחותה, בשינויים המחויבים, מרמת ההגנה על מידע הקבועה בדין הישראלי, ובכלל",
+      "fetched_at": "2026-08-17",
+      "verified_via": "transfer regulations read directly on nevo (title confirmed)",
+      "verified_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "sec-regs-11-breach",
+      "claim": "תקנה 11 לתקנות הגנת הפרטיות (אבטחת מידע) עוסקת באירועי אבטחה, ותקנה 11(ד) מחייבת הודעה מיידית לרשם על אירוע אבטחה חמור. אין בתקנות תקנה 11א.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/144811.htm",
+      "raw_snippet": "(ד) אירע אירוע אבטחה חמור – (1) יודיע על כך בעל המאגר לרשם באופן מיידי, וכן ידווח לרשם על הצעדים שנקט בעקבות האירוע; (2) רשאי הרשם להורות לבעל מאגר המידע, למעט לבעל מאגר מידע מן המנויים בסעיף 13(ה) לח",
+      "fetched_at": "2026-08-17",
+      "verified_via": "Privacy Protection (Data Security) Regulations read directly on nevo (title confirmed)",
+      "verified_at": "2026-08-17",
+      "appears_in": [
+        "SKILL_HE.md",
+        "SKILL.md"
+      ]
     }
   ]
 }

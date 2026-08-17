@@ -465,10 +465,10 @@ async function checkOtpRateLimit(phone: string, ip: string): Promise<boolean> {
 | Consent requirements | Section 11, PPL | Art. 7 GDPR | [ ] |
 | Right of access | Section 13, PPL | Art. 15 GDPR | [ ] |
 | Right to correction | Section 14, PPL | Art. 16 GDPR | [ ] |
-| Right to deletion | Section 14A, PPL | Art. 17 GDPR | [ ] |
+| Right to deletion | Section 14(a) PPL, the request to correct or delete; there is no Section 14A in the enacted law | Art. 17 GDPR | [ ] |
 | Data security measures | Regulations 2017 | Art. 32 GDPR | [ ] |
 | Breach notification | Regulation 11A | Art. 33-34 GDPR | [ ] |
-| Cross-border transfers | Section 36, PPL | Art. 44-49 GDPR | [ ] |
+| Cross-border transfers | Privacy Protection (Transfer of Data Abroad) Regulations 2001; Section 36 PPL is only the enabling power | Art. 44-49 GDPR | [ ] |
 | Database registration | Section 8, PPL | Art. 30 GDPR (ROPA) | [ ] |
 | DPO appointment | Mandatory for certain entities (Amendment 13, Aug 2025): public bodies, data brokers, large-scale sensitive data processors | Art. 37 GDPR | [ ] |
 
