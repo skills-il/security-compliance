@@ -51,87 +51,101 @@
     },
     {
       "claim_id": "high-level-pen-test-18-months",
-      "claim": "High-level databases require a security risk assessment and penetration test at least once every 18 months",
-      "source_url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/israel",
-      "raw_snippet": "high-level databases must undergo a security risk assessment and a penetration test at least once every 18 months, with documented findings and remediation",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "claim": "תקנה 5(ד) מחייבת מבדקי חדירות במאגר ברמת אבטחה גבוהה אחת לשמונה עשר חודשים לפחות; תקנה 5(ג) קובעת סקר סיכונים באותו מחזור.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/144811.htm",
+      "raw_snippet": "(ד) במאגר מידע שחלה עליו רמת האבטחה הגבוהה, בעל המאגר אחראי לכך שייערכו מבדקי חדירות למערכות המאגר לבחינת עמידותן בפני סיכונים פנימיים וחיצוניים, אחת לשמונה עשר חודשים לפחות; בעל המאגר ידון בתוצאות מבדקי החדירות ויפעל לתיקון הליקו",
+      "fetched_at": "2026-08-17",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/privacy-law-requirements.md"
-      ]
+      ],
+      "verified_via": "Privacy Protection (Data Security) Regulations 5777-2017 read directly on nevo (title confirmed)",
+      "verified_at": "2026-08-17"
     },
     {
       "claim_id": "registration-10000-data-brokers",
-      "claim": "Under Amendment 13, registration is required only for public bodies and data brokers with 10,000+ individuals",
-      "source_url": "https://iapp.org/news/a/israel-marks-a-new-era-in-privacy-law-amendment-13-ushers-in-sweeping-reform",
-      "raw_snippet": "Registration is narrowed to public bodies and to databases that contain personal data on more than 10,000 individuals where the primary purpose is collecting and disclosing personal data to third parties as a business or for value",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "claim": "סעיף 8א(א)(1)(א) לחוק: חובת רישום חלה על מאגר שמטרתו העיקרית איסוף מידע אישי לשם מסירתו לאחר כדרך עיסוק או בתמורה, ובו מידע על יותר מ-10,000 בני אדם.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71631.htm",
+      "raw_snippet": "חובת רישום או הודעה 8א. (א) (1) מאגר מידע חייב ברישום בהתקיים אחד מאלה: (א) מטרתו העיקרית היא איסוף מידע אישי לשם מסירתו לאחר כדרך עיסוק או בתמורה, לרבות שירותי דיוור ישיר, ויש במאגר מידע אישי על יותר מ-10,000 בני אדם; (ב) בעל השליטה במאגר המידע הוא גוף ציבורי",
+      "fetched_at": "2026-08-17",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/privacy-law-requirements.md"
-      ]
+      ],
+      "verified_via": "Privacy Protection Law (post-Amendment 13 text) read directly on nevo (title confirmed)",
+      "verified_at": "2026-08-17"
     },
     {
       "claim_id": "notification-100000-sensitive-30-days",
-      "claim": "Controllers of databases holding especially-sensitive data on more than 100,000 individuals must notify the PPA within 30 days",
-      "source_url": "https://iapp.org/news/a/israel-marks-a-new-era-in-privacy-law-amendment-13-ushers-in-sweeping-reform",
-      "raw_snippet": "A controller of a database not subject to registration but holding especially-sensitive data on more than 100,000 individuals must submit a notification to the PPA within 30 days",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "claim": "בעל שליטה במאגר שאינו חייב ברישום ויש בו מידע בעל רגישות מיוחדת על יותר מ-100,000 בני אדם חייב להודיע לרשות בתוך 30 ימים.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71631.htm",
+      "raw_snippet": "על 100,000, יודיע בעל השליטה במאגר המידע לרשות, בתוך 30 ימים מהתקיימות האמור, על זהות בעל השליטה, מענו ודרכי ההתקשרות עימו, על זהות הממונה על הגנת הפרטיות – אם נדרש מינויו לפי סעיף 17ב1, ועל דרכי ההתקשרות עימו, וימסור לרשות העתק ממסמך הגדרות המאגר שעריכתו נדרש",
+      "fetched_at": "2026-08-17",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/privacy-law-requirements.md"
-      ]
+      ],
+      "verified_via": "Privacy Protection Law (post-Amendment 13 text) read directly on nevo (title confirmed)",
+      "verified_at": "2026-08-17"
     },
     {
       "claim_id": "high-level-authorized-100-users",
-      "claim": "High security level applies when authorized access is granted to more than 100 people",
-      "source_url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/israel",
-      "raw_snippet": "intermediate-level databases that grant authorized access to more than 100 people fall under the high security level",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "claim": "רמת האבטחה הגבוהה חלה גם על מאגר שמספר בעלי ההרשאה בו עולה על 100.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/144811.htm",
+      "raw_snippet": "(2) מאגר מידע כאמור בפרט 1(1) או (3) בתוספת הראשונה, לרבות מאגר של גוף ציבורי כמשמעותו בסעיף 23(1) לחוק המקיים את האמור בפרטים (1) או (3), שמספר בעלי ההרשאה בו עולה על 100. (adsbygoogle = window.adsbygoogle || []).push({ });",
+      "fetched_at": "2026-08-17",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/privacy-law-requirements.md"
-      ]
+      ],
+      "verified_via": "Privacy Protection (Data Security) Regulations 5777-2017 read directly on nevo (title confirmed)",
+      "verified_at": "2026-08-17"
     },
     {
       "claim_id": "high-level-100k-records",
-      "claim": "High security level applies to databases with 100,000+ records",
-      "source_url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/israel",
-      "raw_snippet": "databases with 100,000+ records fall under the high security level",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "claim": "רמת האבטחה הגבוהה חלה על מאגר שיש בו מידע על אודות 100,000 אנשים ומעלה, לפי התוספת השנייה לתקנות אבטחת מידע.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/144811.htm",
+      "raw_snippet": "תוספת שנייה (תקנה 1) מאגרי מידע שחלה עליהם רמת האבטחה הגבוהה – (1) מאגר מידע כאמור בפרט 1(1) או (3) בתוספת הראשונה, לרבות מאגר של גוף ציבורי כמשמעותו בסעיף 23(1) לחוק המקיים את האמור בפרטים (1) או (3), שיש בו מידע על אודות 100,000",
+      "fetched_at": "2026-08-17",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/privacy-law-requirements.md"
-      ]
+      ],
+      "verified_via": "Privacy Protection (Data Security) Regulations 5777-2017 read directly on nevo (title confirmed)",
+      "verified_at": "2026-08-17"
     },
     {
       "claim_id": "medium-level-10000-records",
-      "claim": "Medium security level applies to databases with 10,000+ records or containing sensitive data",
-      "source_url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/israel",
-      "raw_snippet": "Medium security level applies to databases with 10,000+ records or those containing sensitive data",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "claim": "רמת האבטחה הבינונית חלה, בין היתר, על מאגר שיש בו מידע על אודות 10,000 אנשים ומעלה.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/144811.htm",
+      "raw_snippet": "(2) מאגר מידע שיש בו מידע על אודות 10,000 אנשים ומעלה; (3) מאגר מידע הכולל מידע שבעל המאגר כפוף בשלו לחובת סודיות מקצועית לפי דין או לפי עקרונות של אתיקה מקצועית; \" מאגרים שחלה עליהם רמת האבטחה הבסיסית \" – מאגרי מידע שאינם מן הסוג",
+      "fetched_at": "2026-08-17",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/privacy-law-requirements.md"
-      ]
+      ],
+      "verified_via": "Privacy Protection (Data Security) Regulations 5777-2017 read directly on nevo (title confirmed)",
+      "verified_at": "2026-08-17"
     },
     {
       "claim_id": "breach-immediately-not-72h",
-      "claim": "A Severe Security Incident must be reported to the Privacy Protection Authority IMMEDIATELY upon discovery, per the Data Security Regulations (2017). Israel has NO fixed 72-hour breach deadline (that is GDPR), and the obligation predates Amendment 13.",
-      "source_url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/israel",
-      "raw_snippet": "Israel does not impose a fixed statutory deadline; a severe security incident must be reported to the PPA immediately / without delay (Data Security Regulations 2017), unlike GDPR's 72 hours",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "claim": "בישראל אין מועד קבוע של 72 שעות: תקנה 11(ד) מחייבת הודעה מיידית לרשם על אירוע אבטחה חמור.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/144811.htm",
+      "raw_snippet": "(ד) אירע אירוע אבטחה חמור – (1) יודיע על כך בעל המאגר לרשם באופן מיידי, וכן ידווח לרשם על הצעדים שנקט בעקבות האירוע; (2) רשאי הרשם להורות לבעל מאגר המידע, למעט לבעל מאגר מידע מן המנויים בסעיף 13(ה) לחוק, לאחר שנועץ בראש הרשות הלאו",
+      "fetched_at": "2026-08-17",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/privacy-law-requirements.md"
-      ]
+      ],
+      "verified_via": "Privacy Protection (Data Security) Regulations 5777-2017 read directly on nevo (title confirmed)",
+      "verified_at": "2026-08-17"
     },
     {
       "claim_id": "dpo-grace-october-2025",
@@ -159,13 +173,15 @@
     },
     {
       "claim_id": "amendment-13-per-violation-fines",
-      "claim": "Per-violation fines under Amendment 13 range from NIS 1,000 to NIS 320,000, doubled to NIS 640,000 in severe cases",
-      "source_url": "https://www.recordinglaw.com/world-laws/world-data-privacy-laws/israel-data-privacy-laws/",
-      "raw_snippet": "Fines range from NIS 1,000 (1,000 ש\"ח) to NIS 320,000 (320,000 ש\"ח) per offense, but can be doubled to NIS 640,000 (640,000 ש\"ח) in severe cases",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "claim": "לוח העיצומים הכספיים בחוק נוקב בסכומים לכל הפרה, ובכללם 320,000 ש\"ח בגין אי-קיום מבדקי חדירות אחת ל-18 חודשים.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71631.htm",
+      "raw_snippet": "מבדקי חדירות: בעל שליטה במאגר מידע או מחזיק במאגר מידע שלא דאג לכך שייערכו מבדקי חדירות למערכות המאגר, אחת ל-18 חודשים לפחות, או שלא דן בתוצאות מבדקי החדירות או שלא פעל לתיקון הליקויים שהתגלו, בניגוד להוראות תקנה 5(ד) לתקנות אבטחת מידע או להוראות התקנה האמורה",
+      "fetched_at": "2026-08-17",
       "appears_in": [
         "SKILL.md"
-      ]
+      ],
+      "verified_via": "Privacy Protection Law (post-Amendment 13 text) read directly on nevo (title confirmed)",
+      "verified_at": "2026-08-17"
     },
     {
       "claim_id": "amendment-13-turnover-cap-and-statutory-damages",
@@ -614,6 +630,19 @@
       "verified_via": "pdf",
       "verified_at": "2026-08-13",
       "appears_in": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "claim_id": "fine-doubling-1m-records",
+      "claim": "ההכפלה ל-640,000 ש\"ח לפי סעיף 23כו(ח) מותנית בכך שהמאגר ברמת אבטחה גבוהה ויש בו מידע על אודות 1,000,000 בני אדם ומעלה, ולא בחומרת ההפרה. 640,000 ש\"ח הוא כפל הסכום שבטור ה' (320,000 ש\"ח).",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71631.htm",
+      "raw_snippet": "ואם מאגר המידע הוא מאגר שחלה עליו רמת האבטחה הגבוהה בתוספת האמורה ויש בו מידע על אודות 1,000,000 בני אדם ומעלה, רשאי ראש הרשות להטיל עליו כפל הסכום הקבוע בטור ה' לצד אותה הוראה. (ט",
+      "fetched_at": "2026-08-17",
+      "verified_via": "Privacy Protection Law section 23kv(h) read directly on nevo",
+      "verified_at": "2026-08-17",
+      "appears_in": [
+        "SKILL_HE.md",
         "SKILL.md"
       ]
     }
