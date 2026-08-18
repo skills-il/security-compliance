@@ -17,15 +17,17 @@
     },
     {
       "claim_id": "amendment-13-effective-date",
-      "claim": "Amendment 13 to the Israeli Privacy Protection Law took effect on August 14, 2025",
-      "source_url": "https://iapp.org/news/a/israel-marks-a-new-era-in-privacy-law-amendment-13-ushers-in-sweeping-reform",
-      "raw_snippet": "Amendment 13 came into force on August 14, 2025, marking the most significant reform of Israeli privacy law since 1981",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "claim": "תיקון 13 פורסם בספר החוקים 3287 ביום 14 באוגוסט 2024, וסעיף 74 קובע שתחילתו שנה מיום פרסומו, כלומר 14 באוגוסט 2025. הנוסח המשולב בנבו נושא את התאריך 14-08-2025 ככניסה לתוקף.",
+      "source_url": "https://www.gov.il/BlobFolder/news/13_amendment/he/%D7%AA%D7%99%D7%A7%D7%95%D7%9F%2013%20-%20%D7%A4%D7%A8%D7%A1%D7%95%D7%9D%20%D7%91%D7%A1%D7%A4%D7%A8%20%D7%94%D7%97%D7%95%D7%A7%D7%99%D7%9D.pdf",
+      "raw_snippet": "תחילתו של חוק זה שנה מיום פרסומו (להלן -יום התחילה). (ב) על אף האמור בסעיף קטן (א) ,תחילתו של סעיף 23כ(ב)( )2לחוק העיקרי",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/privacy-law-requirements.md"
-      ]
+      ],
+      "verified_via": "Privacy Protection Law consolidated text on nevo (current to 14-08-2025) and the official Sefer HaChukim 3287 publication of Amendment 13, read directly",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "amendment-13-approval",
@@ -161,15 +163,17 @@
     },
     {
       "claim_id": "amendment-13-fine-3-2m",
-      "claim": "Administrative fines under Amendment 13 can reach approximately NIS 3.2 million for serious violations",
-      "source_url": "https://iapp.org/news/a/israel-marks-a-new-era-in-privacy-law-amendment-13-ushers-in-sweeping-reform",
-      "raw_snippet": "Administrative fines under Amendment 13 reach approximately NIS 3.2 million for serious violations",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "claim": "אין בחוק תקרה מצרפית אחת. סעיף 23כו(א) קובע 150,000 ש\"ח, וכפל הסכום (300,000 ש\"ח) כשבמאגר מידע על מיליון בני אדם ומעלה. הסכום הגבוה ביותר להפרה בודדת הוא 640,000 ש\"ח, כפל 320,000 על הפרת תקנות אבטחת מידע במאגר ברמת אבטחה גבוהה. הטענה על כ-3.2 מיליון ש\"ח לא נמצאה בחוק והוסרה.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71631.htm",
+      "raw_snippet": "23כו. (א) הפר בעל שליטה במאגר מידע או מחזיק במאגר מידע הוראה מההוראות לפי חוק זה, כמפורט להלן, רשאי ראש הרשות להטיל עליו עיצום כספי בסכום של 150,000 שקלים חדשים, ואם במאגר המידע היה מידע אישי על אודות 1,000,000 בני אדם ומעלה, רשאי ראש הרשות להטיל עליו את כפל הסכום: (1) עשה אחד מאלה: (א) עיבד מידע אי",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/privacy-law-requirements.md"
-      ]
+      ],
+      "verified_via": "Privacy Protection Law consolidated text on nevo (current to 14-08-2025) and the official Sefer HaChukim 3287 publication of Amendment 13, read directly",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "amendment-13-per-violation-fines",
@@ -185,24 +189,28 @@
     },
     {
       "claim_id": "amendment-13-turnover-cap-and-statutory-damages",
-      "claim": "Amendment 13 caps administrative fines at 5% of the controller's annual turnover in the most serious cases (with a separate lower annual ceiling for small/micro businesses). Separately, Section 29A of the Privacy Protection Law allows statutory damages of up to NIS 50,000 per affected person WITHOUT proof of harm, rising to up to NIS 100,000 only where the violation was committed with intent to harm (bekavana lifgoa).",
-      "source_url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/israel",
-      "raw_snippet": "administrative fines capped at 5% of annual turnover; Section 29A / סעיף 29א statutory damages up to NIS 50,000 (50,000 ש\"ח) without proof of harm, up to NIS 100,000 (100,000 ש\"ח) with intent to harm (בכוונה לפגוע)",
-      "fetched_at": "2026-06-29T01:40:00Z",
+      "claim": "תקרת 5% היא מנגנון הפחתה לבקשת המפר לפי סעיף 7 לתוספת החמישית, ולא סכום קנס. פיצוי בלא הוכחת נזק קיים בשני מסלולים: סעיף 29א נותן עד 50,000 ש\"ח, וכפל הסכום כשהפגיעה נעשתה בכוונה לפגוע; סעיף 15א, שהוסף בתיקון 13, נותן עד 10,000 ש\"ח להפרות המנויות בו.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71631.htm",
+      "raw_snippet": "עולה על 5% ממחזור העסקאות של המפר, יפחית את סכום העיצום הכספי ל-5% ממחזור העסקאות שלו; ואולם לעוסק שאין לו מחזור עסקאות, ראש הרשות לא יפחית את סכום העיצום לפי סעיף זה לסכום קטן מהסכום המרבי שניתן להטי",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "Privacy Protection Law consolidated text on nevo (current to 14-08-2025) and the official Sefer HaChukim 3287 publication of Amendment 13, read directly",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "per-data-subject-component-100",
-      "claim": "For large-scale violations, fines can include a per-data-subject component of up to NIS 100 per individual",
-      "source_url": "https://www.recordinglaw.com/world-laws/world-data-privacy-laws/israel-data-privacy-laws/",
-      "raw_snippet": "For large-scale violations, fines can include a per-data-subject component of up to NIS 100 (100 ש\"ח) per individual whose data is in the affected database",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "claim": "הרכיב לאדם שמידעו נמצא במאגר הוא 2 ש\"ח, ו-4 ש\"ח כשמדובר במידע בעל רגישות מיוחדת, לפי סעיף 23כו(ד)(1). הרכיב של 50 או 100 ש\"ח לאדם חל על פנייה שלא כדין ועל דיוור ישיר לפי סעיף 23כו(ג)(1), ולא על מי שמידעו יושב במאגר. שני הלוחות התחלפו בגרסה הקודמת.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71631.htm",
+      "raw_snippet": "בסכום של 2 שקלים חדשים לכל אדם שמידע אישי על אודותיו נמצא במאגר המידע, ואם המידע האישי במאגר המידע היה מידע בעל רגישות מיוחדת – בסכום של 4 שקלים חדשים לכל אדם: (א) פנה לאדם לקבלת מידע אישי לשם עיבודו במאגר מידע, והפנייה נעשתה לקבו",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md"
-      ]
+      ],
+      "verified_via": "Privacy Protection Law consolidated text on nevo (current to 14-08-2025) and the official Sefer HaChukim 3287 publication of Amendment 13, read directly",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "nii-75000-individual-fine",
@@ -217,15 +225,17 @@
     },
     {
       "claim_id": "criminal-5-years",
-      "claim": "Penalties under Israeli privacy law include criminal liability of up to 5 years imprisonment for severe violations",
-      "source_url": "https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/israel",
-      "raw_snippet": "Penalties under the Privacy Protection Law include criminal liability of up to 5 years imprisonment for severe violations, in addition to administrative fines",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "claim": "חמש שנות מאסר הן העונש שבסעיף 5 על פגיעה במזיד בפרטיות, וכן בסעיף 16 על הפרת חובת סודיות. העבירות שתיקון 13 הוסיף נמוכות יותר: שישה חודשים (23נג), שנתיים (23נד) ושלוש שנים (23נה עד 23נז).",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71631.htm",
+      "raw_snippet": "5. הפוגע במזיד בפרטיות זולתו, באחת הדרכים האמורות בסעיף 2(1), (3) עד (7) ו-(9) עד (11), דינו – מאסר 5 שנים. מעשה של מה בכך 6. לא תהיה זכות לתביעה אזרחית או פלילית לפי חוק זה בשל פגיעה שאין בה ממש. פרק",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/privacy-law-requirements.md"
-      ]
+      ],
+      "verified_via": "Privacy Protection Law consolidated text on nevo (current to 14-08-2025) and the official Sefer HaChukim 3287 publication of Amendment 13, read directly",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "dsr-section-13-access",
@@ -644,6 +654,32 @@
       "appears_in": [
         "SKILL_HE.md",
         "SKILL.md"
+      ]
+    },
+    {
+      "claim_id": "section-29a-doubled-intentional",
+      "claim": "סעיף 29א(ב)(2) לחוק הגנת הפרטיות: הוכח שהפגיעה בפרטיות נעשתה בכוונה לפגוע, רשאי בית המשפט לחייב בכפל הסכום, כלומר עד 100,000 ש\"ח, בלא הוכחת נזק. הסכום הבסיסי לפי 29א(א) ו-29א(ב)(1) הוא 50,000 ש\"ח.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71631.htm",
+      "raw_snippet": "הוכח כי הפגיעה בפרטיות נעשתה בכוונה לפגוע, רשאי בית המשפט לחייב את הנתבע לשלם לנפגע פיצוי שלא יעלה על כפל הסכום כאמור באותה פסקה, בלא הוכחת נזק. (ג) לא יקבל אדם פיצוי בלא הוכחת נזק",
+      "verified_via": "Privacy Protection Law consolidated text on nevo, current to 14-08-2025",
+      "verified_at": "2026-08-18",
+      "fetched_at": "2026-08-18",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "criminal-sections-range",
+      "claim": "Section 5 sets five years imprisonment for wilfully invading another person's privacy and Section 16 sets the same for breach of the confidentiality duty. The offences Amendment 13 added are lower: Section 23נג six months for obstructing the Authority, Section 23נד two years for misleading it, and Sections 23נה to 23נז three years. Quoting five years for a registration failure attaches the Section 5 penalty to the wrong conduct. בעברית: סעיף 5 קובע חמש שנות מאסר על פגיעה במזיד בפרטיות, סעיף 23נג שישה חודשים על הפרעה לרשות, סעיף 23נד שנתיים על הטעייתה, וסעיפים 23נה, 23נו ו-23נז שלוש שנים.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71631.htm",
+      "raw_snippet": "23נג. המפריע לראש הרשות, לחוקר או למפקח במילוי תפקידו לפי חוק זה, דינו – מאסר שישה חודשים. הטעיית ראש הרשות, מפקח או מומחה חיצוני 23נד. העושה אחד מאלה בכוונה להטעות את ראש הרשות, מפקח או מומחה חיצוני,",
+      "verified_via": "Privacy Protection Law consolidated text on nevo, current to 14-08-2025",
+      "verified_at": "2026-08-18",
+      "fetched_at": "2026-08-18",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
       ]
     }
   ]

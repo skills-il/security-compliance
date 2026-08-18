@@ -199,7 +199,7 @@ The Privacy Protection Law does not have a dedicated minors' provision, but othe
 | Legal basis | Consent primary, limited exceptions | 6 legal bases |
 | Privacy officer requirement | Public bodies (and their processors), data brokers (10,000+ records), large-scale sensitive-data processors, and large-scale systematic monitors | Broader requirement |
 | Breach notification | Immediately to the PPA on a Severe Security Incident (no fixed hours); data subjects as the PPA directs | 72 hours |
-| Administrative fines | Up to ~NIS 3.2M for serious violations + criminal liability | Up to 4% global revenue |
+| Administrative fines | Fixed per-violation amounts: NIS 150,000 under s.23כו(a) and NIS 300,000 doubled, up to NIS 320,000 for data-security breaches and NIS 640,000 doubled, plus criminal liability | Up to 4% global revenue |
 | Right to erasure | Limited | Comprehensive (right to be forgotten) |
 | Database registration | Public bodies and data brokers only (10,000+ records) | Not required (replaced by ROPA) |
 | Personal data scope | Includes IP, geolocation, online identifiers (Amendment 13) | Includes online identifiers |
@@ -488,7 +488,7 @@ See `references/consent-ui-anti-patterns.md`.
 - Israeli Privacy Protection Law predates GDPR (1981 vs 2016) and still has key differences even after Amendment 13: a narrower right to erasure, and database registration still exists (though narrowed to public bodies and data brokers, plus a separate 100,000-record especially-sensitive notification tier). Agents may incorrectly apply GDPR rules to Israeli contexts.
 - Israel has an EU adequacy decision, meaning data transfers FROM Israel TO the EU are generally straightforward. Agents may incorrectly flag Israel-to-EU transfers as requiring additional safeguards.
 - The 2017 Security Regulations define three security levels (basic/medium/high) based on record count and data sensitivity. Agents may apply a one-size-fits-all approach instead of the tiered model.
-- Penalties under Israeli privacy law include criminal liability (up to 5 years imprisonment) in addition to administrative fines. Agents may understate the severity by comparing only to GDPR's monetary penalties.
+- Penalties under Israeli privacy law include criminal liability in addition to administrative fines, but the five-year figure belongs to a specific offence and should not be attached to any breach. Section 5 sets five years for WILFULLY invading another person's privacy, and section 16 the same for breach of the confidentiality duty. The offences Amendment 13 itself added are lower: six months for obstructing the Authority (s.23נג), two years for misleading it (s.23נד), and three years for processing without authorisation or for misleading a person into handing over personal data (ss.23נה-23נז). Agents may understate the severity by comparing only to GDPR's monetary penalties, or overstate it by quoting five years for a registration failure.
 
 ## Troubleshooting
 
