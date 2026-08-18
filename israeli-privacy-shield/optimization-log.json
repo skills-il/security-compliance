@@ -1,0 +1,17 @@
+{
+  "cycles": [
+    {
+      "version": "1.4.2",
+      "date": "2026-06-29",
+      "lessons": [
+        "WRONG fix (carried from hebrew-legal-research #3): the 'first Amendment-13 enforcement' was stated as a NIS 70,000 fine on HOT. It was actually a NIS 75,000 fine on an INDIVIDUAL (a former National Insurance Institute employee) for unauthorized retrieval of sensitive data from Bituach Leumi databases. Fixed in SKILL.md, SKILL_HE.md, evidence.json (sourced to israelhayom).",
+        "WRONG fix (the big one): the skill asserted a GDPR-style 72-hour breach-notification deadline in 7 places and wrongly attributed it to Amendment 13. Israel has NO fixed 72-hour deadline: a 'Severe Security Incident' is reported to the PPA 'immediately' (miyad) under the Data Security Regulations (2017, which predate Amendment 13). Fixed SKILL.md (Step 5, GDPR-comparison table, gotcha), SKILL_HE (3 places), references/privacy-law-requirements.md (3 places), and evidence.json. Verified via Chambers 2026 + Baker McKenzie; consistent with sister skill hebrew-legal-research.",
+        "Dead source replaced: ai-law.co.il enforcement post now 404s (was the source for the HOT fine + the 3.2M aggregate). Repointed to israelhayom (NII fine), IAPP (3.2M aggregate), and Chambers 2026 (breach rule + turnover cap).",
+        "GAPS added (expert-flagged, were missing): the 5%-of-annual-turnover cap on administrative fines (with a separate lower ceiling for small/micro businesses) and the new private right of action for statutory damages up to NIS 100,000 per person WITHOUT proof of harm (distinct from the administrative fine).",
+        "VERIFIED OK (no change): in force 2025-08-14, DPO grace ended 2025-10-31, per-violation fines 1,000-320,000 / 640,000 doubled / ~3.2M aggregate, per-data-subject NIS 100, registration narrowed to public bodies + data brokers (10,000+) plus the 100,000-record especially-sensitive 30-day notification tier, three security levels, criminal liability up to 5 years, 2026 PPA enforcement priorities.",
+        "CARRY (MINOR): Knesset-approval date of Amendment 13 is stated as 2024-08-05; some sources say 2024-08-08. Sources disagree; verify against the Knesset record next cycle.",
+        "Word-count: SKILL.md was already near the 5,000-word cap; the gap additions pushed it over and required condensing filler + a duplicated registration paragraph back under 5,000. Trim before adding next cycle."
+      ]
+    }
+  ]
+}

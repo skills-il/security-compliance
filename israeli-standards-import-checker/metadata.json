@@ -1,0 +1,43 @@
+{
+  "author": "skills-il",
+  "version": "1.2.2",
+  "category": "security-compliance",
+  "tags": {
+    "he": [
+      "תקנים",
+      "מכון-התקנים",
+      "יבוא",
+      "תקן-רשמי",
+      "רגולציה",
+      "תאימות",
+      "ישראל"
+    ],
+    "en": [
+      "standards",
+      "sii",
+      "import",
+      "compliance",
+      "regulation",
+      "mechon-hatikanim",
+      "israel"
+    ]
+  },
+  "display_name": {
+    "he": "בודק תקנים לייבוא",
+    "en": "Israeli Standards Import Checker"
+  },
+  "display_description": {
+    "he": "בדיקה האם מוצר לייבוא לישראל מחייב אישור מכון התקנים (תקן רשמי) של הממונה על התקינה. מחזיר מספרי תקן ישראלי, קבוצת יבוא (1 עד 4 לפי סיכון), מסלול אישור (אישור טיפוס, אישור משלוח, מסלול פלוס ירוק/זהב/יהלום, הצהרת יבוא, מסלול הכרה ברגולציה אירופית CoC), בדיקות מעבדה נדרשות, לוחות זמנים, וקיצורי דרך לפי רפורמת יבוא מקביל למזון 2016, רפורמת האלקטרוניקה 2022, תיקון 19 לחוק התקנים מינואר 2025 (כ-69 רגולציות אירופיות, כ-444 מתוך 573 התקנים הרשמיים), ותיקון 21 המוצע מנובמבר 2025 להכרה בתקינה האמריקאית. שימוש כשהמשתמש שואל על ייבוא אישי או מסחרי, אישור טיפוס, CE, בדיקות מעבדה, או כשמשלוח נתפס במכס. מסביר גם את הגשת הרשימון דרך שער עולמי ואת חובות התיוג בעברית. אל תשתמש לחישוב מכס ומס קנייה (השתמש ב-israeli-customs-duty-calculator) או לביקורת בטיחות מוצר מחוץ להקשר הרגולטורי הישראלי.",
+    "en": "Check whether a product requires Standards Institution of Israel (SII / Mechon HaTikanim) approval under an official standard (takan rishmi) before it can be imported into Israel. Returns applicable SI numbers, risk-based import group (1-4), approval route (type approval, shipment approval, Maslol Plus Green/Gold/Diamond, declaration-based entry, EU-regulation recognition under Amendment 19), required lab tests, timelines, and fast-track options based on the 2016 food parallel-import reform, the 2022 electronics reform, the January 2025 EU recognition (about 69 EU regulations adopted, touching roughly 444 of Israel's 573 mandatory standards), and the November 2025 proposed Amendment 21 for US-standards recognition. Use when a user asks about importing electronics, toys, cosmetics, food-contact materials, vehicles, or building materials into Israel, asks about CE/type approval, has a shipment stuck at Israeli customs, or needs Sha'ar Olami / Hebrew-labelling guidance. Do NOT use for customs duty calculation (use israeli-customs-duty-calculator) or for general product safety review outside the Israeli regulatory context."
+  },
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "opencode",
+    "codex",
+    "antigravity",
+    "gemini-cli"
+  ]
+}

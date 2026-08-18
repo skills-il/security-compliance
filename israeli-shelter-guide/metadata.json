@@ -1,0 +1,45 @@
+{
+  "author": "skills-il",
+  "version": "1.2.2",
+  "display_name": {
+    "he": "מדריך מקלטים ומרחבים מוגנים בישראל",
+    "en": "Israeli Shelter Guide"
+  },
+  "display_description": {
+    "he": "מדריך למציאת מקלטים ומרחבים מוגנים בישראל, הכנת ממ\"ד לפי הנחיות פיקוד העורף, וזיהוי ההתרעות הרב-שלביות לאיומים בליסטיים. השתמשו כשעוברים לישראל, כשמכינים בית או מקום עבודה, או כשצריך לדעת מה לעשות בזמן צפירה, ברכב, או בבניין ללא ממ\"ד. עוזר להגן על המשפחה לפי תקן ישראלי 4422 ומפרסומי פיקוד העורף 2025-2026. אל תשתמשו לאינטגרציות התרעה בזמן אמת ולא להחלפה של הוראת פיקוד העורף בעת אירוע ממשי.\n",
+    "en": "Guide to finding and preparing shelters in Israel, building a mamad per Pikud Ha'Oref guidance, and interpreting the multi-stage early warning notifications for ballistic threats. Use when moving to Israel, preparing a home or workplace, or deciding what to do during a siren, in a vehicle, or in a building without a safe room. Helps protect family per Israeli Standard 4422 and Pikud Ha'Oref 2025-2026 guidance. Do NOT use for real-time alert integrations and do NOT use as a substitute for Pikud Ha'Oref instructions during an actual event.\n"
+  },
+  "tags": {
+    "he": [
+      "מקלט",
+      "ממד",
+      "מרחב-מוגן",
+      "פיקוד-העורף",
+      "חירום",
+      "בטיחות",
+      "ישראל",
+      "הגנה-אזרחית",
+      "תקן-4422",
+      "התרעה-מקדימה"
+    ],
+    "en": [
+      "shelter",
+      "mamad",
+      "safe-room",
+      "home-front-command",
+      "emergency",
+      "safety",
+      "israel",
+      "civil-defense",
+      "standard-4422",
+      "early-warning"
+    ]
+  },
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "windsurf",
+    "openclaw",
+    "gemini-cli"
+  ]
+}

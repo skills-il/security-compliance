@@ -1,0 +1,154 @@
+{
+  "schemaVersion": "1.0",
+  "claims": [
+    {
+      "id": "warning-time-geographic",
+      "claim": "Time-to-shelter (the time available to reach a protected space) is set by geographic location under Pikud Ha'Oref protection doctrine; stay time in the protected space ranges from ten minutes to several hours.",
+      "source_url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2026/Emergency/2026-Emergency-104-Local.pdf",
+      "raw_snippet": "תפיסת מיגון שבה זמן ההתרעה - משך הזמן שבו יש להגיע למרחב מוגן - נקבע לפי המיקום הגיאוגרפי. זמן השהייה במרחב המוגן, על פי תפיסה זו, הוא בין עשר דקות לשעות מספר",
+      "evidence_type": "primary",
+      "note": "Narrowed 2026-08-13: the specific five-band table (immediate/15/30/45/60/90s) could not be quoted from any machine-readable source. oref.org.il is an Angular SPA whose article API returns 204, so its Pakar page cannot be read by curl or by the gate fetcher."
+    },
+    {
+      "id": "ashkelon-30-seconds",
+      "claim": "Ashkelon's city-wide warning time is 30 seconds.",
+      "source_url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2026/Emergency/2026-Emergency-104-Local.pdf",
+      "raw_snippet": "עיריית אשקלון מסרה למשרד מבקר המדינה כי מאחר שזמן ההתרעה ברחבי העיר הוא קצר (30 שניות), המקלטים הציבוריים משמשים בעיקר כמחסה לעוברי אורח",
+      "evidence_type": "primary"
+    },
+    {
+      "id": "four-stage-ballistic-warning",
+      "claim": "Pikud Ha'Oref publishes a four-stage warning for ballistic threats: an advance advisory at least 15 minutes out, a second warning about 10 minutes out, the siren about 90 seconds out, and an explicit release message.",
+      "source_url": "https://www.davar1.co.il/608137/",
+      "raw_snippet": "התרעה מקדימה - יוצאת ביישומון פיקוד העורף לפחות רבע שעה לפני הגעת הטיל . מטרתה להנחות את האזרחים לשהות סמוך למרחב מוגן ולצמצם תנועות במרחב הפתוח. התרעה שנייה - יוצאת ביישומון פיקוד העורף כ-10 דקות לפני הגעת הטיל . מתריעה כי בדקות הקרובות צפויות אזעקות באזור ויש להתכונן לכך ולשפר את המיגון. אזעקת צופרים - אזעקה עולה ויורדת מלווה בהתרעה ביישומון פיקוד העורף, כדקה וחצי לפני הגעת הטיל . עם הישמע האזעקה יש להיכנס למרחב מוגן ולא לצאת עד לקבלת הודעה המתירה זאת.",
+      "evidence_type": "secondary"
+    },
+    {
+      "id": "stay-until-release-message",
+      "claim": "In the Iran war footing the official instruction is to stay in the protected space until an official release message arrives via the app and Cell Broadcast; the app's own '10 minutes' wording is a leftover from earlier scenarios.",
+      "source_url": "https://www.ynet.co.il/digital/technews/article/h1nnwszfbl",
+      "raw_snippet": "בעוד שההנחיה הרשמית היא להישאר במרחב מוגן עד לקבלת הודעת שחרור רשמית באפליקציה ו במערכת ה-Cell Broadcast (שידור תאי), במסך ההתרעה עצמו מופיע ניסוח אחר לגמרי: לשהות במרחב המוגן 10 דקות בלבד.",
+      "evidence_type": "secondary"
+    },
+    {
+      "id": "ten-minute-rule-short-range",
+      "claim": "For the classic rocket scenario the guidance is to stay in the protected space for 10 minutes after the siren ends.",
+      "source_url": "https://shivat-zion.com/wp-content/uploads/2023/10/GUIDELINES_EN.pdf",
+      "raw_snippet": "Stay in your protected space for 10 minutes after the siren ends.",
+      "evidence_type": "secondary"
+    },
+    {
+      "id": "vehicle-protocol",
+      "claim": "If a siren catches you in a vehicle: stop at the side of the road, exit and enter a shelter or stairwell in a nearby building; if no building is reachable, move away from the vehicle, lie on the ground and cover your head.",
+      "source_url": "https://shivat-zion.com/wp-content/uploads/2023/10/GUIDELINES_EN.pdf",
+      "raw_snippet": "Stop on the side of the road, exit the vehicle and enter a shelter or stairwell in a nearby building.",
+      "evidence_type": "secondary"
+    },
+    {
+      "id": "outdoors-protocol",
+      "claim": "Outdoors in an open area the instruction is to lie on the ground and protect the head with the hands; standing up exposes a person to shrapnel.",
+      "source_url": "https://shivat-zion.com/wp-content/uploads/2023/10/GUIDELINES_EN.pdf",
+      "raw_snippet": "In an open area - lie on the ground and protect your head with your hands. Standing up exposes you to potential rocket shrapnel!",
+      "evidence_type": "secondary"
+    },
+    {
+      "id": "mamad-area-and-height",
+      "claim": "Under the Civil Defense regulations and Israeli Standard 4422 a mamad must be at least 9 square metres, and its height must be between 2.5 m and 2.8 m.",
+      "source_url": "https://www.kolodnylaw.co.il/%D7%91%D7%A0%D7%99%D7%99%D7%AA-%D7%9E%D7%9E%D7%93/",
+      "raw_snippet": "לפי תקנות ההתגוננות האזרחית ות\"י (תקן ישראלי) 4422, ממ\"ד חייב להיות בגודל מינימלי של 9 מטר מרובע. אלא אם כן ניתן אישור של פיקוד העורף לחדר קטן יותר. גובה הממ\"ד חייב להיות בין 2.5 מטר ל-2.8 מטר.",
+      "evidence_type": "secondary"
+    },
+    {
+      "id": "mamad-wall-thickness",
+      "claim": "A compliant mamad has concrete walls at least 25 cm thick, a standard steel door, a standard window with an internal protective shutter, and a ventilation system with NBC filtration.",
+      "source_url": "https://migun-il.org/%D7%91%D7%A0%D7%99%D7%99%D7%AA-%D7%9E%D7%9E%D7%B4%D7%93-2025-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%9F/",
+      "raw_snippet": "שטח מינימלי של 9 מ\"ר נטו.      קירות בטון בעובי 25 ס\"מ לפחות.      דלת פלדה תקנית בעלת נעילה משולשת.      חלון תקני הכולל תריס פנימי מגן.      מערכת אוורור עם אפשרות סינון אב\"כ.",
+      "evidence_type": "secondary",
+      "note": "This page attributes the list to IS 4570; the skill body attributes the 25 cm figure to IS 4422. Treat the standard number as unverified."
+    },
+    {
+      "id": "oref-rishuy-portal",
+      "claim": "Pikud Ha'Oref runs an online system for approving building-permit requests (used for mamad construction) at oref-rishuy.org.il.",
+      "source_url": "https://www.oref-rishuy.org.il",
+      "raw_snippet": "מערכת אישור בקשות להיתרי בנייה",
+      "evidence_type": "primary",
+      "note": "Inventory-shape: evidences that the portal exists and what it is. The 14-day response, 45-day certification and Regulation 30(d) figures could not be quoted from any readable source (kolzchut.org.il returns 403 to non-browser clients)."
+    },
+    {
+      "id": "municipal-shelter-readiness-gaps",
+      "claim": "The State Comptroller's January 2026 special report on protection and sheltering in local authorities found that authorities could not show their public shelters are within reach of unprotected residents in the available warning time.",
+      "source_url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2026/Emergency/2026-Emergency-104-Local.pdf",
+      "raw_snippet": "לא ניתן לדעת אם מקלטים אלו נמצאים במרחק מבתי התושבים שמאפשר הגעה אליהם במשך זמן ההתרעה",
+      "evidence_type": "primary"
+    },
+    {
+      "id": "redalert-app",
+      "claim": "RedAlert reports over 3,000,000 downloads and a 4.7 star rating and runs dedicated push notification servers.",
+      "source_url": "https://redalert.me/index_en.html",
+      "raw_snippet": "Over 3,000,000 downloads and a 4.7 star rating to prove it. RedAlert is the only app with dedicated push notification servers that drastically improve alert speed and reliability.",
+      "evidence_type": "primary"
+    },
+    {
+      "id": "tzofar-app",
+      "claim": "Tzofar / Tzeva Adom (tzevaadom.co.il) shows real-time sirens on a live map with sound alerts.",
+      "source_url": "https://www.tzevaadom.co.il/en/",
+      "raw_snippet": "Tzofar (Red Alert) shows real-time sirens on a live map with sound alerts, delivering fast and immediate notifications across the country.",
+      "evidence_type": "primary"
+    },
+    {
+      "id": "oref-portal",
+      "claim": "Pikud Ha'Oref's public site https://www.oref.org.il is the National Emergency Portal, where residents look up their locality's warning time and receive multi-stage alerts.",
+      "source_url": "https://api.oref.org.il/api/v1/home/heb",
+      "raw_snippet": "פורטל החירום הלאומי",
+      "evidence_type": "primary",
+      "note": "Inventory-shape. www.oref.org.il itself is an Angular SPA that serves a content-free shell to curl and whose article API returns 204, so the readable equivalent is the home content API that the site itself calls."
+    },
+    {
+      "id": "sii-standards-body",
+      "claim": "The Standards Institution of Israel (https://www.sii.org.il) is the body that publishes Israeli standards, including the mamad standard.",
+      "source_url": "https://www.sii.org.il/he/",
+      "raw_snippet": "שירותי מכון התקנים הישראלי",
+      "evidence_type": "primary"
+    },
+    {
+      "id": "iplan-department",
+      "claim": "The Planning Administration department page at https://www.gov.il/he/departments/iplan is the planning authority's official gov.il presence.",
+      "source_url": "https://www.gov.il/he/departments/iplan",
+      "raw_snippet": "מינהל התכנון",
+      "evidence_type": "primary"
+    },
+    {
+      "id": "moin-department",
+      "claim": "The Ministry of the Interior department page at https://www.gov.il/he/departments/ministry_of_interior is the ministry's official gov.il presence and covers local authorities.",
+      "source_url": "https://www.gov.il/he/departments/ministry_of_interior",
+      "raw_snippet": "משרד הפנים",
+      "evidence_type": "primary"
+    },
+    {
+      "claim_id": "shelter-time-bands",
+      "claim": "Pikud HaOref defines the time to reach a protected space as ranging from immediate, through 15 seconds, 30 seconds, 45 seconds and one minute, up to a minute and a half.",
+      "source_url": "https://www.oref.org.il/heb/articles/protection-guidelines/preparing-protected-space/1103/",
+      "raw_snippet": "זמן ההגעה למרחב המוגן נע בין פרק זמן מיידי לבין 15 שניות, 30 שניות, 45 שניות, דקה ועד ודקה וחצי.",
+      "fetched_at": "2026-08-13",
+      "verified_via": "oref content API (api.oref.org.il/api/v1/articles//heb/<path>/)",
+      "verified_at": "2026-08-13",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "shelter-default-90sec",
+      "claim": "Most areas of the country have a defined protection time of a minute and a half; areas near the borders have a varying time between immediate and 15, 30, 45 seconds, a minute and a minute and a half.",
+      "source_url": "https://www.oref.org.il/heb/articles/protection-guidelines/preparing-protected-space/1103/",
+      "raw_snippet": "לרוב האזורים בארץ הוגדר זמן התגוננות של דקה וחצי. באזורים הקרובים לגבולות הוגדר זמן התגוננות משתנה שנע בין מיידי לבין 15 שניות, 30 שניות, 45 שניות, דקה ודקה וחצי.",
+      "fetched_at": "2026-08-13",
+      "verified_via": "oref content API",
+      "verified_at": "2026-08-13",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    }
+  ]
+}
