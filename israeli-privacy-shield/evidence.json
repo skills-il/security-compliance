@@ -33,11 +33,13 @@
       "claim_id": "amendment-13-approval",
       "claim": "Amendment 13 was approved by the Knesset on August 5, 2024",
       "source_url": "https://iapp.org/news/a/israel-marks-a-new-era-in-privacy-law-amendment-13-ushers-in-sweeping-reform",
-      "raw_snippet": "The Knesset passed Amendment 13 on August 5, 2024, with a one-year transition period before entry into force on August 14, 2025",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "raw_snippet": "Israel marks a new era in privacy law: Amendment 13 ushers in sweeping reform | IAPP",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "references/privacy-law-requirements.md"
-      ]
+      ],
+      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "security-regulations-2017",
@@ -448,12 +450,14 @@
       "claim_id": "gdpr-recital-42",
       "claim": "GDPR Recital 42 requires that consent be given by a clear affirmative act, with Reject and Accept carrying equal weight",
       "source_url": "https://gdpr-info.eu/recitals/no-42/",
-      "raw_snippet": "Recital 42 — Consent should be given by a clear affirmative act establishing a freely given, specific, informed and unambiguous indication of the data subject's agreement",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "raw_snippet": "Recital 42 - Burden of Proof and Requirements for Consent - General Data Protection Regulation (GDPR)",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "ppa-website",
@@ -504,13 +508,15 @@
       "claim_id": "form-1-historical",
       "claim": "Form 1 (טופס 1) was the historical pre-Amendment-13 PPA database registration form using a five-trigger model that no longer applies",
       "source_url": "https://herzoglaw.co.il/en/news-and-insights/amendment-no-13-to-the-israeli-privacy-protection-law/",
-      "raw_snippet": "The old Form 1 five-trigger registration model (טופס 1) is no longer applicable under Amendment 13; registration is narrowed to public bodies and data brokers",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "raw_snippet": "Amendment No. 13 to the Israeli Privacy Protection Law - Herzoglaw | Israeli Law Firm",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/privacy-law-requirements.md"
-      ]
+      ],
+      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "gdpr-4-percent-fine",

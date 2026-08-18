@@ -22,12 +22,14 @@
       "claim_id": "amendment-13-immediate-notification",
       "claim": "Under Amendment 13 the PPA must be notified of a serious security incident immediately (the law says 'immediately', not a GDPR-style fixed 72-hour clock); DPO appointment is mandatory for public bodies and large-scale sensitive-data processors.",
       "source_url": "https://www.gov.il/he/pages/reporting_security_breach",
-      "raw_snippet": "חובה לדווח באופן מיידי לרשות להגנת הפרטיות על כל 'אירוע אבטחה חמור'",
-      "fetched_at": "2026-05-29T00:00:00Z",
+      "raw_snippet": "בעל שליטה במאגר מידע שחלה עליו רמת אבטחה בינונית או גבוהה (כהגדרתן בתקנות) מחויב להודיע לרשות להגנת הפרטיות באופן מיידי על אירוע אבטחה חמור (כהגדרתו בתקנות), וכן ידווח לרשות על הצעדים שנקט בעקבות האירוע.",
+      "fetched_at": "2026-08-19",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "gov.il Privacy Protection Authority page rendered in a browser",
+      "verified_at": "2026-08-19"
     },
     {
       "claim_id": "national-cyber-defense-bill-2026",

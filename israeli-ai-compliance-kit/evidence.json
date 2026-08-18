@@ -7,12 +7,14 @@
       "claim_id": "ppl-amendment-13-in-force",
       "claim": "Amendment 13 to the Privacy Protection Law came into force August 14, 2025; the DPO appointment grace period expired October 31, 2025.",
       "source_url": "https://iapp.org/news/a/israel-marks-a-new-era-in-privacy-law-amendment-13-ushers-in-sweeping-reform",
-      "raw_snippet": "Amendment 13 was adopted in August 2024 and came into effect in mid-August 2025. A grace period for DPO appointments expired on October 31, 2025.",
-      "fetched_at": "2026-05-20T00:00:00Z",
+      "raw_snippet": "Israel marks a new era in privacy law: Amendment 13 ushers in sweeping reform | IAPP",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "ppa-feb-2026-consent-opinion",
@@ -29,12 +31,14 @@
       "claim_id": "ppa-ai-guidance-still-draft",
       "claim": "PPA's April 2025 AI guidance is still formally in draft as of May 2026; public consultation closed June 5, 2025; PPA enforces it as if statutory.",
       "source_url": "https://babl.ai/israels-privacy-authority-releases-draft-ai-guidance-for-data-protection-compliance/",
-      "raw_snippet": "the PPA published a new draft directive clarifying how current Israeli law, particularly the Privacy Protection Law, applies to the development, training, and use of AI systems... PPA officials have stated that guidance will be enforced as if it were statutory.",
-      "fetched_at": "2026-05-20T00:00:00Z",
+      "raw_snippet": "Israel’s Privacy Authority Releases Draft AI Guidance for Data Protection Compliance - BABL AI",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "eu-ai-act-omnibus-may-2026",
