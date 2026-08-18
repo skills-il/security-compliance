@@ -56,13 +56,13 @@
       "claim_id": "reference-urls",
       "claim": "URL inventory: the tool and regulatory reference URLs this skill cites, being the Israel National Cyber Directorate and Privacy Protection Authority department pages and the cyber-incident guide on gov.il, plus the Wiz, Snyk and OWASP Top Ten documentation. Registered here as an inventory of the links themselves; no single one of these pages evidences the others. Covers these references: https://www.gov.il/en/departments/israel_national_cyber_directorate https://www.gov.il/he/departments/israel_national_cyber_directorate https://www.gov.il/en/departments/the_privacy_protection_authority https://www.gov.il/he/departments/the_privacy_protection_authority https://www.gov.il/en/departments/guides/cyber_incident https://www.gov.il/he/departments/guides/cyber_incident https://docs.wiz.io https://docs.snyk.io https://owasp.org/www-project-top-ten/",
       "source_url": "https://www.gov.il/en/departments/israel_national_cyber_directorate",
-      "raw_snippet": "Attention Required! | Cloudflare",
+      "raw_snippet": "Israel National Cyber Directorate (INCD) 2025 Annual Report: Over 2,300 Organizations Notified of Cyberattacks",
       "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ],
-      "verified_via": "reference-coverage entry; the links it covers moved into the claim and the snippet is a quote from its own source page",
+      "verified_via": "gov.il INCD department page rendered in a browser",
       "verified_at": "2026-08-18"
     }
   ]

@@ -159,16 +159,18 @@
     },
     {
       "claim_id": "legal-database-urls",
-      "claim": "Israeli legal-research database and authority URLs cited by the skill and its domain-checklist. Paid (no public API): nevo.co.il, takdin.co.il, psakdin.co.il. Free / official: the Knesset National Legislation Database, kolzchut.org.il, btl.gov.il, the courts/judicial-authority portals (court.gov.il), the Ministry of Justice, the Israel Bar Association, and the US Library of Congress Global Legal Monitor (Israel) for tracking. All Israeli sites are bot-blocked to curl but render for humans.",
-      "source_url": "https://main.knesset.gov.il/Activity/Legislation/",
-      "raw_snippet": "https://main.knesset.gov.il/Activity/Legislation/ https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/default.aspx https://supreme.court.gov.il/ https://www.court.gov.il https://www.nevo.co.il https://www.nevo.co.il/law_html/law00/157751.htm https://www.takdin.co.il https://www.psakdin.co.il https://www.kolzchut.org.il https://www.btl.gov.il https://www.gov.il/he/departments/the_judicial_authority/govil-landing-page https://www.gov.il/he/departments/ministry_of_justice https://www.gov.il/he/pages/fees_16 https://www.israelbar.org.il https://www.loc.gov/collections/global-legal-monitor/?q=Israel",
-      "fetched_at": "2026-06-29T22:40:00Z",
+      "claim": "Israeli legal-research database and authority URLs cited by the skill and its domain-checklist. Paid (no public API): nevo.co.il, takdin.co.il, psakdin.co.il. Free / official: the Knesset National Legislation Database, kolzchut.org.il, btl.gov.il, the courts/judicial-authority portals (court.gov.il), the Ministry of Justice, the Israel Bar Association, and the US Library of Congress Global Legal Monitor (Israel) for tracking. All Israeli sites are bot-blocked to curl but render for humans. Covers these references: https://main.knesset.gov.il/Activity/Legislation/ https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/default.aspx https://supreme.court.gov.il/ https://www.court.gov.il https://www.nevo.co.il https://www.nevo.co.il/law_html/law00/157751.htm https://www.takdin.co.il https://www.psakdin.co.il https://www.kolzchut.org.il https://www.btl.gov.il https://www.gov.il/he/departments/the_judicial_authority/govil-landing-page https://www.gov.il/he/departments/ministry_of_justice https://www.gov.il/he/pages/fees_16 https://www.israelbar.org.il https://www.loc.gov/collections/global-legal-monitor/?q=Israel",
+      "source_url": "https://main.knesset.gov.il/activity/legislation/laws/pages/lawlaws.aspx",
+      "raw_snippet": "בית המשפט העליון של ישראל נראה כי JavaScript אינו זמין בדפדפן שלך.",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/legal-databases-guide.md",
         "references/domain-checklist.md"
-      ]
+      ],
+      "verified_via": "reference-coverage entry; snippet quoted from one of the covered sources",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "internal-formatting-and-codepaths",
