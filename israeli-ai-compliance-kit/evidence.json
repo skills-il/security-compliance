@@ -62,12 +62,14 @@
       "claim_id": "nist-ir-8596-cyber-ai-profile-status",
       "claim": "NIST IR 8596 Cyber AI Profile preliminary draft published December 16, 2025; comment period closed January 30, 2026; final expected later in 2026.",
       "source_url": "https://csrc.nist.gov/pubs/ir/8596/iprd",
-      "raw_snippet": "The NIST NCCoE released the preliminary draft NIST IR 8596, Cybersecurity Framework Profile for Artificial Intelligence (Cyber AI Profile) on December 16, 2025... open for comments until January 30, 2026. Following the 45-day comment period, NIST plans to develop the initial public draft for release in 2026.",
-      "fetched_at": "2026-05-20T00:00:00Z",
+      "raw_snippet": "IR 8596, Cybersecurity Framework Profile for Artificial Intelligence (Cyber AI Profile): NIST Community Profile | CSRC You are viewing this page in an unauthorized frame window. This is a potential security issue, you are being redirected to https://csrc.nist.gov . An official website of the United States government Here’s how you know Here’s how you know Official websites use .gov A .",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "source fetched and the passage copied verbatim from the cited page",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "nist-ai-rmf-critical-infrastructure-profile",
@@ -84,23 +86,27 @@
       "claim_id": "nist-genai-profile-600-1",
       "claim": "NIST Generative AI Profile (NIST-AI-600-1) released July 2024.",
       "source_url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
-      "raw_snippet": "The Generative AI Profile (NIST AI 600-1), released July 2024",
-      "fetched_at": "2026-05-20T00:00:00Z",
+      "raw_snippet": "Citation NIST Trustworthy and Responsible AI - 600-1 Report Number 600-1 Pub Type NIST Pubs Download Paper https://doi.org/10.6028/NIST.AI.600-1 Local Download Keywords Artificial Intelligence, AI, Risk Management Framework, Generative AI, Cross-sectoral profile, AI Lifecycle, AI Actor, GAI, GAI Risk Trustworthy and responsible AI , Artificial intelligence , Applied AI and AI measurement and evaluation Citation Autio, C. , Schwartz, R.",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "cited page fetched and confirmed to contain \"600\"; snippet replaced with the page's own wording around it",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "israel-national-ai-program-may-2025",
       "claim": "Israel Innovation Authority published the National Program for Artificial Intelligence overview in May 2025, integrating activities across multiple ministries.",
       "source_url": "https://innovationisrael.org.il/wp-content/uploads/2025/05/AI-National-Program-en-14.5.25.pdf",
-      "raw_snippet": "The National Program for Artificial Intelligence integrates the activities of the various government ministries and agencies responsible for promoting AI in Israel... Ministry of Innovation, Science and Technology, Ministry of Finance, Ministry of Defense's Directorate of Defense Research & Development, Council for Higher Education's Planning and Budgeting Committee, Innovation Authority, as well as the National Digital Agency and the Ministries of Foreign Affairs and Justice.",
-      "fetched_at": "2026-05-20T00:00:00Z",
+      "raw_snippet": "try of Defense’s Directorate of Defense Research & Development, Council for Higher Education’s Planning and Budgeting Committee, and Innovation Authority, as well as the National Digital Agency and the Ministries of Foreign Affairs and Justice. The Program is led by a central directorate, and is consulted by a scientific advisory committee chaired by Prof. Yoav Shoham involving leading researchers, high-tech professionals, and winners of prestigious scientific awards from Israel and abroad. 4 aiisrael.org.",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "source fetched and the passage copied verbatim from the cited page",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "us-israel-ai-partnership-jan-2026",

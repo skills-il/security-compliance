@@ -59,13 +59,15 @@
       "claim_id": "privacy-29a-statutory-damages",
       "claim": "Protection of Privacy Law Section 29A allows the court to award statutory damages without proof of harm up to NIS 50,000, raised to up to NIS 100,000 (double) only where the privacy violation was committed with intent to harm (בכוונה לפגוע).",
       "source_url": "https://www.aluk-firm.com/%D7%97%D7%95%D7%A7-%D7%94%D7%92%D7%A0%D7%AA-%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-%D7%A4%D7%99%D7%A6%D7%95%D7%99-%D7%9C%D7%9C%D7%90-%D7%94%D7%95%D7%9B%D7%97%D7%AA-%D7%A0%D7%96%D7%A7/",
-      "raw_snippet": "סעיף 29א פיצוי ללא הוכחת נזק עד 50,000 ש\"ח; בכוונה לפגוע כפל הסכום עד 100,000 ש\"ח; Section 29A NIS 50,000 NIS 100,000 50,000 ש\"ח 100,000 ש\"ח",
-      "fetched_at": "2026-06-29T22:35:00Z",
+      "raw_snippet": "פיצוי ללא הוכחת נזק סעיף 29א לחוק הגנת הפרטיות מאפשר לבית המשפט לפסוק פיצויים בסך של עד 50,000 ש\"ח, ללא הוכחת נזק, בגין כל הפרה של הוראות החוק. זוהי הוראה ייחודית המקלה משמעותית על התובע, שכן היא מייתרת את הצורך להוכיח נזק ממשי כתוצאה מהפגיעה בפרטיות. תכלית הפיצוי ללא הוכחת נזק מטרת הפיצוי הסטטוטורי היא כפולה: ראשית, להרתיע מפני פגיעות עתידיות בפרטיות. שנית, לפצות את הנפגע על עצם הפגיעה בזכותו לפרטיות, גם אם לא נגרם לו נזק ממוני מוכח.",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/legislation-index.md"
-      ]
+      ],
+      "verified_via": "cited page fetched and confirmed to contain \"50,000\"; snippet replaced with the page's own wording around it",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "mahash-subordination-enacted-2026",
@@ -95,23 +97,27 @@
       "claim_id": "basic-law-judiciary-15-20",
       "claim": "Basic Law: The Judiciary (1984): Section 15 establishes the Supreme Court, which also sits as the High Court of Justice (Bagatz); Section 20 provides that a rule laid down by the Supreme Court binds every court except the Supreme Court itself.",
       "source_url": "https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7-%D7%99%D7%A1%D7%95%D7%93:_%D7%94%D7%A9%D7%A4%D7%99%D7%98%D7%94",
-      "raw_snippet": "בית המשפט העליון ישב גם כבית משפט גבוה לצדק; הלכה שנפסקה בבית המשפט העליון מחייבת כל בית משפט, זולת בית המשפט העליון; Section 15 Section 20 Supreme Court High Court of Justice binding precedent",
-      "fetched_at": "2026-06-29T22:45:00Z",
+      "raw_snippet": "20. הלכה פסוקה (א) הלכה שנפסקה בבית משפט תנחה בית משפט של דרגה נמוכה ממנו. (ב) הלכה שנפסקה בבית המשפט העליון מחייבת כל בית משפט, זולת בית המשפט העליון. 21. רשמים לבית משפט יכול שיהיה רשם, בין שופט ובין שאינו שופט. פרק ד׳: הוראות שונות 22. יציבות החוק אין בכוחן של תקנות שעת חירום לשנות חוק זה, להפקיע זמנית את תקפו או לקבוע בו תנאים. 23.",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "references/legislation-index.md"
-      ]
+      ],
+      "verified_via": "source fetched and the passage copied verbatim from the cited page",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "small-claims-courts-law-1984",
       "claim": "Small Claims Court (תביעות קטנות) is established under the Courts Law [Consolidated Version] 1984, Sections 59-62; a party may be represented by a lawyer only with the court's permission and for special recorded reasons (Section 63(a)). The monetary ceiling is index-linked and was 39,900 NIS as of January 2026.",
       "source_url": "https://www.nevo.co.il/law_html/law00/74849.htm",
-      "raw_snippet": "בית משפט לתביעות קטנות ידון... שאינו עולה על 39,900 שקלים חדשים; ייצוג בעל דין... על ידי עורך דין יהיה רק ברשות בית המשפט ומטעמים מיוחדים; תביעות קטנות סעיפים 59-62 סעיף 63; Small Claims Sections 59 62 Section 63 39,900 NIS",
-      "fetched_at": "2026-06-29T22:40:00Z",
+      "raw_snippet": "ייצוג [ת/6] 63. (א) ייצוג בעל דין בבית משפט לתביעות קטנות על ידי עורך דין יהיה רק ברשות בית המשפט ומטעמים מיוחדים שיירשמו; בעל דין רשאי, ברשות בית המשפט, להיות מיוצג על ידי ארגון שקבע לענין זה שר המשפטים, ובמקרה זה ירשה בית המשפט לבעל הדין שכנגד להיות מיוצג כפי שיורה.",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/legislation-index.md"
-      ]
+      ],
+      "verified_via": "source fetched and the passage copied verbatim from the cited page",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "limitation-law-1958",
