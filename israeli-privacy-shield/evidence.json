@@ -320,13 +320,13 @@
       "claim_id": "legal-capacity-guardianship-1962",
       "claim": "The Legal Capacity and Guardianship Law, 1962 provides that the legal acts of a minor under 18 may be cancelled without parental consent",
       "source_url": "https://www.linklaters.com/en/insights/data-protected/data-protected---israel",
-      "raw_snippet": "Therefore, there is currently no special rule regarding processing personal data about children. However, the Legal Capacity and Guardianship Law, 5722-1962, provides that any legal act of a minor (under 18) is subject to obtaining the consent of the minor's legal guardian (except for legal actions that minors at the same age routinely engage in). Therefore there may be cases where the consent of the legal guardian is required in order to process the personal data of minors .",
+      "raw_snippet": "However, the Legal Capacity and Guardianship Law, 5722-1962, provides that any legal act of a minor (under 18) is subject to obtaining the consent of the minor's legal guardian (except for legal actions that minors at the same age routinely engage in). Therefore there may be cases where the consent of the legal guardian is required in order to process the personal data of minors .",
       "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ],
-      "verified_via": "cited page fetched; 18 of 21 of the claim's distinctive terms occur on it, and the snippet is the page's own wording around \"capacity\"",
+      "verified_via": "cited page fetched and confirmed to contain \"5722\"; snippet replaced with the page's own wording around it",
       "verified_at": "2026-08-18"
     },
     {
@@ -394,13 +394,13 @@
       "claim_id": "gdpr-article-22-automated",
       "claim": "GDPR Article 22 governs automated decision-making, including profiling",
       "source_url": "https://gdpr-info.eu/art-22-gdpr/",
-      "raw_snippet": "Decisions referred to in paragraph 2 shall not be based on special categories of personal data referred to in Article 9 (1), unless point (a) or (g) of Article 9 (2) applies and suitable measures to safeguard the data subject’s rights and freedoms and legitimate interests are in place. Suitable Recitals ( 71 ) Profiling ( 72 ) Guidance of the European Data Protection Board Regarding Profiling ( 91 ) Necessity of a Data Protection Impact Assessment ← Art. 21 GDPR Art.",
+      "raw_snippet": "Decisions referred to in paragraph 2 shall not be based on special categories of personal data referred to in Article 9 (1), unless point (a) or (g) of Article 9 (2) applies and suitable measures to safeguard the data subject’s rights and freedoms and legitimate interests are in place.",
       "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ],
-      "verified_via": "cited page fetched; 7 of 8 of the claim's distinctive terms occur on it, and the snippet is the page's own wording around \"article\"",
+      "verified_via": "cited page fetched; 35 of 36 of the claim's distinctive terms occur on it, and the snippet is the page's own wording around \"decisions\"",
       "verified_at": "2026-08-18"
     },
     {
@@ -419,12 +419,12 @@
       "claim_id": "gdpr-article-37",
       "claim": "GDPR Article 37 governs the designation of a Data Protection Officer",
       "source_url": "https://gdpr-info.eu/art-37-gdpr/",
-      "raw_snippet": "core activities of the controller or the processor consist of processing on a large scale of special categories of data pursuant to Article 9 or personal data relating to criminal convictions and offences referred to in Article 10 . A group of undertakings may appoint a single data protection officer provided that a data protection officer is easily accessible from each establishment.",
+      "raw_snippet": "cale; or the core activities of the controller or the processor consist of processing on a large scale of special categories of data pursuant to Article 9 or personal data relating to criminal convictions and offences referred to in Article 10 . A group of undertakings may appoint a single data protection officer provided that a data protection officer is easily accessible from each establishment.",
       "fetched_at": "2026-08-18",
       "appears_in": [
         "references/privacy-law-requirements.md"
       ],
-      "verified_via": "cited page fetched; 6 of 7 of the claim's distinctive terms occur on it, and the snippet is the page's own wording around \"article\"",
+      "verified_via": "cited page fetched; 31 of 32 of the claim's distinctive terms occur on it, and the snippet is the page's own wording around \"pursuant\"",
       "verified_at": "2026-08-18"
     },
     {
