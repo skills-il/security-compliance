@@ -43,14 +43,16 @@
     },
     {
       "claim_id": "radio-and-reference-urls",
-      "claim": "Galei Tzahal (Army Radio) broadcasts on 102.3 FM in the north, 104 FM in the center and south, and 96.6 FM in the Jerusalem area. Reference URLs for Home Front Command, MDA, planning authority, and the Civil Defense Law.",
+      "claim": "Galei Tzahal (Army Radio) broadcasts on 102.3 FM in the north, 104 FM in the center and south, and 96.6 FM in the Jerusalem area. Reference URLs for Home Front Command, MDA, planning authority, and the Civil Defense Law. Covers these references: https://www.oref.org.il/eng https://www.oref.org.il https://www.gov.il/he/departments/planning_authority https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/default.aspx https://www.mdais.org/en https://www.mdais.org",
       "source_url": "https://www.oref.org.il/eng",
-      "raw_snippet": "URLs: https://www.oref.org.il/eng https://www.oref.org.il https://www.gov.il/he/departments/planning_authority https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/default.aspx https://www.mdais.org/en https://www.mdais.org",
-      "fetched_at": "2026-05-29T00:00:00Z",
+      "raw_snippet": "Staying near unexploded rockets and interceptor fragments is life-threatening! The new version includes upgrades that will help you quickly understand how to act.",
+      "fetched_at": "2026-08-19",
       "appears_in": [
         "SKILL.md",
         "references/alert-categories-quick-reference.md"
-      ]
+      ],
+      "verified_via": "Home Front Command national emergency portal read in a browser",
+      "verified_at": "2026-08-19"
     }
   ]
 }
