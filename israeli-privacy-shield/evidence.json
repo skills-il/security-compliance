@@ -435,7 +435,7 @@
       "claim_id": "gdpr-article-4-11-consent",
       "claim": "GDPR Article 4(11) defines consent and is the basis for treating dismissal as refusal",
       "source_url": "https://gdpr-info.eu/art-4-gdpr/",
-      "raw_snippet": "onal data; ‘consent’ of the data subject means any freely given, specific, informed and unambiguous indication of the data subject’s wishes by which he or she, by a statement or by a clear affirmative action, signifies agreement to the processing of personal data relating to him or her; ‘personal data breach’ means a breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorised disclosure of, or access to, personal data transmitted, stored or otherwise processed; ‘genetic data’ means perso",
+      "raw_snippet": "data; ‘consent’ of the data subject means any freely given, specific, informed and unambiguous indication of the data subject’s wishes by which he or she, by a statement or by a clear affirmative action, signifies agreement to the processing of personal data relating to him or her; ‘personal data breach’ means a breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorised disclosure of, or access to, personal data transmitted, stored or otherwise processed; ‘genetic data’ means perso",
       "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
@@ -540,7 +540,7 @@
       "claim_id": "gdpr-section-4-he",
       "claim": "סעיף 4 GDPR (Article 4) contains the consent definitions, including Article 4(11)",
       "source_url": "https://gdpr-info.eu/art-4-gdpr/",
-      "raw_snippet": "er the direct authority of the controller or processor, are authorised to process personal data; ‘consent’ of the data subject means any freely given, specific, informed and unambiguous indication of the data subject’s wishes by which he or she, by a statement or by a clear affirmative action, signifies agreement to the processing of personal data relating to him or her; ‘personal data breach’ means a breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorised disclosure of, or access to",
+      "raw_snippet": "the direct authority of the controller or processor, are authorised to process personal data; ‘consent’ of the data subject means any freely given, specific, informed and unambiguous indication of the data subject’s wishes by which he or she, by a statement or by a clear affirmative action, signifies agreement to the processing of personal data relating to him or her; ‘personal data breach’ means a breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorised disclosure of, or access to",
       "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL_HE.md"
