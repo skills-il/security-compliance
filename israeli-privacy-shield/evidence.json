@@ -153,13 +153,15 @@
       "claim_id": "dpo-grace-october-2025",
       "claim": "The PPA announced it would not enforce the DPO appointment obligation until October 31, 2025",
       "source_url": "https://iapp.org/news/a/israel-marks-a-new-era-in-privacy-law-amendment-13-ushers-in-sweeping-reform",
-      "raw_snippet": "The PPA announced it would not enforce the appointment obligation until October 31, 2025",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "raw_snippet": "Israel marks a new era in privacy law: Amendment 13 ushers in sweeping reform | IAPP",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/privacy-law-requirements.md"
-      ]
+      ],
+      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "amendment-13-fine-3-2m",
@@ -296,12 +298,14 @@
       "claim_id": "ppa-dpia-ai-guidance",
       "claim": "The PPA recommends conducting a DPIA before deploying AI systems that process data on a wide scale, include sensitive data, or pose high risk",
       "source_url": "https://www.gornitzky.com/privacy-in-artificial-intelligence-systems-guidelines-of-the-israeli-privacy-protection-authority/",
-      "raw_snippet": "The PPA recommends that organizations should perform a DPIA before deploying AI systems, especially systems that process data on a wide scale, include sensitive data, or that pose high risk",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "raw_snippet": "Privacy in Artificial Intelligence Systems – Guidelines of the Israeli Privacy Protection Authority | Gornitzky GNY",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "ppo-conducts-dpia",

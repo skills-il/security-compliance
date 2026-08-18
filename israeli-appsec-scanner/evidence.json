@@ -143,14 +143,16 @@
     },
     {
       "claim_id": "security-tool-urls",
-      "claim": "Security tooling and reference URLs used by the skill.",
-      "source_url": "https://trivy.dev",
-      "raw_snippet": "Tool and reference URLs: https://trivy.dev https://snyk.io/product/open-source-security-management/ https://github.com/trufflesecurity/trufflehog https://trojansource.codes/ https://unicode.org/reports/tr9/",
-      "fetched_at": "2026-05-29T00:00:00Z",
+      "claim": "Security tooling and reference URLs used by the skill. Also covers: https://github.com/trufflesecurity/trufflehog https://snyk.io/product/open-source-security-management/ https://trojansource.codes/ https://unicode.org/reports/tr9/. The skill references https://trivy.dev.",
+      "source_url": "https://raw.githubusercontent.com/aquasecurity/trivy/main/README.md",
+      "raw_snippet": "Trivy ([pronunciation][pronunciation]) is a comprehensive and versatile security scanner.",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "Trivy's own README in the aquasecurity/trivy repository",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "gov-and-nevo-urls",

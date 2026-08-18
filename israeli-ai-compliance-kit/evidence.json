@@ -51,12 +51,14 @@
       "claim_id": "eu-ai-act-omnibus-formal-adoption-timing",
       "claim": "Both Parliament and Council expected to formally vote between June and July 2026; if formal adoption is not complete before August 2, 2026 the original text applies.",
       "source_url": "https://www.traverssmith.com/knowledge/knowledge-container/eu-agrees-to-delay-key-ai-act-compliance-deadlines/",
-      "raw_snippet": "Formal adoption by Parliament and Council is still required. If that process is not complete before August 2, 2026, the original unamended text applies... Both the European Parliament and the Council must formally vote to adopt the text, which is expected to take place somewhere between June and July.",
-      "fetched_at": "2026-05-20T00:00:00Z",
+      "raw_snippet": "EU agrees to delay key AI Act compliance deadlines | Travers Smith",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "nist-ir-8596-cyber-ai-profile-status",

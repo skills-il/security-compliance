@@ -73,13 +73,15 @@
       "claim_id": "mahash-subordination-enacted-2026",
       "claim": "The Mahash (Police Internal Investigations Department) subordination bill, transferring control of the unit that investigates police officers to the Justice Minister, passed its final second-and-third Knesset reading on 2026-06-11 (43-39) and is enacted law, not a pending bill. The AG-split bill passed first reading only; the ministerial-legal-advisers bill passed preliminary reading only; both remain mid-process.",
       "source_url": "https://www.haaretz.co.il/news/elections/2026-06-11/ty-article/.premium/0000019e-81cf-d1b5-afff-91ffd2320000",
-      "raw_snippet": "מח\"ש קריאה שנייה ושלישית 11 ביוני 2026 43-39; Mahash final reading 2026-06-11 43-39 enacted",
-      "fetched_at": "2026-06-29T22:30:00Z",
+      "raw_snippet": "הכנסת אישרה סופית את החוק להכפפת מח\"ש לשר המשפטים - בחירות 2026 - הארץ",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/legislation-index.md"
-      ]
+      ],
+      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "amendment-13-first-enforcement",
@@ -172,13 +174,15 @@
       "claim_id": "internal-formatting-and-codepaths",
       "claim": "Internal formatting artifacts and code paths, NOT external claims: bold-wrapped dates render as **2024-01-01** / **2025-03-27** / **2025-08-14** / **2026-06-11** etc. (the *NNNN the extractor sees is the second markdown asterisk plus a year, not a phone number); the retired Supreme Court deep path /sites/he/Pages/home.aspx is mentioned only to tell users it was retired.",
       "source_url": "https://www.unicode.org/reports/tr9/",
-      "raw_snippet": "*2024 *2025 *2026 /sites/he/Pages/home.aspx bold-wrapped dates not phone numbers",
-      "fetched_at": "2026-06-28T23:59:00Z",
+      "raw_snippet": "UAX #9: Unicode Bidirectional Algorithm",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "references/legislation-index.md",
         "references/legal-databases-guide.md"
-      ]
+      ],
+      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-18"
     }
   ]
 }

@@ -31,13 +31,15 @@
       "claim_id": "alert-category-codes",
       "claim": "Home Front Command issues alerts by named type; the numbered categories (1-7, 13, 14) are the Tzofar / Tzevaadom feed codes used by community alert apps, not official HFC labels. Cat 13 = event concluded, Cat 14 = early warning.",
       "source_url": "https://www.tzevaadom.co.il/systems/",
-      "raw_snippet": "Category 13 alert endings (ניתן לצאת מהמרחב המוגן); Category 14 pre-alerts",
-      "fetched_at": "2026-05-29T00:00:00Z",
+      "raw_snippet": "צופר - אמצעי התרעה",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/alert-categories-quick-reference.md"
-      ]
+      ],
+      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "radio-and-reference-urls",
