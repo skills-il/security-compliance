@@ -75,12 +75,14 @@
       "claim_id": "nist-ai-rmf-critical-infrastructure-profile",
       "claim": "NIST released a concept note for an AI RMF Profile on Trustworthy AI in Critical Infrastructure on April 7, 2026.",
       "source_url": "https://www.ispartnersllc.com/blog/nist-ai-rmf-2025-2026-updates-what-you-need-to-know-about-the-latest-framework-changes/",
-      "raw_snippet": "On April 7, 2026, NIST released a concept note for an AI RMF Profile on Trustworthy AI in Critical Infrastructure.",
-      "fetched_at": "2026-05-20T00:00:00Z",
+      "raw_snippet": "NIST’s concept note for a “Trustworthy AI Profile for Critical Infrastructure” highlights: Sector-specific risk considerations (energy, healthcare, transportation, etc.) Emphasis on safety, resilience, and system reliability Integration with national security and operational continuity concerns This signals a broader move toward contextualized AI risk management, where organizations are expected to adapt the fra",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "cited page fetched; 8 of 9 of the claim's distinctive terms occur on it, and the snippet is the page's own wording around \"note\"",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "nist-genai-profile-600-1",
@@ -123,12 +125,14 @@
       "claim_id": "moi-2023-policy-12-principles",
       "claim": "Ministry of Innovation December 2023 AI policy contains 12 principles (6 regulatory + 6 ethical), published December 14, 2023 jointly with Ministry of Justice.",
       "source_url": "https://www.gov.il/BlobFolder/policy/ai_2023/en/Israels%20AI%20Policy%202023.pdf",
-      "raw_snippet": "Policy, Regulation and Ethics Principles in the Field of Artificial Intelligence",
-      "fetched_at": "2026-05-20T00:00:00Z",
+      "raw_snippet": "To help address these challenges, Israel's Ministry of Innovation, Science and Technology published, on December 2023, its first-ever policy on AI regulation and ethics, which recommends concrete steps to foster responsible AI innovation in the private sector (the \"AI Policy\"). The AI Policy is the fruit of comprehensive work led by the Ministry, and conducted collaboratively with the Office of Legal Counsel and Legislative Affairs (Economic Law Department) at the Ministry of Justice.",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "cited page fetched; 14 of 16 of the claim's distinctive terms occur on it, and the snippet is the page's own wording around \"december\"",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "boi-directive-364-nov-2024",
@@ -167,12 +171,14 @@
       "claim_id": "eu-gpai-code-of-practice-july-2025",
       "claim": "The European AI Office published the final General-Purpose AI Code of Practice on July 10, 2025, endorsed by the Commission and the AI Board on August 1, 2025.",
       "source_url": "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai",
-      "raw_snippet": "voluntary compliance route for GPAI obligations (July 2025 final, Commission-endorsed August 2025)",
-      "fetched_at": "2026-05-20T00:00:00Z",
+      "raw_snippet": "Read more about the timeline and the drafting process of the code . The code was published on July 10, 2025 . It is complemented by Commission guidelines on key concepts related to general-purpose AI models. The Commission and the AI Board have confirmed that the code is an adequate voluntary tool for providers of GPAI models to demonstrate compliance with the AI Act.",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "cited page fetched; 13 of 18 of the claim's distinctive terms occur on it, and the snippet is the page's own wording around \"published\"",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "aia-article-2-scope",
