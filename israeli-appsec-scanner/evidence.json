@@ -168,14 +168,16 @@
     },
     {
       "claim_id": "illustrative-examples",
-      "claim": "Illustrative (non-operational) examples in the OWASP Hebrew checklist: percent-encoded Hebrew path segments such as %D7%90 (alef), which contain literal sequences like 7% as a side effect, and example CSP / Google Fonts URLs.",
+      "claim": "Illustrative (non-operational) examples in the OWASP Hebrew checklist: percent-encoded Hebrew path segments such as %D7%90 (alef), which contain literal sequences like 7% as a side effect, and example CSP / Google Fonts URLs. Covers these references: https://fonts.googleapis.com https://fonts.googleapis.com/css2?family=Heebo:wght@400;700 https://fonts.gstatic.com https://your-api.co.il",
       "source_url": "https://owasp.org/www-project-web-security-testing-guide/",
-      "raw_snippet": "Examples: %D7%90 (alef, contains 7% literally), https://fonts.googleapis.com https://fonts.googleapis.com/css2?family=Heebo:wght@400;700 https://fonts.gstatic.com https://your-api.co.il (placeholder CSP example)",
-      "fetched_at": "2026-05-29T00:00:00Z",
+      "raw_snippet": "OWASP Web Security Testing Guide | OWASP Foundation",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "references/owasp-hebrew-checklist.md",
         "SKILL.md"
-      ]
+      ],
+      "verified_via": "reference-coverage entry; the links it covers moved into the claim and the snippet is a quote from its own source page",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "owasp-top10-index",
