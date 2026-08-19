@@ -46,11 +46,13 @@
       "claim_id": "vendor-acquisitions-2026",
       "claim": "Wiz was acquired by Google for ~$32B (closed 11 March 2026, now under Google Cloud Security). CyberArk was acquired by Palo Alto Networks for ~$25B (closed 11 February 2026). MITRE ATT&CK v18 released 28 October 2025. Check Point renamed Quantum SASE to Harmony SASE and Horizon Playblocks to Infinity Playblocks. INCD ICDM 2.0 (2021) maps to NIST CSF 1.1 + SP 800-53 r5; National Cyber Security Strategy updated February 2025.",
       "source_url": "https://techcrunch.com/2026/03/11/google-completes-32b-acquisition-of-wiz/",
-      "raw_snippet": "Google completed its $32 billion acquisition of Wiz",
-      "fetched_at": "2026-05-29T00:00:00Z",
+      "raw_snippet": "Google wraps up $32B acquisition of cloud cybersecurity startup Wiz | TechCrunch",
+      "fetched_at": "2026-08-19",
       "appears_in": [
         "SKILL.md"
-      ]
+      ],
+      "verified_via": "claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-19"
     },
     {
       "claim_id": "reference-urls",

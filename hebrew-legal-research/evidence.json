@@ -5,15 +5,17 @@
   "claims": [
     {
       "claim_id": "contracts-amendment-3-sec-25a",
-      "claim": "Amendment 3 to the Contracts Law (General Part) rewrote Section 25(a) (third reading 2026-01-05), narrowing the Apropim interpretation rule to COMMERCIAL contracts only; non-commercial, standard-form, and employment contracts stay under the prior Apropim rule. It is a statute, not a case-law reversal.",
+      "claim": "Amendment 3 to the Contracts Law (General Part) rewrote Section 25(a) (third reading 2026-01-05), narrowing the Apropim interpretation rule to COMMERCIAL contracts only; non-commercial, standard-form, and employment contracts stay under the prior Apropim rule. It is a statute, not a case-law reversal. Also covers: סעיף 25",
       "source_url": "https://www.themarker.com/law/2026-01-06/ty-article/0000019b-9229-d4d8-a19b-f37db84a0000",
-      "raw_snippet": "תיקון לחוק החוזים סעיף 25 פרשנות חוזה עסקי לפי לשונו; Section 25 Amendment 3 commercial contracts",
-      "fetched_at": "2026-06-28T23:59:00Z",
+      "raw_snippet": "צמצום הלכת אפרופים אושר בקריאה שלישית. איך יפורשו חוזים — והאם הוודאות תגדל או דווקא הבלבול? - משפט - TheMarker",
+      "fetched_at": "2026-08-19",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/legislation-index.md"
-      ]
+      ],
+      "verified_via": "claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-19"
     },
     {
       "claim_id": "severance-pay-section-14",
@@ -125,25 +127,29 @@
       "claim_id": "limitation-law-1958",
       "claim": "Limitation Law 1958, Section 5: general civil limitation period is 7 years for non-land claims (5(1)); 25 years for claims in registered land and 15 years for other land (5(2)).",
       "source_url": "https://www.nevo.co.il/law_html/law00/71809.htm",
-      "raw_snippet": "התקופה שבה מתיישנת תביעה... בשאינו מקרקעין - שבע שנים; במקרקעין - חמש עשרה שנה; ...לאחר סידור זכות קנין... - עשרים וחמש שנה; Limitation Law Section 5 7 years 25 years registered land",
-      "fetched_at": "2026-06-29T22:40:00Z",
+      "raw_snippet": "פרק שני: תקופת התיישנות הזמן להתיישנות 5. התקופה שבה מתיישנת תביעה שלא הוגשה עליה תובענה (להלן – תקופת ההתיישנות) היא – (1) בשאינו מקרקעין – שבע שנים; (2) במקרקעין – חמש עשרה שנה; ואם נרשמו בספרי האחוזה לאחר סידור זכות קנין לפי פקודת הקרקעות (סידור זכות הקנין) – עשרים וחמש שנה. תחילת ההתיישנות 6. תקופת ההתיישנות מתחילה ביום שבו נולדה עילת התובענה. השעיית מרוץ תקופת ההתיישנות עקב התנהגות פסולה של הנתבע 7.",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/legislation-index.md"
-      ]
+      ],
+      "verified_via": "cited page fetched; 18 of 28 of the claim's distinctive terms occur on it, and the snippet is the page's own wording around \"שבה\"",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "civil-procedure-regs-2018",
       "claim": "Civil Procedure Regulations 5779-2018 (תקנות סדר הדין האזרחי) entered into force 1 January 2021, replacing the 1984 regulations; their opening principles are procedural good faith and proportionality (no disproportionate or abusive use of process).",
       "source_url": "https://www.nevo.co.il/law_html/law00/157751.htm",
-      "raw_snippet": "תקנות סדר הדין האזרחי, התשע\"ט-2018; תחילה 1 בינואר 2021; לנהוג בתום לב ובהגינות דיונית; לא יעשה בעל דין... שימוש לרעה בהליכי משפט... פעולה בלתי מידתית; Civil Procedure Regulations in force 2021 good faith proportionality",
-      "fetched_at": "2026-06-29T22:40:00Z",
+      "raw_snippet": "תקנות סדר הדין האזרחי, תשע\"ט-2018",
+      "fetched_at": "2026-08-19",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/legislation-index.md"
-      ]
+      ],
+      "verified_via": "claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-19"
     },
     {
       "claim_id": "vat-rate-18",

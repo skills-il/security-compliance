@@ -289,12 +289,14 @@
       "claim_id": "section-8c-amendment-13-withdrawal",
       "claim": "Section 8C provides for withdrawal of consent that is as easy as granting it",
       "source_url": "https://herzoglaw.co.il/en/news-and-insights/amendment-no-13-to-the-israeli-privacy-protection-law/",
-      "raw_snippet": "Amendment 13 Section 8C: withdrawal of consent must be as easy as granting it",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "raw_snippet": "Amendment No. 13 to the Israeli Privacy Protection Law - Herzoglaw | Israeli Law Firm",
+      "fetched_at": "2026-08-19",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-19"
     },
     {
       "claim_id": "ppa-dpia-ai-guidance",
@@ -536,11 +538,13 @@
       "claim_id": "gdpr-section-22-he",
       "claim": "סעיף 22 GDPR (Article 22) covers automated decision-making and profiling",
       "source_url": "https://gdpr-info.eu/art-22-gdpr/",
-      "raw_snippet": "סעיף 22 GDPR לקבלת החלטות אוטומטית — Automated individual decision-making, including profiling",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "raw_snippet": "Art. 22 GDPR – Automated individual decision-making, including profiling - General Data Protection Regulation (GDPR)",
+      "fetched_at": "2026-08-19",
       "appears_in": [
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-19"
     },
     {
       "claim_id": "gdpr-section-4-he",
