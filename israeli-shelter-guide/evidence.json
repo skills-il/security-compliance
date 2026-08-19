@@ -1,153 +1,819 @@
 {
   "schemaVersion": "1.0",
+  "skill": "israeli-shelter-guide",
+  "generated_at": "2026-08-19T00:00:00Z",
   "claims": [
     {
-      "id": "warning-time-geographic",
-      "claim": "Time-to-shelter (the time available to reach a protected space) is set by geographic location under Pikud Ha'Oref protection doctrine; stay time in the protected space ranges from ten minutes to several hours.",
-      "source_url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2026/Emergency/2026-Emergency-104-Local.pdf",
-      "raw_snippet": "תפיסת מיגון שבה זמן ההתרעה - משך הזמן שבו יש להגיע למרחב מוגן - נקבע לפי המיקום הגיאוגרפי. זמן השהייה במרחב המוגן, על פי תפיסה זו, הוא בין עשר דקות לשעות מספר",
-      "evidence_type": "primary",
-      "note": "Narrowed 2026-08-13: the specific five-band table (immediate/15/30/45/60/90s) could not be quoted from any machine-readable source. oref.org.il is an Angular SPA whose article API returns 204, so its Pakar page cannot be read by curl or by the gate fetcher."
-    },
-    {
-      "id": "ashkelon-30-seconds",
-      "claim": "Ashkelon's city-wide warning time is 30 seconds.",
-      "source_url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2026/Emergency/2026-Emergency-104-Local.pdf",
-      "raw_snippet": "עיריית אשקלון מסרה למשרד מבקר המדינה כי מאחר שזמן ההתרעה ברחבי העיר הוא קצר (30 שניות), המקלטים הציבוריים משמשים בעיקר כמחסה לעוברי אורח",
-      "evidence_type": "primary"
-    },
-    {
-      "id": "four-stage-ballistic-warning",
-      "claim": "Pikud Ha'Oref publishes a four-stage warning for ballistic threats: an advance advisory at least 15 minutes out, a second warning about 10 minutes out, the siren about 90 seconds out, and an explicit release message.",
-      "source_url": "https://www.davar1.co.il/608137/",
-      "raw_snippet": "התרעה מקדימה - יוצאת ביישומון פיקוד העורף לפחות רבע שעה לפני הגעת הטיל . מטרתה להנחות את האזרחים לשהות סמוך למרחב מוגן ולצמצם תנועות במרחב הפתוח. התרעה שנייה - יוצאת ביישומון פיקוד העורף כ-10 דקות לפני הגעת הטיל . מתריעה כי בדקות הקרובות צפויות אזעקות באזור ויש להתכונן לכך ולשפר את המיגון. אזעקת צופרים - אזעקה עולה ויורדת מלווה בהתרעה ביישומון פיקוד העורף, כדקה וחצי לפני הגעת הטיל . עם הישמע האזעקה יש להיכנס למרחב מוגן ולא לצאת עד לקבלת הודעה המתירה זאת.",
-      "evidence_type": "secondary"
-    },
-    {
-      "id": "stay-until-release-message",
-      "claim": "In the Iran war footing the official instruction is to stay in the protected space until an official release message arrives via the app and Cell Broadcast; the app's own '10 minutes' wording is a leftover from earlier scenarios.",
-      "source_url": "https://www.ynet.co.il/digital/technews/article/h1nnwszfbl",
-      "raw_snippet": "בעוד שההנחיה הרשמית היא להישאר במרחב מוגן עד לקבלת הודעת שחרור רשמית באפליקציה ו במערכת ה-Cell Broadcast (שידור תאי), במסך ההתרעה עצמו מופיע ניסוח אחר לגמרי: לשהות במרחב המוגן 10 דקות בלבד.",
-      "evidence_type": "secondary"
-    },
-    {
-      "id": "ten-minute-rule-short-range",
-      "claim": "For the classic rocket scenario the guidance is to stay in the protected space for 10 minutes after the siren ends.",
-      "source_url": "https://shivat-zion.com/wp-content/uploads/2023/10/GUIDELINES_EN.pdf",
-      "raw_snippet": "Stay in your protected space for 10 minutes after the siren ends.",
-      "evidence_type": "secondary"
-    },
-    {
-      "id": "vehicle-protocol",
-      "claim": "If a siren catches you in a vehicle: stop at the side of the road, exit and enter a shelter or stairwell in a nearby building; if no building is reachable, move away from the vehicle, lie on the ground and cover your head.",
-      "source_url": "https://shivat-zion.com/wp-content/uploads/2023/10/GUIDELINES_EN.pdf",
-      "raw_snippet": "Stop on the side of the road, exit the vehicle and enter a shelter or stairwell in a nearby building.",
-      "evidence_type": "secondary"
-    },
-    {
-      "id": "outdoors-protocol",
-      "claim": "Outdoors in an open area the instruction is to lie on the ground and protect the head with the hands; standing up exposes a person to shrapnel.",
-      "source_url": "https://shivat-zion.com/wp-content/uploads/2023/10/GUIDELINES_EN.pdf",
-      "raw_snippet": "In an open area - lie on the ground and protect your head with your hands. Standing up exposes you to potential rocket shrapnel!",
-      "evidence_type": "secondary"
-    },
-    {
-      "id": "mamad-area-and-height",
-      "claim": "Under the Civil Defense regulations and Israeli Standard 4422 a mamad must be at least 9 square metres, and its height must be between 2.5 m and 2.8 m.",
-      "source_url": "https://www.kolodnylaw.co.il/%D7%91%D7%A0%D7%99%D7%99%D7%AA-%D7%9E%D7%9E%D7%93/",
-      "raw_snippet": "לפי תקנות ההתגוננות האזרחית ות\"י (תקן ישראלי) 4422, ממ\"ד חייב להיות בגודל מינימלי של 9 מטר מרובע. אלא אם כן ניתן אישור של פיקוד העורף לחדר קטן יותר. גובה הממ\"ד חייב להיות בין 2.5 מטר ל-2.8 מטר.",
-      "evidence_type": "secondary"
-    },
-    {
-      "id": "mamad-wall-thickness",
-      "claim": "A compliant mamad has concrete walls at least 25 cm thick, a standard steel door, a standard window with an internal protective shutter, and a ventilation system with NBC filtration.",
-      "source_url": "https://migun-il.org/%D7%91%D7%A0%D7%99%D7%99%D7%AA-%D7%9E%D7%9E%D7%B4%D7%93-2025-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%9F/",
-      "raw_snippet": "שטח מינימלי של 9 מ\"ר נטו.      קירות בטון בעובי 25 ס\"מ לפחות.      דלת פלדה תקנית בעלת נעילה משולשת.      חלון תקני הכולל תריס פנימי מגן.      מערכת אוורור עם אפשרות סינון אב\"כ.",
-      "evidence_type": "secondary",
-      "note": "This page attributes the list to IS 4570; the skill body attributes the 25 cm figure to IS 4422. Treat the standard number as unverified."
-    },
-    {
-      "id": "oref-rishuy-portal",
-      "claim": "Pikud Ha'Oref runs an online system for approving building-permit requests (used for mamad construction) at oref-rishuy.org.il.",
-      "source_url": "https://www.oref-rishuy.org.il",
-      "raw_snippet": "מערכת אישור בקשות להיתרי בנייה",
-      "evidence_type": "primary",
-      "note": "Inventory-shape: evidences that the portal exists and what it is. The 14-day response, 45-day certification and Regulation 30(d) figures could not be quoted from any readable source (kolzchut.org.il returns 403 to non-browser clients)."
-    },
-    {
-      "id": "municipal-shelter-readiness-gaps",
-      "claim": "The State Comptroller's January 2026 special report on protection and sheltering in local authorities found that authorities could not show their public shelters are within reach of unprotected residents in the available warning time.",
-      "source_url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2026/Emergency/2026-Emergency-104-Local.pdf",
-      "raw_snippet": "לא ניתן לדעת אם מקלטים אלו נמצאים במרחק מבתי התושבים שמאפשר הגעה אליהם במשך זמן ההתרעה",
-      "evidence_type": "primary"
-    },
-    {
-      "id": "redalert-app",
-      "claim": "RedAlert reports over 3,000,000 downloads and a 4.7 star rating and runs dedicated push notification servers.",
-      "source_url": "https://redalert.me/index_en.html",
-      "raw_snippet": "Over 3,000,000 downloads and a 4.7 star rating to prove it. RedAlert is the only app with dedicated push notification servers that drastically improve alert speed and reliability.",
-      "evidence_type": "primary"
-    },
-    {
-      "id": "tzofar-app",
-      "claim": "Tzofar / Tzeva Adom (tzevaadom.co.il) shows real-time sirens on a live map with sound alerts.",
-      "source_url": "https://www.tzevaadom.co.il/en/",
-      "raw_snippet": "Tzofar (Red Alert) shows real-time sirens on a live map with sound alerts, delivering fast and immediate notifications across the country.",
-      "evidence_type": "primary"
-    },
-    {
-      "id": "oref-portal",
-      "claim": "Pikud Ha'Oref's public site https://www.oref.org.il is the National Emergency Portal, where residents look up their locality's warning time and receive multi-stage alerts.",
-      "source_url": "https://api.oref.org.il/api/v1/home/heb",
-      "raw_snippet": "פורטל החירום הלאומי",
-      "evidence_type": "primary",
-      "note": "Inventory-shape. www.oref.org.il itself is an Angular SPA that serves a content-free shell to curl and whose article API returns 204, so the readable equivalent is the home content API that the site itself calls."
-    },
-    {
-      "id": "sii-standards-body",
-      "claim": "The Standards Institution of Israel (https://www.sii.org.il) is the body that publishes Israeli standards, including the mamad standard.",
-      "source_url": "https://www.sii.org.il/he/",
-      "raw_snippet": "שירותי מכון התקנים הישראלי",
-      "evidence_type": "primary"
-    },
-    {
-      "id": "iplan-department",
-      "claim": "The Planning Administration department page at https://www.gov.il/he/departments/iplan is the planning authority's official gov.il presence.",
-      "source_url": "https://www.gov.il/he/departments/iplan",
-      "raw_snippet": "מינהל התכנון",
-      "evidence_type": "primary"
-    },
-    {
-      "id": "moin-department",
-      "claim": "The Ministry of the Interior department page at https://www.gov.il/he/departments/ministry_of_interior is the ministry's official gov.il presence and covers local authorities.",
-      "source_url": "https://www.gov.il/he/departments/ministry_of_interior",
-      "raw_snippet": "משרד הפנים",
-      "evidence_type": "primary"
-    },
-    {
-      "claim_id": "shelter-time-bands",
-      "claim": "Pikud HaOref defines the time to reach a protected space as ranging from immediate, through 15 seconds, 30 seconds, 45 seconds and one minute, up to a minute and a half.",
-      "source_url": "https://www.oref.org.il/heb/articles/protection-guidelines/preparing-protected-space/1103/",
-      "raw_snippet": "זמן ההגעה למרחב המוגן נע בין פרק זמן מיידי לבין 15 שניות, 30 שניות, 45 שניות, דקה ועד ודקה וחצי.",
-      "fetched_at": "2026-08-13",
-      "verified_via": "oref content API (api.oref.org.il/api/v1/articles//heb/<path>/)",
-      "verified_at": "2026-08-13",
+      "claim_id": "stay-until-explicit-instruction",
+      "claim": "Pikud Ha'Oref instruction after an alert is to stay in the protected space until an explicit instruction is received. There is no 10-minute rule for leaving, at any range.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/info/iron-swords/1102",
+      "raw_snippet": "יש להישאר במרחב המוגן עד לקבלת הנחיה מפורשת מפיקוד העורף.",
+      "fetched_at": "2026-08-19T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ]
     },
     {
-      "claim_id": "shelter-default-90sec",
-      "claim": "Most areas of the country have a defined protection time of a minute and a half; areas near the borders have a varying time between immediate and 15, 30, 45 seconds, a minute and a minute and a half.",
-      "source_url": "https://www.oref.org.il/heb/articles/protection-guidelines/preparing-protected-space/1103/",
-      "raw_snippet": "לרוב האזורים בארץ הוגדר זמן התגוננות של דקה וחצי. באזורים הקרובים לגבולות הוגדר זמן התגוננות משתנה שנע בין מיידי לבין 15 שניות, 30 שניות, 45 שניות, דקה ודקה וחצי.",
-      "fetched_at": "2026-08-13",
-      "verified_via": "oref content API",
-      "verified_at": "2026-08-13",
+      "claim_id": "leaving-early-endangers-life",
+      "claim": "Leaving a protected space before an explicit instruction endangers life.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/info/iron-swords/1128",
+      "raw_snippet": "יציאה ממרחב מוגן לפני קבלת הנחיה מפורשת מסכנת חיים.",
+      "fetched_at": "2026-08-19T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "three-warning-stages",
+      "claim": "Missile fire from Iran carries three warning stages: preliminary advisory, alert and entry to the protected space, release message.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/info/iron-swords/1128",
+      "raw_snippet": "בעת ירי טילים מאיראן, קיימים שלושה שלבים לקבלת ההתרעה,",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "preliminary-advisory-a-few-minutes",
+      "claim": "The preliminary advisory is described as a few minutes ahead of the alert, with no fixed published figure, and is issued only where the fire comes from distant areas.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/info/iron-swords/1128",
+      "raw_snippet": "תינתן הנחיה מקדימה המאפשרת לנו להיערך כמה דקות לפני קבלת ההתרעה",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "blast-door-90-degrees",
+      "claim": "On the alert, close the blast door by turning the handle through 90 degrees and confirm the window is fully closed.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/info/iron-swords/1128",
+      "raw_snippet": "לסגור את הדלת הרמטית באמצעות סיבוב הידית בזווית של 90 מעלות, לוודא שהחלון סגור היטב",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "lebanon-advisory-2026",
+      "claim": "Since 26 May 2026 Pikud Ha'Oref issues a preliminary advisory for rocket and missile fire from Lebanon, telling the public to move closer to a protected space.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/info/iron-swords/1140",
+      "raw_snippet": "במקרים שבהם יתאפשר, תינתן הנחיה מקדימה לפני התרעה (אזעקה) משטח לבנון. בעת קבלת ההנחיה המקדימה מלבנון יש להתקרב למרחב מוגן",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "lebanon-advisory-lead-times",
+      "claim": "Lebanon advisory lead times: a few seconds on the confrontation line, up to about one minute in the north, up to about two minutes in the rest of the country.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/info/iron-swords/1140",
+      "raw_snippet": "במרחב הצפון - עד כדקה לפני קבלת התרעה.",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "lebanon-advisory-heading",
+      "claim": "The Lebanon advisory carries the heading Iyum miLevanon, move closer to the protected space, and is distributed by Cell Broadcast, the app and Telegram.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/info/iron-swords/1140",
+      "raw_snippet": "עם קבלת ההנחיה תעלה הכותרת:",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "alert-is-determinative",
+      "claim": "An advisory may arrive with no alert after it. The alert is what determines action.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/info/iron-swords/1140",
+      "raw_snippet": "לכן ההתרעה היא הקובעת - בכל מקרה שבו קיבלתם התרעה - נכנסים למרחב המוגן בזמן ההתגוננות העומד לרשותכם.",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "protection-time-band-set",
+      "claim": "The official protection-time set is immediate, 15, 30, 45 seconds, one minute and one and a half minutes, and the siren duration equals the time to reach a protected space.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/about/main/1003",
+      "raw_snippet": "פרק הזמן בו נשמעת האזעקה מהצופרים הינו פרק הזמן הנדרש להגעה למרחב מוגן, שנע בין מיידי לבין 15 שניות, 30 שניות, 45 שניות, דקה ודקה וחצי.",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "kav-imut-siren-exception",
+      "claim": "In some confrontation-line localities the siren runs 15 seconds but the required arrival time is immediate.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/about/main/1003",
+      "raw_snippet": "בחלק מהיישובים המשתייכים לאזור הנחיות",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "siren-duration-equals-protection-time",
+      "claim": "The siren duration equals the time to reach the protected space; if the siren ends before you arrive, lie on the ground and protect your head.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/protection-guidelines/preparing-protected-space/1103",
+      "raw_snippet": "משך האזעקה = זמן ההגעה למרחב המוגן.",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "protection-time-fixed-per-locality",
+      "claim": "The protection time is fixed for a locality and does not change with the direction the fire comes from.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/protection-guidelines/preparing-protected-space/1103",
+      "raw_snippet": "זמן ההגעה למרחב המוגן הוא קבוע ואינו משתנה בין אם הירי מגיע מצפון או מדרום.",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "districts-table-authoritative",
+      "claim": "Pikud Ha'Oref publishes a machine-readable table giving each locality its protection time in seconds in the migun_time field. Verified 2026-08-19: 1,492 zone records over 1,418 localities; bands 0/15/30/45/60/90; 899 records at 90 seconds. Kiryat Shmona, Metula, Manara, Yiftach and Sderot are 15; Ashdod, Akko, Carmiel, Katzrin, Ofakim and Kiryat Gat are 45; Netivot, Ashkelon and Safed are 30; Be'er Sheva is 60; Tel Aviv, Jerusalem, Haifa and Netanya are 90; Avivim is the only locality at 0.",
+      "source_url": "https://www.oref.org.il/districts/districts_heb.json",
+      "raw_snippet": "\"label\":\"\\u05D0\\u05D6\\u05D5\\u05E8 \\u05EA\\u05E2\\u05E9\\u05D9\\u05D9\\u05D4 \\u05E9\\u05D7\\u05D5\\u05E8\\u05EA\",\"rashut\"",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/protection_times.json",
+        "scripts/shelter_finder.py"
+      ],
+      "note": "Fetched with curl on 2026-08-19 and parsed; the per-locality values above were read directly from that snapshot and regenerated into scripts/protection_times.json. The district table serves its Hebrew labels as \\u-escaped JSON, so a Hebrew snippet cannot match the raw body; the quoted fragment is verbatim ASCII from the same records, and each record carries a migun_time field such as \"migun_time\":90."
+    },
+    {
+      "claim_id": "north-haifa-90-seconds-2026",
+      "claim": "In 2026 Pikud Ha'Oref extended the protection time in 161 localities in the northern region and Haifa from 60 seconds to 90 seconds.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/info/iron-swords/1141",
+      "raw_snippet": "השלים תהליך מקצועי להארכת זמן ההתגוננות ב-161 יישובים במרחב הצפון וחיפה",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "app-colour-sound-scheme",
+      "claim": "From 18 May 2026 the Pikud Ha'Oref app pairs each instruction with a colour and a dedicated sound: yellow for a threat that may arrive, red with the siren tone for a threat arriving now, green for the end of the event.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/life-saving-guidelines/means-of-alert/1501",
+      "raw_snippet": "צבע ירוק מלווה בצליל ייעודי נוסף - מעדכן שהאירוע הסתיים והסכנה באזור חלפה.",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "hotline-104",
+      "claim": "104 is the Pikud Ha'Oref hotline, with 052-9104104 for SMS or WhatsApp.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/emergency-preparedness/preparing-routine/1211",
+      "raw_snippet": "104 - פיקוד העורף (מספר לפנייה בסמס או בוואצאפ - 052-9104104",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "accessible-sms-whatsapp-lines",
+      "claim": "Dedicated SMS and WhatsApp lines exist for deaf and hard-of-hearing users.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/emergency-preparedness/preparing-routine/1211",
+      "raw_snippet": "עבור כבדי שמיעה וחרשים קיימים קווי פנייה ייעודיים במסרונים ובוואטסאפ.",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "app-language-selection",
+      "claim": "Alert language (Hebrew, Arabic, English, Russian) is selected in the app and the national emergency portal, not by calling a different phone number.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/about/main/1003",
+      "raw_snippet": "בהתאם לשפה שהוגדרה: עברית, ערבית, אנגלית או רוסית.",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "water-three-litres",
+      "claim": "Pikud Ha'Oref specifies three litres of water per person per day for three days.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/info/preparing-protected-space/1201",
+      "raw_snippet": "חשוב להכין מים בכמות של שלושה ליטרים לאדם ליום, למשך 3 ימים.",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/shelter-preparation-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "food-three-days-and-rotation",
+      "claim": "Emergency equipment includes water and food needing no refrigeration for all household members for at least three days, rotated every three months.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/info/preparing-protected-space/1201",
+      "raw_snippet": "מים ומזון שאינו דורש קירור לכל בני הבית לשלושה ימים לפחות",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/shelter-preparation-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "radio-stations-named",
+      "claim": "The radio stations Pikud Ha'Oref names for advisories, alerts and release messages are Kol BaRama, Kol Chai, Radio Darom, Galei Yisrael and, at weekends only, Kan Moreshet.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/about/main/1003",
+      "raw_snippet": "קול ברמה בתדרים: 105.7, 104.3, 92.1, 107.6 FM - קול חי בתדרים: 92.8, 93, 102.5 FM - רדיו דרום בתדר: 101.5 FM - גלי ישראל בתדרים: 106.5, 94, 89.3 FM - בסוף השבוע בלבד - כאן מורשת בתדרים: 90.5 / 90.8 / 92.5 / 100.7 FM",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-response-guide.md",
+        "references/shelter-preparation-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "tv-channels",
+      "claim": "Television channels carrying Pikud Ha'Oref alerts are 11, 12, 13, 14, 9 and 140.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/about/main/1003",
+      "raw_snippet": "ערוצי טלוויזיה: תאגיד השידור, ערוץ רשת 13, ערוץ קשת 12, ערוץ 9, ערוץ 14, וערוץ 140.",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "references/alert-response-guide.md"
+      ]
+    },
+    {
+      "claim_id": "stairwell-protocol",
+      "claim": "Stairwell rule: an internal stairwell with no windows or external walls; over three storeys, a flight with at least two floors above it; under three storeys, the middle floor's flight; never the entrance floor; stay on the flight, not in the floor space.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/info/preparing-protected-space/1200",
+      "raw_snippet": "בבניין מעל שלוש קומות - יש לשהות בגרם מדרגות שיש מעליו שתי קומות לפחות. בבניין מתחת לשלוש קומות - יש לשהות בגרם המדרגות של הקומה האמצעית. אין לשהות בקומת הכניסה.",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/shelter-types-comparison.md"
+      ]
+    },
+    {
+      "claim_id": "interior-room-position",
+      "claim": "In an interior room, sit against an internal wall, below the window line, and not facing the door.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/info/preparing-protected-space/1200",
+      "raw_snippet": "יש לשבת צמוד לקיר פנימי, מתחת לקו חלונות ולא מול הדלת.",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "unapproved-parking-garage",
+      "claim": "A parking garage not approved by Pikud Ha'Oref must not be chosen as a protected space.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/info/preparing-protected-space/1200",
+      "raw_snippet": "אין לבחור כמרחב מוגן בחניונים שלא אושרו על ידי פיקוד העורף, זה מסכן חיים.",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "vehicle-protocol",
+      "claim": "Vehicle protocol on an alert: stop carefully on the shoulder, switch off the engine, exit after checking the road is clear, and enter a nearby protected space such as a shelter or stairwell; if there is no building, move past the shoulder or guardrail, lie down and protect the head.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/info/iron-swords/1104",
+      "raw_snippet": "לעצור את הרכב בזהירות בשולי הכביש, לכבות את המנוע, לצאת מהרכב בבטחה, לאחר שבדקנו שהדרך פנויה, ולהיכנס למרחב מוגן סמוך כמו מקלט או חדר מדרגות.",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "no-sheltering-under-bridges",
+      "claim": "Do not stop under a bridge on an alert; the bridge can be hit by blast and collapse, and blast and fragments spread sideways past its open flanks.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/info/iron-swords/1104",
+      "raw_snippet": "אין לשהות מתחת לגשרים בעת קבלת התרעה",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "tunnel-safety-bay",
+      "claim": "If already inside a tunnel and a safety bay can be reached safely, stopping there is permitted; otherwise stop outside the tunnel, exit the vehicle and lie down beyond the shoulder or guardrail.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/info/iron-swords/1104",
+      "raw_snippet": "אם אתם נמצאים בתוך המנהרה וניתן לעצור בבטחה במפרץ הבטיחות ניתן לעצור בתוכה.",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "outdoors-lie-down",
+      "claim": "Outdoors with no reachable protected space, lie on the ground and protect the head with the hands.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/info/iron-swords/1104",
+      "raw_snippet": "אם לא ניתן - יש לשכב על הקרקע ולהגן על הראש עם הידיים.",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "mamad-since-1992",
+      "claim": "Since 1992 every new residential building has been built with a mamad or a mamak.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/about/main/1004",
+      "raw_snippet": "כל בניין מגורים חדש נבנה עם ממ",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "note": "The full sentence reads: מאז, כל בניין מגורים חדש נבנה עם ממד או ממק. The snippet is truncated before the Hebrew acronym so the quotation marks inside it do not break matching."
+    },
+    {
+      "claim_id": "mamad-area-and-volume",
+      "claim": "A mamad must be at least 9 square metres net with a volume of not less than 22.5 cubic metres, per תקנה 197א of the 1990 civil-defence construction-specification regulations. These figures are not from Israeli Standard 4422.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%94%D7%AA%D7%92%D7%95%D7%A0%D7%A0%D7%95%D7%AA_%D7%94%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%AA_(%D7%9E%D7%A4%D7%A8%D7%98%D7%99%D7%9D_%D7%9C%D7%91%D7%A0%D7%99%D7%99%D7%AA_%D7%9E%D7%A7%D7%9C%D7%98%D7%99%D7%9D)",
+      "raw_snippet": "לא יפחת מ־22.5 מ",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/shelter-types-comparison.md"
+      ],
+      "note": "Snippet truncated before the Hebrew abbreviation for cubic metres, which contains a quotation mark."
+    },
+    {
+      "claim_id": "mamad-ceiling-height",
+      "claim": "Mamad clear ceiling height is not less than 2.5 metres and not more than 2.8 metres, per תקנה 198(א).",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%94%D7%AA%D7%92%D7%95%D7%A0%D7%A0%D7%95%D7%AA_%D7%94%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%AA_(%D7%9E%D7%A4%D7%A8%D7%98%D7%99%D7%9D_%D7%9C%D7%91%D7%A0%D7%99%D7%99%D7%AA_%D7%9E%D7%A7%D7%9C%D7%98%D7%99%D7%9D)",
+      "raw_snippet": "לא יפחת מ־2.5 מטרים ולא יעלה על 2.8 מטרים",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "mamad-wall-thicknesses",
+      "claim": "Mamad wall thicknesses per תקנה 208: not less than 25 cm on an external wall, and the ceiling and floor not less than 15 cm, rising to 20 cm for the topmost mamad ceiling and the bottom mamad floor.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%94%D7%AA%D7%92%D7%95%D7%A0%D7%A0%D7%95%D7%AA_%D7%94%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%AA_(%D7%9E%D7%A4%D7%A8%D7%98%D7%99%D7%9D_%D7%9C%D7%91%D7%A0%D7%99%D7%99%D7%AA_%D7%9E%D7%A7%D7%9C%D7%98%D7%99%D7%9D)",
+      "raw_snippet": "בעובי שלא יפחת מ־25 סנטימטרים",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "municipal-shelter-readiness-gaps",
+      "claim": "The State Comptroller's January 2026 report on protection and sheltering in local authorities found gaps in municipal shelter readiness, and confirms that buildings from 1992 onward carry standard protection.",
+      "source_url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2026/Emergency/2026-Emergency-104-Local.pdf",
+      "raw_snippet": "הן נבנו החל משנת 1992 ועל כן יש בהן מיגון תקני",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T00:00:00Z"
+    },
+    {
+      "claim_id": "oref-rishuy-portal",
+      "claim": "Pikud Ha'Oref runs an online building-permit request approval system at oref-rishuy.org.il.",
+      "source_url": "https://www.oref-rishuy.org.il",
+      "raw_snippet": "מערכת אישור בקשות להיתרי בנייה",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-19T00:00:00Z",
+      "note": "The host applies user-agent filtering and returns 403 to a plain curl. With a browser user agent it redirects to /HomePage and serves this page title."
+    },
+    {
+      "claim_id": "sii-standards-body",
+      "claim": "The Standards Institution of Israel is the national standardization body that publishes Israeli Standards, including Israeli Standard 4422. The standard itself is sold and is not freely readable.",
+      "source_url": "https://www.sii.org.il/he/standardization/",
+      "raw_snippet": "&#x5EA;&#x5E7;&#x5D9;&#x5E0;&#x5D4; - &#x5DE;&#x5DB;&#x5D5;&#x5DF; &#x5D4;&#x5EA;&#x5E7;&#x5E0;&#x5D9;&#x5DD; &#x5D4;&#x5D9;&#x5E9;&#x5E8;&#x5D0;&#x5DC;&#x5D9;",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "note": "sii.org.il serves its Hebrew text HTML-entity-encoded, so a decoded Hebrew snippet cannot match the raw body. The quoted fragment is the standardization page title exactly as served, and decodes to תקינה - מכון התקנים הישראלי. The 4422 catalog entry itself was not reachable on 2026-08-19, which is why the skill tells the reader not to paraphrase the standard from secondary sources."
+    },
+    {
+      "claim_id": "redalert-app",
+      "claim": "RedAlert is a widely used third-party alert app reporting over 3,000,000 downloads and a 4.7 star rating, and running dedicated push notification servers.",
+      "source_url": "https://redalert.me/index_en.html",
+      "raw_snippet": "Over 3,000,000 downloads and a 4.7 star rating to prove it.",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "tzofar-app",
+      "claim": "Tzofar / Tzeva Adom provides alerts through an app and a multilingual website with configurable alert sounds and early-warning updates.",
+      "source_url": "https://www.tzevaadom.co.il/en/",
+      "raw_snippet": "Tzofar - Red Alert Recent Alerts",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "fragment-exposure-percentages",
+      "claim": "Pikud Ha'Oref puts the probability of being hit by the blast of a missile landing nearby in the open at 100% standing and 85% crouching, against only 10% lying down.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/info/iron-swords/1105",
+      "raw_snippet": "עומדת על 100% בעמידה ו-85% בכריעה, לעומת 10% בלבד בשכיבה.",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "most-localities-at-90-seconds",
+      "claim": "Most of the country is at a protection time of a minute and a half. In the 2026-08-19 snapshot of the official district table, 899 of 1,492 zone records carry migun_time 90.",
+      "source_url": "https://www.oref.org.il/districts/districts_heb.json",
+      "raw_snippet": "\"label\":\"\\u05D0\\u05D6\\u05D5\\u05E8 \\u05EA\\u05E2\\u05E9\\u05D9\\u05D9\\u05D4 \\u05E9\\u05D7\\u05D5\\u05E8\\u05EA\",\"rashut\"",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "note": "Counted directly from the fetched JSON on 2026-08-19: 899 of 1,492 records at 90 seconds, 173 at 60, 144 at 15, 142 at 45, 130 at 30, 4 at 0. The district table serves its Hebrew labels as \\u-escaped JSON, so a Hebrew snippet cannot match the raw body; the quoted fragment is verbatim ASCII from the same records, and each record carries a migun_time field such as \"migun_time\":90."
+    },
+    {
+      "claim_id": "permit-exemption-scope",
+      "claim": "The permit-exemption route for adding a mamad applies only to a low-rise dwelling unit, in a building of no more than two storeys above ground, or to a ground-attached dwelling unit with no dwelling unit above or below it, in each case one that has no mamad.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%AA%D7%9B%D7%A0%D7%95%D7%9F_%D7%95%D7%94%D7%91%D7%A0%D7%99%D7%99%D7%94_(%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA_%D7%95%D7%9E%D7%91%D7%A0%D7%99%D7%9D_%D7%94%D7%A4%D7%98%D7%95%D7%A8%D7%99%D7%9D_%D7%9E%D7%94%D7%99%D7%AA%D7%A8)",
+      "raw_snippet": "יחידת דיור שאין לה מרחב מוגן דירתי, במבנה שאינו עולה על שתי קומות מעל פני הקרקע",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "permit-exemption-temporary-order",
+      "claim": "The permit-exemption route sits in סימן ו'1, a temporary order running three years from 26.10.2023, amended in תשפ\"ד, תשפ\"ה and תשפ\"ו.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%AA%D7%9B%D7%A0%D7%95%D7%9F_%D7%95%D7%94%D7%91%D7%A0%D7%99%D7%99%D7%94_(%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA_%D7%95%D7%9E%D7%91%D7%A0%D7%99%D7%9D_%D7%94%D7%A4%D7%98%D7%95%D7%A8%D7%99%D7%9D_%D7%9E%D7%94%D7%99%D7%AA%D7%A8)",
+      "raw_snippet": "(הוראת שעה בתקופה של שלוש שנים מיום 26.10.2023)",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "competent-authority-14-days",
+      "claim": "The competent authority examines the request within 14 days of receipt and notifies the applicant of approval or rejection (תקנה 30ג(ב)).",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%AA%D7%9B%D7%A0%D7%95%D7%9F_%D7%95%D7%94%D7%91%D7%A0%D7%99%D7%99%D7%94_(%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA_%D7%95%D7%9E%D7%91%D7%A0%D7%99%D7%9D_%D7%94%D7%A4%D7%98%D7%95%D7%A8%D7%99%D7%9D_%D7%9E%D7%94%D7%99%D7%AA%D7%A8)",
+      "raw_snippet": "הרשות המוסמכת תבדוק את הבקשה בתוך 14 ימים מיום קבלתה, ותודיע למבקש על אישור הבקשה או דחייתה.",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "completion-notice-45-days",
+      "claim": "Notice of the completed work is given to the licensing authority and the competent authority within 45 days of completion (תקנה 30ד).",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%AA%D7%9B%D7%A0%D7%95%D7%9F_%D7%95%D7%94%D7%91%D7%A0%D7%99%D7%99%D7%94_(%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA_%D7%95%D7%9E%D7%91%D7%A0%D7%99%D7%9D_%D7%94%D7%A4%D7%98%D7%95%D7%A8%D7%99%D7%9D_%D7%9E%D7%94%D7%99%D7%AA%D7%A8)",
+      "raw_snippet": "ותימסר לרשות הרישוי ולרשות המוסמכת בתוך 45 ימים ממועד סיום ביצוע העבודה",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "confrontation-area-bathroom-3sqm",
+      "claim": "In a confrontation area the mamad dimensions may include an addition of up to 3 square metres of floor area serving as a toilet or bathroom (תקנה 30ב(1)).",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%AA%D7%9B%D7%A0%D7%95%D7%9F_%D7%95%D7%94%D7%91%D7%A0%D7%99%D7%99%D7%94_(%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA_%D7%95%D7%9E%D7%91%D7%A0%D7%99%D7%9D_%D7%94%D7%A4%D7%98%D7%95%D7%A8%D7%99%D7%9D_%D7%9E%D7%94%D7%99%D7%AA%D7%A8)",
+      "raw_snippet": "בתוספת של עד 3 מ",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "structural-engineer-certification",
+      "claim": "A registered structural engineer certifies the mamad's stability and that its construction complies, as part of the completion notice.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%AA%D7%9B%D7%A0%D7%95%D7%9F_%D7%95%D7%94%D7%91%D7%A0%D7%99%D7%99%D7%94_(%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA_%D7%95%D7%9E%D7%91%D7%A0%D7%99%D7%9D_%D7%94%D7%A4%D7%98%D7%95%D7%A8%D7%99%D7%9D_%D7%9E%D7%94%D7%99%D7%AA%D7%A8)",
+      "raw_snippet": "אישור מהנדס מבנים רשום בדבר יציבות הממ",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "alert-tone-distinguishes-threat",
+      "claim": "For threats other than missile fire the sirens give a short siren tone followed by spoken text detailing the type of threat. Missile fire uses the rising-and-falling siren or the Tzeva Adom alert.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/about/main/1003",
+      "raw_snippet": "באיומים שאינם ירי טילים, הצופרים מספקים התרעה באמצעות צליל קצר של אזעקה ולאחריו מלל שמפרט את סוג האיום.",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-response-guide.md"
+      ]
+    },
+    {
+      "claim_id": "three-alert-channels",
+      "claim": "The national emergency portal delivers a targeted personal alert by sound and display on a home computer, but only while the site is open in a browser. It sits alongside the app and the public sirens as an alerting channel.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/security-threats/main/2000",
+      "raw_snippet": "פורטל החירום הלאומי - מאפשר לקבל התרעה ממוקדת ואישית באמצעות צליל ותצוגה במחשב הביתי, בתנאי שהאתר פתוח במחשב.",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-response-guide.md"
+      ]
+    },
+    {
+      "claim_id": "deaf-vibration-and-torch",
+      "claim": "Deaf and hard-of-hearing users can configure a 10-second vibration alert, and on Android a torch flash alongside it.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/security-threats/main/2000",
+      "raw_snippet": "מענה מיוחד לחרשים וכבדי שמיעה, מאפשר לקבל התרעה באמצעות רטט של 10 שניות",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-response-guide.md"
+      ]
+    },
+    {
+      "claim_id": "hostile-aircraft-alert",
+      "claim": "On identification of a hostile aircraft entering Israeli airspace an alert is issued so residents can enter the most protected space available, and they stay there unless a further alert or instruction arrives.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/security-threats/main/2000",
+      "raw_snippet": "ותאפשר לכם לפעול בזמן ולהיכנס מיד למרחב הכי מוגן שיש",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-response-guide.md"
+      ]
+    },
+    {
+      "claim_id": "hostile-aircraft-announcement",
+      "claim": "The hostile-aircraft alert is a short siren followed by the announcement chadirat kli tayis oyen, in the language configured on the device.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/security-threats/main/2000",
+      "raw_snippet": "תישמע אזעקה קצרה ולאחריה כריזה",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-response-guide.md"
+      ]
+    },
+    {
+      "claim_id": "crowd-event-protocol",
+      "claim": "If an alert is received during a mass-participation event the organisers must stop the event immediately and inform the audience; participants lie on the ground and protect the head, crouch as low as possible if they cannot lie down, and stay seated protecting the head at a seated indoor event.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/life-saving-guidelines/lsg/1401",
+      "raw_snippet": "באחריות המארגנים לעצור את האירוע מיד עם קבלת ההתרעה, וליידע את הקהל.",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-response-guide.md"
+      ]
+    },
+    {
+      "claim_id": "crowd-guidance-venues",
+      "claim": "The mass-gathering guidance covers shopping centres, entertainment shows, weddings, synagogues and cultural activities.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/life-saving-guidelines/lsg/1401",
+      "raw_snippet": "דוגמת: מרכזי קניות, מופעי בידור, חתונות, בתי כנסת ופעילויות תרבות",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-response-guide.md"
+      ]
+    },
+    {
+      "claim_id": "crowd-crush-risk",
+      "claim": "Crowd noise makes the alert hard to hear and a simultaneous rush to the protected space can cause crush and trampling injuries.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/life-saving-guidelines/lsg/1401",
+      "raw_snippet": "יכול להוביל לרמיסה ופציעות",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-response-guide.md"
+      ]
+    },
+    {
+      "claim_id": "unexploded-submunitions",
+      "claim": "Munitions that disperse smaller submunitions can leave part of them unexploded on the ground; they can detonate on contact and being near them endangers life.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/info/iron-swords/1102",
+      "raw_snippet": "חימושים אלו עלולים להתפוצץ בעת מגע. הימצאות בסמוך אליהם מסכנת חיים.",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-response-guide.md"
+      ]
+    },
+    {
+      "claim_id": "move-away-report-rule",
+      "claim": "The rule on seeing fallen ordnance or an unidentified object is: move away from the place, keep the curious away, and report to the security forces.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/info/iron-swords/1102",
+      "raw_snippet": "מתרחקים מהמקום, מרחיקים סקרנים ומדווחים לכוחות הביטחון.",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-response-guide.md"
+      ]
+    },
+    {
+      "claim_id": "do-not-photograph-ordnance",
+      "claim": "Photographing munitions, fallen ordnance or unidentified objects, staying near them, and any contact with them, endanger life. Scan balconies, yards and playgrounds before children go out to play.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/info/iron-swords/1102",
+      "raw_snippet": "צילום של חימושים, נפלים וחפצים בלתי מזוהים, שהייה בסמוך להם וכמובן מגע מכל סוג שהוא, הן פעולות מסכנות חיים",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-response-guide.md"
+      ]
+    },
+    {
+      "claim_id": "do-not-run-to-shelter",
+      "claim": "Do not run to the protected space; running risks falls and injuries, and the protection time available allows a calm, safe arrival. Plan the route in advance and clear it of obstacles.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/info/preparing-protected-space/1204",
+      "raw_snippet": "חשוב להימנע מריצה אל המרחב המוגן בזמן קבלת התרעה, שכן הדבר עלול לסכן אותנו בנפילות ובחבלות.",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "references/alert-response-guide.md"
+      ]
+    },
+    {
+      "claim_id": "children-sleep-in-mamad-short-times",
+      "claim": "Where the time to enter the protected space is short, Pikud Ha'Oref recommends the children sleep inside the protected space.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/info/preparing-protected-space/1204",
+      "raw_snippet": "מומלץ שהילדים ילונו בתוך המרחב המוגן כדי לשמור על שינה רציפה ובטוחה",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "references/alert-response-guide.md"
+      ]
+    },
+    {
+      "claim_id": "ventilation-openings-stay-open",
+      "claim": "The ventilation openings, doors and windows, are to stay open and are closed only when an alert is received.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/info/preparing-protected-space/1204",
+      "raw_snippet": "פתחי האוורור צריכים להישאר פתוחים (דלתות וחלונות) ולסגור אותם רק בעת ההתרעה.",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "references/alert-response-guide.md"
+      ]
+    },
+    {
+      "claim_id": "release-message-channels",
+      "claim": "Pikud Ha'Oref sends the message to leave the protected space through the app, the national emergency portal, the Cell Broadcast personal-message system, the Telegram channels and the regional radio stations, and the current instructions can also be heard by calling 104.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/info/iron-swords/1102",
+      "raw_snippet": "פיקוד העורף ישלח הודעת יציאה מהמרחב המוגן בתום אירועי חירום",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "references/alert-response-guide.md"
+      ]
+    },
+    {
+      "claim_id": "emergency-numbers-list",
+      "claim": "The emergency numbers Pikud Ha'Oref lists alongside 104 are 100 police, 101 Magen David Adom, 102 fire and rescue, 103 the electric corporation, 105 child online protection, 106 to 109 the local authority and 110 the police information centre.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/emergency-preparedness/preparing-routine/1211",
+      "raw_snippet": "101 - מד",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-response-guide.md"
+      ],
+      "note": "Snippet truncated before the Hebrew abbreviation for Magen David Adom, which contains a quotation mark. The full line reads: 101 - מד\"א (מספר לפנייה בסמס או בוואצאפ - 052-7000101)."
+    },
+    {
+      "claim_id": "accessibility-framework-law-1998",
+      "claim": "The accessibility framework statute is חוק שוויון זכויות לאנשים עם מוגבלות, התשנ\"ח-1998, not a 2005 law.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%A9%D7%95%D7%95%D7%99%D7%95%D7%9F_%D7%96%D7%9B%D7%95%D7%99%D7%95%D7%AA_%D7%9C%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%A2%D7%9D_%D7%9E%D7%95%D7%92%D7%91%D7%9C%D7%95%D7%AA",
+      "raw_snippet": "חוק שוויון זכויות לאנשים עם מוגבלות, התשנ״ח–1998",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/shelter-types-comparison.md"
+      ]
+    },
+    {
+      "claim_id": "shelter-accessibility-regulations-2016",
+      "claim": "Shelter accessibility itself sits in תקנות ההתגוננות האזרחית (התאמות נגישות במקלטים), התשע\"ו-2016, made under sections 14ד and 27 of חוק ההתגוננות האזרחית, התשי\"א-1951.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%94%D7%AA%D7%92%D7%95%D7%A0%D7%A0%D7%95%D7%AA_%D7%94%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%AA_(%D7%94%D7%AA%D7%90%D7%9E%D7%95%D7%AA_%D7%A0%D7%92%D7%99%D7%A9%D7%95%D7%AA_%D7%91%D7%9E%D7%A7%D7%9C%D7%98%D7%99%D7%9D)",
+      "raw_snippet": "בתוקף סמכותי לפי סעיפים 14ד ו־27 לחוק ההתגוננות האזרחית, התשי״א–1951",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/shelter-types-comparison.md"
+      ]
+    },
+    {
+      "claim_id": "mamad-min-width-and-use-ban",
+      "claim": "The mamad width is not less than 1.60 metres (תקנה 198(ב)) and a mamad may not serve as a kitchen, bathroom or toilet (תקנה 199).",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%94%D7%AA%D7%92%D7%95%D7%A0%D7%A0%D7%95%D7%AA_%D7%94%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%AA_(%D7%9E%D7%A4%D7%A8%D7%98%D7%99%D7%9D_%D7%9C%D7%91%D7%A0%D7%99%D7%99%D7%AA_%D7%9E%D7%A7%D7%9C%D7%98%D7%99%D7%9D)",
+      "raw_snippet": "רוחב המרחב המוגן הדירתי לא יפחת מ־1.60 מטרים.",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/shelter-types-comparison.md"
+      ]
+    },
+    {
+      "claim_id": "mamad-hardship-floor",
+      "claim": "The competent authority may approve a smaller mamad where site engineering does not allow the standard one, but not below 5 sq m net and 12.5 cubic metres (תקנה 197א).",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%94%D7%AA%D7%92%D7%95%D7%A0%D7%A0%D7%95%D7%AA_%D7%94%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%AA_(%D7%9E%D7%A4%D7%A8%D7%98%D7%99%D7%9D_%D7%9C%D7%91%D7%A0%D7%99%D7%99%D7%AA_%D7%9E%D7%A7%D7%9C%D7%98%D7%99%D7%9D)",
+      "raw_snippet": "ובלבד שלא תאשר מרחב מוגן דירתי בשטח הקטן מ־5 מ",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/shelter-types-comparison.md"
+      ],
+      "note": "Snippet truncated before the Hebrew abbreviation for square metres, which contains a quotation mark."
+    },
+    {
+      "claim_id": "protective-wall-spec",
+      "claim": "The protective wall (קיר מגן) is reinforced concrete at least 20 cm thick, and at least 25 cm for a dedicated protected space in a health or education institution in a forward locality; the minimum clearance between it and the door leaf is 110 cm in a mamad.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%94%D7%AA%D7%92%D7%95%D7%A0%D7%A0%D7%95%D7%AA_%D7%94%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%AA_(%D7%9E%D7%A4%D7%A8%D7%98%D7%99%D7%9D_%D7%9C%D7%91%D7%A0%D7%99%D7%99%D7%AA_%D7%9E%D7%A7%D7%9C%D7%98%D7%99%D7%9D)",
+      "raw_snippet": "קיר מגן מבטון מזוין בעובי של 20 סנטימטרים לפחות",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/shelter-types-comparison.md"
+      ]
+    },
+    {
+      "claim_id": "mamad-thicknesses-regulation-208",
+      "claim": "The mamad wall, ceiling and floor thicknesses are in תקנה 208 (minimum dimensions of the parts of the mamad), not תקנה 201, which is the location rule.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%94%D7%AA%D7%92%D7%95%D7%A0%D7%A0%D7%95%D7%AA_%D7%94%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%AA_(%D7%9E%D7%A4%D7%A8%D7%98%D7%99%D7%9D_%D7%9C%D7%91%D7%A0%D7%99%D7%99%D7%AA_%D7%9E%D7%A7%D7%9C%D7%98%D7%99%D7%9D)",
+      "raw_snippet": "208. מידות מזעריות של חלקי המרחב המוגן הדירתי",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/shelter-types-comparison.md"
+      ]
+    },
+    {
+      "claim_id": "mamad-location-regulation-201",
+      "claim": "תקנה 201 governs the LOCATION of mamadim, requiring them to stack one above another to form a protected tower for the full height of the building.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%94%D7%AA%D7%92%D7%95%D7%A0%D7%A0%D7%95%D7%AA_%D7%94%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%AA_(%D7%9E%D7%A4%D7%A8%D7%98%D7%99%D7%9D_%D7%9C%D7%91%D7%A0%D7%99%D7%99%D7%AA_%D7%9E%D7%A7%D7%9C%D7%98%D7%99%D7%9D)",
+      "raw_snippet": "201. מיקום המרחבים המוגנים הדירתיים",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "filtration-system-article",
+      "claim": "Pikud Ha'Oref publishes what a ventilation and filtration system contains, how it works, when its use is recommended and how to operate it.",
+      "source_url": "https://api.oref.org.il/api/v1/articles//heb/articles/info/preparing-protected-space/1215",
+      "raw_snippet": "מהי מערכת אוורור וסינון",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "references/alert-response-guide.md"
       ]
     }
   ]

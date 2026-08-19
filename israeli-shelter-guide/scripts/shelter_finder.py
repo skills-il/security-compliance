@@ -2,126 +2,169 @@
 """
 Shelter Finder Helper
 
-Provides time-to-shelter lookup by city name and basic shelter type guidance.
-This is a reference script for AI agents to use when helping users find shelter info.
+Looks up the Pikud Ha'Oref protection time (zman hitgonenut) for a locality and
+returns the matching sheltering guidance.
+
+The lookup table lives in scripts/protection_times.json, generated from Pikud
+Ha'Oref's own machine-readable district table:
+https://www.oref.org.il/districts/districts_heb.json
+
+That table is revised several times a year (161 northern and Haifa localities
+moved from 60 to 90 seconds in 2026). This snapshot is dated inside the JSON.
+It is a convenience, never an authority: verify the user's exact address at
+oref.org.il or call 104 before acting on any value here.
 
 Usage:
-    python shelter_finder.py "tel aviv"
-    python shelter_finder.py "אשקלון"
+    python3 shelter_finder.py "tel aviv"
+    python3 shelter_finder.py "אשקלון"
+    python3 shelter_finder.py --refresh     # re-download the official table
 """
 
+import json
+import os
 import sys
 
-# Time-to-shelter zones (seconds) - based on Home Front Command data
-# Source: oref.org.il regional countdown values
-SHELTER_TIMES = {
-    # Gaza envelope - 0-15 seconds
-    "nir am": 15, "ניר עם": 15,
-    "beeri": 15, "בארי": 15,
-    "kissufim": 15, "כיסופים": 15,
-    "nahal oz": 15, "נחל עוז": 15,
-    "kfar aza": 15, "כפר עזה": 15,
-    # Western Negev - 15-30 seconds
-    "sderot": 15, "שדרות": 15,
-    "netivot": 30, "נתיבות": 30,
-    # Southern coast - 30 seconds
-    "ashkelon": 30, "אשקלון": 30,
-    # Central Negev - 45 seconds
-    "ofakim": 45, "אופקים": 45,
-    "kiryat gat": 45, "קריית גת": 45,
-    # Southern cities - 60 seconds
-    "ashdod": 60, "אשדוד": 60,
-    "beer sheva": 60, "באר שבע": 60,
-    "beersheba": 60,
-    # Central Israel - 90 seconds
-    "tel aviv": 90, "תל אביב": 90,
-    "jerusalem": 90, "ירושלים": 90,
-    "netanya": 90, "נתניה": 90,
-    "rishon lezion": 90, "ראשון לציון": 90,
-    "petah tikva": 90, "פתח תקווה": 90,
-    "ramat gan": 90, "רמת גן": 90,
-    "holon": 90, "חולון": 90,
-    "bnei brak": 90, "בני ברק": 90,
-    "bat yam": 90, "בת ים": 90,
-    "herzliya": 90, "הרצליה": 90,
-    "kfar saba": 90, "כפר סבא": 90,
-    "raanana": 90, "רעננה": 90,
-    "modiin": 90, "מודיעין": 90,
-    "rehovot": 90, "רחובות": 90,
-    # Haifa area - 60 seconds
-    "haifa": 60, "חיפה": 60,
-    "krayot": 60, "קריות": 60,
-    "kiryat ata": 60, "קריית אתא": 60,
-    "kiryat bialik": 60, "קריית ביאליק": 60,
-    "kiryat motzkin": 60, "קריית מוצקין": 60,
-    "akko": 60, "עכו": 60,
-    "acre": 60,
-    "nahariya": 60, "נהריה": 60,
-    # Lebanon border ("kav ha-imut") - 0 seconds (immediate, post-Iron-Swords doctrine)
-    # Source: oref.org.il updated 2025-2026
-    "kiryat shmona": 0, "קריית שמונה": 0,
-    "metula": 0, "מטולה": 0,
-    "manara": 0, "מנרה": 0,
-    "yiftach": 0, "יפתח": 0,
-    # Upper Galilee / Golan - 30 seconds
-    "safed": 30, "צפת": 30,
-    "carmiel": 30, "כרמיאל": 30,
-    "katzrin": 30, "קצרין": 30,
-    "tiberias": 60, "טבריה": 60,
+DATA_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "protection_times.json")
+OFFICIAL_URL = "https://www.oref.org.il/districts/districts_heb.json"
+
+# English aliases for the largest localities. Hebrew names come from the official
+# table and need no aliasing.
+ALIASES = {
+    "tel aviv": "תל אביב", "jerusalem": "ירושלים", "haifa": "חיפה",
+    "netanya": "נתניה", "ashdod": "אשדוד", "ashkelon": "אשקלון",
+    "beer sheva": "באר שבע", "beersheba": "באר שבע", "be'er sheva": "באר שבע",
+    "sderot": "שדרות", "netivot": "נתיבות", "ofakim": "אופקים",
+    "kiryat gat": "קריית גת", "kiryat shmona": "קריית שמונה",
+    "metula": "מטולה", "manara": "מנרה", "yiftach": "יפתח", "avivim": "אביבים",
+    "safed": "צפת", "tzfat": "צפת", "carmiel": "כרמיאל", "karmiel": "כרמיאל",
+    "akko": "עכו", "acre": "עכו", "nahariya": "נהריה", "katzrin": "קצרין",
+    "tiberias": "טבריה", "nazareth": "נצרת", "afula": "עפולה",
+    "kiryat ata": "קריית אתא", "kiryat bialik": "קריית ביאליק",
+    "kiryat motzkin": "קריית מוצקין", "kiryat yam": "קריית ים",
+    "rishon lezion": "ראשון לציון", "petah tikva": "פתח תקווה",
+    "ramat gan": "רמת גן", "holon": "חולון", "bat yam": "בת ים",
+    "bnei brak": "בני ברק", "herzliya": "הרצליה", "kfar saba": "כפר סבא",
+    "raanana": "רעננה", "rehovot": "רחובות", "modiin": "מודיעין",
+    "eilat": "אילת", "dimona": "דימונה", "arad": "ערד",
 }
 
-# Data refresh date: 2026-04. Authoritative source: https://www.oref.org.il
+
+def load_table():
+    with open(DATA_FILE, encoding="utf-8") as fh:
+        raw = json.load(fh)
+    table = {}
+    for seconds, names in raw["seconds_to_localities"].items():
+        for name in names:
+            table[name] = int(seconds)
+    return raw, table
 
 
-def get_shelter_time(city: str) -> dict:
-    """Look up time-to-shelter for a given city name (Hebrew or English)."""
-    city_lower = city.strip().lower()
-    city_stripped = city.strip()
+def refresh():
+    """Re-download the official district table and rewrite protection_times.json."""
+    import collections
+    import urllib.request
+    from datetime import date
 
-    # Try exact match (case-insensitive for English, exact for Hebrew)
-    if city_lower in SHELTER_TIMES:
-        return {"city": city, "seconds": SHELTER_TIMES[city_lower], "found": True}
-    if city_stripped in SHELTER_TIMES:
-        return {"city": city, "seconds": SHELTER_TIMES[city_stripped], "found": True}
-
-    # Try substring match
-    for key, seconds in SHELTER_TIMES.items():
-        if city_lower in key.lower() or key.lower() in city_lower:
-            return {"city": city, "seconds": seconds, "found": True, "matched": key}
-
-    return {
-        "city": city,
-        "found": False,
-        "message": "City not in local database. Check oref.org.il or call 104 for your zone."
+    with urllib.request.urlopen(OFFICIAL_URL, timeout=30) as resp:
+        records = json.loads(resp.read().decode("utf-8"))
+    # Rows that are national notices, not places. They sit at migun_time 0 and a
+    # substring query would otherwise return "immediate" for them.
+    PSEUDO = {"כל הארץ", "ברחבי הארץ", "בחלק מהאזורים בארץ"}
+    agg = {}
+    for rec in records:
+        label = (rec.get("label_he") or "").strip()
+        if not label:
+            continue
+        name = label.split(" - ")[0].split(",")[0].strip()
+        if name in PSEUDO:
+            continue
+        # A locality split across zones must resolve to its SHORTEST time. Today
+        # no locality is split, but the table is revised several times a year and
+        # last-record-wins would silently hand the losing zone extra seconds.
+        agg[name] = min(rec["migun_time"], agg.get(name, rec["migun_time"]))
+    by_band = collections.defaultdict(list)
+    for name, seconds in sorted(agg.items()):
+        by_band[str(seconds)].append(name)
+    out = {
+        "source": OFFICIAL_URL,
+        "snapshot_date": date.today().isoformat(),
+        "note": "Protection time (zman hitgonenut) in seconds, by locality. Pikud "
+                "Ha'Oref revises this table several times a year; re-verify at "
+                "oref.org.il before acting on it.",
+        "seconds_to_localities": {k: by_band[k] for k in sorted(by_band, key=int)},
     }
+    with open(DATA_FILE, "w", encoding="utf-8") as fh:
+        json.dump(out, fh, ensure_ascii=False, separators=(",", ":"))
+    print(f"Refreshed {len(agg)} localities into {DATA_FILE}")
 
 
-def shelter_guidance(seconds: int) -> str:
-    """Return shelter guidance based on time-to-shelter."""
+def get_shelter_time(city):
+    """Look up the protection time for a locality name (Hebrew or English)."""
+    raw, table = load_table()
+    query = city.strip()
+    key = ALIASES.get(query.lower(), query)
+
+    if key in table:
+        return {"city": city, "seconds": table[key], "found": True,
+                "matched": key, "snapshot": raw["snapshot_date"]}
+
+    partial = [name for name in table if key and key in name]
+    if len(partial) == 1:
+        return {"city": city, "seconds": table[partial[0]], "found": True,
+                "matched": partial[0], "snapshot": raw["snapshot_date"]}
+    if len(partial) > 1:
+        bands = {table[name] for name in partial}
+        if len(bands) == 1:
+            return {"city": city, "seconds": bands.pop(), "found": True,
+                    "matched": ", ".join(partial[:5]), "snapshot": raw["snapshot_date"]}
+        return {"city": city, "found": False, "candidates": partial[:10],
+                "message": "Several localities match and they are not in the same band. "
+                           "Ask the user for the exact locality, or check oref.org.il."}
+
+    return {"city": city, "found": False,
+            "message": "Locality not in the bundled table. Check oref.org.il or call 104."}
+
+
+def shelter_guidance(seconds):
+    """Return sheltering guidance for a protection time, in seconds."""
+    if seconds == 0:
+        return ("Immediate. You must already be in the protected space. Stay inside it "
+                "during active rounds; a public shelter you have to walk to is not reachable.")
     if seconds <= 15:
-        return "IMMEDIATE: Enter mamad/shelter instantly. No time to reach a distant shelter."
-    elif seconds <= 30:
-        return "Very short: Enter the nearest mamad or miklat. No time for distant shelters."
-    elif seconds <= 60:
-        return "Short: Enter mamad if available. Nearby miklat possible if within 30 seconds walk."
-    elif seconds <= 90:
-        return "Standard: Enter mamad or nearby miklat. Stairwell protocol if no mamad."
+        return ("15 seconds. Only the mamad, mamak or an internal stairwell in your own "
+                "building is reachable. Do not plan on a public shelter.")
+    if seconds <= 30:
+        return ("30 seconds. The nearest mamad or a miklat in the same building. "
+                "Measure your real transit time, not the map distance.")
+    if seconds <= 45:
+        return "45 seconds. Mamad, or a miklat you have timed at under 30 seconds on foot."
+    if seconds <= 60:
+        return "60 seconds. Mamad or a nearby miklat. Internal stairwell if the building has neither."
+    return ("90 seconds. Mamad or a nearby miklat. Internal stairwell protocol if the "
+            "building has neither.")
+
+
+def main():
+    if len(sys.argv) < 2:
+        print(__doc__.strip())
+        return 1
+    if sys.argv[1] == "--refresh":
+        refresh()
+        return 0
+
+    result = get_shelter_time(" ".join(sys.argv[1:]))
+    print(f"Locality: {result['city']}")
+    if result["found"]:
+        print(f"Matched: {result['matched']}")
+        print(f"Protection time: {result['seconds']} seconds")
+        print(f"Guidance: {shelter_guidance(result['seconds'])}")
+        print(f"Table snapshot: {result['snapshot']}. Verify at oref.org.il or call 104.")
     else:
-        return "Extended: More time available, but still move to shelter immediately."
+        print(f"Status: {result['message']}")
+        if result.get("candidates"):
+            print("Candidates: " + ", ".join(result["candidates"]))
+    return 0
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: python shelter_finder.py <city_name>")
-        sys.exit(1)
-
-    city = " ".join(sys.argv[1:])
-    result = get_shelter_time(city)
-
-    if result["found"]:
-        print(f"City: {result['city']}")
-        print(f"Time to shelter: {result['seconds']} seconds")
-        print(f"Guidance: {shelter_guidance(result['seconds'])}")
-    else:
-        print(f"City: {result['city']}")
-        print(f"Status: {result['message']}")
+    sys.exit(main())

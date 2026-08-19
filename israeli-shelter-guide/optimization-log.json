@@ -1,0 +1,20 @@
+{
+  "cycles": [
+    {
+      "version": "1.3.0",
+      "date": "2026-08-19",
+      "lessons": [
+        "Every previous cycle sourced life-safety facts from secondary pages (davar1, ynet, a shivat-zion PDF, law-firm and contractor blogs). That is how the obsolete 10-minute exit rule, the 1207 hotline, the 4 L/day water figure and six wrong city bands all survived. This cycle moved every operational claim onto api.oref.org.il and the primary regulations. Do not reintroduce a secondary source for an operational instruction.",
+        "City protection times are now generated into scripts/protection_times.json from oref's own districts_heb.json rather than hand-maintained. Re-run scripts/shelter_finder.py --refresh every cycle and diff, because Pikud Ha'Oref revises the table several times a year.",
+        "Employer obligations (safety-officer appointment threshold, mandatory drill frequency, record keeping) remain UNVERIFIED. Pikud Ha'Oref defers to the Ministry of Labour and publishes nothing. The skill now routes users there instead of asserting figures. Next cycle should try the Ministry of Labour and the safety-at-work ordinance directly.",
+        "The two gov.il department rows (iplan, ministry_of_interior) were removed from Reference Links because gov.il is Cloudflare-blocked to every non-browser fetch and could not be confirmed this cycle. Restore them only after a real browser read.",
+        "The 2025 planning-law amendment enlarging the permitted mamad area (reported as תיקון 163, 9+6=15 sq m) could not be read in the amendment text itself. The skill states only the 3 sq m confrontation-area bathroom allowance that is in the regulations. Resolve next cycle.",
+        "IS 4422 itself is paywalled and its catalog page was unreachable on 2026-08-19, so no clause of it can be quoted. Every dimensional figure now cites the 1990 civil-defence construction-specification regulations instead.",
+        "Round-2 Expert MAJORs deferred: no public-transport (bus, train, light rail) protocol; scripts/shelter_finder.py --refresh drops the English `label` field so English lookups depend on a 50-name hardcoded alias table; no guidance for being caught inside a lift; no seating rule for inside the mamad itself; CHANGELOG mixes Hebrew and English entries and has a stranded header line.",
+        "Pets, workplace and elderly sections still carry no evidence.json entries because Pikud Ha'Oref publishes nothing on them. Either source them next cycle or mark them explicitly as general preparedness advice rather than Pikud Ha'Oref guidance, so a reader can tell the two apart.",
+        "The api.oref.org.il article endpoint is flaky: means-of-alert/1109 served full content early on 2026-08-19 and returned HTTP 204 consistently a few hours later. Do not treat a 204 from that host as proof an article is gone; retry, and prefer an article that is currently serving.",
+        "Two gov.il department rows were dropped from Reference Links because gov.il is Cloudflare-blocked to every non-browser fetch and the Playwright MCP was held by a concurrent agent. Restore them only after a real browser read."
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 ---
 name: israeli-shelter-guide
-description: Guide to finding and preparing shelters in Israel including mamad (apartment safe room), mamak (floor safe room), maman (institutional safe room), and miklat (public shelter). Use when a user needs to find the nearest shelter, prepare a safe room per Home Front Command guidelines, understand time-to-shelter by region, set up workplace emergency procedures, or interpret the multi-stage early-warning notifications introduced for ballistic threats. Covers Israeli Standard 4422, time-to-shelter zones (immediate / 15 / 30 / 45 / 60 / 90 seconds), municipal shelter databases, accessibility law, sheltering with pets, vehicle protocols, and what to do if caught outdoors. Do NOT use for real-time alert integrations (use pikud-haoref-alerts) or per-threat safety protocols (use pikud-haoref-safety-protocols).
+description: Guide to finding and preparing shelters in Israel including mamad (apartment safe room), mamak (floor safe room), maman (institutional safe room), and miklat (public shelter). Use when a user needs to find the nearest shelter, prepare a safe room per Home Front Command guidelines, understand time-to-shelter by region, set up workplace emergency procedures, or interpret the multi-stage early-warning notifications introduced for ballistic threats. Covers the civil-defence construction specifications and what Israeli Standard 4422 actually governs, time-to-shelter zones (immediate / 15 / 30 / 45 / 60 / 90 seconds), municipal shelter databases, accessibility law, sheltering with pets, vehicle protocols, and what to do if caught outdoors. Do NOT use for real-time alert integrations (use pikud-haoref-alerts) or per-threat safety protocols (use pikud-haoref-safety-protocols).
 
 license: MIT
 compatibility: Knowledge-based skill. No tools, APIs, or network access required. Works on any agent that supports SKILL.md format.
@@ -9,14 +9,14 @@ compatibility: Knowledge-based skill. No tools, APIs, or network access required
 
 # Israeli Shelter Guide
 
-This skill provides guidance on finding, preparing, and using shelters in Israel during rocket and ballistic-missile alerts. It is based on publicly available Pikud Ha'Oref (Home Front Command) guidance as of May 2026. All life-safety numbers below should be cross-checked against the live Pikud Ha'Oref site or the 104 / 1207 hotline before acting on them in a real emergency.
+Guidance on finding, preparing and using shelters in Israel during rocket and missile alerts. It is based on publicly available Pikud Ha'Oref (Home Front Command) guidance as of August 2026. All life-safety numbers below should be cross-checked against the live Pikud Ha'Oref site or the 104 hotline before acting on them in a real emergency.
 
 ## Description
 
 Helps users:
 - Identify which type of protected space they have (mamad, mamak, maman, miklat) and what to do in buildings that have none.
 - Look up their region's time-to-shelter (immediate / 15 / 30 / 45 / 60 / 90 seconds).
-- Understand the multi-stage early warning system Pikud Ha'Oref now publishes for ballistic threats from Iran (advance warnings, then siren, then explicit release message).
+- Understand the multi-stage early warning system Pikud Ha'Oref publishes for missile fire (preliminary advisory, then alert, then release message), including the separate advisory for fire from Lebanon.
 - Prepare an emergency kit (ערכת חירום) according to Pikud Ha'Oref recommendations.
 - Apply the correct protocol when caught in a vehicle, outdoors, or in a building without a mamad.
 - Navigate the process for inspecting or building a private mamad with a licensed engineer.
@@ -34,53 +34,75 @@ Israel has four types of protected spaces, each designated by a Hebrew acronym:
 
 Since 1992, Israeli building code requires all new residential construction to include a mamad. Buildings constructed before 1992 may lack a mamad entirely.
 
-### Mamad Specifications (Israeli Standard 4422)
+### Mamad Specifications
 
-- **Minimum floor area**: 9 square meters (per IS 4422).
-- **Expanded option** (2025 amendment): up to 12 sq m + 3 sq m bathroom for new construction.
-- **Walls and ceiling**: reinforced concrete, minimum 25 cm thick, double-rebar reinforcement.
-- **Ceiling height**: 2.5 to 2.8 m clear, no structural columns through the protected space.
-- **Door**: steel blast door, approximately 7 cm thick.
-- **Window**: steel-frame window with a blast shutter that closes from inside.
-- **Blast wall (קיר הדף)**: required by default; per IS 4422 Amendment 4, can be omitted if a special blast door is installed and the mamad is at least 4 m from the external wall.
-- **NBC filtration**: ventilation and filtering system connection point; turn on and set to "ventilation" mode when sheltering.
+**Get the legal source right before quoting a figure.** Mamad dimensions, wall thicknesses and heights come from תקנות ההתגוננות האזרחית (מפרטים לבניית מקלטים), התש"ן-1990, not from Israeli Standard 4422. IS 4422 governs the blast door, window and frame items fitted into the space. Attributing an area or a thickness to "IS 4422" is a common and wrong citation, and תקנה 201 (location) is routinely quoted where תקנה 208 (thicknesses) is meant.
 
-The full standard is published by the Standards Institution of Israel (sii.org.il, standard 4422 parts 1 and 2).
+Headline figures: 9 sq m net minimum and 22.5 cubic metres (תקנה 197א), clear height 2.5 to 2.8 m (תקנה 198(א)), external wall not less than 25 cm of reinforced concrete (תקנה 208). A mamad may not serve as a kitchen, bathroom or toilet. The full dimension table, the hardship floor, the protective-wall rule and the confrontation-area bathroom allowance are in `references/shelter-types-comparison.md`.
+
+Do not quote a blast-door thickness to a user; it is a manufacturer specification, not a regulated figure, and it is on the door's own approval plate. Israeli Standard 4422 is paywalled, so do not paraphrase its clauses from secondary sources.
 
 ## Time-to-Shelter by Region
 
-When a siren sounds, you have a limited number of seconds to reach a protected space. Pikud Ha'Oref defines the time to reach a protected space as immediate, 15, 30, 45 seconds, one minute or a minute and a half. Most of the country is a minute and a half; the shorter bands apply near the borders. The time is fixed for a locality and does not change with the direction the fire comes from. Always verify your own address at oref.org.il, since cities can be split across bands.
+Pikud Ha'Oref calls this the protection time (זמן התגוננות). The official set has exactly six values: immediate, 15, 30, 45 seconds, one minute, and a minute and a half. Most localities are at 90 seconds. The value is fixed for a locality and does not change with the direction the fire comes from.
 
-| Region | Time to Shelter | Example Cities |
-|--------|----------------|----------------|
-| Lebanon border (kav ha-imut) | 0 seconds (immediate) | Kiryat Shmona, Metula, Manara, Yiftach |
-| Upper Galilee / Golan | 30 seconds | Safed, Carmiel, Akko, Katzrin |
-| Gaza envelope (Otef Aza) | 0 to 15 seconds | Nir Am, Be'eri, Kissufim, Sderot |
-| Western Negev | 15 to 30 seconds | Sderot, Netivot |
-| Southern coast | 30 seconds | Ashkelon |
-| Central Negev | 45 seconds | Ofakim, Kiryat Gat |
-| Southern cities | 60 seconds | Ashdod, Be'er Sheva |
-| Central Israel | 90 seconds | Tel Aviv, Jerusalem, Netanya |
-| Haifa area | 60 to 90 seconds | Haifa, Krayot |
-| Houthi or long-range threats | country-wide siren, 3 to 12 minutes warning | All districts (varies by intercept point) |
+**Two operational rules worth stating to any user:**
 
-**Doctrine update (post-Iron Swords):** the "up to 180 seconds" figure for Kiryat Shmona / Metula from pre-2024 references is no longer accurate. Northern border communities adjacent to the Lebanon line have effectively zero warning time and Pikud Ha'Oref guidance is to remain inside the protected space whenever feasible during active rounds.
+- **The siren duration equals the protection time.** If it is still sounding, you still have time. If it stops before you arrive, lie on the ground and protect your head.
+- **Exception on the confrontation line (קו עימות):** in some of these localities the siren runs 15 seconds but required arrival is immediate. Do not read the siren as a countdown there.
 
-**How to check your zone:** visit oref.org.il, open the "התרעות" (Alerts) section, and enter your locality. For split cities use the street address. You can also call 104.
+| Protection time | Example localities (verified 2026-08-19) |
+|---|---|
+| Immediate (0 s) | Avivim. This is the only locality in the official table with a genuine zero. |
+| 15 seconds | Kiryat Shmona, Metula, Manara, Yiftach, Sderot, Nahal Oz, Be'eri, Kfar Aza |
+| 30 seconds | Ashkelon, Safed, Netivot |
+| 45 seconds | Ashdod, Akko, Carmiel, Katzrin, Ofakim, Kiryat Gat |
+| 60 seconds | Be'er Sheva |
+| 90 seconds | Tel Aviv, Jerusalem, Haifa, Netanya, and most of the rest of the country |
 
-## The Multi-Stage Early Warning System (2025 to 2026)
+**This table changes.** In 2026 Pikud Ha'Oref extended the protection time in 161 localities across the north and Haifa from 60 to 90 seconds, which is why older references still show Haifa at 60. Pre-2024 references also show 180 seconds for Kiryat Shmona and Metula; that figure is long obsolete, and so is treating those two towns as zero-second localities, which they are not. Use `scripts/shelter_finder.py` for the full 1,418-locality table, and re-verify the user's own locality at oref.org.il.
 
-Pikud Ha'Oref now publishes multiple notifications for ballistic missile threats from Iran. Treat each stage as a separate instruction and follow it in order:
+**How to check a zone:** enter the locality in the oref.org.il home-page lookup, adding the street for a city split into several alert zones. Or call 104.
 
-1. **Advance advisory**, roughly 15 minutes before impact: app notification to stay near a protected space and avoid open areas.
-2. **Improvement warning**, roughly 10 minutes before impact: app notification that sirens are expected in your area in the coming minutes; finish moving to the protected space and prepare to seal it.
-3. **Siren and app alert**, roughly 90 seconds before impact in most areas (less near borders): the standard rising-falling siren plus an app alert. Enter the protected space and close the door.
-4. **Release message** (הודעת שחרור): Pikud Ha'Oref issues an explicit message in the app and on Cell Broadcast when it is safe to leave. For ballistic / Iran / Houthi scenarios, do **not** apply the classic 10-minute rule.
+## The Multi-Stage Warning System
 
-### After-Siren Rule (Short-Range vs. Ballistic)
+For missile fire from distant launch areas, Pikud Ha'Oref publishes three stages. Treat each as a separate instruction and follow it in order.
 
-- **Short-range fire (Gaza or Lebanon historical posture):** stay in the protected space for 10 minutes after the last impact.
-- **Ballistic / Iran / Houthi scenarios:** the 10-minute rule does NOT apply. Stay put until an explicit release message arrives in the app or via Cell Broadcast. When in doubt, stay put.
+1. **Preliminary advisory (הנחיה מקדימה)**: "alerts are expected in your area in the coming minutes." Use the time to move closer to the best protected space available to you. Pikud Ha'Oref describes this as "a few minutes" and publishes no fixed figure; do not quote one. It is issued only where the fire originates far enough away, and only when it is possible.
+2. **Alert (התרעה)**: app, sirens, the national emergency portal and broadcast media. Enter the best protected space within your protection time, close the blast door by turning the handle through 90 degrees, confirm the window is fully closed, and stay inside.
+3. **Release message (הודעת שחרור)**: an explicit message that the event is over. Read the text of every message, because different areas can receive different instructions.
+
+**A preliminary advisory is not an alert, and an alert can arrive without one.** The alert is what determines action.
+
+### Fire from Lebanon: a separate, much shorter advisory
+
+Pikud Ha'Oref also issues a preliminary advisory for rocket and missile fire from Lebanon, carrying the heading "איום מלבנון - התקרבו למרחב המוגן". Because Lebanon is close, the lead time is far shorter than for Iran or Yemen, and it is not uniform:
+
+| Area | Lead time before the alert |
+|---|---|
+| Confrontation line (קו עימות) | A few seconds, when an advisory is issued at all |
+| Northern region | Up to about one minute |
+| Rest of the country | Up to about two minutes |
+
+Not every Lebanese launch can be preceded by an advisory. This advisory covers rockets and missiles only, and is distributed by Cell Broadcast, the Pikud Ha'Oref app, and the Pikud Ha'Oref Telegram channels.
+
+### App colour and sound scheme
+
+The Pikud Ha'Oref app pairs every instruction with a colour, an icon and a dedicated sound:
+
+- **Yellow**, dedicated tone: a threat that may reach you. Prepare.
+- **Red**, siren tone: the threat is arriving now. Enter the protected space.
+- **Green**, a further dedicated tone: the event is over and the danger has passed.
+
+The app distinguishes an alert at your own location from one in an "area of interest" you configured, so configure those deliberately.
+
+### When You May Leave the Protected Space
+
+**Stay in the protected space until Pikud Ha'Oref issues an explicit instruction to leave.** This applies to every rocket and missile alert, at every range, from every origin.
+
+There is no 10-minute rule for leaving a protected space. Older guidance that told users to wait 10 minutes after the last impact and then exit has been superseded, and repeating it will send someone out early. Pikud Ha'Oref states plainly that leaving a protected space before an explicit instruction endangers life.
+
+The only place 10 minutes still appears in Pikud Ha'Oref guidance is the opposite case: someone caught in the open with no building nearby should lie on the ground and protect their head for at least 10 minutes. There it is a minimum to stay down, not a permission to get up.
 
 ## How to Find a Shelter
 
@@ -88,13 +110,13 @@ Pikud Ha'Oref now publishes multiple notifications for ballistic missile threats
 
 - Download "Pikud HaOref" (פיקוד העורף) from the App Store or Google Play.
 - Shows shelter locations near your GPS position.
-- Delivers the four-stage warnings above plus the release message.
+- Delivers the preliminary advisory, the alert and the release message, with the colour and sound scheme above.
 
 ### Option 2: RedAlert / Tzofar / Tzeva Adom (third-party)
 
-- RedAlert (redalert.me) has dedicated push servers and is widely used as a faster alternative; 4.7-star rating with millions of downloads.
+- RedAlert (redalert.me) is widely used as a backup channel; the vendor reports over 3,000,000 downloads and a 4.7 star rating. Treat any speed claim as the vendor's, not a verified fact.
 - Tzofar / Tzeva Adom (tzevaadom.co.il) provides alerts via app, website, Chrome extension, Telegram, WhatsApp, and X.
-- Pikud Ha'Oref states these apps are supplements, not replacements, for the official channels.
+- Pikud Ha'Oref states these apps are supplements, not replacements.
 
 ### Option 3: Your Municipality
 
@@ -103,33 +125,31 @@ Pikud Ha'Oref now publishes multiple notifications for ballistic missile threats
 
 ### Option 4: Pikud Ha'Oref Hotline
 
-- Hebrew: **1207**
-- English and other languages: **104**
-- Both available 24/7.
+- **104**, the Pikud Ha'Oref information centre, 24/7.
+- **052-9104104** for SMS or WhatsApp, which is also the accessible channel for deaf and hard-of-hearing users.
+- There is no separate English-language phone line. Language (Hebrew, Arabic, English, Russian) is selected in the app and on the national emergency portal.
+- Do not publish 1207 as a Pikud Ha'Oref number. It appears on third-party aggregators but on no Pikud Ha'Oref channel.
 
 ### Option 5: Physical Signs
 
-- Public shelters are marked with brown signs reading "מקלט" (Miklat).
-- In newer areas, blue directional signs point to the nearest shelter.
+- Public shelters are marked with brown signs reading "מקלט" (Miklat), and newer areas add blue directional signs.
 
 ## Preparing Your Mamad
 
 ### Essential Checklist (per Pikud Ha'Oref Recommendations)
 
 1. **Clear the room.** Many families use the mamad as storage or a bedroom; the door and window must close fully. An unusable mamad is the same as having no mamad.
-2. **Test the blast door.** Close and lock it. Lubricate hinges annually.
+2. **Test the blast door.** Close it fully by turning the handle through 90 degrees, the same action used during an alert. Lubricate the hinges annually. Do not key-lock or bolt a mamad.
 3. **Practice closing the window shutter.** Know which direction the handle turns.
-4. **Water.** Store 4 liters per person per day for at least 3 days (minimum 12 L per person).
+4. **Water.** Pikud Ha'Oref specifies 3 liters per person per day for 3 days, so 9 liters per person. Replace the bottles and check the food stock and its expiry every three months.
 5. **Non-perishable food** that does not need refrigeration or cooking.
 6. **Lighting and communication.** Flashlight, spare batteries, charged power bank.
-7. **Battery radio.** Galei Zahal (Galatz) 102.3 FM or Reshet Bet 95.5 FM for official updates.
-8. **First aid kit and 3-day supply of personal medications.**
-9. **Hygiene supplies, cash, and credit cards.**
-10. **Documents.** Copies of IDs, insurance, medical info in a sealed bag.
-11. **For families with children:** formula or milk substitutes, diapers, pacifiers, comfort items, small games.
-12. **For pet owners:** pet food, carrier or leash for each animal.
+7. **Battery radio.** Tune to the relevant REGIONAL station, not a national frequency. Frequencies and TV channels: `references/alert-response-guide.md`. Pikud Ha'Oref does not name Galei Zahal 102.3 or Reshet Bet 95.5, which older guidance did.
+8. **First aid kit, 3 days of personal medications, printed prescriptions.**
+9. **Hygiene supplies, cash, cards, and copies of IDs, insurance and medical information in a sealed bag.**
+10. **Per household needs:** formula, nappies, comfort items and small games for children; food, water and a carrier or leash for each pet.
 
-Pikud Ha'Oref recommends storing the emergency kit, water, and food permanently inside the mamad in a corner that does not block movement.
+Store the kit, water and food permanently inside the mamad, in a corner that does not block movement.
 
 ### NBC Protection
 
@@ -140,15 +160,9 @@ If your mamad has an NBC filtration system:
 
 ## Building a Private Mamad
 
-If your building has no mamad, you may be eligible to add one. The current fast-track process (relaxed under the Iron Swords emergency framework, with an end-of-permit window in late 2026, verify before relying on the relaxation):
+**Check eligibility first.** The permit-exemption route in סימן ו'1 of תקנות התכנון והבנייה (עבודות ומבנים הפטורים מהיתר) is NOT a general route for any building without a mamad. It covers only a **low-rise dwelling unit** (no more than two storeys above ground) or a **ground-attached dwelling unit** (none above or below it), in each case one that has no mamad. An apartment in a five-storey pre-1992 block is not covered; that case goes through the ordinary building-permit process with the local planning committee. Telling the owner otherwise sends them down a route that does not exist for them.
 
-1. Appoint a licensed architect, engineer, or building technician as the request author (orech bakasha).
-2. Submit the application through Pikud Ha'Oref's licensing system at **oref-rishuy.org.il**, with the supporting documents the system lists.
-3. Pikud Ha'Oref responds within 14 days (approval or rejection).
-4. A structural engineer must certify, after construction, that the mamad meets IS 4422 and that construction did not damage the building's structural frame.
-5. Within 45 days of completion, the request author updates the licensing authority and Pikud Ha'Oref.
-
-Costs and exact procedures vary by municipality. Confirm directly with your local Vaadat HaTichnun (planning committee).
+Where eligible: a licensed request author (architect, engineer or building technician) files online through Pikud Ha'Oref's licensing system at **oref-rishuy.org.il**; the competent authority answers within 14 days (תקנה 30ג(ב)); a registered structural engineer certifies the finished mamad; and notice of completion goes to the licensing authority and the competent authority within 45 days (תקנה 30ד). The route is a temporary order running three years from 26.10.2023, already amended three times, so confirm its current status rather than assuming expiry or extension.
 
 ## Buildings Without a Mamad
 
@@ -158,60 +172,103 @@ If your building was built before 1992 and has no mamad:
 
 1. **Miklat (public shelter)** if you can reach it within your zone's time limit.
 2. **Mamak (floor shelter)** if your building has one.
-3. **Interior stairwell** with at least 2 floors above and 1 below you. Do NOT use the top floor or ground floor of the stairwell.
-4. **Interior room** with the fewest exterior walls and windows. Bathroom or interior hallway can work.
+3. **Internal stairwell**, meaning one with no windows and no external walls.
+4. **Interior room** with the most walls and the fewest windows and openings. An internal hallway works. Avoid a room lined with ceramic, porcelain or glass that can shatter.
+
+Do not use a parking garage that Pikud Ha'Oref has not approved as a protected space. An unapproved garage is not shelter.
 
 ### Stairwell Protocol
 
-- Sit on the stairs, not on the landing.
-- Position yourself against the inner wall (closest to the building center).
-- Stay below the window line if there are stairwell windows.
-- Cover your head with your hands.
-- Do NOT use the elevator.
+Pikud Ha'Oref's rule counts floors ABOVE you only, and there is no "one floor below" requirement:
+
+- **Building over three storeys:** stay on a flight of stairs that has at least two floors above it.
+- **Building under three storeys:** stay on the middle floor's flight of stairs.
+- **In both cases:** do not stay on the entrance floor.
+- Stay on the flight of stairs itself, not in the open landing area of the floor.
+- Sit against the internal wall, below the window line, away from the lift doors.
+- Cover your head with your hands. Do NOT use the elevator.
+
+If you use an interior room instead, sit against an internal wall, below the window line, and not facing the door.
 
 ## If Caught Outdoors
 
 When a siren sounds and you cannot reach a shelter in time:
 
-1. **Near a building:** enter the nearest building and follow the building-without-mamad protocol.
-2. **Open area:** lie face down on the ground, cover your head with your hands, stay away from buildings (falling debris) and vehicles.
-3. **In a vehicle:** Pikud Ha'Oref guidance is to pull over safely, exit the vehicle, and enter a nearby building or stairwell. If no shelter is reachable, move away from the vehicle and lie face down. If you cannot safely exit (for example heavy traffic on a highway or inside a tunnel), bend below the window line and cover your head. Tunnels have not been formally endorsed as shelters; exit the tunnel as soon as the road allows and find a protected building.
-4. **Near a bus stop shelter:** concrete bus stops provide some protection; enter and crouch low.
+1. **Near a building:** enter it and follow the building-without-mamad protocol.
+2. **Open area:** lie face down on the ground and protect your head with your hands, away from buildings (falling debris) and vehicles. Lying down is not a formality: Pikud Ha'Oref puts the exposure to fragments at 100% standing and 85% crouching, against 10% lying down. Stay down for at least 10 minutes.
+3. **In a vehicle:** with no alert, keep driving and move closer to a better protected space. On an alert, slow down, move right, stop on the shoulder, **switch off the engine**, check the road is clear, exit and enter a nearby miklat or stairwell. With no building nearby, move past the shoulder or guardrail, lie down and protect your head. Watch for other drivers braking for the shoulder too.
+4. **Never stop under a bridge.** A bridge does not protect against a nearby impact: it can be hit by the blast and collapse, and blast and fragments from a ground impact spread sideways past its open flanks.
+5. **In a tunnel:** if you are already inside the tunnel and can stop safely in a safety bay, you may stop there. If not, stop safely on the roadside outside the tunnel, exit the vehicle, move past the shoulder or guardrail, lie down and protect your head.
+6. **If you cannot lie down** because of a physical limitation, crouch as low as you can and protect your head.
+
+## Other Alerts on the Same System
+
+**Not every alert means the rocket protocol.** Pikud Ha'Oref uses the same channels for several threats, and the sound tells you which one:
+
+- **A rising-and-falling siren, or the Tzeva Adom alert:** rocket or missile fire. Enter the protected space within your protection time.
+- **A short siren burst followed by spoken text:** any other threat. The text names the threat and the required action. Read it.
+- **A short burst then "חדירת כלי טיס עוין":** hostile aircraft or drone. Enter the best protected space you have immediately, and stay there unless a further alert or instruction arrives. This alert can be the only warning; treat any unexplained explosion as an alert.
+
+The app states the threat and the action in the device's configured language (Hebrew, Arabic, English, Russian), and can deliver a 10-second vibration for deaf and hard-of-hearing users, with a torch flash on Android.
+
+**Read the alert before acting on it.** Where the text tells the user to do something other than enter a protected space, follow the text. This skill's priority order is written for the rocket and missile case.
+
+## An Alert in a Crowd or a Public Venue
+
+Noise makes an alert hard to hear, and a crowd rushing at once causes crush injuries. The guidance covers shopping centres, entertainment shows, weddings, synagogues and cultural events:
+
+1. **Organisers must stop the event immediately on the alert and tell the audience.**
+2. If lying down is possible, everyone lies on the ground and protects the head with the hands, against a wall or cover if there is one.
+3. If lying down is not possible, crouch as low as possible to reduce the body's silhouette, and protect the head with the hands.
+4. **At a seated indoor event, stay seated** and protect the head with the hands.
+
+The closer to the ground, the lower the risk from fragments. In an unfamiliar crowded building follow the venue's staff and public-address system rather than running for the street.
+
+## After an Impact Nearby
+
+Some munitions disperse smaller submunitions, and part of them can remain on the ground unexploded after an impact. **They can detonate on contact, and being near them endangers life.** Interceptor and booster fragments land the same way.
+
+The rule is three words: **move away, move others away, report.**
+
+- Move away, keep the curious away, and report any suspicious object to the security forces immediately.
+- **Do not photograph** fallen ordnance or unidentified objects, do not stand near them, and never touch them.
+- Scan a balcony, yard or playground before children play, and teach them what to do if they find something.
+
+**Life-safety override on the stay-inside rule.** Staying until an explicit instruction governs the missile threat. It is not a reason to remain in a space that has itself become dangerous: fire, smoke, a gas smell, or structural damage. Leave, get clear, and call the service you need. 101 is Magen David Adom, 100 the police, 102 fire and rescue, 103 the electric corporation. 104 is an information centre, not a dispatch line.
 
 ## Workplace and School Procedures
 
 ### Employer Obligations
 
-- Every workplace must have a designated protected space.
-- Employers must conduct shelter drills at least once per year.
-- Emergency procedures must be posted in Hebrew and other languages relevant to the workforce.
-- A safety officer (memune betihut) must be appointed.
+Pikud Ha'Oref does not publish the employment-law side and refers employers to the Ministry of Labour, which is where the binding duties live: providing a protected space, appointing a safety officer, drills, and pay during emergency absence.
+
+- Identify the designated protected space and its capacity first, and check people can actually reach it inside the site's protection time.
+- Post the emergency procedure in the languages the workforce actually reads, not only Hebrew.
+- Route the legal duties themselves (safety-officer appointment, mandatory drill frequency, record keeping) to the Ministry of Labour. Do not assert a drill frequency or a headcount trigger from memory.
 
 ### School Protocols
 
-- Schools have a maman (institutional protected space).
-- Teachers are responsible for orderly movement to the shelter.
-- Practice drills are conducted multiple times per year.
-- Students with mobility limitations are assigned ground-floor classrooms near the shelter.
+- **Do not tell a parent their school has a maman.** The protected space varies by school and by build date: some have a maman, some use a miklat or a mamak, and the January 2026 State Comptroller report on protection and sheltering in local authorities documents gaps. Have the user confirm with the school and with the local authority's emergency officer.
+- Teachers are responsible for orderly movement to the protected space, and pupils with mobility limitations are best placed in classrooms near it.
+- Drill frequency is set by the Ministry of Education per school year and security posture. Direct users there rather than quoting a number.
 
 ## Accessibility
 
 ### People with Disabilities
 
-- Public shelters must be accessible per the Equal Rights for Persons with Disabilities Law (Hok Negishut, 2005).
+- The framework statute is חוק שוויון זכויות לאנשים עם מוגבלות, התשנ"ח-1998. The accessibility chapter was added by תיקון מס' 2, התשס"ה-2005, which is where the widely-quoted "2005" comes from. Shelter accessibility itself sits in secondary legislation: תקנות ההתגוננות האזרחית (התאמות נגישות במקלטים), התשע"ו-2016, plus the 2022 regulations on accessibility of emergency evacuation and reception, which require an accessible route to the protected space serving a reception facility.
 - Mamad doors are heavy; people with mobility limitations should practice opening them or arrange for assistance.
-- Service animals are permitted in all shelters.
 - Some municipalities maintain designated accessible shelters; contact your local authority.
 
 ### Elderly and Mobility-Limited Residents
 
-- If you cannot reach a shelter within the time limit, use an interior room on the lowest accessible floor.
+- **Arrange it in advance**: a neighbour or the vaad bayit who will come, and registration with Pikud Ha'Oref. That is the primary answer. An interior room on the lowest accessible floor is a LAST resort, and it is the weakest option in the priority order above, so use it only when nothing better is reachable.
 - Inform neighbors or building committee (vaad bayit) so they can assist during an alert.
-- Register with Pikud Ha'Oref for special needs assistance (call 104 or 1207).
+- Register with Pikud Ha'Oref for special-needs assistance by calling 104, or by SMS or WhatsApp to 052-9104104.
 
 ## Sheltering With Pets
 
-Pets are welcome in protected spaces. Keep a carrier or leash for each animal in or near the mamad, plus a 3-day supply of food and water for the pet. Place small animals in carriers before the siren if possible. Cats, in particular, hide when startled; close interior doors a few minutes before expected alert windows so they cannot disappear under a bed when the siren sounds.
+Keep a carrier or leash for each animal in or near the mamad, plus 3 days of food and water for the pet, and put small animals in carriers before the siren where possible. Cats hide when startled, so close interior doors ahead of an expected alert window. Access for animals to a SHARED space (a public miklat, a mamak, a maman) is set by the operating authority or institution, not by Pikud Ha'Oref, so check yours in advance rather than at the door.
 
 ## Examples
 
@@ -227,20 +284,22 @@ User says: "We have a baby and 15 seconds. The mamad is full of boxes."
 
 Expected answer: Clear the mamad today (it is the single most common failure mode). Pre-position the baby's carrier, formula, diapers, and water inside the mamad. Drill the route from the most-used parts of the home to the mamad door. Confirm the blast door closes fully.
 
-### Example 3: User caught driving on Highway 1 during a ballistic alert
+### Example 3: User caught driving on Highway 1 during an alert
 
 User says: "I just got an alert on Highway 1 between Jerusalem and Tel Aviv. What do I do?"
 
-Expected answer: Pull over safely (do not stop in a tunnel). Exit the car if a building or stairwell is reachable. If not, move away from the vehicle and lie face down. Cover your head. After the siren, wait for the release message before resuming driving.
+Expected answer: Slow down, move right, stop on the shoulder, switch off the engine, check the road is clear and get out. Enter a nearby building or stairwell if there is one. If not, move past the shoulder or guardrail, lie down and protect your head. Do not stop under a bridge. If already inside a tunnel and a safety bay is reachable, stopping there is permitted. Wait for an explicit instruction from Pikud Ha'Oref before resuming, not a fixed number of minutes.
 
 ## Bundled Resources
 
 See the `references/` directory for:
+- `references/alert-response-guide.md`, telling the alerts apart, the do-not-run rule, ventilation between alerts, crowded venues, unexploded ordnance, release-message channels, and the full emergency-number list. **Read this one whenever the question is about the moments during or after an alert.**
 - `references/shelter-preparation-checklist.md`, printable preparation checklist.
-- `references/shelter-types-comparison.md`, detailed comparison of shelter types.
+- `references/shelter-types-comparison.md`, comparison of shelter types plus the full mamad dimension table.
 
 See the `scripts/` directory for:
-- `scripts/shelter_finder.py`, local lookup table that maps a city name (Hebrew or English) to its time-to-shelter band. Treat the table as a best-effort reference and verify against oref.org.il for the user's exact address.
+- `scripts/shelter_finder.py`, looks up a locality's protection time and returns the matching sheltering guidance. Accepts Hebrew or English names.
+- `scripts/protection_times.json`, all 1,418 localities with their protection time, generated from Pikud Ha'Oref's own district table. Carries its own `snapshot_date`. Refresh it with `python3 scripts/shelter_finder.py --refresh`. Verify against oref.org.il for the user's exact address before acting on it.
 
 ## Gotchas
 
@@ -254,11 +313,13 @@ See the `scripts/` directory for:
 
 5. **NBC filters need maintenance.** Gas mask filters and NBC systems expire. An expired filter provides zero protection. Check expiration dates annually.
 
-6. **Do not apply the 10-minute rule to ballistic threats.** That rule is specifically for short-range fire from Gaza or Lebanon. For Iran / Houthi / ballistic scenarios wait for an explicit release message; the army has stated that staying longer than 10 minutes is often required.
+6. **There is no 10-minute rule for leaving a protected space, at any range.** This is the single most dangerous piece of stale guidance still circulating, including in older versions of this skill. The instruction is to stay until Pikud Ha'Oref issues an explicit instruction to leave. If a user quotes the 10-minute rule at you, correct them.
 
-7. **The early-warning notifications are not a siren.** The 15-minute and 10-minute app notifications for ballistic threats are advisories to prepare; they are not the "enter shelter now" signal. The siren itself is still the trigger for actually entering the protected space.
+7. **A preliminary advisory is not an alert.** It means "get closer to a protected space", not "enter it now". The alert is the trigger. Equally, an alert can arrive with no advisory ahead of it, and an advisory can arrive with no alert after it. Never present the advisory as a guaranteed countdown, and never quote a fixed number of minutes for it.
 
-8. **Cities are split across zones.** Jerusalem, Tel Aviv, and Haifa each contain neighborhoods with different time-to-shelter bands. Always verify the user's specific street address at oref.org.il.
+8. **Cities are split into alert zones, but that is not the same as being split across protection-time bands.** Tel Aviv, Jerusalem and Haifa each have several alert polygons, so a siren can sound in one part of the city and not another, which is why oref.org.il asks for a street. In the current official table the protection time is uniform within each of those cities. Verify the address rather than assuming either way.
+
+9. **Do not quote a mamad figure to "Israeli Standard 4422".** The areas, thicknesses and heights are in the 1990 civil-defence construction-specification regulations. IS 4422 covers the door, window and frame items. Miscitation here is endemic in secondary sources.
 
 ## Recommended MCP Servers
 
@@ -268,12 +329,15 @@ See the `scripts/` directory for:
 
 | Source | URL | What to Check |
 |--------|-----|---------------|
-| Pikud Ha'Oref (Home Front Command) | https://www.oref.org.il | Time-to-shelter zone lookup, multi-stage warnings, release messages, protected-space requirements |
+| Pikud Ha'Oref (Home Front Command) | https://www.oref.org.il | Protection-time lookup, warning stages, release messages, protected-space requirements |
+| Pikud Ha'Oref district table (machine-readable) | https://www.oref.org.il/districts/districts_heb.json | Authoritative protection time per locality (`migun_time`, in seconds). This is the table `scripts/protection_times.json` is generated from |
+| Preliminary advisory for fire from Lebanon | https://api.oref.org.il/api/v1/articles//heb/articles/info/iron-swords/1140 | Lead times by area, the advisory heading, distribution channels |
+| Warning stages and leaving the protected space | https://api.oref.org.il/api/v1/articles//heb/articles/info/iron-swords/1128 | The three stages, and the rule that you stay until an explicit instruction |
+| Emergency kit | https://api.oref.org.il/api/v1/articles//heb/articles/info/preparing-protected-space/1201 | Water and food quantities, required and recommended equipment |
 | Pikud Ha'Oref licensing system | https://www.oref-rishuy.org.il | Submit a private mamad construction request, track approval |
-| Standards Institution of Israel | https://www.sii.org.il | Israeli Standard 4422 (mamad), full PDF of the technical specification |
-| Israel Planning Administration | https://www.gov.il/he/departments/iplan | Building code, mamad permit relaxations, public shelter construction |
-| Ministry of the Interior | https://www.gov.il/he/departments/ministry_of_interior | Public shelter registry, municipal shelter maintenance responsibilities |
-| State Comptroller report (2026) | https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2026/Emergency/2026-Emergency-104-Local.pdf | Municipal shelter readiness audit, gaps by locality |
+| Standards Institution of Israel | https://www.sii.org.il/he/standardization/ | Israeli Standard 4422 (blast door, window and frame items). The standard itself is paywalled |
+| Civil-defence construction specifications | https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%94%D7%AA%D7%92%D7%95%D7%A0%D7%A0%D7%95%D7%AA_%D7%94%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%AA_(%D7%9E%D7%A4%D7%A8%D7%98%D7%99%D7%9D_%D7%9C%D7%91%D7%A0%D7%99%D7%99%D7%AA_%D7%9E%D7%A7%D7%9C%D7%98%D7%99%D7%9D) | Mamad area and volume (תקנה 197א), height and width (תקנה 198), thicknesses (תקנה 208), protective wall |
+| State Comptroller report (January 2026) | https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2026/Emergency/2026-Emergency-104-Local.pdf | Municipal shelter readiness audit, gaps by locality |
 
 ## Troubleshooting
 
@@ -284,5 +348,6 @@ See the `scripts/` directory for:
 | Do not know your time-to-shelter zone | Visit oref.org.il, enter your city or street. Or call 104. |
 | Building has no shelter at all | Use the stairwell protocol. Consider installing a private mamad via oref-rishuy.org.il (engineer or architect required). |
 | Shelter is inaccessible (wheelchair) | Contact your municipality for accessible shelter locations. Register with Pikud Ha'Oref via 104. |
-| Conflicting messages: app says "stay", classic 10-minute rule says "exit" | Follow the app. The 10-minute rule does not apply to ballistic threats. Wait for the explicit release message. |
-| Receiving early-warning advisories but no siren | Do NOT leave the area near your protected space. Improve your shelter (water, phone, kit) and wait for the siren or release message. |
+| Conflicting messages: app says "stay", someone quotes the 10-minute rule | Follow the app. The 10-minute rule for leaving a protected space no longer exists at any range. Wait for the explicit instruction from Pikud Ha'Oref. |
+| Received a preliminary advisory but no alert followed | That happens by design and is not a malfunction. Stay near the protected space, use the time to prepare, and treat the alert, not the advisory, as the trigger. |
+| A reference or an older document gives a different protection time for the locality | Trust oref.org.il or `scripts/protection_times.json` over any prose. The table was revised in 2026 for 161 northern and Haifa localities, so older figures are systematically low there. |

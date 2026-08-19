@@ -1,13 +1,13 @@
 {
   "author": "skills-il",
-  "version": "1.2.2",
+  "version": "1.3.0",
   "display_name": {
     "he": "מדריך מקלטים ומרחבים מוגנים בישראל",
     "en": "Israeli Shelter Guide"
   },
   "display_description": {
-    "he": "מדריך למציאת מקלטים ומרחבים מוגנים בישראל, הכנת ממ\"ד לפי הנחיות פיקוד העורף, וזיהוי ההתרעות הרב-שלביות לאיומים בליסטיים. השתמשו כשעוברים לישראל, כשמכינים בית או מקום עבודה, או כשצריך לדעת מה לעשות בזמן צפירה, ברכב, או בבניין ללא ממ\"ד. עוזר להגן על המשפחה לפי תקן ישראלי 4422 ומפרסומי פיקוד העורף 2025-2026. אל תשתמשו לאינטגרציות התרעה בזמן אמת ולא להחלפה של הוראת פיקוד העורף בעת אירוע ממשי.\n",
-    "en": "Guide to finding and preparing shelters in Israel, building a mamad per Pikud Ha'Oref guidance, and interpreting the multi-stage early warning notifications for ballistic threats. Use when moving to Israel, preparing a home or workplace, or deciding what to do during a siren, in a vehicle, or in a building without a safe room. Helps protect family per Israeli Standard 4422 and Pikud Ha'Oref 2025-2026 guidance. Do NOT use for real-time alert integrations and do NOT use as a substitute for Pikud Ha'Oref instructions during an actual event.\n"
+    "he": "מדריך למציאת מקלטים ומרחבים מוגנים בישראל, הכנת ממ\"ד לפי הנחיות פיקוד העורף, וזיהוי ההתרעות הרב-שלביות לאיומים בליסטיים. השתמשו כשעוברים לישראל, כשמכינים בית או מקום עבודה, או כשצריך לדעת מה לעשות בזמן צפירה, ברכב, או בבניין ללא ממ\"ד. עוזר להגן על המשפחה לפי הנחיות פיקוד העורף העדכניות ותקנות המפרטים לבניית מקלטים, ומסביר על מה תקן ישראלי 4422 חל ועל מה לא. אל תשתמשו לאינטגרציות התרעה בזמן אמת ולא להחלפה של הוראת פיקוד העורף בעת אירוע ממשי.\n",
+    "en": "Guide to finding and preparing shelters in Israel, building a mamad per Pikud Ha'Oref guidance, and interpreting the multi-stage early warning notifications for ballistic threats. Use when moving to Israel, preparing a home or workplace, or deciding what to do during a siren, in a vehicle, or in a building without a safe room. Helps protect family per current Pikud Ha'Oref guidance and the civil-defence construction specifications, and explains what Israeli Standard 4422 does and does not cover. Do NOT use for real-time alert integrations and do NOT use as a substitute for Pikud Ha'Oref instructions during an actual event.\n"
   },
   "tags": {
     "he": [
