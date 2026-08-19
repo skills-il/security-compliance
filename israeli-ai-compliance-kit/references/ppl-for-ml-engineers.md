@@ -5,10 +5,9 @@ Practical mapping of Israel's Privacy Protection Law (PPL) and Amendment 13 to r
 ## Key Framework
 
 - Primary statute: Privacy Protection Law, 1981 (Chok Hagnat HaPratiyut)
-- Amendment 13: Significant modernization, in force since August 14, 2025. DPO-appointment grace period expired October 31, 2025
 - Implementing regulations: Data Security Regulations, 2017
 - Regulator: Privacy Protection Authority (PPA, Rashut LeHaganat HaPratiyut)
-- First AI-specific signal: PPA AI guidance, April 30, 2025 (public consultation closed June 5, 2025; still formally in draft as of May 2026, but the PPA enforces it as its operative compliance standard, so align with it as if binding)
+- First AI-specific signal: PPA AI guidance, 2025 (public consultation closed June 5, 2025; still formally in draft as of August 2026, but the PPA enforces it as its operative compliance standard, so align with it as if binding)
 
 ## PPL Vocabulary You Will Encounter
 
@@ -31,7 +30,7 @@ Legal questions:
 - Is notice provided to data subjects at collection?
 - For web-scraped data: is the source explicitly or implicitly licensing the content?
 
-PPA April 2025 guidance is clear: unauthorized scraping of personal data for AI training is prohibited. Scraping from terms-of-service-protected sites creates direct exposure.
+PPA draft AI guidance is clear: unauthorized scraping of personal data for AI training is prohibited. Scraping from terms-of-service-protected sites creates direct exposure.
 
 Concrete controls:
 - Data source registry with lawful basis per source
@@ -120,7 +119,6 @@ Concrete controls:
 Amendment 13 entered into force on August 14, 2025. Key changes that are now enforceable:
 
 - Expanded definition of personal information brings more data into scope
-- New DPO role for orgs processing sensitive data at scale, systematic monitoring, public authorities, data brokers. PPA granted a grace period on DPO appointment until October 31, 2025; this grace period has expired and the obligation is now fully enforceable
 - Broader breach notification obligations with tighter timelines
 - Increased enforcement powers for the PPA, including administrative financial penalties (fines can reach millions of NIS) and authority to petition for cease-processing or deletion orders
 - Sharper data subject rights, including around automated decisions
@@ -130,6 +128,6 @@ Budget headcount for DPO if you fall into the triggers. The role must be reasona
 ## Common Mistakes
 
 - Treating PPL database registration as equivalent to GDPR Article 30 records. They are different obligations with different triggers.
-- Assuming training data that is "public" is lawful to use. Public does not mean unrestricted. PPA guidance in April 2025 was explicit on this point.
+- Assuming training data that is "public" is lawful to use. Public does not mean unrestricted. PPA draft AI guidance was explicit on this point.
 - Using managed LLM vendors without a DPA or without verifying data residency and sub-processing terms.
 - Forgetting that inference logs are personal data and subject to the same rules as training data.

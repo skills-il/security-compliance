@@ -29,13 +29,18 @@ ANNEX_III_CATEGORIES = [
     ("justice", "Administration of justice, democratic processes"),
 ]
 
+# A SCREEN, not a rendering of Article 5. Each label is shortened; read the Article
+# before relying on a negative answer. Note that Article 5(1)(c) social scoring is NOT
+# limited to public authorities, and 5(1)(a) and 5(1)(g) are easy to miss.
 PROHIBITED_PRACTICES = [
-    ("social_scoring", "General-purpose social scoring by public authorities"),
-    ("biometric_public", "Real-time remote biometric ID in public for law enforcement"),
-    ("emotion_work_school", "Emotion recognition in workplace or educational settings"),
-    ("predictive_policing_profile", "Predictive policing based solely on profiling"),
-    ("untargeted_scraping_face", "Untargeted scraping of facial images from the internet"),
-    ("vulnerability_exploitation", "Exploiting vulnerabilities of specific groups"),
+    ("subliminal_manipulative", "Subliminal, purposefully manipulative or deceptive techniques that materially distort behaviour and cause significant harm (Art 5(1)(a))"),
+    ("vulnerability_exploitation", "Exploiting vulnerabilities of age, disability or a specific social or economic situation (Art 5(1)(b))"),
+    ("social_scoring", "Social scoring of persons or groups over time, by ANY actor public or private, leading to detrimental or unjustified treatment (Art 5(1)(c))"),
+    ("predictive_policing_profile", "Predicting criminal offending based solely on profiling or personality traits (Art 5(1)(d))"),
+    ("untargeted_scraping_face", "Untargeted scraping of facial images from the internet or CCTV to build or expand facial recognition databases (Art 5(1)(e))"),
+    ("emotion_work_school", "Inferring emotions in the workplace or education, outside medical or safety uses (Art 5(1)(f))"),
+    ("biometric_categorisation_sensitive", "Biometric categorisation to deduce race, political opinions, trade union membership, religious or philosophical beliefs, sex life or sexual orientation (Art 5(1)(g))"),
+    ("biometric_public", "Real-time remote biometric ID in publicly accessible spaces for law enforcement (Art 5(1)(h))"),
 ]
 
 
@@ -49,37 +54,89 @@ def ask_yn(q: str) -> bool:
         print("Please answer y or n.")
 
 
+# Article 5 was amended by Regulation (EU) 2026/1744 (Digital Omnibus on AI), which
+# inserted further prohibited practices applying from 2 December 2026. The list below
+# predates that amendment, so a "not prohibited" result from this script is not a
+# clearance. Every non-prohibited result carries the warning below.
+AMENDED_ARTICLE_5_WARNING = (
+    "This is a SCREEN, not a clearance. The questions above are shortened paraphrases "
+    "of Article 5(1)(a) to (h), and Regulation (EU) 2026/1744 further adds points (ba) "
+    "and (bb) to Article 5(1) first subparagraph plus Articles 5(1a) and 5(1b), all "
+    "applying from 2 December 2026, which this script does not ask about at all. A "
+    "not-prohibited result here means only that none of the shortened questions matched. "
+    "Read the amended Article 5 in full before telling anyone the system is lawful."
+)
+
+ROLE_CAVEAT = (
+    "- This result assumes you have already determined your ROLE. Provider, deployer, "
+    "importer and distributor carry different obligations, and a deployer that puts its "
+    "own name or trademark on a high-risk system, or substantially modifies one, can be "
+    "treated as its provider. Read Articles 3, 25 and 26 of Regulation (EU) 2024/1689 "
+    "rather than assuming. Article 4 AI literacy binds deployers as well as providers."
+)
+
+APPLICABILITY_DATES = (
+    "Applicability, per Article 113 as amended by Regulation (EU) 2026/1744: the "
+    "general date of application remains 2 August 2026 and has passed. Chapter III "
+    "Sections 1 to 3 apply from 2 December 2027 for Annex III high-risk systems "
+    "(Article 6(2)) and from 2 August 2028 for Annex I high-risk systems (Article 6(1))."
+)
+
+
 def classify(answers: dict) -> dict:
     reasons = []
     next_steps = []
 
-    # Step 1: prohibited?
-    for key, label in PROHIBITED_PRACTICES:
-        if answers.get(f"prohibited_{key}"):
-            return {
-                "classification": "Prohibited",
-                "reasons": [f"Matches prohibited practice: {label}"],
-                "next_steps": ["Cannot be placed on the EU market. Redesign or exclude EU."],
-            }
-
-    # Step 2: in scope?
+    # Step 1: scope FIRST. Article 5 prohibitions are obligations under Regulation
+    # (EU) 2024/1689, so they bite only on a system within the Regulation's Article 2
+    # scope. Testing prohibitions before scope told Israel-only deployments they were
+    # "Prohibited" under a regulation that does not apply to them.
     in_scope = (
         answers.get("eu_placed_on_market")
         or answers.get("eu_put_into_service")
         or answers.get("eu_output_used")
     )
     if not in_scope:
-        return {
-            "classification": "Out of scope",
-            "reasons": [
-                "System is not placed on the EU market, not put into service in the EU, "
-                "and its output is not used in the EU."
-            ],
-            "next_steps": [
-                "Re-run this classification if EU deployment plans change.",
-                "Document the scoping decision with date and owner.",
-            ],
-        }
+        matched = [
+            label for key, label in PROHIBITED_PRACTICES
+            if answers.get(f"prohibited_{key}")
+        ]
+        reasons = [
+            "System is not placed on the EU market, not put into service in the EU, "
+            "and its output is not used in the EU, so Regulation (EU) 2024/1689 does "
+            "not apply to it."
+        ]
+        steps = [
+            "Re-run this classification if EU deployment plans change.",
+            "Document the scoping decision with date and owner.",
+            "Confirm your ROLE before trusting this result. Provider, deployer, "
+            "importer and distributor carry different obligations, and a deployer that "
+            "puts its own name or trademark on a high-risk system, or substantially "
+            "modifies one, can be treated as its provider. If in doubt, read Articles "
+            "3, 25 and 26 of Regulation (EU) 2024/1689 rather than assuming.",
+            "Israeli law still applies. Check the PPL and Amendment 13, and your "
+            "sector regulator.",
+        ]
+        if matched:
+            reasons.append(
+                "NOTE: this system matches practices that WOULD be prohibited if it "
+                "were in scope: " + "; ".join(matched) + ". That is a design and "
+                "ethics signal and it blocks any future EU launch, but it is not an "
+                "EU AI Act finding today."
+            )
+        return {"classification": "Out of scope", "reasons": reasons, "next_steps": steps}
+
+    # Step 2: prohibited? (only meaningful once the system is in scope)
+    for key, label in PROHIBITED_PRACTICES:
+        if answers.get(f"prohibited_{key}"):
+            return {
+                "classification": "Prohibited",
+                "reasons": [f"Matches prohibited practice: {label}"],
+                "next_steps": [
+                    "Cannot be placed on the EU market. Redesign or exclude EU.",
+                    AMENDED_ARTICLE_5_WARNING,
+                ],
+            }
 
     # Step 3: GPAI?
     if answers.get("is_gpai"):
@@ -178,6 +235,31 @@ def classify(answers: dict) -> dict:
     }
 
 
+ALL_ANSWER_KEYS = (
+    [f"prohibited_{k}" for k, _ in PROHIBITED_PRACTICES]
+    + ["eu_placed_on_market", "eu_put_into_service", "eu_output_used"]
+    + ["is_gpai", "gpai_systemic_risk"]
+    + [f"annex_iii_{k}" for k, _ in ANNEX_III_CATEGORIES]
+    + ["is_chatbot", "generates_synthetic_content", "is_emotion_recognition_general"]
+)
+
+
+def validate_answers(answers: dict):
+    """Return (unknown_keys, missing_keys).
+
+    An absent key used to default to False, so a partially filled or misspelled
+    input produced a confident clearance against questions nobody had answered.
+    Silence is not a 'no'.
+    """
+    known = set(ALL_ANSWER_KEYS)
+    unknown = set(answers) - known
+    missing = known - set(answers)
+    # gpai_systemic_risk is only meaningful when is_gpai is true.
+    if not answers.get("is_gpai"):
+        missing.discard("gpai_systemic_risk")
+    return unknown, missing
+
+
 def interactive() -> dict:
     print("EU AI Act classifier. Answer each question y or n.\n")
     a = {}
@@ -212,6 +294,10 @@ def render(result: dict) -> str:
     lines.append("### Next Steps")
     for s in result["next_steps"]:
         lines.append(f"- {s}")
+    if result["classification"] not in ("Prohibited", "Out of scope"):
+        lines += ["", "### Caveats", f"- {AMENDED_ARTICLE_5_WARNING}"]
+    if result["classification"] != "Out of scope":
+        lines += [f"- {APPLICABILITY_DATES}", ROLE_CAVEAT]
     return "\n".join(lines) + "\n"
 
 
@@ -245,6 +331,23 @@ def main() -> int:
                 answers = json.load(f)
         except (OSError, json.JSONDecodeError) as e:
             print(f"Error loading input: {e}", file=sys.stderr)
+            return 1
+        if not isinstance(answers, dict):
+            print("Error: input JSON must be an object mapping answer keys to true/false.",
+                  file=sys.stderr)
+            return 1
+        unknown, missing = validate_answers(answers)
+        if unknown:
+            print("Error: unrecognised answer keys (typo?): " + ", ".join(sorted(unknown)),
+                  file=sys.stderr)
+            return 1
+        if missing:
+            print(
+                "Error: the following answers are missing, and an unanswered question is "
+                "NOT the same as a 'no'. Supply every key explicitly:\n  "
+                + "\n  ".join(sorted(missing)),
+                file=sys.stderr,
+            )
             return 1
     else:
         answers = interactive()

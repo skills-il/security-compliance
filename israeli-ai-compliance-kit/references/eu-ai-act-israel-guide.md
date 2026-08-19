@@ -74,26 +74,35 @@ GPAI models with systemic risk (above a compute threshold, currently 10^25 FLOPs
 | August 1, 2024 | In force | Act enters into force |
 | February 2, 2025 | In force | Prohibitions (Article 5) and AI literacy obligations (Article 4) apply |
 | August 2, 2025 | In force | GPAI obligations, governance structures, penalties apply. New GPAI models placed on the EU market after this date must comply immediately; providers of pre-existing GPAI models have until August 2, 2027 to comply |
-| December 2, 2026 | Upcoming | Article 50(2) synthetic-content transparency obligations apply. Providers of AI systems generating synthetic audio, image, video, or text must mark outputs as artificially generated in a machine-readable format |
-| December 2, 2027 | Upcoming (revised, previously August 2, 2026) | Annex III high-risk requirements (Articles 6 to 15) apply to stand-alone high-risk AI systems |
-| August 2, 2028 | Upcoming (revised) | High-risk requirements apply to AI systems embedded in products already covered by sector-specific EU legislation (Annex I) |
+| July 27, 2026 | In force | Articles 102 to 110 apply, per the new Article 113(3)(d) |
+| August 2, 2026 | In force | **The general date of application, which did NOT move.** Article 50 transparency obligations apply to systems placed on the market from this date |
+| December 2, 2026 | Upcoming | Two NEW prohibitions inserted by the Omnibus apply: Article 5(1) first subparagraph points (ba) and (bb), and Article 5(1a) and (1b) |
+| December 2, 2026 | Upcoming | Providers of AI systems generating synthetic audio, image, video or text **that were placed on the market before August 2, 2026** must comply with Article 50(2) by this date (new Article 111(4)). This is a legacy grace period, not the start date for new systems |
+| December 2, 2027 | Upcoming (moved from August 2, 2026) | Chapter III Sections 1 to 3 apply to high-risk AI systems under Article 6(2) and Annex III |
+| August 2, 2028 | Upcoming (moved from August 2, 2027) | Chapter III Sections 1 to 3 apply to high-risk AI systems under Article 6(1) and Annex I |
+| August 2, 2030 | Upcoming | Providers and deployers of high-risk systems intended for use by public authorities (amended Article 111(2)) |
 
-**Timeline change (Digital Omnibus on AI, May 7, 2026):** the Council and Parliament reached a provisional political agreement to postpone the Annex III high-risk deadline from August 2, 2026 to December 2, 2027, and the Annex I product-embedded deadline to August 2, 2028. The Article 50(2) synthetic-content transparency grace period was compressed so it now takes effect December 2, 2026. GPAI obligations (in force since August 2, 2025) were NOT postponed. The agreement is provisional and pending formal adoption of the amending regulation, so treat these dates as not yet final.
+**Timeline change (Digital Omnibus on AI): adopted, not pending.** Regulation (EU) 2026/1744 of 8 July 2026 was published in OJ L 2026/1744 on 24 July 2026 and entered into force on 27 July 2026. It amends Regulation (EU) 2024/1689 directly, so quote the amended Article 113 rather than the original, and cite EUR-Lex rather than a tracker site (`artificialintelligenceact.eu/implementation-timeline` still shows the pre-Omnibus schedule).
+
+Only the HIGH-RISK dates moved. GPAI obligations were not postponed, and the general date of application stayed at 2 August 2026. Any customer document reading "the AI Act was postponed to 2027" as covering everything is wrong.
+
+The Commission's stated reason for the postponement is the delayed availability of standards, common specifications and alternative guidance, and the delayed establishment of national competent authorities.
 
 ## General-Purpose AI Code of Practice
 
-On July 10, 2025 the European AI Office published the final version of the voluntary Code of Practice for GPAI providers. The Code was endorsed by the European Commission and the AI Board on August 1, 2025 via adequacy decisions. It has three chapters: Transparency, Copyright, and Safety and Security. Signing is voluntary but is the Commission's preferred route for demonstrating compliance with GPAI obligations. For Israeli GPAI providers selling into the EU, signing the Code is usually less work than building a bespoke compliance dossier.
+On July 10, 2025 the European AI Office published the final version of the voluntary Code of Practice for GPAI providers. The Commission and the AI Board have confirmed that the Code is an adequate voluntary tool. It has three chapters: Transparency, Copyright, and Safety and Security. Signing is voluntary but is the Commission's preferred route for demonstrating compliance with GPAI obligations. For Israeli GPAI providers selling into the EU, signing the Code is usually less work than building a bespoke compliance dossier.
 
 ## Decision Framework for Israeli Companies
 
 Run through these questions in order:
 
-1. **Is my system prohibited?** If yes, stop. Do not place on EU market.
-2. **Am I a provider placing on the EU market, or will my output be used in the EU?** If no to both, you are outside scope.
-3. **Is my system in Annex III (high-risk)?** If yes, plan for full high-risk obligations and EU authorized representative.
-4. **Is my system limited-risk (chatbot, deepfake, emotion recognition outside work/school)?** If yes, transparency obligations apply.
-5. **Is my model a GPAI?** If it is a foundation model offered for downstream use, GPAI obligations apply. Check compute threshold for systemic-risk tier.
-6. **If minimal-risk:** consider voluntary codes of conduct for signaling trust to EU customers.
+1. **Am I in scope at all?** Is the system placed on the EU market, put into service in the EU, or is its output used in the EU? If no to all three, Regulation (EU) 2024/1689 does not apply. Ask this FIRST: the prohibitions are obligations under the Regulation, so they cannot bite a system the Regulation does not reach. An Israel-only deployment is outside scope even if it does something the Act would prohibit, and it is still governed by Israeli law.
+2. **What is my ROLE?** Provider, deployer, importer or distributor carry different obligations, and a deployer that puts its own name or trademark on a high-risk system, or substantially modifies one, can be treated as its provider. For the common Israeli profile, a wrapper or fine-tune over a third-party foundation model sold to EU enterprise customers, this question decides everything. Read Articles 3, 25 and 26 rather than assuming; note also that Article 4 AI literacy has bound deployers as well as providers since 2 February 2025.
+3. **Is my system prohibited?** If yes, stop. Do not place on the EU market. Check the amended Article 5, which Regulation (EU) 2026/1744 extended with further prohibitions applying from 2 December 2026.
+4. **Is my system in Annex III (high-risk)?** If yes, plan for full high-risk obligations and an EU authorised representative. Article 6(3) provides a derogation for an Annex III system that performs a narrow procedural task, improves a prior human activity, detects decision patterns without replacing human assessment, or performs preparatory work, and does not profile. Read Article 6 before claiming it, and note that claiming it carries its own registration duty.
+5. **Is my system limited-risk (chatbot, deepfake, emotion recognition outside work/school)?** If yes, transparency obligations apply, and they are live now: the general date of application, 2 August 2026, did not move.
+6. **Is my model a GPAI?** If it is a foundation model offered for downstream use, GPAI obligations apply. Check the compute threshold for the systemic-risk tier.
+7. **If minimal-risk:** consider voluntary codes of conduct for signalling trust to EU customers.
 
 ## Practical Notes for Israeli Teams
 
