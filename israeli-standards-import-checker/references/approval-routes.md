@@ -18,7 +18,7 @@ Find a product's group via the Commissioner's EU-regulation search engine (https
 ## 1. Type approval (ishur tipus) by SII
 
 - Scope: a specific model configuration. This is the "model approval" step for Group 1 goods.
-- When to use: products inside a mandatory-standard category that are not (yet) covered by the EU-recognition route, or products excluded from the fast track (for example AC mains electrical equipment 50-1000 V AC / 75-1500 V DC).
+- When to use: products inside a mandatory-standard category whose governing EU regulation is not yet in the Fifth Appendix or has not yet reached its commencement date, or products in the statutory exclusion list.
 - Outcome: a product file (tik mutzar) is opened. Subsequent shipments of the same model can move to a lighter regime (shipment approval or an easement plan).
 - Gotcha: sister models, different voltages, or material changes may require a fresh or variant approval.
 
@@ -51,24 +51,27 @@ Contact: gali_aviv@sii.org.il for eligibility questions.
 ## 5. EU-regulation recognition ("What's Good for Europe is Good for Israel", Amendment 19)
 
 - Effective date: phased from 1 January 2025 through 2028, under Amendment 19 to the Standards Law.
-- Mechanism: optional import route using compliance with an EU regulation/directive that has been adopted into the Israeli Standards Law. About 69 EU regulations have been adopted as of early 2026, touching roughly 444 of Israel's 573 mandatory standards. The route is declaratory: customs broker files on Sha'ar Olami, importer keeps the dossier on file. For 2025-2030, enforcement focuses on adopted-directive sections that correspond to parallel SI sections.
+- Mechanism: optional import route using compliance with an EU regulation/directive that has been adopted into the Israeli Standards Law. Published counts of how many Israeli mandatory standards this touches vary widely between sources; the Fifth Appendix is the only authoritative statement of what is adopted and in force on a given date. The route is declaratory: customs broker files on Sha'ar Olami, importer keeps the dossier on file. For 2025-2030, enforcement focuses on adopted-directive sections that correspond to parallel SI sections.
 - First wave (January 2025): REACH (chemical safety), the Low-Voltage Directive (LVD), the Electromagnetic Compatibility Directive (EMC) and the Personal Protective Equipment Regulation (PPE).
-- Phased additions: toy safety and food-contact materials from Feb/Mar 2025; a July 2025 wave covering hazardous materials, medical devices, elevators and wheelchair lifts, construction materials, batteries, and cosmetics.
-- Exclusions: food, motor vehicles, items under official fire-safety standards (limited exception for portable firefighting equipment), and AC mains electrical equipment 50-1000 V AC / 75-1500 V DC.
+- Phased additions: every Fifth Appendix entry has its own commencement date. Toy safety and GPSR from 1 February 2025; food-contact plastics, food-contact materials, detergents, POPs and textile labelling from 1 March 2025; CLP, biocides and medical devices from 1 July 2025. Do NOT describe these as a single wave, and note the long tail: batteries at 18 months from Amendment 19's commencement, construction products at two years, cosmetics at three years, and lifts on 1 July 2027.
+- Exclusions under section 9(a)(1) of the Standards Law: food, motor vehicles, and goods under an official fire-safety standard. Portable extinguishing equipment that is not permanently fixed to land or a building, extinguishing agents, and standalone smoke detectors stay INSIDE the route. Mains electrical equipment is NOT excluded: the Low Voltage Directive is adopted.
 - When to use: CE-marked EU products whose standard has been adopted. Faster and cheaper than a full SII file. Check the Commissioner's search engine (https://www.gov.il/en/service/search_official_standards) by SI number to confirm coverage.
 
-## 6. Radio / wireless (July 2022)
+## 6. Radio / wireless
 
-- Effective date: 4 July 2022.
-- Mechanism: Ministry of Communications accepts an EU DoC or CoC for radio equipment.
-- Scope: covers radio portion; electrical safety and EMC may still need separate handling.
+- Base rule: importing a wireless device requires a compliance certificate (ishur hat'ama) from the Ministry of Communications under regulation 2(a) of the Wireless Telegraph (Compliance Certificates) Regulations 5781-2021. This is a certificate, not a self-declaration.
+- Easement: regulation 5a, added 7 July 2022, lets an applicant whose device conforms to the EU regime attach an EU conformity document plus a specification of the device's radio characteristics instead of the standard document set. It changes what you file, not whether you file.
+- Scope: covers the radio portion; electrical safety, EMC and the SI 32 plug requirement still follow their own tracks.
 
-## 7. US-standards recognition (Amendment 21, proposed)
+## 7. US-standards recognition (Amendment 21)
 
-- Status: draft introduced in November 2025; not yet primary legislation as of May 2026.
-- Mechanism (proposed): mirror Amendment 19 but for compliance with US Federal Regulations.
-- Administrative first wave (announced March 2025, expected H2 2026): children's products, bicycles, ladders, lighters, crockery / food packaging, and cleaning materials.
-- Treat US-only documentation as supporting evidence inside an Israeli filing until Amendment 21 is published in Reshumot.
+- Status: passed by the Knesset in second and third reading on 16 July 2026 as the Standards Law (Amendment 21) 5786-2026. It starts six months after publication, i.e. at the beginning of 2027, and the start date can be deferred.
+- Mechanism: an American route alongside the European one, based on compliance with US federal regulation.
+- Hard condition: the product must actually be manufactured in the United States (or in Israel). US-rule compliance alone is not enough.
+- Exclusions: food, motor vehicles, cosmetics, and products subject to fire-safety standards.
+- Ongoing duty: the importer must follow US recall notices and manufacturer notices and report to the Commissioner of Standardization.
+- First wave: baby and children's goods, toys, bottles, drinking accessories, feeding utensils, beds, cribs, strollers, swings, bouncers, bicycles, and detergents.
+- Until the start date, treat US-only documentation as supporting evidence inside an Israeli filing, not as a route.
 
 ## Decision order
 

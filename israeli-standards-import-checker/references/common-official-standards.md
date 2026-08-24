@@ -8,12 +8,16 @@ A takan rishmi (official / mandatory standard) is binding in manufacturing, impo
 
 | SI | Topic | Basis |
 |---|---|---|
-| SI 562 part 1 | Mechanical and physical properties | EN 71-1 |
+| SI 562 part 1 | Mechanical and physical properties | EN 71-1 (revised Nov 2022, transition to 16 Apr 2023) |
 | SI 562 part 2 | Flammability | EN 71-2 |
-| SI 562 part 3 | Migration of chemical elements | EN 71-3 (revised Nov 2022 transition to Apr 2023) |
+| SI 562 part 3 | Migration of chemical elements | EN 71-3 |
 | SI 562 part 7 | Finger paints | EN 71-7 |
 
-Toy safety joined the January 2025 EU-recognition catalogue during the phased roll-out that begins February/March 2025. The upstream EN 71-1 was republished in 2025 (EN 71-1:2025) but Israel had not adopted the new version as of May 2026; importers using the EU route should verify which EN 71-1 vintage the SII catalogue currently accepts.
+Toy safety joined the January 2025 EU-recognition catalogue during the phased roll-out that begins February/March 2025. The upstream EN 71-1 was republished in 2025 (EN 71-1:2025) but Israel had not adopted the new version as of August 2026; importers using the EU route should verify which EN 71-1 vintage the SII catalogue currently accepts.
+
+## Plugs, sockets and cords
+
+SI 32 is official on all its parts. Israel uses the Type H plug, so a mains-powered product supplied with a European or Chinese plug fails regardless of how complete its IEC 60335 dossier is, and shipping an adapter is not a fix for a product being placed on the market. Part 1.1 covers plugs and socket-outlets for household and similar purposes rated up to 16 A.
 
 ## Household and similar electrical appliances
 
@@ -22,7 +26,7 @@ SI 900 family, equivalent to IEC 60335-1. Many sub-parts are declared mandatory 
 - SI 900 part 2.5: dishwashers
 - SI 900 part 2.29: battery chargers
 
-AC mains equipment rated 50-1000 V AC or 75-1500 V DC is currently excluded from the EU fast-track recognition route and still requires an Israeli filing.
+Mains electrical equipment is NOT excluded from the EU-recognition route: the Fifth Appendix adopts the Low Voltage Directive 2014/35/EU, covering electrical equipment supplied at up to 1,000 volts, from Amendment 19's commencement, with low-voltage electrical cables deferred to 1 January 2027. What the statute does require separately is that an electrical device match the electricity network in use in Israel, which is why SI 32 and the Type H plug decide most mains shipments from Asia.
 
 ## Food-contact plastics
 
@@ -30,7 +34,7 @@ AC mains equipment rated 50-1000 V AC or 75-1500 V DC is currently excluded from
 
 ## Cosmetics
 
-Governed by the Pharmacists' Regulations (Cosmetics) 5783-2022 and enforced by the Ministry of Health. Post-reform, EU-compliant products enter via a notification to the Ministry of Health; the registration fee was cancelled. SII lab testing is generally not required when the EU dossier is complete.
+Governed by the Pharmacists' Regulations (Cosmetics) 5783-2023 and enforced by the Ministry of Health. Post-reform, EU-compliant products enter via a notification to the Ministry of Health; the registration fee was cancelled. SII lab testing is generally not required when the EU dossier is complete.
 
 ## Motor vehicles
 
@@ -40,7 +44,7 @@ Governed by the Pharmacists' Regulations (Cosmetics) 5783-2022 and enforced by t
 
 ## Radio and wireless equipment
 
-Since the 4 July 2022 amendment to the Wireless Telegraph Regulations (Certificates of Compliance), the Ministry of Communications accepts DoC or CoC compliant with EU regulations for radio equipment imports. Type approvals are still required from the Ministry of Communications.
+Importing a wireless device requires a compliance certificate (ishur hat'ama) from the Ministry of Communications under regulation 2(a) of the Wireless Telegraph (Compliance Certificates) Regulations 5781-2021. Regulation 5a, added 7 July 2022, lets an EU-conforming device attach an EU conformity document and a radio-characteristics specification instead of the standard document set. That is an easement on the paperwork, not on the certificate: an EU DoC alone does not release the shipment.
 
 ## Other regulated categories (consult SII for current status)
 
