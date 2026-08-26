@@ -46,37 +46,64 @@ PROJECT_DIR="$(cd "$PROJECT_DIR" && pwd)"
 # ---------------------------------------------------------------------------
 # Patterns for Israeli service credentials
 # ---------------------------------------------------------------------------
-declare -A PATTERNS
+# Patterns are written as POSIX extended regular expressions (ERE), not PCRE.
+# BSD/macOS grep has no -P, and the previous PCRE patterns combined with
+# "|| true" made the scanner report a clean project on macOS no matter what was
+# leaked. ERE + "grep -iE" works identically on GNU and BSD grep.
+#
+# Portability note: bash 3.2 (the /bin/bash macOS still ships) has no
+# associative arrays, so patterns are held in two parallel indexed arrays.
+Q="[\"']"                 # a quote character
+SP="[[:space:]]"          # whitespace, standalone
+SPC="[:space:]"           # whitespace CLASS, for use inside a bracket expression
+D="[0-9]"                 # digit
+AN="[a-zA-Z0-9]"          # alphanumeric
+
+PATTERN_NAMES=()
+PATTERN_REGEXES=()
+PATTERN_SEVERITIES=()
+
+add_pattern() {
+    PATTERN_NAMES+=("$1")
+    PATTERN_REGEXES+=("$2")
+    PATTERN_SEVERITIES+=("$3")
+}
 
 # Israeli Payment Gateways
-PATTERNS["Cardcom Terminal Number"]='(?i)(cardcom|terminal)[_\s]*[=:]\s*["\x27]?\d{6,8}["\x27]?'
-PATTERNS["Tranzila Supplier Code"]='(?i)(tranzila|supplier)[_\s]*[=:]\s*["\x27]?[a-zA-Z0-9]{4,20}["\x27]?'
-PATTERNS["PayMe Seller ID"]='(?i)(payme|seller[_\s]?id)[_\s]*[=:]\s*["\x27]?[a-zA-Z0-9-]{8,}["\x27]?'
-PATTERNS["Meshulam API Key"]='(?i)(meshulam|page[_\s]?code)[_\s]*[=:]\s*["\x27]?[a-zA-Z0-9]{6,}["\x27]?'
+add_pattern "Cardcom Terminal Number" "(cardcom|terminal)[_${SPC}]*[=:]${SP}*${Q}?${D}{6,8}${Q}?" "CRITICAL"
+add_pattern "Tranzila Supplier Code" "(tranzila|supplier)[_${SPC}]*[=:]${SP}*${Q}?${AN}{4,20}${Q}?" "CRITICAL"
+add_pattern "PayMe Seller ID" "(payme|seller[_${SPC}]?id)[_${SPC}]*[=:]${SP}*${Q}?[a-zA-Z0-9-]{8,}${Q}?" "CRITICAL"
+add_pattern "Meshulam API Key" "(meshulam|page[_${SPC}]?code)[_${SPC}]*[=:]${SP}*${Q}?${AN}{6,}${Q}?" "CRITICAL"
 
 # Israeli SMS Gateways
-PATTERNS["Cellact API Key"]='(?i)cellact[_\s-]*(api|key|token|secret)[_\s]*[=:]\s*["\x27]?[a-zA-Z0-9]{16,}["\x27]?'
-PATTERNS["InforUMobile API Key"]='(?i)(inforu|informobile)[_\s-]*(api|key|token)[_\s]*[=:]\s*["\x27]?[a-zA-Z0-9]{16,}["\x27]?'
-PATTERNS["019 SMS API Key"]='(?i)019[_\s-]*(sms|api|key|token)[_\s]*[=:]\s*["\x27]?[a-zA-Z0-9]{16,}["\x27]?'
+add_pattern "Cellact API Key" "cellact[_${SPC}-]*(api|key|token|secret)[_${SPC}]*[=:]${SP}*${Q}?${AN}{16,}${Q}?" "CRITICAL"
+add_pattern "InforUMobile API Key" "(inforu|informobile)[_${SPC}-]*(api|key|token)[_${SPC}]*[=:]${SP}*${Q}?${AN}{16,}${Q}?" "CRITICAL"
+add_pattern "019 SMS API Key" "019[_${SPC}-]*(sms|api|key|token)[_${SPC}]*[=:]${SP}*${Q}?${AN}{16,}${Q}?" "CRITICAL"
 
 # Supabase
-PATTERNS["Supabase Service Role Key"]='(?i)(supabase|service[_\s-]*role)[_\s-]*(key|secret)[_\s]*[=:]\s*["\x27]?eyJ[a-zA-Z0-9_-]{20,}["\x27]?'
-PATTERNS["Supabase Anon Key (in backend)"]='(?i)supabase[_\s-]*anon[_\s-]*(key)[_\s]*[=:]\s*["\x27]?eyJ[a-zA-Z0-9_-]{20,}["\x27]?'
+add_pattern "Supabase Service Role Key" "(supabase|service[_${SPC}-]*role)[_${SPC}-]*(key|secret)[_${SPC}]*[=:]${SP}*${Q}?eyJ[a-zA-Z0-9_-]{20,}${Q}?" "CRITICAL"
+add_pattern "Supabase Anon Key (in backend code)" "supabase[_${SPC}-]*anon[_${SPC}-]*(key)[_${SPC}]*[=:]${SP}*${Q}?eyJ[a-zA-Z0-9_-]{20,}${Q}?" "HIGH"
 
 # Israeli Bank APIs
-PATTERNS["Israeli Bank API Credential"]='(?i)(poalim|leumi|discount|mizrahi|hapoalim)[_\s-]*(api|key|token|secret|password)[_\s]*[=:]\s*["\x27]?[a-zA-Z0-9]{10,}["\x27]?'
+add_pattern "Israeli Bank API Credential" "(poalim|leumi|discount|mizrahi|hapoalim)[_${SPC}-]*(api|key|token|secret|password)[_${SPC}]*[=:]${SP}*${Q}?${AN}{10,}${Q}?" "CRITICAL"
 
 # Government APIs
-PATTERNS["Gov.il API Token"]='(?i)(gov\.il|government|misrad)[_\s-]*(api|key|token)[_\s]*[=:]\s*["\x27]?[a-zA-Z0-9]{16,}["\x27]?'
+add_pattern "Gov.il API Token" "(gov\.il|government|misrad)[_${SPC}-]*(api|key|token)[_${SPC}]*[=:]${SP}*${Q}?${AN}{16,}${Q}?" "HIGH"
 
 # Israel Post
-PATTERNS["Israel Post API Key"]='(?i)(israel[_\s-]*post|doar[_\s-]*israel)[_\s-]*(api|key|token)[_\s]*[=:]\s*["\x27]?[a-zA-Z0-9]{10,}["\x27]?'
+add_pattern "Israel Post API Key" "(israel[_${SPC}-]*post|doar[_${SPC}-]*israel)[_${SPC}-]*(api|key|token)[_${SPC}]*[=:]${SP}*${Q}?${AN}{10,}${Q}?" "HIGH"
 
 # Generic sensitive patterns
-PATTERNS["Hardcoded Password"]='(?i)(password|passwd|pwd)[_\s]*[=:]\s*["\x27][^\x27"]{3,}["\x27]'
-PATTERNS["Private Key File"]='-----BEGIN (RSA |EC |DSA |OPENSSH )?PRIVATE KEY-----'
-PATTERNS["JWT Token (hardcoded)"]='eyJ[a-zA-Z0-9_-]{10,}\.eyJ[a-zA-Z0-9_-]{10,}\.[a-zA-Z0-9_-]{10,}'
-PATTERNS["Israeli ID Number"]='(?i)(teudat[_\s-]*zehut|israeli?[_\s-]*id|tz[_\s-]*number)[_\s]*[=:]\s*["\x27]?\d{9}["\x27]?'
+add_pattern "Hardcoded Password" "(password|passwd|pwd)[_${SPC}]*[=:]${SP}*${Q}[^\"']{3,}${Q}" "HIGH"
+add_pattern "Private Key File" "-----BEGIN (RSA |EC |DSA |OPENSSH )?PRIVATE KEY-----" "CRITICAL"
+add_pattern "JWT Token (hardcoded)" "eyJ[a-zA-Z0-9_-]{10,}\.eyJ[a-zA-Z0-9_-]{10,}\.[a-zA-Z0-9_-]{10,}" "HIGH"
+# Generic credentials. Israeli vendor keys are frequently stored under a plain
+# API_KEY / ACCESS_TOKEN name (e.g. INFORU_API_KEY=...), which none of the
+# vendor-specific patterns above match, so this catch-all closes that gap.
+add_pattern "Generic API Key or Access Token" "(api[_-]?key|api[_-]?secret|access[_-]?token|secret[_-]?key)${SP}*[=:]${SP}*${Q}?${AN}{16,}${Q}?" "HIGH"
+add_pattern "Unquoted Password or Secret Assignment" "(password|passwd|pwd|secret)[a-z0-9_.-]*${SP}*=${SP}*[^${SPC}\"'#]" "HIGH"
+add_pattern "Prefixed Provider Token" "(sb_secret_|sb_publishable_|ghp_|gho_|ghu_|ghs_|github_pat_|sk_live_|sk_test_|xox[baprs]-|AKIA[0-9A-Z]{16})[A-Za-z0-9_-]{8,}" "CRITICAL"
+add_pattern "Israeli ID Number" "(teudat[_${SPC}-]*zehut|israeli?[_${SPC}-]*id|tz[_${SPC}-]*number)[_${SPC}]*[=:]${SP}*${Q}?${D}{9}${Q}?" "HIGH"
 
 # ---------------------------------------------------------------------------
 # Directories and files to skip
@@ -122,9 +149,15 @@ scan_pattern() {
     local pattern="$2"
     local severity="${3:-HIGH}"
 
-    # Use grep with Perl regex
-    local results
-    results=$(grep -rnP "$pattern" "$PROJECT_DIR" $EXCLUDE_ARGS 2>/dev/null || true)
+    # POSIX ERE, case-insensitive. Exit status 1 means "no match" and is fine;
+    # anything >1 is a real grep failure and must NOT be reported as "clean".
+    local results status
+    results=$(grep -rnIE -i -e "$pattern" "$PROJECT_DIR" $EXCLUDE_ARGS 2>/dev/null) && status=0 || status=$?
+    if [ "$status" -gt 1 ]; then
+        echo "ERROR: grep failed (exit $status) while scanning for '$name'." >&2
+        echo "       Refusing to report a clean result from a failed scan." >&2
+        exit 2
+    fi
 
     if [ -n "$results" ]; then
         while IFS= read -r line; do
@@ -165,7 +198,7 @@ check_env_files() {
             continue
         fi
         # Skip .env.example files
-        if [[ "$env_file" == *".env.example"* ]]; then
+        if [[ "$env_file" == *".env.example"* ]] || [[ "$env_file" == *".env.sample"* ]]; then
             continue
         fi
         # Skip files in excluded directories
@@ -265,22 +298,11 @@ if [ "$OUTPUT_FORMAT" = "text" ]; then
 fi
 
 # Scan for each pattern
-scan_pattern "Cardcom Terminal Number" "${PATTERNS["Cardcom Terminal Number"]}" "CRITICAL"
-scan_pattern "Tranzila Supplier Code" "${PATTERNS["Tranzila Supplier Code"]}" "CRITICAL"
-scan_pattern "PayMe Seller ID" "${PATTERNS["PayMe Seller ID"]}" "CRITICAL"
-scan_pattern "Meshulam API Key" "${PATTERNS["Meshulam API Key"]}" "CRITICAL"
-scan_pattern "Cellact API Key" "${PATTERNS["Cellact API Key"]}" "CRITICAL"
-scan_pattern "InforUMobile API Key" "${PATTERNS["InforUMobile API Key"]}" "CRITICAL"
-scan_pattern "019 SMS API Key" "${PATTERNS["019 SMS API Key"]}" "CRITICAL"
-scan_pattern "Supabase Service Role Key" "${PATTERNS["Supabase Service Role Key"]}" "CRITICAL"
-scan_pattern "Supabase Anon Key (in backend code)" "${PATTERNS["Supabase Anon Key (in backend)"]}" "HIGH"
-scan_pattern "Israeli Bank API Credential" "${PATTERNS["Israeli Bank API Credential"]}" "CRITICAL"
-scan_pattern "Gov.il API Token" "${PATTERNS["Gov.il API Token"]}" "HIGH"
-scan_pattern "Israel Post API Key" "${PATTERNS["Israel Post API Key"]}" "HIGH"
-scan_pattern "Hardcoded Password" "${PATTERNS["Hardcoded Password"]}" "HIGH"
-scan_pattern "Private Key File" "${PATTERNS["Private Key File"]}" "CRITICAL"
-scan_pattern "JWT Token (hardcoded)" "${PATTERNS["JWT Token (hardcoded)"]}" "HIGH"
-scan_pattern "Israeli ID Number" "${PATTERNS["Israeli ID Number"]}" "HIGH"
+i=0
+while [ "$i" -lt "${#PATTERN_NAMES[@]}" ]; do
+    scan_pattern "${PATTERN_NAMES[$i]}" "${PATTERN_REGEXES[$i]}" "${PATTERN_SEVERITIES[$i]}"
+    i=$((i + 1))
+done
 
 # Additional checks
 check_env_files

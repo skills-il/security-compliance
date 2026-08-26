@@ -1,0 +1,19 @@
+{
+  "cycles": [
+    {
+      "version": "1.3.0",
+      "date": "2026-08-26",
+      "lessons": [
+        "Expert MAJOR deferred: secrets-scanner.sh --json emits NDJSON (one bare object per line, no array wrapper), so `--json | jq` fails while security-audit-checklist.py --format json emits a valid document. Align the two machine formats next cycle.",
+        "Expert MINOR deferred: is_env_file() matches any name starting with '.env', so direnv's .envrc is treated as an env file, while the common CI convention prod.env / foo.env is invisible to both the extension set and the name rule.",
+        "Expert MINOR deferred: is_safe_url() resolves the host then returns, so DNS rebinding (TOCTOU) still defeats it. The fix is to pin the resolved address for the actual request; the comment covers redirects and encodings but not pinning.",
+        "Expert MINOR deferred: israeli-privacy-law-guide.md 'Common Compliance Mistakes' #8 says direct marketing requires explicit opt-in, conflating PPL s.17F (an opt-out/removal right) with s.30A (the actual opt-in regime).",
+        "Expert MINOR deferred: the bash 'Tranzila Supplier Code' pattern matches the bare word 'supplier' plus 4+ alphanumerics at CRITICAL, which is noise on any e-commerce codebase.",
+        "Coverage deferred to references/domain-checklist.md 'Should cover' items 16-23 (PPA AI and PETs guidance, DPO grace-period expiry date, 2023 EEA-inbound regulations, Bank of Israel Directives 361/363, SBOM/SLSA, OWASP LLM Top 10, blind index for encrypted TZ, Shva/Ashrait detail). All were omitted deliberately: gov.il returns HTTP 403 to automated clients and none could be confirmed against a primary source this cycle. Verify in a browser before writing any of them.",
+        "Process lesson: the Judge caught a wrong regulation number (15 vs 5) in a correction that was ITSELF fixing a wrong regulation number (11A vs 11(d)). When correcting a citation, parse the statute for the nearest preceding regulation heading rather than trusting the surrounding prose.",
+        "Process lesson: two independent reviewers flagged the 2017 security-level table, and both were right. A banded-threshold table copied from a secondary summary is the highest-yield defect class in this skill's domain.",
+        "False positive to ignore next cycle: an Expert reported section 30A as absent from SKILL_HE.md. It is present, written in Hebrew as 'סעיף 30א'; the reviewer had grepped the Latin '30A'."
+      ]
+    }
+  ]
+}

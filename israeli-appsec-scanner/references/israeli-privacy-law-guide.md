@@ -150,42 +150,46 @@ Section 17ג was repealed. The live provision is Section 17ו, which requires ev
 
 ## Information Security Regulations (2017)
 
-The 2017 regulations classify databases into four security levels based on the number of data subjects, sensitivity of data, and number of people with access.
+The 2017 regulations (תקנות הגנת הפרטיות (אבטחת מידע), התשע"ז-2017) classify databases into **three** security levels, plus a lighter regime for a database managed by an individual. The level is driven by the database TYPE (First and Second Schedules) and by counts of data subjects and authorized users, NOT by a simple headcount ladder.
 
 ### Security Levels
 
-| Level | Criteria | Examples |
-|-------|----------|---------|
-| Basic | Up to 100 data subjects, up to 3 authorized users | Small business customer list |
-| Medium | 100-10,000 data subjects, or up to 100 authorized users | Medium SaaS application |
-| High | 10,000+ data subjects, or sensitive data, or 100+ authorized users | Consumer application, health app |
-| Critical | Designated by PPA due to special risk | Large financial institution |
+| Level | Criteria (Regulation 1 + Schedules) | Examples |
+|-------|-------------------------------------|----------|
+| מאגר המנוהל בידי יחיד (individual-managed) | Managed by an individual or an individually-owned company, where only that individual and **at most 2 additional authorized users** may use it. Excluded if the database's main purpose is supplying data to others as a business, if it holds data on **10,000 people or more**, or if the owner is under a professional confidentiality duty. | Sole trader's client list |
+| Basic (בסיסית) | **Residual**: any database not falling within the First or Second Schedule. There is no data-subject ceiling. | Small business customer list |
+| Medium (בינונית) | **First Schedule**, by TYPE not headcount: (1) main purpose is collecting data to supply to others as a business, incl. direct-mail services; (2) owner is a public body; (3) the database holds one of the enumerated sensitive categories (private affairs, medical, genetic, political/religious beliefs, criminal record, communications data, biometric, financial, consumption habits revealing the above). | Medium SaaS with sensitive data |
+| High (גבוהה) | **Second Schedule**: a First-Schedule item (1) or (3) database with data on **100,000 people or more**, OR with **more than 100 authorized users**. | Large consumer or health application |
+
+There is no "Critical" level in the regulations.
+
+**Watch the thresholds.** The High trigger is 100,000 data subjects, not 10,000. The only place 10,000 appears in these regulations is the exclusion from the individual-managed regime. A database of 30,000 ordinary consumer records with no sensitive category is not High level, and may not even be Medium.
 
 ### Requirements by Level
 
-**All levels (Basic and above):**
+**All levels:**
 - Appoint a database manager
-- Document security procedures
+- Document security procedures (מסמך הגדרות המאגר, Regulation 2)
 - Control physical and logical access
 - Use authentication for all users
-- Log access to the database
 - Have an incident response procedure
 
-**Medium and above (additional):**
-- Conduct periodic security assessments
-- Implement access control policies with role separation
+**Medium and High (additional):**
+- Access-control policies with role separation
 - Encrypt data in transit
-- Maintain access logs for at least 24 months
-- Perform annual security audits
+- Retain access-control log data for at least **24 months** (Regulation 10(ד)); security data under Regulation 17 is likewise kept 24 months
+- **Internal or external audit at least once every 24 months** (Regulation 16(א)), by someone suitably qualified in information security who is NOT the database's own security officer
 - Document all security incidents
+- Physical entry/exit monitoring for the systems' locations (Regulation 6(ב))
 
-**High and above (additional):**
+**High only (additional):**
 - Encrypt data at rest
-- Perform penetration testing annually
-- Implement intrusion detection
-- Have a dedicated information security officer
-- Conduct employee security training
-- Maintain a business continuity plan
+- **Risk survey (סקר סיכונים) at least once every 18 months** (Regulation 5(ג))
+- **Penetration testing (מבדק חדירות) at least once every 18 months** (Regulation 5(ד); Regulation 15 is outsourcing, not testing), with the results discussed and defects remediated
+- Intrusion detection
+- A dedicated information security officer. Note this s.17B ממונה אבטחת מידע is a DIFFERENT role from the Amendment 13 ממונה על הגנת הפרטיות (DPO); one organisation may owe both.
+
+**Do not put audits on a 12-month calendar and assume you are safe.** The audit cycle is 24 months and the risk-survey / penetration-test cycle is 18 months for High-level databases only. A High-level controller running pen tests annually is compliant; one running them every 24 months has already missed the statutory window.
 
 ### Developer Implementation Guide
 
@@ -222,32 +226,28 @@ Incident Response:
 
 ## Cross-Border Data Transfer
 
-### General Rule
+Governed by the Privacy Protection (Transfer of Data Abroad) Regulations, 2001. **Two requirements apply cumulatively.** Treating them as a menu is the most common error in this area.
 
-Personal data may be transferred outside Israel only if the destination country provides an "adequate level of protection."
+**(1) A lawful gateway.** Either the destination country's law guarantees a level of protection not lower than Israeli law (Regulation 1), or one of the Regulation 2 exceptions applies, the main ones being: the data subject consented; the recipient is a corporation controlled by the transferring owner and has secured privacy protection after transfer; the recipient undertook by agreement to comply with the conditions applying to a database in Israel; the transfer is required under Israeli law; or the destination is a Convention 108 state, a state receiving data from the EU on the same terms, or one the Registrar has published as having a privacy authority.
 
-### Recognized Countries
+**(2) A written undertaking from the recipient (Regulation 3).** Regulation 3 applies to a transfer made under **Regulation 1 OR Regulation 2**. The database owner must obtain the recipient's written undertaking that the recipient takes sufficient measures to protect the privacy of the data subjects, and that the data will not be transferred to any other person, whether in that country or another.
 
-The PPA maintains a list of countries with adequate protection, which generally includes:
-- EU/EEA member states
-- Countries recognized under EU adequacy decisions
-- Other countries evaluated by the PPA
+So consent is a gateway, not a substitute for the undertaking. Relying on consent alone, with no data-transfer agreement, does not make a transfer to a US SaaS vendor lawful.
 
-### Transfer Without Adequacy
+"Standard Contractual Clauses" is GDPR terminology and is not the Israeli instrument. An SCC-based DPA can carry the Regulation 3 undertaking, but only if it actually contains the two undertakings above.
 
-When the destination lacks adequate protection, transfer is permitted if:
-
-1. **Consent**: The data subject consented to the specific transfer
-2. **Contract**: The transfer is necessary for a contract with the data subject
-3. **Contractual safeguards**: Standard Contractual Clauses (SCCs) or binding corporate rules are in place
-4. **Public interest**: Approved by the PPA for reasons of public interest
+**Common scenarios for Israeli apps:**
+- Cloud hosting on AWS/GCP: a data processing agreement carrying the Regulation 3 undertakings
+- US-based SaaS tools: verify the DPA contains both the sufficient-measures and no-onward-transfer undertakings
+- Analytics services: consider anonymisation before transfer, which takes the data outside the regime entirely
+- Hosting in AWS il-central-1 (Tel Aviv) avoids the question for data that never leaves Israel
 
 ### Cloud Services Guidance
 
 For Israeli companies using cloud services (AWS, GCP, Azure):
 
 - Data may be processed in regions outside Israel
-- Ensure your cloud provider agreement includes adequate contractual safeguards
+- Ensure the cloud provider agreement carries the Regulation 3 written undertakings (sufficient privacy measures AND no onward transfer)
 - Consider using cloud regions within the EU or Israel (AWS IL region)
 - Document where data is processed and stored
 - Conduct a data transfer impact assessment for sensitive data

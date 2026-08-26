@@ -11,6 +11,7 @@ Usage:
 """
 
 import argparse
+import fnmatch
 import json
 import os
 import re
@@ -47,6 +48,23 @@ ISRAELI_SECRET_PATTERNS = {
     ),
     "israeli_id_number": re.compile(
         r"(?i)(teudat.?zehut|israeli?.?id|tz.?number)[\s]*[=:]\s*[\"']?\d{9}[\"']?"
+    ),
+    # .env syntax is unquoted by convention, so a rule that REQUIRES quotes
+    # cannot see DB_PASSWORD=hunter2 in the one file most likely to hold it.
+    # Only meaningful in dotenv-style files, and only for a LITERAL value.
+    # `password = get_secret()` / `os.environ[...]` / `${PGPASS}` are correct code,
+    # not leaks, and flagging them at CRITICAL trains users to ignore the class.
+    "unquoted_password": re.compile(
+        r"(?i)^[\w.-]*(password|passwd|pwd|secret)[\w.-]*\s*=\s*"
+        r"(?![\s\"'#$])(?!os\.)(?!process\.)(?!config\.)(?!get)"
+        r"[^\s#]*[^\s#()\[\]{}$]\s*$"
+    ),
+    # Modern credentials are prefixed and contain _ and -, which [a-zA-Z0-9]{20,}
+    # cannot span. These formats are missed entirely without an explicit rule.
+    "prefixed_provider_token": re.compile(
+        r"(sb_secret_|sb_publishable_|ghp_|gho_|ghu_|ghs_|github_pat_|"
+        r"sk_live_|sk_test_|rk_live_|xox[baprs]-|AKIA[0-9A-Z]{16}|SG\.)"
+        r"[A-Za-z0-9_\-]{8,}"
     ),
 }
 
@@ -87,9 +105,23 @@ RECOMMENDED_HEADERS = [
 # ---------------------------------------------------------------------------
 SCAN_EXTENSIONS = {
     ".ts", ".tsx", ".js", ".jsx", ".py", ".java", ".go",
-    ".rb", ".php", ".env", ".yaml", ".yml", ".json", ".toml",
+    ".rb", ".php", ".yaml", ".yml", ".json", ".toml",
     ".cfg", ".conf", ".ini", ".sh", ".bash",
 }
+
+# Dotenv-style files carry no usable Path.suffix (".env".suffix == "", and
+# ".env.local".suffix == ".local"), so they can never be matched by extension.
+# They are the single most likely place for a leaked Israeli service
+# credential, so match them by name instead.
+ENV_FILE_PREFIX = ".env"
+
+
+def is_env_file(path: Path) -> bool:
+    """True for .env, .env.local, .env.production, etc. (never .env.example)."""
+    name = path.name
+    if not name.startswith(ENV_FILE_PREFIX):
+        return False
+    return not name.endswith(".example") and not name.endswith(".sample")
 
 SKIP_DIRS = {
     "node_modules", ".git", ".next", "dist", "build", "__pycache__",
@@ -104,7 +136,9 @@ def find_project_files(project_dir: str) -> list[Path]:
     for path in root.rglob("*"):
         if any(skip in path.parts for skip in SKIP_DIRS):
             continue
-        if path.is_file() and path.suffix in SCAN_EXTENSIONS:
+        if path.is_file() and (
+            path.suffix in SCAN_EXTENSIONS or is_env_file(path)
+        ):
             files.append(path)
     return files
 
@@ -147,6 +181,8 @@ def check_secrets(files: list[Path]) -> list[dict[str, Any]]:
             continue
         for line_num, line in enumerate(content.splitlines(), 1):
             for name, pattern in ISRAELI_SECRET_PATTERNS.items():
+                if name == "unquoted_password" and not is_env_file(fp):
+                    continue
                 if pattern.search(line):
                     findings.append({
                         "check": "secrets",
@@ -167,8 +203,8 @@ def check_secrets(files: list[Path]) -> list[dict[str, Any]]:
 def check_insecure_code(files: list[Path]) -> list[dict[str, Any]]:
     findings: list[dict[str, Any]] = []
     for fp in files:
-        if fp.suffix in {".env", ".yaml", ".yml", ".json", ".toml", ".cfg",
-                         ".conf", ".ini"}:
+        if fp.suffix in {".yaml", ".yml", ".json", ".toml", ".cfg",
+                         ".conf", ".ini"} or is_env_file(fp):
             continue
         try:
             content = fp.read_text(encoding="utf-8", errors="ignore")
@@ -214,9 +250,24 @@ def check_gitignore(project_dir: str) -> list[dict[str, Any]]:
         })
         return findings
 
+    # A raw substring test is unsafe here: a .gitignore containing only "!.env"
+    # (a negation that explicitly force-TRACKS .env, the single most dangerous
+    # configuration) contains the substring ".env" and would score as compliant.
+    # Likewise ".env" would be satisfied by an unrelated ".env.local" line.
+    # Parse into real entries instead, and drop negations.
     content = gitignore_path.read_text(encoding="utf-8", errors="ignore")
+    ignored: set[str] = set()
+    for raw in content.splitlines():
+        entry = raw.split("#", 1)[0].strip()
+        if not entry or entry.startswith("!"):
+            continue
+        ignored.add(entry.rstrip("/"))
+
     for pattern in sensitive_patterns:
-        if pattern not in content:
+        # ".env*" (or "*.env", ".env.*") legitimately covers .env / .env.local /
+        # .env.production, so match by glob, not by literal equality.
+        if not any(fnmatch.fnmatch(pattern, entry) or entry == pattern
+                   for entry in ignored):
             findings.append({
                 "check": "gitignore",
                 "severity": "MEDIUM",
@@ -238,7 +289,7 @@ def check_env_files(project_dir: str) -> list[dict[str, Any]]:
     for env_file in root.rglob(".env*"):
         if any(skip in env_file.parts for skip in SKIP_DIRS):
             continue
-        if env_file.name == ".env.example":
+        if env_file.name in (".env.example", ".env.sample"):
             continue
         if env_file.is_file():
             findings.append({

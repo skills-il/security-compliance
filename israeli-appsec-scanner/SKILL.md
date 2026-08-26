@@ -2,7 +2,7 @@
 name: israeli-appsec-scanner
 description: Security scanning guidance for Israeli web applications covering OWASP Top 10, Israeli Privacy Protection Authority (PPA) compliance, dependency vulnerability scanning, secrets detection, and secure coding patterns for Hebrew/RTL apps. Use when user asks to "scan for vulnerabilities", "check security compliance", "audit Israeli app security", "bodek aviskhut" (Hebrew transliteration), or needs help with PPA compliance, secrets detection, or Hebrew input sanitization. Provides actionable checklists, automated scanning scripts, and Israeli-specific security guidance. Do NOT use for network penetration testing, physical security audits, or non-application-layer security concerns.
 license: MIT
-allowed-tools: Bash(python:*)
+allowed-tools: 'Bash(python3:*), Bash(python:*), Bash(bash:*)'
 compatibility: No special requirements. Works with Claude Code, Cursor, Windsurf.
 ---
 
@@ -104,7 +104,7 @@ Israel's Privacy Protection Law (1981, last major reform Amendment 13 in force A
 Amendment 13 (August 2025) repealed the old broad registration duty. The pre-2025 rule, which required registering any database with 10,000+ records, or sensitive data, or used for direct marketing, no longer applies. The current regime:
 
 1. **Registration** is now required only for: (a) **data brokers**, meaning databases whose main purpose is collecting personal data to transfer to others as a business, where the database holds data on more than **10,000 individuals**; and (b) **public bodies**. The 10,000 threshold survives only in the data-broker context, not as a general trigger.
-2. **Notification (not registration)**: a controller of a database holding "especially sensitive information" on more than **100,000 individuals** must notify the PPA of identity, contact, and DPO details, even when registration is not required.
+2. **Notification (not registration)**: a controller of a database holding "especially sensitive information" on more than **100,000 individuals** must notify the PPA of identity, contact, and DPO details, **within 30 days**, even when registration is not required. This duty is residual: it applies to databases that are NOT already subject to registration, not in addition to it.
 3. **No annual renewal**: the annual-renewal requirement is gone. A previously-registered database that no longer qualifies is not auto-removed; the controller must apply to be struck from the register.
 4. Most ordinary consumer apps no longer need to register at all under the new regime, but still owe the full security, consent, and data-subject-rights duties below.
 
@@ -128,7 +128,11 @@ CHECKLIST: Israeli Privacy Protection Law Compliance
 
 [ ] Security measures: Implement appropriate technical measures
     - Follow PPA's "Information Security Regulations" (2017)
-    - Conduct annual security assessments
+    - Determine your security level first (three levels, plus an individually-managed
+      carve-out). High level = a First Schedule (1)/(3) database with 100,000+ people
+      or more than 100 authorized users. See references/israeli-privacy-law-guide.md
+    - Audit every 24 months (medium and high), NOT annually (Regulation 16(a))
+    - Risk survey and penetration test every 18 months, HIGH level only (Regulation 5)
     - Maintain access logs for at least 24 months
 
 [ ] Data subject rights: Support access, correction, deletion requests
@@ -144,12 +148,19 @@ CHECKLIST: Israeli Privacy Protection Law Compliance
 
 ### Cross-Border Data Transfer
 
-Israeli law restricts transfer of personal data outside Israel. Permitted when:
+Israeli law restricts transfer of personal data outside Israel, under the Privacy Protection (Transfer of Data Abroad) Regulations, 2001.
 
-- The destination country has adequate data protection (EU countries, recognized by PPA)
+**Two things must BOTH be satisfied, and this is the most common compliance error.**
+
+**(1) A lawful gateway.** Either the destination country's law guarantees protection no lower than Israeli law (Regulation 1), or one of the Regulation 2 exceptions applies. The main ones:
 - The data subject consented to the transfer
-- The transfer is necessary for contract performance
-- Appropriate contractual safeguards are in place (Standard Contractual Clauses)
+- The recipient is a corporation controlled by the transferring database owner, and has secured privacy protection after the transfer
+- The recipient has undertaken by agreement to comply with the conditions for holding and using data that apply to a database in Israel
+- The transfer is required under Israeli law, or the destination is a Council of Europe Convention 108 state or another state the Registrar has published as having a privacy authority
+
+**(2) A written undertaking from the recipient (Regulation 3).** This applies to transfers under **Regulation 1 OR Regulation 2**, so it is NOT a fourth alternative you can skip by relying on consent. The database owner must obtain the recipient's **written undertaking** that the recipient takes sufficient measures to protect the data subjects' privacy AND that the data will not be passed on to anyone else, whether in that country or another.
+
+Consent alone therefore does NOT authorise shipping personal data to a US SaaS vendor with no data-transfer agreement. Note also that "Standard Contractual Clauses" is GDPR terminology; the Israeli instrument is the Regulation 3 written undertaking, though an SCC-based DPA can carry it.
 
 **Common scenarios for Israeli apps:**
 - Cloud hosting on AWS/GCP: Ensure data processing agreement is in place
@@ -176,7 +187,7 @@ pnpm audit --audit-level=high
 
 ### Container Scanning with Trivy
 
-> **Trivy supply-chain compromise (March 2026).** The `aquasecurity/trivy-action` and `setup-trivy` tags were compromised: a malicious v0.69.4 release (19 Mar 2026) was followed by malicious v0.69.5 and v0.69.6 Docker images (GHSA-69fq-xp46-6x23 / CVE-2026-33634). Pin to a clean **v0.70.x or later** (avoid the entire v0.69.4 to v0.69.6 range), pin actions to a full commit SHA, and verify checksums.
+> **Trivy supply-chain compromise (March 2026).** GHSA-69fq-xp46-6x23 / CVE-2026-33634 (critical). On 19 Mar 2026 a malicious Trivy **v0.69.4** release was published, **76 of 77 tags in `aquasecurity/trivy-action`** were force-pushed to credential-stealing malware, and **all 7 tags in `aquasecurity/setup-trivy`** were replaced. On 22 Mar 2026 malicious **v0.69.5 and v0.69.6 DockerHub images** followed. Fixed versions per the advisory: `trivy-action` **>= 0.35.0**, `setup-trivy` **>= 0.2.6**; for the binary, v0.69.3 and earlier are unaffected and current stable is **v0.74.0** (Aug 2026), so upgrade rather than pinning back. Pin GitHub Actions to a **full commit SHA** (not a floating `@v0.x` tag, which is what made this exploitable), reference images by digest, and **rotate any secret exposed to a CI run during the window**.
 
 
 ```bash
@@ -187,7 +198,7 @@ trivy image your-app:latest
 trivy image --severity HIGH,CRITICAL your-app:latest
 
 # Scan filesystem (for local projects)
-trivy fs --security-checks vuln,secret,config .
+trivy fs --scanners vuln,secret,misconfig .
 
 # Generate SARIF report for GitHub integration
 trivy image --format sarif --output trivy-results.sarif your-app:latest
@@ -467,9 +478,9 @@ async function checkOtpRateLimit(phone: string, ip: string): Promise<boolean> {
 | Right to correction | Section 14, PPL | Art. 16 GDPR | [ ] |
 | Right to deletion | Section 14(a) PPL, the request to correct or delete; there is no Section 14A in the enacted law | Art. 17 GDPR | [ ] |
 | Data security measures | Regulations 2017 | Art. 32 GDPR | [ ] |
-| Breach notification | Regulation 11A | Art. 33-34 GDPR | [ ] |
+| Breach notification | Regulation 11(d), Information Security Regs 2017 (there is no Regulation 11A) | Art. 33-34 GDPR | [ ] |
 | Cross-border transfers | Privacy Protection (Transfer of Data Abroad) Regulations 2001; Section 36 PPL is only the enabling power | Art. 44-49 GDPR | [ ] |
-| Database registration | Section 8, PPL | Art. 30 GDPR (ROPA) | [ ] |
+| Database registration | Section 8A(a) PPL (Section 8 is the lawful-processing duty, not registration) | Art. 30 GDPR (ROPA) | [ ] |
 | DPO appointment | Mandatory for certain entities (Amendment 13, Aug 2025): public bodies, data brokers, large-scale sensitive data processors | Art. 37 GDPR | [ ] |
 
 ### SOC 2 Considerations for Israeli Startups
@@ -521,7 +532,10 @@ Refer to the `references/` directory for detailed guidance on Israeli privacy la
 - Hebrew UTF-8 characters are 2 bytes each. Input length validation that counts bytes instead of characters will reject valid Hebrew input at half the expected length.
 - Israeli ID numbers (Teudat Zehut) use a Luhn-variant check digit algorithm, not standard Luhn. Agents may implement the wrong validation and accept invalid IDs.
 - Database registration was narrowed dramatically by Amendment 13 (August 2025): the old "register any database with 10,000+ records" rule was repealed. Registration now applies only to data brokers (databases over 10,000 individuals whose business is selling data) and public bodies, with a separate notification duty for especially-sensitive databases over 100,000 individuals. Agents citing the old general 10,000-record registration threshold are out of date.
+- Sending any commercial message (email, SMS, automated call, fax) from an Israeli app is governed by **section 30A of the Communications (Telecommunications and Broadcasts) Law**, not by the Privacy Protection Law. It requires prior opt-in consent with narrow exceptions, and specific sender-identification and opt-out mechanics inside the message. Section 30A(i)(1) lets a court award damages **not dependent on proof of harm of up to NIS 1,000 per advertising message** the recipient received in breach. This is the most-litigated Israeli digital-compliance provision and the standard class-action vehicle, so an OTP or marketing flow that passes the PPA checklist can still carry six-figure exposure.
 - Bidirectional (BiDi) text attacks are especially dangerous in Hebrew/English mixed codebases. Standard security scanners do not detect RTL override characters (U+202E) that can disguise malicious code.
+
+- A clean run of the bundled scanners is not proof the project is clean. `scripts/secrets-scanner.sh` scans `.env`, `.env.local` and friends but deliberately skips `.env.example` / `.env.sample`, and it now aborts with exit code 2 rather than printing "No secrets detected" if `grep` itself fails. If you see exit 2, the scan did NOT run; never report that as a pass. Pattern matching also cannot see secrets in git history, so pair it with `trufflehog git file://.` before concluding a repo is clean.
 
 ## Reference Links
 

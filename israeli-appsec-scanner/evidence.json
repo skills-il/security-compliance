@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-appsec-scanner",
-  "generated_at": "2026-05-29T00:00:00Z",
+  "generated_at": "2026-08-26T16:24:09.186835",
   "claims": [
     {
       "claim_id": "amendment-13-in-force",
@@ -131,10 +131,10 @@
     },
     {
       "claim_id": "trivy-compromise",
-      "claim": "The aquasecurity/trivy-action and setup-trivy tags were compromised in March 2026 (malicious v0.69.4 on 19 March, then v0.69.5 and v0.69.6 images), tracked as GHSA-69fq-xp46-6x23 / CVE-2026-33634. Mitigation: pin to a clean v0.70.x or later.",
+      "claim": "GHSA-69fq-xp46-6x23 / CVE-2026-33634: malicious Trivy v0.69.4 release on 19 Mar 2026, 76 of 77 aquasecurity/trivy-action tags force-pushed, all 7 setup-trivy tags replaced, malicious v0.69.5/v0.69.6 DockerHub images on 22 Mar 2026. Fixed: trivy-action >= 0.35.0, setup-trivy >= 0.2.6; trivy binary v0.69.3 and earlier unaffected.",
       "source_url": "https://github.com/aquasecurity/trivy/security/advisories/GHSA-69fq-xp46-6x23",
       "raw_snippet": "On March 19, 2026, a threat actor used compromised credentials to publish a malicious Trivy v0.69.4 release, force-push 76 of 77 version tags in aquasecurity/trivy-action to credential-stealing malware, and replace all 7 tags in aquasecurity/setup-trivy with malicious commits. On March 22, 2026, a threat actor used compromised credentials to publish a malicious Trivy v0.69.5 and v0.69.6 DockerHub images.",
-      "fetched_at": "2026-08-09",
+      "fetched_at": "2026-08-26",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
@@ -442,6 +442,132 @@
       "appears_in": [
         "SKILL_HE.md",
         "SKILL.md"
+      ]
+    },
+    {
+      "claim_id": "trivy-action-fixed-versions",
+      "claim": "The advisory's known-safe versions are: Trivy binary v0.69.2/v0.69.3, aquasecurity/trivy-action v0.35.0, aquasecurity/setup-trivy v0.2.6.",
+      "source_url": "https://github.com/aquasecurity/trivy/security/advisories/GHSA-69fq-xp46-6x23",
+      "raw_snippet": "## Recommended Actions ### Update to Known-Safe Versions | Component | Safe Version | | ------------ | ---------------- | | Trivy binary | v0.69.2, v0.69.3 | | trivy-action | v0.35.0 | | setup-trivy | v0.2.6 |",
+      "fetched_at": "2026-08-26",
+      "verified_via": "GitHub Advisories REST API (curl), advisory description body",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_at": "2026-08-26"
+    },
+    {
+      "claim_id": "trivy-latest-stable-2026-08",
+      "claim": "Current stable Trivy release is v0.74.0, published 2026-08-14.",
+      "source_url": "https://api.github.com/repos/aquasecurity/trivy/releases/latest",
+      "raw_snippet": "\"tag_name\": \"v0.74.0\", \"published_at\": \"2026-08-14T11:29:11Z\"",
+      "fetched_at": "2026-08-26",
+      "verified_via": "GitHub Releases REST API (curl)",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_at": "2026-08-26"
+    },
+    {
+      "claim_id": "trivy-scanners-flag-rename",
+      "claim": "Trivy's --security-checks flag is deprecated and renamed --scanners, and the scanner value 'config' is deprecated in favour of 'misconfig'. Current syntax: trivy fs --scanners vuln,secret,misconfig .",
+      "source_url": "https://raw.githubusercontent.com/aquasecurity/trivy/v0.74.0/pkg/flag/scan_flags.go",
+      "raw_snippet": "Name:       \"security-checks\",\n\t\t\t\tConfigName: \"scan.security-checks\",\n\t\t\t\tDeprecated: true, // --security-checks was renamed to --scanners",
+      "fetched_at": "2026-08-26",
+      "verified_via": "raw source file from the v0.74.0 tag (curl)",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_at": "2026-08-26"
+    },
+    {
+      "claim_id": "ppa-notification-30-days",
+      "claim": "לפי סעיף 8א(ב) לחוק, בעל מאגר שיש בו מידע בעל רגישות מיוחדת על יותר מ-100,000 איש ואינו חייב ברישום חייב למסור הודעה לרשות בתוך 30 יום. תקנה 2 לתקנות אבטחת מידע מחייבת מסמך הגדרות מאגר, שהעתקו נכלל בהודעה.",
+      "source_url": "https://www.gov.il/BlobFolder/reports/guide_tikon13_professional/he/tikun%2013%20_170825.pdf",
+      "raw_snippet": "ביחס למאגרי מידע שיש בהם מידע בעל רגישות מיוחדת על יותר מ 100,000-איש אולם אינם חייבים ברישום ,נקבעה חובה חדשה בדין של מסירת הודעה לרשות בתוך 30יום על מאגר המידע. מה צריכה לכלול הודעה לרשות על מאגר מידע לפי סעיף 8א(",
+      "fetched_at": "2026-08-26",
+      "verified_via": "pdf",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_at": "2026-08-26"
+    },
+    {
+      "claim_id": "sec-regs-high-level-thresholds",
+      "claim": "High security level (Second Schedule) applies to a First Schedule item (1) or (3) database with data on 100,000 people or more, or with more than 100 authorized users.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/144811.htm",
+      "raw_snippet": "תוספת שנייה (תקנה 1) מאגרי מידע שחלה עליהם רמת האבטחה הגבוהה – (1) מאגר מידע כאמור בפרט 1(1) או (3) בתוספת הראשונה, לרבות מאגר של גוף ציבורי כמשמעותו בסעיף 23(1) לחוק המקיים את האמור בפרטים (1) או (3), שיש בו מידע על אודות 100,000 אנשים ומעלה; (2) מאגר מידע כאמור בפרט 1(1) או (3) בתוספת הראשונה, לרבות מאגר של גוף ציבורי כמשמעותו בסעיף 23(1) לחוק המקיים את האמור בפרטים (1) או (3), שמספר בעלי ההרשאה בו עולה על 100. (adsbygoogle",
+      "fetched_at": "2026-08-26",
+      "verified_via": "raw HTML fetch (curl) of nevo statute page",
+      "verified_at": "2026-08-26",
+      "appears_in": [
+        "references/israeli-privacy-law-guide.md"
+      ]
+    },
+    {
+      "claim_id": "sec-regs-audit-24-months",
+      "claim": "Regulation 16(a): a medium- or high-level database must undergo an internal or external information-security audit at least once every 24 months, by a suitably qualified person who is not the database's own security officer.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/144811.htm",
+      "raw_snippet": "ביקורות תקופתיות לווידוא קיומם ותקינותם של אמצעי האבטחה לפי נוהל האבטחה ולפי תקנות אלה כאמור בתקנה 16; (4) הוראות לעניין גיבוי הנתונים האמורים בתקנה 18(א)(1); (5) הוראות לעניין אופן ביצוע פעולות פיתוח במאגר ותיעודן, ובכלל זה אופן הגישה של אנשי הפיתוח לנתונים במאגר. (ה) בעל מאגר מידע יבחן, אחת לשנה, את הצורך בעדכון הנוהל, ובלי לג",
+      "fetched_at": "2026-08-26",
+      "verified_via": "raw HTML fetch (curl) of nevo statute page",
+      "verified_at": "2026-08-26",
+      "appears_in": [
+        "references/israeli-privacy-law-guide.md"
+      ]
+    },
+    {
+      "claim_id": "sec-regs-pentest-18-months-high-only",
+      "claim": "Penetration tests are required at least once every 18 months, for high-level databases only.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/144811.htm",
+      "raw_snippet": "(ד) במאגר מידע שחלה עליו רמת האבטחה הגבוהה, בעל המאגר אחראי לכך שייערכו מבדקי חדירות למערכות המאגר לבחינת עמידותן בפני סיכונים פנימיים וחיצוניים, אחת לשמונה עשר חודשים לפחות; בעל המאגר ידון בתוצאות מבדקי החדירות ויפעל לתיקון הליקויים שהתגלו, ככל שהתגלו. (ה) ארגון שהוא בעל כמה מאגרי מידע, רשאי לקבוע",
+      "fetched_at": "2026-08-26",
+      "verified_via": "raw HTML fetch (curl) of nevo statute page",
+      "verified_at": "2026-08-26",
+      "appears_in": [
+        "references/israeli-privacy-law-guide.md"
+      ]
+    },
+    {
+      "claim_id": "sec-regs-individually-managed",
+      "claim": "An individually-managed database is one managed by an individual or individually-owned corporation where only that individual plus at most 2 further authorized users may use it, excluding data-broker databases, databases on 10,000 people or more, and those under professional confidentiality.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/144811.htm",
+      "raw_snippet": "\" מאגר המנוהל בידי יחיד \" – מאגר מידע שמנהל יחיד או תאגיד בבעלות יחיד, ואשר רק היחיד ולכל היותר שני בעלי הרשאה נוספים רשאים לעשות בו שימוש ובאפשרותם לעשות בו שימוש, ולמעט מאגרי מידע כמפורט להלן: (1) מאגר מידע שמטרתו העיקרית היא איסוף מידע לצורך מסירתו לאחר כדרך עיסוק, לרבות שירותי דיוור ישיר; (2) מאגר מידע שיש בו מידע על אודות 10,000 אנשים ומעלה; (3) מאגר מידע הכולל מידע שבעל המאגר כפוף בשלו לחובת סודיות מקצועית לפי",
+      "fetched_at": "2026-08-26",
+      "verified_via": "raw HTML fetch (curl) of nevo statute page",
+      "verified_at": "2026-08-26",
+      "appears_in": [
+        "references/israeli-privacy-law-guide.md"
+      ]
+    },
+    {
+      "claim_id": "cross-border-reg3-written-undertaking",
+      "claim": "תקנה 3 לתקנות הגנת הפרטיות (העברת מידע אל מאגרי מידע שמחוץ לגבולות המדינה), תשס\"א-2001: בהעברה לפי תקנה 1 או לפי תקנה 2 חייב בעל המאגר לקבל התחייבות בכתב ממקבל המידע שהוא נוקט אמצעים מספיקים להבטחת הפרטיות ושהמידע לא יועבר לאדם אחר. Regulation 3 applies to transfers under both Regulation 1 and Regulation 2, so the written undertaking is not an alternative to consent.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71639.htm",
+      "raw_snippet": "בהעברת מידע לפי תקנה 1 או 2 יבטיח בעל מאגר המידע, בהתחייבות בכתב של מקבל המידע, כי מקבל המידע נוקט אמצעים מספיקים להבטחת פרטיותם של מי שהמידע עליהם, וכי הוא מבטיח שהמידע לא יועבר לכל אדם זולתו, בין באותה מדינה ובין במדינה אחרת. סייג לתחולה 4. הוראות תקנות אלה לא יחולו על מידע המועבר עקב בקשה לפי חוק",
+      "fetched_at": "2026-08-26",
+      "verified_via": "raw HTML fetch (curl) of nevo regulations page",
+      "verified_at": "2026-08-26",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "comm-law-30a-statutory-damages",
+      "claim": "סעיף 30א(י)(1) לחוק התקשורת (בזק ושידורים) מאפשר פיצויים שאינם תלויים בנזק של עד 1,000 ש\"ח בשל כל דבר פרסומת שקיבל הנמען בניגוד לסעיף. Section 30A of the Communications Law also requires prior opt-in consent and in-message sender identification and opt-out mechanics.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_התקשורת_(בזק_ושידורים)",
+      "raw_snippet": "שוגר דבר פרסומת ביודעין בניגוד להוראות סעיף זה, רשאי בית המשפט לפסוק בשל הפרה זו פיצויים שאינם תלויים בנזק (בסעיף זה – פיצויים לדוגמה), בסכום שלא יעלה על 1,000 שקלים חדשים בשל כל דבר פרסומת שקיבל הנמען בניגוד להוראות סעיף זה. (2) בבואו לקבוע את גובה הפיצויים לדוגמה, רשאי בית המשפט להתחשב בכך שאותו מפרסם הורשע, בשל אותו מעשה, בעב",
+      "fetched_at": "2026-08-26",
+      "verified_via": "raw HTML fetch (curl) of source page",
+      "verified_at": "2026-08-26",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
       ]
     }
   ]

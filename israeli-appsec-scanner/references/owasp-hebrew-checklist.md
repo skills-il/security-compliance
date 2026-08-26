@@ -122,9 +122,14 @@ const template = `שלום {{userName}}, ברוכים הבאים!`;
 // If userName = "{{constructor.constructor('return process')()}}"
 // This could execute arbitrary code
 
-// SAFE: Use proper escaping
-const template = `שלום {{{safeUserName}}}, ברוכים הבאים!`;
-// And sanitize before passing to template
+// SAFE: {{ }} is Handlebars' ESCAPED output. Never use {{{ }}} (triple-stash)
+// for user input, it is the UNESCAPED form and is what makes this exploitable.
+const template = `שלום {{userName}}, ברוכים הבאים!`;
+// The real fix is upstream: NEVER pass user input to Handlebars.compile().
+// Server-side template injection comes from compiling attacker-controlled text
+// AS a template, not from interpolating it INTO one.
+const compiled = Handlebars.compile(template);   // template is a literal, not user input
+compiled({ userName });                          // user input arrives only as DATA
 ```
 
 **Mitigation:**
@@ -276,8 +281,8 @@ Israeli phone numbers must be validated for authentication flows (OTP, SMS verif
 
 ```javascript
 // Valid Israeli phone formats
-const IL_MOBILE = /^(\+972|0)(5[0-9])\d{7}$/;     // Mobile
-const IL_LANDLINE = /^(\+972|0)([2-4,8-9])\d{7}$/; // Landline
+const IL_MOBILE = /^(\+972|0)(5[0-9]|7[2-9])\d{7}$/; // Mobile, incl. 072-079 (must match SKILL.md)
+const IL_LANDLINE = /^(\+972|0)([2-489])\d{7}$/;  // Landline (a comma inside [] is a literal, not a separator)
 
 // Normalize before validation
 function normalizeIlPhone(phone) {
@@ -322,7 +327,7 @@ Israeli service providers may use different webhook signing methods. Always veri
 
 ```typescript
 // Example: Verifying an Israeli payment gateway webhook
-import { createHmac } from 'crypto';
+import { createHmac, timingSafeEqual } from 'crypto';
 
 function verifyWebhook(
   payload: string,
@@ -332,10 +337,20 @@ function verifyWebhook(
   const expected = createHmac('sha256', secret)
     .update(payload)
     .digest('hex');
-  return timingSafeEqual(
-    Buffer.from(signature),
-    Buffer.from(expected)
-  );
+
+  // timingSafeEqual THROWS when the two buffers differ in length, and
+  // `signature` is attacker-controlled, so a one-byte signature would raise an
+  // uncaught exception instead of returning false. Compare lengths first and
+  // fail closed.
+  const a = Buffer.from(signature, 'utf8');
+  const b = Buffer.from(expected, 'utf8');
+  if (a.length !== b.length) return false;
+
+  try {
+    return timingSafeEqual(a, b);
+  } catch {
+    return false;
+  }
 }
 ```
 
@@ -440,18 +455,49 @@ original = unquote('%D7%A9%D7%9C%D7%95%D7%9D')
 # SSRF check: Normalize URL before validating
 from urllib.parse import urlparse
 
+import ipaddress
+import socket
+from urllib.parse import urlparse, unquote
+
+ALLOWED_SCHEMES = {'http', 'https'}
+
+
 def is_safe_url(url):
+    """Deny-by-default SSRF check.
+
+    A hostname allowlist is the only approach that actually holds. This
+    blocklist form is shown because most codebases start here, but note what
+    it must cover: 169.254.169.254 (the cloud metadata endpoint, the primary
+    SSRF target on AWS and GCP) is a link-local address, NOT loopback, so a
+    filter that only rejects localhost/127.0.0.1 lets it straight through.
+    """
     parsed = urlparse(url)
-    # Reject internal IPs
-    if parsed.hostname in ('localhost', '127.0.0.1', '0.0.0.0'):
+    if parsed.scheme not in ALLOWED_SCHEMES:
+        return False                      # blocks file://, gopher://, dict://
+
+    host = unquote(parsed.hostname or '')
+    if not host:
         return False
-    # Reject private ranges
-    # ... (standard SSRF checks)
-    # Reject Hebrew-encoded URLs that resolve to internal hosts
-    decoded_host = unquote(parsed.hostname or '')
-    if decoded_host in ('localhost', '127.0.0.1'):
+
+    # Resolve the name first. Checking the literal string is bypassable via DNS
+    # (a public name that resolves to 10.x), decimal/octal/hex IP encodings,
+    # and IPv6 forms such as [::1] or [::ffff:127.0.0.1].
+    try:
+        infos = socket.getaddrinfo(host, None)
+    except socket.gaierror:
         return False
+
+    for info in infos:
+        ip = ipaddress.ip_address(info[4][0])
+        if (ip.is_private or ip.is_loopback or ip.is_link_local
+                or ip.is_reserved or ip.is_multicast or ip.is_unspecified):
+            return False                  # 169.254.169.254 is caught by is_link_local
+
     return True
+
+# Still required at the request layer: disable redirect following (or re-run
+# this check on every hop), and set a timeout. A 302 to 169.254.169.254 defeats
+# any check performed only on the original URL.
 ```
 
 ## Quick Reference: Hebrew Security Testing Payloads
