@@ -18,29 +18,55 @@ Step-by-step safety instructions for every type of Home Front Command alert in I
 **The most common alert type.** Triggered by incoming rocket or missile fire.
 
 **Immediate actions (within your time-to-shelter window):**
-1. Enter the nearest protected space (mamad, mamak, miklat, or stairwell)
+1. Enter the best protected space you can reach in your time window, in this official priority order: **mamad** (apartment protected space), **mamak** (floor protected space), **mamam** (institutional protected space, e.g. a school or municipal facility), then a **miklat** or public shelter
 2. Close the blast door and window shutter completely
 3. Sit on the floor against an inner wall, below window height
 4. Cover your head with your hands
 5. If you have children, hold them close and cover their heads
 
-**If caught outdoors:**
-- Lie face down on the ground
-- Cover your head with both hands
-- Move away from buildings (falling debris) and vehicles (fuel/explosion risk)
-- If near a concrete bus stop shelter, enter and crouch low
+**If there is no protected space near you, or the public shelters are not open.** Only then choose "a good place in the middle", which official guidance defines precisely. Do not improvise this.
 
-**If in a vehicle:**
-- Pull over to the side of the road safely
-- Exit the vehicle and move at least 10 meters away
-- Lie face down, cover your head
-- If you cannot safely exit (highway, tunnel), bend below the window line
+- **Internal stairwell**, with no windows and no external walls. Stay **on the flight of stairs itself, not on the floor landing**.
+  - Building of **more than three floors**: use a flight that has **at least two floors above it**.
+  - Building of **fewer than three floors**: use the flight of the **middle floor**.
+  - **Never the entrance floor.**
+- **Internal space** in the building: the one surrounded by the most walls with the fewest windows and openings. Sit against an internal wall, **below the window line**, and **not facing the door**.
+- **Never use the kitchen, the shower or the toilet** as your protected space: they are full of ceramics, porcelain and glass that shatter.
 
-**Stay in shelter:**
-- For **short-range fire (Gaza envelope, Lebanon border historical posture)**: remain at minimum 10 minutes after the last sound of explosion or impact
-- For **ballistic / Iran / Houthi / long-range threats**: do NOT exit on a 10-minute timer. Wait for an explicit Cell Broadcast or HFC app release message; the 10-minute folklore was kept on the in-app screen by mistake during the Iran missile war and is dangerous as a default in that scenario
-- Wait for the official release message (category 13 alert, Cell Broadcast lock-screen polygon, HFC app, radio broadcast)
-- Do not exit based on silence alone. Debris from interceptors can fall minutes after the boom you hear, and secondary impacts can occur
+**Closing a mamad, mamak, mamam or miklat properly:** turn the handle **90 degrees** to seal the door, and make sure both the outer steel window and the inner glass window are shut, so blast cannot enter. If a double-leaf glass window is fitted, remove the leaves in advance and store them outside the room.
+
+**If caught outdoors (official order, and the order matters):**
+1. **Get into the best protected space near you.** This is the official first action: "יש להיכנס למיגון המיטבי בקרבתכם"
+2. **Only if you cannot**, lie on the ground and protect your head with your hands
+- A concrete bus-stop shelter counts as protection: enter it and crouch low
+- Keep away from buildings (falling debris) and vehicles (fuel and explosion risk)
+
+**If in a vehicle (official wording):**
+- Pull over at the side of the road, get out, and go into the nearest best protected space
+- If you cannot reach a building quickly, get out and move away from the vehicle **beyond the road shoulder or the safety barrier**, lie on the ground and protect your head with your hands
+- Only if you cannot get out of the vehicle: stop at the side, **open the windows**, and crouch below the window line
+
+**If on public transport:**
+- **Intercity bus:** the driver stops at the side and opens the doors; passengers **crouch below the window line and protect their heads with their hands**
+- **Urban bus:** the driver stops at the side and opens the doors so passengers can get off and enter the nearest best protected space. **If you cannot reach it within your time window, crouch below the window line and protect your head with your hands**
+- **Train:** the driver slows to **30 km/h**; passengers **crouch below the window line inside the carriages and protect their heads with their hands**. At the next station, get off carefully and enter the best protected space at the station
+- **Light rail, overground:** the driver stops in a safe place and opens the doors; passengers **crouch below the window line and protect their heads with their hands**
+- **Light rail, in a tunnel:** if the train is near a tunnel exit it will stop and **passengers stay on board**
+
+**Never use the lift.** "בעת קבלת התרעה - אין להשתמש במעלית". This applies to every alert type, not only earthquakes. If your protected space is the communal shelter or another floor's stairwell, check in advance that you can reach it **by the stairs** within your time window. If a siren sounds while you are in a lift, get out at the nearest floor and go to the protected space or the stairwell.
+
+**If you are in a lightweight structure** (light construction, mobile building, caravan, gypsum or wood): leave it and get to the protected space within your time window. If you cannot, leave the building, lie on the ground and protect your head with your hands.
+
+**Stay in shelter, and there is no timer.** Current official Home Front Command guidance is a single rule with no threat-type carve-out:
+
+> "בעת קבלת התרעה על ירי רקטות וטילים, היכנסו למרחב מוגן מיטבי בהתאם לפרק הזמן העומד לרשותכם **והישארו בו עד לקבלת הנחיה מפורשת מפיקוד העורף**."
+
+Asked directly how long to stay, Pikud HaOref answers: "יש להישאר במרחב המוגן עד לקבלת הנחיה מפורשת מפיקוד העורף."
+
+- **Do NOT leave on a 10-minute timer.** Earlier guidance included a 10-minute rule after the last impact. It is no longer in official guidance for any threat type, because release now waits on confirmation that no further launch is expected, not on a fixed clock. Telling someone to leave after 10 minutes can send them out under a still-active threat.
+- Wait for the explicit exit message. Pikud HaOref sends it via: the HFC app, the National Emergency Portal, the Cell Broadcast personal-message system (ordinary notification tone), the official Telegram channels, and regional radio.
+- If you have no app and no reception, call the Home Front Command hotline on **104**, or listen to the radio. If you have no means of communication at all, arrange in advance with neighbours or the building committee to come and tell you physically that it is safe to come out.
+- Do not exit based on silence alone. Debris from interceptors can fall minutes after the boom you hear, and secondary impacts can occur.
 
 ### Category 2: Hostile Aircraft Intrusion (חדירת כלי טיס עוין)
 
@@ -60,19 +86,22 @@ Step-by-step safety instructions for every type of Home Front Command alert in I
 
 **Israel sits on the Dead Sea Transform fault. Earthquakes are a real risk.**
 
-**Priority order (Home Front Command):**
-1. If you can reach open ground within a few seconds, exit the building to an open area
-2. If you cannot exit in seconds, enter the mamad or protected space but keep the door and windows OPEN so they cannot jam shut, or go to an internal stairwell and continue down and out
-3. If you can do none of the above, use Drop-Cover-Hold where you are
+**Priority order (official Home Front Command wording):**
+1. If you can leave the building within a few seconds, go straight out to an open area
+2. If you cannot leave within a few seconds, enter the mamad and **leave the door and window OPEN** so a structural shift cannot jam them shut
+3. If there is no mamad, go out to the stairwell and, if you can, keep going down and out of the building. **Do not use the lift** ("אין להשתמש במעלית!")
+4. Only if none of the above is possible, **sit in an internal corner of the room or under heavy furniture** and protect your head with your hands
 
-**Drop, Cover, Hold On:**
-1. **DROP** to your hands and knees
-2. **COVER** under a sturdy desk or table, protect your head and neck
-3. **HOLD ON** to the table/desk until the shaking stops
+**What the official guidance explicitly forbids in an earthquake, and what it instructs wheelchair users to do:**
+- **Do not use the lift**, during the shaking or after it
+- **Do not stand in a doorway.** This is old advice and Pikud HaOref now rules it out: "אין לעמוד תחת משקוף"
+- **If you are in a wheelchair**, lock it and protect your head ("אם אתם בכיסא גלגלים - נעלו אותו והגנו על הראש")
+- **Do not go into an underground shelter.** "אין להיכנס למקלט תת קרקעי". This is the opposite of a rocket alert, so do not let the run-to-the-miklat reflex take over
 
-**If no table available:**
-- Move to an interior wall, away from windows, mirrors, and heavy furniture
-- Crouch and protect your head with your arms
+**Step 4 posture, only if steps 1 to 3 above are impossible.** This is the fallback, not the protocol:
+1. Kneel down, get low against the ground, and protect your head with your hands
+2. If there is heavy furniture or a sturdy table beside you, get under it and hold on until the shaking stops
+3. Otherwise sit in an **internal corner** of the room, away from windows, mirrors and heavy furniture that can topple
 
 **If outdoors:**
 - Move to an open area away from buildings, power lines, and trees
@@ -115,6 +144,8 @@ The Home Front Command publishes the exact distance, floor and waiting-time figu
 
 **Nuclear or radiological incident (dirty bomb, nuclear facility accident).**
 
+> **Source warning, read this before relying on the steps below.** Pikud HaOref lists a radiological event as an alert category but **publishes no life-saving guidance page for it**: the official guidance endpoint returns an empty response for this category, while every other category returns content. The steps below are therefore general radiological-protection practice, NOT quoted Home Front Command instructions, and this skill cannot verify them against an Israeli official source. In a real radiological event, follow the instructions broadcast at the time and call the Home Front Command hotline on **104**. Do not present the steps below to a user as official Pikud HaOref guidance.
+
 **Immediate actions:**
 1. Enter the nearest building immediately
 2. Close all windows, doors, and ventilation systems (AC, fans)
@@ -134,12 +165,12 @@ The Home Front Command publishes the exact distance, floor and waiting-time figu
 
 **Chemical spill, industrial accident, or deliberate chemical attack.**
 
-**Immediate actions:**
-1. Enter a building and go to the highest floor possible (many chemicals are heavier than air and settle low)
-2. Close all windows, doors, and ventilation systems
-3. Seal gaps with wet towels
-4. If your mamad has NBC filtration, activate it
-5. If outdoors and exposed: move uphill and upwind from the source
+**Immediate actions (official Home Front Command wording):**
+1. **Stay inside the building and close the doors and windows.** If you are outside, go into a building immediately and close the doors and windows. If you cannot get into a building, move as far away from the incident area as possible
+2. **Turn off the air conditioning.** This is an explicit official instruction ("כבו את המזגן") and it is the one people forget: an air conditioner draws contaminated outside air into the room
+3. **Do not leave the building until an announcement that the event has ended**
+4. Additional protective measures: seal gaps with wet towels, and if your mamad has NBC filtration, activate it
+5. Going to a higher floor helps against agents heavier than air, but it is secondary. The official instruction is to get inside, seal, and turn off the AC, not to spend time climbing
 
 **If you feel symptoms (dizziness, difficulty breathing, burning eyes):**
 - Move to fresh air immediately
@@ -147,25 +178,30 @@ The Home Front Command publishes the exact distance, floor and waiting-time figu
 - Rinse eyes with clean water for 15 minutes
 - Call Magen David Adom: 101
 
-**Stay inside:** Until hazmat teams clear the area. Follow official decontamination instructions if issued.
+**Stay inside:** Until an official announcement that the event has ended. Follow official decontamination instructions if issued. Symptoms are the one case where you may need to break the "stay inside" rule; that is a medical judgement, so call Magen David Adom on 101 and follow their instruction rather than deciding alone.
 
 ### Category 7: Terrorist Infiltration (חדירת מחבלים)
 
 **Armed attackers entering a community or area.**
 
-**Immediate actions:**
-1. Enter the nearest building
-2. Lock all doors and windows
-3. Move to an interior room away from entrances and windows
-4. Turn off lights
-5. Silence phones (vibrate mode, turn off sounds)
-6. Stay quiet and out of sight
-7. Do NOT open the door for anyone except identified security forces
+**Immediate actions (official Home Front Command wording):**
+1. Enter a building immediately and **lock the door**
+2. **Leave the lights OUTSIDE the house ON.** This is the official instruction and it is counter-intuitive: "השאירו את האורות מחוץ לבית דולקים". Exterior lighting denies attackers cover and helps security forces. Do NOT black out the outside of the house
+3. Go into the mamad (protected space), close the door firmly, and sit **below the window line**
+4. If there is no mamad, go to a hiding place
+5. Silence phones (vibrate, sounds off) and stay quiet and out of sight
+6. Do NOT open the door for anyone except identified security forces
+7. **Do not leave the protected space until an official announcement that the event has ended**: "אין לצאת מהמרחב המוגן עד לקבלת הודעה מהגורמים הרשמיים על סיום האירוע"
 
-**If outdoors:**
-- Run away from the threat if you can do so safely
-- If you cannot run, find cover (solid wall, concrete barrier)
-- As a last resort, hide (under vehicles, in bushes, behind solid objects)
+**If outdoors (official wording):**
+- **Get into a place of shelter immediately and stay there until an official announcement that the event has ended.** "היכנסו מיד למקום מחסה והישארו בו עד לקבלת הודעה על סיום האירוע"
+- Only if no shelter is reachable, put solid cover between you and the threat and stay out of sight
+
+**Further official instructions, including one that overrides the missile protocol:**
+- **If a rocket alert arrives DURING a terrorist infiltration event, do NOT go out to a protected space outside the home, including the stairwell.** "אין לצאת למרחב מוגן הנמצא מחוץ לבית, לרבות חדר המדרגות." This is the one documented case where the usual "follow the most restrictive protocol" rule of thumb gives the wrong answer: staying inside wins
+- **Do not dismantle the mamad door handle.** Removing it damages the mechanism and the door's ability to protect. To stop the door being opened from outside, fix the handle in place with something heavy instead
+- **Do not share your location on social media** during the event
+- Movement in the area is forbidden and no one may enter it until a new announcement
 
 **Call for help:**
 - Police: 100
@@ -182,10 +218,17 @@ This is the official all-clear signal from the Home Front Command. When you rece
 - Resume normal activity
 - Check your surroundings for damage before moving freely
 
+**The all-clear releases you from the shelter. It does NOT mean the ground outside is safe.** Two official rules apply the moment you step out:
+
+- **Unexploded ordnance and interceptor debris (נפלים).** Rocket and missile fragments and unexploded warheads may be lying on the ground, and **they can detonate on contact**. Official guidance is blunt: photographing them, standing near them, and any contact at all "are life-threatening actions". The rule is **move away, move others away, and report** ("מתרחקים, מרחיקים ומדווחים"): get away from the spot, keep others away, especially children, and report it to the police on **100**. Do not touch it, do not move it, do not photograph it up close, do not post a selfie with it.
+- **Do not gather at an impact site.** "אין להתקהל באזור אירוע". Crowds at the scene are dangerous because of the risk of further fire.
+
+**Only an official Home Front Command message is the all-clear.** A community alert app (Tzofar, RedAlert) relays the alert feed and is not an official release. A WhatsApp forward, a family group message, a neighbour calling up the stairs, and social media are not the all-clear. Silence is not the all-clear. And a message names the area it applies to, so a release issued for a different guidance area is not yours.
+
 **If you do NOT receive a category 13:**
-- For short-range fire: stay in the shelter for at least 10 minutes after the last impact/explosion. For ballistic / Iran / Houthi / long-range threats: stay until you receive an explicit Cell Broadcast / HFC app release message; do NOT exit on a 10-minute timer alone
+- Stay in the protected space until you receive an explicit Home Front Command instruction that you may leave. There is no 10-minute rule and no timer, for any threat type
 - Monitor the Home Front Command app or radio for updates
-- Call 104 (English) or 1207 (Hebrew) if unsure
+- Call the Home Front Command hotline on **104** if unsure. This is the number Pikud HaOref publishes for current instructions, in Hebrew; do not assume 104 is an English-only line
 
 ## Category 14: Pre-Alert Warning (התרעה מוקדמת)
 
@@ -195,7 +238,30 @@ A heads-up that alerts are expected in your area in the coming minutes. This giv
 1. Move toward your shelter now (don't wait for the actual siren)
 2. Ensure all household members are accounted for
 3. Bring supplies (phone, water, medications)
-4. Wait for the actual alert or for the situation to pass (typically within 20 minutes)
+4. Wait for the actual alert or for the situation to pass. Do not treat any fixed expiry time as official: the pre-alert is a community-app (Tzofar-style) feed concept, not a published Home Front Command category, and no official expiry window is published
+
+## Time to Reach Your Protected Space (זמן התגוננות)
+
+The skill's protocols say "within your time-to-shelter window". This is how to know what yours is.
+
+**The official range is immediate to 90 seconds. There is no 3-minute tier.** Pikud HaOref: "זמן ההגעה למרחב המוגן נע בין פרק זמן מיידי לבין 15 שניות, 30 שניות, 45 שניות, דקה ועד ודקה וחצי."
+
+| Time to shelter | Where (indicative) |
+|---|---|
+| Immediate | A small number of border localities |
+| 15 seconds | Gaza envelope (including Sderot, Be'eri, Nahal Oz), Golan, western Negev, confrontation line |
+| 30 seconds | Parts of the Gaza envelope, Golan, Lachish, western Negev |
+| 45 seconds | Upper and lower Galilee, Lachish, southern Shfela, central Negev |
+| 60 seconds | Shfela, Judea, Beit Shemesh, Tavor, Beit She'an valley |
+| 90 seconds | Most of the country |
+
+**Do not guess a locality's time from this table. Look it up.** Enter your locality name in the box on the oref.org.il home page. In a split city (Ashdod, Ashkelon, Be'er Sheva, Herzliya, Hadera, Haifa, Jerusalem, Netanya, Akko, Safed, Rishon LeZion, Ramat Gan, Tel Aviv-Yafo) you must enter the **street** as well, because the time differs within the city.
+
+**If you do not know your area's time, the siren tells you.** The length of time the siren sounds IS the time you have to reach the protected space: "פרק הזמן בו נשמעת האזעקה מהצופרים הינו פרק הזמן הנדרש להגעה למרחב המוגן." Reach it before the siren ends. If you did not make it inside, lie on the ground and protect your head with your hands.
+
+**Two exceptions where the siren length does NOT equal the time available.** In the "גולן צפון" guidance area, and in most localities in the "קו עימות" (confrontation line) area, the siren lasts 15 seconds but the required arrival time is **immediate**: drop and protect your head the moment you hear it. In the Gaza envelope the "צבע אדום" alert sounds and the arrival time is 15 seconds.
+
+**The time does not change with the threat.** Asked whether it varies by threat type, Pikud HaOref answers plainly: "לא. זמן ההתגוננות זהה לכלל האיומים." The same window applies to rockets, ballistic missiles and hostile aircraft.
 
 ## Special Populations
 
@@ -232,13 +298,13 @@ A heads-up that alerts are expected in your area in the coming minutes. This giv
 
 1. **Earthquake vs missile protocol confusion**: Earthquake response differs from a missile alert. The priority is open ground first, then (if you cannot exit in seconds) the mamad or stairwell, then Drop-Cover-Hold. The critical difference from a missile alert: during an earthquake keep the safe-room door and windows OPEN so a structural shift cannot trap you, whereas during a missile alert you close the blast door. Do NOT tell someone to seal themselves into a closed mamad during an earthquake, and do NOT tell them to avoid the mamad entirely (it is a valid fallback with the door open).
 
-2. **"10 minutes" applies only to short-range fire and is NOT a release signal in the Iran/Houthi scenario.** The 10-minute shelter time after the last impact is the historical minimum for Gaza/Lebanon short-range posture. For ballistic / Iran / Houthi / long-range threats it does NOT apply: residents must remain in the protected space until an explicit Cell Broadcast or HFC app release arrives. The Mako N12 / Ynet "Digital" coverage in 2026 Q1 confirmed the 10-minute screen text in the HFC app was carried over by mistake from the short-range posture and that the actual rule for ballistic scenarios is "stay until explicit release". Agents must NEVER tell a user "you can leave after 10 minutes" without verifying threat type and release channel.
+2. **There is no 10-minute rule any more, for any threat type.** Older material (and older versions of this skill) said to stay 10 minutes after the last impact for short-range fire. Current Pikud HaOref guidance for BOTH rocket fire and hostile-aircraft intrusion is the same single sentence: stay in the protected space "עד לקבלת הנחיה מפורשת מפיקוד העורף", until an explicit Home Front Command instruction. Release is tied to confirmation that no further launch is expected, not to a clock. **An agent must NEVER tell a user they can come out after 10 minutes, or after any elapsed time.** The only correct answer to "how long do I stay?" is "until Pikud HaOref says you may leave", plus how to receive that message (HFC app, National Emergency Portal, Cell Broadcast, official Telegram, regional radio, or the 104 hotline).
 
-3. **Chemical alerts go UP, not down**: For hazardous materials (category 6), the safe direction is UP (higher floors). Many chemicals are heavier than air. This is opposite to the instinct to seek underground shelters. An agent recommending a miklat (underground shelter) during a chemical event could put users in greater danger.
+3. **In a chemical event, do NOT go down to an underground shelter**: for hazardous materials (category 6) the official instruction is to stay inside where you are, close the doors and windows, and turn off the air conditioning. Many chemicals are heavier than air, so a basement or underground miklat is the one place that can be worse than staying put. This is the single alert type where the usual run-to-the-shelter reflex is wrong. Note the official instruction is NOT "climb": a higher floor helps against heavier-than-air agents, but leaving a sealed room to climb an unsealed stairwell during a release is worse than staying sealed.
 
 4. **Terrorist infiltration is not a shelter event**: Category 7 (terrorist infiltration) requires lockdown, not shelter entry. The protocol is lock-hide-silence, not run-to-mamad. Opening a mamad door during an infiltration event could expose residents.
 
-5. **Pre-alert does not mean sirens are imminent**: Category 14 is a heads-up, not a siren. Users should prepare but should not panic. If no actual alert follows within ~20 minutes, the pre-alert can be considered expired.
+5. **Pre-alert does not mean sirens are imminent**: Category 14 is a heads-up, not a siren. Users should prepare but should not panic. Note that "category 14" is a community alert-app feed code, NOT an official Home Front Command category, and no official expiry window is published for it. Do not tell a user a pre-alert has "expired" after a set number of minutes.
 
 ## Bundled Resources
 
@@ -264,7 +330,7 @@ See the `references/` directory for:
 | Siren sounds but no app alert | Treat as real. Enter shelter immediately. The app may have a slight delay |
 | App alert but no siren | Still take shelter. Sirens may not be audible indoors or in noisy areas |
 | Don't know which alert type | Enter shelter and check the Home Front Command app for details. Default to missile protocol |
-| Power is out | Use a battery radio (Galei Zahal / Army Radio: 102.3 FM in the north, 104 FM in the center and south, 96.6 FM in the Jerusalem area; or Reshet Bet 95.5 FM). The siren system is independent of power |
-| No internet connection | The siren system and Cell Broadcast lock-screen alerts work without internet. If you have a radio (Galei Zahal: 102.3 FM north, 104 FM center/south, 96.6 FM Jerusalem), use it. For short-range fire the 10-minute-after-last-impact minimum applies; for ballistic / long-range threats stay put until an explicit Cell Broadcast or HFC app release arrives |
-| Multiple alert types simultaneously | Follow the most restrictive protocol. Missile + chemical = shelter + seal room |
+| Power is out | Use a battery radio. Pikud HaOref broadcasts the shelter-exit message on: Kol BaRama 105.7 / 104.3 / 92.1 / 107.6 FM, Kol Chai 92.8 / 93 / 102.5 FM, Radio Darom 101.5 FM, Galei Israel 106.5 / 94 / 89.3 FM, and on Shabbat and festivals Kan Moreshet 90.5 / 90.8 / 92.5 / 100.7 FM. The siren system is independent of mains power |
+| No internet connection | The siren system and Cell Broadcast lock-screen alerts work without internet, and Cell Broadcast overrides silent mode. Use a battery radio (Kol BaRama 105.7 / 104.3 / 92.1 / 107.6 FM, Kol Chai 92.8 / 93 / 102.5 FM, Radio Darom 101.5 FM, Galei Israel 106.5 / 94 / 89.3 FM, and on Shabbat and festivals Kan Moreshet 90.5 / 90.8 / 92.5 / 100.7 FM), or call the Home Front Command hotline on 104. **Stay in the protected space until an explicit Home Front Command instruction. There is no timer, for any threat type.** If you have no means of communication at all, arrange in advance with neighbours or the building committee that someone will come and tell you physically that it is safe to come out |
+| Multiple alert types simultaneously | Follow the most restrictive protocol (missile + chemical = shelter + seal the room), with ONE documented exception: during a terrorist infiltration event, a rocket alert does NOT send you out to a protected space outside the home, including the stairwell. Stay inside |
 | Alert during Shabbat (no phone) | Sirens are audible. Follow the protocol for your location. Pikuach nefesh (saving life) overrides Shabbat observance |

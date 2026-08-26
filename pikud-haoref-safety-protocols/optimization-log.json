@@ -1,0 +1,16 @@
+{
+  "cycles": [
+    {
+      "version": "1.3.0",
+      "date": "2026-08-26",
+      "lessons": [
+        "Process lesson, the most important one for this skill: the evidence gate extracts ZERO facts from it. Every safety figure here is a duration or a phone number, and the verifier classifies durations as 'advisory' rather than blocking. A green evidence gate on this skill therefore certifies nothing at all. All assurance in this cycle came from fetching the official oref.org.il API directly and comparing verbatim. Never treat a passing gate as coverage for pikud-haoref-safety-protocols.",
+        "oref.org.il is an Angular SPA and plain fetches return an empty shell, which is why an earlier cycle cited a page it had not actually read. The machine-readable endpoints that DO serve text are: api.oref.org.il/api/v1/guidelines//heb/life-saving-guidelines/<slug>, api.oref.org.il/api/v1/QuestionsAnswers//heb/questions-answers/<slug>, and www.oref.org.il/districts/districts_heb.json (per-locality migun_time). Use these, not the web pages.",
+        "Deferred: the districts_heb.json feed gives an authoritative per-locality shelter time for 1,492 localities. This cycle added the six official time bands and the lookup instructions, but the skill still cannot answer 'what is MY time' for a named locality. A future cycle could ship a lookup script over that feed. It was not done here because a bundled data snapshot would go stale and a network call is unavailable on several declared hosts.",
+        "Deferred: no per-category siren-tone table could be found published anywhere. The only official distinction located was that a pre-alert uses an update tone rather than the rising-falling siren. Do not fabricate a tone table.",
+        "Deferred: the official Q&A carries a set of accessibility and special-population contact numbers (deaf association, disability helplines) that references/special-populations-guide.md does not include. Worth mining next cycle.",
+        "Known and deliberate: category numbers 1-7, 13, 14 are Tzofar/community alert-app feed codes, NOT official Home Front Command labels. The quick-reference says so. Category 14 in particular is not an official HFC category and has no published expiry window; an earlier version asserted a 20-minute expiry with no source and that was removed this cycle."
+      ]
+    }
+  ]
+}

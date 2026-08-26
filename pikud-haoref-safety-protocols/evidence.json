@@ -1,14 +1,180 @@
 {
   "schemaVersion": "1.0",
   "skill": "pikud-haoref-safety-protocols",
-  "generated_at": "2026-05-29T00:00:00Z",
+  "generated_at": "2026-08-26T17:34:56.557999",
   "claims": [
     {
       "claim_id": "earthquake-protocol",
-      "claim": "Home Front Command earthquake guidance: reach open ground within seconds if possible; otherwise enter the mamad or stairwell keeping the door and windows open so they cannot jam; otherwise Drop-Cover-Hold. Do not seal yourself into a closed mamad during an earthquake.",
-      "source_url": "https://www.oref.org.il/heb/emergencies/earthquake",
-      "raw_snippet": "אם לא ניתן לצאת מהמבנה בתוך שניות, היכנסו לממ\"ד והשאירו את הדלת והחלונות פתוחים, או צאו לחדר המדרגות והמשיכו לרדת עד ליציאה מהמבנה",
-      "fetched_at": "2026-05-29T00:00:00Z",
+      "claim": "Official Home Front Command earthquake guidance: if you can leave the building within a few seconds, go out to an open area; if not, enter the mamad and LEAVE THE DOOR AND WINDOW OPEN; if there is no mamad, go to the stairwell and continue down and out, and DO NOT USE THE LIFT; only if none of that is possible, sit in an internal corner of the room or under heavy furniture and protect your head with your hands.",
+      "source_url": "https://api.oref.org.il/api/v1/guidelines//heb/life-saving-guidelines/earthquake",
+      "raw_snippet": "אם ניתן לצאת מהמבנה בתוך שניות ספורות - צאו מיד לשטח פתוח. • אם לא ניתן לצאת מהמבנה בתוך שניות ספורות - היכנסו לממ\"ד והשאירו את הדלת והחלון פתוחים. • אם אין ממ”ד - צאו לחדר המדרגות, ואם ניתן, המשיכו לרדת עד ליציאה מהבניין. אין להשתמש במעלית! • רק אם לא ניתן לפעול כך - שבו בפינה פנימית של החדר או תחת רהיט כבד והגנו על הראש באמצעות הידיים. \",\"waitingTime\":\"\"},{\"alt\":\"\",\"title\":\"בחוץ\",\"icon\":\"/media/me5n31pw/guid2.png\",\"text\":\" •",
+      "fetched_at": "2026-08-26",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-categories-quick-reference.md"
+      ],
+      "verified_via": "official oref.org.il guidelines API (curl)",
+      "verified_at": "2026-08-26"
+    },
+    {
+      "claim_id": "stay-until-explicit-instruction-rockets",
+      "claim": "Official Pikud HaOref guidance for rocket and missile fire: enter the best protected space available within your time window and STAY THERE until an explicit Home Front Command instruction. There is no 10-minute rule.",
+      "source_url": "https://api.oref.org.il/api/v1/guidelines//heb/life-saving-guidelines/rocket-and-missile-attacks",
+      "raw_snippet": "בעת קבלת התרעה על ירי רקטות וטילים, היכנסו למרחב מוגן מיטבי בהתאם לפרק הזמן העומד לרשותכם והישארו בו עד לקבלת הנחיה מפורשת מפיקוד העורף. אם מתקבלת הנחיה מקדימה - יש לנצל את הזמן כדי להגיע למרחב המוגן המיטבי הקרוב אליכם במהירות, ובעת קבלת התרעה להיכנס אליו ב",
+      "fetched_at": "2026-08-26",
+      "verified_via": "official oref.org.il API (curl)",
+      "verified_at": "2026-08-26",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-categories-quick-reference.md",
+        "scripts/alert_protocol_lookup.py"
+      ]
+    },
+    {
+      "claim_id": "stay-until-explicit-instruction-uav",
+      "claim": "Hostile-aircraft intrusion carries the SAME shelter-exit rule as rockets: stay in the protected space until an explicit Home Front Command instruction.",
+      "source_url": "https://api.oref.org.il/api/v1/guidelines//heb/life-saving-guidelines/infiltration-of-a-hostile-aerial-vehicle",
+      "raw_snippet": "בעת קבלת התרעה על חדירת כלי טיס עוין, היכנסו למרחב המוגן והישארו בו עד לקבלת הנחיה מפורשת מפיקוד העורף , בהתאם להנחיות הבאות: \",\"collapseItems\":[{\"alt\":\"\",\"title\":\"במבנה \",\"icon\":\"/media/5lmk3i5c/guideline1.png\",\"text\":\" היכנסו למרחב מוגן מיטבי בהתאם לסדר העדי",
+      "fetched_at": "2026-08-26",
+      "verified_via": "official oref.org.il API (curl)",
+      "verified_at": "2026-08-26",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-categories-quick-reference.md",
+        "scripts/alert_protocol_lookup.py"
+      ]
+    },
+    {
+      "claim_id": "shelter-time-range-and-lookup",
+      "claim": "Official time-to-shelter range is immediate, 15s, 30s, 45s, 60s and 90s. There is no 3-minute tier. Look yours up by locality (and street, in a split city) on the oref.org.il home page. The siren duration equals the time available.",
+      "source_url": "https://api.oref.org.il/api/v1/QuestionsAnswers//heb/questions-answers/rockets-missles-faq",
+      "raw_snippet": "זמן ההגעה למרחב המוגן נע בין פרק זמן מיידי לבין 15 שניות, 30 שניות, 45 שניות, דקה ועד ודקה וחצי. על מנת לדעת כמה זמן יש לכם מרגע קבלת ההתרעה עד לכניסה למרחב המוגן, היכנסו ל חלונית בדף הבית והזינו את שם היישוב (במקרה של עיר מפוצלת- יש להזין גם את שם הרחוב). בנוסף, פרק הזמן בו נשמעת האזעקה מהצופרים הינו פרק הזמן הנדרש להגעה למרחב המוגן. כיצ",
+      "fetched_at": "2026-08-26",
+      "verified_via": "official oref.org.il API (curl)",
+      "verified_at": "2026-08-26",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-categories-quick-reference.md",
+        "scripts/alert_protocol_lookup.py"
+      ]
+    },
+    {
+      "claim_id": "shelter-time-same-for-all-threats",
+      "claim": "Time to reach the protected space does NOT vary by threat type.",
+      "source_url": "https://api.oref.org.il/api/v1/QuestionsAnswers//heb/questions-answers/rockets-missles-faq",
+      "raw_snippet": "האם זמן ההתגוננות משתנה בגלל האיום? לא. זמן ההתגוננות זהה לכלל האיומים מדוע שיניתם את זמן ההתגוננות בישוב שלי? השיקול המ",
+      "fetched_at": "2026-08-26",
+      "verified_via": "official oref.org.il API (curl)",
+      "verified_at": "2026-08-26",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-categories-quick-reference.md",
+        "scripts/alert_protocol_lookup.py"
+      ]
+    },
+    {
+      "claim_id": "golan-and-kav-imut-immediate",
+      "claim": "In the Golan North guidance area and most Kav HaImut localities the siren lasts 15 seconds but arrival time is IMMEDIATE, so lie down and cover your head at once. In the Gaza envelope a Tzeva Adom alert sounds and arrival time is 15 seconds.",
+      "source_url": "https://api.oref.org.il/api/v1/QuestionsAnswers//heb/questions-answers/rockets-missles-faq",
+      "raw_snippet": "יוצאים מהכלל: באזור הנחיות \"גולן צפון\" וכן ברוב היישובים המשתייכים לאזור הנחיה \"קו עימות\" – משך האזעקה 15 שניות, אך זמן ההגעה למרחב המוגן הוא מיידי. על כן, ברגע הישמע האזעקה, יש לשכב על הקרקע ולהגן על הראש באמצעות הידיים. בנוסף, באזור \"עוטף עזה\" – תישמע אזעקת \"צבע אדום\" וזמן ההגעה למרחב המוגן הוא 15 שניות. היערכות להפסקת חשמל היערכות להפסקת חשמל מה עליי להכין למצב של הפסקת חשמל? יש להיערך למצב של הפסקות חשמל ממושכות, על בסיס ה",
+      "fetched_at": "2026-08-26",
+      "verified_via": "official oref.org.il API (curl)",
+      "verified_at": "2026-08-26",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-categories-quick-reference.md",
+        "scripts/alert_protocol_lookup.py"
+      ]
+    },
+    {
+      "claim_id": "hfc-hotline-104",
+      "claim": "The Home Front Command emergency and information hotline is 104. It is the number Pikud HaOref itself gives, in Hebrew, for receiving current instructions and the shelter-exit message.",
+      "source_url": "https://api.oref.org.il/api/v1/QuestionsAnswers//heb/questions-answers/rockets-missles-faq",
+      "raw_snippet": "ניתן להתקשר למוקד החירום של פיקוד העורף שמספרו 104 ולהאזין להנחיות העדכניות באמצעי התקשורת. אם אין כל אמצעי תקשורת המאפשר לקבל את ההודעה המאפשרת לצאת",
+      "fetched_at": "2026-08-26",
+      "verified_via": "official oref.org.il API (curl)",
+      "verified_at": "2026-08-26",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-categories-quick-reference.md",
+        "scripts/alert_protocol_lookup.py"
+      ]
+    },
+    {
+      "claim_id": "exit-message-channels",
+      "claim": "Pikud HaOref sends the shelter-exit message via the HFC app, the National Emergency Portal, the Cell Broadcast personal-message system, the official Telegram channels, and named regional radio stations.",
+      "source_url": "https://api.oref.org.il/api/v1/QuestionsAnswers//heb/questions-answers/rockets-missles-faq",
+      "raw_snippet": "פיקוד העורף ישלח הודעת יציאה מהמרחב המוגן בתום אירועי חירום, בדרכים הבאות: 1. יישומון פיקוד העורף. 2. פורטל החירום הלאומי 3. מערכת CB (מסר אישי) בצליל הודעה רגיל של המכשיר (עדכון) 4. בערוצי הטלגרם של פיקוד העורף 5. בתחנות הרדיו הבאות: קול ברמה בתדרים",
+      "fetched_at": "2026-08-26",
+      "verified_via": "official oref.org.il API (curl)",
+      "verified_at": "2026-08-26",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-categories-quick-reference.md",
+        "scripts/alert_protocol_lookup.py"
+      ]
+    },
+    {
+      "claim_id": "terrorist-infiltration-outside-lights-on",
+      "claim": "Official terrorist-infiltration guidance: lock the door, LEAVE THE LIGHTS OUTSIDE THE HOUSE ON, enter the mamad, close the door firmly, sit below the window line, and do not leave until an official end-of-event announcement.",
+      "source_url": "https://api.oref.org.il/api/v1/guidelines//heb/life-saving-guidelines/terrorist-infiltration",
+      "raw_snippet": "נעלו את דלת הבית. • השאירו את האורות מחוץ לבית דולקים. •היכנסו לממ\\\"ד, סגרו את הדלת היטב ושבו מתחת לקו החלונות. • אם אין ממ\\\"ד - יש להיכנס למקום מסתור. • אין לצאת מהמרחב המוגן עד לקבלת הודעה מהגורמים הרשמיים על סיום האירוע. \",\"waitingTime\":\"\"},{\"al",
+      "fetched_at": "2026-08-26",
+      "verified_via": "official oref.org.il API (curl)",
+      "verified_at": "2026-08-26",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-categories-quick-reference.md",
+        "scripts/alert_protocol_lookup.py"
+      ]
+    },
+    {
+      "claim_id": "hazmat-turn-off-ac",
+      "claim": "Official hazardous-materials guidance: stay in the building, close the doors and windows, TURN OFF THE AIR CONDITIONER, and do not leave until an end-of-event announcement.",
+      "source_url": "https://api.oref.org.il/api/v1/guidelines//heb/life-saving-guidelines/hazardous-materials-event",
+      "raw_snippet": "הישארו במבנה וסגרו את הדלתות והחלונות. • כבו את המזגן. • אין לצאת מהמבנה עד לקבלת הודעה על סיום האירוע. \",\"waitingTime\":\"\"},{\"alt\":\"\",\"title\":\"בחוץ\",\"icon\":\"/media/me5n31pw/guid2.png\",\"text\":\" • היכנסו מיד למבנה וסגרו את",
+      "fetched_at": "2026-08-26",
+      "verified_via": "official oref.org.il API (curl)",
+      "verified_at": "2026-08-26",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-categories-quick-reference.md",
+        "scripts/alert_protocol_lookup.py"
+      ]
+    },
+    {
+      "claim_id": "radiological-no-official-guidance",
+      "claim": "Pikud HaOref publishes NO life-saving guidance page for a radiological event: the official guidelines endpoint returns HTTP 204 with an empty body for radiological-event, while every other category returns content. The skill's radiological steps are therefore general practice, not official Israeli instructions.",
+      "source_url": "https://api.oref.org.il/api/v1/guidelines//heb/life-saving-guidelines/radiological-event",
+      "raw_snippet": "HTTP 204, 0 bytes (empty body). Compared the same endpoint for other categories on 2026-08-26: hazardous-materials-event HTTP 200 22340 bytes, fear-of-a-tsunami HTTP 200 11668 bytes, earthquake HTTP 200 40086 bytes.",
+      "fetched_at": "2026-08-26",
+      "verified_via": "official oref.org.il API (curl), observed response status and content length",
+      "verified_at": "2026-08-26",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-categories-quick-reference.md",
+        "scripts/alert_protocol_lookup.py"
+      ]
+    },
+    {
+      "claim_id": "official-radio-stations-for-exit-message",
+      "claim": "Pikud HaOref broadcasts the shelter-exit message on Kol BaRama (105.7/104.3/92.1/107.6 FM), Kol Chai (92.8/93/102.5 FM), Radio Darom (101.5 FM), Galei Israel (106.5/94/89.3 FM) and, on Shabbat and festivals, Kan Moreshet (90.5/90.8/92.5/100.7 FM).",
+      "source_url": "https://api.oref.org.il/api/v1/QuestionsAnswers//heb/questions-answers/rockets-missles-faq",
+      "raw_snippet": "בתחנות הרדיו הבאות: קול ברמה בתדרים: 105.7, 104.3, 92.1, 107.6 FM קול חי בתדרים: 92.8, 93, 102.5 FM רדיו דרום בתדר: 101.5 FM גלי ישראל בתדרים: 106.5, 94, 89.3 FM בשבת ובחג - כאן מורשת בתדרים: 90.5 / 90.8 / 92.5 / 100.7 FM. כמו כן ניתן להתקשר למוקד החירום של פיקוד העורף שמספרו 104 ולהאזין להנחיות העד",
+      "fetched_at": "2026-08-26",
+      "verified_via": "official oref.org.il Q&A API (curl)",
+      "verified_at": "2026-08-26",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -16,11 +182,55 @@
       ]
     },
     {
-      "claim_id": "ballistic-shelter-release",
-      "claim": "For short-range fire (Gaza/Lebanon) the practice is to stay about 10 minutes after the last impact; for ballistic / Iran / Houthi / long-range threats do not use a 10-minute timer, instead wait for an explicit release (Cell Broadcast / HFC app / radio). The HFC app's '10 minutes' screen text was a carryover from the short-range posture, reported by Ynet and N12 in 2026.",
-      "source_url": "https://www.ynet.co.il/digital/technews/article/h1nnwszfbl",
-      "raw_snippet": "אין לצאת לאחר עשר דקות כמו שהיה נהוג בירי מלבנון ומרצועת עזה",
-      "fetched_at": "2026-05-29T00:00:00Z",
+      "claim_id": "unexploded-ordnance-rule",
+      "claim": "Unexploded ordnance and interceptor/missile fragments may lie on the ground and can detonate on contact. Photographing them, being near them and any contact are described by Pikud HaOref as life-threatening. The rule is: move away, keep others away, and report to the police on 100.",
+      "source_url": "https://api.oref.org.il/api/v1/QuestionsAnswers//heb/questions-answers/rockets-missles-faq",
+      "raw_snippet": "חשוב לזכור שצילום של נפלים וחפצים בלתי מזוהים, שהייה בסמוך להם וכמובן מגע מכל סוג שהוא, הן פעולות מסכנות חיים! אם אתם נמצאים בשטח פתוח, ייתכן שתיתקלו בחלקי טילים ונפלים שעלולים להתפוצץ במגע ולסכן את חייכם. זכרו: אם אנחנו רואים נפלים או חפצים לא מזוהים - מתרחקים, מרחיקים ומדווחים: מתרחקים מהמקום, מרחיקים סקרנים ומדווחים למשטרת יש",
+      "fetched_at": "2026-08-26",
+      "verified_via": "official oref.org.il Q&A API (curl)",
+      "verified_at": "2026-08-26",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/alert_protocol_lookup.py"
+      ]
+    },
+    {
+      "claim_id": "no-mamad-stairwell-rules",
+      "claim": "Official fallback when no protected space is reachable: an internal stairwell with no windows or external walls; stay on the flight of stairs, not the floor landing; in a building over three floors use a flight with at least two floors above it; under three floors use the middle floor's flight; never the entrance floor. An internal space must be surrounded by as many walls and as few openings as possible, sitting against an internal wall below the window line and not facing the door. Never use the kitchen, shower or toilet.",
+      "source_url": "https://api.oref.org.il/api/v1/guidelines//heb/life-saving-guidelines/rocket-and-missile-attacks",
+      "raw_snippet": "חדר מדרגות פנימי - ללא חלונות וקירות חיצוניים. יש לשהות על גרם המדרגות ולא בחלל הקומה. בבניין מעל שלוש קומות - יש לשהות בגרם מדרגות שיש מעליו שתי קומות לפחות. בבניין מתחת לשלוש קומות - יש לשהות בגרם המדרגות של הקומה האמצעית. אין לשהות בקומת הכניסה. חלל פנימי - שמוקף בכמה שיותר קירות, ועם כמה שפחות חלונות ופתחים. יש לשבת צמוד לקיר פנימי, מתחת לקו חלונות ולא מול הדלת. אין לבחור במטבח, מקלחת ושירותים לשמש כמרחב מוגן .מכ",
+      "fetched_at": "2026-08-26",
+      "verified_via": "official oref.org.il guidelines API (curl)",
+      "verified_at": "2026-08-26",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/alert_protocol_lookup.py"
+      ]
+    },
+    {
+      "claim_id": "no-lift-and-vehicle-and-public-transport",
+      "claim": "Official rules: never use a lift on receiving an alert (any type); in a vehicle, pull over, get out and enter the nearest best protected space, or move beyond the road shoulder or safety barrier and lie down, and only if you cannot get out, open the windows and crouch below the window line; on an intercity bus the driver stops and opens the doors and passengers crouch below the window line; on an urban bus passengers get off to the nearest protection. Do not gather at an incident area.",
+      "source_url": "https://api.oref.org.il/api/v1/guidelines//heb/life-saving-guidelines/rocket-and-missile-attacks",
+      "raw_snippet": "בעת קבלת התרעה - אין להשתמש במעלית. אם המרחב המוגן הוא המקלט המשותף או קומה אחרת בחדר המדרגות - יש לוודא כי ניתן להגיע אליהם באמצעות המדרגות בזמן ההתגוננות העומד לרשותנו. • אם אתם שוהים במבנה בבנייה קלה - יש להיכנס למרחב מוגן מיטבי. רק אם לא ניתן להגיע למרחב מוגן מיטבי - יש לצאת מהמבנה, לשכב על הקרקע ולהגן על הראש עם הידיים. • מ",
+      "fetched_at": "2026-08-26",
+      "verified_via": "official oref.org.il guidelines API (curl)",
+      "verified_at": "2026-08-26",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/alert_protocol_lookup.py"
+      ]
+    },
+    {
+      "claim_id": "alert-category-numbering-is-app-level",
+      "claim": "Home Front Command publishes life-saving guidance by NAMED type, not numbered category: the official endpoints are keyed on slugs such as rocket-and-missile-attacks, infiltration-of-a-hostile-aerial-vehicle, terrorist-infiltration, earthquake, hazardous-materials-event, fear-of-a-tsunami and radiological-event. The numbers 1-7, 13 and 14 used in this skill are community alert-app feed codes, not official HFC labels.",
+      "source_url": "https://api.oref.org.il/api/v1/guidelines//heb/life-saving-guidelines/rocket-and-missile-attacks",
+      "raw_snippet": "בעת קבלת התרעה על ירי רקטות וטילים, היכנסו למרחב מוגן מיטבי בהתאם לפרק הזמן העומד לרשותכם והישארו בו עד לקבלת הנחיה מפורשת מפיקוד העורף. אם מתקבלת הנחיה מקדימה - יש לנצל את הזמן כדי להגיע למרחב המוגן",
+      "fetched_at": "2026-08-26",
+      "verified_via": "official oref.org.il guidelines API (curl); endpoint paths are named slugs with no numeric category anywhere in the API",
+      "verified_at": "2026-08-26",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -28,31 +238,106 @@
       ]
     },
     {
-      "claim_id": "alert-category-codes",
-      "claim": "Home Front Command issues alerts by named type; the numbered categories (1-7, 13, 14) are the Tzofar / Tzevaadom feed codes used by community alert apps, not official HFC labels. Cat 13 = event concluded, Cat 14 = early warning.",
-      "source_url": "https://www.tzevaadom.co.il/systems/",
-      "raw_snippet": "ומים שונים בזמן אמת אמצעי התרעה אפליקציה לנייד אפליקציה מתקדמת לאייפון ואנדרואיד - בחירת ישובים, אזורים, צליל, עקיפת מצב שקט, התרעות לפי מיקום, הקראה, היסטוריה, מפה ועוד אתר (כרטיסייה בדפדפן) דף אינטרנט המציג על גבי המפה את ההתרעות בזמן אמת.",
-      "fetched_at": "2026-08-18",
+      "claim_id": "reference-link-portals",
+      "claim": "Pointer claim for the Reference Links table: the Home Front Command portal (oref.org.il, and its /eng section), Magen David Adom (mdais.org, /en) and the Knesset legislation portal exist and are the right destinations for, respectively, official protection guidance, first-aid guidance, and the Civil Defence Law. No factual figure is asserted from any of them.",
+      "source_url": "https://www.oref.org.il/districts/districts_heb.json",
+      "raw_snippet": "\"migun_time\" appears in the per-locality feed served from www.oref.org.il, confirming the host is live and serving data. Status checks on 2026-08-26: https://www.oref.org.il 200, https://www.oref.org.il/eng 200; https://www.mdais.org, https://www.mdais.org/en and https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/default.aspx return HTTP 247, a Reblaze bot-protection response (window.rbzns payload in the body), not a dead link.",
+      "fetched_at": "2026-08-26",
+      "verified_via": "curl status checks on 2026-08-26; the three 247 responses are bot protection, confirmed by the Reblaze window.rbzns payload in the body",
+      "verified_at": "2026-08-26",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/alert-categories-quick-reference.md"
-      ],
-      "verified_via": "reference-coverage entry; snippet is a contiguous sentence from its source page",
-      "verified_at": "2026-08-18"
+      ]
     },
     {
-      "claim_id": "radio-and-reference-urls",
-      "claim": "Galei Tzahal (Army Radio) broadcasts on 102.3 FM in the north, 104 FM in the center and south, and 96.6 FM in the Jerusalem area. Reference URLs for Home Front Command, MDA, planning authority, and the Civil Defense Law. Covers these references: https://www.oref.org.il/eng https://www.oref.org.il https://www.gov.il/he/departments/planning_authority https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/default.aspx https://www.mdais.org/en https://www.mdais.org",
-      "source_url": "https://www.oref.org.il/eng",
-      "raw_snippet": "Staying near unexploded rockets and interceptor fragments is life-threatening! The new version includes upgrades that will help you quickly understand how to act.",
-      "fetched_at": "2026-08-19",
+      "claim_id": "districts-migun-time-distribution",
+      "claim": "The official per-locality feed contains exactly six distinct migun_time values across 1,492 localities: 0, 15, 30, 45, 60 and 90 seconds. There is no 180-second or 3-minute tier. Every Gaza-envelope locality is 15 seconds, not immediate.",
+      "source_url": "https://www.oref.org.il/districts/districts_heb.json",
+      "raw_snippet": "\"areaid\": 26, \"areaname\": \"עוטף עזה\", \"id\": \"212\", \"value\": \"14B7A4050E9FA96E3B88F428252C44FA\", \"label\": \"בארי\", \"rashut\": \"מועצה אזורית: אשכול\", \"label_he\": \"בארי\", \"migun_time\": 15",
+      "fetched_at": "2026-08-26",
+      "verified_via": "official oref.org.il districts feed (curl), 1,492 rows parsed on 2026-08-26; value counts 0x4, 15x144, 30x130, 45x142, 60x173, 90x899",
+      "verified_at": "2026-08-26",
       "appears_in": [
         "SKILL.md",
-        "references/alert-categories-quick-reference.md"
-      ],
-      "verified_via": "Home Front Command national emergency portal read in a browser",
-      "verified_at": "2026-08-19"
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "outdoors-enter-protection-first",
+      "claim": "Official outdoor rule for rocket fire: enter the best protected space near you; lying on the ground and protecting your head is only the fallback if you cannot.",
+      "source_url": "https://api.oref.org.il/api/v1/guidelines//heb/life-saving-guidelines/rocket-and-missile-attacks",
+      "raw_snippet": "יש להיכנס למיגון המיטבי בקרבתכם. רק אם לא ניתן, יש לשכב על הקרקע ולהגן על הראש עם הידיים. \",\"waitingTime\":\"\"},{\"alt\":\"\",\"title\":\"ברכב\",\"icon\":\"/media/ggykpstd/v",
+      "fetched_at": "2026-08-26",
+      "verified_via": "official oref.org.il guidelines API (curl)",
+      "verified_at": "2026-08-26",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-categories-quick-reference.md",
+        "scripts/alert_protocol_lookup.py"
+      ]
+    },
+    {
+      "claim_id": "public-transport-rules",
+      "claim": "Official public-transport rules: intercity bus, driver stops and opens doors and passengers crouch below the window line protecting their heads; urban bus, passengers get off to the nearest best protection and, if they cannot reach it in time, crouch below the window line; train, driver slows to 30 km/h and passengers crouch below the window line in the carriages, then get off carefully at the next station into protection; light rail overground, stop and open doors and passengers crouch; light rail in a tunnel near an exit, the train stops and passengers stay aboard.",
+      "source_url": "https://api.oref.org.il/api/v1/guidelines//heb/life-saving-guidelines/rocket-and-missile-attacks",
+      "raw_snippet": "באוטובוס בין עירוני - על הנהג לעצור בצד ולפתוח את הדלתות, ועל הנוסעים להתכופף מתחת לקו החלונות ולהגן על הראש עם הידיים. באוטובוס עירוני - על הנהג לעצור בצד הדרך ולפתוח את הדלתות כדי שהנוסעים יירדו וייכנסו למיגון המיטבי הקרוב ביותר. אם לא ניתן להגיע למרחב המוגן המיטבי בזמן העומד לרשותכם, התכופפו מתחת לקו החלונות והגנו על הראש עם הידיים. בנסיעה ברכבת - על הנהג להאט למהירות של 30 קמ\"ש, ועל הנוסעים להתכופף מתחת לקו החלונות בקרונות ולהגן על הראש עם הידיים. בהגעה לתחנה הקרובה, הנוסעים יירדו בזהירות וייכנסו למיגון המיטבי בתחנה. ברכבת הקלה - בקו עילי - על הנהג ל",
+      "fetched_at": "2026-08-26",
+      "verified_via": "official oref.org.il guidelines API (curl)",
+      "verified_at": "2026-08-26",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-categories-quick-reference.md",
+        "scripts/alert_protocol_lookup.py"
+      ]
+    },
+    {
+      "claim_id": "earthquake-three-prohibitions",
+      "claim": "Official earthquake prohibitions: do not use the lift during or after the earthquake, do not stand under a doorway, and do not enter an underground shelter. Protective posture is to kneel, get low to the ground and protect the head with the hands. A wheelchair user should lock the chair and protect their head.",
+      "source_url": "https://api.oref.org.il/api/v1/guidelines//heb/life-saving-guidelines/earthquake",
+      "raw_snippet": "אין להשתמש במעלית בזמן רעידת אדמה ולאחריה, אין לעמוד תחת משקוף ואין להיכנס למקלט תת קרקעי. • אם אתם בכיסא גלגלים - נעלו אותו והגנו על הראש. • אם ניתן, קחו אתכם את תיק החירום המשפחתי שהכנתם מבעוד מועד. • התרחקו ככל האפשר ממבנים, מע",
+      "fetched_at": "2026-08-26",
+      "verified_via": "official oref.org.il guidelines API (curl)",
+      "verified_at": "2026-08-26",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-categories-quick-reference.md",
+        "scripts/alert_protocol_lookup.py"
+      ]
+    },
+    {
+      "claim_id": "infiltration-rocket-alert-conflict",
+      "claim": "During a terrorist infiltration event, if a rocket alert is received, do NOT go out to a protected space located outside the home, including the stairwell. Also: do not dismantle the mamad door handle (fix it with a heavy object instead), avoid sharing your location on social media, and movement in the area is forbidden until a new announcement.",
+      "source_url": "https://api.oref.org.il/api/v1/guidelines//heb/life-saving-guidelines/terrorist-infiltration",
+      "raw_snippet": "אם מתקבלת התרעה על ירי רקטות וטילים בעת אירוע חדירת מחבלים - אין לצאת למרחב מוגן הנמצא מחוץ לבית, לרבות חדר המדרגות. • אין לפרק את ידית דלת הממ\"ד. הסרת הידית פוגעת במנגנון ובתפקוד הדלת וביעלותה בהגנה על חיי אדם. על מנת לחסום כניסה מבחוץ ניתן להשתמש באמצעים יעילים ופשוטים שמונעים מהדלת להיפתח בלי לפגוע בתקינותה - כמו קיבוע הידית באמצעות חפ",
+      "fetched_at": "2026-08-26",
+      "verified_via": "official oref.org.il guidelines API (curl)",
+      "verified_at": "2026-08-26",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-categories-quick-reference.md",
+        "scripts/alert_protocol_lookup.py"
+      ]
+    },
+    {
+      "claim_id": "infiltration-outdoors",
+      "claim": "Official rule if you are in the open during a terrorist infiltration event: enter a place of shelter immediately and stay there until an official end-of-event announcement.",
+      "source_url": "https://api.oref.org.il/api/v1/guidelines//heb/life-saving-guidelines/terrorist-infiltration",
+      "raw_snippet": "היכנסו מיד למקום מחסה והישארו בו עד לקבלת הודעה על סיום האירוע מהגורמים הרשמיים. \",\"waitingTime\":\"\"},{\"alt\":\"\",\"title\":\"ברכב\",\"icon\":\"/media/ggykpstd/",
+      "fetched_at": "2026-08-26",
+      "verified_via": "official oref.org.il guidelines API (curl)",
+      "verified_at": "2026-08-26",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/alert-categories-quick-reference.md",
+        "scripts/alert_protocol_lookup.py"
+      ]
     }
   ]
 }

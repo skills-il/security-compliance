@@ -38,7 +38,7 @@
 - Pre-arrange assistance with neighbors or building committee (vaad bayit)
 - Keep a "go bag" next to the bed: medications, glasses, hearing aid, phone, flashlight
 - If using a wheelchair or walker, ensure the path to shelter is clear and wide enough
-- Register with Home Front Command (104/1207) for special needs support
+- Contact the Home Front Command hotline on 104 about special-needs support
 
 ### During an Alert
 - If you cannot reach the shelter in time, use the nearest interior room
@@ -59,11 +59,24 @@
 - If the mamad door is too narrow, designate the safest accessible interior space
 - Inform the building committee so they can assist during alerts
 - Lock wheelchair brakes when positioned in the shelter
+- **A seated user's head is at or above window height in many mamadim.** If the user can transfer, get them onto the floor below the window line. If not, position the chair against the internal wall furthest from the window and out of the door swing
+- Register with the local authority welfare department (מחלקת הרווחה ברשות המקומית). That is the mechanism that actually produces evacuation assistance; telling the building committee is useful but is not a substitute
 
 ### Mobility Limitations (walker, crutches)
 - Keep assistive device next to you at all times, especially at night
 - Consider a ground-floor apartment if possible
 - The stairwell protocol (for buildings without mamad) may not be feasible: use interior room instead
+
+### Bedbound and non-transferable patients
+
+There is nothing useful to do in 90 seconds that was not arranged in advance, so this is a preparation protocol.
+
+- Move the bed into the mamad if it fits. If it does not, position it in an internal space, **against an internal wall, below the window line, and never opposite a window or facing the door**
+- Keep a mattress, heavy blanket or duvet beside the bed to cover the patient during an alert
+- Register the patient with the local authority welfare department and ask about evacuation assistance
+- Agree in advance with named neighbours who will come, and make sure they can get in (key, code, or a spare key held nearby)
+- Keep 10 days of medication, spare batteries or a generator for powered equipment, and a cooler for refrigerated medication
+- If the patient uses a ventilator or oxygen concentrator, plan for a power cut specifically: the alert may last hours and no one may be able to reach you during it
 
 ## People with Sensory Disabilities
 
@@ -99,13 +112,13 @@
 
 ### First Steps After Arrival
 1. Learn your time-to-shelter zone (oref.org.il or call 104)
-2. Download the Home Front Command app (available in Hebrew, English, Russian, Arabic, Amharic, French)
+2. Download the Home Front Command app and check which languages it currently offers in the store listing rather than relying on a list here
 3. Identify your building's shelter (ask neighbors, landlord, or building committee)
 4. Practice the route from every room in your apartment
 5. Prepare supplies in the shelter
 
 ### Language Resources
-- Home Front Command hotline in English: 104
+- Home Front Command hotline: 104. This is the general national hotline that Pikud HaOref publishes for current instructions; do not assume it is an English-only line
 - Nefesh B'Nefesh emergency guide: nbn.org.il/emergency
 - AACI emergency handbook: aaci.org.il
 - Many municipalities have immigrant liaison officers who can help in multiple languages
