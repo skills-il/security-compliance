@@ -1,0 +1,20 @@
+{
+  "cycles": [
+    {
+      "version": "1.3.0",
+      "date": "2026-08-26",
+      "lessons": [
+        "Expert MAJOR deferred: the CRITICAL threshold is arguably mis-calibrated for vulnerabilities. A CVSS 10.0 RCE on internet-facing production with credentials, spreading to multiple hosts, scores 8.35 = HIGH; the tool only reaches CRITICAL once blast radius is already organisation-wide, i.e. after it has spread. Triage should escalate on POTENTIAL blast radius. Also, Workflow B names exploitability, reachability and internet exposure as prioritisation inputs and none of them exists in the script.",
+        "Expert MAJOR deferred: no IR lifecycle beyond triage. No declaration criteria, no severity-to-escalation matrix, no war-room roles, no comms plan (legal, PR, customers, insurer), no cyber-insurance notification step (most Israeli policies require prompt notice and pre-approved IR vendors, and calling the wrong vendor can void cover), no tabletop or retainer guidance, no eradication/recovery verification.",
+        "Expert MAJOR deferred: the tool list does not reflect what Israeli SOCs run in 2026. No SIEM, no SOAR, no case management. Cortex XSIAM, Hunters, Cybereason, Coralogix, Radware, Cybersixgill, Microsoft Sentinel and Splunk are all absent. Armis, Torq and Pentera appear in the description as trigger words and never again in the body.",
+        "Expert MAJOR deferred: the PPA notification trigger in the script is still a boolean on has_data_breach rather than a real 'serious security incident' assessment keyed to database security level and event scope. The v1.3.0 reconcile_action() mitigation makes the tool TELL the analyst to run that assessment, but the tool does not run it.",
+        "Expert MINOR deferred: interactive and JSON paths still disagree on what 'no CVSS' means (interactive prompts 'or 0 if unknown' and falls back to 5.0 on a parse error; JSON now defaults to 0.0 which triggers the renormalised path). Pick one documented meaning.",
+        "Expert MINOR deferred: the Check Point rename claim is supported in the direction stated but already dated. Harmony SASE has reportedly become 'Check Point SASE' and Infinity Playblocks is marketed as 'Playblocks'. Verify before the next cycle.",
+        "Coverage deferred to references/domain-checklist.md items 11-16: the proposed national Cybersecurity Law bill, the Iron Swords temporary law, INCD binding directives, PPA AI and PETs guidance, the Encryption Control Order, and the Capital Market Authority circular IDENTIFIER. All omitted deliberately because they could not be confirmed against a primary source: gov.il returns HTTP 403 to automated clients and the Knesset bill APIs returned no matching record. The bill must NEVER be described as in force.",
+        "Process lesson: the evidence gate extracts only 1 numeric fact from this skill, because its claims are names, versions and dates rather than currency or percentages. The gate is therefore near-inert here and passing it says almost nothing. Do not treat a green evidence gate as coverage for this skill; the Judge and Expert reads are what actually catch its defects.",
+        "Process lesson: a fix can be a lie in the docs. This cycle added CVSS clamping and documented 'a warning is printed on stderr', but run_from_json pre-clamped the value first, so the warning was dead code on the primary agent-facing path and the documented behaviour was false. Always exercise the DOCUMENTED invocation, not just the function you changed.",
+        "Process lesson: the worst defect this cycle (no non-vulnerability incident could ever be CRITICAL, because CVSS held a fixed 0.30 weight and ransomware has no CVSS) was in code that nobody had flagged in two prior cycles. It was found by running the tool on a realistic incident rather than on the documented example. Always run an incident the docs do NOT use."
+      ]
+    }
+  ]
+}

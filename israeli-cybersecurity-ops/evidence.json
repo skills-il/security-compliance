@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-cybersecurity-ops",
-  "generated_at": "2026-05-29T00:00:00Z",
+  "generated_at": "2026-08-26T16:58:41.534688",
   "claims": [
     {
       "claim_id": "amendment-13-immediate-notification",
@@ -66,6 +66,59 @@
       ],
       "verified_via": "gov.il INCD department page rendered in a browser",
       "verified_at": "2026-08-18"
+    },
+    {
+      "claim_id": "mitre-attack-current-version",
+      "claim": "MITRE ATT&CK current release is v19.2, published 2026-08-05; the v19 line began with v19.0 on 2026-04-28.",
+      "source_url": "https://api.github.com/repos/mitre-attack/attack-stix-data/releases",
+      "raw_snippet": "\"tag_name\": \"v19.2\", \"published_at\": \"2026-08-05T22:58:54Z\", \"name\": \"ATT&CK version 19.2\"",
+      "fetched_at": "2026-08-26",
+      "verified_via": "GitHub Releases REST API (curl)",
+      "verified_at": "2026-08-26",
+      "appears_in": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "claim_id": "incd-cyber-event-report-channel",
+      "claim": "The INCD cyber event report service is published at gov.il/he/service/cyber-event-report and lists the 119 hotline with 24/7 telephone answering. The page returns HTTP 403 to automated clients (Akamai bot protection) but renders normally in a browser.",
+      "source_url": "https://www.gov.il/he/service/cyber-event-report",
+      "raw_snippet": "מערך הסייבר הלאומי | ליצירת קשר | 119",
+      "fetched_at": "2026-08-26",
+      "verified_via": "browser (gov.il blocks automated clients with HTTP 403)",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md",
+        "references/incd-guidelines.md"
+      ]
+    },
+    {
+      "claim_id": "info-security-regs-2017-source",
+      "claim": "תקנות הגנת הפרטיות (אבטחת מידע), התשע\"ז-2017 are the Information Security Regulations referenced by this skill; regulation 16 sets the periodic audit duty at once every 24 months for medium- and high-level databases.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/144811.htm",
+      "raw_snippet": "ביקורות תקופתיות לווידוא קיומם ותקינותם של אמצעי האבטחה לפי נוהל האבטחה ולפי תקנות אלה כאמור בתקנה 16; (4) הוראות לעניין גיבוי הנתונים האמורים בתקנה 18(א)(1); (5) הוראות לעניין אופן ביצוע פעולות פיתוח במאגר ותיעודן, ובכלל זה אופן הגישה של אנשי הפיתוח לנתונים ב",
+      "fetched_at": "2026-08-26",
+      "verified_via": "raw HTML fetch (curl) of nevo statute page",
+      "verified_at": "2026-08-26",
+      "appears_in": [
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "ransom-payment-statutes",
+      "claim": "The Israeli statutes relevant to a ransom payment are חוק המאבק בטרור, התשע\"ו-2016 (Counter-Terrorism Law 2016) and חוק איסור הלבנת הון, התש\"ס-2000 (Prohibition on Money Laundering Law 2000). Both names and years are as cited in the skill; the skill states the exposure as a risk requiring counsel, not as a determinate outcome.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_המאבק_בטרור",
+      "raw_snippet": "”חוק איסור הלבנת הון“ – חוק איסור הלבנת הון, התש״ס–2000 ; ”חוק איסור מימון טרור“ – חוק איסור מימון טרור, התשס״ה–2005 ; ”חוק המעצרים“ – חוק סדר הדין הפ",
+      "fetched_at": "2026-08-26",
+      "verified_via": "raw HTML fetch (curl) of source page",
+      "verified_at": "2026-08-26",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/security_triage.py",
+        "references/domain-checklist.md"
+      ]
     }
   ]
 }

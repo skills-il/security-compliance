@@ -1,5 +1,8 @@
 # INCD (Israel National Cyber Directorate) Guidelines Reference
 
+*Last reviewed 2026-08-26 (skill v1.3.0). Claims without a citation in this file are
+practice guidance, not statutory obligations. Where this file and SKILL.md disagree, SKILL.md wins.*
+
 ## Overview
 
 The Israel National Cyber Directorate (INCD, Ma'arach HaCyber HaLeumi) is the
@@ -21,8 +24,8 @@ and incident response coordination.
 ### Sector-Specific Regulators
 | Sector | Regulator | Cyber Authority |
 |--------|-----------|----------------|
-| Financial | Bank of Israel | Supervisor of Banks, Directive 357 |
-| Insurance | Capital Markets Authority | Cyber regulation circular |
+| Financial | Bank of Israel | Supervisor of Banks, Proper Conduct of Banking Business Directive 364 (11/2024), which consolidates and supersedes Directives 357, 361 and 363 |
+| Insurance | Capital Market, Insurance and Savings Authority | Has its own cyber requirements. Obtain the current circular from the Authority; its number and date are not asserted here |
 | Health | Ministry of Health | Health information security standards |
 | Energy | National Infrastructure | Infrastructure protection division |
 | Water | Water Authority | SCADA/ICS security requirements |
@@ -32,7 +35,13 @@ and incident response coordination.
 ## Critical Infrastructure Protection
 
 ### Designated Sectors
-Israel designates the following as critical infrastructure:
+
+**Individual critical-infrastructure designations by the INCD are NOT publicly listed.**
+You cannot determine whether a given organisation is designated without that organisation
+confirming its own status, and the named organisations below are illustrative examples of
+the sectors, not a published designation list. Ask the organisation; do not infer.
+
+The sectors generally understood to contain designated infrastructure:
 1. **Energy**, Electricity (IEC), natural gas, fuel
 2. **Water**, Mekorot, desalination plants, water utilities
 3. **Finance**, Banks, stock exchange, payment systems
@@ -42,13 +51,22 @@ Israel designates the following as critical infrastructure:
 7. **Government**, Central and local government IT systems
 
 ### Requirements for Critical Infrastructure
-- **Mandatory cyber incident reporting** to INCD
-- **Risk assessment**, annual comprehensive assessment required
-- **Security controls**, aligned with INCD framework
-- **Incident response plan**, tested annually
-- **Security officer**, dedicated CISO required
-- **Supply chain security**, vendor risk management
-- **Business continuity**, DR/BC plans for cyber scenarios
+
+Mandatory cyber incident reporting to the INCD is established. The remaining items below are
+**recommended practice**, not citable statutory obligations: an earlier version of this file
+listed them as "required", which upgraded guidance into mandates that no source here
+supports. Where an organisation is designated, its actual obligations come from the specific
+directive that binds it, which is not public. Obtain that directive from the organisation
+or its regulator rather than relying on this list.
+
+- **Mandatory cyber incident reporting** to INCD (established)
+- **Risk assessment**, comprehensive and periodic (recommended; cadence per the binding directive)
+- **Security controls**, aligned with the INCD framework (recommended)
+- **Incident response plan**, tested periodically (recommended)
+- **Security officer**, a dedicated CISO (recommended; separate from the Privacy Protection
+  Law ממונה על הגנת הפרטיות / DPO, which is a different role with different triggers)
+- **Supply chain security**, vendor risk management (recommended)
+- **Business continuity**, DR/BC plans for cyber scenarios (recommended)
 
 ## INCD Cyber Defense Framework
 
@@ -105,24 +123,36 @@ The INCD framework is structured around five pillars:
 - **Vulnerabilities**, critical vulnerabilities in widely-used systems
 
 ### Reporting Timeline
-| Severity | Reporting Deadline | To Whom |
-|----------|-------------------|---------|
-| Critical (active attack on critical infra) | Immediately | INCD hotline |
-| High (successful breach, data exposure) | Within hours | CERT-IL portal |
-| Medium (malware contained, no data loss) | Within 24 hours | CERT-IL portal |
-| Low (attempted attack, blocked) | Best effort | CERT-IL portal |
+
+**There is no published INCD severity-tiered deadline schedule. Do not invent one.**
+An earlier version of this file carried a four-row table ("Immediately / within hours /
+within 24 hours / best effort"). It had no source and no such tiering is published by the
+INCD. It has been removed. What is actually established:
+
+| Duty | Timing | Channel |
+|------|--------|---------|
+| INCD, critical infrastructure | As soon as possible, in real time | Cyber event report service at gov.il/he/service/cyber-event-report, and the 119 hotline (24/7) |
+| INCD, everyone else | Voluntary | Same channels. CERT-IL assistance is free to private-sector organisations |
+| Privacy Protection Authority, serious security incident affecting personal data | **Immediately**. An initial report is required; waiting for the investigation to finish is expressly non-compliant | Written notification to the Authority |
+| Sector regulator, if the entity is supervised | Per that regulator's own directive | Supervisor of Banks (Directive 364), Capital Market Insurance and Savings Authority, Ministry of Health |
+
+Sector-specific directives may set their own timelines, and those override the general
+position for entities they bind. **These duties run independently.** Reporting to CERT-IL
+does not discharge the Privacy Protection Authority duty, and neither discharges a sector
+regulator's duty. CERT-IL assistance is incident response help, not a regulatory filing.
 
 ### Reporting Channels
-- **CERT-IL Portal:** Online incident reporting form
-- **Hotline:** Phone reporting for urgent incidents
-- **Email:** For non-urgent reports and inquiries
-- **Sector regulators:** Some sectors have parallel reporting requirements
+- **INCD cyber event report service:** https://www.gov.il/he/service/cyber-event-report
+- **Hotline:** 119, answered 24/7
+- **Sector regulators:** a supervised entity (bank, insurer, pension manager, HMO, hospital)
+  owes a separate report to its own regulator. Confirm which regulator supervises the entity;
+  this is the most commonly missed mandatory report in an Israeli incident.
 
 ## Security Best Practices (INCD Recommended)
 
 ### For Organizations
 1. **Multi-factor authentication** on all external-facing and privileged accounts
-2. **Patch management**, critical patches within 24 hours, high within 7 days
+2. **Patch management**, risk-based and prompt for critical vulnerabilities. (An earlier version of this file stated "critical within 24 hours, high within 7 days" as INCD guidance. Those figures had no citation and are not attributed to the INCD here. Set your own SLA, or follow the one your sector regulator imposes.)
 3. **Network segmentation**, isolate critical systems from general network
 4. **Backup strategy**, 3-2-1 rule (3 copies, 2 media types, 1 offsite)
 5. **Email security**, SPF, DKIM, DMARC implementation
