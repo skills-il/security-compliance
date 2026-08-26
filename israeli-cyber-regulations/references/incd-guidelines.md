@@ -22,7 +22,8 @@ The Israel National Cyber Directorate (INCD / Ma'arach HaSyber HaLeumi) is the n
 ### Sector-Specific Coordination
 INCD coordinates with sector regulators:
 - **Banking:** Bank of Israel, Banking Supervision Division
-- **Capital Markets:** Israel Securities Authority (ISA)
+- **Capital markets and securities:** Israel Securities Authority (ISA)
+- **Insurance, pension and provident bodies:** Capital Market, Insurance and Savings Authority. A DIFFERENT regulator from the ISA, frequently conflated with it, and the one whose Institutional Bodies Circular 2016-9-14 governs insurer cyber risk
 - **Health:** Ministry of Health, Digital Health Division
 - **Energy:** Ministry of Energy, Infrastructure Protection
 - **Telecom:** Ministry of Communications
@@ -47,7 +48,7 @@ Key controls:
 - **Access control:** Role-based access, least privilege, MFA for privileged accounts
 - **Encryption:** Data at rest and in transit encryption per classification level
 - **Secure configuration:** Hardened baselines for servers, endpoints, and network devices
-- **Patch management:** Critical patches within 48 hours, regular patches within 30 days
+- **Patch management:** risk-based prioritisation, with critical patches treated as urgent. **No numeric SLA is stated here.** Earlier versions of this file gave 48 hours for critical patches and 30 days for the rest; those figures are not published by INCD and were removed on 2026-08-26 for the same reason the reporting-deadline ladder was. If an organisation needs a patch SLA, it comes from its own policy or its regulator, not from this file
 - **Employee training:** Annual cybersecurity awareness training for all staff
 - **Network segmentation:** Separate critical systems from general network
 
@@ -70,7 +71,7 @@ Key procedures:
 - **Communication:** Internal escalation paths and external notification procedures
 - **CERT-IL coordination:** Contact CERT-IL for assistance and intelligence sharing
 - **Evidence preservation:** Chain of custody procedures for forensic evidence
-- **Post-incident review:** Lessons learned within 30 days of incident closure
+- **Post-incident review:** lessons learned captured after incident closure. No INCD-published deadline exists for this; do not state one
 
 ### Pillar 5: Recover (Shichzur)
 **Objective:** Restore capabilities and services impacted by a cybersecurity incident.
@@ -97,22 +98,56 @@ INCD designates the following sectors as critical infrastructure with mandatory 
 | Government | Ministries, agencies, local authorities | Rashut HaTkshov |
 
 ### Obligations for Critical Infrastructure
-- Mandatory incident reporting to CERT-IL
-- Annual risk assessment per INCD methodology
-- External penetration testing annually
-- 24/7 monitoring capability (SOC or equivalent)
+
+**Read the caution before using this list.** The sector table above and the
+practices below are a working picture of how critical-infrastructure supervision
+operates in Israel; **they are not sourced to a published INCD instrument**, and
+the designation machinery does not sit with INCD alone. Do not present any line
+below as a citable legal duty, and do not tell an organisation it is designated
+critical infrastructure. Whether a specific body is designated, and what it owes,
+is determined through the statutory security-supervision machinery and the
+organisation's own guiding body, and the organisation will know because it has
+been told.
+
+In particular, **"mandatory incident reporting to CERT-IL" was removed from this
+list on 2026-08-26**, because it contradicted the corrected position in the next
+section and in SKILL.md: INCD publishes no reporting deadline for any sector, and
+the only binding civilian reporting statute is the Severe Cyber Attacks (Digital
+Services and Hosting) Temporary Order Law, 5784-2023. A designated body's
+reporting duty comes from its guiding body or sector regulator, not from this
+list.
+
+Commonly expected practices, as practice and not as cited duty:
+- Risk assessment on a regular cycle, aligned to INCD methodology
+- External penetration testing
+- Continuous monitoring capability (SOC or equivalent)
 - Participation in national cyber drills when called
 - Supply chain security assessment for critical vendors
 
 ## Incident Reporting Procedures
 
-### Reporting Timeline
-| Severity | Report To | Deadline | Method |
-|----------|----------|----------|--------|
-| Critical (active attack, data exfil) | CERT-IL | Immediately (within hours) | Hotline + secure portal |
-| High (confirmed breach, service impact) | CERT-IL | Within 24 hours | Secure portal |
-| Medium (attempted attack, contained) | CERT-IL | Within 72 hours | Secure portal |
-| Low (reconnaissance, probing) | CERT-IL | Best effort | Secure portal |
+### Reporting timeline: there isn't one, and this file used to invent it
+
+**REMOVED 2026-08-26.** Earlier versions of this file carried a four-tier
+severity ladder (Critical "within hours", High 24 hours, Medium 72 hours, Low
+best effort). **No such ladder is published by INCD.** Its own reporting service
+page publishes no deadline for any sector and describes the service as one that
+"enables organisations and citizens to report", adding expressly that sharing
+information with INCD does not substitute for a reporting duty owed to a guiding
+body or regulator. The 24-hour and 72-hour figures resemble the clocks in the
+**pending** National Cyber Defense bill, which is not law.
+
+**What to say instead:**
+
+| Question | Answer |
+|---|---|
+| Is there an INCD reporting deadline? | None is published. Do not state one |
+| Is reporting mandatory? | For **digital-service and hosting providers**, yes: the Severe Cyber Attacks (Digital Services and Hosting) Temporary Order Law, 5784-2023, which INCD's reporting page cites. For everyone else it is voluntary |
+| Where do the real clocks live? | With sector regulators: BOI Directive 366 for banks, ISA immediate reporting for listed companies, and the PPA immediate duty under regulation 11(d)(1) of the 2017 Data Security Regulations for medium and high security-level databases |
+| Channel | INCD operational centre, 119, or 072-3990801, or 119@cyber.gov.il, 24/7 |
+
+Reporting early is still good practice and CERT-IL assistance is free. Frame it
+as practice, never as a deadline the organisation is breaching.
 
 ### What to Report
 - Nature of the incident (type, vector, scope)
@@ -147,13 +182,15 @@ For organizations not designated as critical infrastructure, INCD recommends the
 
 ## Compliance Mapping
 
+**Annex A references below are ISO/IEC 27001:2022.** An earlier version of this file used 2013 Annex A numbering (A.9, A.16, A.17, A.12.4, A.7.2.2); the 2022 edition restructured Annex A into four themes (A.5 Organizational, A.6 People, A.7 Physical, A.8 Technological), so those control IDs no longer exist. Confirm each mapping against the standard edition you actually hold.
+
 | INCD Requirement | ISO 27001 | SOC 2 | NIST CSF |
 |-----------------|-----------|-------|----------|
 | Asset inventory | A.8.1 | CC6.1 | ID.AM |
 | Risk assessment | 6.1.2, A.8.2 | CC3.2 | ID.RA |
-| Access control | A.9 | CC6.1-6.3 | PR.AC |
+| Access control | A.5.15-A.5.18, A.8.2-A.8.5 | CC6.1-6.3 | PR.AC |
 | Encryption | A.10.1 | CC6.1, CC6.7 | PR.DS |
-| Monitoring | A.12.4 | CC7.1-7.3 | DE.CM |
-| Incident response | A.16 | CC7.3-7.5 | RS.RP |
-| Business continuity | A.17 | A1.2 | RC.RP |
-| Awareness training | A.7.2.2 | CC1.4 | PR.AT |
+| Monitoring | A.8.15-A.8.16 | CC7.1-7.3 | DE.CM |
+| Incident response | A.5.24-A.5.28 | CC7.3-7.5 | RS.RP |
+| Business continuity | A.5.29-A.5.30, A.8.14 | A1.2 | RC.RP |
+| Awareness training | A.6.3 | CC1.4 | PR.AT |
