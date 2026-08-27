@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Israeli Privacy Protection Law — Compliance Checker
+Israeli Privacy Protection Law, Compliance Checker
 
 Standalone script that walks through a compliance assessment for the
 Israeli Privacy Protection Law 1981 and 2017 Security Regulations.
@@ -18,17 +18,33 @@ from datetime import datetime
 
 
 def determine_security_level(record_count: int, has_sensitive: bool,
-                              is_government: bool, is_health_finance: bool) -> str:
-    """Determine the required security level per 2017 regulations."""
-    if is_government or is_health_finance or record_count >= 100_000:
+                              is_government: bool, is_health_finance: bool,
+                              authorized_users: int = 0) -> str:
+    """Determine the required security level per the 2017 regulations.
+
+    Two corrections made in v1.6.0, both of which the tool previously got wrong in a way
+    that mattered:
+
+    1. The 100-or-more-authorized-users trigger is documented in this skill's own Step 1
+       table and had NO input here, so a 20,000-record database with 150 authorized users
+       scored MEDIUM when the skill's own prose puts it at HIGH. That under-implements a
+       penetration test, a risk survey, an incident-response plan and an external audit.
+    2. Sector membership alone no longer forces HIGH. A 500-patient clinic was being told
+       to commission an external audit and a penetration test. Health, insurance and
+       financial-sector databases are treated here as reaching MEDIUM on sector alone and
+       HIGH only when they also cross a count threshold. THIS IS A JUDGEMENT ABOUT THE
+       SCHEDULE AND IT IS NOT VERIFIED IN THIS SKILL: read the regulations' schedule for a
+       real determination, and treat this tool as a first sort rather than an answer.
+    """
+    if is_government or record_count >= 100_000 or authorized_users >= 100:
         return "high"
-    if record_count >= 10_000 or has_sensitive:
+    if record_count >= 10_000 or has_sensitive or is_health_finance:
         return "medium"
     return "basic"
 
 
 def check_registration_required(record_count: int, has_sensitive: bool,
-                                 is_direct_marketing: bool, is_public_body: bool,
+                                 is_data_broker: bool, is_public_body: bool,
                                  is_credit_service: bool) -> bool:
     """Check if database registration with the Privacy Protection Authority is required.
 
@@ -39,12 +55,15 @@ def check_registration_required(record_count: int, has_sensitive: bool,
     The pre-Amendment triggers were ABOLISHED: a credit-information service no longer
     forces registration on its own, and "any sensitive database over a threshold" no
     longer applies. has_sensitive and is_credit_service therefore do NOT force registration.
-    (is_direct_marketing is used here as the closest available proxy for the data-broker
-    test; refine the input if you can distinguish direct marketing from data brokerage.)
+    CORRECTED in v1.6.0. is_direct_marketing was previously used as a proxy for the
+    data-broker test. That resurrected the very pre-Amendment trigger this docstring says
+    was abolished: any e-commerce or SaaS company that markets to its own customers
+    answered yes and was told to register. Direct marketing to your OWN customers is not
+    data brokerage. Registration now requires the explicit is_data_broker input.
     """
     if is_public_body:
         return True
-    if record_count >= 10_000 and is_direct_marketing:
+    if record_count >= 10_000 and is_data_broker:
         return True
     return False
 
@@ -103,7 +122,7 @@ def build_checklist(security_level: str) -> list:
 def run_interactive_assessment() -> dict:
     """Run an interactive compliance assessment."""
     print("=" * 60)
-    print("Israeli Privacy Protection Law — Compliance Assessment")
+    print("Israeli Privacy Protection Law, Compliance Assessment")
     print("=" * 60)
     print()
     print("DISCLAIMER: This tool provides guidance only. It does not")
@@ -123,14 +142,20 @@ def run_interactive_assessment() -> dict:
     is_government = input("Is this a government/public body? [y/n]: ").strip().lower() == "y"
     is_health_finance = input("Health or financial sector? [y/n]: ").strip().lower() == "y"
     is_direct_marketing = input("Used for direct marketing? [y/n]: ").strip().lower() == "y"
+    is_data_broker = input("Is the database's MAIN purpose disclosing personal data to third\n  parties as a business or for value (data brokerage)? Marketing to your own\n  customers is NOT data brokerage. [y/n]: ").strip().lower() == "y"
+    try:
+        authorized_users = int(input("How many people hold authorised access to the database? [0]: ").strip() or "0")
+    except ValueError:
+        authorized_users = 0
     is_credit_service = input("Credit/financial information service? [y/n]: ").strip().lower() == "y"
     has_cross_border = input("Transfers data outside Israel? [y/n]: ").strip().lower() == "y"
 
     # Determine results
     security_level = determine_security_level(record_count, has_sensitive,
-                                               is_government, is_health_finance)
+                                               is_government, is_health_finance,
+                                               authorized_users)
     registration_required = check_registration_required(record_count, has_sensitive,
-                                                         is_direct_marketing,
+                                                         is_data_broker,
                                                          is_government or False,
                                                          is_credit_service)
     notification_required = check_notification_required(record_count, has_sensitive)
@@ -146,6 +171,8 @@ def run_interactive_assessment() -> dict:
             "is_government": is_government,
             "is_health_finance": is_health_finance,
             "is_direct_marketing": is_direct_marketing,
+            "is_data_broker": is_data_broker,
+            "authorized_users": authorized_users,
             "is_credit_service": is_credit_service,
             "has_cross_border_transfer": has_cross_border,
         },
@@ -166,6 +193,11 @@ def run_interactive_assessment() -> dict:
     print(f"Organization: {org_name}")
     print(f"Security Level Required: {security_level.upper()}")
     print(f"Database Registration Required: {'YES' if registration_required else 'NO'}")
+    # This line was COMPUTED and never printed before v1.6.0. A controller of a 400,000-person
+    # sensitive database saw only "Registration: NO" and filed nothing, missing a statutory
+    # notification. Registration and notification are separate duties and either can apply
+    # without the other.
+    print(f"PPA Notification (100,000+ especially-sensitive): {'REQUIRED' if notification_required else 'not applicable'}")
     print(f"Cross-Border Transfer Review: {'NEEDED' if has_cross_border else 'N/A'}")
     print()
     print("COMPLIANCE CHECKLIST:")
@@ -173,10 +205,17 @@ def run_interactive_assessment() -> dict:
     for i, item in enumerate(checklist, 1):
         print(f"  [ ] {i}. {item['item']} ({item['level']} level)")
 
+    if notification_required:
+        print()
+        print("ACTION REQUIRED: file a notification with the Privacy Protection Authority")
+        print("  within 30 days. This is SEPARATE from registration and is owed even when")
+        print("  registration is not required, because the database holds especially-sensitive")
+        print("  data on more than 100,000 people.")
+
     if registration_required:
         print()
         print("ACTION REQUIRED: Register database with Privacy Protection Authority")
-        print("URL: https://www.gov.il/he/departments/privacy_authority")
+        print("URL: https://www.gov.il/he/departments/the_privacy_protection_authority")
 
     if has_cross_border:
         print()
@@ -206,18 +245,60 @@ def run_from_json(json_input: str, org_name: str = "Unknown") -> dict:
         print("Error: Invalid JSON input.", file=sys.stderr)
         sys.exit(1)
 
+    # REJECT unknown keys rather than defaulting them away. Silently ignoring a
+    # misspelled key is the worst failure this tool can have: passing {"records":150000,
+    # "sensitive":true} instead of {"record_count":150000,"has_sensitive":true} used to
+    # return BASIC with 9 checklist items for a 150,000-record sensitive health database
+    # that actually requires HIGH with 25, with no error and no warning. An organisation
+    # acting on that under-implements into exactly the fines this skill documents.
+    KNOWN = {
+        "record_count", "has_sensitive", "is_government", "is_health_finance",
+        "is_direct_marketing", "is_credit_service", "has_cross_border",
+        "is_data_broker", "authorized_users",
+    }
+    if not isinstance(params, dict):
+        print(f"Error: --json must be a JSON object, got {type(params).__name__}.", file=sys.stderr)
+        sys.exit(1)
+    unknown = sorted(set(params) - KNOWN)
+    if unknown:
+        print(f"Error: unrecognised key(s) in --json: {', '.join(unknown)}", file=sys.stderr)
+        print(f"       Valid keys are: {', '.join(sorted(KNOWN))}", file=sys.stderr)
+        print("       Refusing to assess rather than silently treating the value as absent,", file=sys.stderr)
+        print("       which would downgrade the required security level.", file=sys.stderr)
+        sys.exit(1)
+    if "record_count" not in params:
+        print("Error: record_count is required. It is the main determinant of the security", file=sys.stderr)
+        print("       level, and omitting it would default the assessment to BASIC.", file=sys.stderr)
+        sys.exit(1)
+
     record_count = params.get("record_count", 0)
+    if not isinstance(record_count, int) or isinstance(record_count, bool) or record_count < 0:
+        print(f"Error: record_count must be a non-negative integer, got {record_count!r}.", file=sys.stderr)
+        sys.exit(1)
+    for key in ("has_sensitive", "is_government", "is_health_finance",
+                "is_direct_marketing", "is_credit_service", "has_cross_border",
+                "is_data_broker"):
+        if key in params and not isinstance(params[key], bool):
+            print(f"Error: {key} must be true or false, got {params[key]!r}.", file=sys.stderr)
+            sys.exit(1)
+
     has_sensitive = params.get("has_sensitive", False)
     is_government = params.get("is_government", False)
     is_health_finance = params.get("is_health_finance", False)
     is_direct_marketing = params.get("is_direct_marketing", False)
+    is_data_broker = params.get("is_data_broker", False)
+    authorized_users = params.get("authorized_users", 0)
+    if not isinstance(authorized_users, int) or isinstance(authorized_users, bool) or authorized_users < 0:
+        print(f"Error: authorized_users must be a non-negative integer, got {authorized_users!r}.", file=sys.stderr)
+        sys.exit(1)
     is_credit_service = params.get("is_credit_service", False)
     has_cross_border = params.get("has_cross_border", False)
 
     security_level = determine_security_level(record_count, has_sensitive,
-                                               is_government, is_health_finance)
+                                               is_government, is_health_finance,
+                                               authorized_users)
     registration_required = check_registration_required(record_count, has_sensitive,
-                                                         is_direct_marketing,
+                                                         is_data_broker,
                                                          is_government,
                                                          is_credit_service)
     notification_required = check_notification_required(record_count, has_sensitive)
@@ -232,6 +313,8 @@ def run_from_json(json_input: str, org_name: str = "Unknown") -> dict:
             "is_government": is_government,
             "is_health_finance": is_health_finance,
             "is_direct_marketing": is_direct_marketing,
+            "is_data_broker": is_data_broker,
+            "authorized_users": authorized_users,
             "is_credit_service": is_credit_service,
             "has_cross_border_transfer": has_cross_border,
         },
@@ -247,8 +330,28 @@ def run_from_json(json_input: str, org_name: str = "Unknown") -> dict:
     print(f"Organization: {org_name}")
     print(f"Security Level Required: {security_level.upper()}")
     print(f"Database Registration Required: {'YES' if registration_required else 'NO'}")
+    # This line was COMPUTED and never printed before v1.6.0. A controller of a 400,000-person
+    # sensitive database saw only "Registration: NO" and filed nothing, missing a statutory
+    # notification. Registration and notification are separate duties and either can apply
+    # without the other.
+    print(f"PPA Notification (100,000+ especially-sensitive): {'REQUIRED' if notification_required else 'not applicable'}")
     print(f"Cross-Border Transfer Review: {'NEEDED' if has_cross_border else 'N/A'}")
     print(f"Checklist items: {len(checklist)}")
+    if notification_required:
+        print()
+        print("ACTION REQUIRED: file a notification with the Privacy Protection Authority")
+        print("  within 30 days. SEPARATE from registration and owed even when registration")
+        print("  is not required, because the database holds especially-sensitive data on")
+        print("  more than 100,000 people.")
+    if registration_required:
+        print()
+        print("ACTION REQUIRED: register the database with the Privacy Protection Authority.")
+    if has_cross_border:
+        print()
+        print("ACTION REQUIRED: review cross-border transfer conditions. A lawful basis is not")
+        print("  by itself sufficient: see SKILL.md Step 4, and read the Transfer of Data to")
+        print("  Databases Abroad Regulations, whose additional conditions this skill does not")
+        print("  carry in full.")
 
     return report
 
@@ -263,6 +366,8 @@ def run_example() -> dict:
         "is_government": False,
         "is_health_finance": True,
         "is_direct_marketing": False,
+        "is_data_broker": False,
+        "authorized_users": 0,
         "is_credit_service": False,
         "has_cross_border": True,
     })

@@ -4,7 +4,7 @@
 The Protection of Privacy Law, 5741-1981 (Chok Haganat HaPratiut) is Israel's primary
 data protection legislation. It is supplemented by the Privacy Protection (Data Security)
 Regulations of 2017 and was comprehensively overhauled by Amendment 13, which the Knesset
-approved on August 5, 2024 and which came into force on August 14, 2025. Amendment 13
+approved by the Knesset in early August 2024 (sources disagree between the 5th and the 8th, and the exact day is NOT verified here; the date that governs is the in-force date) and which came into force on August 14, 2025. Amendment 13
 narrowed database registration, added
 a mandatory Privacy Protection Officer (DPO) obligation, expanded the definition of
 personal data to cover online identifiers, and significantly increased enforcement powers
@@ -129,7 +129,7 @@ Personal data may not be transferred outside Israel unless the recipient country
 provides adequate protection for personal data.
 
 ### Countries with Adequate Protection
-- European Union member states (Israel has EU adequacy decision)
+- European Union member states. NOTE the direction: they are on the Israeli whitelist for outbound transfers; the EU adequacy decision separately authorises transfers FROM the EU TO Israel and is not the basis for an outbound Israeli transfer
 - United Kingdom
 - Other countries recognized by the Privacy Protection Authority
 
@@ -222,3 +222,58 @@ to the rights and freedoms of affected individuals, including:
 - Israeli adequacy decision means data flows from EU to Israel are generally permitted
 - Israeli companies processing EU residents' data must comply with GDPR
 - Recommended approach: comply with the stricter requirement in each area
+
+## Amendment 13 detail moved from SKILL.md (AI governance, enforcement powers, fines)
+
+**AI governance for automated decision-making.** Amendment 13 requires transparency and oversight for AI systems that make decisions affecting individuals (credit scoring, hiring, insurance, fraud detection). Requirements include:
+- Documentation of the decision logic and data inputs
+- Ability to explain outcomes to affected individuals
+- Human oversight for high-impact decisions
+- Bias and accuracy monitoring
+
+**Enforcement powers and fines.** Amendment 13 significantly expands the Authority's administrative powers:
+- Direct supervisory inspections without prior notice
+- Administrative fines are set per violation by the statute, not as a single ceiling. Section 23כו(a) sets NIS 150,000 for the listed violations (processing in an unregistered database that required registration, failing to notify a notifiable database, running a direct-mail database unregistered, and similar), and the head of the Authority may impose DOUBLE that amount where the database holds personal information on 1,000,000 people or more. Other schedule items carry their own amounts, including NIS 320,000 for specified breaches of the Data Security Regulations and NIS 30,000 for lighter ones.
+- Two different per-person schedules apply, and they are easy to conflate. For unlawful APPROACHES and direct-mail violations (Section 23כו(c)(1)) the fine is NIS 50 multiplied by the number of people approached, rising to NIS 100 per person where the approach concerned specially-sensitive information, with a floor of NIS 30,000 if that multiplication comes to less. For the Section 23כו(d)(1) violations the fine is NIS 2 for each person whose personal information is in the database, or NIS 4 per person where the information is specially sensitive.
+- The 5% ceiling is a REDUCTION mechanism, not a headline fine: on the violator's request, where the penalty exceeds 5% of their turnover the head of the Authority reduces it to 5% of turnover. A violator with no turnover does not get that reduction.
+- A private civil right of action under **Section 15א** ("פיצויים לדוגמה"): a court may award damages not dependent on proof of harm, up to **NIS 10,000** per violation, for the violations listed there. Some of them require the data subject to have first approached the controller and waited a set period (90 days for the registration case).
+- Ability to issue binding compliance orders
+
+
+**Recent enforcement, and it has moved from individuals to organisations.**
+
+- **July 2026, Meuhedet (health fund), NIS 256,000** for failing the immediate-reporting duty, the FIRST such penalty since Amendment 13 took effect. A technological fault let some members view relatives' medical records; the fund knew in November 2025 and reported only at the end of January 2026, about two months after the member who first reported it. The fine is stated as the figure after the reductions the law provides for.
+- **August 2026, A.D. Karting Hutzot (2014) Ltd, NIS 12,000** for breaching the notification duty at the point of collection under section 11 of the Law. Small fines for basic transparency failures are now being issued.
+- The PPA also fined an individual (a former National Insurance Institute employee) NIS 75,000 for unauthorized retrieval of sensitive data from Bituach Leumi databases.
+
+Enforcement is live, it reaches large regulated bodies, and the health fund case shows the reporting duty being enforced on its own, without any finding about the underlying security failure.
+
+**What changed for database registration.** Amendment 13 narrowed registration to public bodies and to data brokers (databases of 10,000+ individuals whose primary purpose is selling/disclosing personal data to third parties). The broad pre-Amendment "any sensitive database" rule no longer applies. The separate 100,000-record especially-sensitive notification tier (file with the Authority within 30 days) is described above.
+
+
+
+## DPIA detail moved from SKILL.md
+
+### Step 9: Data Protection Impact Assessment (DPIA)
+
+A DPIA is a structured pre-processing assessment that documents privacy risks, alternatives considered, and mitigations. The PPL does not contain a GDPR-Article-35-style explicit DPIA mandate, but the PPA's published guidance on AI systems treats DPIA as the recommended best practice for demonstrating compliance. Where a Privacy Protection Officer is appointed under Amendment 13, the PPO is the natural owner of the DPIA process as part of monitoring overall compliance.
+
+**When to conduct a DPIA (PPA AI Guidelines + Amendment 13 framing):**
+- Before deploying AI systems that process data on a wide scale
+- Before deploying AI systems that include sensitive data
+- Before deploying processing that poses high risk to data subjects' rights
+- Before large-scale systematic monitoring of individuals (CCTV at scale, location tracking, behavioral profiling)
+- Before automated decisions affecting individuals (credit, hiring, insurance, fraud detection)
+
+**DPIA contents:**
+1. Description of the processing: purpose, data categories, data sources, retention, recipients
+2. Necessity and proportionality: is each category necessary for the stated purpose?
+3. Risks to data subjects: probability + severity, including bias and discrimination for AI systems
+4. Mitigations: technical (encryption, access controls, minimization) and organizational (training, audit)
+5. Residual risk: what remains after mitigations and whether it is acceptable
+6. Consultation: with the PPO and, for high residual risk, optional prior consultation with the PPA
+7. Sign-off and review cycle (annual or on material change)
+
+Keep DPIAs in the documentation evidence pack. The PPA's unannounced inspection powers under Amendment 13 mean an undocumented DPIA is functionally a missing DPIA.
+
+

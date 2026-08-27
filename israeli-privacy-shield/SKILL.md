@@ -30,7 +30,7 @@ The 2017 regulations define three security levels:
 | Medium | 10,000+ records OR sensitive data | + Encryption, security officer appointment |
 | High | Government, health, financial, 100K+ records, or authorized access for 100+ people | + Incident response plan, DPO, plus a security risk assessment and a penetration test at least once every 18 months with documented findings and remediation |
 
-Sensitive data includes: Health, genetics, sexual orientation, political views, criminal record.
+Sensitive data includes: especially-sensitive data. **Do not work from the old section 7 list.** Amendment 13 replaced "sensitive data" with the defined term "מידע בעל רגישות מיוחדת", and its schedule is WIDER than the pre-Amendment health/genetics/sexual-orientation/political-views/criminal-record list this skill used to print. **The current list is not carried in this skill**: read the definition in the amended Law before answering yes or no, because that single flag drives both the security level and the 100,000-record notification duty, so getting it wrong under-implements twice.
 
 ### Step 2: Database Registration Check
 Under the Amendment 13 regime, registration with the Privacy Protection Authority (PPA) is required only if:
@@ -60,11 +60,13 @@ Personal data transfer outside Israel requires:
 - Data subject consent (informed and specific), OR
 - Listed exemptions (necessary for contract, legal proceedings, etc.)
 
-Note: Israel has EU adequacy decision, transfer TO EU is generally straightforward.
+Note on direction, which the skill previously had backwards: the EU adequacy decision authorises transfers FROM the EU TO Israel. What permits an Israeli controller to send data OUT to the EU is the Israeli Transfer of Data to Databases Abroad Regulations, whose whitelist includes EU member states. Do not cite adequacy as the basis for an Israel-to-EU transfer.
 
 ### Step 5: Breach Notification
 Israel requires IMMEDIATE notification of a Severe Security Incident under the 2017 Data Security Regulations (no fixed-hours deadline):
-1. **Notify the Privacy Protection Authority immediately upon discovering a Severe Security Incident.** The Data Security Regulations (2017) require notification "immediately" (miyad), there is NO fixed 72-hour deadline in Israeli law. Cover what happened, the categories and rough number of affected individuals, the likely impact, and the steps taken. The PPA may then direct the controller to notify affected data subjects.
+1. **Notify the Privacy Protection Authority immediately upon discovering a Severe Security Incident.** The Data Security Regulations (2017), regulation 11(d), require notification "immediately" (miyad); there is NO fixed 72-hour deadline in Israeli law.
+
+**The PPA has now said what "immediately" means, and it is the answer to the question every compliance officer actually asks.** Fining Meuhedet in July 2026 it held that the duty arises **when you learn that a severe security incident has occurred**, and must be performed close to the moment of discovery and without delay. Critically: **a position that you should wait until all your checks are complete empties the immediacy requirement of meaning.** The required report is an INITIAL report based on what is known at the time, and further details are supplied in a supplementary report later. So the sequence is report first on partial information, investigate second. An organisation that investigates first and reports a complete picture two months later has breached the duty even though it eventually reported fully. Cover what happened, the categories and rough number of affected individuals, the likely impact, and the steps taken. The PPA may then direct the controller to notify affected data subjects.
 2. **Notify affected data subjects only if the PPA directs you to.** Under the Data Security Regulations that duty arises from a PPA direction after you report, NOT from the controller's own GDPR-style "high-risk" self-assessment. If directed, the notice must be in clear, plain Hebrew covering the breach, the data affected, the consequences, and protective steps.
 3. **Severe Security Incident standard:** an incident (unauthorized access, disclosure, loss, alteration, or destruction of personal data) that poses a risk to the rights of the affected individuals.
 4. **Document:** all incidents, response actions, and decisions, regardless of whether they cross the reporting threshold.
@@ -82,6 +84,7 @@ For each assessed entity, verify:
 - [ ] DPIA process for high-risk processing (large-scale sensitive data, systematic monitoring, AI decisions)
 - [ ] Minors' data policy (parental consent under Capacity and Guardianship Law, ed-tech safeguards)
 - [ ] Employee training
+- [ ] **Notice at the point of collection (section 11)**: whenever personal data is collected, tell the person whether there is a legal duty to provide it or it is voluntary, the purpose it will be used for, and to whom it will be delivered and for what purpose. This is the duty the PPA fined a company NIS 12,000 for breaching in August 2026, and it was previously documented in this skill only as an enforcement anecdote and never as a requirement to perform
 - [ ] Privacy Protection Officer appointed (if required under Amendment 13)
 - [ ] AI governance policy for automated decision-making (if applicable)
 - [ ] Personal data inventory includes IP addresses, geolocation, and online identifiers
@@ -104,26 +107,15 @@ Standard web analytics, session logs, and mobile app telemetry now fall within t
 - Data brokers, with a concrete threshold: a controller whose database holds personal data on more than 10,000 individuals AND whose main purpose is collecting personal data to disclose it to third parties as a business or for value (including direct-mailing services)
 - Entities that systematically monitor individuals on a large scale, or whose core business includes processing especially-sensitive data on a large scale
 
-The PPO is the contact point with the Privacy Protection Authority and is responsible for monitoring compliance. Note: the PPA announced it would not enforce the appointment obligation until October 31, 2025.
+**The PPA published its FINAL opinion (gilui daat) on the appointment on 26 July 2026, updated 27 July.** Anything written before that date about the scope of the duty or the officer's qualifications is superseded, and this is the document to work from. Its substance:
 
-**AI governance for automated decision-making.** Amendment 13 requires transparency and oversight for AI systems that make decisions affecting individuals (credit scoring, hiring, insurance, fraud detection). Requirements include:
-- Documentation of the decision logic and data inputs
-- Ability to explain outcomes to affected individuals
-- Human oversight for high-impact decisions
-- Bias and accuracy monitoring
+- The officer's purpose is not merely to secure compliance with the Law in the organisation but **to promote and improve privacy protection and information security beyond the statutory minimum**. Treating the role as a compliance checkbox is not the regulator's reading of it.
+- The duties it enumerates: promote a privacy culture in the organisation, advise management and employees, train, audit compliance with the Law, handle data-subject requests, and act as the contact point with the Privacy Protection Authority.
+- The qualifications: **deep knowledge of privacy law, an adequate understanding of technology and information security, and familiarity with the organisation's own areas of activity.** All three, which rules out both a lawyer with no technical grasp and a security engineer with no privacy-law background.
 
-**Enforcement powers and fines.** Amendment 13 significantly expands the Authority's administrative powers:
-- Direct supervisory inspections without prior notice
-- Administrative fines are set per violation by the statute, not as a single ceiling. Section 23כו(a) sets NIS 150,000 for the listed violations (processing in an unregistered database that required registration, failing to notify a notifiable database, running a direct-mail database unregistered, and similar), and the head of the Authority may impose DOUBLE that amount where the database holds personal information on 1,000,000 people or more. Other schedule items carry their own amounts, including NIS 320,000 for specified breaches of the Data Security Regulations and NIS 30,000 for lighter ones.
-- Two different per-person schedules apply, and they are easy to conflate. For unlawful APPROACHES and direct-mail violations (Section 23כו(c)(1)) the fine is NIS 50 multiplied by the number of people approached, rising to NIS 100 per person where the approach concerned specially-sensitive information, with a floor of NIS 30,000 if that multiplication comes to less. For the Section 23כו(d)(1) violations the fine is NIS 2 for each person whose personal information is in the database, or NIS 4 per person where the information is specially sensitive.
-- The 5% ceiling is a REDUCTION mechanism, not a headline fine: on the violator's request, where the penalty exceeds 5% of their turnover the head of the Authority reduces it to 5% of turnover. A violator with no turnover does not get that reduction.
-- A private civil right of action under **Section 15א** ("פיצויים לדוגמה"): a court may award damages not dependent on proof of harm, up to **NIS 10,000** per violation, for the violations listed there. Some of them require the data subject to have first approached the controller and waited a set period (90 days for the registration case).
-- Ability to issue binding compliance orders
+The PPO is the contact point with the Privacy Protection Authority and is responsible for monitoring compliance. A non-enforcement window running to 31 October 2025 was previously stated here. **It is not supported by the source that was cited for it and is withdrawn**, and in any case it would have expired long before the PPA's July 2026 final opinion, which is the current guidance.
 
-
-**Recent enforcement.** Among the early Amendment-13 actions, the PPA fined an individual (a former National Insurance Institute employee) NIS 75,000 for unauthorized retrieval of sensitive data from Bituach Leumi databases. Enforcement is live.
-
-**What changed for database registration.** Amendment 13 narrowed registration to public bodies and to data brokers (databases of 10,000+ individuals whose primary purpose is selling/disclosing personal data to third parties). The broad pre-Amendment "any sensitive database" rule no longer applies. The separate 100,000-record especially-sensitive notification tier (file with the Authority within 30 days) is described above.
+**AI governance, enforcement powers and the fine structure** (per-violation bands, the doubling for continuing violations, the aggregate ceiling, the 5-percent-of-turnover cap with its lower ceiling for small and micro businesses, the private right of action for statutory damages without proof of harm, and the criminal exposure) are set out in `references/privacy-law-requirements.md`. Read that file before quoting any number, because the bands and the caps interact.
 
 ### Step 8: Data Subject Rights (DSR) Workflow
 
@@ -152,25 +144,12 @@ The Privacy Protection Law grants individuals enforceable rights. A controller m
 
 ### Step 9: Data Protection Impact Assessment (DPIA)
 
-A DPIA is a structured pre-processing assessment that documents privacy risks, alternatives considered, and mitigations. The PPL does not contain a GDPR-Article-35-style explicit DPIA mandate, but the PPA's published guidance on AI systems treats DPIA as the recommended best practice for demonstrating compliance. Where a Privacy Protection Officer is appointed under Amendment 13, the PPO is the natural owner of the DPIA process as part of monitoring overall compliance.
-
-**When to conduct a DPIA (PPA AI Guidelines + Amendment 13 framing):**
-- Before deploying AI systems that process data on a wide scale
-- Before deploying AI systems that include sensitive data
-- Before deploying processing that poses high risk to data subjects' rights
-- Before large-scale systematic monitoring of individuals (CCTV at scale, location tracking, behavioral profiling)
-- Before automated decisions affecting individuals (credit, hiring, insurance, fraud detection)
-
-**DPIA contents:**
-1. Description of the processing: purpose, data categories, data sources, retention, recipients
-2. Necessity and proportionality: is each category necessary for the stated purpose?
-3. Risks to data subjects: probability + severity, including bias and discrimination for AI systems
-4. Mitigations: technical (encryption, access controls, minimization) and organizational (training, audit)
-5. Residual risk: what remains after mitigations and whether it is acceptable
-6. Consultation: with the PPO and, for high residual risk, optional prior consultation with the PPA
-7. Sign-off and review cycle (annual or on material change)
-
-Keep DPIAs in the documentation evidence pack. The PPA's unannounced inspection powers under Amendment 13 mean an undocumented DPIA is functionally a missing DPIA.
+A DPIA is a structured pre-processing assessment documenting privacy risks, the alternatives
+considered and the mitigations chosen. **The Privacy Protection Law contains no GDPR-Article-35
+style statutory DPIA duty**, so do not tell an Israeli controller the law requires one by name.
+What the PPA does say, in its AI guidance, is that a DPIA is expected practice for higher-risk
+processing and that the Privacy Protection Officer conducts it. The full method, when to trigger
+one and what it must contain are in `references/privacy-law-requirements.md`.
 
 ### Step 10: Minors' and Children's Data
 
@@ -221,7 +200,7 @@ User says: "We need to transfer Israeli customer data to our US servers"
 Actions:
 1. Assess data types for sensitivity level
 2. Check if destination country has adequate protection
-3. Determine transfer mechanism (adequacy, consent, contractual clauses)
+3. Determine the transfer basis under the Israeli Transfer of Data to Databases Abroad Regulations. **A basis alone is not sufficient**: those regulations impose further conditions on the transferor that THIS SKILL DOES NOT CARRY IN FULL, including obligations owed by the recipient. Read the regulations, or take advice, before transferring; do not treat a whitelist entry or a consent as the end of the analysis
 4. Document compliance steps
 Result: Transfer compliance checklist with specific steps for US data transfer under Israeli Privacy Protection Law.
 
@@ -229,6 +208,15 @@ Result: Transfer compliance checklist with specific steps for US data transfer u
 
 ### Scripts
 - `scripts/compliance_checker.py`, Runs a full Privacy Protection Law compliance assessment: determines security level (basic/medium/high), checks database registration requirements, and generates a compliance checklist with all applicable controls. Run: `python scripts/compliance_checker.py --help`
+
+  **Use `--json` and use the exact key names.** Interactive mode reads stdin and cannot be driven
+  by an agent. The valid keys are `record_count` (required), `has_sensitive`, `is_government`,
+  `is_health_finance`, `is_direct_marketing`, `is_credit_service`, `has_cross_border`. The script
+  now REFUSES an unrecognised key rather than defaulting it away: before this, passing `records`
+  and `sensitive` instead of `record_count` and `has_sensitive` returned BASIC with 9 checklist
+  items for a 150,000-record sensitive health database that in fact requires HIGH with 25, silently
+  and with no warning. A downgrade like that walks an organisation into exactly the fines this
+  skill documents, so a typo must fail loudly rather than answer quietly.
 
 ### References
 - `references/privacy-law-requirements.md`, Detailed breakdown of the Privacy Protection Law 1981 and 2017 Security Regulations including database registration process, security level requirements, consent rules, cross-border transfer rules, breach notification procedures, and penalties. Consult when you need specific legal requirements, section numbers, or GDPR comparison details beyond what the instructions cover.
@@ -261,55 +249,7 @@ interface ConsentState {
 }
 ```
 
-### Persistence
 
-Store the state in **both** `localStorage` and a companion cookie. `localStorage` is the source of truth for the client; the cookie exists so Server Components can gate SSR work (e.g. `incrementBundleViews` inside `after()`) without a client round-trip. The cookie only needs a single bit (`0` or `1`) because Server Components rarely distinguish individual categories.
-
-```ts
-// lib/consent/store.ts
-export const CONSENT_VERSION = 1;
-export const CONSENT_STORAGE_KEY = 'site_consent_v1';
-export const CONSENT_COOKIE_NAME = 'site_consent';
-export const CONSENT_REPROMPT_MS = 365 * 24 * 60 * 60 * 1000;
-
-function writeCookie(state: ConsentState | null) {
-  const maxAge = Math.floor(CONSENT_REPROMPT_MS / 1000);
-  const secure = location.protocol === 'https:' ? '; Secure' : '';
-  if (!state) {
-    document.cookie = `${CONSENT_COOKIE_NAME}=; Path=/; Max-Age=0; SameSite=Lax${secure}`;
-    return;
-  }
-  const value = state.categories.analytics ? '1' : '0';
-  document.cookie = `${CONSENT_COOKIE_NAME}=${value}; Path=/; Max-Age=${maxAge}; SameSite=Lax${secure}`;
-}
-```
-
-**Re-prompt rules.** `readStorage()` returns `null` if the stored `version` mismatches `CONSENT_VERSION` or the timestamp is older than 12 months. Bumping `CONSENT_VERSION` when adding a new tracker category forces a fresh prompt, this is how you stay compliant when you add a new analytics vendor.
-
-### SSR Safety: The SSR_SENTINEL Pattern
-
-Naive `useSyncExternalStore` with a `null` server snapshot renders the banner in the initial SSR HTML, which means a) the banner is visible for a moment before hydration replaces it, and b) search engines index pages with the consent dialog overlaying the content. The fix is a sentinel object that is identity-compared to distinguish the server/hydration render from "user hasn't decided yet":
-
-```ts
-export const SSR_SENTINEL: ConsentState = Object.freeze({
-  version: -1,
-  categories: ALL_CATEGORIES_OFF,
-  timestamp: '1970-01-01T00:00:00.000Z',
-});
-
-// In the provider:
-const rawState = useSyncExternalStore(
-  consentStore.subscribe,
-  consentStore.getSnapshot,
-  consentStore.getServerSnapshot,  // returns SSR_SENTINEL
-);
-const isHydrated = rawState !== SSR_SENTINEL;
-const state = isHydrated ? rawState : null;
-
-const needsPrompt = isHydrated && state === null;
-```
-
-Only when `isHydrated` is true AND `state` is `null` does the banner render. The sentinel is identity-compared with `!==`, which is why it is frozen and exported as a module constant.
 
 ### Cross-Tab Sync
 
@@ -344,7 +284,7 @@ useEffect(() => {
 
 ### Visual Equal Weight for Reject and Accept
 
-GDPR Recital 42 + multiple DPA enforcement decisions require that Reject and Accept carry equal visual weight. In practice:
+Multiple European DPA enforcement decisions require that Reject and Accept carry equal visual weight. (This was previously attributed to GDPR Recital 42, which does not say it; Recital 42 covers demonstrability and freely-given consent, and the 'clear affirmative act' language is Recital 32.) In practice:
 
 - Same button style (both primary, or both outline)
 - Same width
@@ -393,50 +333,6 @@ export function trackEvent(event: string, data?: Record<string, unknown>) {
 
 The essential-event allowlist is for legally transactional events (the consent choice itself, auth), not a general escape hatch.
 
-### Sentry Integration: Two Pieces
-
-Sentry is unusual because `Sentry.init()` runs in `instrumentation-client.ts` **before** React hydrates, which is before `useConsent()` can tell you what the user wants. Two pieces:
-
-**1. Hydrate `window.__consent` from storage BEFORE `Sentry.init()`.** Without this, any errors thrown during early hydration are captured even if the user previously rejected consent.
-
-```ts
-// instrumentation-client.ts
-import { hydrateWindowFromStorage } from '@/lib/consent/store';
-
-hydrateWindowFromStorage();  // sets window.__consent from localStorage
-
-Sentry.init({
-  dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
-  integrations: window.__consent?.session_replay ? [Sentry.replayIntegration()] : [],
-  beforeSend(event) {
-    return window.__consent?.error_monitoring ? event : null;
-  },
-});
-```
-
-**2. Attach Replay mid-session when the user later grants consent.** Don't re-run `Sentry.init()`, that breaks the existing client. Use `Sentry.addIntegration()`:
-
-```ts
-// lib/consent/sentry-gate.ts
-import * as Sentry from '@sentry/nextjs';
-
-export function enableSentryReplay() {
-  const client = Sentry.getClient();
-  if (!client) return;
-  if (client.getIntegrationByName?.('Replay')) return;  // idempotent
-  Sentry.addIntegration(Sentry.replayIntegration());
-}
-```
-
-The React provider calls `enableSentryReplay()` the first time `state.categories.session_replay` flips to true. Dynamic-import it so the Replay bundle is not shipped to users who rejected it:
-
-```ts
-useEffect(() => {
-  if (state?.categories.session_replay) {
-    import('./sentry-gate').then((m) => m.enableSentryReplay());
-  }
-}, [state?.categories.session_replay]);
-```
 
 ### Server Component Gating
 
@@ -479,6 +375,8 @@ See `references/consent-banner-implementation.md` for complete copy-pasteable co
 
 See `references/consent-ui-anti-patterns.md`.
 
+Consent-banner engineering detail (persistence, the Sentry integration and the SSR sentinel pattern) is in `references/consent-banner-implementation.md`.
+
 ## Gotchas
 
 - Amendment 13 took effect on August 14, 2025 and is live law, not a pending proposal. Agents trained on pre-2025 data may treat Amendment 13 as a future change or miss it entirely. Always assume it applies when advising on Israeli privacy compliance today.
@@ -486,7 +384,7 @@ See `references/consent-ui-anti-patterns.md`.
 - Administrative fines are per-violation statutory amounts (NIS 150,000 for the Section 23כו(a) list, doubled for databases of 1,000,000+ people; NIS 320,000 for specified data-security breaches), with per-person components of NIS 50 or 100 for unlawful approaches (floor NIS 30,000) and NIS 2 or 4 per person in the database for other violations, and a request-based reduction to 5% of turnover where the penalty exceeds that. Section 15א allows court-awarded damages without proof of harm up to NIS 10,000 per violation, alongside criminal liability.
 - Israel does NOT have a GDPR-style 72-hour breach deadline. Under the Data Security Regulations (2017, predating Amendment 13), a "Severe Security Incident" is reported to the PPA "immediately" (miyad) on discovery, and the PPA may direct notifying affected data subjects. Agents often wrongly import GDPR's 72-hour rule, do not.
 - Israeli Privacy Protection Law predates GDPR (1981 vs 2016) and still has key differences even after Amendment 13: a narrower right to erasure, and database registration still exists (though narrowed to public bodies and data brokers, plus a separate 100,000-record especially-sensitive notification tier). Agents may incorrectly apply GDPR rules to Israeli contexts.
-- Israel has an EU adequacy decision, meaning data transfers FROM Israel TO the EU are generally straightforward. Agents may incorrectly flag Israel-to-EU transfers as requiring additional safeguards.
+- **The EU adequacy decision runs the other way, and earlier versions of this skill stated it backwards.** Adequacy authorises transfers FROM the EU TO Israel. An Israeli controller sending data OUT to the EU relies on the Israeli Transfer of Data to Databases Abroad Regulations instead, whose whitelist covers EU member states. Naming the wrong instrument in a transfer assessment is the kind of error that survives review because the conclusion happens to be permissive either way. Agents may incorrectly flag Israel-to-EU transfers as requiring additional safeguards.
 - The 2017 Security Regulations define three security levels (basic/medium/high) based on record count and data sensitivity. Agents may apply a one-size-fits-all approach instead of the tiered model.
 - Penalties under Israeli privacy law include criminal liability in addition to administrative fines, but the five-year figure belongs to a specific offence and should not be attached to any breach. Section 5 sets five years for WILFULLY invading another person's privacy, and section 16 the same for breach of the confidentiality duty. The offences Amendment 13 itself added are lower: six months for obstructing the Authority (s.23נג), two years for misleading it (s.23נד), and three years for processing without authorisation or for misleading a person into handing over personal data (ss.23נה-23נז). Agents may understate the severity by comparing only to GDPR's monetary penalties, or overstate it by quoting five years for a registration failure.
 
@@ -512,7 +410,7 @@ Solution: Pick the strongest available alternative basis in this order: (1) cont
 | Amendment 13 page (gov.il) | https://www.gov.il/he/pages/13_amendment | Overview of the reform and its obligations |
 | Amendment 13 professional guide (gov.il) | https://www.gov.il/he/pages/guide_tikon13_professional | Detailed implementation guidance for controllers and processors |
 | Amendment 13 FAQ (gov.il) | https://www.gov.il/he/pages/tikun13_qa | Common questions on registration, DPO, breach reporting |
-| Protection of Privacy Law, 5741-1981 | https://www.gov.il/he/pages/the_privacy_protection_law | Primary statute text |
+| Protection of Privacy Law, 5741-1981 (consolidated) | https://www.nevo.co.il/law_html/law00/71631.htm | Primary statute text. The gov.il slug previously listed here is DEAD (it renders to /he/error) and was removed; do not restore it |
 
 gov.il pages may return HTTP 403 to automated clients; open them in a browser.
 

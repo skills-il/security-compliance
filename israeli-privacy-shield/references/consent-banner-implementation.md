@@ -736,3 +736,202 @@ This surface MUST NOT:
 - Treat scrolling, closing, or inactivity as consent
 
 The consent surface is one layer. Privacy policy, DPO appointment, data subject request process, breach response plan, and (for public bodies + data brokers) database registration all have to exist independently. See `SKILL.md` and `references/privacy-law-requirements.md` for the law side.
+
+## Engineering detail moved from SKILL.md
+
+### Persistence
+
+Store the state in **both** `localStorage` and a companion cookie. `localStorage` is the source of truth for the client; the cookie exists so Server Components can gate SSR work (e.g. `incrementBundleViews` inside `after()`) without a client round-trip. The cookie only needs a single bit (`0` or `1`) because Server Components rarely distinguish individual categories.
+
+```ts
+// lib/consent/store.ts
+export const CONSENT_VERSION = 1;
+export const CONSENT_STORAGE_KEY = 'site_consent_v1';
+export const CONSENT_COOKIE_NAME = 'site_consent';
+export const CONSENT_REPROMPT_MS = 365 * 24 * 60 * 60 * 1000;
+
+function writeCookie(state: ConsentState | null) {
+  const maxAge = Math.floor(CONSENT_REPROMPT_MS / 1000);
+  const secure = location.protocol === 'https:' ? '; Secure' : '';
+  if (!state) {
+    document.cookie = `${CONSENT_COOKIE_NAME}=; Path=/; Max-Age=0; SameSite=Lax${secure}`;
+    return;
+  }
+  const value = state.categories.analytics ? '1' : '0';
+  document.cookie = `${CONSENT_COOKIE_NAME}=${value}; Path=/; Max-Age=${maxAge}; SameSite=Lax${secure}`;
+}
+```
+
+**Re-prompt rules.** `readStorage()` returns `null` if the stored `version` mismatches `CONSENT_VERSION` or the timestamp is older than 12 months. Bumping `CONSENT_VERSION` when adding a new tracker category forces a fresh prompt, this is how you stay compliant when you add a new analytics vendor.
+
+
+### SSR Safety: The SSR_SENTINEL Pattern
+
+Naive `useSyncExternalStore` with a `null` server snapshot renders the banner in the initial SSR HTML, which means a) the banner is visible for a moment before hydration replaces it, and b) search engines index pages with the consent dialog overlaying the content. The fix is a sentinel object that is identity-compared to distinguish the server/hydration render from "user hasn't decided yet":
+
+```ts
+export const SSR_SENTINEL: ConsentState = Object.freeze({
+  version: -1,
+  categories: ALL_CATEGORIES_OFF,
+  timestamp: '1970-01-01T00:00:00.000Z',
+});
+
+// In the provider:
+const rawState = useSyncExternalStore(
+  consentStore.subscribe,
+  consentStore.getSnapshot,
+  consentStore.getServerSnapshot,  // returns SSR_SENTINEL
+);
+const isHydrated = rawState !== SSR_SENTINEL;
+const state = isHydrated ? rawState : null;
+
+const needsPrompt = isHydrated && state === null;
+```
+
+Only when `isHydrated` is true AND `state` is `null` does the banner render. The sentinel is identity-compared with `!==`, which is why it is frozen and exported as a module constant.
+
+
+### Sentry Integration: Two Pieces
+
+Sentry is unusual because `Sentry.init()` runs in `instrumentation-client.ts` **before** React hydrates, which is before `useConsent()` can tell you what the user wants. Two pieces:
+
+**1. Hydrate `window.__consent` from storage BEFORE `Sentry.init()`.** Without this, any errors thrown during early hydration are captured even if the user previously rejected consent.
+
+```ts
+// instrumentation-client.ts
+import { hydrateWindowFromStorage } from '@/lib/consent/store';
+
+hydrateWindowFromStorage();  // sets window.__consent from localStorage
+
+Sentry.init({
+  dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
+  integrations: window.__consent?.session_replay ? [Sentry.replayIntegration()] : [],
+  beforeSend(event) {
+    return window.__consent?.error_monitoring ? event : null;
+  },
+});
+```
+
+**2. Attach Replay mid-session when the user later grants consent.** Don't re-run `Sentry.init()`, that breaks the existing client. Use `Sentry.addIntegration()`:
+
+```ts
+// lib/consent/sentry-gate.ts
+import * as Sentry from '@sentry/nextjs';
+
+export function enableSentryReplay() {
+  const client = Sentry.getClient();
+  if (!client) return;
+  if (client.getIntegrationByName?.('Replay')) return;  // idempotent
+  Sentry.addIntegration(Sentry.replayIntegration());
+}
+```
+
+The React provider calls `enableSentryReplay()` the first time `state.categories.session_replay` flips to true. Dynamic-import it so the Replay bundle is not shipped to users who rejected it:
+
+```ts
+useEffect(() => {
+  if (state?.categories.session_replay) {
+    import('./sentry-gate').then((m) => m.enableSentryReplay());
+  }
+}, [state?.categories.session_replay]);
+```
+
+## Hebrew engineering detail moved from SKILL_HE.md
+
+### בטיחות SSR: דפוס ה-SSR_SENTINEL
+
+שימוש נאיבי ב-`useSyncExternalStore` עם server snapshot של `null` מרנדר את הבאנר ב-HTML של SSR, כלומר (א) הבאנר גלוי לרגע לפני שההידרציה מחליפה אותו, ו(ב) מנועי חיפוש מאנדקסים דפים עם דיאלוג ההסכמה מכסה את התוכן. הפתרון הוא אובייקט sentinel שנבדק בזהות כדי להפריד בין רינדור השרת / ההידרציה לבין "המשתמש עדיין לא החליט":
+
+```ts
+export const SSR_SENTINEL: ConsentState = Object.freeze({
+  version: -1,
+  categories: ALL_CATEGORIES_OFF,
+  timestamp: '1970-01-01T00:00:00.000Z',
+});
+
+// בתוך ה-provider:
+const rawState = useSyncExternalStore(
+  consentStore.subscribe,
+  consentStore.getSnapshot,
+  consentStore.getServerSnapshot,  // מחזיר SSR_SENTINEL
+);
+const isHydrated = rawState !== SSR_SENTINEL;
+const state = isHydrated ? rawState : null;
+
+const needsPrompt = isHydrated && state === null;
+```
+
+רק כש-`isHydrated` הוא true וגם `state` הוא `null`, הבאנר מורנדר. ה-sentinel נבדק בזהות עם `!==`, ולכן הוא מוקפא ומיוצא כקבוע של מודול.
+
+
+### אינטגרציה עם Sentry: שני חלקים
+
+Sentry חריג כי `Sentry.init()` רץ ב-`instrumentation-client.ts` **לפני** ש-React נהידרר, שזה לפני ש-`useConsent()` יכול להגיד לכם מה המשתמש רוצה. שני חלקים:
+
+**1. הידרוט של `window.__consent` מהאחסון לפני `Sentry.init()`.** בלי זה, כל שגיאה שנזרקת במהלך ההידרציה המוקדמת נתפסת גם אם המשתמש דחה הסכמה קודם.
+
+```ts
+// instrumentation-client.ts
+import { hydrateWindowFromStorage } from '@/lib/consent/store';
+
+hydrateWindowFromStorage();  // קובע את window.__consent מ-localStorage
+
+Sentry.init({
+  dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
+  integrations: window.__consent?.session_replay ? [Sentry.replayIntegration()] : [],
+  beforeSend(event) {
+    return window.__consent?.error_monitoring ? event : null;
+  },
+});
+```
+
+**2. לחבר את Replay באמצע הסשן כשהמשתמש מאשר אחר כך.** אל תריצו `Sentry.init()` שוב, זה שובר את הלקוח הקיים. תשתמשו ב-`Sentry.addIntegration()`:
+
+```ts
+// lib/consent/sentry-gate.ts
+import * as Sentry from '@sentry/nextjs';
+
+export function enableSentryReplay() {
+  const client = Sentry.getClient();
+  if (!client) return;
+  if (client.getIntegrationByName?.('Replay')) return;  // idempotent
+  Sentry.addIntegration(Sentry.replayIntegration());
+}
+```
+
+ה-provider של React קורא ל-`enableSentryReplay()` בפעם הראשונה ש-`state.categories.session_replay` הופך ל-true. תטענו אותו בצורה דינמית כדי ש-bundle של Replay לא ישלח למשתמשים שדחו:
+
+```ts
+useEffect(() => {
+  if (state?.categories.session_replay) {
+    import('./sentry-gate').then((m) => m.enableSentryReplay());
+  }
+}, [state?.categories.session_replay]);
+```
+
+
+### שמירה
+
+תשמרו את המצב **גם** ב-`localStorage` **וגם** בעוגייה נלווית. `localStorage` הוא מקור האמת ללקוח; העוגייה קיימת כדי ש-Server Components יוכלו לחסום עבודת SSR (למשל `incrementBundleViews` בתוך `after()`) בלי round-trip ללקוח. העוגייה צריכה רק ביט יחיד (`0` או `1`) כי Server Components בדרך כלל לא מבדילים בין קטגוריות בודדות.
+
+```ts
+// lib/consent/store.ts
+export const CONSENT_VERSION = 1;
+export const CONSENT_STORAGE_KEY = 'site_consent_v1';
+export const CONSENT_COOKIE_NAME = 'site_consent';
+export const CONSENT_REPROMPT_MS = 365 * 24 * 60 * 60 * 1000;
+
+function writeCookie(state: ConsentState | null) {
+  const maxAge = Math.floor(CONSENT_REPROMPT_MS / 1000);
+  const secure = location.protocol === 'https:' ? '; Secure' : '';
+  if (!state) {
+    document.cookie = `${CONSENT_COOKIE_NAME}=; Path=/; Max-Age=0; SameSite=Lax${secure}`;
+    return;
+  }
+  const value = state.categories.analytics ? '1' : '0';
+  document.cookie = `${CONSENT_COOKIE_NAME}=${value}; Path=/; Max-Age=${maxAge}; SameSite=Lax${secure}`;
+}
+```
+
+**כללי שאילתה חוזרת.** `readStorage()` מחזיר `null` אם ה-`version` השמור לא תואם ל-`CONSENT_VERSION` או אם ה-timestamp ישן מ-12 חודשים. העלאת `CONSENT_VERSION` כשמוסיפים קטגוריית מעקב חדשה מאלצת שאילתה טריה, ככה נשארים תואמים כשמוסיפים ספק ניתוח חדש.
+
