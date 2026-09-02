@@ -1,6 +1,6 @@
 ---
 name: israeli-scam-detector
-description: "Not legal advice and not a security guarantee. Check whether a suspicious Israeli SMS, email, link or phone call is a scam, and get the exact next steps, including after the money is already gone. Covers smishing and phishing impersonating Israeli banks, Bituach Leumi, Rashut HaMisim, Israel Post and gov.il, SIM-swap takeover, and the 2026 wave of AI voice-cloning and deepfake fraud. Explains the real deadlines under the Payment Services Law 2019 (the Debit Cards Law it replaced is repealed), the 8-business-day refund clock, and the 24/7 human bank fraud line that owes senior citizens queue priority and offers Russian-language service. Use when a user asks whether a message or link is real, got a suspicious call, thinks they were scammed, or wants to protect an elderly or Russian-speaking relative. Do NOT use for malware removal, corporate incident response, or to declare a specific message safe."
+description: "Not legal advice and not a security guarantee. Check whether a suspicious Israeli SMS, email, link or phone call is a scam, and get the exact next steps, including after the money is already gone. Covers smishing and phishing impersonating Israeli banks, Bituach Leumi, Rashut HaMisim, Israel Post and gov.il, SIM-swap takeover, and the 2026 wave of AI voice-cloning and deepfake fraud. Explains the real deadlines under the Payment Services Law 2019 (the Debit Cards Law it replaced is repealed), the 8-business-day refund clock, and the 24/7 human bank fraud line that owes customers aged 70 or over queue priority, and where Russian-language service is an expectation the regulator voiced rather than a duty. Use when a user asks whether a message or link is real, got a suspicious call, thinks they were scammed, or wants to protect an elderly or Russian-speaking relative. Do NOT use for malware removal, corporate incident response, or to declare a specific message safe."
 license: Apache-2.0
 ---
 
@@ -30,7 +30,8 @@ land inside the genuine message thread of GOV.IL and of real companies.
 The people hit hardest are the ones least served by that bad advice. The Bank of Israel, Israel
 Police and the Ministry of Communications jointly found that fraud targets everyone but
 concentrates on people with low financial and digital literacy, and the Bank of Israel amended a
-banking directive specifically because fraud is prevalent among Russian speakers.
+banking directive's explanatory notes to flag Russian speakers, after public consultation raised
+that fraud is prevalent among them.
 
 ## Instructions
 
@@ -46,6 +47,7 @@ rules, and confusing them is the most damaging mistake this skill can make.
 |---|---|
 | "Did someone else use your card or account details?" (a charge you did not make, a card used by the scammer, details taken and used) | **A. Unauthorised use.** Chapter ו' of חוק שירותי תשלום applies. Go to Step 1A. |
 | "Or did you move the money yourself, in your own app or at the bank, because someone talked you into it?" | **B. A transfer you gave.** Chapter ו' does **not** apply. Go to Step 1B. |
+| "Have you given card details, a password or a one-time code, but nothing has been charged yet?" | **C. A component is compromised, no misuse yet.** Still Step 1A, and go now. See below. |
 
 **Why this matters, and why it is not a technicality.** Chapter ו' is headed
 "שימוש לרעה באמצעי תשלום", and s.1 defines שימוש לרעה as use of the instrument
@@ -59,6 +61,15 @@ with a demand the bank will correctly refuse, and costs them the hours in which 
 actually still winnable. Never state that entitlement before you know which situation you are in.
 
 If both happened, run both branches.
+
+**Situation C is the cheapest to win and the most often missed.** Notice is not something you give after
+a charge appears: s.24(א) defines הודעה as notice about *"גניבה או אבדן של רכיב חיוני"* **or** misuse, so
+it is available with nothing charged. Do **not** quote the ₪75 + ₪30/day ladder here: where
+the user handed the component over, s.24(ד) opens *"על אף הוראות סעיף קטן (ג)"* and disapplies the cap,
+which is the very question Step 3 says is untested. That is the argument **for** speed, not against it,
+because s.24(ב) is unqualified and ends liability for misuse after notice however s.24(ד) falls.
+Notice before the first charge is the one move that works whichever way the untested point goes. Say *"נגנב לי רכיב חיוני, אני מוסר הודעה"*, and ask to freeze the instrument
+(s.25(ב) zeroes liability for the frozen period too).
 
 ### Step 1A: Unauthorised use. Call the bank NOW
 
@@ -89,8 +100,8 @@ As a rule the wait must not exceed six minutes.
 
 | If the caller is | Say this |
 |---|---|
-| A senior citizen (אזרח ותיק) | Directive 426 requires the bank to give senior citizens **priority in the queue** on the fraud line. Ask for it. |
-| A Russian speaker | The same directive names Russian-language service, because the Bank of Israel found fraud is prevalent among Russian speakers. Ask for a Russian-speaking representative. See `references/russian-phrasebook.md`. |
+| A senior citizen | Directive 426 binds a **תאגיד בנקאי** only (s.3(א); s.3(ב) repealed). Against a bank it is a binding duty, and s.7 covers a card the bank itself issued. A standalone issuer (Max, Isracard, CAL) does not owe it, so if the card is theirs, notify them **and** call your bank's fraud line, where the standard does apply. Its אזרח ותיק is age **70** by the population registry, not the 65 used for free legal aid below. |
+| A Russian speaker | Ask for a Russian-speaking representative, but do not call it an entitlement. Russian service appears only in 426's explanatory notes, as an *example* of adapting service under Directive 501, because the Bank of Israel found fraud is prevalent among Russian speakers. It is the regulator's stated expectation, not an operative clause. See `references/russian-phrasebook.md`. |
 | Unable to reach anyone at all | Note the time and how long you waited. Under s.24(ה), a payer bears **no liability at all** if the provider did not allow him to give notice in a reasonable manner at any time. |
 
 Find the number yourself: on the back of your own card, or by opening the bank's app or typing its
@@ -108,9 +119,13 @@ work. This branch is won or lost in hours, so do not spend them arguing about en
 
 1. **Call the bank now and ask for an immediate recall to the beneficiary bank.** Use the words
    "בקשת החזרת כספים" and ask them to contact the receiving bank directly. The money is only
-   recoverable while it is still sitting in the beneficiary account. **There is no statutory recall
-   window**: "hours" is a fact about how fast mule accounts are emptied, not a legal deadline, so
-   nobody owes you an extension.
+   recoverable while it is still sitting in the beneficiary account. **First establish whether it has
+   actually been executed yet**: some Israeli retail transfers settle immediately and some are queued
+   to the next business day, so ask rather than assume. If it has not executed, this is not a favour: s.16(א)(1) lets the payer cancel a payment order while the provider
+   can still stop it, and s.16(ב) then obliges it to halt execution *"מיד עם קבלת ההודעה"*. The cut-off
+   is whatever the payment services contract states, which s.16(ג) requires it to disclose. Once the
+   order **has** executed there is no statutory recall window, and a recall is a request the bank
+   owes you nothing on.
 2. **Get the beneficiary details in writing**: account number, bank, branch, and the name on the
    account. If the bank declines on privacy grounds, do not stall there: ask the police to obtain
    them, and move straight on to the report.
@@ -147,7 +162,7 @@ about a transfer the user gave themselves. If you are in branch B, skip to Step 
 whether the user is "covered" does not arise, because chapter ו' never applied.
 
 Within branch A: if the person was **deceived into handing over** a code, a card detail or a
-password, do not tell them whether they are covered. Explain the position and let them decide with proper advice:
+password, do not tell them whether they are covered. Explain the position:
 
 Section 24(ד) removes the liability cap when the payer made the רכיב חיוני available to another
 person, and it applies "בין שהשימוש נעשה בידיעת המשלם ובין שנעשה שלא בידיעתו". It lists exactly two
@@ -156,22 +171,16 @@ initiate a payment, and cases where it was then stolen from or lost by that pers
 is not among the listed carve-outs**, and no case law was located resolving how this applies to
 someone deceived into disclosing a one-time code.
 
-So: state the text, state that the point is untested, and still give the action. Being unable to
-say "you are covered" is never a reason to fail to say "call the bank now, the clock is running."
+So: state the text, state that the point is untested, and still give the action. Being unable to say
+"you are covered" never excuses failing to say "call the bank now, the clock is running."
 
-**Name the likely first answer, and label it as first, not final.** A user who is told only the odds
-gives up; a user who is told the odds plus the next concrete action keeps going. Say something close
-to: "I cannot promise you an outcome. The bank's first answer may well be that you are responsible
-because you gave the code. That is the first answer, not the last one. Ask for the refusal in
-writing with its reasons, keep every document, and escalate." Section 27(ב) shows the law itself
-contemplates the bank reaching that conclusion, which is exactly why the written reasons and the
-15 days matter.
-
-**Prepare the user without predicting for them.** Section 27(ב) expressly permits the provider to
-re-debit if it concludes the case falls under s.24(ד), so a refund arriving is not the end of the
-matter. Tell the user to plan for that: keep every record, demand the written reasons the section
-requires, use the 15 days before the debit, and escalate (Step 6A). Refusing to predict the outcome
-is honest. Letting the user assume it will be fine is not.
+**Name the likely first answer, and label it as first, not final.** Say something close to: "I cannot
+promise you an outcome. The bank's first answer may well be that you are responsible because you gave
+the code. That is the first answer, not the last one." Section 27(ב) expressly permits the provider to
+re-debit if it concludes s.24(ד) applies, so a refund arriving is not the end of the matter either.
+Tell the user to plan for both: keep every record, demand the written reasons the section requires,
+use the 15 days before any debit, and escalate (Step 6A). Refusing to predict the outcome is honest.
+Letting the user assume it will be fine is not.
 
 ### Step 4: Judge the message, using tests that actually work
 
@@ -239,7 +248,7 @@ Add the 2026 AI layer:
 | **The bank or card issuer** | Always first, but for different reasons by branch. In branch A it starts every statutory clock. In branch B no statutory clock exists; it is first because only the bank can send a recall to the beneficiary bank. | In branch B it owes you no statutory refund. Do not demand one. |
 | **119, מערך הסייבר הלאומי** | National CERT: triage, guidance, and taking down malicious infrastructure. Report the link so the next person does not lose money. | It does not recover your money and does not replace a police report. It does not fix computer faults. |
 | **Police, 100 or the online form** | Opens a criminal case. In an emergency call 100; otherwise file online or at the station nearest your area of residence. | The online filing is a בקשה, not a completed complaint; you may still be summoned. It does not freeze a transfer. |
-| **מוקד 105** | Harm to a **minor**, ages 0 to 18 only. | Not the adult scam line, despite the word הונאה appearing in its intake list. |
+| **מוקד 105** | Online harm where the **victim** is a minor, "גילאי 18-0". A parent reporting for a child is a proper caller. | Not for an adult harmed themselves, despite הונאה being in its intake list. |
 | **Bank of Israel פניות הציבור** | Complaints about **the bank's own conduct**: no answer on the fraud line, a refused refund, a re-debit without the 15 days' notice. | It does not investigate the scammer or recover money from them. |
 
 ### Step 6A: If the bank refuses, escalate in this order
@@ -272,8 +281,9 @@ A statute the user cannot enforce is worth nothing, so give them the ladder:
 ### Step 8: Helping someone else
 
 When the user is helping a parent or grandparent, lead with the two entitlements rather than generic
-advice, because they are concrete and demandable: **senior queue priority** and **Russian-language
-service** on the bank's fraud line. Then set up the family code word, save the bank's real fraud
+advice. **Senior queue priority** is genuinely demandable, from a bank, for someone aged 70 or over.
+**Russian-language service** is worth asking for but is an expectation the regulator voiced, not a
+duty, so do not promise it. Then set up the family code word, save the bank's real fraud
 number in the person's phone under a name they will recognise, and agree the rule that nobody in the
 family ever asks for money by message or by a call the other person did not initiate.
 
@@ -319,6 +329,10 @@ These are failure modes for the agent, not for the user.
 - **Keep the attributions apart.** The SMS-in-genuine-thread warnings come from the National Cyber
   Directorate's official Telegram channel and have no gov.il permalink; say so. Deepfake warnings
   about Israeli finance figures come from מערך הסייבר, not from רשות ניירות ערך.
+- **Never tell a user to pay whoever took their account.** Paying an account hijacker or a sextortion
+  demand buys nothing and marks the user for repeat targeting. For a hijacked WhatsApp the documented
+  route is self-service re-verification, then reporting to WhatsApp, and it never involves payment.
+  See `references/reporting-routes.md`.
 - **Do not answer the deceived-OTP question.** Section 24(ד) is untested on that point. State the
   text, state the uncertainty, give the action.
 
@@ -336,7 +350,7 @@ new access to their accounts, and this skill never needs to read their transacti
 | Source | URL | What to check |
 |---|---|---|
 | חוק שירותי תשלום, התשע"ט-2019 | https://www.nevo.co.il/law_html/law01/502_043.htm | ss.24, 26, 27, 34 to 37, 51, 55. The liability ladder, the 8-business-day refund, the 15-day re-debit warning, the repeal |
-| הוראת ניהול בנקאי תקין 426 | https://www.boi.org.il/media/k23b3lzq/h2834.pdf | 24/7 human fraud line including Shabbat, six-minute standard, senior queue priority, Russian-language service |
+| הוראת ניהול בנקאי תקין 426 | https://www.boi.org.il/media/k23b3lzq/h2834.pdf | s.3(א) addressee and s.3(ב) repealed, s.4 age 70, s.5(ב) 24/7 human fraud line including Shabbat, six-minute standard, s.7 senior queue priority. Russian-language service is in the explanatory notes only |
 | בנק ישראל, משטרה ומשרד התקשורת | https://www.boi.org.il/publications/pressreleases/15-4-26a/ | The three national fraud patterns, the targeting finding, the porting-message change |
 | משרד התקשורת, החלטת שימוע 03.06.2020 | https://www.gov.il/he/pages/03062020_2 | Why an alphabetic sender name is not proof of anything |
 | מערך הסייבר הלאומי, דיווח על אירוע | https://www.gov.il/he/service/cyber-event-report | 119, the reporting form, what the CERT does and does not do |
@@ -350,10 +364,10 @@ new access to their accounts, and this skill never needs to read their transacti
 
 | File | Purpose |
 |---|---|
-| `references/domain-checklist.md` | The coverage contract this skill is maintained against, with every source and the known-wrong advice it must never reproduce |
-|  `references/russian-phrasebook.md` | What to say on the bank's fraud line, in Russian and Hebrew side by side, including the demands for Russian-language service and senior queue priority |
-| `references/reporting-routes.md` | Each reporting route, what it achieves, and what it will not do |
-| `scripts/liability_clock.py` | Computes the s.24(ג) exposure from the date the user found out and the date of notice, and shows which limb of the test binds |
+| `references/domain-checklist.md` | The coverage contract, every source, and the known-wrong advice this skill must never reproduce |
+| `references/russian-phrasebook.md` | What to say on the bank's fraud line, Russian and Hebrew side by side |
+| `references/reporting-routes.md` | Each reporting route, what it achieves and what it will not do, plus the hijacked-WhatsApp path |
+| `scripts/liability_clock.py` | Computes s.24(ג) exposure and shows which limb binds. Branch A only |
 
 ## Troubleshooting
 

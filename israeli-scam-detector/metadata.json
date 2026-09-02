@@ -4,15 +4,15 @@
     "en": "Israeli Scam Detector"
   },
   "display_description": {
-    "he": "אינו ייעוץ משפטי ואינו ערובה לאבטחה. עוזר לבדוק אם הודעה, קישור, מייל או שיחת טלפון הם הונאה, ואומר בדיוק מה לעשות עכשיו, גם אם הכסף כבר יצא. מכסה התחזות לבנקים, לביטוח לאומי, לרשות המסים, לדואר ישראל ול-gov.il, השתלטות על מספר הטלפון, והגל החדש של שיבוט קול וזיופי וידאו. מסביר את לוחות הזמנים האמיתיים לפי חוק שירותי תשלום (חוק כרטיסי חיוב בוטל), את ההשבה תוך שמונה ימי עסקים, ואת קו ההונאות האנושי של הבנק שפועל מסביב לשעון, כולל שבת, עם קדימות בתור לאזרחים ותיקים ושירות בשפה הרוסית. מתאים גם למי שמלווה הורה או סבתא. אל תשתמשו בו כדי לקבוע שהודעה מסוימת בטוחה, לניקוי וירוסים, או לטיפול באירוע סייבר בארגון.",
-    "en": "Not legal advice and not a security guarantee. Check whether a suspicious Israeli SMS, email, link or phone call is a scam, and get the exact next steps, including after the money is already gone. Covers impersonation of Israeli banks, Bituach Leumi, the Tax Authority, Israel Post and gov.il, phone-number takeover, and the 2026 wave of AI voice-cloning and deepfake fraud. Explains the real deadlines under the Payment Services Law 2019 (the Debit Cards Law it replaced is repealed), the 8-business-day refund clock, and the 24/7 human bank fraud line that owes senior citizens queue priority and offers Russian-language service. Built for non-technical users and for family members helping an elderly or Russian-speaking relative. Do NOT use it to declare a message safe, for malware removal, or for corporate incident response."
+    "he": "אינו ייעוץ משפטי ואינו ערובה לאבטחה. עוזר לבדוק אם הודעה, קישור, מייל או שיחת טלפון הם הונאה, ואומר בדיוק מה לעשות עכשיו, גם אם הכסף כבר יצא. מכסה התחזות לבנקים, לביטוח לאומי, לרשות המסים, לדואר ישראל ול-gov.il, השתלטות על מספר הטלפון, והגל החדש של שיבוט קול וזיופי וידאו. מסביר את לוחות הזמנים האמיתיים לפי חוק שירותי תשלום (חוק כרטיסי חיוב בוטל), את ההשבה תוך שמונה ימי עסקים, ואת קו ההונאות האנושי של הבנק שפועל מסביב לשעון, כולל שבת, עם קדימות בתור למי שגילם 70 ומעלה, ושירות ברוסית שהוא ציפייה של הרגולטור ולא חובה. מתאים גם למי שמלווה הורה או סבתא. אל תשתמשו בו כדי לקבוע שהודעה מסוימת בטוחה, לניקוי וירוסים, או לטיפול באירוע סייבר בארגון.",
+    "en": "Not legal advice and not a security guarantee. Check whether a suspicious Israeli SMS, email, link or phone call is a scam, and get the exact next steps, including after the money is already gone. Covers impersonation of Israeli banks, Bituach Leumi, the Tax Authority, Israel Post and gov.il, phone-number takeover, and the 2026 wave of AI voice-cloning and deepfake fraud. Explains the real deadlines under the Payment Services Law 2019 (the Debit Cards Law it replaced is repealed), the 8-business-day refund clock, and the 24/7 human bank fraud line that owes customers aged 70 or over queue priority, and where Russian-language service is an expectation the regulator voiced rather than a duty. Built for non-technical users and for family members helping an elderly or Russian-speaking relative. Do NOT use it to declare a message safe, for malware removal, or for corporate incident response."
   },
   "tags": {
     "he": ["הונאות", "פישינג", "אבטחה", "בנקים", "צרכנות", "אזרחים ותיקים", "זכויות", "בטיחות ברשת"],
     "en": ["fraud", "phishing", "security", "banking", "consumer-rights", "elderly", "scam-detection", "online-safety"]
   },
   "author": "skills-il",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "category": "security-compliance",
   "supported_agents": [
     "claude-code",

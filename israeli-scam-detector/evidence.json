@@ -1,7 +1,7 @@
 {
   "skill_slug": "israeli-scam-detector",
   "schemaVersion": "1.0",
-  "generated_at": "2026-09-02",
+  "generated_at": "2026-09-02T09:30:00Z",
   "claims": [
     {
       "id": "credit-card-law-repealed",
@@ -42,10 +42,11 @@
       "claim_type": "currency",
       "source_url": "https://www.nevo.co.il/law_html/law01/502_043.htm",
       "source_fetched_at": "2026-09-02T00:50:00Z",
-      "raw_snippet": "(ג) המשלם יהיה אחראי לשימוש לרעה באמצעי תשלום שנעשה לפני שנמסרה הודעה, לפי הסכום הנמוך מבין אלה: (1) סכום קבוע של 75 שקלים חדשים בתוספת של 30 שקלים חדשים לכל יום מהמועד שבו נודע למשלם על הגניבה או האובדן של הרכיב החיוני באמצעי התשלום או על השימוש לרעה באמצעי התשלום, עד למועד מסירת ההודעה; על אף האמור, מסר המשלם את ההודעה בתוך 30 ימים מיום שנעשה לראשונה שימוש לרעה, לא יהיה אחראי לסכום העולה על 450 שקלים חדשים; יום ההודעה לא ייכלל במניין הימים לפי פסקה זו, אם ההודעה נמסרה באותו יום שבו נודע למשלם על הגניבה או האבדן של הרכיב החיוני או על השימוש לרעה באמצעי התשלום; (2) סכום פעולות התשלום שבוצעו בפועל תוך כדי השימוש לרעה.",
+      "raw_snippet": "(ג) המשלם יהיה אחראי לשימוש לרעה באמצעי תשלום שנעשה לפני שנמסרה הודעה, לפי הסכום הנמוך מבין אלה: (1) סכום קבוע של 75 שקלים חדשים בתוספת של 30 שקלים חדשים לכל יום מהמועד שבו נודע למשלם על הגניבה או האובדן של הרכיב החיוני באמצעי התשלום או על השימוש לרעה באמצעי התשלום, עד למועד מסירת ההודעה; על אף האמור, מסר המשלם את ההודעה בתוך 30 ימים מיום שנעשה לראשונה שימוש לרעה, לא יהיה אחראי לסכום העולה על 450 שקלים חדשים; יום ההודעה לא ייכלל במניין הימים לפי פסקה זו, אם ההודעה נמסרה באותו יום שבו נודע למשלם על הגניבה או האבדן של הרכיב החיוני או על השימוש לרעה באמצעי התשלום; (2) סכום פעולות התשלום שבוצעו בפועל תוך כדי השימוש לרעה. [...] השר, בהסכמת שר האוצר ונגיד בנק ישראל ובאישור ועדת הכלכלה, רשאי לקבוע, בצו, סכומים שונים מהסכומים הקבועים בפסקה זו;",
       "verified_via": "text",
       "confidence": "high",
-      "verified_at": "2026-09-02"
+      "verified_at": "2026-09-02",
+      "note": "The final limb is included explicitly: the 75/30/450 figures are variable by order, so they must be re-checked each cycle rather than treated as fixed."
     },
     {
       "id": "s24d-cap-lost",
@@ -104,7 +105,7 @@
     },
     {
       "id": "directive426-russian-speakers",
-      "claim": "Banking Directive 426 (circular ח-06-2834) states that service should be given, among other things, in Russian, in light of the fact that the fraud phenomenon is prevalent among Russian speakers",
+      "claim": "Russian-language service is NOT an operative clause of Directive 426. It appears in the directive's explanatory notes, introduced by 'we note as an EXAMPLE of adapting service to customer needs', as an illustration under Directive 501 on customer service arrays, given the Bank of Israel's finding that fraud is prevalent among Russian speakers. It is a regulator expectation, not a duty owed to the customer.",
       "claim_type": "feature",
       "source_url": "https://www.boi.org.il/media/k23b3lzq/h2834.pdf",
       "source_fetched_at": "2026-09-02T00:42:00Z",
@@ -115,7 +116,7 @@
     },
     {
       "id": "directive426-russian-consultation",
-      "claim": "The Russian-language emphasis was added to Directive 426 following public consultation, because of the prevalence of fraud among that population",
+      "claim": "The public consultation raised the need to emphasise Russian speakers, and a reference was added to the texts. This records why the example was included; it does not make it an operative obligation.",
       "claim_type": "feature",
       "source_url": "https://www.boi.org.il/media/k23b3lzq/h2834.pdf",
       "source_fetched_at": "2026-09-02T00:42:00Z",
@@ -126,7 +127,7 @@
     },
     {
       "id": "directive426-senior-priority",
-      "claim": "Directive 426 obliges banking corporations to give senior citizens priority in the queue on the professional human fraud line",
+      "claim": "Directive 426 anchors a DUTY to give queue priority to senior citizens on the human fraud line. This one is binding operative text, unlike the Russian-language example. The directive defines a senior citizen as a customer aged 70 or over per the population registry. It binds a banking corporation (תאגיד בנקאי) only, per s.3(a); s.3(b) was repealed.",
       "claim_type": "feature",
       "source_url": "https://www.boi.org.il/media/k23b3lzq/h2834.pdf",
       "source_fetched_at": "2026-09-02T00:42:00Z",
@@ -137,14 +138,15 @@
     },
     {
       "id": "directive426-247-shabbat",
-      "claim": "Directive 426 requires the human fraud line to be available around the clock, all days of the week, including during the weekly rest hours (Shabbat)",
+      "claim": "Directive 426 s.5(b) is the OPERATIVE 24/7 clause: the fraud telephone line shall be available to the public continuously (7X24X365). The explanatory notes to s.6 spell out that this covers all hours and all days of the week including the weekly rest hours (Shabbat), and ground the requirement in s.24(e) of the Payment Services Law.",
       "claim_type": "feature",
       "source_url": "https://www.boi.org.il/media/k23b3lzq/h2834.pdf",
       "source_fetched_at": "2026-09-02T00:42:00Z",
-      "raw_snippet": "נדרש מענה טלפוני אנושי ומקצועי אשר יהיה זמין בכל שעות היממה ובכל ימות השבוע, לרבות בשעות המנוחה השבועית, על מנת לצמצם את הפגיעה ברכושו של הלקוח, ככל הניתן, בהתאם לנסיבות העניין.",
+      "raw_snippet": "(ב) מבלי לגרוע מהאמור בסעיף קטן (א), תאגיד בנקאי יעניק מענה טלפוני אנושי מקצועי, בנושא חשש להונאות בשירותי תשלום וכן לעניין מסירת הודעות של לקוחות בדבר חשש לשימוש לרעה בהתאם לחוק שירותי תשלום, התשע\"ט-2019; המענה הטלפוני בנושא ההונאות יעמוד לרשות הציבור באופן רציף (7X24X365). [...דברי הסבר...] מתן מענה כאמור נדרש בכל שעות היממה ובכל ימות השבוע, לרבות בשעות המנוחה השבועית, על מנת לצמצם את הפגיעה ברכושו של הלקוח, ככל הניתן, בהתאם לנסיבות העניין.",
       "verified_via": "pdf",
       "verified_at": "2026-09-02",
-      "confidence": "high"
+      "confidence": "high",
+      "note": "Two verbatim passages, elision marked. The previous snippet spliced the s.1 preamble onto the s.6 explanatory note with no marker and did not exist as a single sentence anywhere in the PDF. Corrected 2026-09-02."
     },
     {
       "id": "directive426-six-minutes",
@@ -295,14 +297,15 @@
     },
     {
       "id": "legal-aid-65-plus",
-      "claim": "Israelis aged 65 and over are entitled to free legal aid in proceedings connected to exploitation of difficulty, weakness, cognitive state, health state or language difficulties, with no payment and no fee; the senior citizens hotline is *8840",
+      "claim": "Kol Zchut: those who have reached age 65 are entitled to Ministry of Justice legal aid in proceedings connected to exploitation of hardship, weakness, cognitive state, health state or language difficulty. In cases of exploitation or oppression the aid is free and without a fee. The senior citizens hotline *8840 is listed separately on the same page's contacts table, not as part of this entitlement passage.",
       "claim_type": "feature",
       "source_url": "https://www.kolzchut.org.il/he/%D7%A1%D7%99%D7%95%D7%A2_%D7%9E%D7%A9%D7%A4%D7%98%D7%99_%D7%91%D7%AA%D7%97%D7%95%D7%9D_%D7%94%D7%96%D7%99%D7%A7%D7%A0%D7%94_%D7%9E%D7%98%D7%A2%D7%9D_%D7%9E%D7%A9%D7%A8%D7%93_%D7%94%D7%9E%D7%A9%D7%A4%D7%98%D7%99%D7%9D",
       "source_fetched_at": "2026-09-02T01:05:00Z",
-      "raw_snippet": "מי שמלאו להם 65 זכאים לסיוע בהליכים שקשורים לניצול קושי, חולשה, מצב קוגניטיבי, מצב בריאותי או קשיי שפה. סיוע זה ניתן ללא תשלום כלשהו - גם לא אגרה. מוקד לאזרחים ותיקים: *8840",
-      "verified_via": "browser",
+      "raw_snippet": "מי שמלאו להם 65 זכאים לסיוע בהליכים שקשורים לניצול קושי, חולשה, מצב קוגניטיבי, מצב בריאותי או קשיי שפה [...] הסיוע ניתן חינם וללא תשלום אגרה במקרים של ניצול או עושק",
+      "verified_via": "text",
       "verified_at": "2026-09-02",
-      "confidence": "high"
+      "confidence": "high",
+      "note": "Corrected 2026-09-02. The previous snippet paraphrased the fee sentence and appended *8840 from a separate contacts table as if it were part of the same passage."
     },
     {
       "id": "incd-russian-elderly-targeting",
@@ -413,6 +416,127 @@
       "verified_via": "text",
       "verified_at": "2026-09-02",
       "confidence": "high"
+    },
+    {
+      "id": "s24a-notice-available-before-any-charge",
+      "claim": "Section 24(a) defines 'notice' to include notice about the THEFT OR LOSS of an essential component (רכיב חיוני), not only about misuse. Notice is therefore available before any charge has occurred, and section 24(c)(1) already runs the 30 NIS per day from the day the payer learned of that theft or loss. (סעיף 24(א), 24(ג)(1))",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law01/502_043.htm",
+      "source_fetched_at": "2026-09-02T09:10:00Z",
+      "raw_snippet": "24. (א) בסעיף זה, \" הודעה \" – הודעה של המשלם לנותן שירותי תשלום למשלם על גניבה או אבדן של רכיב חיוני באמצעי תשלום או על שימוש לרעה באמצעי תשלום. [...] (1) סכום קבוע של 75 שקלים חדשים בתוספת של 30 שקלים חדשים לכל יום מהמועד שבו נודע למשלם על הגניבה או האובדן של הרכיב החיוני באמצעי התשלום או על השימוש לרעה באמצעי התשלום, עד למועד מסירת ההודעה",
+      "verified_via": "text",
+      "confidence": "high",
+      "verified_at": "2026-09-02"
+    },
+    {
+      "id": "s25b-freeze-zeroes-liability",
+      "claim": "Section 25(b): where use of the payment instrument has been frozen, the payer bears no liability for misuse during the freeze period. (סעיף 25(ב))",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law01/502_043.htm",
+      "source_fetched_at": "2026-09-02T09:10:00Z",
+      "raw_snippet": "(ב) הוקפא השימוש באמצעי התשלום לא יהיה המשלם אחראי לשימוש לרעה שנעשה בתקופת ההקפאה כאמור.",
+      "verified_via": "text",
+      "confidence": "high",
+      "verified_at": "2026-09-02"
+    },
+    {
+      "id": "s16-cancel-payment-order",
+      "claim": "Section 16: a payer may cancel a payment order (outside a secured payment transaction) by notice to the provider so long as the provider can still stop execution, per reasonable technological limits or the time set in the payment services contract provided it is reasonable. On receiving such notice the provider must halt execution IMMEDIATELY. The contract must state the cut-off time. This is a statutory right for an order not yet executed, distinct from a discretionary recall after execution. (סעיף 16, סעיפים קטנים (א)(1), (ב) ו-(ג))",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law01/502_043.htm",
+      "source_fetched_at": "2026-09-02T09:10:00Z",
+      "raw_snippet": "16. (א) (1) המשלם רשאי לבטל הוראת תשלום שניתנה שלא במסגרת פעולת תשלום מובטחת, בהודעה לנותן שירותי התשלום למשלם, כל עוד באפשרות נותן שירותי התשלום להפסיק את ביצוע הוראת התשלום בהתאם למגבלות הטכנולוגיות הסבירות החלות עליו או בהתאם למועד הקבוע בחוזה שירותי התשלום ובלבד שהוא סביר; [...] (ב) קיבל נותן שירותי תשלום למשלם הודעה לפי סעיף קטן (א) ומתקיימים התנאים שבסעיף קטן (א)(1), יפסיק את ביצוע הוראת התשלום ואת חיוב המשלם מכוחה, מיד עם קבלת ההודעה.",
+      "verified_via": "text",
+      "confidence": "high",
+      "verified_at": "2026-09-02"
+    },
+    {
+      "id": "directive426-applies-to-banking-corporation",
+      "claim": "Directive 426 section 3(a) applies the directive to a 'banking corporation' (תאגיד בנקאי) as defined in the Banking (Customer Service) Law 1981. Its סעיף 4 (section 4) defines 'senior citizen' (אזרח ותיק) as a customer who has reached age 70 per the population registry.",
+      "claim_type": "law",
+      "source_url": "https://www.boi.org.il/media/k23b3lzq/h2834.pdf",
+      "source_fetched_at": "2026-09-02T09:15:00Z",
+      "raw_snippet": "(3א) הוראה זו תחול על תאגיד בנקאי, כהגדרתו בחוק הבנקאות (שירות ללקוח), התשמ\"א 1981 (להלן: \"תאגיד בנקאי\"). [...] 4. \"אזרח ותיק\" - לקוח אשר לפי הרישום במרשם האוכלוסין הגיע לגיל 70.",
+      "verified_via": "pdf",
+      "confidence": "high",
+      "verified_at": "2026-09-02"
+    },
+    {
+      "id": "incd-whatsapp-recovery-no-payment",
+      "claim": "The National Cyber Directorate's WhatsApp account-takeover page documents a recovery route consisting of re-verifying the number with the six-digit code, then urgently enabling two-step verification, then reporting to WhatsApp if that fails, and warning contacts. Speed matters because the attacker may enable two-step verification first. The documented route involves no payment to the hijacker.",
+      "claim_type": "procedure",
+      "source_url": "https://www.gov.il/he/pages/whatsapp_stolen_accounts",
+      "source_fetched_at": "2026-09-02T09:20:00Z",
+      "raw_snippet": "קודם כל, אסור לכם להשתהות: אם אין לכם אימות דו-שלבי, אתם צריכים לפעול לפני שהתוקף מפעיל אותו בעצמו!",
+      "verified_via": "browser",
+      "confidence": "high",
+      "verified_at": "2026-09-02"
+    },
+    {
+      "id": "incd-phishing-aftermath-card-actions",
+      "claim": "Where bank-account or card details were given to an impersonating site, the National Cyber Directorate recommends cancelling, blocking or temporarily suspending the card, updating the bank and/or card company on the circumstances, and monitoring the account for suspicious activity and for unfamiliar new standing orders.",
+      "claim_type": "procedure",
+      "source_url": "https://www.gov.il/he/pages/fool_me_twice",
+      "source_fetched_at": "2026-09-02T09:05:00Z",
+      "raw_snippet": "ביטול כרטיס אשראי ועדכון הבנק - במקרה של מסירת פרטי חשבון הבנק או כרטיס האשראי באתר מתחזה, מומלץ לבצע את הפעולות הבאות: ביטול, חסימה או השהייה זמנית של כרטיס האשראי; עדכון הבנק ו/או חברת האשראי בנסיבות המקרה; ומעקב שוטף לפעולות חשודות בחשבון והאם נוצרו הוראות קבע חדשות שאינן מוכרות.",
+      "verified_via": "browser",
+      "confidence": "high",
+      "verified_at": "2026-09-02"
+    },
+    {
+      "id": "directive426-s7-senior-priority-scope",
+      "claim": "Directive 426 section 7 (סעיף 7) is the operative senior-priority clause. It covers enquiries from customers who hold an account at the banking corporation, INCLUDING holders of a payment card the banking corporation itself issued, who are a senior citizen as defined, and gives them priority in the automatic call router. It does not reach a card issued by a standalone card company.",
+      "claim_type": "law",
+      "source_url": "https://www.boi.org.il/media/k23b3lzq/h2834.pdf",
+      "source_fetched_at": "2026-09-02T10:05:00Z",
+      "raw_snippet": "7. פניות של לקוחות המנהלים חשבון בתאגיד הבנקאי, לרבות בעלי כרטיס חיוב שהנפיק התאגיד הבנקאי, שהם אזרח ותיק, כהגדרתו לעיל, אשר בחרו לקבל מענה אנושי מקצועי באמצעות המוקד הטלפוני או המענה הטלפוני בנושא הונאות, יקבלו עדיפות בנתב השיחות האוטומטי לקבלת מענה מהיר.",
+      "verified_via": "pdf",
+      "confidence": "high",
+      "verified_at": "2026-09-02"
+    },
+    {
+      "id": "privacy-law-limitation-section-repealed",
+      "claim": "Section 26 of the Privacy Protection Law 1981, headed 'התיישנות' (limitation), has been REPEALED and now reads only '(בוטל)'. No special limitation period survives in that statute. (סעיף 26)",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law01/087_001.htm",
+      "source_fetched_at": "2026-09-02T11:20:00Z",
+      "raw_snippet": "התיישנות 26. (בוטל)",
+      "verified_via": "text",
+      "confidence": "high",
+      "verified_at": "2026-09-02"
+    },
+    {
+      "id": "general-limitation-seven-years",
+      "claim": "The ordinary civil limitation period for a non-real-property claim is SEVEN years under the Limitation Law 1958 section 5(1), running from the day the cause of action arose (section 6). This is what governs a privacy claim now that the Privacy Protection Law's own limitation section is repealed. (סעיף 5, סעיף 6)",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71809.htm",
+      "source_fetched_at": "2026-09-02T11:22:00Z",
+      "raw_snippet": "5. התקופה שבה מתיישנת תביעה שלא הוגשה עליה תובענה (להלן – תקופת ההתיישנות) היא – (1) בשאינו מקרקעין – שבע שנים; (2) במקרקעין – חמש עשרה שנה [...] תחילת ההתיישנות 6. תקופת ההתיישנות מתחילה ביום שבו נולדה עילת התובענה.",
+      "verified_via": "text",
+      "confidence": "high",
+      "verified_at": "2026-09-02"
+    },
+    {
+      "id": "moked105-minor-victim-scope",
+      "claim": "מוקד 105 handles online harm where the VICTIM is a minor, with the age range published explicitly as 0 to 18. Its intake list does include הונאה, under criminal online harms, but every category is governed by the clause 'in any matter of harm to minors online'. Adults are invited as CALLERS (children, youth, parents, professionals and the general public), so a parent or professional reporting harm to a child is a proper caller; only an adult reporting harm to themselves is out of scope. The page directs callers to 100 where there is concern for life. It is part of Unit 105 under Lahav 433.",
+      "claim_type": "procedure",
+      "source_url": "https://www.gov.il/he/departments/units/105_call_center",
+      "source_fetched_at": "2026-09-02T11:40:00Z",
+      "raw_snippet": "ילדים, בני נוער, הורים, אנשי מקצוע וכלל הציבור יכולים לפנות למוקד בכל נושא של פגיעה בקטינים ברשת ובין השאר: פגיעות פליליות ברשת - סחיטה, איומים, התחזות, הונאה [...] התייעצות ומידע על גלישה בטוחה ופגיעות בקטינים (גילאי 18-0) [...] שימו לב: במקרה של חשש לחיי אדם, יש להתקשר מיד למוקד 100 של משטרת ישראל.",
+      "verified_via": "browser",
+      "confidence": "high",
+      "verified_at": "2026-09-02"
+    },
+    {
+      "id": "id-replacement-no-police-complaint",
+      "claim": "Replacing a lost, stolen or defaced Israeli ID card does NOT require the applicant to file a police complaint. Procedure 2.18.0004 of the Population and Immigration Authority lists the applicant's requirements in its conditions section, and a police report is not among them; the applicant signs a declaration of loss/theft/defacement, form מר/15, which may instead be completed inside the system-generated application form מר/41. A police complaint appears only as a duty on the AUTHORITY's own clerk where there is reasonable suspicion of a criminal act or a forged application.",
+      "claim_type": "procedure",
+      "source_url": "https://www.gov.il/BlobFolder/policy/new_id_stolen_lost_currapted_procedure/he/2.18.0004.pdf",
+      "source_fetched_at": "2026-09-02T11:42:00Z",
+      "raw_snippet": "3.5 מילוי וחתימה על תצהיר בדבר אובדן / גניבה / השחתה של תעודת זהות (מר/15), ככל שטופס הבקשה לתעודת זהות (מר/41) מונפק מהמערכת הממוחשבת ניתן למלא את פרטי הצהרת האובדן ולחתום בטופס זה, במקום המיועד לכך. [...] 4.5.1 בכל מקרה שיש חשד סביר שמוסר ההודעה על אבדן/גניבה/השחתה של תעודת זהות כרוכה במעשה פלילי/פח\"ע - יש להגיש תלונה במשטרה בצירוף תעודת עובד ציבור.",
+      "verified_via": "pdf",
+      "confidence": "high",
+      "verified_at": "2026-09-02"
     }
   ]
 }

@@ -39,3 +39,23 @@ EDGE | האם מגיע לי החזר על עמלות בנק שגבו ממני ב
 # all positives and all explicit negatives, so there was nothing to tune
 # and therefore no overfitting risk. The holdout confirms the untuned description
 # generalises rather than confirming a tuned one.
+
+# --- CYCLE 2 (v1.1.0, 2026-09-02) ---
+# The description changed this cycle: the Directive 426 clause was corrected from
+# "owes senior citizens queue priority and offers Russian-language service" to
+# "owes customers aged 70 or over queue priority, and where Russian-language service
+# is an expectation the regulator voiced rather than a duty". Reason: Russian service
+# is NOT an operative clause of 426, it sits in the explanatory notes as an example
+# under Directive 501. The old wording asserted an entitlement the source does not grant.
+#
+# The eval set above was NOT edited (it was frozen before the change was scored).
+# Holdout = queries 5, 6, 9, 12, exactly as split in cycle 1.
+#
+# Every deciding phrase for all 12 queries was re-checked against the new description
+# and all 13 are still present verbatim. The corrected clause adds no vocabulary that
+# attracts Q12 (a bank-fee dispute) and removes none that Q4 or Q5 rely on.
+#
+# holdout_before : 4/4 = 1.00
+# holdout_after  : 4/4 = 1.00
+# regressed      : none
+# GATE           : ACCEPT (no regression, >= 0.90, not below baseline)

@@ -127,13 +127,30 @@ def main() -> None:
     print(f"  Limb 2, amount transacted          : {r['limb_two_amount_transacted']:.0f} NIS")
     print(f"  Binding limb                       : {r['binding_limb']}")
     print()
-    print(f"  Exposure before notice             : {r['exposure']:.0f} NIS")
+    # When the first-misuse date is unknown we cannot tell whether the 450 cap bites.
+    # Print a RANGE rather than the uncapped figure: the headline number is the one the
+    # user quotes to the bank, and quoting an overstated one is the exact failure this
+    # skill exists to prevent.
+    untested_cap = (
+        args.first_misuse is None
+        and not r["cap_applied"]
+        and r["binding_limb"] == "fixed+daily"
+        and r["exposure"] > CAP_WITHIN_30_DAYS
+    )
+    if untested_cap:
+        lo = min(CAP_WITHIN_30_DAYS, r["limb_two_amount_transacted"])
+        print(f"  Exposure before notice             : {lo:.0f} to {r['exposure']:.0f} NIS")
+        print("    The date of first misuse is unknown, so it is not known whether the")
+        print(f"    {CAP_WITHIN_30_DAYS} NIS cap applies. Do NOT quote the upper figure to the bank as")
+        print("    if it were settled. Supply --first-misuse to resolve this.")
+    else:
+        print(f"  Exposure before notice             : {r['exposure']:.0f} NIS")
     print("  Exposure for misuse after notice   : 0 NIS  (s.24(b))")
 
-    if args.first_misuse is None:
+    if args.first_misuse is None and not untested_cap:
         print()
-        print("  Note: --first-misuse was not supplied, so the 450 NIS cap was not")
-        print("        tested. Supply it if the date of the first misuse is known.")
+        print("  Note: --first-misuse was not supplied, but the 450 NIS cap could not")
+        print("        change the result here.")
 
     print()
     print("  Refund is due no later than 8 business days from notice (s.27(a)).")

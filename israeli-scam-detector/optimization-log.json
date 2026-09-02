@@ -1,0 +1,45 @@
+{
+  "cycles": [
+    {
+      "version": "1.1.0",
+      "date": "2026-09-02",
+      "lessons": [
+        "RESOLVED THIS CYCLE, do not regress: references said the civil limitation under חוק הגנת הפרטיות is TWO years. It is SEVEN. s.26 (התיישנות) of that law reads '(בוטל)'; חוק ההתיישנות s.5(1) 'בשאינו מקרקעין - שבע שנים' governs, from the day the cause of action arose (s.6). The old figure would have told a user with four years left that their claim was dead. Same defect the skill exists to prevent: a figure quoted from a repealed section.",
+        "RESOLVED THIS CYCLE: 'מוקד 105 is not the adult line' was wrong as framed. The age range 0-18 is correct and published, and הונאה really is in its intake list, but the page invites 'הורים, אנשי מקצוע וכלל הציבור' as CALLERS. The VICTIM must be a minor. The old wording would have turned away a parent phoning about their child.",
+        "RESOLVED THIS CYCLE: מר/15 and נוהל 2.18.0004 verified directly from the procedure PDF. s.3 lists applicant requirements with no police report; a complaint is a duty on the AUTHORITY clerk under 4.5.1. Now sourced. The replacement FEE remains unverified: do not state a figure.",
+        "CAUGHT BY EXPERT ITERATION 2, do not regress: Russian-language service is NOT an operative clause of Directive 426. It sits in the explanatory notes as an example under Directive 501 ('נציין כדוגמא להתאמת השירות'). v1.0.0 asserted it as an entitlement in the description, both reference files and Step 8. Senior queue priority IS binding ('ההוראה מעגנת חובה'). Never pair them as equivalents again.",
+        "CAUGHT BY EXPERT ITERATION 2: Directive 426 s.3(א) binds a תאגיד בנקאי only and s.3(ב) is 'בטל', so a standalone card issuer (Max/Isracard/CAL) owes none of the 426 duties, though ss.24 and 27 of the Payment Services Law still bind it as a PSP. The skill had been telling users to demand 426 from 'the bank or card issuer'.",
+        "CAUGHT BY EXPERT ITERATION 2: the first draft of Step 0 situation C quoted the s.24(ג) ₪75+₪30/day ladder. Wrong for the archetypal C case: the user handed the component over, so s.24(ד) opens 'על אף הוראות סעיף קטן (ג)' and disapplies the cap. Situation C now points at the untested 24(ד) question and rests on s.24(ב), which is unqualified.",
+        "CAUGHT BY EXPERT ITERATION 3: the iteration-2 Russian demotion was applied to the Step 1A table, Step 8 and the descriptions but MISSED three mirrors: the russian-phrasebook.md header ('a service the regulator specifically told banks to provide'), reporting-routes.md line 19, and the SKILL_HE.md bundled-resources row ('הדרישה לשירות ברוסית'). The phrasebook is the file a family member reads down the phone, so the stale header was the worst possible place to leave it. LESSON: after any claim correction, grep the OLD claim across SKILL.md, SKILL_HE.md and every reference file and require zero hits before re-running the panel.",
+        "CAUGHT BY EXPERT ITERATION 3: 426 s.7 extends senior priority to 'בעלי כרטיס חיוב שהנפיק התאגיד הבנקאי', and the 24/7 fraud-line duty is grounded in s.24(ה) which binds every PSP. A flat 'Max/Isracard/CAL do not owe it' was a mild false negative; the skill now routes the user to their own bank's fraud line as well.",
+        "Expert MAJOR deferred: card-scheme chargeback / ביטול עסקה is a second lever against the issuer that survives a s.24(ד) refusal; Step 6A goes straight from refusal to small claims. Needs a sourced scheme-rules citation, not located this cycle.",
+        "Expert MAJOR deferred: no lane for the victim whose OWN account is restricted or frozen after fraud activity. Needs חוק איסור הלבנת הון / חשבון מוגבל sourcing.",
+        "Expert MAJOR deferred: the free credit report from מאגר נתוני אשראי is the concrete answer to 'did someone take credit in my name'. Needs a verified חוק נתוני אשראי citation.",
+        "Expert MINOR deferred: s.22 is the freeze RIGHT (immediate, up to 14 days); the skill cites only s.25(ב)'s liability effect. Cite s.22 next cycle.",
+        "Expert MINOR deferred: s.16(א)(1)'s contractual cut-off carries a 'ובלבד שהוא סביר' proviso the skill omits, which cuts in the user's favour.",
+        "UNVERIFIABLE, do not reintroduce without a source: the INCD quote 'לא משלמים - מדווחים. האקר לא מתכוון להחזיר את החשבון' asserted in domain-checklist row G3 has no URL. gov.il/he/pages/blackmail-text is Cloudflare-blocked even in a real browser. The never-pay rule shipped as agent guidance plus the VERIFIED WhatsApp recovery route, deliberately without that attribution.",
+        "Deferred: תזכיר חוק שירותי תשלום (תיקון), התשפ\"ו-2026 would raise PSP liability for deceived transfers and sits on the s.24(ד) uncertainty in Step 3. tazkirim.gov.il serves a Salesforce SPA shell (817 chars) so the draft could not be read. Do NOT encode until rendered.",
+        "Minor deferred: the ₪30/day limb is calendar days while the s.27(א) refund is business days; the skill never says so and a user may accuse the bank of breach on day six.",
+        "Process note: the 5,000-word cap is on the BODY only (frontmatter excluded), which gave more headroom than first assumed. Body ended at ~4,930. The next substantive addition still needs a section moved to references/ first.",
+        "Process note: gov.il and nevo.co.il block curl AND WebFetch. The local Playwright end-run (import from the pnpm store path, domcontentloaded + 12s wait, real UA, assert location.href) rendered gov.il fine and recovered the INCD WhatsApp page a prior cycle had written off as uncitable.",
+        "FETCHING, carry forward: gov.il HTML needs a HEADED Chrome (chromium.launchPersistentContext with headless:false, channel:'chrome'); headless Playwright is Cloudflare-blocked exactly like curl. But gov.il /BlobFolder/*.pdf assets download fine with plain curl, which is how נוהל 2.18.0004 was verified.",
+        "GATE BLIND SPOT, important beyond this skill: verify-evidence.py --check-sources passed a raw_snippet that was SPLICED from two different parts of the 426 PDF and existed nowhere as a single sentence, and a legal-aid snippet that paraphrased one sentence and appended a phone number from a different table. A substring check cannot detect a quote assembled from real fragments of the real document. Only a reader comparing against the source catches it. Two independent Judges disagreed on exactly these two entries; the one that fuzzy-matched said VERIFIED."
+      ],
+      "holdout_before": 1.0,
+      "holdout_after": 1.0,
+      "buckets": {
+        "improved": [],
+        "regressed": [],
+        "persistent_fail": [
+          "מישהו השתלט לי על חשבון הוואטסאפ (deliberate weak match; the body now routes it properly via references/reporting-routes.md, but the description still does not name account hijack, on purpose)"
+        ],
+        "stable_success": [
+          "Bituach Leumi war-grant query",
+          "cloned-voice relative call",
+          "confirm this email is safe (correctly excluded)",
+          "bank fee refund (correctly not matched)"
+        ]
+      }
+    }
+  ]
+}

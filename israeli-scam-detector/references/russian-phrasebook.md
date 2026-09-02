@@ -2,14 +2,21 @@
 
 ## Why this file exists
 
-הוראת ניהול בנקאי תקין 426 names Russian-language service on the bank fraud line, and states the
-reason plainly: fraud is prevalent among Russian speakers.
+**Read this before using the phrases.** Russian-language service is **not** an operative clause of
+הוראת ניהול בנקאי תקין 426. It appears only in the directive's explanatory notes, introduced as an
+*example* of adapting service to customer needs under Directive 501:
 
-> "מתן השירות, בין היתר, בשפה הרוסית, וזאת לאור העובדה שתופעת ההונאות שכיחה בקרב דוברי השפה הרוסית."
+> "נציין כדוגמא להתאמת השירות לצרכי הלקוחות, את מתן השירות, בין היתר, בשפה הרוסית, וזאת לאור העובדה
+> שתופעת ההונאות שכיחה בקרב דוברי השפה הרוסית."
 
-The explanatory notes record that this was added after public consultation raised it, "לאור שכיחות
-התופעה בקרב אוכלוסייה זו". So asking for Russian-language service is not a favour being requested.
-It is a service the regulator specifically told banks to provide.
+The notes record that it was added after public consultation raised it, "לאור שכיחות התופעה בקרב
+אוכלוסייה זו". So the Bank of Israel has clearly voiced the expectation, and it is entirely
+reasonable to ask. But **do not coach the caller to demand it as a right**: a person who argues for
+an entitlement the bank does not owe burns the very minutes in which s.24 liability is accruing.
+Ask, and if the answer is no, carry on in Hebrew with the phrases below.
+
+Senior queue priority is different: that one **is** binding operative text (s.7), for a customer
+aged 70 or over, at a תאגיד בנקאי, including a card the bank itself issued.
 
 Use this file when the person who was targeted is a Russian speaker, or when a family member is
 calling on their behalf and needs something to read down the phone.
@@ -29,11 +36,16 @@ liability accruing. Ask for the time and write it down.
 
 ## If the caller is a senior citizen
 
-Directive 426 obliges the bank to give senior citizens priority in the queue on the fraud line.
+Directive 426 obliges a banking corporation (תאגיד בנקאי, s.3(א)) to give priority in the queue on the fraud line to customers aged 70 or over. A standalone card issuer is not an addressee. Russian-language service is NOT an operative clause of 426: it appears in the explanatory notes as an example under Directive 501. Ask for it, but never present it as an entitlement the bank owes.
 
 | Purpose | Russian | Hebrew |
 |---|---|---|
-| Request queue priority | Я пенсионер. По указанию Банка Израиля пожилым клиентам положена очередь в приоритетном порядке. | אני אזרח ותיק. לפי הוראת בנק ישראל מגיעה לאזרחים ותיקים קדימות בתור. |
+| Request queue priority (only if aged 70+ AND the account is at this bank) | Мне больше 70 лет, у меня счёт в этом банке. По указанию Банка Израиля номер 426 таким клиентам положена очередь в приоритетном порядке. | אני מעל גיל 70 ויש לי חשבון בבנק הזה. לפי הוראת ניהול בנקאי תקין 426 מגיעה לי קדימות בתור. |
+
+**Do not use the priority line below age 70, or if the card is a standalone issuer's and you hold no
+account at the bank.** Directive 426 s.4 sets the threshold at 70 by the population registry and s.7
+reaches customers who hold an account at that banking corporation, including a card it issued itself.
+Asserting it outside those limits invites a correction that costs you the call.
 | Ask for a family member to join | Со мной мой сын или дочь, разрешите ему говорить от моего имени. | נמצא איתי הבן או הבת שלי, אני מאשר לו לדבר בשמי. |
 
 ## The rest of the call
