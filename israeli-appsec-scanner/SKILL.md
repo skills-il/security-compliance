@@ -2,7 +2,6 @@
 name: israeli-appsec-scanner
 description: Security scanning guidance for Israeli web applications covering OWASP Top 10, Israeli Privacy Protection Authority (PPA) compliance, dependency vulnerability scanning, secrets detection, and secure coding patterns for Hebrew/RTL apps. Use when user asks to "scan for vulnerabilities", "check security compliance", "audit Israeli app security", "bodek aviskhut" (Hebrew transliteration), or needs help with PPA compliance, secrets detection, or Hebrew input sanitization. Provides actionable checklists, automated scanning scripts, and Israeli-specific security guidance. Do NOT use for network penetration testing, physical security audits, or non-application-layer security concerns.
 license: MIT
-allowed-tools: 'Bash(python3:*), Bash(python:*), Bash(bash:*)'
 compatibility: No special requirements. Works with Claude Code, Cursor, Windsurf.
 ---
 

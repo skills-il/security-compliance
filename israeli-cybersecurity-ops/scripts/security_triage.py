@@ -488,7 +488,7 @@ def run_from_json(json_input: str) -> dict:
     if reporting["privacy_authority_notification"]:
         print("Privacy Authority: NOTIFICATION REQUIRED")
     if reporting["sector_regulator_reporting"]:
-        print(f"Sector Regulator: LIKELY REQUIRED ({reporting['sector_regulator_reporting']})")
+        print("Sector Regulator: LIKELY REQUIRED (" + str(reporting["sector_regulator_reporting"]) + ")")
     if alert_type in ("malware", "ransomware"):
         print(
             "Ransomware note: paying a ransom is a LEGAL decision, not a SOC decision. "

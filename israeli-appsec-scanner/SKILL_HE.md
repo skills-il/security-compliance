@@ -11,7 +11,6 @@ description: >-
   security guidance. Do NOT use for network penetration testing, physical security
   audits, or non-application-layer security concerns.
 license: MIT
-allowed-tools: 'Bash(python3:*), Bash(python:*), Bash(bash:*)'
 compatibility: 'No special requirements. Works with Claude Code, Cursor, Windsurf.'
 ---
 
