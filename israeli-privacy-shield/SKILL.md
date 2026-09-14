@@ -163,7 +163,7 @@ The Privacy Protection Law does not have a dedicated minors' provision, but othe
 - Under the Inclusion of Biometric Means of Identification in Identity Documents and in an Information Database Law, 5770-2009 (the biometric ID-card framework), fingerprints are not collected from applicants under age 12; only facial photographing is performed. Other biometric processing involving minors is subject to heightened restrictions and typically requires both parental and minor consent (for ages where the minor can understand).
 
 **Ed-tech and school services:**
-- The PPA treats schools and ed-tech vendors as high-scrutiny processors. The PPA's January 2020 audit of educational websites and applications for minors found defects in 23 of 24 audited entities. The takeaway: ed-tech is on the enforcement priority list, and "everybody does it this way" is not a defense.
+- The PPA treats schools and ed-tech vendors as high-scrutiny processors. A PPA cross-sector audit of educational websites and applications for minors (supervision in 2018-2019, report published January 2020) found defects in 23 of 24 audited entities. The takeaway: ed-tech is on the enforcement priority list, and "everybody does it this way" is not a defense.
 
 **Practical controls for products with minor users:**
 - Tag minor accounts/profiles in the data inventory.

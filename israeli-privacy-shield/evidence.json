@@ -334,14 +334,17 @@
     },
     {
       "claim_id": "ppa-2020-edtech-audit",
-      "claim": "A January 2020 PPA audit on educational websites and applications for minors found defects in 23 of 24 supervised entities",
-      "source_url": "https://www.linklaters.com/en/insights/data-protected/data-protected---israel",
-      "raw_snippet": "In January 2020, the PPA published findings from an audit on educational websites and applications designed for minors; the audit findings indicated defects in 23 of the 24 supervised entities",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "claim": "A PPA cross-sector audit of educational websites and applications for minors, conducted in 2018-2019 with the report published in January 2020, found defects in 23 of 24 supervised entities",
+      "source_url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/ppa-report18/he/Minors_report.pdf",
+      "raw_snippet": "בסיום ההליך נמצאו ליקויים ב-23 מתוך 24 גופים המפוקחים",
+      "fetched_at": "2026-09-14T13:27:00+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-09-14",
+      "source_note": "PPA cross-sector supervision report on educational websites and apps for minors, cover dated ינואר 2020; downloaded and read via pdftotext. Replaces a Linklaters page that no longer carries this passage."
     },
     {
       "claim_id": "planet49-cjeu-c-673-17",
