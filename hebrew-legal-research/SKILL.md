@@ -119,6 +119,7 @@ Result: Compare options: Chevra Baam (Ltd company), Shutfut (partnership), Osek 
 ### References
 - `references/legal-databases-guide.md`, Comprehensive guide to Israeli legal research databases including paid platforms (Nevo, Takdin, Psakdin) and free resources (Knesset portal, Court rulings portal, Kol Zchut, Bituach Leumi). Consult when the user needs to find legislation text, court rulings, or rights information and you need to recommend the right source.
 - `references/legislation-index.md`, Index of key Israeli legislation organized by area (constitutional, contract, employment, corporate, real estate, consumer, tort, privacy, tax, criminal, administrative) with Hebrew names, key section numbers, and practical notes. Consult when you need to identify which specific law applies to a user's question.
+- `references/purposive-interpretation-and-citation.md`, The four steps of purposive interpretation, a two-track (legislation and case law) research method, a Uniform Citation Rules cheat sheet with fictitious syntax examples, and common doctrinal traps including international-law attribution tests. Consult when the user needs a statutory interpretation, a citation format check, or an analysis that touches international law.
 
 ## Gotchas
 
