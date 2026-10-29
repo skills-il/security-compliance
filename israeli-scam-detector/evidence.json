@@ -1,7 +1,7 @@
 {
   "skill_slug": "israeli-scam-detector",
   "schemaVersion": "1.0",
-  "generated_at": "2026-09-02T09:30:00Z",
+  "generated_at": "2026-10-29T20:00:00Z",
   "claims": [
     {
       "id": "credit-card-law-repealed",
@@ -41,11 +41,11 @@
       "claim": "Section 24(c): before notice the payer owes the lower of (1) a fixed 75 NIS plus 30 NIS per day from the day the payer learned of the theft, loss or misuse until notice is given, capped at 450 NIS if notice is given within 30 days of the first misuse, with the notice day excluded from the count if notice is given the same day the payer learned; or (2) the amount actually transacted",
       "claim_type": "currency",
       "source_url": "https://www.nevo.co.il/law_html/law01/502_043.htm",
-      "source_fetched_at": "2026-09-02T00:50:00Z",
-      "raw_snippet": "(ג) המשלם יהיה אחראי לשימוש לרעה באמצעי תשלום שנעשה לפני שנמסרה הודעה, לפי הסכום הנמוך מבין אלה: (1) סכום קבוע של 75 שקלים חדשים בתוספת של 30 שקלים חדשים לכל יום מהמועד שבו נודע למשלם על הגניבה או האובדן של הרכיב החיוני באמצעי התשלום או על השימוש לרעה באמצעי התשלום, עד למועד מסירת ההודעה; על אף האמור, מסר המשלם את ההודעה בתוך 30 ימים מיום שנעשה לראשונה שימוש לרעה, לא יהיה אחראי לסכום העולה על 450 שקלים חדשים; יום ההודעה לא ייכלל במניין הימים לפי פסקה זו, אם ההודעה נמסרה באותו יום שבו נודע למשלם על הגניבה או האבדן של הרכיב החיוני או על השימוש לרעה באמצעי התשלום; (2) סכום פעולות התשלום שבוצעו בפועל תוך כדי השימוש לרעה. [...] השר, בהסכמת שר האוצר ונגיד בנק ישראל ובאישור ועדת הכלכלה, רשאי לקבוע, בצו, סכומים שונים מהסכומים הקבועים בפסקה זו;",
+      "source_fetched_at": "2026-10-29T18:00:00Z",
+      "raw_snippet": "(ג) המשלם יהיה אחראי לשימוש לרעה באמצעי תשלום שנעשה לפני שנמסרה הודעה, לפי הסכום הנמוך מבין אלה: (1) סכום קבוע של 75 שקלים חדשים בתוספת של 30 שקלים חדשים לכל יום מהמועד שבו נודע למשלם על הגניבה או האובדן של הרכיב החיוני באמצעי התשלום או על השימוש לרעה באמצעי התשלום, עד למועד מסירת ההודעה; על אף האמור, מסר המשלם את ההודעה בתוך 30 ימים מיום שנעשה לראשונה שימוש לרעה, לא יהיה אחראי לסכום העולה על 450 שקלים חדשים; יום ההודעה לא ייכלל במניין הימים לפי פסקה זו, אם ההודעה נמסרה באותו יום שבו נודע למשלם על הגניבה או האבדן של הרכיב החיוני או על השימוש לרעה באמצעי התשלום; השר, בהסכמת שר האוצר ונגיד בנק ישראל ובאישור ועדת הכלכלה, רשאי לקבוע, בצו, סכומים שונים מהסכומים הקבועים בפסקה זו; (2) סכום פעולות התשלום שבוצעו בפועל תוך כדי השימוש לרעה.",
       "verified_via": "text",
       "confidence": "high",
-      "verified_at": "2026-09-02",
+      "verified_at": "2026-10-29",
       "note": "The final limb is included explicitly: the 75/30/450 figures are variable by order, so they must be re-checked each cycle rather than treated as fixed."
     },
     {
@@ -150,13 +150,13 @@
     },
     {
       "id": "directive426-six-minutes",
-      "claim": "Directive 426 sets the fraud-line wait standard: as a rule no more than six minutes, with no more than 15% of monthly fraud calls exceeding six minutes, and those exceeding it averaging no more than eight minutes",
+      "claim": "Directive 426 sets the fraud-line wait standard: as a rule no more than six minutes, with no more than 15% of monthly fraud calls exceeding six minutes, and those exceeding it averaging no more than eight minutes (Directive 426 סעיף 6א)",
       "claim_type": "threshold",
       "source_url": "https://www.boi.org.il/media/k23b3lzq/h2834.pdf",
       "source_fetched_at": "2026-09-02T00:42:00Z",
-      "raw_snippet": "ככלל, משך ההמתנה לקבלת מענה אנושי לדיווחי לקוחות בנושא חשש להונאות כאמור לא יעלה על שש דקות, בחריגים שהותרו בהוראה... דהיינו שיעור השיחות בנושא הונאות שבהן משך ההמתנה לקבלת מענה אנושי מקצועי עולה על שש דקות מתחילת השיחה, לא יעלה על 15% מתוך כלל השיחות המתקבלות בנושא הונאות, בחודש קלנדרי. בקבוצת השיחות שבהן משך ההמתנה עולה על שש דקות מתחילת השיחה, משך ההמתנה לקבלת מענה אנושי מקצועי לא יעלה על שמונה דקות בממוצע מתחילת השיחה, בחודש קלנדרי, בכל שעות פעילות השירות.",
+      "raw_snippet": "ככלל, משך ההמתנה לקבלת מענה אנושי לדיווחי לקוחות בנושא חשש להונאות כאמור לא יעלה על שש דקות, בחריגים שהותרו בהוראה... דהיינו שיעור השיחות בנושא הונאות שבהן משך ההמתנה לקבלת מענה אנושי מקצועי עולה על שש דקות מתחילת השיחה, לא יעלה על 15% מתוך כלל השיחות המתקבלות בנושא הונאות, בחודש קלנדרי. בקבוצת השיחות שבהן משך ההמתנה עולה על שש דקות מתחילת השיחה, משך ההמתנה לקבלת מענה אנושי מקצועי לא יעלה על שמונה דקות בממוצע מתחילת השיחה, בחודש קלנדרי, בכל שעות פעילות השירות. [...] 6א. ככלל, משך ההמתנה לקבלת מענה אנושי בהתאם לסעיף 5(ב) לעיל לא יעלה על שש דקות מתחילת השיחה.",
       "verified_via": "pdf",
-      "verified_at": "2026-09-02",
+      "verified_at": "2026-10-29",
       "confidence": "high"
     },
     {
@@ -256,9 +256,9 @@
       "claim_type": "feature",
       "source_url": "https://www.btl.gov.il/About/newspapers/Pages/hodaaitonotfakesaagetari2026.aspx",
       "source_fetched_at": "2026-09-02T00:49:00Z",
-      "raw_snippet": "בשעות האחרונות מופצת הודעת כזב (פייק) בקרב אזרחים בדבר מענקים בעקבות המלחמה. כדי להימנע מהודעות דיוג (פישינג) - הודעה אמיתית תגיע מה- BituahLeumi - סיום כתובת האינטרנט שלנו תמיד תהיה Gov.il - אנחנו ניידע אתכם תמיד גם באזור האישי בתוך לשונית - ׳מכתבים׳ - ניתן תמיד לוודא עם מוקד שלנו 6050* או בצ׳אט האנושי באתר. - חשוב לדעת, הביטוח הלאומי לא מבקש פרטי אשראי כדי להעביר תגמולים",
+      "raw_snippet": "בשעות האחרונות מופצת הודעת כזב (פייק) בקרב אזרחים בדבר מענקים בעקבות המלחמה. [...] כדי להימנע מהודעות דיוג (פישינג) - הודעה אמיתית תגיע מה- BituahLeumi - סיום כתובת האינטרנט שלנו תמיד תהיה Gov.il - אנחנו ניידע אתכם תמיד גם באזור האישי בתוך לשונית - ׳מכתבים׳ - ניתן תמיד לוודא עם מוקד שלנו 6050* או בצ׳אט האנושי באתר. - חשוב לדעת, הביטוח הלאומי לא מבקש פרטי אשראי כדי להעביר תגמולים",
       "verified_via": "browser",
-      "verified_at": "2026-09-02",
+      "verified_at": "2026-10-29",
       "confidence": "high",
       "attribution_note": "The sender-name rule in this list is necessary but NOT sufficient, per moc-2020-alphabetic-cli and incd-sms-inside-genuine-thread. The skill must present the domain rule, the personal-area check and the *6050 callback as the load-bearing tests."
     },
@@ -301,9 +301,9 @@
       "claim_type": "feature",
       "source_url": "https://www.kolzchut.org.il/he/%D7%A1%D7%99%D7%95%D7%A2_%D7%9E%D7%A9%D7%A4%D7%98%D7%99_%D7%91%D7%AA%D7%97%D7%95%D7%9D_%D7%94%D7%96%D7%99%D7%A7%D7%A0%D7%94_%D7%9E%D7%98%D7%A2%D7%9D_%D7%9E%D7%A9%D7%A8%D7%93_%D7%94%D7%9E%D7%A9%D7%A4%D7%98%D7%99%D7%9D",
       "source_fetched_at": "2026-09-02T01:05:00Z",
-      "raw_snippet": "מי שמלאו להם 65 זכאים לסיוע בהליכים שקשורים לניצול קושי, חולשה, מצב קוגניטיבי, מצב בריאותי או קשיי שפה [...] הסיוע ניתן חינם וללא תשלום אגרה במקרים של ניצול או עושק",
+      "raw_snippet": "הסיוע ניתן חינם וללא תשלום אגרה במקרים של ניצול או עושק [...] מי שמלאו להם 65 זכאים לסיוע בהליכים שקשורים לניצול קושי, חולשה, מצב קוגניטיבי, מצב בריאותי או קשיי שפה",
       "verified_via": "text",
-      "verified_at": "2026-09-02",
+      "verified_at": "2026-10-29",
       "confidence": "high",
       "note": "Corrected 2026-09-02. The previous snippet paraphrased the fee sentence and appended *8840 from a separate contacts table as if it were part of the same passage."
     },
@@ -537,6 +537,226 @@
       "verified_via": "pdf",
       "confidence": "high",
       "verified_at": "2026-09-02"
+    },
+    {
+      "id": "s22-freeze-right",
+      "claim": "s.22: the payer may at any time ask the provider to freeze the payment instrument, and the provider must freeze it immediately for the period requested, up to 14 days (סעיף 22)",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law01/502_043.htm",
+      "raw_snippet": "22. המשלם רשאי, בכל עת, לבקש מנותן שירותי התשלום שהנפיק למשלם או שהעמיד לרשותו במסגרת שירות ייזום מתקדם את אמצעי התשלום להקפיא את השימוש באמצעי התשלום; ביקש המשלם כאמור, יקפיא נותן שירותי התשלום את השימוש באמצעי התשלום באופן מיידי לתקופה שביקש המשלם ושלא תעלה על 14 ימים, אלא אם כן איפשר נותן שירותי התשלום תקופה ארוכה יותר.",
+      "source_fetched_at": "2026-10-29T18:00:00Z",
+      "verified_via": "text",
+      "confidence": "high",
+      "verified_at": "2026-10-29"
+    },
+    {
+      "id": "s23-provider-freeze-notice",
+      "claim": "s.23: a provider may freeze the payer's instrument where law requires it or, if the contract so provides, for reasonable reasons (including suspected misuse or fraud); it must give notice and reasons before (or as soon as possible after where notice would defeat the purpose), confirm oral notice in writing, and lift the freeze or provide a replacement once the reasons end (סעיף 23)",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law01/502_043.htm",
+      "raw_snippet": "23. (א) נותן שירותי תשלום למשלם רשאי להקפיא את השימוש באמצעי התשלום, אם הדבר נדרש בהתאם להוראות כל דין וכן, אם הוסכם כך בחוזה שירותי התשלום, מטעמים סבירים; לעניין זה יראו כטעמים סבירים, בין השאר, חשש לפגיעה באבטחת אמצעי התשלום, חשש לשימוש לרעה באמצעי התשלום או מרמה, ואם התשלום מקורו באשראי שניתן בידי נותן שירותי התשלום למשלם – חשש ממשי כי המשלם לא יקיים את התחייבותו כלפי נותן שירותי התשלום לפרוע את האשראי. (ב) ביקש נותן שירותי תשלום למשלם להקפיא את השימוש באמצעי התשלום כאמור בסעיף קטן (א), יודיע על כך למשלם ויפרט את הטעמים להקפאה, לפני ההקפאה. (ג) על אף הוראות סעיף קטן (ב), נותן שירותי תשלום למשלם רשאי להקפיא את השימוש באמצעי התשלום גם בלא הודעה או בלא פירוט הטעמים להקפאה, לפי אותו סעיף קטן, אם מסירת ההודעה או פירוט הטעמים כאמור, לפי העניין, עלולים לסכל את המטרה שלשמה נדרשת ההקפאה, בין השאר אם הם אסורים על פי דין או אם התקיים חשש סביר לכך שהלקוח מבצע הונאה, ובלבד שההודעה או פירוט הטעמים כאמור יימסרו בהקדם האפשרי לאחר מכן. (ד) הודיע נותן שירותי תשלום למשלם על הקפאת אמצעי התשלום בעל פה, ישלח על כך הודעה למשלם גם בכתב. (ה) הקפיא נותן שירותי תשלום למשלם את השימוש באמצעי תשלום לפי סעיף זה ולא התקיימו עוד הטעמים להקפאה, יסיר את ההקפאה ויודיע על כך למשלם; היה ניתן להסיר את ההקפאה בהעמדת אמצעי תשלום חלופי לרשות המשלם, יעשה כן נותן שירותי התשלום למשלם בהקדם האפשרי, ויודיע על כך למשלם.",
+      "source_fetched_at": "2026-10-29T18:00:00Z",
+      "verified_via": "text",
+      "confidence": "high",
+      "verified_at": "2026-10-29"
+    },
+    {
+      "id": "s29-missing-document",
+      "claim": "s.29: a payment transaction with no signed document and no admissible record of enhanced authentication and consent; the payer who notifies within 30 days of the charge notice that they did not carry it out is refunded within eight business days (סעיף 29)",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law01/502_043.htm",
+      "raw_snippet": "29. (א) בסעיף זה, \" פעולת תשלום במסמך חסר \" – פעולת תשלום שאין מסמך כמפורט להלן המעיד עליה: (1) מסמך שנחתם בידי המשלם ונכללים בו פרטים אלה: פרט זיהוי של המוטב, פרט זיהוי של המשלם או של אמצעי התשלום, סכום העסקה ותאריך ביצועה; [...] (2) רשומה מוסדית קבילה כמשמעותה בפקודת הראיות [נוסח חדש], התשל\"א-1971, המתעדת את אימות זהות המשלם שנתן את הוראת התשלום באמצעות פרט אימות מוגבר ואת הסכמתו לביצוע פעולת התשלום; השר, בהתייעצות עם שר האוצר ונגיד בנק ישראל ובאישור ועדת הכלכלה, רשאי לקבוע פרטים שיש לכלול ברשומה כאמור. (ב) חויב משלם בשל פעולת תשלום במסמך חסר והודיע לנותן שירותי התשלום למשלם, בתוך 30 ימים מיום שמסר לו הודעה על החיוב, כי הוא לא ביצע את פעולת התשלום או כי הסכום לחיוב הוגדל בלא הרשאה, ישיב לו נותן שירותי התשלום למשלם את סכום החיוב בערכו ביום החיוב, או את ההפרש בין הסכום שחויב בו בלא הרשאתו ובין הסכום שעליו הודיע המשלם כי התחייב בו, לפי העניין; הסכום כאמור יושב בתוך שמונה ימי עסקים מיום מסירת הודעת המשלם, והוראות סעיפים 27(ב) ו-28(ב) יחולו לפי העניין ובשינויים המחויבים.",
+      "source_fetched_at": "2026-10-29T18:00:00Z",
+      "verified_via": "text",
+      "confidence": "high",
+      "verified_at": "2026-10-29"
+    },
+    {
+      "id": "s1-essential-component-contract",
+      "claim": "s.1: an essential component (רכיב חיוני) is one only if it is specified in the payment services contract",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law01/502_043.htm",
+      "raw_snippet": "\" רכיב חיוני \", באמצעי תשלום – רכיב באמצעי התשלום, הייחודי למשלם, ובכלל זה החפץ או פרט האימות שנעשה בו שימוש כחלק מאמצעי התשלום, או צירוף של רכיבים כאמור, שבעל הגישה לרכיב או לצירוף הרכיבים כאמור יכול לתת באמצעותו הוראת תשלום, ובלבד שהרכיב או צירוף הרכיבים פורט בחוזה שירותי התשלום בין נותן שירותי התשלום למשלם ובין המשלם;",
+      "source_fetched_at": "2026-10-29T18:00:00Z",
+      "verified_via": "text",
+      "confidence": "high",
+      "verified_at": "2026-10-29"
+    },
+    {
+      "id": "s1-business-day-contract",
+      "claim": "s.1: a business day (יום עסקים) is as set in the payment services contract",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law01/502_043.htm",
+      "raw_snippet": "\" יום עסקים \" – כפי שנקבע בחוזה שירותי תשלום;",
+      "source_fetched_at": "2026-10-29T18:00:00Z",
+      "verified_via": "text",
+      "confidence": "high",
+      "verified_at": "2026-10-29"
+    },
+    {
+      "id": "s16a1-reasonable-cutoff",
+      "claim": "s.16(a)(1): a payment order may be cancelled while the provider can still stop it within reasonable technical limits or the contractual deadline, provided that deadline is reasonable",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law01/502_043.htm",
+      "raw_snippet": "כל עוד באפשרות נותן שירותי התשלום להפסיק את ביצוע הוראת התשלום בהתאם למגבלות הטכנולוגיות הסבירות החלות עליו או בהתאם למועד הקבוע בחוזה שירותי התשלום ובלבד שהוא סביר;",
+      "source_fetched_at": "2026-10-29T18:00:00Z",
+      "verified_via": "text",
+      "confidence": "high",
+      "verified_at": "2026-10-29"
+    },
+    {
+      "id": "legal-aid-amendment-30",
+      "claim": "Legal Aid Law amendment 30 (ס\"ח 3465, 3.12.2025, in force three months after publication): for a person aged 65 or over, legal aid without the means test (s.3 does not apply) in proceedings founded on exploitation of difficulty, weakness, cognitive or health condition or language difficulty, including a proceeding under s.24 of the Payment Services Law where that condition holds",
+      "claim_type": "law",
+      "source_url": "https://fs.knesset.gov.il/25/law/25_lsr_10169588.pdf",
+      "raw_snippet": "לאדם שמלאו לו 65 שנים, בכל הנוגע להליכים המנויים להלן, וסעיף 3 לא יחול: (א) הליך בשל עילה או סעד המפורטים להלן, המבוססים בין השאר על ניצול של קושי, חולשה, מצב קוגניטיבי, מצב בריאותי או קשיי שפה של האדם [...] (ב) הליך לפי סעיף 24 לחוק שירותי תשלום, התשע\"ט-2019, ובלבד שהאדם זכאי לסיוע לפי פרט משנה (א). [...] תחילתו של חוק זה שלושה חודשים מיום פרסומו.",
+      "source_fetched_at": "2026-10-29T18:00:00Z",
+      "verified_via": "pdf",
+      "confidence": "high",
+      "verified_at": "2026-10-29"
+    },
+    {
+      "id": "interpretation-law-s10a-day-count",
+      "claim": "Interpretation Law 5741-1981 s.10(a): in a period of days counted from a given day, that day is not counted (used for the s.24(c)(1) day count in liability_clock.py) (חוק הפרשנות, סעיף 10(א))",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%94%D7%A4%D7%A8%D7%A9%D7%A0%D7%95%D7%AA",
+      "raw_snippet": "מקום שנקבעה תקופה קצובה במספר ימים או שבועות מיום פלוני, אותו יום לא יבוא במנין.",
+      "source_fetched_at": "2026-10-29T18:00:00Z",
+      "verified_via": "text",
+      "confidence": "medium",
+      "verified_at": "2026-10-29"
+    },
+    {
+      "id": "police-lahav433-fake-email-2026-10",
+      "claim": "October 2026 (7.10.2026): Israel Police warned of fake emails and texts posing as the Lahav 433 cyber unit threatening legal steps, called them a false message and asked recipients not to reply, click or download (reported by Arutz 7)",
+      "claim_type": "warning",
+      "source_url": "https://www.inn.co.il/news/707941",
+      "raw_snippet": "אנו מבהירים כי מדובר בהודעת כזב וכי לא מדובר בפנייה ממשטרת ישראל [...] המשטרה קוראת למי שמקבל הודעה מסוג זה שלא להשיב לה, לא ללחוץ על קישורים המצורפים אליה ולא להוריד קבצים למחשב.",
+      "source_fetched_at": "2026-10-29T18:00:00Z",
+      "verified_via": "text",
+      "confidence": "medium",
+      "verified_at": "2026-10-29"
+    },
+    {
+      "id": "s17-guaranteed-payment-not-supplied",
+      "claim": "s.17: for a guaranteed (card) payment where the goods or service were not supplied and the payer notified the payee of cancellation where possible, the provider must stop executing the order and charging from the payer's notice; it may re-charge only after 15 days' written reasons (סעיף 17)",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law01/502_043.htm",
+      "raw_snippet": "17. (א) נעשתה עסקת יסוד בין משלם למוטב ובשלה נתן המשלם הוראת תשלום לביצוע פעולת תשלום מובטחת, והודיע המשלם לנותן שירותי התשלום למשלם שהוא צד לפעולת התשלום המובטחת כי מתקיימים התנאים שלהלן, יפסיק נותן שירותי התשלום למשלם את ביצוע הוראת התשלום ואת חיוב המשלם מכוחה החל ממועד מסירת ההודעה על ידי המשלם: (1) הנכס או השירות שנרכש בעסקת היסוד לא סופק אף שחלף מועד האספקה שעליו הוסכם בין המשלם ובין המוטב, ואם מועד האספקה כאמור טרם חלף – המוטב הפסיק, דרך קבע, לספק נכסים או שירותים מסוגו של הנכס או השירות שנרכש בעסקה; (2) המשלם הודיע למוטב על ביטול עסקת היסוד, ככל שהיה ניתן להודיע לו על כך. [...] נותן שירותי התשלום למשלם ימסור למשלם הודעה בכתב המפרטת את הנימוקים לחיוב, 15 ימים לפחות לפני החיוב בפועל",
+      "source_fetched_at": "2026-10-29T20:00:00Z",
+      "verified_via": "text",
+      "confidence": "high",
+      "verified_at": "2026-10-29"
+    },
+    {
+      "id": "s33-4-invalid-mandate",
+      "claim": "s.33(4): a debit mandate given without the enhanced-authentication identification (or the explicit consent where filed via the payee) is invalid (סעיף 33(4))",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law01/502_043.htm",
+      "raw_snippet": "(4) הרשאה שלא התקיימו לגביה התנאים שבפסקה (1) או (2) – אינה תקפה.",
+      "source_fetched_at": "2026-10-29T20:00:00Z",
+      "verified_via": "text",
+      "confidence": "high",
+      "verified_at": "2026-10-29"
+    },
+    {
+      "id": "s34-cancel-mandate-any-time",
+      "claim": "s.34(a): the payer may cancel a debit mandate at any time (סעיף 34)",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law01/502_043.htm",
+      "raw_snippet": "34. (א) המשלם רשאי לבטל הרשאה לחיוב, בכל עת, בהודעה לנותן שירותי תשלום למשלם או בהודעה למוטב",
+      "source_fetched_at": "2026-10-29T20:00:00Z",
+      "verified_via": "text",
+      "confidence": "high",
+      "verified_at": "2026-10-29"
+    },
+    {
+      "id": "s37-excess-over-mandate-1-business-day",
+      "claim": "s.37: a charge outside the mandate is refunded no later than one business day (סעיף 37)",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law01/502_043.htm",
+      "raw_snippet": "37. חייב נותן שירותי תשלום למשלם את המשלם בחריגה מההרשאה לחיוב שניתנה לו, ישיב למשלם את ההפרש שבין הסכום שבו חויב המשלם ובין הסכום שנותן שירותי התשלום רשאי היה לחייבו על פי ההרשאה, בערכו ביום החיוב (בסעיף זה – סכום ההפרש); השבת סכום ההפרש תיעשה בהקדם האפשרי אך לא יאוחר מיום עסקים אחד מהמועד שבו גילה נותן שירותי התשלום את החריגה מההרשאה או מהמועד שבו הודיע לו המשלם על החריגה, לפי המוקדם",
+      "source_fetched_at": "2026-10-29T20:00:00Z",
+      "verified_via": "text",
+      "confidence": "high",
+      "verified_at": "2026-10-29"
+    },
+    {
+      "id": "s25a-termination-or-return-ends-liability",
+      "claim": "s.25(a): after the contract is terminated or the instrument returned, the payer is not liable for later misuse (סעיף 25(א))",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law01/502_043.htm",
+      "raw_snippet": "25. (א) סיים המשלם את חוזה שירותי התשלום לפי סעיף 6 או הוחזר אמצעי התשלום לרשותו של נותן שירותי התשלום למשלם, לא יהיה המשלם אחראי לשימוש לרעה שנעשה באמצעי התשלום לאחר מועד הסיום או ההחזרה כאמור.",
+      "source_fetched_at": "2026-10-29T20:00:00Z",
+      "verified_via": "text",
+      "confidence": "high",
+      "verified_at": "2026-10-29"
+    },
+    {
+      "id": "directive426-in-force-31-5-2026",
+      "claim": "Directive 426 update (circular ח-06-2834) takes effect by 31 May 2026",
+      "claim_type": "law",
+      "source_url": "https://www.boi.org.il/media/k23b3lzq/h2834.pdf",
+      "raw_snippet": "תחילת העדכון לפי חוזר זה היא עד יום 31.5.2026.",
+      "source_fetched_at": "2026-10-29T21:00:00Z",
+      "verified_via": "pdf",
+      "confidence": "high",
+      "verified_at": "2026-10-29"
+    },
+    {
+      "id": "csl-banking-corporation-definition",
+      "claim": "Banking (Customer Service) Law 1981: \"תאגיד בנקאי\" includes an auxiliary corporation (תאגיד עזר) and an acquirer (סולק) as defined in the Banking (Licensing) Law; Directive 426 s.3(א) applies to a תאגיד בנקאי as defined in this law",
+      "claim_type": "law",
+      "source_url": "https://www.boi.org.il/media/3eem23br/150.pdf",
+      "raw_snippet": "\"תאגיד בנקאי\" - כמשמעותו בחוק הבנקאות (רישוי), התשמ\"א-1981, לרבות תאגיד עזר כהגדרתו בסעיף 1 לחוק האמור, וסולק כהגדרתו בסעיף 36ט",
+      "source_fetched_at": "2026-10-29T21:00:00Z",
+      "verified_via": "pdf",
+      "confidence": "high",
+      "verified_at": "2026-10-29"
+    },
+    {
+      "id": "incd-answering-call-no-harm",
+      "claim": "National Cyber Directorate, September 2025 suspicious-call warning: merely answering the call does not harm the phone (reported by Walla, 27.9.2025)",
+      "claim_type": "warning",
+      "source_url": "https://news.walla.co.il/item/3783538",
+      "raw_snippet": "אם עניתם דעו כי עצם המענה לשיחה לא גורם לנזק לטלפון.",
+      "source_fetched_at": "2026-10-29T21:00:00Z",
+      "verified_via": "text",
+      "confidence": "medium",
+      "verified_at": "2026-10-29"
+    },
+    {
+      "id": "incd-thread-pattern-road6",
+      "claim": "National Cyber Directorate Telegram: fake Road 6 (כביש 6) debt SMS appearing inside an existing GOV.IL thread",
+      "claim_type": "warning",
+      "source_url": "https://t.me/Israel_Cyber/366",
+      "raw_snippet": "קיבלתם בשרשור GOVIL הודעה על חוב בכביש 6? אל תלחצו התקבלו דיווחים על הודעות SMS מתחזות, שמופיעות בתוך שרשור קיים של GOVIL ונראות כמו הודעה רשמית.",
+      "source_fetched_at": "2026-10-29T21:00:00Z",
+      "verified_via": "text",
+      "confidence": "high",
+      "verified_at": "2026-10-29"
+    },
+    {
+      "id": "incd-acts-on-malicious-link-119",
+      "claim": "National Cyber Directorate (Telegram): it acts on a reported malicious link and asks the public to report suspicious messages to its 119 hotline",
+      "claim_type": "warning",
+      "source_url": "https://t.me/Israel_Cyber/386",
+      "raw_snippet": "מערך הסייבר הלאומי פועל לטיפול בקישור הזדוני. [...] קיבלתם הודעה חשודה? דווחו למוקד 119 של מערך הסייבר הלאומי.",
+      "source_fetched_at": "2026-10-29T21:30:00Z",
+      "verified_via": "text",
+      "confidence": "high",
+      "verified_at": "2026-10-29"
+    },
+    {
+      "id": "s9-only-on-payment-order",
+      "claim": "s.9: a provider executes a payment transaction only if a payment order was given (סעיף 9)",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law01/502_043.htm",
+      "raw_snippet": "9. נותן שירותי תשלום למשלם יבצע פעולת תשלום רק אם ניתנה לו הוראת תשלום",
+      "source_fetched_at": "2026-10-29T21:30:00Z",
+      "verified_via": "text",
+      "confidence": "high",
+      "verified_at": "2026-10-29"
     }
   ]
 }

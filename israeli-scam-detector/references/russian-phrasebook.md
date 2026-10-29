@@ -36,16 +36,20 @@ liability accruing. Ask for the time and write it down.
 
 ## If the caller is a senior citizen
 
-Directive 426 obliges a banking corporation (תאגיד בנקאי, s.3(א)) to give priority in the queue on the fraud line to customers aged 70 or over. A standalone card issuer is not an addressee. Russian-language service is NOT an operative clause of 426: it appears in the explanatory notes as an example under Directive 501. Ask for it, but never present it as an entitlement the bank owes.
+Directive 426 obliges a banking corporation (תאגיד בנקאי as the Banking (Customer Service) Law defines it, which also covers auxiliary corporations and acquirers, s.3(א)) to give priority in the queue on the fraud line to customers aged 70 or over who hold an account there or a card it issued. Russian-language service is NOT an operative clause of 426: it appears in the explanatory notes as an example under Directive 501. Ask for it, but never present it as an entitlement the bank owes.
 
 | Purpose | Russian | Hebrew |
 |---|---|---|
-| Request queue priority (only if aged 70+ AND the account is at this bank) | Мне больше 70 лет, у меня счёт в этом банке. По указанию Банка Израиля номер 426 таким клиентам положена очередь в приоритетном порядке. | אני מעל גיל 70 ויש לי חשבון בבנק הזה. לפי הוראת ניהול בנקאי תקין 426 מגיעה לי קדימות בתור. |
+| Request queue priority (only if aged 70+ AND you hold an account there or a card it issued) | Мне больше 70 лет, у меня счёт в этом банке. По указанию Банка Израиля номер 426 таким клиентам положена очередь в приоритетном порядке. | אני מעל גיל 70 ויש לי חשבון בבנק הזה. לפי הוראת ניהול בנקאי תקין 426 מגיעה לי קדימות בתור. |
+| Same, for a card the company issued | Мне больше 70 лет, у меня карта, выпущенная вашей компанией. Прошу соединить меня в приоритетном порядке. | אני מעל גיל 70 ויש לי כרטיס שהחברה שלכם הנפיקה. אני מבקש קדימות בתור. |
 
-**Do not use the priority line below age 70, or if the card is a standalone issuer's and you hold no
-account at the bank.** Directive 426 s.4 sets the threshold at 70 by the population registry and s.7
-reaches customers who hold an account at that banking corporation, including a card it issued itself.
+**Do not use the priority line below age 70, or where you hold neither an
+account nor a card issued by the institution you are calling.** Directive 426 s.4 sets the threshold at 70 by the population registry and s.7
+reaches customers who hold an account at that banking corporation, including holders of a card it issued.
 Asserting it outside those limits invites a correction that costs you the call.
+
+| Purpose | Russian | Hebrew |
+|---|---|---|
 | Ask for a family member to join | Со мной мой сын или дочь, разрешите ему говорить от моего имени. | נמצא איתי הבן או הבת שלי, אני מאשר לו לדבר בשמי. |
 
 ## The rest of the call
@@ -53,8 +57,10 @@ Asserting it outside those limits invites a correction that costs you the call.
 | Purpose | Russian | Hebrew |
 |---|---|---|
 | Block the card | Прошу немедленно заблокировать карту. | אני מבקש לחסום את הכרטיס מיד. |
-| Report a disclosed code | Я по ошибке сообщил код из СМС постороннему человеку. | מסרתי בטעות קוד מהסמס לאדם זר. |
-| Ask about the refund deadline | По закону возврат должен быть не позднее восьми рабочих дней с момента уведомления. | לפי החוק ההשבה היא לא יאוחר משמונה ימי עסקים ממועד ההודעה. |
+| Report a disclosed code (say what happened, never "it was stolen") | Мне позвонил мошенник, выдавая себя за сотрудника, и я сообщил ему код из СМС. | מסרתי קוד מהסמס למתחזה שהתקשר אליי. |
+| Ask about the refund deadline (ONLY if someone else made the charge; not for a transfer the person made themselves) | По закону возврат должен быть не позднее восьми рабочих дней с момента уведомления. | לפי החוק ההשבה היא לא יאוחר משמונה ימי עסקים ממועד ההודעה. |
+| Freeze the card or account now (always safe to ask) | Прошу немедленно заморозить карту или средство платежа. | אני מבקש להקפיא מיד את אמצעי התשלום. |
+| ONLY if the person really gave the transfer themselves (ask for a recall) | Я сам перевёл деньги, меня обманули. Прошу срочно запросить возврат средств у банка получателя. | העברתי את הכסף בעצמי אחרי שרימו אותי. אני מבקש בקשת החזרת כספים דחופה מול הבנק המקבל. |
 | Ask for a reference number | Дайте, пожалуйста, номер обращения. | אפשר לקבל מספר פנייה בבקשה? |
 | Nobody is answering | Я жду уже долго и не могу дозвониться. Прошу зафиксировать время моего обращения. | אני ממתין הרבה זמן ולא מצליח להשיג נציג. אני מבקש שתירשם שעת הפנייה שלי. |
 | Ask about new standing orders | Проверьте, пожалуйста, появились ли новые постоянные поручения или списания. | תבדקו בבקשה אם נפתחו הוראות קבע או חיובים חדשים. |

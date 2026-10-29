@@ -37,13 +37,13 @@ Scope: help a non-technical Israeli user decide whether a suspicious SMS, email,
 - [ ] **C2. A forged SMS can appear INSIDE the genuine thread.** Three documented instances on the National Cyber Directorate's official Telegram channel: GOV.IL (t.me/Israel_Cyber/386), כביש 6 (/366), פנגו (/382). INCD's own diagnosis: "מדובר בניצול של אופן הצגת הודעות SMS במכשירים מסוימים, ולא בפריצה למערכות GOV.IL". **TELEGRAM-SOURCED** - no gov.il permalink exists; attribute to the Directorate's official channel, never to gov.il. - why core: thread position is the last heuristic most users trust, and it is worthless.
 - [ ] **C3. The only reliable test is the one the user initiates.** Navigate to the site or app yourself, or call the number on the back of your own card. Never a number, link or button supplied by the message. - why core: this is the skill's single organising principle; every identification rule reduces to it.
 - [ ] **C4. Domain rules that DO hold, per each body's own page.** רשות הדואר: "בהודעות אמיתיות מרשות הדואר תופיע רק אחת משתי כתובות אינטרנט: https://postil.co.il, https://israelpost.co.il. כל שינוי בכתובת, משמעותו שמדובר במתחזים" (https://doar.israelpost.co.il/content/fishing). ביטוח לאומי: "סיום כתובת האינטרנט שלנו תמיד תהיה Gov.il" (https://www.btl.gov.il/About/newspapers/Pages/hodaaitonotfakesaagetari2026.aspx). - why core: a domain check is falsifiable; a sender-name check is not.
-- [ ] **C5. "Look for gov.il and you're safe" is FALSE.** MyVisit is on myvisit.com; רשות המסים has no own domain; בנק יהב is hyphenated; דואר ישראל legitimately uses a doar. subdomain. - why core: the naive domain heuristic produces false positives on legitimate services.
+- [ ] **C5. "Look for gov.il and you're safe" is FALSE.** Legitimate services sit on domains other than gov.il (for example דואר ישראל's own postil.co.il and israelpost.co.il, C4). Other domain examples recorded on 2026-09-02 were not re-verified on 2026-10-29 and are not used in the skill. - why core: the naive domain heuristic produces false positives on legitimate services.
 - [ ] **C6. Never publish a list of legitimate sender IDs.** Per C1 this teaches exactly the check that spoofing defeats. Explicitly out of scope and the reason must be stated. - why core: a well-intentioned feature that would make users less safe.
 
 ### D. The 2026 AI-driven wave
 
 - [ ] **D1. Cloned-voice calls.** The verification protocol is a pre-agreed family code word plus a callback on a number you already hold, never the number that called. Source: https://www.gov.il/he/pages/us080726 ("עוצרים. מנתקים. מאמתים.") - why core: the countermeasure is social, not technical, and must be set up BEFORE the call.
-- [ ] **D2. Deepfake video calls.** INCD's biometric unit has warned that a person met on a video call may be fake "גם אם הוא נראה ונשמע אמיתי לחלוטין". Any percentage figure for the rise in deepfake fraud is PRESS-SOURCED and was not verified against a primary source; do not state one. **Attribution:** INCD warned about the TECHNIQUE; the Israeli voice-cloned-CEO incident is PRESS-SOURCED only, and must be marked as such or omitted. - why core: video is the last identity proof users trust.
+- [ ] **D2. Deepfake video calls.** INCD has warned about deepfake video (quote recorded 2026-09-02 without a URL; not re-verified, not quoted in the skill). Any percentage figure for the rise in deepfake fraud is PRESS-SOURCED and was not verified against a primary source; do not state one. **Attribution:** INCD warned about the TECHNIQUE; the Israeli voice-cloned-CEO incident is PRESS-SOURCED only, and must be marked as such or omitted. - why core: video is the last identity proof users trust.
 - [ ] **D3. Deepfake investment videos impersonating real Israeli finance figures.** Attribute to **מערך הסייבר**, NOT to רשות ניירות ערך. - why core: a mis-attribution here was caught during research and would have been published as fact.
 
 ### E. Targeting: who is actually hit (all three are primary-sourced)
@@ -57,13 +57,13 @@ Scope: help a non-technical Israeli user decide whether a suspicious SMS, email,
 - [ ] **F1. Post-incident checklist**: block the card, notify BOTH bank and card company, hunt for unfamiliar new הוראות קבע, enable purchase alerts, change passwords, enable 2FA. Source: https://www.gov.il/he/pages/fool_me_twice - why core: the new-standing-orders step is the one users skip and the one that bleeds money for months.
 - [ ] **F2. Unauthorised הרשאה לחיוב has a much faster clock**: cancel a specific debit within 3 business days of the charge, refund within 1 business day (s.35); cancel the mandate any time (s.34); over-charge refunded within 1 business day (s.37). Source: ss.34-37 - why core: a distinct and far shorter deadline than s.24.
 - [ ] **F3. Stolen ת"ז does NOT require a police complaint.** A תצהיר (מר/15) suffices per נוהל 2.18.0004. SOURCED 2026-09-02 to נוהל 2.18.0004 itself (https://www.gov.il/BlobFolder/policy/new_id_stolen_lost_currapted_procedure/he/2.18.0004.pdf): section 3 lists the applicant requirements and a police report is NOT among them; מר/15 is the declaration and מר/41 the application form. A police complaint is a duty on the AUTHORITY clerk on suspicion (4.5.1), not a precondition on the citizen. The replacement fee still was NOT verified; do not state a figure. - why core: a widely believed false precondition.
-- [ ] **F4. A US-style "fraud alert" does not exist in Israel.** Route the user to the credit data register (מאגר נתוני אשראי) at the Bank of Israel to ask what options exist. The specific statutory mechanism under חוק נתוני אשראי was NOT verified against the statute text this cycle, so the skill must not cite a section number. - why core: users import a US mechanism that has no Israeli equivalent, and a wrong section number here causes lasting self-inflicted damage.
+- [ ] **F4. No US-style "fraud alert" was found in Israel.** Route the user to the credit data register (מאגר נתוני אשראי) at the Bank of Israel to ask what options exist. The specific statutory mechanism under חוק נתוני אשראי was NOT verified against the statute text this cycle, so the skill must not cite a section number. - why core: users import a US mechanism that has no Israeli equivalent, and a wrong section number here causes lasting self-inflicted damage.
 
 ### G. Framing and safety
 
 - [ ] **G1. Never say a specific message is safe.** When the skill cannot confirm, it must still give the action: stop, do not click, and verify by navigating yourself or calling the number on your card. - why core: repo rule, refusal is not a stop sign.
 - [ ] **G2. Answering a scam call does not infect the phone.** INCD during the Sept 2025 robocall wave: "עצם המענה לשיחה לא גורם לנזק לטלפון". - why core: defuses panic, especially for elderly users who then avoid all calls including the bank's callback.
-- [ ] **G3. Never pay to recover a hijacked account or to stop sextortion.** INCD: "לא משלמים - מדווחים. האקר לא מתכוון להחזיר את החשבון." - why core: payment marks the victim for repeat targeting.
+- [ ] **G3. Never pay to recover a hijacked account or to stop sextortion.** Agent guidance plus the INCD WhatsApp recovery route, which involves no payment. The INCD quote formerly here had no URL and is not used (see optimization-log). - why core: paying buys nothing the user can rely on.
 - [ ] **G4. Legal notice required.** The skill states a user's statutory liability, deadlines and what a bank owes them: a conclusion about the user's own legal position. Needs `## הבהרה משפטית` / `## Legal notice` immediately after the H1 in both language files, and a legal clause OPENING the description. - why core: repo legal-review gate.
 
 ---
@@ -77,10 +77,17 @@ Scope: help a non-technical Israeli user decide whether a suspicious SMS, email,
 - [ ] S5. ביטוח לאומי impersonation - fake war-grant messages. BTL's own rules: real notice also appears in the אזור אישי under 'מכתבים'; verify via *6050 or the human chat; and "הביטוח הלאומי לא מבקש פרטי אשראי כדי להעביר תגמולים". Source: BTL page above.
 - [ ] S6. Sextortion - never pay; different, non-financial response path; no-shame tone.
 - [ ] S7. הרשות להגנת הצרכן - real route, but scoped to acts against a BUSINESS, not an anonymous criminal. State the limit or it wastes the user's time.
-- [ ] S8. הרשות להגנת הפרטיות - the address for the body that LEAKED your data, not for your own remedy; its enforcement is "בגין הפרת החוק באופן כללי ולא כסעד פרטני לאדם המתלונן". CORRECTED 2026-09-02: NOT two years. חוק הגנת הפרטיות s.26 (התיישנות) reads "(בוטל)"; the ordinary חוק ההתיישנות s.5(1) applies, "בשאינו מקרקעין - שבע שנים", from the day the cause of action arose (s.6). The old two-year figure would have told users a live claim was dead. Do not reintroduce it.
+- [ ] S8. הרשות להגנת הפרטיות - the address for the body that LEAKED your data, not for your own remedy; its enforcement is general regulatory enforcement, not an individual remedy (the quote formerly here was not re-read on 2026-10-29). CORRECTED 2026-09-02: NOT two years. חוק הגנת הפרטיות s.26 (התיישנות) reads "(בוטל)"; the ordinary חוק ההתיישנות s.5(1) applies, "בשאינו מקרקעין - שבע שנים", from the day the cause of action arose (s.6). The old two-year figure would have told users a live claim was dead. Do not reintroduce it.
 - [ ] S9. Reporting for takedown - INCD's form wants a screenshot, the URL/IP, and the original message. There is no dedicated field for "report this WhatsApp/SMS number".
 - [ ] S10. Business-lane pretexts (Zoom invitation, job offer, partnership) for the freelancer slice of the audience.
-- [ ] S11. Pending reform: a תזכיר חוק שירותי תשלום (תיקון), התשפ"ו-2026 is circulating aimed at the deceived-transfer gap. Must be labelled "not yet law".
+- [ ] S11. Pending reform, CORRECTED 2026-10-29. Two memoranda to amend חוק שירותי תשלום exist (2024 and 2026). Earlier versions of this row said the 2026 one targets the deceived-transfer gap; research on 2026-10-29 found it concerns a fraud-data-sharing database instead, and that the liability proposal was in the 2024 one. Not re-verified against a primary text this cycle, and neither had become a bill as of 2026-10-29. The skill body does not mention them and must not describe either as law.
+- [ ] S12. s.22 freeze RIGHT (added 2026-10-29). "יקפיא נותן שירותי התשלום את השימוש באמצעי התשלום באופן מיידי לתקופה שביקש המשלם ושלא תעלה על 14 ימים". Paired with s.25(ב). The truthful, characterisation-free lever for situation C.
+- [ ] S13. s.29 פעולת תשלום במסמך חסר (added 2026-10-29). Dispute in writing within 30 days of the provider's notice of the charge; refund within 8 business days if the provider has neither a signed document nor an admissible record of enhanced authentication and consent. Distinct from the 30-day window in s.24(ג)(1).
+- [ ] S14. s.23 freeze BY the provider of the victim's own instrument (added 2026-10-29): notice and reasons before, or as soon as possible after; written confirmation of oral notice; lift or replace once reasons end. AML account restriction remains unsourced and out of scope.
+- [ ] S15. s.1 רכיב חיוני must be "פורט בחוזה שירותי התשלום" (added 2026-10-29). A threshold question before s.24(ד): ask which component the contract lists.
+- [ ] S16. Legal Aid Law amendment 30 (added 2026-10-29). Schedule item 16: aged 65+, no means test, proceedings founded on exploitation of difficulty, weakness, cognitive or health condition or language difficulty, including a s.24 proceeding under the Payment Services Law where that condition holds. ס"ח 3465, 3.12.2025, in force three months later. Source: https://fs.knesset.gov.il/25/law/25_lsr_10169588.pdf
+- [ ] S17. Fake להב 433 police emails and SMS, October 2026 (added 2026-10-29). Israel Police: "אנו מבהירים כי מדובר בהודעת כזב". Secondary source only (Arutz 7 relaying the police statement); see references/scam-patterns.md.
+- [ ] S18. Day counting in s.24(ג)(1) (added 2026-10-29). חוק הפרשנות s.10(א): "מקום שנקבעה תקופה קצובה במספר ימים או שבועות מיום פלוני, אותו יום לא יבוא במנין". liability_clock.py excludes the day the payer learned and includes the day of notice. This is a reading, not a settled rule: whether s.10(א) governs an open-ended per-day accrual is untested, and a reading that counts both ends adds ₪30. SKILL.md and the script both say so.
 
 ---
 
@@ -95,6 +102,12 @@ Scope: help a non-technical Israeli user decide whether a suspicious SMS, email,
 - **Criminal-procedure guidance** - what police will investigate, charging decisions. The professional's lane.
 - **Business/enterprise incident response** (BEC playbooks, corporate IR). Different audience and severity tier.
 
+Re-litigated 2026-10-29: each row above was re-checked against the two questions (would an ordinary
+user ask; has it become capturable). Bank fraud numbers and sender-name lists stay out for the
+stated harm. Cross-border recovery, the insurance question and criminal procedure are still not
+covered by any primary source located. The cross-border row's "senior hotline *8840" was not
+re-verified this cycle and is not used in the skill body.
+
 ---
 
 ## Known bad figures / common wrong advice
@@ -106,16 +119,17 @@ Each contradicted by a primary source read during research.
 | "Your liability is capped under חוק כרטיסי חיוב" | Right numbers, repealed statute. Live provision is s.24 of חוק שירותי תשלום. |
 | "The bank must refund within 30 days" | s.27(א): 8 business days from notice. |
 | "You need a police report before the bank will refund" | משטרה appears nowhere in the statute. Every clock runs off notice to the provider. |
-| "Report to police and the transfer gets frozen" | No support in any primary source. Police is the case-opening lane, not the fast lane. |
+| "Report to police and the transfer gets frozen" | No support in any primary source. Whether the receiving account is acted on depends on the police and the receiving bank, and is not guaranteed. SKILL.md v1.1.0 Step 1B said freezing "is a police action and not a bank one"; removed 2026-10-29 as unsourced. |
+| "Say the code was stolen" (when it was handed over) | A false account on a recorded line invites s.26 (intent to deceive removes every limit). Describe what happened and ask for the s.22 freeze. Removed from Step 0 situation C on 2026-10-29. |
 | "Call 105 if you were scammed" | 105 is the children's online-protection line, 0-18. Adults: 100 and 119. |
 | "119 will get your money back" | 119 is a CERT. Its own page says it does not replace a police report. |
 | "Check who the sender is" | The most dangerous advice in circulation. See C1 and C2. |
 | "Look for gov.il and you're safe" | See C5. |
 | "Israel Post never asks for payment by SMS" | Overstated and dangerous: customs payment IS a real Israel Post service with genuine SMS. Correct rule is the domain test in C4. |
 | "You need a police complaint to replace a stolen ת"ז" | False. A תצהיר (מר/15) suffices. |
-| "Put a fraud alert on your credit file" | A US mechanism with no Israeli equivalent. Do not cite an Israeli section number for it until one is verified against the statute. |
+| "Put a fraud alert on your credit file" | A US mechanism; no Israeli equivalent was found. Do not cite an Israeli section number for it until one is verified against the statute. |
 | "Answering the scam call infects your phone" | INCD: "עצם המענה לשיחה לא גורם לנזק לטלפון". |
-| "Pay to get your hacked account back" | INCD: "לא משלמים - מדווחים." |
+| "Pay to get your hacked account back" | Never advise it. The INCD WhatsApp recovery route involves no payment. |
 | "רשות ניירות ערך warned about deepfakes of Israeli figures" | Not established. מערך הסייבר issued that warning. Keep attributions apart. |
 | "ISA issued a warning on 20.1.2026" | **Does not exist.** Surfaced only as search-engine summary prose with no document and no press behind it. Dropped during research. Do not reintroduce. |
 
@@ -130,7 +144,7 @@ Each contradicted by a primary source read during research.
 - https://www.gov.il/he/service/cyber-event-report - 119, reporting form, CyBot.
 - https://www.gov.il/he/pages/us080726 - "עוצרים. מנתקים. מאמתים." Code word, callback rule, cloned voice.
 - https://www.gov.il/he/pages/fool_me_twice - aftermath checklist.
-- https://www.boi.org.il/information/public-enquiries-unit/warning_public/ - BoI standing impersonation warning (also Arabic, Russian, Amharic).
+- https://www.boi.org.il/information/public-enquiries-unit/warning_public/ - BoI standing impersonation warning.
 - https://doar.israelpost.co.il/content/fishing - רשות הדואר domain rule.
 - https://www.btl.gov.il/About/newspapers/Pages/hodaaitonotfakesaagetari2026.aspx - ביטוח לאומי fake-grant warning.
 - https://www.gov.il/he/pages/pa010825-1 - רשות המסים phishing warning.

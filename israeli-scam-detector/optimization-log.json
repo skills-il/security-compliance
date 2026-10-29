@@ -40,6 +40,41 @@
           "bank fee refund (correctly not matched)"
         ]
       }
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-10-29",
+      "holdout_before": 1.0,
+      "holdout_after": 1.0,
+      "buckets": {
+        "improved": [],
+        "regressed": [],
+        "persistent_fail": [
+          "מישהו השתלט לי על חשבון הוואטסאפ (deliberate weak match, unchanged)"
+        ],
+        "stable_success": [
+          "Bituach Leumi war-grant query",
+          "cloned-voice relative call",
+          "confirm this email is safe (correctly excluded)",
+          "bank fee refund (correctly not matched)"
+        ]
+      },
+      "lessons": [
+        "CORRECTED THIS CYCLE, do not regress: Directive 426 s.3(א) applies to a תאגיד בנקאי 'כהגדרתו בחוק הבנקאות (שירות ללקוח)', and that law's definition reads 'לרבות תאגיד עזר ... וסולק כהגדרתו בסעיף 36ט'. The v1.1.0 claim that a standalone card issuer (Max, Isracard, CAL) owes none of 426 was unsupported and was removed from SKILL.md, SKILL_HE.md, reporting-routes.md and the phrasebook. The 2026-09-02 lesson saying the opposite is superseded. Still open: which named card companies are licensed acquirers; do not name them until sourced.",
+        "RESOLVED THIS CYCLE: s.17 (stop a guaranteed card payment for goods not supplied) replaces the deferred 'chargeback' item. It stops execution and charging FROM NOTICE; it is not a refund of what was already debited. Trigger is the agreed delivery date passing, or the seller permanently stopping supply.",
+        "RESOLVED THIS CYCLE: s.22 freeze right (immediate, up to 14 days) now cited; situation C no longer scripts 'נגנב לי רכיב חיוני' for a component that was handed over (s.26 risk on a recorded line).",
+        "RESOLVED THIS CYCLE: s.16(א)(1) 'ובלבד שהוא סביר' proviso; יום עסקים defined by the contract (s.1); s.29 missing-document route with its own 30 days from the provider's notice of the charge; s.23 provider freeze duties; s.1 רכיב חיוני must be listed in the contract; s.51(א) no contracting out; ss.33(4), 34, 37 for mandates.",
+        "ARITHMETIC, do not regress: s.24(ג)(2) is the amount charged BEFORE notice, not the total disputed. Day count follows Interpretation Law s.10(א) as a READING (learned day excluded); counting both ends adds 30 NIS to the daily limb before the cap. Never present either as settled.",
+        "CORRECTED: the 2026 memorandum to amend the Payment Services Law concerns a fraud-data-sharing database (s.24א), not deceived-transfer liability; that proposal was the 2024 memorandum. Neither is a bill. Not re-verified against the primary text.",
+        "NEW (Legal Aid Law amendment 30, ס\"ח 3465, 3.12.2025, in force three months later): 65+, no means test, for proceedings founded on exploitation, including s.24 proceedings where that condition holds. Not automatic for every senior.",
+        "NOT RE-VERIFIED THIS CYCLE: 9 evidence entries sourced only on gov.il HTML (03062020_2 x2, pa010825-1, fool_me_twice x2, cyber-event-report, police online complaint, whatsapp_stolen_accounts, 105_call_center). Cloudflare blocked curl, WebFetch and headless Playwright on 2026-10-29; a fresh-browser retry was refused as bot-check circumvention. Re-verify next cycle in a real (user) browser before relying on them. Removed rather than kept unverified: WhatsApp page date and menu path, 119 form fields, 105 operator.",
+        "Expert MAJOR still deferred: no lane for the victim whose own account is restricted under AML rules (s.23 covers a provider freeze of the instrument only).",
+        "Expert MAJOR still deferred: free credit report from מאגר נתוני אשראי; needs the current credit-data statute, not the 2002 law that s.69 amends.",
+        "Deferred (legal-review WARN, low): add AI-fallibility and 'not a substitute for advice that takes your circumstances into account' sentences to the legal notice in both files; small claims 'no lawyer' framing was reworded this cycle.",
+        "Deferred (parity): the Hebrew description lacks the English 'Do NOT use for malware removal, corporate incident response' exclusion.",
+        "New scam pattern added with secondary sourcing only: fake להב 433 police emails (Israel Police statement via Arutz 7, 7.10.2026). Quishing and fake traffic-fine SMS seen in media but no official Israeli source located for Sept-Oct 2026; not added.",
+        "Process note: the body sits at ~4,980 words. Step 5 AI layer moved to references/scam-patterns.md and Step 7 to references/aftermath.md this cycle. The next addition needs another section moved out first."
+      ]
     }
   ]
 }

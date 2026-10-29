@@ -17,12 +17,20 @@ s.24(c) sets liability BEFORE notice at the LOWER of:
       notice was given within 30 days of the FIRST misuse. The day of notice is
       excluded from the count when notice is given on the same day the payer
       learned.
-  (2) The amount actually transacted during the misuse.
+  (2) The amount actually transacted during the misuse BEFORE notice. Charges
+      made after notice carry no liability (s.24(b)) and must not be included.
+
+Day counting: this script reads the Interpretation Law, 5741-1981, s.10(a)
+(where a period runs "from" a given day, that day is not counted) as applying,
+so the day the payer learned is excluded and the day of notice is included
+(learned 1 Sept, notice 4 Sept = 3 days). That is a reading, not a settled rule:
+counting both ends adds 30 NIS, and the output says so. Same-day notice gives
+0 days either way, by the statute's own proviso.
 
 After notice, liability for further misuse is zero (s.24(b)).
 
 Two things this script deliberately does NOT do:
-  - It does not apply s.24(d), which removes the cap entirely when the payer made
+  - It does not apply s.24(d), which removes the whole s.24(c) limit when the payer made
     the essential component available to another person. Whether that provision
     reaches someone DECEIVED into disclosing a code is untested, and no script
     should pretend to resolve it.
@@ -40,6 +48,7 @@ Usage:
 """
 
 import argparse
+import math
 from datetime import date, datetime
 
 FIXED_COMPONENT = 75
@@ -58,6 +67,12 @@ def parse_date(value: str) -> date:
 def compute(learned: date, notified: date, amount: float, first_misuse: date | None):
     if notified < learned:
         raise SystemExit("Notice cannot precede the day the payer learned.")
+    if not math.isfinite(amount) or amount < 0:
+        raise SystemExit("The amount must be a finite, non-negative number of NIS.")
+    if first_misuse is not None and first_misuse > notified:
+        raise SystemExit(
+            "The first misuse is after the notice date. Misuse after notice carries no\n"
+            "liability at all (s.24(b)), so there is nothing to compute for it here.")
 
     days = (notified - learned).days
     same_day = days == 0
@@ -96,7 +111,8 @@ def main() -> None:
     p.add_argument("--notified", type=parse_date, required=True,
                    help="Date notice was given to the bank or card issuer (YYYY-MM-DD)")
     p.add_argument("--amount", type=float, required=True,
-                   help="Amount actually transacted during the misuse, in NIS")
+                   help="Amount of the misuse charges made BEFORE notice was given, in NIS. "
+                        "Leave out anything charged after notice: that is 0 NIS under s.24(b).")
     p.add_argument("--first-misuse", type=parse_date, default=None,
                    help="Date of the first misuse, if known. Needed to test the 450 NIS cap.")
     args = p.parse_args()
@@ -111,8 +127,9 @@ def main() -> None:
             "    -> yes: re-run with --unauthorised\n"
             "  Or did the payer move the money themselves after being talked into it?\n"
             "    -> then s.24 does not apply at all. There is no figure to compute here.\n"
-            "       The levers are a recall to the beneficiary bank and a police freeze on the\n"
-            "       receiving account. See Step 1B of SKILL.md."
+            "       The levers are a recall to the beneficiary bank and a police report\n"
+            "       carrying the beneficiary details, or s.17 for a card purchase that was\n"
+            "       never delivered. See Step 1B of SKILL.md."
         )
 
     r = compute(args.learned, args.notified, args.amount, args.first_misuse)
@@ -124,7 +141,7 @@ def main() -> None:
         print("    Notice given the same day, so no days are counted.")
     print(f"  Limb 1, {FIXED_COMPONENT} + {PER_DAY}/day{' (capped at ' + str(CAP_WITHIN_30_DAYS) + ')' if r['cap_applied'] else ''}"
           f"{'':<4}: {r['limb_one']:.0f} NIS")
-    print(f"  Limb 2, amount transacted          : {r['limb_two_amount_transacted']:.0f} NIS")
+    print(f"  Limb 2, charged before notice      : {r['limb_two_amount_transacted']:.0f} NIS")
     print(f"  Binding limb                       : {r['binding_limb']}")
     print()
     # When the first-misuse date is unknown we cannot tell whether the 450 cap bites.
@@ -134,7 +151,6 @@ def main() -> None:
     untested_cap = (
         args.first_misuse is None
         and not r["cap_applied"]
-        and r["binding_limb"] == "fixed+daily"
         and r["exposure"] > CAP_WITHIN_30_DAYS
     )
     if untested_cap:
@@ -146,8 +162,17 @@ def main() -> None:
     else:
         print(f"  Exposure before notice             : {r['exposure']:.0f} NIS")
     print("  Exposure for misuse after notice   : 0 NIS  (s.24(b))")
+    if r["days_counted"] > 0:
+        print(f"  Day count excludes the day the payer learned (Interpretation Law s.10(a)).")
+        print(f"  If the bank counts both ends, limb 1 is {PER_DAY} NIS higher before any cap.")
 
-    if args.first_misuse is None and not untested_cap:
+    both_ends_could_hit_cap = r["limb_one"] + PER_DAY > CAP_WITHIN_30_DAYS and r["days_counted"] > 0
+    if args.first_misuse is None and not untested_cap and both_ends_could_hit_cap \
+            and r["binding_limb"] == "fixed+daily":
+        print()
+        print("  Note: --first-misuse was not supplied. On the both-ends count limb 1 would")
+        print("        pass 450 NIS, so the cap could then matter. Supply --first-misuse.")
+    elif args.first_misuse is None and not untested_cap:
         print()
         print("  Note: --first-misuse was not supplied, but the 450 NIS cap could not")
         print("        change the result here.")
@@ -156,9 +181,12 @@ def main() -> None:
     print("  Refund is due no later than 8 business days from notice (s.27(a)).")
     print("  A later re-debit requires 15 days' written reasons first (s.27(b)).")
     print()
-    print("  This does NOT account for s.24(d), which removes the cap where the")
+    print("  This does NOT account for s.24(d), which removes the whole limit where the")
     print("  essential component was made available to another person. Whether")
-    print("  that reaches a DECEIVED disclosure is untested. Not legal advice.")
+    print("  that reaches a DECEIVED disclosure is untested. s.26 (the payer acted")
+    print("  with intent to deceive) overrides every limit. s.24(e): NO liability at all")
+    print("  under (c) or (d) where the provider did not allow notice or cancellation of")
+    print("  the instrument, at any time, in a reasonable manner. Not legal advice.")
 
 
 if __name__ == "__main__":
