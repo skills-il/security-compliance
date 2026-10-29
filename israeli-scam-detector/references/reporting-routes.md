@@ -33,8 +33,8 @@ yourself. Never the number in the message.
 
 ## 2. 119, מערך הסייבר הלאומי
 
-The national CERT. Report the malicious link or number so the infrastructure can be taken down and
-the next person does not lose money.
+The national CERT. Report the malicious link or number so the Directorate can act on it and the
+next person does not lose money.
 
 **It does:** triage and guidance, and acts on a reported malicious link ("מערך הסייבר הלאומי פועל
 לטיפול בקישור הזדוני", INCD Telegram, https://t.me/Israel_Cyber/386).
@@ -49,21 +49,13 @@ The Cyber Directorate's own page on WhatsApp account takeover documents a
 recovery route that involves **no payment to anyone**. Paying an account hijacker or a sextortion
 demand buys nothing the user can rely on. Never advise it.
 
-The documented route, in order, and speed matters because it is a race against the attacker
-enabling two-step verification first:
+What to do, at routing level: act at once, because it is a race against the attacker locking the
+account first. Re-verify the number in WhatsApp itself, report the hijack to WhatsApp and to 119,
+and warn contacts through another channel, since a hijacked account is typically used to ask the
+victim's contacts for codes or money. Do not pay anyone.
 
-1. **Re-verify the number.** Enter the phone number on the app's login screen and confirm with the
-   six-digit SMS or voice code. INCD: *"קודם כל, אסור לכם להשתהות: אם אין לכם אימות דו-שלבי, אתם
-   צריכים לפעול לפני שהתוקף מפעיל אותו בעצמו"*.
-2. **Immediately set two-step verification** in WhatsApp's settings, with a recovery email.
-3. **If that fails**, the attacker has already set two-step verification. Submit a hijack report to
-   WhatsApp.
-4. **Warn contacts and groups** by another channel. The account is used mainly to run the same code
-   trick on the victim's contacts and to solicit money in their name.
-5. **Change the Google / iCloud password** where the chat backup lives.
-
-Source: https://www.gov.il/he/pages/whatsapp_stolen_accounts (bot-blocked to curl; rendered in a
-browser on 2026-09-02).
+Source: https://www.gov.il/he/pages/whatsapp_stolen_accounts (rendered in a browser on 2026-09-02;
+Cloudflare-blocked and not re-read on 2026-10-29, so detailed steps were cut to routing level).
 
 ## 3. Police, 100 or the online form
 
