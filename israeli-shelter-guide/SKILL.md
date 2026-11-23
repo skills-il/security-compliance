@@ -305,7 +305,7 @@ See the `scripts/` directory for:
 
 1. **Mamad as storage.** Most families use the mamad for storage, making it impossible to enter quickly. The single most common failure is not being able to close the blast door because of furniture or boxes. An unusable mamad is the same as having no mamad.
 
-2. **Stairwell floor confusion.** The "not top or bottom floor" rule refers to the structural floor of the stairwell, not the user's apartment floor. In a 4-story building, sit on the stairs between floors 1 to 3, not on the roof stairwell or the ground-floor entrance area.
+2. **Stairwell floor confusion.** The rule counts floors above the flight of stairs, not above your apartment. Apply the Stairwell Protocol above according to your building's height.
 
 3. **Time-to-shelter is absolute.** 15 seconds means 15 seconds from siren to closed door. If the nearest miklat is a 2-minute walk, you cannot use it in a 30-second zone. Know your actual transit time, not the theoretical distance.
 

@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.1 - 2026-11-23
+
+Corrected the stairwell gotcha in SKILL.md, which still carried an obsolete rule and an example that allowed a flight with only one floor above it. It now matches the skill's stairwell protocol.
+
+This release aligns the text with the evidence captured on 2026-08-19. Official sources were NOT re-read on 2026-11-23, because they were unreachable. Protection times and all other operational guidance are unchanged and were not re-verified in this release.
+
 ## 1.3.0 - 2026-08-19
 
 Safety-critical correction pass. Every operational instruction was re-sourced from Pikud Ha'Oref's own content API and from primary regulations, replacing the secondary sources earlier versions relied on.

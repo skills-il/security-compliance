@@ -2,6 +2,7 @@
   "schemaVersion": "1.0",
   "skill": "israeli-shelter-guide",
   "generated_at": "2026-08-19T00:00:00Z",
+  "verification_note": "1.3.1 (2026-11-23) aligns the SKILL.md stairwell gotcha with claim stairwell-protocol as captured on 2026-08-19. Official sources were NOT re-read on 2026-11-23 because they were unreachable. No fetched_at value was changed.",
   "claims": [
     {
       "claim_id": "stay-until-explicit-instruction",
